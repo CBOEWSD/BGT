@@ -13,8 +13,13 @@ module.exports = (grunt) ->
     # Watch - will track file changes and executre approrpiate tasks
     watch:
       coffee:
-        files: ['*.coffee', './routes/**/*.coffee', './public/**/*.coffee']
-        tasks: ['docco']
+        files: [
+          '*.coffee'
+          './_routes/**/*.coffee'
+          './public/**/*.coffee'
+          './modules/**/*.coffee'
+        ]
+        tasks: ['dev']
 
     # Docco compiles code into annotated web documents
     docco:
@@ -27,6 +32,17 @@ module.exports = (grunt) ->
         ]
         options:
           output: './public/docs'
+
+    # [Concat](https://github.com/gruntjs/grunt-contrib-concat)
+    concat:
+      options:
+        separator: ';'
+      js:
+        src: [
+          'public/**/*.init.coffee'
+          'modules/**/*.init.coffee'
+        ]
+        dest: '_compiled/init/init.coffee'
 
     # [Bower package manager](https://github.com/yatskevich/grunt-bower-task)
     bower:
@@ -58,6 +74,13 @@ module.exports = (grunt) ->
         options:
           file: 'app.coffee'
           nodeArgs: ['--debug']
+          ignoredFiles: [
+            'node_modules/**'
+            'public/**'
+            '_compiled/**'
+            'modules/**'
+            '.git'
+            ],
 
     # [Grunt-Concurrent](https://github.com/sindresorhus/grunt-concurrent)
     concurrent:
@@ -74,7 +97,7 @@ module.exports = (grunt) ->
 
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
-  grunt.registerTask 'dev', ['docco']
+  grunt.registerTask 'dev', ['docco', 'concat']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
   grunt.registerTask 'setup', ['bower']
 

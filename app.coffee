@@ -30,12 +30,18 @@ app.set 'view engine', 'handlebars'
 
 # ### Set Middleware
 app.use sass.middleware __dirname + '/public'
+app.use sass.middleware __dirname + '/_compiled'
 app.use coffee {
   src: __dirname + '/public'
   compress: false
 }
+app.use coffee {
+  src: __dirname + '/_compiled'
+  compress: false
+}
 # ### Set public dir
 app.use express.static path.join(__dirname, 'public')
+app.use express.static path.join(__dirname, '_compiled')
 
 app.use express.favicon()
 app.use express.logger('dev')

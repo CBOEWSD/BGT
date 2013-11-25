@@ -28,6 +28,7 @@
     "grunt-concurrent": "~0.4.1",
     "matchdep": "~0.3.0",
     "grunt-qunit-junit": "0.1.0-alpha2",
-    "grunt-contrib-qunit": "~0.3.0"
+    "grunt-contrib-qunit": "~0.3.0",
+    "grunt-contrib-concat": "~0.3.0"
   }
 }

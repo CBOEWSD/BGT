@@ -1,3 +1,5 @@
+.nodemonignore
+_compiled/
 *.js
 *.css
 **/*.js

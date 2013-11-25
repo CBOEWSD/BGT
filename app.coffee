@@ -29,11 +29,11 @@ app.engine 'handlebars', exphbs
 app.set 'view engine', 'handlebars'
 
 # ### Set Middleware
-app.use sass.middleware(__dirname + '/public')
-app.use coffee({
+app.use sass.middleware __dirname + '/public'
+app.use coffee {
   src: __dirname + '/public'
   compress: false
-})
+}
 # ### Set public dir
 app.use express.static path.join(__dirname, 'public')
 

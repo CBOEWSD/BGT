@@ -26,6 +26,8 @@
     "grunt-coffeelint": "0.0.7",
     "grunt-nodemon": "~0.1.1",
     "grunt-concurrent": "~0.4.1",
-    "matchdep": "~0.3.0"
+    "matchdep": "~0.3.0",
+    "grunt-qunit-junit": "0.1.0-alpha2",
+    "grunt-contrib-qunit": "~0.3.0"
   }
 }

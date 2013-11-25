@@ -42,6 +42,16 @@ module.exports = (grunt) ->
         'routes/**/*.coffee'
       ]
 
+    # [Grunt-Qunit-Junit](https://github.com/sbrandwoo/grunt-qunit-junit)
+    qunit_junit:
+      options:
+        dest: '_tests'
+
+    # [Qunit](https://github.com/gruntjs/grunt-contrib-qunit)
+    qunit:
+      options:
+        urls: 'http://localhost:' + pkg.server.port
+
     # [Nodemon](https://github.com/ChrisWren/grunt-nodemon)
     nodemon:
       dev:
@@ -65,7 +75,14 @@ module.exports = (grunt) ->
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
   grunt.registerTask 'dev', ['docco']
+  grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
   grunt.registerTask 'setup', ['bower']
 
 
   # # Custom tasks
+  # ### Server
+  # This is used to directly run the server without monitoring
+  # for changes. This is useful for quick runs - such as testing.
+  grunt.registerTask 'server', 'Start our local web server.', ->
+    grunt.log.writeln "Started server on port #{pkg.server.port}"
+    require('./app.coffee')

@@ -1,12 +1,13 @@
 {
-  "name": "node-starter",
+  "name": "cboe",
   "version": "0.0.1",
   "private": true,
   "server": {
-    "port": 3000
+    "port": 3001
   },
   "scripts": {
-    "start": "coffee app.coffee"
+    "start": "coffee app.coffee",
+    "test": "grunt test"
   },
   "dependencies": {
     "express": "3.2.6",

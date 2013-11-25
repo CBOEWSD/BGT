@@ -21,8 +21,9 @@ module.exports = (grunt) ->
       docs:
         src: [
           '*.coffee',
-          'public/map/**/*.coffee',
-          'routes/**/*.coffee'
+          'public/**/*.coffee',
+          'modules/**/*.coffee',
+          '_application/**/*.coffee'
         ]
         options:
           output: './public/docs'

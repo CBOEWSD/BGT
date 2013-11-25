@@ -1,0 +1,10 @@
+*.js
+*.css
+**/*.js
+**/*.css
+node_modules/
+public/docs/
+bower_components/
+public/lib/
+npm-debug.log
+*.sublime*

@@ -3,7 +3,7 @@
 
 # Module dependencies.
 express = require 'express'
-routes = require './routes'
+routes = require './_application'
 http = require 'http'
 path = require 'path'
 sass = require 'node-sass'

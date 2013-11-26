@@ -20,6 +20,9 @@ module.exports = (grunt) ->
           './modules/**/*.coffee'
         ]
         tasks: ['dev']
+      bower:
+        files: './bower.json'
+        tasks: ['bower']
 
     # Docco compiles code into annotated web documents
     docco:

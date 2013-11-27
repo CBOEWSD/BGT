@@ -160,10 +160,10 @@ app.set <span class="string">'view engine'</span>, <span class="string">'handleb
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>app.use sass.middleware __dirname + <span class="string">'/public'</span>
+            <div class="content"><div class='highlight'><pre>app.use sass.middleware __dirname + <span class="string">'/ui'</span>
 app.use sass.middleware __dirname + <span class="string">'/_compiled'</span>
 app.use coffee {
-  <span class="attribute">src</span>: __dirname + <span class="string">'/public'</span>
+  <span class="attribute">src</span>: __dirname + <span class="string">'/ui'</span>
   <span class="attribute">compress</span>: <span class="literal">false</span>
 }
 app.use coffee {
@@ -184,7 +184,7 @@ app.use coffee {
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>app.use express.static path.join(__dirname, <span class="string">'public'</span>)
+            <div class="content"><div class='highlight'><pre>app.use express.static path.join(__dirname, <span class="string">'ui'</span>)
 app.use express.static path.join(__dirname, <span class="string">'_compiled'</span>)
 
 app.use express.favicon()

@@ -29,10 +29,10 @@ app.engine 'handlebars', exphbs
 app.set 'view engine', 'handlebars'
 
 # ### Set Middleware
-app.use sass.middleware __dirname + '/public'
+app.use sass.middleware __dirname + '/ui'
 app.use sass.middleware __dirname + '/_compiled'
 app.use coffee {
-  src: __dirname + '/public'
+  src: __dirname + '/ui'
   compress: false
 }
 app.use coffee {
@@ -40,7 +40,7 @@ app.use coffee {
   compress: false
 }
 # ### Set public dir
-app.use express.static path.join(__dirname, 'public')
+app.use express.static path.join(__dirname, 'ui')
 app.use express.static path.join(__dirname, '_compiled')
 
 app.use express.favicon()

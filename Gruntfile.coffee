@@ -16,7 +16,7 @@ module.exports = (grunt) ->
         files: [
           '*.coffee'
           './_routes/**/*.coffee'
-          './public/**/*.coffee'
+          './ui/**/*.coffee'
           './modules/**/*.coffee'
         ]
         tasks: ['dev']
@@ -29,12 +29,12 @@ module.exports = (grunt) ->
       docs:
         src: [
           '*.coffee',
-          'public/**/*.coffee',
+          'ui/**/*.coffee',
           'modules/**/*.coffee',
           '_application/**/*.coffee'
         ]
         options:
-          output: './public/docs'
+          output: './ui/docs'
 
     # [Concat](https://github.com/gruntjs/grunt-contrib-concat)
     concat:
@@ -42,7 +42,7 @@ module.exports = (grunt) ->
         separator: ';'
       js:
         src: [
-          'public/**/*.init.coffee'
+          'ui/**/*.init.coffee'
           'modules/**/*.init.coffee'
         ]
         dest: '_compiled/init/init.coffee'
@@ -51,7 +51,7 @@ module.exports = (grunt) ->
     bower:
       install:
         options:
-          targetDir: './public/libs'
+          targetDir: './ui/libs'
 
     # [Clean](https://github.com/gruntjs/grunt-contrib-clean)
     clean:
@@ -61,7 +61,7 @@ module.exports = (grunt) ->
     coffeelint:
       app: [
         '*.coffee',
-        'public/**/*.coffee',
+        'ui/**/*.coffee',
         'routes/**/*.coffee'
       ]
 
@@ -83,7 +83,7 @@ module.exports = (grunt) ->
           nodeArgs: ['--debug']
           ignoredFiles: [
             'node_modules/**'
-            'public/**'
+            'ui/**'
             '_compiled/**'
             'modules/**'
             '.git'

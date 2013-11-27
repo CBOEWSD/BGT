@@ -124,7 +124,7 @@ module.<span class="function"><span class="title">exports</span> = <span class="
         <span class="attribute">files</span>: [
           <span class="string">'*.coffee'</span>
           <span class="string">'./_routes/**/*.coffee'</span>
-          <span class="string">'./public/**/*.coffee'</span>
+          <span class="string">'./ui/**/*.coffee'</span>
           <span class="string">'./modules/**/*.coffee'</span>
         ]
         <span class="attribute">tasks</span>: [<span class="string">'dev'</span>]
@@ -149,12 +149,12 @@ module.<span class="function"><span class="title">exports</span> = <span class="
       <span class="attribute">docs</span>:
         <span class="attribute">src</span>: [
           <span class="string">'*.coffee'</span>,
-          <span class="string">'public/**/*.coffee'</span>,
+          <span class="string">'ui/**/*.coffee'</span>,
           <span class="string">'modules/**/*.coffee'</span>,
           <span class="string">'_application/**/*.coffee'</span>
         ]
         <span class="attribute">options</span>:
-          <span class="attribute">output</span>: <span class="string">'./public/docs'</span></pre></div></div>
+          <span class="attribute">output</span>: <span class="string">'./ui/docs'</span></pre></div></div>
             
         </li>
         
@@ -174,7 +174,7 @@ module.<span class="function"><span class="title">exports</span> = <span class="
         <span class="attribute">separator</span>: <span class="string">';'</span>
       <span class="attribute">js</span>:
         <span class="attribute">src</span>: [
-          <span class="string">'public/**/*.init.coffee'</span>
+          <span class="string">'ui/**/*.init.coffee'</span>
           <span class="string">'modules/**/*.init.coffee'</span>
         ]
         <span class="attribute">dest</span>: <span class="string">'_compiled/init/init.coffee'</span></pre></div></div>
@@ -195,7 +195,7 @@ module.<span class="function"><span class="title">exports</span> = <span class="
             <div class="content"><div class='highlight'><pre>    <span class="attribute">bower</span>:
       <span class="attribute">install</span>:
         <span class="attribute">options</span>:
-          <span class="attribute">targetDir</span>: <span class="string">'./public/libs'</span></pre></div></div>
+          <span class="attribute">targetDir</span>: <span class="string">'./ui/libs'</span></pre></div></div>
             
         </li>
         
@@ -229,7 +229,7 @@ module.<span class="function"><span class="title">exports</span> = <span class="
             <div class="content"><div class='highlight'><pre>    <span class="attribute">coffeelint</span>:
       <span class="attribute">app</span>: [
         <span class="string">'*.coffee'</span>,
-        <span class="string">'public/**/*.coffee'</span>,
+        <span class="string">'ui/**/*.coffee'</span>,
         <span class="string">'routes/**/*.coffee'</span>
       ]</pre></div></div>
             
@@ -287,7 +287,7 @@ module.<span class="function"><span class="title">exports</span> = <span class="
           <span class="attribute">nodeArgs</span>: [<span class="string">'--debug'</span>]
           <span class="attribute">ignoredFiles</span>: [
             <span class="string">'node_modules/**'</span>
-            <span class="string">'public/**'</span>
+            <span class="string">'ui/**'</span>
             <span class="string">'_compiled/**'</span>
             <span class="string">'modules/**'</span>
             <span class="string">'.git'</span>

@@ -8,7 +8,7 @@
   "modules": {
       "sidebar": [
         {
-          "testmodule": "test"
+          "_example": "test"
         },
         {
           "header":"test"
@@ -16,7 +16,7 @@
     ],
     "main": [
       {
-        "testmodule": "test2"
+        "_example": "test2"
       }
     ]
   }

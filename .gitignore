@@ -5,8 +5,8 @@ _compiled/
 **/*.js
 **/*.css
 node_modules/
-public/docs/
+ui/docs/
 bower_components/
-public/lib/
+ui/libs/
 npm-debug.log
 *.sublime*

@@ -31,6 +31,7 @@ app.set 'view engine', 'handlebars'
 # ### Set Middleware
 app.use sass.middleware __dirname + '/ui'
 app.use sass.middleware __dirname + '/_compiled'
+app.use sass.middleware __dirname + '/modules'
 app.use coffee {
   src: __dirname + '/ui'
   compress: false
@@ -39,9 +40,14 @@ app.use coffee {
   src: __dirname + '/_compiled'
   compress: false
 }
+app.use coffee {
+  src: __dirname + '/modules'
+  compress: false
+}
 # ### Set public dir
 app.use express.static path.join(__dirname, 'ui')
 app.use express.static path.join(__dirname, '_compiled')
+app.use express.static path.join(__dirname, 'modules')
 
 app.use express.favicon()
 app.use express.logger('dev')

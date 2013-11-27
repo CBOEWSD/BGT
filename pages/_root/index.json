@@ -11,7 +11,7 @@
           "_example": "test"
         },
         {
-          "header":"test"
+          "header":"header.json"
         }
     ],
     "main": [

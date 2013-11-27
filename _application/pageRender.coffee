@@ -62,7 +62,7 @@ class PageRender
           if(err)
             deferred.reject new Error(error)
           else
-            q(new ModuleRender(JSON.parse content)).then (modules) ->
+            q(new ModuleRender(JSON.parse(content), pr.page.folderPath)).then (modules) ->
               deferred.resolve _.extend modules, JSON.parse content
       else
         pr.rootFolder()

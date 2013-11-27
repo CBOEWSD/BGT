@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>moduleRender.coffee</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="Gruntfile.html">
+                Gruntfile.coffee
+              </a>
+            
+              
+              <a class="source" href="index.html">
+                index.coffee
+              </a>
+            
+              
+              <a class="source" href="moduleRender.html">
+                moduleRender.coffee
+              </a>
+            
+              
+              <a class="source" href="pageRender.html">
+                pageRender.coffee
+              </a>
+            
+              
+              <a class="source" href="app.html">
+                app.coffee
+              </a>
+            
+              
+              <a class="source" href="testmodule.init.html">
+                testmodule.init.coffee
+              </a>
+            
+              
+              <a class="source" href="base.init.html">
+                base.init.coffee
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>moduleRender.coffee</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>q = <span class="built_in">require</span> <span class="string">'q'</span>
+_ = <span class="built_in">require</span> <span class="string">'lodash'</span>
+hbs = <span class="built_in">require</span>(<span class="string">'express3-handlebars'</span>).create()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <h2 id="modulerender-class">ModuleRender Class</h2>
+<p>Gathers the corresponding modules needed for each page
+by looking at the config.modules properties
+and precomipling the needed modules for each page variable</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">class</span> <span class="title">ModuleRender</span></span>
+  md = {}
+  content = <span class="literal">undefined</span>
+  sections = <span class="literal">undefined</span>
+  deferred = <span class="literal">undefined</span>
+  locals = {}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <h3 id="construct-class">Construct Class</h3>
+<p>Passes this to a that working around
+namespace issues with this. Sets the variable
+for content based on the content from the
+json file passed and sets the initial promise
+step in the process.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="attribute">constructor</span>: <span class="function"><span class="params">(data)</span>-&gt;</span>
+    md = @
+    content = data
+
+    deferred = q.defer()
+
+    <span class="keyword">return</span> md.processModules()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h3 id="processmodules">processModules</h3>
+<p>Checks if we need to load modules and cycles
+through each section creating an array
+with the content needed based on modules.
+The methods sets a promise which gets
+resolved once all sections have been processed</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="attribute">processModules</span>:<span class="function"> -&gt;</span>
+    <span class="keyword">if</span>(<span class="keyword">typeof</span>(content.modules) == <span class="string">'undefined'</span>)
+      deferred.reject() <span class="comment"># Log error for no modules.</span>
+    <span class="keyword">else</span>
+      results = []
+      _.each content.modules, <span class="function"><span class="params">(modules, section)</span> -&gt;</span>
+        locals[section] = <span class="string">''</span>
+        processDeferred = q.defer()
+        q<span class="function"><span class="params">(md.loadModules modules)</span>.<span class="title">then</span> <span class="params">(data)</span> -&gt;</span>
+          _.each data, <span class="function"><span class="params">(item)</span> -&gt;</span>
+            <span class="keyword">if</span> item.state == <span class="string">'fulfilled'</span>
+              locals[section] += item.value
+            <span class="keyword">else</span>
+              console.log <span class="string">'Error getting the module'</span>
+          processDeferred.resolve data
+
+        results.push processDeferred.promise
+
+      q.all<span class="function"><span class="params">(results)</span>.<span class="title">then</span> <span class="params">()</span> -&gt;</span>
+        deferred.resolve locals
+
+    deferred.promise</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <h3 id="loadmodules">loadModules</h3>
+<p>Cycles through each module for the section
+and proceeds to load it if found.
+The methods sets a promise which gets
+resolved once all modules have been processed</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="attribute">loadModules</span>: <span class="function"><span class="params">(modules, callback)</span> -&gt;</span>
+    results = []
+    content = <span class="string">''</span>
+    _.each modules, <span class="function"><span class="params">(<span class="built_in">module</span>)</span> -&gt;</span>
+      moduleDeferred = q.defer()
+      name =  _.keys <span class="built_in">module</span>
+      modulePath = <span class="string">'./modules/'</span> + name[<span class="number">0</span>] + <span class="string">'/'</span> + name[<span class="number">0</span>] + <span class="string">'.handlebars'</span> <span class="comment"># what if the modules doesn't have the same name as the folder?</span>
+      fs.exists modulePath, <span class="function"><span class="params">(bool)</span> -&gt;</span>
+        <span class="keyword">if</span> bool
+          q<span class="function"><span class="params">(md.loadModule modulePath)</span>.<span class="title">then</span> <span class="params">(content)</span> -&gt;</span>
+            moduleDeferred.resolve content
+        <span class="keyword">else</span>
+          console.log <span class="string">'Can\'t locate module'</span>
+
+      results.push moduleDeferred.promise
+
+    q.allSettled(results)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <h3 id="loadmodule">loadModule</h3>
+<p>Calls the hbs render method to render the needed
+module as html. The method sets a promise which gets
+resolved once the partial has been rendered</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="attribute">loadModule</span>: <span class="function"><span class="params">(<span class="built_in">module</span>)</span> -&gt;</span>
+    loaded = q.defer()
+    hbs.render <span class="built_in">module</span>, <span class="function"><span class="params">(err, partial)</span> -&gt;</span><span class="comment"># Rendering the module without content for now</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>TODO add error handler
+TODO process content for the partial</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      loaded.resolve partial
+
+    loaded.promise
+
+module.<span class="built_in">exports</span> = ModuleRender</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

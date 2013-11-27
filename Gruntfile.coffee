@@ -51,7 +51,11 @@ module.exports = (grunt) ->
     bower:
       install:
         options:
-          targetDir: './public/lib'
+          targetDir: './public/libs'
+
+    # [Clean](https://github.com/gruntjs/grunt-contrib-clean)
+    clean:
+      setup: ['bower_components']
 
     # [CoffeeScript Linting](https://github.com/vojtajina/grunt-coffeelint)
     coffeelint:
@@ -102,7 +106,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', ['concurrent:dev']
   grunt.registerTask 'dev', ['docco', 'concat']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
-  grunt.registerTask 'setup', ['bower']
+  grunt.registerTask 'setup', ['bower', 'clean:setup']
 
 
   # # Custom tasks

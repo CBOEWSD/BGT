@@ -13,33 +13,67 @@ module.exports = (grunt) ->
     # Watch - will track file changes and executre approrpiate tasks
     watch:
       coffee:
-        files: ['*.coffee', './routes/**/*.coffee', './public/**/*.coffee']
-        tasks: ['docco']
+        files: [
+          '*.coffee'
+          './_routes/**/*.coffee'
+          './ui/**/*.coffee'
+          './modules/**/*.coffee'
+        ]
+        tasks: ['dev']
+      bower:
+        files: './bower.json'
+        tasks: ['bower']
 
     # Docco compiles code into annotated web documents
     docco:
       docs:
         src: [
           '*.coffee',
-          'public/map/**/*.coffee',
-          'routes/**/*.coffee'
+          'ui/**/*.coffee',
+          'modules/**/*.coffee',
+          '_application/**/*.coffee'
         ]
         options:
-          output: './public/docs'
+          output: './ui/docs'
+
+    # [Concat](https://github.com/gruntjs/grunt-contrib-concat)
+    concat:
+      options:
+        separator: ';'
+      js:
+        src: [
+          'ui/**/*.init.coffee'
+          'modules/**/*.init.coffee'
+        ]
+        dest: '_compiled/init/init.coffee'
 
     # [Bower package manager](https://github.com/yatskevich/grunt-bower-task)
     bower:
       install:
         options:
-          targetDir: './public/lib'
+          targetDir: './ui/libs'
+
+    # [Clean](https://github.com/gruntjs/grunt-contrib-clean)
+    clean:
+      setup: ['bower_components']
 
     # [CoffeeScript Linting](https://github.com/vojtajina/grunt-coffeelint)
     coffeelint:
       app: [
         '*.coffee',
-        'public/**/*.coffee',
+        'ui/**/*.coffee',
         'routes/**/*.coffee'
       ]
+
+    # [Grunt-Qunit-Junit](https://github.com/sbrandwoo/grunt-qunit-junit)
+    qunit_junit:
+      options:
+        dest: '_tests'
+
+    # [Qunit](https://github.com/gruntjs/grunt-contrib-qunit)
+    qunit:
+      options:
+        urls: 'http://localhost:' + pkg.server.port
 
     # [Nodemon](https://github.com/ChrisWren/grunt-nodemon)
     nodemon:
@@ -47,6 +81,13 @@ module.exports = (grunt) ->
         options:
           file: 'app.coffee'
           nodeArgs: ['--debug']
+          ignoredFiles: [
+            'node_modules/**'
+            'ui/**'
+            '_compiled/**'
+            'modules/**'
+            '.git'
+            ],
 
     # [Grunt-Concurrent](https://github.com/sindresorhus/grunt-concurrent)
     concurrent:
@@ -63,8 +104,15 @@ module.exports = (grunt) ->
 
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
-  grunt.registerTask 'dev', ['docco']
-  grunt.registerTask 'setup', ['bower']
+  grunt.registerTask 'dev', ['docco', 'concat']
+  grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
+  grunt.registerTask 'setup', ['bower', 'clean:setup']
 
 
   # # Custom tasks
+  # ### Server
+  # This is used to directly run the server without monitoring
+  # for changes. This is useful for quick runs - such as testing.
+  grunt.registerTask 'server', 'Start our local web server.', ->
+    grunt.log.writeln "Started server on port #{pkg.server.port}"
+    require('./app.coffee')

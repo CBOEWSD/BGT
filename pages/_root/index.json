@@ -8,15 +8,15 @@
   "modules": {
       "sidebar": [
         {
-          "testmodule": "test"
+          "_example": "test"
         },
         {
-          "header":"test"
+          "header":"header.json"
         }
     ],
     "main": [
       {
-        "testmodule": "test2"
+        "_example": "test2"
       }
     ]
   }

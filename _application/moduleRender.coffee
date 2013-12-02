@@ -12,6 +12,7 @@ class ModuleRender
   sections = undefined
   deferred = undefined
   locals = {}
+  path = undefined
 
   # ### Construct Class
   # Passes this to a that working around
@@ -19,9 +20,10 @@ class ModuleRender
   # for content based on the content from the
   # json file passed and sets the initial promise
   # step in the process.
-  constructor: (data)->
+  constructor: (data, folder)->
     md = @
     content = data
+    path = folder + '/content/'
 
     deferred = q.defer()
 
@@ -67,10 +69,11 @@ class ModuleRender
     _.each modules, (module) ->
       moduleDeferred = q.defer()
       name =  _.keys module
+      data =  _.values module
       modulePath = './modules/' + name[0] + '/' + name[0] + '.handlebars' # what if the modules doesn't have the same name as the folder?
       fs.exists modulePath, (bool) ->
         if bool
-          q(md.loadModule modulePath).then (content) ->
+          q(md.loadModule modulePath, data[0]).then (content) ->
             moduleDeferred.resolve content
         else
           console.log 'Can\'t locate module'
@@ -83,13 +86,29 @@ class ModuleRender
   # Calls the hbs render method to render the needed
   # module as html. The method sets a promise which gets
   # resolved once the partial has been rendered
-  loadModule: (module) ->
+  loadModule: (module, contentFile) ->
     loaded = q.defer()
-    hbs.render module, (err, partial) -># Rendering the module without content for now
+    content = md.loadContent(contentFile)
+
+    hbs.render module, content, (err, partial) ->
       # TODO add error handler
       # TODO process content for the partial
       loaded.resolve partial
 
     loaded.promise
+
+  # ### loadContent
+  # Uses node-fs to check for content file
+  # and load if it exists. Currently only supports
+  # json but will be extended to support markdown.
+  loadContent: (contentFile) ->
+    data = path + contentFile
+
+    if (fs.existsSync(data))
+      #fs.writeFileSync(data, 'initial', 'utf8')
+      return JSON.parse fs.readFileSync(data, 'utf8')
+    else
+      console.log "Count not load: #{data} [Returned empty object to module]"
+      return {}
 
 module.exports = ModuleRender

@@ -1,2 +1,6 @@
 @import '_includes/reset';
 @import '_includes/grid';
+
+.container {
+  @include outerRow();
+}

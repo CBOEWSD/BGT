@@ -30,6 +30,9 @@
     "grunt-qunit-junit": "0.1.0-alpha2",
     "grunt-contrib-qunit": "~0.3.0",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-cucumber": "~0.2.3",
+    "chai": "~1.8.1",
+    "webdriverjs": "~0.7.14"
   }
 }

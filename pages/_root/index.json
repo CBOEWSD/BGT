@@ -6,17 +6,17 @@
     "description": "This is a description"
   },
   "modules": {
-      "sidebar": [
-        {
-          "_example": "test"
-        },
-        {
-          "header":"header.json"
-        }
+    "sidebar": [
+      {
+        "_example": "test.json"
+      },
+      {
+        "header":"header.json"
+      }
     ],
     "main": [
       {
-        "_example": "test2"
+        "_example": "test.json"
       }
     ]
   }

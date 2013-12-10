@@ -1,9 +1,15 @@
 {{> header/TopBar/topbar}}
 
-<header>
-	This is the header
-</header>
+<header class="header">
+	<div class="container">
+    <h2 class="logo">
+      <a href="/">
+        CBOE Title
+      </a>
+    </h2>
 
-<strong>
-  {{test}}
-</strong>
+    <div class="right">
+      {{> search/QuickSearch }}
+    </div>
+  </div>
+</header>

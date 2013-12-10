@@ -1,0 +1,22 @@
+/*
+  Module: Header
+  Description: The header module contains the site logo and quick search feature.
+*/
+
+@import './ui/base/_includes/grid';
+
+$module: '.header';
+
+#{$module} {
+  border-top: 10px solid #fff;
+  background: #ccc;
+
+  .logo {
+    @include column(4);
+  }
+
+  .right {
+    @include column(6);
+    padding-top: 20px;
+  }
+}

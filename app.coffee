@@ -30,19 +30,17 @@ app.engine 'handlebars', exphbs
 app.set 'view engine', 'handlebars'
 
 # ### Set Middleware
-app.use sass.middleware {
+app.use '/ui', sass.middleware {
   src: __dirname + '/ui'
   debug: true
 }
-app.use sass.middleware {
+app.use '/_compiled', sass.middleware {
   src: __dirname + '/_compiled'
   debug: true
-  prefix: '/_compiled'
 }
-app.use sass.middleware {
+app.use '/modules', sass.middleware {
   src: __dirname + '/modules'
   debug: true
-  prefix: '/modules'
 }
 app.use '/ui', coffee {
   src: __dirname + '/ui'

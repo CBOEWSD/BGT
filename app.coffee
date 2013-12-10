@@ -8,8 +8,9 @@ http = require 'http'
 path = require 'path'
 sass = require 'node-sass'
 coffee = require 'coffee-middleware'
-exphbs  = require 'express3-handlebars'
+GLOBAL.exphbs  = require 'express3-handlebars'
 GLOBAL.fs = require 'fs'
+assetManager = require './_application/assets'
 
 # Load our package JSON file
 pkg = require './package.json'
@@ -29,25 +30,39 @@ app.engine 'handlebars', exphbs
 app.set 'view engine', 'handlebars'
 
 # ### Set Middleware
-app.use sass.middleware __dirname + '/ui'
-app.use sass.middleware __dirname + '/_compiled'
-app.use sass.middleware __dirname + '/modules'
-app.use coffee {
+app.use sass.middleware {
+  src: __dirname + '/ui'
+  debug: true
+}
+app.use sass.middleware {
+  src: __dirname + '/_compiled'
+  debug: true
+  prefix: '/_compiled'
+}
+app.use sass.middleware {
+  src: __dirname + '/modules'
+  debug: true
+  prefix: '/modules'
+}
+app.use '/ui', coffee {
   src: __dirname + '/ui'
   compress: false
+  debug: true
 }
-app.use coffee {
+app.use '/_compiled', coffee {
   src: __dirname + '/_compiled'
   compress: false
+  debug: true
 }
-app.use coffee {
+app.use '/modules', coffee {
   src: __dirname + '/modules'
   compress: false
+  debug: true
 }
 # ### Set public dir
-app.use express.static path.join(__dirname, 'ui')
-app.use express.static path.join(__dirname, '_compiled')
-app.use express.static path.join(__dirname, 'modules')
+app.use '/ui', express.static path.join(__dirname, 'ui')
+app.use '/_compiled', express.static path.join(__dirname, '_compiled')
+app.use '/modules', express.static path.join(__dirname, 'modules')
 
 app.use express.favicon()
 app.use express.logger('dev')

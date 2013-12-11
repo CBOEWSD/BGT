@@ -8,15 +8,12 @@
     {{#description}}<meta name="description" content="{{this}}" >{{/description}}
   {{/meta}}
 
-  <link href="/base/base.css" media="all" rel="stylesheet" type="text/css">
+  {{{renderStyles 'css'}}}
 
-  <script data-main="init/init" src="libs/requirejs/require.js"></script>
 </head>
 <body>
 
   {{{body}}}
-
-  <script src="/libs/jquery/jquery.js"></script>
 
   <!-- START - Load Qunit tests when required -->
   <script>
@@ -31,5 +28,7 @@
   }).call(this);
   </script>
   <!-- END - Qunit -->
+
+  {{{renderScripts 'initCoffee'}}}
 </body>
 </html>

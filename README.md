@@ -4,10 +4,10 @@
 
 After cloning the project, browse into the root of the project in [bash](http://git-scm.com/downloads) and follow these steps.
 
-This project requires two global modules be installed, [CoffeeScript](https://npmjs.org/package/coffee-script) and [Grunt-CLI](https://npmjs.org/package/grunt-cli). If you haven't installed these before please run:
+This project requires three global modules be installed, [Bower](http://bower.io/), [CoffeeScript](https://npmjs.org/package/coffee-script) and [Grunt-CLI](https://npmjs.org/package/grunt-cli). If you haven't installed these before please run:
 
 ```
-npm install coffee-script -g && npm install grunt-cli -g
+npm install coffee-script -g && npm install grunt-cli -g && npm install bower -g
 ```
 
 Now install the dependencies for this project:
@@ -19,7 +19,7 @@ npm install
 Since this is your first time running the project you will first need to install front-end dependencies, for which we use [Bower](http://bower.io/). This step will only need to be ran on initial setup and if a new front-end library is added to the project:
 
 ```
-grunt setup
+bower install
 ```
 
 Lastly, with all dependencies installed, we can now simply start the project task manager - [Grunt](http://gruntjs.com/):

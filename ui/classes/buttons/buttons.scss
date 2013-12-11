@@ -1,0 +1,26 @@
+/*
+	Class: Buttons
+	Description: Buttons class to be used globally and extended from.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$class: '.button';
+
+#{$class} {
+  background: $colorBlue1;
+  display: inline-block;
+  @include border-radius(3px);
+  padding: 5px 10px;
+  font: {
+    size: 1em;
+    weight: 600;
+  }
+  text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+  text-decoration: none;
+
+  &.green {
+    background: $colorGreen1;
+  }
+}

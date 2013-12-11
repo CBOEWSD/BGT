@@ -2,6 +2,14 @@
 @import '_includes/grid';
 @import '_typography';
 
+// Base from body styling
+body {
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: 12px;
+  }
+}
+
 // Base container class
 .container {
   @include outerRow();

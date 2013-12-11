@@ -17,11 +17,38 @@ $module: '.topbar';
 
     li {
       display: inline-block;
+      padding: 10px 0;
+      margin-left: 25px;
 
       a {
         display: inline-block;
-        padding: 10px;
         color: #fff;
+
+        &.sprite {
+          background: url(/modules/header/topbar/assets/sprite.jpg) no-repeat top center;
+          text-indent: -5000em;
+          text-align: left;
+
+          &.c2 {
+            width: 57px;
+            background-position: center 3px;
+          }
+
+          &.futures {
+            width: 71px;
+            background-position: center -28px;
+          }
+
+          &.stock {
+            width: 71px;
+            background-position: center -59px;
+          }
+
+          &.permit {
+            width: 67px;
+            background-position: center -90px;
+          }
+        }
       }
     }
   }

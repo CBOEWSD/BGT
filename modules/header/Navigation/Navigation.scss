@@ -3,13 +3,14 @@
   Description: Global navigation module called into the header.
 */
 
+@import './ui/base/settings';
+
 $module: '.navigation';
 
 #{$module} {
-  background: red;
+  background: $colorBlue1;
 
   .menu {
-
     li {
       display: inline-block;
 

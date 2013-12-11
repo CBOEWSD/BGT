@@ -4,12 +4,13 @@
 */
 
 @import './ui/base/_includes/grid';
+@import './ui/base/settings';
 
 $module: '.header';
 
 #{$module} {
-  border-top: 10px solid #fff;
-  background: #ccc;
+  border-top: 10px solid lighten($colorGrey2, 7%);
+  background: $colorGrey2;
 
   .logo {
     @include column(4);

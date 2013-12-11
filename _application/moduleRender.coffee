@@ -1,6 +1,10 @@
 q = require 'q'
 _ = require 'lodash'
-hbs = require('express3-handlebars').create()
+hbs = require('express3-handlebars').create({
+  partialsDir: [
+        './modules/'
+    ]
+  })
 
 # ## ModuleRender Class
 # Gathers the corresponding modules needed for each page
@@ -48,7 +52,7 @@ class ModuleRender
             if item.state == 'fulfilled'
               locals[section] += item.value
             else
-              console.log 'Error getting the module'
+              console.error 'Error getting the module', item.state
           processDeferred.resolve data
 
         results.push processDeferred.promise
@@ -76,7 +80,7 @@ class ModuleRender
           q(md.loadModule modulePath, data[0]).then (content) ->
             moduleDeferred.resolve content
         else
-          console.log 'Can\'t locate module'
+          console.error 'Can\'t locate module', modulePath
 
       results.push moduleDeferred.promise
 
@@ -91,6 +95,7 @@ class ModuleRender
     content = md.loadContent(contentFile)
 
     hbs.render module, content, (err, partial) ->
+      return console.error(err) if err
       # TODO add error handler
       # TODO process content for the partial
       loaded.resolve partial

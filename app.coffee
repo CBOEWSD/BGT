@@ -78,4 +78,4 @@ app.get '*', routes.index
 # Create server, use custom port if specified
 # otherwise use port in package.json
 http.createServer(app).listen app.get('port'), ->
-  console.log 'Express server listening on port ' + app.get('port')
+  console.log 'Server listening on port ' + app.get('port')

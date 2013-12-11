@@ -1,0 +1,32 @@
+/*
+  Module: QuickSearch
+  Description: Quick search module. Layer of abstraction will allow us to in theory drop this module in many places. Primary location designed for is in the header module.
+*/
+
+$module: '.quicksearch';
+
+#{$module} {
+  font: {
+    size: 0;
+  }
+
+  input[type="text"] {
+    margin: 0; box-sizing: border-box;
+    width: 80%;
+    padding: 5px;
+
+    font: {
+      size: 14px;
+    }
+  }
+
+  button[type="submit"] {
+    margin: 0; padding: 0; box-sizing: border-box;
+    width: 20%;
+    padding: 5px;
+
+    font: {
+      size: 14px;
+    }
+  }
+}

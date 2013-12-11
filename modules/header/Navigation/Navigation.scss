@@ -1,0 +1,23 @@
+/*
+  Module: Navigation
+  Description: Global navigation module called into the header.
+*/
+
+$module: '.navigation';
+
+#{$module} {
+  background: red;
+
+  .menu {
+
+    li {
+      display: inline-block;
+
+      a {
+        display: inline-block;
+        color: #fff;
+        padding: 10px 15px;
+      }
+    }
+  }
+}

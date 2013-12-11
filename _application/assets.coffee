@@ -78,7 +78,8 @@ assetManager = new AssetManager
 assetManager.addBundle {
   name: 'initCoffee'
   files: [
-    'ui/**/*.init.coffee',
+    'ui/base/**/*.init.coffee'
+    'ui/classes/**/*.init.coffee'
     'modules/**/*.init.coffee'
   ]
 }
@@ -87,7 +88,8 @@ assetManager.addBundle {
 assetManager.addBundle {
   name: 'css'
   files: [
-    'ui/**/*.scss',
+    'ui/base/**/*.scss'
+    'ui/classes/**/*.scss'
     'modules/**/*.scss'
   ]
 }

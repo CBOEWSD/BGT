@@ -1,9 +1,15 @@
 // Inspired by https://github.com/twigkit/semantic.gs/blob/master/stylesheets/scss/grid.scss
 
+@mixin clearfixs() {
+  *zoom:1;
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
   // Giant row mixin for fullscreen rows
 
   @mixin giganticRow() {
-    width: $rowgigangticWidth; max-width: 100%; min-width: $screenSmall; margin: 0 auto; @extend .clearfix;
+    width: $rowgigangticWidth; max-width: 100%; min-width: $screenSmall; margin: 0 auto; @include clearfixs;
     @include respondTo(smallScreen) { width: auto; min-width: 0; margin-left: 0; margin-right: 0; }
   }
 
@@ -11,23 +17,22 @@
   // Outer row mixin for container rows
 
   @mixin outerRow() {
-    width: $rowWidth; max-width: 100%; min-width: $screenSmall; margin: 0 auto; @extend .clearfix;
-    @include respondTo(smallScreen) { width: auto; min-width: 0; margin-left: 0; margin-right: 0; }
+    width: $rowWidth; max-width: 100%; min-width: $screenSmall; margin: 0 auto; @include clearfixs;
   }
 
   // Inner row mixin for nested rows, must be a child of an outer-row element. $behavior can be 'collapse' to get rid of margins
 
   @mixin innerRow($behavior: false) {
-      @if $behavior == collapse { @extend .row-i-base; margin: 0; @extend .clearfix;
-    } @else                     { @extend .row-i-base; margin: 0 (-($columnGutter/2)); @extend .clearfix; }
+      @if $behavior == collapse { @include row-i-base; margin: 0; @include clearfixs;
+    } @else                     { @include row-i-base; margin: 0 (-($columnGutter/2)); @include clearfixs; }
   }
 
   // Columns mixin, syntax is ($columns, $behavior). Behavior can be 'centered' which centers things or 'collapse' which collapses the gutters. ex @include row(4,[center | collapse])
 
   @mixin column($columns:$columns, $behavior: false) {
-      @if      $behavior == center   { @extend .fl-n; margin-left: auto; margin-right: auto; @extend .c-base; width: gridCalc($columns, $totalColumns); @include respondTo(smallScreen) { float: none; width: auto; }
-    } @else if $behavior == collapse { @extend .fl-l; @extend .c-base; padding: 0; width: gridCalc($columns, $totalColumns); @include respondTo(smallScreen) { float: none; width: auto; }
-    } @else                          { @extend .fl-l; @extend .c-base; width: gridCalc($columns, $totalColumns); @include respondTo(smallScreen) { float: none; width: auto; } }
+      @if      $behavior == center   { @include fl-n; margin-left: auto; margin-right: auto; @include c-base; width: gridCalc($columns, $totalColumns); @include respondTo(smallScreen) { float: none; width: auto; }
+    } @else if $behavior == collapse { @include fl-l; @include c-base; padding: 0; width: gridCalc($columns, $totalColumns); @include respondTo(smallScreen) { float: none; width: auto; }
+    } @else                          { @include fl-l; @include c-base; width: gridCalc($columns, $totalColumns); @include respondTo(smallScreen) { float: none; width: auto; } }
   }
 
   // Offset Mixin, include after a column mixin to manipulate its grid offset.

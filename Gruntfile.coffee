@@ -20,9 +20,6 @@ module.exports = (grunt) ->
           './modules/**/*.coffee'
         ]
         tasks: ['dev']
-      bower:
-        files: './bower.json'
-        tasks: ['bower']
 
     # Docco compiles code into annotated web documents
     docco:
@@ -46,16 +43,6 @@ module.exports = (grunt) ->
           'modules/**/*.init.coffee'
         ]
         dest: '_compiled/init/init.coffee'
-
-    # [Bower package manager](https://github.com/yatskevich/grunt-bower-task)
-    bower:
-      install:
-        options:
-          targetDir: './ui/libs'
-
-    # [Clean](https://github.com/gruntjs/grunt-contrib-clean)
-    clean:
-      setup: ['bower_components']
 
     # [CoffeeScript Linting](https://github.com/vojtajina/grunt-coffeelint)
     coffeelint:
@@ -106,7 +93,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', ['concurrent:dev']
   grunt.registerTask 'dev', ['docco', 'concat']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
-  grunt.registerTask 'setup', ['bower', 'clean:setup']
 
 
   # # Custom tasks

@@ -1,0 +1,55 @@
+/*
+  Base Typography Mixins
+  These mixins are called into the default settings in the base.scss but can also be imported at class or module level and applied to other elements.
+*/
+
+// Headers
+
+@mixin h1() {
+  font: {
+    size: 1.6em;
+    weight: 700;
+  }
+  margin: 10px 0 20px 0;
+}
+
+@mixin h2() {
+  font: {
+    size: 1.4em;
+    weight: 700;
+  }
+  margin: 10px 0 20px 0;
+}
+
+@mixin h3() {
+  font: {
+    size: 1.2em;
+    weight: 700;
+  }
+  margin: 10px 0 20px 0;
+}
+
+@mixin h4() {
+  font: {
+    size: 1.1em;
+    weight: 700;
+  }
+  margin: 10px 0 20px 0;
+}
+
+@mixin h5() {
+  font: {
+    size: 1em;
+    weight: 700;
+  }
+  margin: 10px 0 20px 0;
+}
+
+// Paragraphs
+
+@mixin p() {
+  font: {
+    size: 1em;
+  }
+  line-height: 1.2em;
+}

@@ -1,6 +1,16 @@
 @import '_includes/reset';
 @import '_includes/grid';
+@import '_typography';
 
+// Base container class
 .container {
   @include outerRow();
 }
+
+// Apply default mixins for typography
+h1 { @include h1; }
+h2 { @include h2; }
+h3 { @include h3; }
+h4 { @include h4; }
+h5 { @include h5; }
+p { @include p; }

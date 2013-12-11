@@ -1,3 +1,4 @@
+__psds/
 .nodemonignore
 _compiled/
 *.js

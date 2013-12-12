@@ -5,9 +5,14 @@
 // Base from body styling
 body {
   font: {
-    family: 'Open Sans', sans-serif;
+    family: Arial, Helvetica, sans-serif;
     size: 12px;
   }
+  background: $colorBlue1;
+}
+
+.body {
+  background: $colorGrey2;
 }
 
 * {
@@ -25,10 +30,6 @@ img {
 // Base container class
 .container {
   @include outerRow();
-  font: {
-    family: 'Open Sans', sans-serif;
-    size: 12px;
-  }
 }
 
 // Apply default mixins for typography

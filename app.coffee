@@ -18,6 +18,9 @@ pkg = require './package.json'
 # Declase application as express
 app = express()
 
+# Compress response data
+app.use express.compress()
+
 # ### Configure environments settings
 app.set 'port', process.env.PORT || pkg.server.port || 3000
 app.set 'views', __dirname + '/views'

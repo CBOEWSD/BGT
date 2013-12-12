@@ -11,6 +11,7 @@ coffee = require 'coffee-middleware'
 GLOBAL.exphbs  = require 'express3-handlebars'
 GLOBAL.fs = require 'fs'
 assetManager = require './_application/assets'
+minify = require 'express-minify'
 
 # Load our package JSON file
 pkg = require './package.json'
@@ -20,6 +21,8 @@ app = express()
 
 # Compress response data
 app.use express.compress()
+if 'production' == app.get('env')
+  app.use minify()
 
 # ### Configure environments settings
 app.set 'port', process.env.PORT || pkg.server.port || 3000

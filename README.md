@@ -38,7 +38,7 @@ This is just a brief guideline for working on this project and some useful notes
 
 We are using [Jenkins](http://jenkins-ci.org/) as our CI for this project. At the time of writing this README the CI is configured to:
 
-- Build the site once every hour (15 mins past the hour) and deploy [here](http://192.168.110.131:3001/)
+- Build the site once every hour (15 mins past the hour) and deploy [here](http://dev-cboe.bgtpartners.com/)
 - Poll GitHub for Pull Requests every 5 mins - when a pull request is made the CI will build, run our tests and report back branch integrity.
 
 ###  Unit Tests
@@ -62,5 +62,5 @@ Repository Issue Track - For general development discussion and/or tracking.
 
 ## Project Contacts
 
-- [David McKeown](mailto:david.j.mckeown@us.pwc.com) - Lead Developer 
+- [David McKeown](mailto:david.j.mckeown@us.pwc.com) - Lead Developer
 - [Kryssie Knowles](mailto:kryssie.c.knowles@pwc.us.com) - Project Manager

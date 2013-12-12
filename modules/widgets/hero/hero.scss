@@ -40,7 +40,7 @@ $3dsize: 6px;
       &:before {
         display: block; content: ""; position: absolute;
 
-        top: 0;
+        top: -$3dsize;
         left: 0;
         border-style: solid;
         border-width: $3dsize $3dsize 0 0;

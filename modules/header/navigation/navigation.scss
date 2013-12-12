@@ -13,6 +13,8 @@ $3dsize: 4px;
 
 #{$module} {
   background: $colorBlue1;
+  position:relative;
+  z-index: 10;
 
   .menu {
     padding: 0;

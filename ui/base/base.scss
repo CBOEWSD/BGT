@@ -14,6 +14,14 @@ body {
   box-sizing: border-box;
 }
 
+
+// Make images responsive (in ratior not size)
+img {
+  max-width:100% !important;
+  height:auto;
+  display:block;
+}
+
 // Base container class
 .container {
   @include outerRow();

@@ -4,20 +4,143 @@
 */
 
 @import './ui/base/settings';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/compass/css3';
 
 $module: '.navigation';
+
+$3dsize: 4px;
 
 #{$module} {
   background: $colorBlue1;
 
   .menu {
-    li {
-      display: inline-block;
+    margin: 0;
 
-      a {
+    &>li {
+      display: inline-block;
+      position: relative;
+
+      &>a {
         display: inline-block;
+        position: relative;
         color: #fff;
         padding: 10px 15px;
+        text-decoration: none;
+        font: {
+          weight: 700;
+        }
+      }
+
+      &:hover {
+        &>a {
+          background: #fff;
+          color: $colorGrey1;
+
+          &:before {
+            display: block;
+            content: '';
+            position: absolute; top: 0; left: 0;
+
+            border-style: solid;
+            border-width: #{$3dsize} #{$3dsize} 0 0;
+            border-color: $colorBlue1 transparent transparent transparent;
+          }
+          &:after {
+            display: block;
+            content: '';
+            position: absolute; top: 0; right: -#{$3dsize};
+
+            border-style: solid;
+            border-width: #{$3dsize} #{$3dsize} 0 0;
+            border-color: #fff transparent transparent transparent;
+          }
+        }
+      }
+
+      // Reset list styles for submenus
+      ul, li {
+        list-style: none;
+        margin: 0; padding: 0;
+      }
+
+      &:hover > ul {
+        left: -20px;
+      }
+
+      &>ul {
+        position: absolute;
+        background: #fff;
+        padding: 15px 0 5px 0;
+        width: 550px;
+        margin-top: -3px;
+        @include box-shadow(0 -1px 1px rgba(0,0,0,.1));
+        left: -5000em;
+
+        &.hasthird {
+          width: 800px;
+          &>li {
+            @include column(4);
+          }
+        }
+
+        &>li {
+          @include column(6);
+
+          &.menu {
+            li {
+              border-bottom: 1px solid lighten($colorGrey1, 65%);
+              font: {
+                size: .9em;
+              }
+
+              a {
+                font: {
+                  weight: 600;
+                }
+                color: $colorGrey1;
+                text-decoration: none;
+                display: block;
+                padding: 5px 0;
+              }
+            }
+          }
+
+          &.feed {
+            .title {
+              color: $colorBlue1;
+              font: {
+                weight: 600;
+              }
+              margin: 0;
+            }
+
+            a {
+              color: $colorGrey1;
+              text-decoration: none;
+              display: block;
+              padding: 20px 0;
+              border-bottom: 1px solid lighten($colorGrey1, 65%);
+              font: {
+                weight: 600;
+              }
+
+              .date {
+                display: block;
+                font: {
+                  size: .9em;
+                  weight: 400;
+                }
+                color: lighten($colorGrey1, 20%);
+              }
+
+              &:last-child {
+                border-bottom: none;
+                padding-bottom: 10px;
+              }
+            }
+          }
+        }
       }
     }
   }

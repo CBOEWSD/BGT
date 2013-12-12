@@ -1,0 +1,15 @@
+/*
+  Module: Widgets
+  Description: Base style wrapper for widget elements
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.widget';
+
+#{$module} {
+  background: #fff;
+  border-top: 3px solid $colorBlue1;
+  padding: 10px;
+}

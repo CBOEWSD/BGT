@@ -74,7 +74,7 @@ class ModuleRender
       moduleDeferred = q.defer()
       name =  _.keys module
       data =  _.values module
-      modulePath = './modules/' + name[0] + '/' + name[0] + '.handlebars' # what if the modules doesn't have the same name as the folder?
+      modulePath = './modules/' + name[0] + '.handlebars'
       fs.exists modulePath, (bool) ->
         if bool
           q(md.loadModule modulePath, data[0]).then (content) ->

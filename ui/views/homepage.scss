@@ -1,0 +1,27 @@
+/*
+  View: Homepage
+  Description: Styling for homepage view.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$view: '.view-homepage';
+
+#{$view} {
+
+  .row {
+    @include clearfix();
+    margin: 20px 0;
+
+    .column1 {
+      @include column(8);
+    }
+
+    .column2 {
+      @include column(4);
+    }
+  }
+}

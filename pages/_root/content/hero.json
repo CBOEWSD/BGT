@@ -1,0 +1,11 @@
+{
+  "background": "/ui/assets/images/placeholders/hero-1.jpg",
+  "slides": [{
+    "title": "CBOE Products",
+    "text": "CBOE Introduces New Short-Term Volatility Index",
+    "link": {
+      "text": "Learn More",
+      "url": "#"
+    }
+  }]
+}

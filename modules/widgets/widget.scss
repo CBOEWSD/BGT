@@ -10,6 +10,12 @@ $module: '.widget';
 
 #{$module} {
   background: #fff;
-  border-top: 3px solid $colorBlue1;
+  border-top: 3px solid $colorBlue2;
   padding: 10px;
+
+  &.nostyle {
+    background: none;
+    border: none;
+    padding: 0;
+  }
 }

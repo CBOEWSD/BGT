@@ -6,9 +6,8 @@
     "description": "This is a description"
   },
   "modules": {
-    "sidebar": [
-    ],
-    "main": [
-    ]
+    "widget1": [{
+      "widgets/hero/hero": "hero.json"
+      }]
   }
 }

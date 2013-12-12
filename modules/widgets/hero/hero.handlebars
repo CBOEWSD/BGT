@@ -1,0 +1,22 @@
+<div class="hero">
+  <img src="{{background}}" alt="" class="background">
+
+  <div class="slides">
+    {{#each slides}}
+    <div class="slide" data-slideid="{{@index}}">
+      <h5>
+        {{title}}
+      </h5>
+      <h2>
+        {{text}}
+      </h2>
+
+      {{#if link}}
+      <a href="{{link.url}}" title="{{link.text}}" class="link">
+        {{link.text}}
+      </a>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+</div>

@@ -89,6 +89,7 @@ assetManager.addBundle {
   name: 'css'
   files: [
     'ui/base/**/*.scss'
+    'ui/views/**/*.scss'
     'ui/classes/**/*.scss'
     'modules/**/*.scss'
   ]

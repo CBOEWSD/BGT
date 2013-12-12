@@ -57,7 +57,8 @@ With that said, please make sure to document any code submitted to this project 
 
 ## Issue Tracker
 
-Currently we will use this repositories issue tracker but may switch to [Jira](https://www.atlassian.com/software/jira) in the near future. This document will be updated to reflect that change should it happen.
+[Jira](http://jira.bgtpartners.com) - For QA, client facing and such discussion.
+Repository Issue Track - For general development discussion and/or tracking.
 
 ## Project Contacts
 

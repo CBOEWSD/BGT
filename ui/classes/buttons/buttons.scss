@@ -12,13 +12,16 @@ $class: '.button';
   background: $colorBlue1;
   display: inline-block;
   @include border-radius(3px);
-  padding: 5px 10px;
+  padding: 5px 20px;
   font: {
     size: 1em;
     weight: 600;
   }
   text-shadow: 1px 1px 0 rgba(0,0,0,.3);
   text-decoration: none;
+  color: #fff;
+  border: none;
+  @include box-shadow(1px 1px 0 rgba(0,0,0,.1));
 
   &.green {
     background: $colorGreen1;

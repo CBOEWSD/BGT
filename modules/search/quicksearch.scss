@@ -3,30 +3,30 @@
   Description: Quick search module. Layer of abstraction will allow us to in theory drop this module in many places. Primary location designed for is in the header module.
 */
 
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
 $module: '.quicksearch';
 
 #{$module} {
-  font: {
+  & > {font: {
     size: 0;
-  }
+  }}
+
+  text-align: right;
 
   input[type="text"] {
     margin: 0; box-sizing: border-box;
     width: 80%;
-    padding: 5px;
+    padding: 7px;
 
-    font: {
-      size: 14px;
-    }
+    @include border-radius(3px);
+    @include box-shadow(1px 1px 0 rgba(0,0,0,.1));
+    border: none;
+    background: #fff;
   }
 
   button[type="submit"] {
-    margin: 0; padding: 0; box-sizing: border-box;
-    width: 20%;
-    padding: 5px;
-
-    font: {
-      size: 14px;
-    }
+    padding-top: 7px; padding-bottom: 7px;
   }
 }

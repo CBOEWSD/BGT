@@ -10,9 +10,17 @@ body {
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 // Base container class
 .container {
   @include outerRow();
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: 12px;
+  }
 }
 
 // Apply default mixins for typography

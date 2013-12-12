@@ -1,0 +1,16 @@
+/*
+	Class: Forms
+	Description: Generic styles and classes related forms.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+input {
+  &[type="text"], &[type="tel"], &[type="email"] {
+    font: {
+      family: 'Open Sans', sans-serif;
+      size: 12px;
+    }
+  }
+}

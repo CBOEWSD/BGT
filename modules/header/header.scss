@@ -11,13 +11,14 @@ $module: '.header';
 #{$module} {
   border-top: 10px solid lighten($colorGrey2, 7%);
   background: $colorGrey2;
+  height: 70px;
 
   .logo {
-    @include column(4);
+    @include column(5);
   }
 
   .right {
-    @include column(6);
-    padding-top: 20px;
+    @include column(7);
+    padding-top: 15px;
   }
 }

@@ -2,6 +2,7 @@
 
 <div class="body view-homepage">
   <div class="container">
+
     <div class="row">
       <div class="column1 widget nostyle">
           {{{widget1}}}
@@ -10,18 +11,37 @@
           {{{widget2}}}
       </div>
     </div>
+
     <div class="row">
       <div class="column1">
-
+        <div class="row">
           {{#each widget3}}
-            each
-            {{{this}}}
+            <div class="column50 widget">
+              {{{this}}}
+            </div>
           {{/each}}
+        </div>
+
+        <div class="row">
+          {{#each widget3}}
+            <div class="column50 widget">
+              {{{this}}}
+            </div>
+          {{/each}}
+        </div>
+
+        <div class="row">
+          <div class="widget">
+            {{{widget2}}}
+          </div>
+        </div>
       </div>
+
       <div class="column2 widget">
           row2:column2
       </div>
     </div>
+
   </div>
 </div>
 

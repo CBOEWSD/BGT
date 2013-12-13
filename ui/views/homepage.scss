@@ -18,7 +18,12 @@ $view: '.view-homepage';
     display: table;
     width: 100%;
 
-    .column1, .column2 {
+    .row {
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
+    }
+
+    .column1, .column2, .column50 {
       display: table-cell;
       vertical-align: top;
       border-left: 7px solid $colorGrey2;
@@ -31,6 +36,17 @@ $view: '.view-homepage';
 
     .column2 {
       width: 33.333%;
+    }
+
+    .column50 {
+      width: 50%;
+
+      &:first-child {
+        border-left: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
     }
   }
 }

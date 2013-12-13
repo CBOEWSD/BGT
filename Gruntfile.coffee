@@ -33,17 +33,6 @@ module.exports = (grunt) ->
         options:
           output: './ui/docs'
 
-    # [Concat](https://github.com/gruntjs/grunt-contrib-concat)
-    concat:
-      options:
-        separator: ';'
-      js:
-        src: [
-          'ui/**/*.init.coffee'
-          'modules/**/*.init.coffee'
-        ]
-        dest: '_compiled/init/init.coffee'
-
     # [CoffeeScript Linting](https://github.com/vojtajina/grunt-coffeelint)
     coffeelint:
       app: [
@@ -68,6 +57,7 @@ module.exports = (grunt) ->
         options:
           file: 'app.coffee'
           nodeArgs: ['--debug']
+          legacyWatch: true
           ignoredFiles: [
             'node_modules/**'
             'ui/**'
@@ -91,7 +81,7 @@ module.exports = (grunt) ->
 
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
-  grunt.registerTask 'dev', ['docco', 'concat']
+  grunt.registerTask 'dev', ['docco']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
 
 

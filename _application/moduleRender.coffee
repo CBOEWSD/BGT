@@ -45,12 +45,12 @@ class ModuleRender
     else
       results = []
       _.each content.modules, (modules, section) ->
-        locals[section] = ''
+        locals[section] = []
         processDeferred = q.defer()
         q(md.loadModules modules).then (data) ->
           _.each data, (item) ->
             if item.state == 'fulfilled'
-              locals[section] += item.value
+              locals[section].push item.value
             else
               console.error 'Error getting the module', item.state
           processDeferred.resolve data

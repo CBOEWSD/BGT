@@ -8,6 +8,14 @@
   "modules": {
     "widget1": [{
       "widgets/hero/hero": "hero.json"
+      }],
+    "widget2": [{
+      "widgets/snapshot/snapshot": "widget2.json"
+      }],
+    "widget3": [{
+      "widgets/snapshot/snapshot": "widget2.json"
+      }, {
+      "widgets/snapshot/snapshot": "widget2.json"
       }]
   }
 }

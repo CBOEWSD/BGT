@@ -4,6 +4,7 @@
 */
 
 @import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
 
 $module: '.topbar';
 
@@ -16,12 +17,12 @@ $module: '.topbar';
     text-align: right;
 
     li {
-      display: inline-block;
+      @include inline-block();
       padding: 10px 0;
       margin-left: 25px;
 
       a {
-        display: inline-block;
+        @include inline-block();
         color: #fff;
 
         &.sprite {

@@ -70,7 +70,7 @@ $3dsize: 6px;
         right: 15px;
         bottom: 15px;
         background: $colorGreen3;
-        display: inline-block;
+        @include inline-block();
         color: #fff;
         padding: 3px 10px;
         text-decoration: none;

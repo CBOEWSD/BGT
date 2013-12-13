@@ -1,0 +1,50 @@
+/*
+  Module: Snapshot Widget
+  Description: Market snapshot widget designed to be connected with Market API.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$module: '.snapshot';
+
+#{$module} {
+  .volume {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    @include clearfix();
+    display: table;
+
+    li {
+      display: table-cell;
+      text-align: center;
+      width: 20%;
+      border-left: 1px solid $colorGrey2;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      h5 {
+        font: {
+          size: 1em;
+          weight: 400;
+          family: $fontFamilyBold;
+        }
+        margin: 0;
+      }
+
+      .negative, .positive {
+        font: {
+          size: .9em;
+          weight: 700;
+        }
+      }
+      .negative { color: $colorRed1; }
+      .positive { color: $colorGreen1; }
+    }
+  }
+}

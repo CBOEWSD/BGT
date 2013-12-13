@@ -20,11 +20,11 @@ $3dsize: 4px;
     padding: 0;
 
     &>li {
-      display: inline-block;
+      @include inline-block();
       position: relative;
 
       &>a {
-        display: inline-block;
+        @include inline-block();
         position: relative;
         color: #fff;
         padding: 10px 15px;

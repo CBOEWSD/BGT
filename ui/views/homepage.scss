@@ -15,13 +15,22 @@ $view: '.view-homepage';
   .row {
     @include clearfix();
     margin: 20px 0;
+    display: table;
+    width: 100%;
+
+    .column1, .column2 {
+      display: table-cell;
+      vertical-align: top;
+      border-left: 7px solid $colorGrey2;
+      border-right: 7px solid $colorGrey2;
+    }
 
     .column1 {
-      @include column(8);
+      width: 66.666%;
     }
 
     .column2 {
-      @include column(4);
+      width: 33.333%;
     }
   }
 }

@@ -18,7 +18,7 @@
       "widgets/list/simple": "options.json"
       }],
     "widget4": [{
-      "widgets/tv/tv": "tv.json"
+      "widgets/list/simple": "blog.json"
       }, {
       "widgets/snapshot/snapshot": "widget2.json"
       }]

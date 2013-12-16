@@ -5,6 +5,7 @@
 
 @import './ui/base/settings';
 @import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/clearfix';
 
 $module: '.widget-list';
 
@@ -15,27 +16,42 @@ $module: '.widget-list';
     li {
       border-top: 1px solid $colorGrey2;
       padding: 10px 0;
+      @include clearfix();
 
       &:first-child {
         border-top: none;
         padding-top: 0;
       }
-    }
 
-    h2, p {
-      margin: 3px 0;
-    }
-
-    h2 {
-      font: {
-        size: 1.2em;
+      .thumbnail {
+        float: left;
+        margin-right: 15px;
       }
-    }
 
-    a {
-      display: block;
-      color: $colorGrey1;
-      text-decoration: none;
+      h2, p {
+        margin: 3px 0;
+      }
+
+      h2 {
+        font: {
+          size: 1.2em;
+        }
+      }
+
+      a {
+        display: block;
+        color: $colorGrey1;
+        text-decoration: none;
+        @include clearfix();
+      }
+
+      &.focus {
+        h2 {
+          font: {
+            size: 1.4em;
+          }
+        }
+      }
     }
   }
 

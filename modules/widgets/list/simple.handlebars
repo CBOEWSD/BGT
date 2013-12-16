@@ -4,9 +4,13 @@
   <ul>
     {{#each items}}
 
-      <li>
+      <li class="{{#each classes}} {{this}} {{/each}}">
         {{#if this.link}}
           <a href="{{this.link.url}}" title="{{this.title}}">
+        {{/if}}
+
+        {{#if this.thumbnail}}
+          <img src="{{this.thumbnail.src}}" alt="{{this.title}}" class="thumbnail">
         {{/if}}
 
         <h2 class="title">

@@ -1,0 +1,29 @@
+/*
+  Module: TV Widget
+  Description: Designed to hold multiple videos which can be toggled by user click/touch.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/responsiveembed';
+
+$module: '.widget-tv';
+
+#{$module} {
+  .prime {
+    margin: 10px 0;
+    @include responsiveembed();
+  }
+
+  .options {
+    padding: 0; margin: 0; list-style: none;
+    @include innerRow();
+
+    li {
+      @include column(4);
+      text-align: center;
+    }
+  }
+}

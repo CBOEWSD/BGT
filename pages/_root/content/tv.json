@@ -1,0 +1,17 @@
+{
+  "widget": {
+    "title": "CBOE TV"
+  },
+  "videos": [{
+    "image": "#",
+    "embedurl": "//www.youtube.com/embed/GmKgf9U26Gw"
+    },
+    {
+    "image": "#",
+    "embedurl": "//www.youtube.com/embed/GmKgf9U26Gw"
+    },
+    {
+    "image": "#",
+    "embedurl": "//www.youtube.com/embed/GmKgf9U26Gw"
+    }]
+}

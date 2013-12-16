@@ -1,0 +1,16 @@
+{{> widgets/widget-title}}
+
+<div class="widget-tv">
+  <div class="prime">
+    <iframe class="embed" width="560" height="315" src="{{videos.0.embedurl}}" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <ul class="options">
+    {{#each videos}}
+    <li>
+      <a href="#" data-embedurl="{{this.embedurl}}">
+        <img src="{{this.image}}" alt="">
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+</div>

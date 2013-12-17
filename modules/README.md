@@ -10,63 +10,55 @@ Modules will make use of AMD patterns when and where it makes sense to do so. Th
 
 ## Module List
 
-### TopBar
-
-
 ### Header
 
 Contains site logo and quick search functionality.
 
-### NavBar
+#### Header - TopBar
 
-Global navigation bar.
+Simple grey bar spanning the top of the site globally.
 
-### Ad_FlyOut
+#### Header - Navigation
 
-Advert flyout. 
-
-**Pre-dev notes:** Desktop only, default state to sit just beneath NavBar module.
-
-### Ad_Bar
-
-Thin ad bar at bottom of page just above footer.
-
-**Pre-dev note:** Support for mobile? API?
-
-### HeroBanner
-
-Contains background image and dialog box sitting on top. **Functionality note:** must support multiple slides.
-
-### Base_Widgets
-
-Base point for which many modules will extend. Povides the base styling for widget containers.
-
-### Widget_TVPlayer
-
-Extends from `Base_Widgets`. Support for multiple videos. 
-
-**Pre-dev note:** Need to identify data source/API and identify support level for non-flash devices.
-
-### Widget_Market
-
-Market snapshot widget. Will contain some base exchange information and graph.
-
-**Pre-dev note:** Need to identify data source/API and support for mobile devices. Can the graph be modified as shown in design based on current implenetation?
-
-### Widget_News
-
-Top headlines for multiple categories. Must also have support for twitter integration.
-
-**Pre-dev note:** Latest tweet or some more direct control over which tweet is shown?
-
-### Widget_list
-
-Will be used for simple list widgets with minor adjustments. Will support simple plain lists, links and possible thumbnail images.
-
-### Widget_Content
-
-A simple content based widget. Will use Markdown format for content data.
+Global navigation menu.
 
 ### Footer
 
-Contains two link lists and a disclaimer block of content.
+Global footer element.
+
+### Search
+
+Search related modules contained here.
+
+#### Search - Quick Search
+
+Quick search module that can be called into many locations. Currently only tested in the header and may require minor treatments for other locations.
+
+### Widgets
+
+Base widget wrapper uses the `.widget` class. There is also a `.nostyle` class to remove base styling for widgets but maintain module scope as a widget.
+
+Widget titles can be added to modules using:
+
+```
+{{> widgets/widget-title}}
+```
+
+#### Widget - Hero
+
+This widget will contain a single static background image and several callouts.
+
+#### Widget - List(s)
+
+List based widgets will be contained here. (example: blog widget on homepage)
+
+#### Widget - Snapshot
+
+Currently this module is populated with static data and image as placeholders for dynamic data later.
+
+#### Widget - TV
+
+Currently this module is populated with static data and image as placeholders for dynamic data later.
+
+
+** This document will be updated periodically throughout development **

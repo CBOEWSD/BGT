@@ -6,8 +6,9 @@
 @import './ui/base/settings';
 @import './ui/base/_includes/grid';
 @import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/animation/fadein';
 
-$module: '.hero';
+$module: '.widget-hero';
 
 $3dsize: 6px;
 
@@ -36,6 +37,14 @@ $3dsize: 6px;
       border-top: $3dsize solid $colorGreen2;
       border-right: $3dsize solid $colorGreen3;
       position: relative;
+      left: -5000em;
+      position: absolute;
+
+      &.active {
+        position: relative;
+        left: 0;
+        @include fadeIn(1s);
+      }
 
       &:before {
         display: block; content: ""; position: absolute;
@@ -79,6 +88,21 @@ $3dsize: 6px;
           weight: 400;
           size: .9em;
         }
+      }
+    }
+
+    .controls {
+      padding: 0; margin: 0; list-style: none;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      li {
+        display: block; float: left;
+        background: red;
+        height: 10px; width: 10px;
+        margin: 0 5px;
       }
     }
   }

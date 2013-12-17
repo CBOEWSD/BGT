@@ -10,6 +10,8 @@
 $module: '.widget-list';
 
 #{$module} {
+  @include clearfix();
+
   ul {
     margin: 0; padding: 0; list-style: none;
 
@@ -55,7 +57,38 @@ $module: '.widget-list';
     }
   }
 
+  &.noborder {
+    li {
+      border-top: none;
+    }
+  }
+
   &.simple {
+  }
+
+  &.list-columns {
+    li {
+      float:left;
+      display:inline;
+      padding-top: 0;
+      padding-right: 10px;
+    }
+
+    &.two {
+      li {
+        width: 50%;
+      }
+    }
+    &.three {
+      li {
+        width: 33%;
+      }
+    }
+    &.four {
+      li {
+        width: 25%;
+      }
+    }
   }
 
 }

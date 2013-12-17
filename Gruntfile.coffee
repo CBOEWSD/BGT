@@ -59,10 +59,12 @@ module.exports = (grunt) ->
           nodeArgs: ['--debug']
           legacyWatch: true
           ignoredFiles: [
-            'node_modules/**'
-            'ui/**'
-            '_compiled/**'
-            'modules/**'
+            'node_modules/**/*'
+            'ui/**/*'
+            '_compiled/**/*'
+            'modules/**/*'
+            'views/**/*'
+            'pages/**/*'
             '.git'
             ],
 

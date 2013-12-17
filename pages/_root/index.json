@@ -20,7 +20,10 @@
     "widget4": [{
       "widgets/list/simple": "blog.json"
       }, {
-      "widgets/snapshot/snapshot": "widget2.json"
+      "widgets/list/simple": "educationtools.json"
+      }],
+    "widget5": [{
+      "widgets/list/simple": "stories.json"
       }]
   }
 }

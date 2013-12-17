@@ -1,10 +1,10 @@
 {{> widgets/widget-title}}
 
-<div class="widget-list simple">
+<div class="widget-list simple {{#each this.classes}} {{this}} {{/each}}">
   <ul>
     {{#each items}}
 
-      <li class="{{#each classes}} {{this}} {{/each}}">
+      <li class="{{#each this.classes}} {{this}} {{/each}}">
         {{#if this.link}}
           <a href="{{this.link.url}}" title="{{this.title}}">
         {{/if}}

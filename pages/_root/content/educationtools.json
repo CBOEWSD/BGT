@@ -1,6 +1,10 @@
 {
   "widget": {
-    "title": "Educational Tools"
+    "title": "Educational Tools",
+    "promo": {
+      "class": "tradestation",
+      "url": "#"
+    }
   },
   "items": [{
       "classes": ["focus"],

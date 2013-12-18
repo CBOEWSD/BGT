@@ -1,6 +1,10 @@
 {
   "widget": {
-    "title": "CBOE TV"
+    "title": "CBOE TV",
+    "promo": {
+      "class": "tradestation",
+      "url": "#"
+    }
   },
   "videos": [{
     "image": "/ui/assets/images/videos/video-thumb.jpg",

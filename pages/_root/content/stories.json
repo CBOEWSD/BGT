@@ -1,6 +1,10 @@
 {
   "widget": {
-    "title": "Sponsored Stories"
+    "title": "Sponsored Stories",
+    "promo": {
+      "class": "tradestation",
+      "url": "#"
+    }
   },
   "classes": ["list-columns", "two", "noborder"],
   "items": [{

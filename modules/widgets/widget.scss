@@ -33,6 +33,17 @@ $module: '.widget';
     border-bottom: 1px solid $colorGrey2;
     padding: 0 0 10px 0;
     margin: 0 0 15px 0;
+    position: relative;
+
+    .promo {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .optionshub {
+        margin-top: -4px;
+      }
+    }
   }
 
   &.nostyle {

@@ -35,3 +35,20 @@ $classPrefix: '.icon-';
     background-position: -133px 0;
   }
 }
+
+#{$classPrefix}logo {
+  text-indent: -5000em;
+  text-align: left;
+  display: inline-block;
+
+  &.tradestation {
+    background: url(/ui/classes/icons/assets/logo-tradestation.jpg) no-repeat top left;
+    width: 83px;
+    height: 16px;
+  }
+  &.optionshub {
+    background: url(/ui/classes/icons/assets/logo-cboe_options_hub.jpg) no-repeat top left;
+    width: 98px;
+    height: 27px;
+  }
+}

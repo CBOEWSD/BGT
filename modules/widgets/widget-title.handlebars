@@ -1,5 +1,11 @@
 {{#if widget.title}}
   <h3 class="widget-title">
     {{widget.title}}
+
+    {{#if widget.promo}}
+    <div class="promo">
+      <a href="{{widget.promo.url}}" class="icon-logo {{widget.promo.class}}"></a>
+    </div>
+    {{/if}}
   </h3>
 {{/if}}

@@ -1,6 +1,10 @@
 {
   "widget": {
-    "title": "Options Blog"
+    "title": "Options Blog",
+    "promo": {
+      "class": "optionshub",
+      "url": "#"
+    }
   },
   "items": [{
       "classes": ["focus"],

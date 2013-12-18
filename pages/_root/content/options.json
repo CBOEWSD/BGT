@@ -1,6 +1,10 @@
 {
   "widget": {
-    "title": "Options Institute"
+    "title": "Options Institute",
+    "promo": {
+      "class": "tradestation",
+      "url": "#"
+    }
   },
   "items": [{
       "link": {

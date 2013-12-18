@@ -1,0 +1,12 @@
+{
+  "widget": {
+    "classes": ["subwidget"],
+    "title": "Press Release"
+  },
+  "items": [{
+      "link": {
+        "url": "#"
+      },
+      "title": "CBOE Holdings Reports November Volume"
+    }]
+}

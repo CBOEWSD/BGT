@@ -1,5 +1,5 @@
 {{#if widget.title}}
-  <h3 class="widget-title">
+  <h3 class="widget-title {{#each widget.classes}} {{this}} {{/each}}">
     {{widget.title}}
 
     {{#if widget.promo}}

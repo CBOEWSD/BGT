@@ -13,14 +13,13 @@ $class: '.scrolloverflow';
   position: relative;
 
   .scrolloverflow-inside {
-    position: absolute;
+    //position: absolute;
     left: 0; top: 0;
     width: 100%;
     padding: 15px 10px;
     max-height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-
     @include scrollbar(7px, $colorGrey2, #fff);
   }
 }

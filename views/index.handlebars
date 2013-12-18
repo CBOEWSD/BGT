@@ -34,14 +34,18 @@
 
         <div class="row">
           <div class="widget">
-            {{{widget5}}}
+            {{#each widget5}}
+              {{{this}}}
+            {{/each}}
           </div>
         </div>
       </div>
 
       <div class="column2 widget scrolloverflow">
         <div class="scrolloverflow-inside">
-          row2:column2
+          {{#each sidebar}}
+            {{{this}}}
+          {{/each}}
         </div>
       </div>
     </div>

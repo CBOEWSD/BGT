@@ -25,6 +25,9 @@ class WidgetHero
   # ``` @log.add 'notification', 'message...', @ ```
   log: new LogHandler 'WidgetHero'
 
+  # ## this.createControls
+  # Method is called on initialization to create control
+  # elements - a list based menu - and bind up click events
   createControls: ->
     # Create controls element
     self.$controls = $('<ul />').addClass 'controls'
@@ -36,17 +39,44 @@ class WidgetHero
     # Append controls to wrapper
     self.$wrapper.append self.$controls
 
-    # Set binds
-    self.$controls.bind 'click', self.controlClick
+    # Add list group to controls object
+    self.$controls.$ind = $ 'li', self.$controls
 
+    # Log
+    self.log.add 'notification', 'Slide controls created.', self.$controls
+
+    # Set binds
+    self.$controls.$ind.bind 'click', self.controlClick
+
+  # ## this.controlClick
+  # Called on click of an individual control item
+  # from the `this.$controls.$ind` group.
+  # Method will grab the index of clicked item and
+  # pass that through to the `this.showSlide` method.
   controlClick: (e) ->
+    self.log.add 'notification', 'Slide control clicked.', @
+
+    # Prevent default actions / bubble up
     e.preventDefault()
 
-    console.log $('li', self.$controls).index(@)
+    # Pass index to showSlide method
+    self.showSlide $('li', self.$controls).index(@)
 
+  # ## this.showSlide
+  # Given an index this method will disable any currently
+  # active slide by removing `active` class and enable the
+  # given index slide.
   showSlide: (index) ->
-    $(self.$slides.get(index)).addClass 'active'
+    $next = $(self.$slides.get(index))
 
+    # log
+    self.log.add 'notification', 'Slide activated', $next
 
+    # Disable currently active slide
+    self.$slides.removeClass 'active'
+    # Activate next slide
+    $next.addClass 'active'
+
+# Define called in require
 define ->
   return WidgetHero

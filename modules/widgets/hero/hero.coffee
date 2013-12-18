@@ -14,6 +14,9 @@ class WidgetHero
     # Number of slides
     self.count = self.$slides.length
 
+    # Create controls
+    self.createControls()
+
     # Show first slide
     self.showSlide 0
 
@@ -68,14 +71,17 @@ class WidgetHero
   # given index slide.
   showSlide: (index) ->
     $next = $(self.$slides.get(index))
+    $nextControl = $(self.$controls.$ind.get(index))
 
     # log
     self.log.add 'notification', 'Slide activated', $next
 
     # Disable currently active slide
     self.$slides.removeClass 'active'
+    self.$controls.$ind.removeClass 'active'
     # Activate next slide
     $next.addClass 'active'
+    $nextControl.addClass 'active'
 
 # Define called in require
 define ->

@@ -11,4 +11,3 @@ if $el.length > 0
     # Initialize for each
     $el.each ->
       me = new hero $, @
-      me.createControls()

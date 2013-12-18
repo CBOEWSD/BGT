@@ -51,4 +51,4 @@ class @LogHandler
     window.log[@module][type].push object
 
     # Console log if in debug mode
-    if @debug then console.log @module, type, object
+    if type == 'error' or type == 'warning' then console.log @module, type, object

@@ -115,8 +115,7 @@ class WidgetHero
     self.time = if typeof time == 'number' then time else false
     self.time = time or 4000
 
-    console.log self.time
-
+    # Start timer
     self.startTimer self.time
 
     # Bind up mouse i/o action

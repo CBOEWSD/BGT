@@ -7,9 +7,10 @@
 # module can simple call `libname` instead of paths.
 requirejs.config {
   paths:
-    jquery: '../lib/jquery/jquery'
-    underscore: '../lib/underscore-amd/underscore'
-    backbone: '../lib/backbone-amd/backbone'
+    jquery: '/ui/libs/jquery/jquery'
+    underscore: '/ui/libs/underscore-amd/underscore'
+    backbone: '/ui/libs/backbone-amd/backbone'
+    echojs: '/ui/libs/echojs/echo-1.4.0/dist/echo'
 }
 
 # ## Declare Application Class

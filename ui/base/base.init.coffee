@@ -42,7 +42,7 @@ class @LogHandler
 
     # Check if type is set and one of the available.
     # If not it will be set as `notification`.
-    type = if (type != 'error' || type != 'warning' || type != 'notification') then 'notification' else type
+    type = if type != 'error' and type != 'warning' and type != 'notification' then 'notification' else type
 
     # Log level data can be accessed
     # via `log.moduleName` in console

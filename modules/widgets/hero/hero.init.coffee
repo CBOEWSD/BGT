@@ -10,4 +10,5 @@ if $el.length > 0
   require ['jquery', '/modules/widgets/hero/hero.js'], ($, hero) ->
     # Initialize for each
     $el.each ->
-      me = new hero $, @
+      # (jQuery, this, AutoTime)
+      me = new hero $, @, 6000

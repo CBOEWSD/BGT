@@ -1,0 +1,37 @@
+/*
+	Class: Icons
+	Description: Contains generic items that can be used in various areas across the site.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$classPrefix: '.icon-';
+
+#{$classPrefix}social {
+  background: url(/ui/classes/icons/assets/social.jpg) no-repeat top left;
+  text-indent: -5000em;
+  width: 20px;
+  height: 20px;
+  text-align: left;
+  display: inline-block;
+
+  &.twitter {
+    background-position: -3px 0;
+  }
+  &.youtube {
+    background-position: -29px 0;
+  }
+  &.facebook {
+    background-position: -55px 0;
+  }
+  &.linkedin {
+    background-position: -80px 0;
+  }
+  &.ios {
+    background-position: -105px 0;
+  }
+  &.rss {
+    background-position: -133px 0;
+  }
+}

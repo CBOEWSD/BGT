@@ -18,6 +18,8 @@
     "lodash": "~2.3.0",
     "glob": "~3.2.7",
     "express-minify": "0.0.7",
+    "socket.io": "~0.9.16",
+    "twitter": "~0.2.5",
     "connect-assetmanager": "0.0.28",
     "coffee-script": "~1.6.3"
   },

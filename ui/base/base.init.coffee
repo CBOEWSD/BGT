@@ -8,9 +8,8 @@
 requirejs.config {
   paths:
     jquery: '/ui/libs/jquery/jquery'
-    underscore: '/ui/libs/underscore-amd/underscore'
-    backbone: '/ui/libs/backbone-amd/backbone'
     echojs: '/ui/libs/echojs/echo-1.4.0/dist/echo'
+    socketui: '/socket.io/socket.io'
 }
 
 # ## Declare Application Class

@@ -51,6 +51,13 @@ prodAssets = {
     'files': assetManager.listFiles 'css'
     'preManipulate':
       '^': [handlers.sassRenderer]
+  'js':
+    'route': /\/static\/scripts.js/
+    'path': './'
+    'dataType': 'js'
+    'files': assetManager.listFiles 'initCoffee'
+    'preManipulate':
+      '^': [handlers.coffeeRenderer]
 }
 
 assetsManagerMiddleware = assetConnect(prodAssets)

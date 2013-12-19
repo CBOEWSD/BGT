@@ -23,7 +23,7 @@ pkg = require './package.json'
 GLOBAL.app = express()
 
 # Set Boolean for prod
-isProd = if ('production' == app.get('env')) then true else false
+GLOBAL.isProd = if ('production' == app.get('env')) then true else false
 
 # Assets
 # ### JS Bundle

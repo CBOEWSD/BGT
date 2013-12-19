@@ -1,6 +1,6 @@
 module.exports = twitterSocket = (server) ->
   server = if typeof server == 'undefined' then 9000 else server
-  io = require('socket.io').listen server
+  io = require('socket.io').listen server, { log: !isProd }
 
   # ## Config
   conf = require './config.coffee'
@@ -12,12 +12,12 @@ module.exports = twitterSocket = (server) ->
 
   io.sockets.on 'connection', (socket) ->
     twitter.getUserTimeline config.handles[0], (data) ->
-      console.log data
+      console.log 'Tweet: First tweet published.'
       socket.emit 'firsttweet', {'tweet': data.splice(0, 4)}
     if typeof config.handles isnt 'undefined'
       twitter.stream 'user',
         track: config.handles
       , (stream) ->
         stream.on 'data', (data) ->
-          console.log 'stream', data
+          console.log 'Tweet: New tweet published.'
           socket.emit 'tweet', {tweet: data}

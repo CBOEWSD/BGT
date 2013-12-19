@@ -10,7 +10,7 @@ requirejs.config {
     jquery: '/ui/libs/jquery/jquery'
     underscore: '/ui/libs/underscore-amd/underscore'
     backbone: '/ui/libs/backbone-amd/backbone'
-    echojs: '/ui/libs/echojs/dist/echo'
+    echojs: '/ui/libs/echojs/echo-1.4.0/dist/echo'
 }
 
 # ## Declare Application Class

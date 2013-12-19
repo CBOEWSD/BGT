@@ -60,6 +60,23 @@ With that said, please make sure to document any code submitted to this project 
 [Jira](http://jira.bgtpartners.com) - For QA, client facing and such discussion.
 Repository Issue Track - For general development discussion and/or tracking.
 
+## Production vs Development
+
+This project is setup in such a way that a production configuration can be mirrored quite simply by flagging your `NODE_ENV` variable to `production`. This can be done by entering the following in your console:
+
+```
+export NODE_ENV=production
+```
+
+This does a number of things:
+
+* Our bundles are concatinated into single files
+* Assets, including those not bundled, are minified
+* All development logging stypes are disabled
+* All debug modes are flagged disabled
+
+**Note:** Remember to switch back to development env with `export NODE_ENV=development`.
+
 ## Project Contacts
 
 - [David McKeown](mailto:david.j.mckeown@us.pwc.com) - Lead Developer

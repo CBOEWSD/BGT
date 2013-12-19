@@ -13,16 +13,68 @@ GLOBAL.fs = require 'fs'
 assetManager = require './_application/assets'
 minify = require 'express-minify'
 twitterSocket = require './_twitter/socket'
+assetConnect = require 'connect-assetmanager'
+handlers = require './_application/handlers'
 
 # Load our package JSON file
 pkg = require './package.json'
 
 # Declase application as express
-app = express()
+GLOBAL.app = express()
+
+# Set Boolean for prod
+isProd = if ('production' == app.get('env')) then true else false
+
+# Assets
+# ### JS Bundle
+assetManager.addBundle {
+  name: 'initCoffee'
+  files: [
+    'ui/base/**/*.init.coffee'
+    'ui/classes/**/*.init.coffee'
+    'modules/**/*.init.coffee'
+  ]
+}
+
+# ### CSS Bundle
+assetManager.addBundle {
+  name: 'css'
+  files: [
+    'ui/base/**/*.scss'
+    'ui/views/**/*.scss'
+    'ui/classes/**/*.scss'
+    'modules/**/*.scss'
+  ]
+}
+
+# If we're in prod mode create an asset middleware
+# instance of connect-assetmanager
+if isProd
+  prodAssets = {
+    'css':
+      'route': /\/static\/styles.css/
+      'path': './'
+      'dataType': 'css'
+      'files': assetManager.listFiles 'css'
+      'preManipulate':
+        '^': [handlers.sassRenderer]
+    'js':
+      'route': /\/static\/scripts.js/
+      'path': './'
+      'dataType': 'js'
+      'files': assetManager.listFiles 'initCoffee'
+      'preManipulate':
+        '^': [handlers.coffeeRenderer]
+  }
+
+  assetsManagerMiddleware = assetConnect(prodAssets)
 
 # Compress response data
 app.use express.compress()
-if 'production' == app.get('env')
+
+# Production assets
+if isProd
+  app.use(assetsManagerMiddleware)
   app.use minify()
 
 # ### Configure environments settings
@@ -39,30 +91,30 @@ app.set 'view engine', 'handlebars'
 # ### Set Middleware
 app.use '/ui', sass.middleware {
   src: __dirname + '/ui'
-  debug: true
+  debug: !isProd
 }
 app.use '/_compiled', sass.middleware {
   src: __dirname + '/_compiled'
-  debug: true
+  debug: !isProd
 }
 app.use '/modules', sass.middleware {
   src: __dirname + '/modules'
-  debug: true
+  debug: !isProd
 }
 app.use '/ui', coffee {
   src: __dirname + '/ui'
-  compress: false
-  debug: true
+  compress: isProd
+  debug: !isProd
 }
 app.use '/_compiled', coffee {
   src: __dirname + '/_compiled'
-  compress: false
-  debug: true
+  compress: isProd
+  debug: !isProd
 }
 app.use '/modules', coffee {
   src: __dirname + '/modules'
-  compress: false
-  debug: true
+  compress: isProd
+  debug: !isProd
 }
 # ### Set public dir
 app.use '/ui', express.static path.join(__dirname, 'ui')

@@ -48,19 +48,21 @@ class AssetManager
   # Called in the view layer to render out scripts bundle(s)
   # in html markup form.
   renderScripts: (bundle) ->
-    markup = ''
-    am.updateBundle bundle
-    for group in bundles[bundle]
-      for file in group
-        file = file.replace '.coffee', '.js'
-        markup += "<script src='/#{file}'></script>"
-    return markup
+    if app.get('env') == 'production'
+      return '<script src="/static/scripts.js"></script>'
+    else
+      markup = ''
+      am.updateBundle bundle
+      for group in bundles[bundle]
+        for file in group
+          file = file.replace '.coffee', '.js'
+          markup += "<script src='/#{file}'></script>"
+      return markup
 
   # ### renderStyles
   # Called in the view layer to render out styles bundle(s)
   # in html markup form.
   renderStyles: (bundle) ->
-    console.log app.get('env')
     if app.get('env') == 'production'
       return '<link href="/static/styles.css" media="all" rel="stylesheet" type="text/css">'
     else

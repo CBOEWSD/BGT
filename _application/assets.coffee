@@ -48,52 +48,41 @@ class AssetManager
   # Called in the view layer to render out scripts bundle(s)
   # in html markup form.
   renderScripts: (bundle) ->
-    markup = ''
-    am.updateBundle bundle
-    for group in bundles[bundle]
-      for file in group
-        file = file.replace '.coffee', '.js'
-        markup += "<script src='/#{file}'></script>"
-    return markup
+    if app.get('env') == 'production'
+      return '<script src="/static/scripts.js"></script>'
+    else
+      markup = ''
+      am.updateBundle bundle
+      for group in bundles[bundle]
+        for file in group
+          file = file.replace '.coffee', '.js'
+          markup += "<script src='/#{file}'></script>"
+      return markup
 
   # ### renderStyles
   # Called in the view layer to render out styles bundle(s)
   # in html markup form.
   renderStyles: (bundle) ->
-    markup = ''
-    am.updateBundle bundle
-    for group in bundles[bundle]
-      for file in group
-        filenameindex = file.lastIndexOf('/') + 1
-        filename = file.substr(filenameindex)
-        if filename.indexOf('_') != 0
-          file = file.replace('.scss', '.css')
-          markup += "<link href='/#{file}' media='all' rel='stylesheet' type='text/css'>"
-    return markup
+    if app.get('env') == 'production'
+      return '<link href="/static/styles.css" media="all" rel="stylesheet" type="text/css">'
+    else
+      markup = ''
+      am.updateBundle bundle
+      for group in bundles[bundle]
+        for file in group
+          filenameindex = file.lastIndexOf('/') + 1
+          filename = file.substr(filenameindex)
+          if filename.indexOf('_') != 0
+            file = file.replace('.scss', '.css')
+            markup += "<link href='/#{file}' media='all' rel='stylesheet' type='text/css'>"
+      return markup
+
+  listFiles: (bundle) ->
+    merged = []
+    return merged.concat.apply(merged, bundles[bundle])
 
 # ## Initialize
 assetManager = new AssetManager
-
-# ### JS Bundle
-assetManager.addBundle {
-  name: 'initCoffee'
-  files: [
-    'ui/base/**/*.init.coffee'
-    'ui/classes/**/*.init.coffee'
-    'modules/**/*.init.coffee'
-  ]
-}
-
-# ### CSS Bundle
-assetManager.addBundle {
-  name: 'css'
-  files: [
-    'ui/base/**/*.scss'
-    'ui/views/**/*.scss'
-    'ui/classes/**/*.scss'
-    'modules/**/*.scss'
-  ]
-}
 
 # ## Export module
 module.exports = assetManager

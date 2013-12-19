@@ -1,6 +1,6 @@
-@import '_includes/reset';
-@import '_includes/grid';
-@import '_typography';
+@import './ui/base/_includes/reset';
+@import './ui/base/_includes/grid';
+@import './ui/base/_typography';
 
 // Base from body styling
 body {

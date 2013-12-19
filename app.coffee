@@ -12,6 +12,7 @@ GLOBAL.exphbs  = require 'express3-handlebars'
 GLOBAL.fs = require 'fs'
 assetManager = require './_application/assets'
 minify = require 'express-minify'
+twitterSocket = require './_twitter/socket'
 
 # Load our package JSON file
 pkg = require './package.json'
@@ -83,5 +84,8 @@ app.get '*', routes.index
 
 # Create server, use custom port if specified
 # otherwise use port in package.json
-http.createServer(app).listen app.get('port'), ->
+server = http.createServer(app).listen app.get('port'), ->
   console.log 'Server listening on port ' + app.get('port')
+
+# Start Socket listening
+twitterSocket server

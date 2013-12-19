@@ -1,5 +1,6 @@
-module.exports = twitterSocket = ->
-  io = require('socket.io').listen 9000
+module.exports = twitterSocket = (server) ->
+  server = if typeof server == 'undefined' then 9000 else server
+  io = require('socket.io').listen server
 
   # ## Config
   conf = require './config.coffee'
@@ -7,7 +8,7 @@ module.exports = twitterSocket = ->
 
   # ## Twitter API
   twitapi = require 'twitter'
-  twitter = new twitapi
+  twitter = new twitapi config
 
   io.sockets.on 'connection', (socket) ->
     twitter.getUserTimeline config.handles[0], (data) ->
@@ -20,5 +21,3 @@ module.exports = twitterSocket = ->
         stream.on 'data', (data) ->
           console.log 'stream', data
           socket.emit 'tweet': {tweet: data}
-
-twitterSocket()

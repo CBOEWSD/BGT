@@ -56,6 +56,8 @@ $module: '.widget';
       }
       text-transform: uppercase;
       color: $colorBlue1;
+      margin: 0 0 3px;
+      padding: 0 0 5px;
 
       & ~ .subwidget {
         border-top: 1px solid $colorGrey2;

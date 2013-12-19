@@ -8,13 +8,57 @@
 
 $module: '.header';
 
+$bordersize: 8px;
+$bordercolor: lighten($colorGrey2, 7%);
+
 #{$module} {
-  border-top: 10px solid lighten($colorGrey2, 7%);
+  border-top: $bordersize solid $bordercolor;
   background: $colorGrey2;
-  height: 70px;
+  height: 80px;
 
   .logo {
     @include column(5);
+
+    a {
+      background: $colorBlue1;
+      display: inline-block;
+      padding: 14px 10px 10px;
+      margin-top: -#{10 + $bordersize};
+      border-top: $bordersize solid $colorBlue2;
+      position: relative;
+
+      &:before, &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: $bordersize $bordersize 0 0;
+        top: -$bordersize;
+      }
+
+      &:before {
+        border-color: $bordercolor transparent transparent transparent;
+        left: 0;
+      }
+
+      &:after {
+        border-color: $colorBlue2 transparent transparent transparent;
+        right: -$bordersize;
+      }
+
+      .line {
+        position: absolute;
+        left: 106px;
+        top: 50%;
+        margin-top: -3px;
+        color: $colorBlue1;
+        font: {
+          size: .6em;
+        }
+        text-transform: uppercase;
+        width: 110px;
+      }
+    }
   }
 
   .right {

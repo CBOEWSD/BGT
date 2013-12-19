@@ -46,6 +46,8 @@ assetManager.addBundle {
   ]
 }
 
+# If we're in prod mode create an asset middleware
+# instance of connect-assetmanager
 if isProd
   prodAssets = {
     'css':

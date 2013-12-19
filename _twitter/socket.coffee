@@ -20,4 +20,4 @@ module.exports = twitterSocket = (server) ->
       , (stream) ->
         stream.on 'data', (data) ->
           console.log 'stream', data
-          socket.emit 'tweet': {tweet: data}
+          socket.emit 'tweet', {tweet: data}

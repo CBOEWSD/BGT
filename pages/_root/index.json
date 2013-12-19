@@ -32,6 +32,8 @@
       },{
       "widgets/list/simple": "sidebar/events.json"
       },{
+      "twitter/twitter": "sidebar/_config.json"
+      },{
       "ads/square_300/300": "sidebar/_config.json"
       }]
   }

@@ -69,13 +69,14 @@ if isProd
 
   assetsManagerMiddleware = assetConnect(prodAssets)
 
-# Compress response data
-app.use express.compress()
-
 # Production assets
 if isProd
+  # Compress response data
+  app.use express.compress()
   app.use(assetsManagerMiddleware)
   app.use minify()
+  # Enable view level caching
+  app.enable('view cache');
 
 # ### Configure environments settings
 app.set 'port', process.env.PORT || pkg.server.port || 3000

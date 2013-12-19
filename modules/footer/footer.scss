@@ -18,7 +18,7 @@ $module: '.footer';
   	@include column(3);
   	ul {
   		list-style: none;
-  		margin: 0;padding : 0;
+  		margin: 0;padding: 0;
 
   		li {
   			margin: 0;
@@ -35,6 +35,10 @@ $module: '.footer';
 
   .disclaimer {
   	@include column(6);
+
+    .icon-logo {
+      margin-top: -4px;
+    }
 
   	p {
   		font: {

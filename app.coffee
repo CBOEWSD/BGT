@@ -12,12 +12,48 @@ GLOBAL.exphbs  = require 'express3-handlebars'
 GLOBAL.fs = require 'fs'
 assetManager = require './_application/assets'
 minify = require 'express-minify'
+assetConnect = require 'connect-assetmanager'
+handlers = require './_application/handlers'
 
 # Load our package JSON file
 pkg = require './package.json'
 
 # Declase application as express
-app = express()
+GLOBAL.app = express()
+
+# Assets
+# ### JS Bundle
+assetManager.addBundle {
+  name: 'initCoffee'
+  files: [
+    'ui/base/**/*.init.coffee'
+    'ui/classes/**/*.init.coffee'
+    'modules/**/*.init.coffee'
+  ]
+}
+
+# ### CSS Bundle
+assetManager.addBundle {
+  name: 'css'
+  files: [
+    'ui/base/**/*.scss'
+    'ui/views/**/*.scss'
+    'ui/classes/**/*.scss'
+    'modules/**/*.scss'
+  ]
+}
+
+prodAssets = {
+  'css':
+    'route': /\/static\/styles.css/
+    'path': './'
+    'dataType': 'css'
+    'files': assetManager.listFiles 'css'
+    'preManipulate':
+      '^': [handlers.sassRenderer]
+}
+
+assetsManagerMiddleware = assetConnect(prodAssets)
 
 # Compress response data
 app.use express.compress()
@@ -67,6 +103,8 @@ app.use '/modules', coffee {
 app.use '/ui', express.static path.join(__dirname, 'ui')
 app.use '/_compiled', express.static path.join(__dirname, '_compiled')
 app.use '/modules', express.static path.join(__dirname, 'modules')
+
+app.use(assetsManagerMiddleware)
 
 app.use express.favicon()
 app.use express.logger('dev')

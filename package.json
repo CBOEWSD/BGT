@@ -18,7 +18,8 @@
     "lodash": "~2.3.0",
     "glob": "~3.2.7",
     "express-minify": "0.0.7",
-    "connect-assetmanager": "0.0.28"
+    "connect-assetmanager": "0.0.28",
+    "coffee-script": "~1.6.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

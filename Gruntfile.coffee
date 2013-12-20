@@ -20,6 +20,11 @@ module.exports = (grunt) ->
           './modules/**/*.coffee'
         ]
         tasks: ['dev']
+      templates:
+        files: [
+          'modules/**/*.share.handlebars'
+        ]
+      tasks: ['handlebars']
 
     # Docco compiles code into annotated web documents
     docco:
@@ -91,7 +96,7 @@ module.exports = (grunt) ->
 
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
-  grunt.registerTask 'dev', ['docco']
+  grunt.registerTask 'dev', ['docco', 'handlebars']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
 
 

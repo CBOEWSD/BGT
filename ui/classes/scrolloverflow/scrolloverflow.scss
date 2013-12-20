@@ -9,18 +9,6 @@
 
 $class: '.scrolloverflow';
 
-// Removing this functionality in firefox temporarily
-// as positions are not supported in table or table
-// element displays. We will come back to a more robust
-// solution to render correctly in FF soon.
-@-moz-document url-prefix() {
-  #{$class} {
-    .scrolloverflow-inside {
-      position: relative;
-    }
-  }
-}
-
 
 #{$class} {
   position: relative;
@@ -34,5 +22,17 @@ $class: '.scrolloverflow';
     overflow-y: auto;
     overflow-x: hidden;
     @include scrollbar(7px, $colorGrey2, #fff);
+  }
+}
+
+// Removing this functionality in firefox temporarily
+// as positions are not supported in table or table
+// element displays. We will come back to a more robust
+// solution to render correctly in FF soon.
+@-moz-document url-prefix() {
+  #{$class} {
+    .scrolloverflow-inside {
+      position: relative;
+    }
   }
 }

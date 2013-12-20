@@ -51,6 +51,14 @@ module.exports = (grunt) ->
       options:
         urls: 'http://localhost:' + pkg.server.port
 
+    # [Grunt-Contrib-Handlebars](https://npmjs.org/package/grunt-contrib-handlebars)
+    handlebars:
+      compile:
+        options:
+          namespace: 'JST'
+        files:
+          'ui/templates/templates.js': ['modules/**/*.share.handlebars']
+
     # [Nodemon](https://github.com/ChrisWren/grunt-nodemon)
     nodemon:
       dev:

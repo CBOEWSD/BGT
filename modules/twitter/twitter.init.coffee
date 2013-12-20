@@ -11,19 +11,14 @@ if $el.length > 0
     'jquery',
     'socketio',
     'pubsub',
-    'handlebars',
+    'templates'
     '/modules/twitter/twitter.model.js',
     '/modules/twitter/twitter.view.js',
-    'hbs/handlebars'
-    ], ($, io, pubsub, hbsgroup, twitterModel, twitterView, hbs) ->
-
-    # if pubsub is not global make it so
+    ], ($, io, pubsub, tpl, twitterModel, twitterView) ->
     window.pubsub = window.pubsub or pubsub
-    # if handlebars is not global make it so
-    window.hbs = window.hbs or hbs
 
     # Init view (socket connection)
-    me = new twitterModel $, io, hbs
+    me = new twitterModel $, io
 
     # Init a view for each
     $el.each ->

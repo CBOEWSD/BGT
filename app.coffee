@@ -76,7 +76,7 @@ if isProd
   app.use(assetsManagerMiddleware)
   app.use minify()
   # Enable view level caching
-  app.enable('view cache');
+  app.enable('view cache')
 
 # ### Configure environments settings
 app.set 'port', process.env.PORT || pkg.server.port || 3000

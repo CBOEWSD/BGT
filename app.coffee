@@ -36,6 +36,17 @@ assetManager.addBundle {
   ]
 }
 
+# ### Lib Bundle
+# These are some libraries we need to load regardless of modules
+assetManager.addBundle {
+  name: 'libs'
+  files: [
+    'ui/libs/requirejs/require.js'
+    'ui/libs/jquery/jquery.js'
+    'ui/libs/handlebars/handlebars.js-1.1.2/handlebars.js'
+  ]
+}
+
 # ### CSS Bundle
 assetManager.addBundle {
   name: 'css'

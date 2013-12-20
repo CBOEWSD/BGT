@@ -63,19 +63,32 @@ assetManager.addBundle {
 if isProd
   prodAssets = {
     'css':
-      'route': /\/static\/styles.css/
+      'route': /\/static\/css.css/
       'path': './'
       'dataType': 'css'
       'files': assetManager.listFiles 'css'
       'preManipulate':
-        '^': [handlers.sassRenderer]
+        '^': [
+          handlers.sassRenderer
+        ]
     'js':
-      'route': /\/static\/scripts.js/
+      'route': /\/static\/initCoffee.js/
       'path': './'
       'dataType': 'js'
       'files': assetManager.listFiles 'initCoffee'
       'preManipulate':
-        '^': [handlers.coffeeRenderer]
+        '^': [
+          handlers.coffeeRenderer
+        ]
+    'js2':
+      'route': /\/static\/libs.js/
+      'path': './'
+      'dataType': 'js'
+      'files': assetManager.listFiles 'libs'
+      'preManipulate':
+        '^': [
+          handlers.coffeeRenderer
+        ]
   }
 
   assetsManagerMiddleware = assetConnect(prodAssets)

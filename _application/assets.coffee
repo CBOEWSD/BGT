@@ -49,7 +49,7 @@ class AssetManager
   # in html markup form.
   renderScripts: (bundle) ->
     if app.get('env') == 'production'
-      return '<script src="/static/scripts.js"></script>'
+      return "<script src='/static/#{bundle}.js'></script>"
     else
       markup = ''
       am.updateBundle bundle
@@ -64,7 +64,7 @@ class AssetManager
   # in html markup form.
   renderStyles: (bundle) ->
     if app.get('env') == 'production'
-      return '<link href="/static/styles.css" media="all" rel="stylesheet" type="text/css">'
+      return "<link href='/static/#{bundle}.css' media='all' rel='stylesheet' type='text/css'>"
     else
       markup = ''
       am.updateBundle bundle

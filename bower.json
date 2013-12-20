@@ -6,6 +6,6 @@
     "requirejs": "~2.1.8",
     "echojs": "~1.4.0",
     "pubsub-js": "~1.4.0",
-    "require-handlebars-plugin": "~0.7.0"
+    "handlebars": "~1.1.2"
   }
 }

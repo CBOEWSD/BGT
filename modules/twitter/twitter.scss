@@ -1,0 +1,30 @@
+/*
+  Module: Twitter
+  Description: Twitter module that can be called as a widget or standalone
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$module: '.twitter .api';
+
+#{$module} {
+  .tweet {
+    display: table;
+
+    .avatar, .message {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .avatar {
+      width: 50px;
+    }
+
+    .message {
+      padding-left: 10px;
+    }
+  }
+}

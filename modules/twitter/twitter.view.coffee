@@ -1,25 +1,22 @@
 class TwitterView
   self = {}
 
-  constructor: (el) ->
+  constructor: (el, tpl) ->
     self = @
     self.$el = $(el)
-    self.template = $('#tweet-template').text()
-    self.view = hbs.compile self.template
+    self.view = window["JST"]["modules/twitter/tweet.share.handlebars"]
 
     pubsub.subscribe 'tweet/new', @handleTweet
 
   handleTweet: (e, data) ->
     # Check that data exists
     if typeof data.tweet == 'object' and typeof data.tweet.friends == 'undefined'
-      self.renderTweet data.tweet[0]
+      if typeof data.tweet[0] != 'undefined'
+        self.renderTweet data.tweet[0]
+      else
+        self.renderTweet data.tweet
 
   renderTweet: (tweet) ->
-    console.log tweet
-
-    console.log self.template
-    console.log self.view tweet
-
     self.$el.html self.view tweet
 
 

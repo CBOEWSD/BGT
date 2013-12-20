@@ -20,6 +20,11 @@ module.exports = (grunt) ->
           './modules/**/*.coffee'
         ]
         tasks: ['dev']
+      templates:
+        files: [
+          'modules/**/*.share.handlebars'
+        ]
+      tasks: ['handlebars']
 
     # Docco compiles code into annotated web documents
     docco:
@@ -50,6 +55,14 @@ module.exports = (grunt) ->
     qunit:
       options:
         urls: 'http://localhost:' + pkg.server.port
+
+    # [Grunt-Contrib-Handlebars](https://npmjs.org/package/grunt-contrib-handlebars)
+    handlebars:
+      compile:
+        options:
+          namespace: 'JST'
+        files:
+          'ui/templates/templates.js': ['modules/**/*.share.handlebars']
 
     # [Nodemon](https://github.com/ChrisWren/grunt-nodemon)
     nodemon:
@@ -83,7 +96,7 @@ module.exports = (grunt) ->
 
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
-  grunt.registerTask 'dev', ['docco']
+  grunt.registerTask 'dev', ['docco', 'handlebars']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
 
 

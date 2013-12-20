@@ -10,11 +10,7 @@ requirejs.config {
     jquery: '/ui/libs/jquery/jquery'
     echojs: '/ui/libs/echojs/echo-1.4.0/dist/echo'
     pubsub: '/ui/libs/pubsub-js/src/pubsub'
-    handlebars: '/ui/libs/require-handlebars-plugin/hbs'
-    'hbs/handlebars': '/ui/libs/require-handlebars-plugin/hbs/handlebars'
-    'hbs/underscore': '/ui/libs/require-handlebars-plugin/hbs/underscore'
-    'hbs/i18nprecompile': '/ui/libs/require-handlebars-plugin/hbs/i18nprecompile'
-    'hbs/json2': '/ui/libs/require-handlebars-plugin/hbs/json2'
+    templates: '/ui/templates/templates'
     socketio: '/socket.io/socket.io'
 }
 

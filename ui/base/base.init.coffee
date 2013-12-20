@@ -8,7 +8,7 @@
 requirejs.config {
   paths:
     jquery: '/ui/libs/jquery/jquery'
-    echojs: '/ui/libs/echojs/echo-1.4.0/dist/echo'
+    echojs: '/ui/libs/echojs/dist/echo'
     pubsub: '/ui/libs/pubsub-js/src/pubsub'
     templates: '/ui/templates/templates'
     socketio: '/socket.io/socket.io'

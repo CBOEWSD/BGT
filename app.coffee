@@ -43,7 +43,7 @@ assetManager.addBundle {
   files: [
     'ui/libs/requirejs/require.js'
     'ui/libs/jquery/jquery.js'
-    'ui/libs/handlebars/handlebars.js-1.1.2/handlebars.js'
+    'ui/libs/handlebars/handlebars.js'
   ]
 }
 

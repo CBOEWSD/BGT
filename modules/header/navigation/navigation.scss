@@ -76,8 +76,11 @@ $3dsize: 4px;
         padding: 15px 0 5px 0;
         width: 550px;
         margin-top: -3px;
-        @include box-shadow(0 -1px 1px rgba(0,0,0,.1));
         left: -5000em;
+
+        border-left: 1px solid darken(#fff, 10%);
+        border-right: 1px solid darken(#fff, 10%);
+        border-bottom: 1px solid darken(#fff, 10%);
 
         &.hasthird {
           width: 800px;
@@ -116,6 +119,15 @@ $3dsize: 4px;
                 weight: 600;
               }
               margin: 0;
+            }
+
+            ul {
+              li {
+                border-top: 1px solid $colorGrey2;
+                &:first-child {
+                  border-top: none;
+                }
+              }
             }
 
             a {

@@ -13,6 +13,19 @@ $class: '.scrolloverflow';
 #{$class} {
   position: relative;
 
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 20px;
+    background: red;
+    @include box-shadow(0 0 20px red);
+  }
+
   .scrolloverflow-inside {
     position: absolute;
     left: 0; top: 0;
@@ -21,7 +34,7 @@ $class: '.scrolloverflow';
     max-height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    @include scrollbar(7px, $colorGrey2, #fff);
+    @include scrollbar(7px, $colorGrey2, rgba(0, 0, 0, 0));
   }
 
   @media screen and (max-width: $screenSmall) {

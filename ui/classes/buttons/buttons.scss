@@ -22,7 +22,6 @@ $class: '.button';
   color: #fff;
   border: none;
   @include box-shadow(1px 1px 0 rgba(0,0,0,.1));
-  @include transition(background-color .3s ease-out);
 
   &:hover {
     background: lighten($colorBlue1, 10%);

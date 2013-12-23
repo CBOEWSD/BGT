@@ -23,6 +23,12 @@ $class: '.scrolloverflow';
     overflow-x: hidden;
     @include scrollbar(7px, $colorGrey2, #fff);
   }
+
+  @media screen and (max-width: $screenSmall) {
+    .scrolloverflow-inside {
+      position: relative;
+    }
+  }
 }
 
 // Removing this functionality in firefox temporarily

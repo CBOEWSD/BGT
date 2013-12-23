@@ -2,7 +2,9 @@
 # Fix for browsers with lack of support for
 # the console object.
 
+# Empty method wrapper
 ->
+  # Blank method to allow calls to each
   noop = ->
   methods = [
     'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',

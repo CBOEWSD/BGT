@@ -49,4 +49,26 @@ $view: '.view-homepage';
       }
     }
   }
+
+  @media screen and (max-width: $screenSmall) {
+    .row {
+      display: block;
+      padding: 0 10px;
+      margin: 0;
+
+      .row {
+        padding: 0;
+      }
+
+      .column1, .column2, .column3, .column50 {
+        display: block;
+        width: 100%;
+        border: none;
+
+        .row {
+          margin-top: -10px;
+        }
+      }
+    }
+  }
 }

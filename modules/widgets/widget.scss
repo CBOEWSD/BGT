@@ -87,4 +87,8 @@ $module: '.widget';
       display: none;
     }
   }
+
+  @media screen and (max-width: $screenSmall) {
+    margin: 10px 0;
+  }
 }

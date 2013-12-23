@@ -31,6 +31,10 @@ img {
 // Base container class
 .container {
   @include outerRow();
+
+  @media screen and (max-width: $screenSmall) {
+    min-width: 0px;
+  }
 }
 
 // Apply default mixins for typography

@@ -17,6 +17,7 @@ class TwitterView
         self.renderTweet data.tweet
 
   renderTweet: (tweet) ->
+    console.log tweet
     self.$el.html self.view tweet
 
 

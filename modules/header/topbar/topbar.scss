@@ -4,6 +4,7 @@
 */
 
 @import './ui/base/settings';
+@import './ui/base/_includes/grid';
 @import './ui/base/_includes/compass/css3';
 
 $module: '.topbar';
@@ -13,6 +14,7 @@ $module: '.topbar';
 
   .menu {
     padding: 0; margin: 0; list-style: none;
+    @include column(12);
 
     text-align: right;
 

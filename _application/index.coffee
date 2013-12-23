@@ -10,4 +10,8 @@ exports.index = (req, res) ->
         helpers:
           renderScripts: renderScripts
           renderStyles: renderStyles
+          isProd: ->
+            # We return the string to the view which renders
+            # as a boolean and not a string
+            return if isProd then 'false' else 'true'
       }

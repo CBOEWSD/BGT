@@ -39,6 +39,6 @@ class TwitterView
     console.log tweet
     self.$el.html self.view tweet
 
-
+# Return defined twitter view for require
 define ->
   return TwitterView

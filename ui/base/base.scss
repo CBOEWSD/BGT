@@ -44,3 +44,13 @@ h3 { @include h3; }
 h4 { @include h4; }
 h5 { @include h5; }
 p { @include p; }
+
+// Links base
+a {
+  color: $colorGrey1;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

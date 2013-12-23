@@ -5,6 +5,7 @@
 
 @import './ui/base/_includes/grid';
 @import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
 
 $module: '.header';
 
@@ -26,6 +27,11 @@ $bordercolor: lighten($colorGrey2, 7%);
       margin-top: -#{10 + $bordersize};
       border-top: $bordersize solid $colorBlue2;
       position: relative;
+      @include transition(background-color .3s ease-out);
+
+      &:hover {
+        background: lighten($colorBlue1, 10%);
+      }
 
       &:before, &:after {
         display: block;

@@ -42,8 +42,6 @@ $module: '.widget-list';
 
       a {
         display: block;
-        color: $colorGrey1;
-        text-decoration: none;
         @include clearfix();
       }
 

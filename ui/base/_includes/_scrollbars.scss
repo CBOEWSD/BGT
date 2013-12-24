@@ -9,11 +9,12 @@
   &::-webkit-scrollbar-thumb {
     background: $primary;
     @include border-radius(10px);
-    border-right: 2px solid $secondary;
+    border-left: 3px solid $secondary;
   }
 
   &::-webkit-scrollbar-track {
     background: $secondary;
+    border-left: 3px solid $secondary;
     margin: 10px;
     @include border-radius(10px);
   }

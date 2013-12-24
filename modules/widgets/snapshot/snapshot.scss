@@ -17,6 +17,7 @@ $module: '.snapshot';
     padding: 0;
     @include clearfix();
     display: table;
+    width: 100%;
 
     li {
       display: table-cell;

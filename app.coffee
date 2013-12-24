@@ -44,6 +44,7 @@ assetManager.addBundle {
     'ui/libs/requirejs/require.js'
     'ui/libs/jquery/jquery.js'
     'ui/libs/handlebars/handlebars.js'
+    'ui/libs/responsejs/response.js'
   ]
 }
 

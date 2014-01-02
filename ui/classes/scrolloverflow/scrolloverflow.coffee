@@ -17,9 +17,23 @@ class ScrollOverflow
     self.$el = $el
     self.shouldI = false
 
+    # Add TSE lib
+    @addTSE()
+
     # Init and bind events
     @setHeight()
     @bindUp()
+
+  addTSE: ->
+    self.$el.each ->
+      $this = $(this)
+      $inside = $ '.scrolloverflow-inside', $this
+
+      $this.wrapInner '<div class="tse-scrollable"/>'
+      $inside.addClass 'tse-content'
+      $inside.addClass 'vertical'
+
+      $('.tse-scrollable', $this).TrackpadScrollEmulator()
 
   # ## `this.setHeight`
   # For each instance of the class we will detect the height without the inner content
@@ -27,7 +41,7 @@ class ScrollOverflow
   setHeight: ->
     self.$el.each ->
       $this = $(this)
-      $inside = $ '.scrolloverflow-inside', $this
+      $inside = $ '.tse-scrollable', $this
 
       # Hide to calc height
       $inside.removeClass('shown')
@@ -35,10 +49,14 @@ class ScrollOverflow
       # Get numbers
       $paddingVert = parseInt($this.css('padding-top')) + parseInt($this.css('padding-bottom'))
       newHeight = $this.innerHeight() - $paddingVert
+      $paddingHoriz = parseInt($this.css('padding-right')) + parseInt($this.css('padding-left'))
+      newWidth = $this.innerWidth() - $paddingHoriz
 
       # Set new height and show element if not displayed
       $inside.height newHeight
+      $inside.width newWidth
       $inside.addClass('shown')
+      $inside.TrackpadScrollEmulator('recalculate')
 
   # ## `this.bindUp`
   # We set a listen for the DOM change event and also start our interval
@@ -53,7 +71,7 @@ class ScrollOverflow
       if self.shouldI
         self.setHeight()
         self.shouldI = false
-    , 1000
+    , 3000
 
   # ## `this.changeEvent`
   # Set `this.shouldI` to `true` for the next interval check

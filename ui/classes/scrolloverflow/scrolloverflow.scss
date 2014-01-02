@@ -9,21 +9,17 @@
 
 $class: '.scrolloverflow';
 
-
 #{$class} {
   position: relative;
   overflow: hidden;
 
-  .scrolloverflow-inside {
-    position: absolute;
-    left: -5000em;
-    overflow-y: auto;
-    overflow-x: hidden;
-    @include scrollbar(7px, $colorGrey2, #fff);
+  .tse-scrollable {
+    position: absolute !important;
+    left: -5000em !important;
 
     &.shown {
-      position: relative;
-      left: 0;
+      position: relative !important;
+      left: 0 !important;
     }
   }
 

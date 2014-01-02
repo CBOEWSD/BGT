@@ -7,6 +7,7 @@
     "echojs": "~1.4.0",
     "pubsub-js": "~1.4.0",
     "handlebars": "~1.1.2",
-    "responsejs": "~0.7.8"
+    "responsejs": "~0.7.8",
+    "trackpad-scroll-emulator": "https://github.com/jnicol/trackpad-scroll-emulator.git"
   }
 }

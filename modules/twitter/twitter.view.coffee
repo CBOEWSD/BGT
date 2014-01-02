@@ -36,7 +36,6 @@ class TwitterView
   # Using our handlebars template we render the new tweet
   # to our module.
   renderTweet: (tweet) ->
-    console.log tweet
     self.$el.html self.view tweet
 
 # Return defined twitter view for require

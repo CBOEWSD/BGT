@@ -4,8 +4,11 @@
 # Define module
 $el = $('.scrolloverflow')
 
+# Viewport constraints
+minvp = 767
+
 # Check if at least 1 instance of module
-if $el.length > 0
+if $el.length > 0 and Response.viewportW() > minvp
   # Load TSE CSS
   window.loadCss '/ui/libs/trackpad-scroll-emulator/css/trackpad-scroll-emulator.css'
 
@@ -16,4 +19,4 @@ if $el.length > 0
     '/ui/libs/trackpad-scroll-emulator/jquery.trackpad-scroll-emulator.js'
     ], ($, so, tse) ->
 
-    new so $, $el
+    new so $, $el, minvp

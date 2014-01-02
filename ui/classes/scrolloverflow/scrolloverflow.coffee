@@ -9,13 +9,14 @@ class ScrollOverflow
   self = {}
 
   # ## Constructor
-  constructor: ($, $el)->
+  constructor: ($, $el, minviewport)->
     # This/that
     self = @
 
     # Set variables/objects
     self.$el = $el
     self.shouldI = false
+    self.minvp = minviewport
 
     # Add TSE lib
     @addTSE()
@@ -24,6 +25,8 @@ class ScrollOverflow
     @setHeight()
     @bindUp()
 
+  # ## `this.addTSE`
+  # Add TSE related classes and init
   addTSE: ->
     self.$el.each ->
       $this = $(this)
@@ -34,6 +37,20 @@ class ScrollOverflow
       $inside.addClass 'vertical'
 
       $('.tse-scrollable', $this).TrackpadScrollEmulator()
+
+  # ## `this.destroy`
+  # Removes all bindings and setup, this allows for collapse to mobile.
+  destroy: ->
+    self.$el.each ->
+      $this = $(this)
+      $inside = $ '.scrolloverflow-inside', $this
+      $wrap = $ 'tse-scrollable', $this
+
+      if $wrap.length > 0
+        $inside.unwrap()
+
+      $inside.removeClass 'tse-content'
+      $inside.removeClass 'vertical'
 
   # ## `this.setHeight`
   # For each instance of the class we will detect the height without the inner content

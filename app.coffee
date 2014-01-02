@@ -41,6 +41,7 @@ assetManager.addBundle {
 assetManager.addBundle {
   name: 'libs'
   files: [
+    'ui/libs/pubsub-js/src/pubsub.js'
     'ui/libs/requirejs/require.js'
     'ui/libs/jquery/jquery.js'
     'ui/libs/handlebars/handlebars.js'

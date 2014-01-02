@@ -42,7 +42,7 @@ class TwitterModel
   # application. This cna be used by any module/analytics throughout.
   newTweet: (data) ->
     # Publish event to global scope
-    pubsub.publish 'tweet/new', data
+    PubSub.publish 'tweet/new', data
 
 
 # Define called in require

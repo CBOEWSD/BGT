@@ -18,7 +18,7 @@ class TwitterView
     self.view = window["JST"]["modules/twitter/tweet.share.handlebars"]
 
     # Subscribe to new tweet events
-    pubsub.subscribe 'tweet/new', @handleTweet
+    PubSub.subscribe 'tweet/new', @handleTweet
 
   # ## `this.handleTweet`
   # Called on the event of a new tweet being published

@@ -8,14 +8,12 @@ $el = $('.twitter .api')
 if $el.length > 0
   # Load module
   require [
-    'jquery',
-    'socketio',
-    'pubsub',
+    'jquery'
+    'socketio'
     'templates'
-    '/modules/twitter/twitter.model.js',
-    '/modules/twitter/twitter.view.js',
-    ], ($, io, pubsub, tpl, twitterModel, twitterView) ->
-    window.pubsub = window.pubsub or pubsub
+    '/modules/twitter/twitter.model.js'
+    '/modules/twitter/twitter.view.js'
+    ], ($, io, tpl, twitterModel, twitterView) ->
 
     # Init view (socket connection)
     me = new twitterModel $, io

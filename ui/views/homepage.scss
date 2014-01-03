@@ -50,6 +50,26 @@ $view: '.view-homepage';
     }
   }
 
+  @media screen and (max-width: 900px) {
+    .row {
+      .column1 {
+        .row {
+          margin: 0;
+          .column50, .col {
+            display: block;
+            width: 100%;
+            border: none;
+            margin: 10px 0;
+
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: $screenSmall) {
     .row {
       display: block;

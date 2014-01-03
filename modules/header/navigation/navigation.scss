@@ -18,10 +18,10 @@ $3dsize: 4px;
 
   .menu {
     padding: 0;
+    position: relative;
 
     &>li {
       @include inline-block();
-      position: relative;
 
       &>a {
         @include inline-block();
@@ -177,6 +177,28 @@ $3dsize: 4px;
               display: none;
             }
           }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .menu {
+      &>li {
+        &:hover {
+          &>ul {
+            left: -10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .menu {
+      &>li {
+        &.social {
+          display: none;
         }
       }
     }

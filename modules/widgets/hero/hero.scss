@@ -113,4 +113,20 @@ $3dsize: 6px;
       }
     }
   }
+
+  @media screen and (max-width: $screenSmall) {
+    min-height: 0;
+
+    .background {
+      display: none;
+    }
+
+    .slides {
+      position: relative;
+
+      .slide {
+        width: 100%;
+      }
+    }
+  }
 }

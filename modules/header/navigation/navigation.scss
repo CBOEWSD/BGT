@@ -190,15 +190,18 @@ $3dsize: 4px;
             left: -10px;
           }
         }
+        &.social {
+          display: none;
+        }
       }
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 850px) {
     .menu {
       &>li {
-        &.social {
-          display: none;
+        & > a {
+          padding: 10px;
         }
       }
     }

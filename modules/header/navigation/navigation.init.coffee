@@ -42,7 +42,6 @@ class Navigation
         # Offset from parent not viewport
         position: $el.position()
     }
-    console.log specs
 
     # If menu is wider than viewport
     if specs.viewport < specs.width

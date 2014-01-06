@@ -7,7 +7,7 @@ After cloning the project, browse into the root of the project in [bash](http://
 This project requires three global modules be installed, [Bower](http://bower.io/), [CoffeeScript](https://npmjs.org/package/coffee-script) and [Grunt-CLI](https://npmjs.org/package/grunt-cli). If you haven't installed these before please run:
 
 ```
-npm install coffee-script -g && npm install grunt-cli -g && npm install bower -g
+npm install coffee-script -g && npm install grunt-cli -g && npm install bower@1.2.6 -g
 ```
 
 Now install the dependencies for this project:

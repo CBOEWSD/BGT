@@ -1,4 +1,5 @@
 {
+  "classes": ["collapse"],
   "widget": {
     "title": "CBOE TV",
     "promo": {

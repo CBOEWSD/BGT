@@ -1,0 +1,69 @@
+/*
+  Class: collapse
+  Description: 
+    This class will collapse the widget only showing the first
+    title. This title will be bound to click/touch event to expand.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/compass/css3';
+
+$class: '.collapse';
+
+@mixin Closed () {
+  display: none;
+}
+@mixin Open () {
+  display: block;
+}
+
+#{$class} {
+  position: relative;
+  cursor: pointer;
+
+  @media screen and (max-width: $screenSmall) {
+
+    * {
+      @include Closed;
+    }
+
+    .widget-title:first-child, .widget-title:first-child * {
+      @include Open;
+      margin: 0;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  .expander {
+    @include clearfix;
+    clear: both;
+    $width: 100%;
+    display: block;
+    background: $colorBlue1;
+    left: 0;
+    bottom: -12px;
+    width: $width;
+    margin-top: 10px;
+    //margin-left: -#{$width / 2};
+
+    color: #fff;
+    font: {
+      weight: 700;
+      size: .9em;
+    }
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 5px 0;
+  }
+
+  &.open, &.open * {
+    @include Open;
+
+    .expander {
+      background: red;
+    }
+  }
+}

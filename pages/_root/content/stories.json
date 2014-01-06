@@ -6,7 +6,7 @@
       "url": "#"
     }
   },
-  "classes": ["list-columns", "two", "noborder"],
+  "classes": ["list-columns", "two", "noborder", "collapse"],
   "items": [{
       "link": {
         "url": "#"

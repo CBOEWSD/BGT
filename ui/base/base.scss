@@ -33,6 +33,7 @@ img {
 // Base container class
 .container {
   @include outerRow();
+  min-width: 0px;
 
   @media screen and (max-width: $screenSmall) {
     min-width: 0px;

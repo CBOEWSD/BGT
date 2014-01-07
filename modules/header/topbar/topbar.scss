@@ -23,9 +23,15 @@ $module: '.topbar';
       padding: 10px 0;
       margin-left: 25px;
 
+      &.hidedesktop {
+        display: none;
+      }
+      &.hidemobile {
+        display: inline-block;
+      }
+
       a {
         @include inline-block();
-        color: #fff;
 
         &.sprite {
           background: url(/modules/header/topbar/assets/sprite.jpg) no-repeat top center;
@@ -55,5 +61,54 @@ $module: '.topbar';
         }
       }
     }
+  }
+
+  @media screen and (max-width: $screenSmall) {
+    background: $colorBlue1;
+
+    .menu {
+      padding: 0 10px;
+
+      li {
+        margin-left: 10px;
+
+        &.hidedesktop {
+          display: inline-block;
+        }
+        &.hidemobile {
+          display: none;
+        }
+
+        .button {
+          padding-left: 10px;
+          padding-right: 10px;
+          font: {
+            weight: 400;
+          }
+        }
+      }
+    }
+
+    .navicon {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      height: 40px;
+      width: 30px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.25em;
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        box-shadow:
+          0 8px 0 0 #fff,
+          0 16px 0 0 #fff;
+      }
+    }
+
   }
 }

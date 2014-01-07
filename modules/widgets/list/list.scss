@@ -65,7 +65,7 @@ $module: '.widget-list';
   }
 
   &.list-columns {
-    li {
+    & > li {
       float:left;
       display:inline;
       padding-top: 0;
@@ -73,18 +73,28 @@ $module: '.widget-list';
     }
 
     &.two {
-      li {
+      & > li {
         width: 50%;
       }
     }
     &.three {
-      li {
+      & > li {
         width: 33%;
       }
     }
     &.four {
-      li {
+      & > li {
         width: 25%;
+      }
+    }
+
+    @media screen and (max-width: $screenSmall) {
+      margin: 0; padding: 0;
+
+      & > li {
+        display: block;
+        float: none;
+        width: 100%;
       }
     }
   }

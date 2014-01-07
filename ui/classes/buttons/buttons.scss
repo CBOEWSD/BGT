@@ -35,4 +35,14 @@ $class: '.button';
         background: lighten($colorGreen1, 10%);
       }
   }
+
+  &.white {
+    background: #fff;
+    color: $colorBlue1;
+    text-shadow: none;
+
+      &:hover {
+        background: darken(#fff, 10%);
+      }
+  }
 }

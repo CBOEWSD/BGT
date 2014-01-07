@@ -1,6 +1,6 @@
 /*
   Class: collapse
-  Description: 
+  Description:
     This class will collapse the widget only showing the first
     title. This title will be bound to click/touch event to expand.
 */
@@ -22,6 +22,10 @@ $class: '.collapse';
   position: relative;
   cursor: pointer;
 
+  .expander {
+    display: none;
+  }
+
   @media screen and (max-width: $screenSmall) {
 
     * {
@@ -34,29 +38,29 @@ $class: '.collapse';
       border: none;
       padding: 0;
     }
-  }
 
-  .expander {
-    @include clearfix;
-    clear: both;
-    $width: 100%;
-    display: block;
-    background: $colorBlue1;
-    left: 0;
-    bottom: -12px;
-    width: $width;
-    margin-top: 10px;
-    //margin-left: -#{$width / 2};
+    .expander {
+      @include clearfix;
+      clear: both;
+      $width: 100%;
+      display: block;
+      background: $colorBlue1;
+      left: 0;
+      bottom: -12px;
+      width: $width;
+      margin-top: 10px;
+      //margin-left: -#{$width / 2};
 
-    color: #fff;
-    font: {
-      weight: 700;
-      size: .9em;
+      color: #fff;
+      font: {
+        weight: 700;
+        size: .9em;
+      }
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+      padding: 5px 0;
     }
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    padding: 5px 0;
   }
 
   &.open, &.open * {

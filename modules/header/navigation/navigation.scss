@@ -206,4 +206,17 @@ $3dsize: 4px;
       }
     }
   }
+
+  @media screen and (max-width: $screenSmall) {
+    display: none;
+    /* Temporary, mobile menu to be done */
+
+    .menu {
+      &>li {
+        & > a {
+
+        }
+      }
+    }
+  }
 }

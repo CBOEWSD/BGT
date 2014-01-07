@@ -13,9 +13,11 @@
           <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{this.thumbnail.src}}" alt="{{this.title}}" class="thumbnail">
         {{/if}}
 
+        {{#if this.title}}
         <h2 class="title">
           {{this.title}}
         </h2>
+        {{/if}}
 
         {{#if this.meta}}
         <strong class="meta">

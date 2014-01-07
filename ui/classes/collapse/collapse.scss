@@ -34,9 +34,6 @@ $class: '.collapse';
 
     .widget-title:first-child, .widget-title:first-child * {
       @include Open;
-      margin: 0;
-      border: none;
-      padding: 0;
     }
 
     .expander {

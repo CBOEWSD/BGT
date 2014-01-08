@@ -1,0 +1,32 @@
+/*
+  Module: Navigation
+  Description: Global navigation module called into the header.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.navigation';
+
+$width: 90%;
+
+#{$module} {
+
+  @media screen and (max-width: $screenSmall) {
+    position: fixed;
+    left: -$width;
+    top: 0;
+    width: $width;
+    height: 100%;
+
+    .showMobileMenu & {
+      left: 0;
+    }
+  }
+}
+
+body.showMobileMenu {
+  position: relative;
+  left: $width;
+}

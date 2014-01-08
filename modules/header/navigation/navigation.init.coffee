@@ -11,6 +11,7 @@ class Navigation
     @.$el = $el
     @.$topLis = $ '.menu > li', $el
     @.$subUls = $ '> ul', @.$topLi
+    @.$navIcon = $ '.topbar .navicon'
 
     # this/that
     self = @
@@ -24,9 +25,18 @@ class Navigation
     # Bind hover (mousein and out) event
     @.$topLis.hover @.hoverTopLi
 
+    # Mobile expand
+    @.$navIcon.click @.mobileToggle
+
+    # Clicks, for mobile submenus
+    @.$topLis.click @.mobileTopLi
+
   # ## `this.hoverTopLi`
   # Fired on hover in/out of top level LI elements.
   hoverTopLi: (e) ->
+    # If we're in mobile ignore this event
+    return false if Response.viewportW() < 768
+
     # Grab Submenu, if it doesn't exist do nothing more
     $subUl = $('> ul', @)
     return false unless $subUl.length > 0
@@ -78,6 +88,35 @@ class Navigation
   # Strip sub menu of our applied styles.
   hideSubUl: (el, $subUl) ->
     $subUl.removeAttr('style')
+
+  # ## `this.mobileToggle`
+  # Expands and collapses the mobile navigataion.
+  mobileToggle: (e) ->
+    e.preventDefault()
+    $('body').toggleClass('showMobileMenu')
+
+  # ## `this.mobileTopLi`
+  # Tracks clicks/touch events on top li elements to display submenus
+  mobileTopLi: (e) ->
+    # If we're in desktop ignore this event
+    return false if Response.viewportW() > 767
+
+    # Get submenu object if it exists
+    $subUl = $('>ul', @)
+
+    # If we have no submenu ignore event
+    return false if $subUl.length < 1
+
+    # Prevent link click
+    e.preventDefault()
+
+    # Show menu
+    self.mobileShowSubUl $subUl
+
+  # ## `this.mobileShowSubUl`
+  # Show submenu on mobile.
+  mobileShowSubUl: ($subUl) ->
+    $subUl.addClass('mobileShow')
 
 
 # Init our class

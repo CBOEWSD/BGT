@@ -17,7 +17,6 @@ $class: '.button';
     size: 1em;
     weight: 600;
   }
-  text-shadow: 1px 1px 0 rgba(0,0,0,.3);
   text-decoration: none;
   color: #fff;
   border: none;
@@ -39,7 +38,6 @@ $class: '.button';
   &.white {
     background: #fff;
     color: $colorBlue1;
-    text-shadow: none;
 
       &:hover {
         background: darken(#fff, 10%);

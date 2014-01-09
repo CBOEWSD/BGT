@@ -118,7 +118,8 @@ $3dsize: 6px;
     min-height: 0;
 
     .background {
-      display: none;
+      position: fixed;
+      top: 200%;
     }
 
     .slides {

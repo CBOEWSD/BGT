@@ -10,7 +10,7 @@ class Navigation
     # Objects
     @.$el = $el
     @.$topLis = $ '.menu > li', $el
-    @.$subUls = $ '> ul', @.$topLi
+    @.$subUls = $ '> ul', @.$topLis
     @.$navIcon = $ '.topbar .navicon'
 
     # this/that
@@ -18,6 +18,9 @@ class Navigation
 
     # Bind up events with methods
     @.bind()
+
+    #Add class for subUl parents
+    @.hasSub(@.$subUls)
 
   # ## `this.bind`
   # Bind up events with actions.
@@ -30,6 +33,12 @@ class Navigation
 
     # Clicks, for mobile submenus
     @.$topLis.click @.mobileTopLi
+
+  # ##`this.hasSub`
+  # Adds a class to list items that have
+  # a sub menu to them.
+  hasSub: ($uls) ->
+    $uls.parents('li').addClass('hasSubMenu')
 
   # ## `this.hoverTopLi`
   # Fired on hover in/out of top level LI elements.
@@ -103,7 +112,7 @@ class Navigation
       self.$topLis.first().before $closeButton
 
     $mobileMainTitle = $ '.mobileMainTitle', self.$el
-    # If the close button does not exist, we add it
+    # If the main title does not exist, we add it
     if $mobileMainTitle.length < 1
       $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory" />'
       $mobileMainTitle.text 'Main Menu'
@@ -153,7 +162,7 @@ class Navigation
       $subUl.prepend $back
 
     $mobileCategory = $ '.mobileCategory', $subUl
-    # If the close button does not exist, we add it
+    # If the category title does not exist, we add it
     if $mobileCategory.length < 1
       $mobileCategory = $ '<div class="mobileCategory mobileCategory" />'
       $mobileCategory.html $subUl.parent('li').children('a').first()[0].outerHTML

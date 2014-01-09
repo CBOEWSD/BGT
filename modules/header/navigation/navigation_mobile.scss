@@ -40,6 +40,37 @@ $width: 90%;
     .menu {
       padding: 0;
 
+      .mobileCategory {
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 45px;
+        font: {
+          size: 1.2em;
+          weight: 700;
+        }
+        padding: 0 20px;
+        border-bottom: 1px solid #fff;
+
+        a {
+          font: {
+            size: 1em;
+          }
+          padding: 0;
+          border-bottom: none;
+        }
+      }
+
+      .mobileclose, .mobileback {
+        border-bottom: 1px solid #fff;
+        background: $colorBlue3;
+        color: #fff;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font: {
+          size: .9em;
+        }
+      }
+
       li {
         display: block;
         width: 100%;
@@ -47,10 +78,13 @@ $width: 90%;
         a {
           color: #fff;
           font: {
-            size: 1.4em;
+            size: 1.2em;
+            weight: 700;
           }
           display: block;
-          padding: 10px;
+          border-bottom: 1px solid #fff;
+          color: #fff;
+          padding: 10px 20px 10px 30px;
         }
 
         ul {
@@ -69,6 +103,14 @@ $width: 90%;
           background: $colorBlue1;
           z-index: 9001;
           @include moveLeft(margin-left);
+
+          &>li {
+            display: none;
+
+            &.menu {
+              display: block;
+            }
+          }
 
           &.mobileShow {
             margin-left: 0;

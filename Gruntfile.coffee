@@ -38,14 +38,6 @@ module.exports = (grunt) ->
         options:
           output: './ui/docs'
 
-    # [CoffeeScript Linting](https://github.com/vojtajina/grunt-coffeelint)
-    coffeelint:
-      app: [
-        '*.coffee',
-        'ui/**/*.coffee',
-        'routes/**/*.coffee'
-      ]
-
     # [Grunt-Qunit-Junit](https://github.com/sbrandwoo/grunt-qunit-junit)
     qunit_junit:
       options:

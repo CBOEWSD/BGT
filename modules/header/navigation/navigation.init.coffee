@@ -116,7 +116,24 @@ class Navigation
   # ## `this.mobileShowSubUl`
   # Show submenu on mobile.
   mobileShowSubUl: ($subUl) ->
+    $back = $ '.mobileback', $subUl
+
+    # If the back button does not exist, we add it
+    if $back.length < 1
+      $back = $ '<div class="mobileback" />'
+      $back.text 'Back'
+      $back.click ->
+        self.mobileHideSubUl $(@).parent('.mobileShow')
+      $subUl.prepend $back
+
     $subUl.addClass('mobileShow')
+
+  # ## `this.mobileHideSubUl`
+  # Hide submenu on mobile.
+  mobileHideSubUl: ($subUl) ->
+    setTimeout ->
+      $subUl.removeClass('mobileShow')
+    , 100
 
 
 # Init our class

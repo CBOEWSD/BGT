@@ -102,6 +102,14 @@ class Navigation
       $closeButton.click self.mobileToggle
       self.$topLis.first().before $closeButton
 
+    $mobileMainTitle = $ '.mobileMainTitle', self.$el
+    # If the close button does not exist, we add it
+    if $mobileMainTitle.length < 1
+      $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory" />'
+      $mobileMainTitle.text 'Main Menu'
+      $mobileMainTitle.click self.mobileToggle
+      $closeButton.before $mobileMainTitle
+
     $closeOverlay = $ '.mobileNavOverlay'
     # If the close overlay does not exist, we add it
     # This is overlayed on the body so clicks to the right will close nav
@@ -143,6 +151,13 @@ class Navigation
       $back.click ->
         self.mobileHideSubUl $(@).parent('.mobileShow')
       $subUl.prepend $back
+
+    $mobileCategory = $ '.mobileCategory', $subUl
+    # If the close button does not exist, we add it
+    if $mobileCategory.length < 1
+      $mobileCategory = $ '<div class="mobileCategory mobileCategory" />'
+      $mobileCategory.html $subUl.parent('li').children('a').first()[0].outerHTML
+      $back.before $mobileCategory
 
     $subUl.addClass('mobileShow')
 

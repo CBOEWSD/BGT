@@ -140,7 +140,13 @@ class Navigation
     $subUl = $('>ul', @)
 
     # If we have no submenu ignore event
-    return false if $subUl.length < 1
+    return true if $subUl.length < 1
+
+    # If the menu is already shown we assume continue to next page.
+    # This event likely came from a child element bubbling up
+    # to the parent LI (where we are listening)
+    if $subUl.hasClass('mobileShow')
+      return true
 
     # Prevent link click
     e.preventDefault()

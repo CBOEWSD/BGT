@@ -89,6 +89,7 @@ module.exports = (grunt) ->
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
   grunt.registerTask 'dev', ['docco', 'handlebars']
+  grunt.registerTask 'prod', ['handlebars']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
 
 

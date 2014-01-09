@@ -93,6 +93,16 @@ class Navigation
   # Expands and collapses the mobile navigataion.
   mobileToggle: (e) ->
     e.preventDefault()
+
+    $close = $ '.mobileclose', self.$el
+
+    # If the close button does not exist, we add it
+    if $close.length < 1
+      $close = $ '<div class="mobileclose" />'
+      $close.text 'Close'
+      $close.click self.mobileToggle
+      self.$topLis.first().before $close
+
     $('body').toggleClass('showMobileMenu')
 
   # ## `this.mobileTopLi`

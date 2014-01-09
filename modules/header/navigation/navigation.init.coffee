@@ -94,14 +94,22 @@ class Navigation
   mobileToggle: (e) ->
     e.preventDefault()
 
-    $close = $ '.mobileclose', self.$el
-
+    $closeButton = $ '.mobileclose', self.$el
     # If the close button does not exist, we add it
-    if $close.length < 1
-      $close = $ '<div class="mobileclose" />'
-      $close.text 'Close'
-      $close.click self.mobileToggle
-      self.$topLis.first().before $close
+    if $closeButton.length < 1
+      $closeButton = $ '<div class="mobileclose" />'
+      $closeButton.text 'Close'
+      $closeButton.click self.mobileToggle
+      self.$topLis.first().before $closeButton
+
+    $closeOverlay = $ '.mobileNavOverlay'
+    # If the close overlay does not exist, we add it
+    # This is overlayed on the body so clicks to the right will close nav
+    if $closeOverlay.length < 1
+      $closeOverlay = $ '<div class="mobileNavOverlay" />'
+      $closeOverlay.text 'Close'
+      $closeOverlay.click self.mobileToggle
+      $('body').prepend $closeOverlay
 
     $('body').toggleClass('showMobileMenu')
 

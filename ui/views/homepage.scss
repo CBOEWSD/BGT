@@ -85,6 +85,14 @@ $view: '.view-homepage';
         width: 100%;
         border: none;
       }
+
+      &.secondRow {
+        display: table;
+
+        .column1 {
+          display: table-footer-group;
+        }
+      }
     }
   }
 }

@@ -28,4 +28,15 @@ $module: '.widget-tv';
       padding: 0 4px;
     }
   }
+
+  @media screen and (max-width: $screenSmall) {
+    .options {
+
+
+      li {
+        float: left;
+        width: 33.333333%;
+      }
+    }
+  }
 }

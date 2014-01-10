@@ -67,7 +67,7 @@ $width: 90%;
       .mobileclose, .mobileback {
         border-bottom: 1px solid #fff;
         background: $colorBlue3;
-        color: #fff;
+        color: #12b7ed;
         padding: 10px 20px;
         text-transform: uppercase;
         font: {
@@ -96,7 +96,7 @@ $width: 90%;
       .mobileclose, .mobileback {
         &:after {
           border-width: 5px 5px 5px 0;
-          border-color: transparent #12b7ed  transparent transparent;
+          border-color: transparent #12b7ed transparent transparent;
         }
       }
 

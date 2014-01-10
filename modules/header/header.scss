@@ -6,6 +6,9 @@
 @import './ui/base/_includes/grid';
 @import './ui/base/settings';
 @import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/placeholder';
+@import './ui/base/_includes/fadein';
+@import './ui/base/_includes/fadeout';
 
 $module: '.header';
 
@@ -70,5 +73,72 @@ $bordercolor: lighten($colorGrey2, 7%);
   .right {
     @include column(7);
     padding-top: 15px;
+  }
+
+
+  @media screen and (max-width: $screenSmall) {
+    height: auto;
+    border-top: none;
+
+    .container {
+      display: table;
+      width: 100%;
+    }
+
+    .logo, .right {
+      width: 100%;
+      margin: 0;
+    }
+
+    .logo {
+      border-top: $bordersize solid $bordercolor;
+      margin-top: -3px;
+
+      a {
+        margin-top: -$bordersize;
+      }
+    }
+    .right {
+      display: table-header-group;
+      padding: 0; margin: 0;
+      overflow: hidden;
+
+      .quicksearch {
+        margin-top: -$bordersize;
+        background: $colorBlue1;
+        padding: 0 15px;
+        overflow: hidden;
+        max-height: 0;
+
+        @include transition(all .5s cubic-bezier(0, 1, 0.5, 1));
+
+        button {
+          display: none;
+        }
+
+        input[type="text"] {
+          background: $bordercolor;
+          height:0;
+          width: 100%;
+          @include fadeOut( .5s );
+
+          @include placeholder {
+            color: lighten($colorGrey1, 25%);
+          }
+        }
+
+        &.open {
+          max-height: 90px;
+          padding: 20px 15px;
+
+          input[type="text"] {
+            height: auto;
+            display: block;
+            @include fadeIn( .5s );
+          }
+        }
+      }
+    }
+
   }
 }

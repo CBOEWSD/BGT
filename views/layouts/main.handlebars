@@ -8,6 +8,9 @@
     {{#description}}<meta name="description" content="{{this}}" >{{/description}}
   {{/meta}}
 
+  <!-- Responsive -->
+  <meta name="viewport" content="initial-scale=1">
+
   {{{renderStyles 'css'}}}
 
   <!--
@@ -37,5 +40,14 @@
 
   {{{renderScripts 'libs'}}}
   {{{renderScripts 'initCoffee'}}}
+
+  <!--
+    SHIMS
+    These fix issues in legacy browsers where certain
+    features are not supported.
+  -->
+  <!--[if lt IE 10]>
+  <script src="/ui/classes/shims/ie-lt10.js"></script>
+  <![endif]-->
 </body>
 </html>

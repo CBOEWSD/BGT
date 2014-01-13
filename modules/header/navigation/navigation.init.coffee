@@ -128,7 +128,9 @@ class Navigation
       $closeOverlay.click self.mobileToggle
       $('body').prepend $closeOverlay
 
-    $('body').toggleClass('showMobileMenu')
+    $('body')
+      .toggleClass('showMobileMenu')
+      .toggleClass('preventscroll')
 
   # ## `this.mobileTopLi`
   # Tracks clicks/touch events on top li elements to display submenus

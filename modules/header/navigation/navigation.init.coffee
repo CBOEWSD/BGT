@@ -130,6 +130,7 @@ class Navigation
 
     $('body')
       .toggleClass('showMobileMenu')
+    $('body, html')
       .toggleClass('preventscroll')
 
   # ## `this.mobileTopLi`

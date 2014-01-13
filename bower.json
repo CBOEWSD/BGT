@@ -8,6 +8,7 @@
     "pubsub-js": "~1.4.0",
     "handlebars": "~1.1.2",
     "responsejs": "~0.7.8",
-    "trackpad-scroll-emulator": "https://github.com/jnicol/trackpad-scroll-emulator.git"
+    "trackpad-scroll-emulator": "https://github.com/jnicol/trackpad-scroll-emulator.git",
+    "jquery-placeholder": "~2.0.7"
   }
 }

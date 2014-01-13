@@ -1,0 +1,31 @@
+$prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
+// ********************
+// fadeOut
+// ********************
+@mixin keyframe-fadeOut {
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}
+@-moz-keyframes fadeOut {
+  @include keyframe-fadeOut;
+}
+@-webkit-keyframes fadeOut {
+  @include keyframe-fadeOut;
+}
+@-o-keyframes fadeOut {
+  @include keyframe-fadeOut;
+}
+@-ms-keyframes fadeOut {
+  @include keyframe-fadeOut;
+}
+@keyframes fadeOut {
+  @include keyframe-fadeOut;
+}
+@mixin fadeOut( $arg ) {
+  $keyframe-name:fadeOut;
+  $duration:$arg;
+  @each $p in $prefix {
+    #{$p}animation:$keyframe-name $duration;
+  }
+}
+// e.g. @include fadeOut( 2s );

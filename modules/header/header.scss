@@ -110,6 +110,11 @@ $bordercolor: lighten($colorGrey2, 7%);
         padding: 0 15px;
         overflow: hidden;
         max-height: 0;
+        position: fixed;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        z-index: 9000;
 
         @include transition(all .5s cubic-bezier(0, 1, 0.5, 1));
 

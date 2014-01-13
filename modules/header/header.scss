@@ -121,6 +121,8 @@ $bordercolor: lighten($colorGrey2, 7%);
           height:0;
           width: 100%;
           @include fadeOut( .5s );
+          position: absolute;
+          left: -5000em;
 
           @include placeholder {
             color: lighten($colorGrey1, 25%);
@@ -135,6 +137,9 @@ $bordercolor: lighten($colorGrey2, 7%);
             height: auto;
             display: block;
             @include fadeIn( .5s );
+            padding: 5px 10px;
+            position: relative;
+            left: 0;
           }
         }
       }

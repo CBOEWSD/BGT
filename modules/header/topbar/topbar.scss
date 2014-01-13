@@ -65,6 +65,11 @@ $module: '.topbar';
 
   @media screen and (max-width: $screenSmall) {
     background: $colorBlue1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9000;
 
     .menu {
       padding: 0 10px;

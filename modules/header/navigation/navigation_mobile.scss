@@ -163,6 +163,14 @@ $width: 90%;
 
   body.showMobileMenu {
     left: $width;
+
+    .topbar {
+      left: $width;
+    }
+  }
+
+  .topbar {
+    @include moveLeft(left);
   }
 
   .mobileNavOverlay {

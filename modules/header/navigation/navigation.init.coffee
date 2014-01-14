@@ -196,25 +196,26 @@ class Navigation
   # ## `this.swipeLeft`
   # On touch start begin moving the selected element
   swipeStatus: (e, phase, direction, distance, duration, fingerCount) ->
-    console.log distance
     $el = $(@)
 
+    # only do work if we're going left
+    # we may need to expand this action later to account for
+    # left to down swipes or other such cases. Testing will reveal
+    # any quirks with direction.
     if direction == 'left'
       $el.addClass('removetrans')
       $el.css 'margin-left', -distance
 
-      console.log phase
       if phase == 'end'
         if distance > 100
-          console.log 'should remove'
           setTimeout ->
             $el.removeClass('mobileShow removetrans').css('margin-left', '')
-            console.log $el
           , 50
         else
           $el.removeClass('removetrans').css('margin-left', '')
 
-          console.log $el
+        # Remove bindings
+        $el.swipe 'destroy'
 
 
 

@@ -182,8 +182,9 @@ class Navigation
     # Bind swipes to this element
     # $subUl.bind('touchstart', self.swipeLeft)
     $subUl.swipe {
-      swipeStatus: self.swipeStatus
+      swipeStatus: self.swipeSubUl
       fingers: 'all'
+      excludedElements: 'button'
     }
 
   # ## `this.mobileHideSubUl`
@@ -193,9 +194,9 @@ class Navigation
       $subUl.removeClass('mobileShow')
     , 100
 
-  # ## `this.swipeLeft`
+  # ## `this.swipeSubUl`
   # On touch start begin moving the selected element
-  swipeStatus: (e, phase, direction, distance, duration, fingerCount) ->
+  swipeSubUl: (e, phase, direction, distance, duration, fingerCount) ->
     $el = $(@)
 
     # only do work if we're going left
@@ -210,12 +211,15 @@ class Navigation
         if distance > 100
           setTimeout ->
             $el.removeClass('mobileShow removetrans').css('margin-left', '')
+
+            # Remove bindings
+            $el.swipe 'destroy'
           , 50
         else
           $el.removeClass('removetrans').css('margin-left', '')
+    else
+      $el.removeClass('removetrans').css('margin-left', '')
 
-        # Remove bindings
-        $el.swipe 'destroy'
 
 
 

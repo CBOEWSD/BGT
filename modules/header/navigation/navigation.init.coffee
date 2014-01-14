@@ -34,6 +34,13 @@ class Navigation
     # Clicks, for mobile submenus
     @.$topLis.click @.mobileTopLi
 
+    # Bind swipe for mobile menu
+    @.$el.swipe {
+      swipeStatus: @.swipeTopUl
+      fingers: 'all'
+      excludedElements: 'button'
+    }
+
   # ##`this.hasSub`
   # Adds a class to list items that have
   # a sub menu to them.
@@ -160,6 +167,8 @@ class Navigation
   # ## `this.mobileShowSubUl`
   # Show submenu on mobile.
   mobileShowSubUl: ($subUl) ->
+
+    # Baack element object
     $back = $ '.mobileback', $subUl
 
     # If the back button does not exist, we add it
@@ -179,12 +188,126 @@ class Navigation
 
     $subUl.addClass('mobileShow')
 
+    # Bind swipes to this element
+    # $subUl.bind('touchstart', self.swipeLeft)
+    $subUl.swipe {
+      swipeStatus: self.swipeSubUl
+      fingers: 'all'
+      excludedElements: 'button'
+    }
+
   # ## `this.mobileHideSubUl`
   # Hide submenu on mobile.
   mobileHideSubUl: ($subUl) ->
     setTimeout ->
       $subUl.removeClass('mobileShow')
     , 100
+
+  # ## `this.swipeTopUl`
+  # On touch start begin moving the selected element
+  swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
+    # If we're in desktop ignore this event
+    return false if Response.viewportW() > 767
+
+    # Prevent Bubble
+    e.stopPropagation()
+
+    # Scope current element
+    $el = $(@)
+    $body = $('body')
+    $topbar = $('body.showMobileMenu .topbar')
+
+    # only do work if we're going left
+    # we may need to expand this action later to account for
+    # left to down swipes or other such cases. Testing will reveal
+    # any quirks with direction.
+    if direction == 'left'
+
+      $el.addClass('removetrans')
+      $body.addClass('removetrans')
+      $topbar.addClass('removetrans')
+
+      moveOthers = (Response.viewportW() * .9) - distance
+
+      $el.css 'left', -distance
+      $body.css 'left', moveOthers
+      $topbar.css 'left', moveOthers
+
+      if phase == 'end'
+        if distance > 100
+          # If we swiped we stop the event
+          # this prevents links firing and other such events
+          e.preventDefault()
+
+          # Wait short release before removing
+          setTimeout ->
+            self.swipeTopUlReset($el, $body, $topbar)
+            self.mobileToggle(e)
+          , 50
+        else
+          self.swipeTopUlReset($el, $body, $topbar)
+    else
+      self.swipeTopUlReset($el, $body, $topbar)
+
+  # ## `this.swipeTopUlReset`
+  # A reset method called at several points within the
+  # swipe method. Abstraction method.
+  swipeTopUlReset: ($el, $body, $topbar) ->
+    $el.removeClass('removetrans')
+    $body.removeClass('removetrans')
+    $topbar.removeClass('removetrans')
+    $el.css 'left', ''
+    $body.css 'left', ''
+    $topbar.css 'left', ''
+
+  # ## `this.swipeSubUl`
+  # On touch start begin moving the selected element
+  # Unfortunately we cannot use the same method as the top
+  # menu as we need to change different properties.
+  swipeSubUl: (e, phase, direction, distance, duration, fingerCount) ->
+    # If we're in desktop ignore this event
+    return false if Response.viewportW() > 767
+
+    # Prevent bubble
+    e.stopPropagation()
+
+    # Scope current element
+    $el = $(@)
+
+    # only do work if we're going left
+    # we may need to expand this action later to account for
+    # left to down swipes or other such cases. Testing will reveal
+    # any quirks with direction.
+    if direction == 'left'
+
+      $el.addClass('removetrans')
+      $el.css 'margin-left', -distance
+
+      if phase == 'end'
+        if distance > 100
+          # If we swiped we stop the event
+          # this prevents links firing and other such events
+          e.preventDefault()
+
+          # Wait short release before removing
+          setTimeout ->
+            $el.removeClass('mobileShow removetrans').css('margin-left', '')
+
+            # Remove bindings
+            $el.swipe 'destroy'
+          , 50
+        else
+          self.swipeSubUlReset($el)
+    else
+      self.swipeSubUlReset($el)
+
+  # ## `this.swipeSubUlReset`
+  # A reset method called at several points within the
+  # swipe method. Abstraction method.
+  swipeSubUlReset: ($el) ->
+    $el.removeClass('removetrans').css('margin-left', '')
+
+
 
 
 # Init our class

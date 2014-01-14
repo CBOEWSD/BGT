@@ -34,6 +34,13 @@ class Navigation
     # Clicks, for mobile submenus
     @.$topLis.click @.mobileTopLi
 
+    # Bind swipe for mobile menu
+    @.$el.swipe {
+      swipeStatus: @.swipeTopUl
+      fingers: 'all'
+      excludedElements: 'button'
+    }
+
   # ##`this.hasSub`
   # Adds a class to list items that have
   # a sub menu to them.
@@ -194,9 +201,79 @@ class Navigation
       $subUl.removeClass('mobileShow')
     , 100
 
+  # ## `this.swipeTopUl`
+  # On touch start begin moving the selected element
+  swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
+    # If we're in desktop ignore this event
+    return false if Response.viewportW() > 767
+
+    # Prevent Bubble
+    e.stopPropagation()
+
+    # Scope current element
+    $el = $(@)
+    $body = $('body')
+    $topbar = $('body.showMobileMenu .topbar')
+
+    # only do work if we're going left
+    # we may need to expand this action later to account for
+    # left to down swipes or other such cases. Testing will reveal
+    # any quirks with direction.
+    if direction == 'left'
+      $el.addClass('removetrans')
+      $body.addClass('removetrans')
+      $topbar.addClass('removetrans')
+
+      moveOthers = (Response.viewportW() * .9) - distance
+
+      $el.css 'left', -distance
+      $body.css 'left', moveOthers
+      $topbar.css 'left', moveOthers
+
+      if phase == 'end'
+        if distance > 100
+          # If we swiped we stop the event
+          # this prevents links firing and other such events
+          e.preventDefault()
+
+          # Wait short release before removing
+          setTimeout ->
+            $el.removeClass('removetrans')
+            $body.removeClass('removetrans')
+            $topbar.removeClass('removetrans')
+            $el.css 'left', ''
+            $body.css 'left', ''
+            $topbar.css 'left', ''
+
+            self.mobileToggle(e)
+          , 50
+        else
+          $el.removeClass('removetrans')
+          $body.removeClass('removetrans')
+          $topbar.removeClass('removetrans')
+          $el.css 'left', ''
+          $body.css 'left', ''
+          $topbar.css 'left', ''
+    else
+      $el.removeClass('removetrans')
+      $body.removeClass('removetrans')
+      $topbar.removeClass('removetrans')
+      $el.css 'left', ''
+      $body.css 'left', ''
+      $topbar.css 'left', ''
+
   # ## `this.swipeSubUl`
   # On touch start begin moving the selected element
+  # Unfortunately we cannot use the same method as the top
+  # menu as we need to change different properties.
   swipeSubUl: (e, phase, direction, distance, duration, fingerCount) ->
+    # If we're in desktop ignore this event
+    return false if Response.viewportW() > 767
+
+    # Prevent bubble
+    e.stopPropagation()
+
+    # Scope current element
     $el = $(@)
 
     # only do work if we're going left
@@ -209,6 +286,11 @@ class Navigation
 
       if phase == 'end'
         if distance > 100
+          # If we swiped we stop the event
+          # this prevents links firing and other such events
+          e.preventDefault()
+
+          # Wait short release before removing
           setTimeout ->
             $el.removeClass('mobileShow removetrans').css('margin-left', '')
 

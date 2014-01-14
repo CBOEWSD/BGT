@@ -1,6 +1,7 @@
 @import './ui/base/_includes/reset';
 @import './ui/base/_includes/grid';
 @import './ui/base/_typography';
+@import './ui/base/_includes/compass/css3';
 
 // Base from body styling
 body {
@@ -59,8 +60,14 @@ a {
   }
 }
 
+// Prevent scroll on item
 .preventscroll {
   overflow: hidden;
   height: 100%;
   width: 100%;
+}
+
+// Remove transitions
+.removetrans {
+  @include transition(none !important);
 }

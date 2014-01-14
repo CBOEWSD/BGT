@@ -179,12 +179,43 @@ class Navigation
 
     $subUl.addClass('mobileShow')
 
+    # Bind swipes to this element
+    # $subUl.bind('touchstart', self.swipeLeft)
+    $subUl.swipe {
+      swipeStatus: self.swipeStatus
+      fingers: 'all'
+    }
+
   # ## `this.mobileHideSubUl`
   # Hide submenu on mobile.
   mobileHideSubUl: ($subUl) ->
     setTimeout ->
       $subUl.removeClass('mobileShow')
     , 100
+
+  # ## `this.swipeLeft`
+  # On touch start begin moving the selected element
+  swipeStatus: (e, phase, direction, distance, duration, fingerCount) ->
+    console.log distance
+    $el = $(@)
+
+    if direction == 'left'
+      $el.addClass('removetrans')
+      $el.css 'margin-left', -distance
+
+      console.log phase
+      if phase == 'end'
+        if distance > 100
+          console.log 'should remove'
+          setTimeout ->
+            $el.removeClass('mobileShow removetrans').css('margin-left', '')
+            console.log $el
+          , 50
+        else
+          $el.removeClass('removetrans').css('margin-left', '')
+
+          console.log $el
+
 
 
 # Init our class

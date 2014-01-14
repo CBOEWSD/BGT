@@ -167,6 +167,8 @@ class Navigation
   # ## `this.mobileShowSubUl`
   # Show submenu on mobile.
   mobileShowSubUl: ($subUl) ->
+
+    # Baack element object
     $back = $ '.mobileback', $subUl
 
     # If the back button does not exist, we add it
@@ -220,6 +222,7 @@ class Navigation
     # left to down swipes or other such cases. Testing will reveal
     # any quirks with direction.
     if direction == 'left'
+
       $el.addClass('removetrans')
       $body.addClass('removetrans')
       $topbar.addClass('removetrans')
@@ -238,29 +241,24 @@ class Navigation
 
           # Wait short release before removing
           setTimeout ->
-            $el.removeClass('removetrans')
-            $body.removeClass('removetrans')
-            $topbar.removeClass('removetrans')
-            $el.css 'left', ''
-            $body.css 'left', ''
-            $topbar.css 'left', ''
-
+            self.swipeTopUlReset($el, $body, $topbar)
             self.mobileToggle(e)
           , 50
         else
-          $el.removeClass('removetrans')
-          $body.removeClass('removetrans')
-          $topbar.removeClass('removetrans')
-          $el.css 'left', ''
-          $body.css 'left', ''
-          $topbar.css 'left', ''
+          self.swipeTopUlReset($el, $body, $topbar)
     else
-      $el.removeClass('removetrans')
-      $body.removeClass('removetrans')
-      $topbar.removeClass('removetrans')
-      $el.css 'left', ''
-      $body.css 'left', ''
-      $topbar.css 'left', ''
+      self.swipeTopUlReset($el, $body, $topbar)
+
+  # ## `this.swipeTopUlReset`
+  # A reset method called at several points within the
+  # swipe method. Abstraction method.
+  swipeTopUlReset: ($el, $body, $topbar) ->
+    $el.removeClass('removetrans')
+    $body.removeClass('removetrans')
+    $topbar.removeClass('removetrans')
+    $el.css 'left', ''
+    $body.css 'left', ''
+    $topbar.css 'left', ''
 
   # ## `this.swipeSubUl`
   # On touch start begin moving the selected element
@@ -281,6 +279,7 @@ class Navigation
     # left to down swipes or other such cases. Testing will reveal
     # any quirks with direction.
     if direction == 'left'
+
       $el.addClass('removetrans')
       $el.css 'margin-left', -distance
 
@@ -298,9 +297,15 @@ class Navigation
             $el.swipe 'destroy'
           , 50
         else
-          $el.removeClass('removetrans').css('margin-left', '')
+          self.swipeSubUlReset($el)
     else
-      $el.removeClass('removetrans').css('margin-left', '')
+      self.swipeSubUlReset($el)
+
+  # ## `this.swipeSubUlReset`
+  # A reset method called at several points within the
+  # swipe method. Abstraction method.
+  swipeSubUlReset: ($el) ->
+    $el.removeClass('removetrans').css('margin-left', '')
 
 
 

@@ -34,3 +34,5 @@ module.exports = twitterSocket = (server) ->
         stream.on 'data', (data) ->
           console.log 'Tweet: New tweet published.'
           socket.emit 'tweet', {tweet: data}
+    else
+      return false

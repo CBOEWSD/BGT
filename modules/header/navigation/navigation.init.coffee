@@ -13,6 +13,16 @@ class Navigation
     @.$subUls = $ '> ul', @.$topLis
     @.$navIcon = $ '.topbar .navicon'
 
+    # Swipe base settings
+    @.swipeSettings = {
+      swipeStatus: @.swipeTopUl
+      fingers: 'all'
+      excludedElements: 'button'
+      tap: @.clickTap
+      threshold: 10
+      allowPageScroll: 'vertical'
+    }
+
     # this/that
     self = @
 
@@ -41,14 +51,7 @@ class Navigation
         e.preventDefault()
 
     # Bind swipe for mobile menu
-    @.$el.swipe {
-      swipeStatus: @.swipeTopUl
-      fingers: 'all'
-      excludedElements: 'button'
-      tap: @.clickTap
-      threshold: 10
-      allowPageScroll: 'vertical'
-    }
+    @.$el.swipe @.swipeSettings
 
   # ## `this.clickTap`
   # A catch all method for click and touch/tap events
@@ -170,14 +173,17 @@ class Navigation
     if $closeOverlay.length < 1
       $closeOverlay = $ '<div class="mobileNavOverlay" />'
       $closeOverlay.text 'Close'
-      $closeOverlay.click self.mobileToggle
       $('body').prepend $closeOverlay
+
+      # Take the base swipe settings and modify for purpose
+      settings = self.swipeSettings
+      settings.tap = self.mobileToggle
+      settings.allowPageScroll = 'none'
+      $closeOverlay.swipe settings
 
     setTimeout ->
       $('body')
         .toggleClass('showMobileMenu')
-      $('body, html')
-        .toggleClass('preventscroll')
     , 50
 
   # ## `this.mobileShowSubUl`
@@ -205,14 +211,10 @@ class Navigation
 
     # Bind swipes to this element
     # $subUl.bind('touchstart', self.swipeLeft)
-    $subUl.swipe {
-      swipeStatus: self.swipeSubUl
-      fingers: 'all'
-      excludedElements: 'button'
-      tap: @.clickTap
-      threshold: 10
-      allowPageScroll: 'vertical'
-    }
+    settings = @.swipeSettings
+    settings.swipeStatus = self.swipeSubUl
+    settings.tap = @.clickTap
+    $subUl.swipe settings
 
   # ## `this.mobileHideSubUl`
   # Hide submenu on mobile.
@@ -231,7 +233,7 @@ class Navigation
     e.stopPropagation()
 
     # Scope current element
-    $el = $(@)
+    $el = self.$el
     $body = $('body')
     $topbar = $('body.showMobileMenu .topbar')
 
@@ -251,14 +253,17 @@ class Navigation
       $body.css 'left', moveOthers
       $topbar.css 'left', moveOthers
 
+      console.log distance, phase
+
       if phase == 'end'
-        if distance > 100
+        if distance > 50
           # If we swiped we stop the event
           # this prevents links firing and other such events
           e.preventDefault()
 
           # Wait short release before removing
           setTimeout ->
+            console.log 'reset???'
             self.swipeTopUlReset($el, $body, $topbar)
             self.mobileToggle(e)
           , 50
@@ -302,7 +307,7 @@ class Navigation
       $el.css 'margin-left', -distance
 
       if phase == 'end'
-        if distance > 100
+        if distance > 50
           # If we swiped we stop the event
           # this prevents links firing and other such events
           e.preventDefault()

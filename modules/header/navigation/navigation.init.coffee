@@ -31,15 +31,52 @@ class Navigation
     # Mobile expand
     @.$navIcon.click @.mobileToggle
 
-    # Clicks, for mobile submenus
-    @.$topLis.click @.mobileTopLi
-
     # Bind swipe for mobile menu
     @.$el.swipe {
       swipeStatus: @.swipeTopUl
       fingers: 'all'
       excludedElements: 'button'
+      tap: @.clickTap
     }
+
+  # ## `this.clickTap`
+  # A catch all method for click and touch/tap events
+  # directed out of the swipe library.
+  clickTap: (e, target) ->
+    # If we're in desktop ignore this event
+    return true if Response.viewportW() > 767
+
+    console.log e, target
+
+    # Get target element and parent LI
+    $target = $(target)
+
+    # Catch if its a back button and trigger the click event appropriately
+    if $target.hasClass('mobileclose') or $target.hasClass('mobileback')
+      # Prevent link click
+      e.preventDefault()
+      e.stopPropagation()
+
+      # Trigger click event
+      $target.trigger('click')
+      return true
+
+    # Check for parent LI
+    $parentLi = $target.parent('li')
+
+    if $parentLi.length > 0
+      # Get submenu object if it exists
+      $subUl = $('>ul', $parentLi)
+
+      # If we have no submenu ignore event
+      return true if $subUl.length < 1
+
+      # Prevent link click
+      e.preventDefault()
+      e.stopPropagation()
+
+      # Show menu
+      self.mobileShowSubUl $subUl
 
   # ##`this.hasSub`
   # Adds a class to list items that have
@@ -140,30 +177,6 @@ class Navigation
     $('body, html')
       .toggleClass('preventscroll')
 
-  # ## `this.mobileTopLi`
-  # Tracks clicks/touch events on top li elements to display submenus
-  mobileTopLi: (e) ->
-    # If we're in desktop ignore this event
-    return false if Response.viewportW() > 767
-
-    # Get submenu object if it exists
-    $subUl = $('>ul', @)
-
-    # If we have no submenu ignore event
-    return true if $subUl.length < 1
-
-    # If the menu is already shown we assume continue to next page.
-    # This event likely came from a child element bubbling up
-    # to the parent LI (where we are listening)
-    if $subUl.hasClass('mobileShow')
-      return true
-
-    # Prevent link click
-    e.preventDefault()
-
-    # Show menu
-    self.mobileShowSubUl $subUl
-
   # ## `this.mobileShowSubUl`
   # Show submenu on mobile.
   mobileShowSubUl: ($subUl) ->
@@ -194,6 +207,7 @@ class Navigation
       swipeStatus: self.swipeSubUl
       fingers: 'all'
       excludedElements: 'button'
+      tap: @.clickTap
     }
 
   # ## `this.mobileHideSubUl`

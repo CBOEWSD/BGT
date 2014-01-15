@@ -243,7 +243,7 @@ class Navigation
       $body.addClass('removetrans')
       $topbar.addClass('removetrans')
 
-      moveOthers = (Response.viewportW() * .9) - distance
+      moveOthers = (Response.viewportW() * .7) - distance
 
       $el.css 'left', -distance
       $body.css 'left', moveOthers

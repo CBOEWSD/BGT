@@ -178,13 +178,12 @@ class Navigation
       # Take the base swipe settings and modify for purpose
       settings = self.swipeSettings
       settings.tap = self.mobileToggle
+      settings.allowPageScroll = 'none'
       $closeOverlay.swipe settings
 
     setTimeout ->
       $('body')
         .toggleClass('showMobileMenu')
-      $('body, html')
-        .toggleClass('preventscroll')
     , 50
 
   # ## `this.mobileShowSubUl`

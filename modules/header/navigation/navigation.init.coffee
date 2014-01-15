@@ -32,14 +32,39 @@ class Navigation
     @.$navIcon.click @.mobileToggle
 
     # Clicks, for mobile submenus
-    @.$topLis.click @.mobileTopLi
+    # @.$topLis.click @.mobileTopLi
 
     # Bind swipe for mobile menu
     @.$el.swipe {
       swipeStatus: @.swipeTopUl
       fingers: 'all'
       excludedElements: 'button'
+      tap: @.clickTap
     }
+
+  clickTap: (e, target) ->
+    # If we're in desktop ignore this event
+    return true if Response.viewportW() > 767
+
+    # Get target element and parent LI
+    $target = $(target)
+    $parentLi = $target.parent('li')
+
+    if $parentLi.length > 0
+      # Get submenu object if it exists
+      $subUl = $('>ul', $parentLi)
+
+      # If we have no submenu ignore event
+      return true if $subUl.length < 1
+
+      # Prevent link click
+      e.preventDefault()
+      e.stopPropagation()
+
+      # Show menu
+      self.mobileShowSubUl $subUl
+
+
 
   # ##`this.hasSub`
   # Adds a class to list items that have

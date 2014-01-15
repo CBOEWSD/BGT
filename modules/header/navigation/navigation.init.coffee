@@ -39,6 +39,9 @@ class Navigation
       tap: @.clickTap
     }
 
+  # ## `this.clickTap`
+  # A catch all method for click and touch/tap events
+  # directed out of the swipe library.
   clickTap: (e, target) ->
     # If we're in desktop ignore this event
     return true if Response.viewportW() > 767

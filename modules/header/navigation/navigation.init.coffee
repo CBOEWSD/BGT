@@ -56,8 +56,6 @@ class Navigation
     # If we're in desktop ignore this event
     return true if Response.viewportW() > 767
 
-    console.log e, target
-
     # Get target element and parent LI
     $target = $(target)
 
@@ -157,21 +155,13 @@ class Navigation
   # Expands and collapses the mobile navigataion.
   mobileToggle: (e) ->
     e.preventDefault()
-    console.log 'fired?'
-
-    $closeButton = $ '.mobileclose', self.$el
-    # If the close button does not exist, we add it
-    if $closeButton.length < 1
-      $closeButton = $ '<div class="mobileclose" />'
-      $closeButton.text 'Close'
-      self.$topLis.first().before $closeButton
 
     $mobileMainTitle = $ '.mobileMainTitle', self.$el
     # If the main title does not exist, we add it
     if $mobileMainTitle.length < 1
-      $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory" />'
-      $mobileMainTitle.text 'Main Menu'
-      $closeButton.before $mobileMainTitle
+      $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory mobileclose" />'
+      $mobileMainTitle.text 'Home'
+      self.$topLis.first().before $mobileMainTitle
 
     $closeOverlay = $ '.mobileNavOverlay'
     # If the close overlay does not exist, we add it
@@ -181,8 +171,6 @@ class Navigation
       $closeOverlay.text 'Close'
       $closeOverlay.click self.mobileToggle
       $('body').prepend $closeOverlay
-
-    console.log 'did we make it to body?', $('body')
 
     setTimeout ->
       $('body')

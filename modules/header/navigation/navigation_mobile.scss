@@ -186,7 +186,8 @@ $width: 70%;
 @media screen and (min-width: $screenSmall) {
   .mobileback,
   .mobileCategory,
-  .mobileclose {
+  .mobileclose,
+  .mobileNavOverlay {
     display: none;
   }
 }

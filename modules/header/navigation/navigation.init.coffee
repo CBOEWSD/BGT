@@ -31,12 +31,22 @@ class Navigation
     # Mobile expand
     @.$navIcon.click @.mobileToggle
 
+    # Prevent a default anchor link action
+    # when clicked if the parent haas a sub menu
+    $('a', @.$topLis).click (e) ->
+      # If we're in desktop ignore this event
+      return true if Response.viewportW() > 767
+
+      if $(this).parent('li').hasClass('hasSubMenu')
+        e.preventDefault()
+
     # Bind swipe for mobile menu
     @.$el.swipe {
       swipeStatus: @.swipeTopUl
       fingers: 'all'
       excludedElements: 'button'
       tap: @.clickTap
+      threshold: 10
     }
 
   # ## `this.clickTap`
@@ -186,20 +196,21 @@ class Navigation
   mobileShowSubUl: ($subUl) ->
 
     # Baack element object
-    $back = $ '.mobileback', $subUl
+    $landingPage = $ '.landing', $subUl
 
-    # If the back button does not exist, we add it
-    if $back.length < 1
-      $back = $ '<div class="mobileback" />'
-      $back.text 'Back'
-      $subUl.prepend $back
+    # Create landing page button
+    if $landingPage.length < 1
+      $landingPage = $ '<div class="landing" />'
+      $landingPage.html $subUl.parent('li').children('a').first()[0].outerHTML
+      $('a', $landingPage).append ' Landing Page'
+      $subUl.prepend $landingPage
 
     $mobileCategory = $ '.mobileCategory', $subUl
     # If the category title does not exist, we add it
     if $mobileCategory.length < 1
-      $mobileCategory = $ '<div class="mobileCategory mobileCategory" />'
-      $mobileCategory.html $subUl.parent('li').children('a').first()[0].outerHTML
-      $back.before $mobileCategory
+      $mobileCategory = $ '<div class="mobileCategory mobileback" />'
+      $mobileCategory.html $subUl.parent('li').children('a').text()
+      $landingPage.before $mobileCategory
 
     $subUl.addClass('mobileShow')
 
@@ -210,6 +221,7 @@ class Navigation
       fingers: 'all'
       excludedElements: 'button'
       tap: @.clickTap
+      threshold: 10
     }
 
   # ## `this.mobileHideSubUl`

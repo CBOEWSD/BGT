@@ -7,7 +7,11 @@ module.exports = twitterSocket = (server) ->
   # Check if server has been defined
   # If not we'll open the socket on port 9000
   server = if typeof server == 'undefined' then 9000 else server
-  io = require('socket.io').listen server, { log: !isProd }
+  io = require('socket.io').listen server, {
+    log: !isProd
+    'browser client minification': isProd
+    'browser client gzip': isProd
+  }
 
   # ## Config
   conf = require './config.coffee'

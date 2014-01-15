@@ -31,12 +31,22 @@ class Navigation
     # Mobile expand
     @.$navIcon.click @.mobileToggle
 
+    # Prevent a default anchor link action
+    # when clicked if the parent haas a sub menu
+    $('a', @.$topLis).click (e) ->
+      # If we're in desktop ignore this event
+      return true if Response.viewportW() > 767
+
+      if $(this).parent('li').hasClass('hasSubMenu')
+        e.preventDefault()
+
     # Bind swipe for mobile menu
     @.$el.swipe {
       swipeStatus: @.swipeTopUl
       fingers: 'all'
       excludedElements: 'button'
       tap: @.clickTap
+      threshold: 10
     }
 
   # ## `this.clickTap`
@@ -45,8 +55,6 @@ class Navigation
   clickTap: (e, target) ->
     # If we're in desktop ignore this event
     return true if Response.viewportW() > 767
-
-    console.log e, target
 
     # Get target element and parent LI
     $target = $(target)
@@ -57,9 +65,10 @@ class Navigation
       e.preventDefault()
       e.stopPropagation()
 
-      # Trigger click event
-      $target.trigger('click')
-      return true
+      # Triggger close method if close button clicked
+      return self.mobileToggle(e) if $target.hasClass('mobileclose')
+
+      return self.mobileHideSubUl($target.parent('.mobileShow')) if $target.hasClass('mobileback')
 
     # Check for parent LI
     $parentLi = $target.parent('li')
@@ -147,21 +156,12 @@ class Navigation
   mobileToggle: (e) ->
     e.preventDefault()
 
-    $closeButton = $ '.mobileclose', self.$el
-    # If the close button does not exist, we add it
-    if $closeButton.length < 1
-      $closeButton = $ '<div class="mobileclose" />'
-      $closeButton.text 'Close'
-      $closeButton.click self.mobileToggle
-      self.$topLis.first().before $closeButton
-
     $mobileMainTitle = $ '.mobileMainTitle', self.$el
     # If the main title does not exist, we add it
     if $mobileMainTitle.length < 1
-      $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory" />'
-      $mobileMainTitle.text 'Main Menu'
-      $mobileMainTitle.click self.mobileToggle
-      $closeButton.before $mobileMainTitle
+      $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory mobileclose" />'
+      $mobileMainTitle.text 'Home'
+      self.$topLis.first().before $mobileMainTitle
 
     $closeOverlay = $ '.mobileNavOverlay'
     # If the close overlay does not exist, we add it
@@ -172,32 +172,33 @@ class Navigation
       $closeOverlay.click self.mobileToggle
       $('body').prepend $closeOverlay
 
-    $('body')
-      .toggleClass('showMobileMenu')
-    $('body, html')
-      .toggleClass('preventscroll')
+    setTimeout ->
+      $('body')
+        .toggleClass('showMobileMenu')
+      $('body, html')
+        .toggleClass('preventscroll')
+    , 50
 
   # ## `this.mobileShowSubUl`
   # Show submenu on mobile.
   mobileShowSubUl: ($subUl) ->
 
     # Baack element object
-    $back = $ '.mobileback', $subUl
+    $landingPage = $ '.landing', $subUl
 
-    # If the back button does not exist, we add it
-    if $back.length < 1
-      $back = $ '<div class="mobileback" />'
-      $back.text 'Back'
-      $back.click ->
-        self.mobileHideSubUl $(@).parent('.mobileShow')
-      $subUl.prepend $back
+    # Create landing page button
+    if $landingPage.length < 1
+      $landingPage = $ '<div class="landing" />'
+      $landingPage.html $subUl.parent('li').children('a').first()[0].outerHTML
+      $('a', $landingPage).append ' Landing Page'
+      $subUl.prepend $landingPage
 
     $mobileCategory = $ '.mobileCategory', $subUl
     # If the category title does not exist, we add it
     if $mobileCategory.length < 1
-      $mobileCategory = $ '<div class="mobileCategory mobileCategory" />'
-      $mobileCategory.html $subUl.parent('li').children('a').first()[0].outerHTML
-      $back.before $mobileCategory
+      $mobileCategory = $ '<div class="mobileCategory mobileback" />'
+      $mobileCategory.html $subUl.parent('li').children('a').text()
+      $landingPage.before $mobileCategory
 
     $subUl.addClass('mobileShow')
 
@@ -208,6 +209,7 @@ class Navigation
       fingers: 'all'
       excludedElements: 'button'
       tap: @.clickTap
+      threshold: 10
     }
 
   # ## `this.mobileHideSubUl`
@@ -241,7 +243,7 @@ class Navigation
       $body.addClass('removetrans')
       $topbar.addClass('removetrans')
 
-      moveOthers = (Response.viewportW() * .9) - distance
+      moveOthers = (Response.viewportW() * .7) - distance
 
       $el.css 'left', -distance
       $body.css 'left', moveOthers

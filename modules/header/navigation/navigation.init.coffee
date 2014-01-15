@@ -191,7 +191,7 @@ class Navigation
     if $landingPage.length < 1
       $landingPage = $ '<div class="landing" />'
       $landingPage.html $subUl.parent('li').children('a').first()[0].outerHTML
-      $('a', $landingPage).append ' Landing Page'
+      $('a', $landingPage).append ' Main'
       $subUl.prepend $landingPage
 
     $mobileCategory = $ '.mobileCategory', $subUl

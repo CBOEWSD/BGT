@@ -47,6 +47,7 @@ class Navigation
       excludedElements: 'button'
       tap: @.clickTap
       threshold: 10
+      allowPageScroll: 'vertical'
     }
 
   # ## `this.clickTap`
@@ -210,6 +211,7 @@ class Navigation
       excludedElements: 'button'
       tap: @.clickTap
       threshold: 10
+      allowPageScroll: 'vertical'
     }
 
   # ## `this.mobileHideSubUl`

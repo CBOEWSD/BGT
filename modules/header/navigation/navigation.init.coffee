@@ -43,8 +43,22 @@ class Navigation
     # If we're in desktop ignore this event
     return true if Response.viewportW() > 767
 
+    console.log e, target
+
     # Get target element and parent LI
     $target = $(target)
+
+    # Catch if its a back button and trigger the click event appropriately
+    if $target.hasClass('mobileclose') or $target.hasClass('mobileback')
+      # Prevent link click
+      e.preventDefault()
+      e.stopPropagation()
+
+      # Trigger click event
+      $target.trigger('click')
+      return true
+
+    # Check for parent LI
     $parentLi = $target.parent('li')
 
     if $parentLi.length > 0
@@ -60,8 +74,6 @@ class Navigation
 
       # Show menu
       self.mobileShowSubUl $subUl
-
-
 
   # ##`this.hasSub`
   # Adds a class to list items that have
@@ -192,6 +204,7 @@ class Navigation
       swipeStatus: self.swipeSubUl
       fingers: 'all'
       excludedElements: 'button'
+      tap: @.clickTap
     }
 
   # ## `this.mobileHideSubUl`

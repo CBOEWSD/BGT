@@ -57,9 +57,10 @@ class Navigation
       e.preventDefault()
       e.stopPropagation()
 
-      # Trigger click event
-      $target.trigger('click')
-      return true
+      # Triggger close method if close button clicked
+      return self.mobileToggle(e) if $target.hasClass('mobileclose')
+
+      return self.mobileHideSubUl($target.parent('.mobileShow')) if $target.hasClass('mobileback')
 
     # Check for parent LI
     $parentLi = $target.parent('li')
@@ -146,13 +147,13 @@ class Navigation
   # Expands and collapses the mobile navigataion.
   mobileToggle: (e) ->
     e.preventDefault()
+    console.log 'fired?'
 
     $closeButton = $ '.mobileclose', self.$el
     # If the close button does not exist, we add it
     if $closeButton.length < 1
       $closeButton = $ '<div class="mobileclose" />'
       $closeButton.text 'Close'
-      $closeButton.click self.mobileToggle
       self.$topLis.first().before $closeButton
 
     $mobileMainTitle = $ '.mobileMainTitle', self.$el
@@ -160,7 +161,6 @@ class Navigation
     if $mobileMainTitle.length < 1
       $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory" />'
       $mobileMainTitle.text 'Main Menu'
-      $mobileMainTitle.click self.mobileToggle
       $closeButton.before $mobileMainTitle
 
     $closeOverlay = $ '.mobileNavOverlay'
@@ -172,10 +172,14 @@ class Navigation
       $closeOverlay.click self.mobileToggle
       $('body').prepend $closeOverlay
 
-    $('body')
-      .toggleClass('showMobileMenu')
-    $('body, html')
-      .toggleClass('preventscroll')
+    console.log 'did we make it to body?', $('body')
+
+    setTimeout ->
+      $('body')
+        .toggleClass('showMobileMenu')
+      $('body, html')
+        .toggleClass('preventscroll')
+    , 50
 
   # ## `this.mobileShowSubUl`
   # Show submenu on mobile.
@@ -188,8 +192,6 @@ class Navigation
     if $back.length < 1
       $back = $ '<div class="mobileback" />'
       $back.text 'Back'
-      $back.click ->
-        self.mobileHideSubUl $(@).parent('.mobileShow')
       $subUl.prepend $back
 
     $mobileCategory = $ '.mobileCategory', $subUl

@@ -1,0 +1,22 @@
+/*
+  Class: Hideon
+  Description: Used to remove certain elements between mobile/desktop views.
+*/
+
+@import './ui/base/settings';
+
+.hideonmobile {
+  @media screen and (max-width: $screenSmall) {
+    position: fixed;
+    top: 200%;
+    display: none;
+  }
+}
+
+.hideondesktop {
+  @media screen and (min-width: $screenSmall) {
+    position: fixed;
+    top: 200%;
+    display: none;
+  }
+}

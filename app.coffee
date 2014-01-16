@@ -46,6 +46,8 @@ assetManager.addBundle {
     'ui/libs/jquery/jquery.js'
     'ui/libs/handlebars/handlebars.js'
     'ui/libs/responsejs/response.js'
+    'ui/libs/jquery-touchswipe/jquery.touchSwipe.js'
+    'ui/libs/echojs/dist/echo.js'
   ]
 }
 

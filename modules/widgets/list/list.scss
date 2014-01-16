@@ -91,7 +91,10 @@ $module: '.widget-list';
     @media screen and (max-width: $screenSmall) {
       margin: 0; padding: 0;
 
-      li {
+      li,
+      &.two li,
+      &.three li,
+      &.four li {
         display: block;
         float: none;
         width: 100%;

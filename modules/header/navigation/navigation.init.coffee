@@ -13,6 +13,16 @@ class Navigation
     @.$subUls = $ '> ul', @.$topLis
     @.$navIcon = $ '.topbar .navicon'
 
+    # Swipe base settings
+    @.swipeSettings = {
+      swipeStatus: @.swipeTopUl
+      fingers: 'all'
+      excludedElements: 'button'
+      tap: @.clickTap
+      threshold: 10
+      allowPageScroll: 'vertical'
+    }
+
     # this/that
     self = @
 
@@ -31,8 +41,55 @@ class Navigation
     # Mobile expand
     @.$navIcon.click @.mobileToggle
 
-    # Clicks, for mobile submenus
-    @.$topLis.click @.mobileTopLi
+    # Prevent a default anchor link action
+    # when clicked if the parent haas a sub menu
+    $('a', @.$topLis).click (e) ->
+      # If we're in desktop ignore this event
+      return true if Response.viewportW() > 767
+
+      if $(this).parent('li').hasClass('hasSubMenu')
+        e.preventDefault()
+
+    # Bind swipe for mobile menu
+    @.$el.swipe @.swipeSettings
+
+  # ## `this.clickTap`
+  # A catch all method for click and touch/tap events
+  # directed out of the swipe library.
+  clickTap: (e, target) ->
+    # If we're in desktop ignore this event
+    return true if Response.viewportW() > 767
+
+    # Get target element and parent LI
+    $target = $(target)
+
+    # Catch if its a back button and trigger the click event appropriately
+    if $target.hasClass('mobileclose') or $target.hasClass('mobileback')
+      # Prevent link click
+      e.preventDefault()
+      e.stopPropagation()
+
+      # Triggger close method if close button clicked
+      return self.mobileToggle(e) if $target.hasClass('mobileclose')
+
+      return self.mobileHideSubUl($target.parent('.mobileShow')) if $target.hasClass('mobileback')
+
+    # Check for parent LI
+    $parentLi = $target.parent('li')
+
+    if $parentLi.length > 0
+      # Get submenu object if it exists
+      $subUl = $('>ul', $parentLi)
+
+      # If we have no submenu ignore event
+      return true if $subUl.length < 1
+
+      # Prevent link click
+      e.preventDefault()
+      e.stopPropagation()
+
+      # Show menu
+      self.mobileShowSubUl $subUl
 
   # ##`this.hasSub`
   # Adds a class to list items that have
@@ -103,21 +160,12 @@ class Navigation
   mobileToggle: (e) ->
     e.preventDefault()
 
-    $closeButton = $ '.mobileclose', self.$el
-    # If the close button does not exist, we add it
-    if $closeButton.length < 1
-      $closeButton = $ '<div class="mobileclose" />'
-      $closeButton.text 'Close'
-      $closeButton.click self.mobileToggle
-      self.$topLis.first().before $closeButton
-
     $mobileMainTitle = $ '.mobileMainTitle', self.$el
     # If the main title does not exist, we add it
     if $mobileMainTitle.length < 1
-      $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory" />'
-      $mobileMainTitle.text 'Main Menu'
-      $mobileMainTitle.click self.mobileToggle
-      $closeButton.before $mobileMainTitle
+      $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory mobileclose" />'
+      $mobileMainTitle.text 'Home'
+      self.$topLis.first().before $mobileMainTitle
 
     $closeOverlay = $ '.mobileNavOverlay'
     # If the close overlay does not exist, we add it
@@ -125,56 +173,48 @@ class Navigation
     if $closeOverlay.length < 1
       $closeOverlay = $ '<div class="mobileNavOverlay" />'
       $closeOverlay.text 'Close'
-      $closeOverlay.click self.mobileToggle
       $('body').prepend $closeOverlay
 
-    $('body').toggleClass('showMobileMenu')
+      # Take the base swipe settings and modify for purpose
+      settings = self.swipeSettings
+      settings.tap = self.mobileToggle
+      settings.allowPageScroll = 'none'
+      $closeOverlay.swipe settings
 
-  # ## `this.mobileTopLi`
-  # Tracks clicks/touch events on top li elements to display submenus
-  mobileTopLi: (e) ->
-    # If we're in desktop ignore this event
-    return false if Response.viewportW() > 767
-
-    # Get submenu object if it exists
-    $subUl = $('>ul', @)
-
-    # If we have no submenu ignore event
-    return true if $subUl.length < 1
-
-    # If the menu is already shown we assume continue to next page.
-    # This event likely came from a child element bubbling up
-    # to the parent LI (where we are listening)
-    if $subUl.hasClass('mobileShow')
-      return true
-
-    # Prevent link click
-    e.preventDefault()
-
-    # Show menu
-    self.mobileShowSubUl $subUl
+    setTimeout ->
+      $('body')
+        .toggleClass('showMobileMenu')
+    , 50
 
   # ## `this.mobileShowSubUl`
   # Show submenu on mobile.
   mobileShowSubUl: ($subUl) ->
-    $back = $ '.mobileback', $subUl
 
-    # If the back button does not exist, we add it
-    if $back.length < 1
-      $back = $ '<div class="mobileback" />'
-      $back.text 'Back'
-      $back.click ->
-        self.mobileHideSubUl $(@).parent('.mobileShow')
-      $subUl.prepend $back
+    # Baack element object
+    $landingPage = $ '.landing', $subUl
+
+    # Create landing page button
+    if $landingPage.length < 1
+      $landingPage = $ '<div class="landing" />'
+      $landingPage.html $subUl.parent('li').children('a').first()[0].outerHTML
+      $('a', $landingPage).append ' Main'
+      $subUl.prepend $landingPage
 
     $mobileCategory = $ '.mobileCategory', $subUl
     # If the category title does not exist, we add it
     if $mobileCategory.length < 1
-      $mobileCategory = $ '<div class="mobileCategory mobileCategory" />'
-      $mobileCategory.html $subUl.parent('li').children('a').first()[0].outerHTML
-      $back.before $mobileCategory
+      $mobileCategory = $ '<div class="mobileCategory mobileback" />'
+      $mobileCategory.html $subUl.parent('li').children('a').text()
+      $landingPage.before $mobileCategory
 
     $subUl.addClass('mobileShow')
+
+    # Bind swipes to this element
+    # $subUl.bind('touchstart', self.swipeLeft)
+    settings = @.swipeSettings
+    settings.swipeStatus = self.swipeSubUl
+    settings.tap = @.clickTap
+    $subUl.swipe settings
 
   # ## `this.mobileHideSubUl`
   # Hide submenu on mobile.
@@ -182,6 +222,115 @@ class Navigation
     setTimeout ->
       $subUl.removeClass('mobileShow')
     , 100
+
+  # ## `this.swipeTopUl`
+  # On touch start begin moving the selected element
+  swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
+    # If we're in desktop ignore this event
+    return false if Response.viewportW() > 767
+
+    # Prevent Bubble
+    e.stopPropagation()
+
+    # Scope current element
+    $el = self.$el
+    $body = $('body')
+    $topbar = $('body.showMobileMenu .topbar')
+
+    # only do work if we're going left
+    # we may need to expand this action later to account for
+    # left to down swipes or other such cases. Testing will reveal
+    # any quirks with direction.
+    if direction == 'left'
+
+      $el.addClass('removetrans')
+      $body.addClass('removetrans')
+      $topbar.addClass('removetrans')
+
+      moveOthers = (Response.viewportW() * .7) - distance
+
+      $el.css 'left', -distance
+      $body.css 'left', moveOthers
+      $topbar.css 'left', moveOthers
+
+      console.log distance, phase
+
+      if phase == 'end'
+        if distance > 50
+          # If we swiped we stop the event
+          # this prevents links firing and other such events
+          e.preventDefault()
+
+          # Wait short release before removing
+          setTimeout ->
+            console.log 'reset???'
+            self.swipeTopUlReset($el, $body, $topbar)
+            self.mobileToggle(e)
+          , 50
+        else
+          self.swipeTopUlReset($el, $body, $topbar)
+    else
+      self.swipeTopUlReset($el, $body, $topbar)
+
+  # ## `this.swipeTopUlReset`
+  # A reset method called at several points within the
+  # swipe method. Abstraction method.
+  swipeTopUlReset: ($el, $body, $topbar) ->
+    $el.removeClass('removetrans')
+    $body.removeClass('removetrans')
+    $topbar.removeClass('removetrans')
+    $el.css 'left', ''
+    $body.css 'left', ''
+    $topbar.css 'left', ''
+
+  # ## `this.swipeSubUl`
+  # On touch start begin moving the selected element
+  # Unfortunately we cannot use the same method as the top
+  # menu as we need to change different properties.
+  swipeSubUl: (e, phase, direction, distance, duration, fingerCount) ->
+    # If we're in desktop ignore this event
+    return false if Response.viewportW() > 767
+
+    # Prevent bubble
+    e.stopPropagation()
+
+    # Scope current element
+    $el = $(@)
+
+    # only do work if we're going left
+    # we may need to expand this action later to account for
+    # left to down swipes or other such cases. Testing will reveal
+    # any quirks with direction.
+    if direction == 'left'
+
+      $el.addClass('removetrans')
+      $el.css 'margin-left', -distance
+
+      if phase == 'end'
+        if distance > 50
+          # If we swiped we stop the event
+          # this prevents links firing and other such events
+          e.preventDefault()
+
+          # Wait short release before removing
+          setTimeout ->
+            $el.removeClass('mobileShow removetrans').css('margin-left', '')
+
+            # Remove bindings
+            $el.swipe 'destroy'
+          , 50
+        else
+          self.swipeSubUlReset($el)
+    else
+      self.swipeSubUlReset($el)
+
+  # ## `this.swipeSubUlReset`
+  # A reset method called at several points within the
+  # swipe method. Abstraction method.
+  swipeSubUlReset: ($el) ->
+    $el.removeClass('removetrans').css('margin-left', '')
+
+
 
 
 # Init our class

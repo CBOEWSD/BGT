@@ -68,6 +68,10 @@ a {
 }
 
 // Remove transitions
-.removetrans {
+.removetrans, .removetrans * {
   @include transition(none !important);
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: color 0 ease-in;
+  transition: none;
 }

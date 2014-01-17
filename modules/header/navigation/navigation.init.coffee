@@ -257,20 +257,15 @@ class Navigation
 
           , 50
         else
-          self.swipeSubUlReset($el)
+          self.swipeTopUlReset($el)
     else
-      self.swipeSubUlReset($el)
+      self.swipeTopUlReset($el)
 
   # ## `this.swipeTopUlReset`
   # A reset method called at several points within the
   # swipe method. Abstraction method.
-  swipeTopUlReset: ($el, $body, $topbar) ->
-    $el.removeClass('removetrans')
-    $body.removeClass('removetrans')
-    $topbar.removeClass('removetrans')
-    $el.css 'left', ''
-    $body.css 'left', ''
-    $topbar.css 'left', ''
+  swipeTopUlReset: ($el) ->
+    $el.removeClass('removetrans').css('transform', '')
 
   # ## `this.swipeSubUl`
   # On touch start begin moving the selected element

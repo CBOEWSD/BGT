@@ -172,6 +172,7 @@ $width: 70%;
     @include moveLeft(left);
     left: 0;
     position: relative;
+    -webkit-backface-visibility: hidden;
   }
 
   body.showMobileMenu {

@@ -229,13 +229,11 @@ class Navigation
     # If we're in desktop ignore this event
     return false if Response.viewportW() > 767
 
-    # Prevent Bubble
+    # Prevent bubble
     e.stopPropagation()
 
     # Scope current element
     $el = self.$el
-    $body = $('body')
-    $topbar = $('body.showMobileMenu .topbar')
 
     # only do work if we're going left
     # we may need to expand this action later to account for
@@ -244,16 +242,7 @@ class Navigation
     if direction == 'left'
 
       $el.addClass('removetrans')
-      $body.addClass('removetrans')
-      $topbar.addClass('removetrans')
-
-      moveOthers = (Response.viewportW() * .7) - distance
-
-      $el.css 'left', -distance
-      $body.css 'left', moveOthers
-      $topbar.css 'left', moveOthers
-
-      console.log distance, phase
+      $el.css 'transform', "translateX(-#{distance}px)"
 
       if phase == 'end'
         if distance > 50
@@ -263,25 +252,20 @@ class Navigation
 
           # Wait short release before removing
           setTimeout ->
-            console.log 'reset???'
-            self.swipeTopUlReset($el, $body, $topbar)
-            self.mobileToggle(e)
+            $el.removeClass('removetrans').css('transform', '')
+            $('body').removeClass('showMobileMenu')
+
           , 50
         else
-          self.swipeTopUlReset($el, $body, $topbar)
+          self.swipeTopUlReset($el)
     else
-      self.swipeTopUlReset($el, $body, $topbar)
+      self.swipeTopUlReset($el)
 
   # ## `this.swipeTopUlReset`
   # A reset method called at several points within the
   # swipe method. Abstraction method.
-  swipeTopUlReset: ($el, $body, $topbar) ->
-    $el.removeClass('removetrans')
-    $body.removeClass('removetrans')
-    $topbar.removeClass('removetrans')
-    $el.css 'left', ''
-    $body.css 'left', ''
-    $topbar.css 'left', ''
+  swipeTopUlReset: ($el) ->
+    $el.removeClass('removetrans').css('transform', '')
 
   # ## `this.swipeSubUl`
   # On touch start begin moving the selected element

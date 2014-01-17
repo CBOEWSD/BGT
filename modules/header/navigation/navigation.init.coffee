@@ -43,12 +43,12 @@ class Navigation
 
     # Prevent a default anchor link action
     # when clicked if the parent haas a sub menu
-    $('a', @.$topLis).click (e) ->
+    $('a', @.$topLis).live 'click', (e) ->
       # If we're in desktop ignore this event
       return true if Response.viewportW() > 767
 
-      if $(this).parent('li').hasClass('hasSubMenu')
-        e.preventDefault()
+      console.log 'prevented'
+      e.preventDefault()
 
     # Bind swipe for mobile menu
     @.$el.swipe @.swipeSettings
@@ -59,6 +59,8 @@ class Navigation
   clickTap: (e, target) ->
     # If we're in desktop ignore this event
     return true if Response.viewportW() > 767
+
+    console.log 'this is firing'
 
     # Get target element and parent LI
     $target = $(target)
@@ -82,14 +84,16 @@ class Navigation
       $subUl = $('>ul', $parentLi)
 
       # If we have no submenu ignore event
-      return true if $subUl.length < 1
+      if $subUl.length > 0
+        # Prevent link click
+        e.preventDefault()
+        e.stopPropagation()
 
-      # Prevent link click
-      e.preventDefault()
-      e.stopPropagation()
+        # Show menu
+        return self.mobileShowSubUl $subUl
 
-      # Show menu
-      self.mobileShowSubUl $subUl
+    if $target.is('a') and $target.attr('href')?
+      window.location = $target.attr('href')
 
   # ##`this.hasSub`
   # Adds a class to list items that have

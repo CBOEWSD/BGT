@@ -16,6 +16,7 @@ $view: '.view-homepage';
     @include clearfix();
     margin: 20px 0;
     display: table;
+    table-layout: fixed;
     width: 100%;
 
     .row {

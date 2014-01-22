@@ -5,7 +5,7 @@
 class Navigation
   self = undefined
 
-  # ## Construcotr
+  # ## Constructor
   constructor: ($el) ->
     # Objects
     @.$el = $el

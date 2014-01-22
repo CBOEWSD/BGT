@@ -17,7 +17,7 @@ class TwitterModel
     # Start connection
     self.start()
 
-  # ## `this.start`
+  # ## this.start
   start: ->
     # Create connection
     self.socket = self.connect()
@@ -26,18 +26,18 @@ class TwitterModel
     self.listen 'tweet'
     self.listen 'firsttweet'
 
-  # ## `this.connect`
+  # ## this.connect
   # Simply creates and returns a connection to the host socket
   connect: () ->
     return self.socket = io.connect self.host
 
-  # ## `this.listen`
+  # ## this.listen
   # Takes an event name and listens for that event
   # After which `this.newTweet` is called.
   listen: (theEvent) ->
     self.socket.on theEvent, self.newTweet
 
-  # ## `this.newTweet`
+  # ## this.newTweet
   # Simply publishes the event and data to the rest of our
   # application. This cna be used by any module/analytics throughout.
   newTweet: (data) ->
@@ -45,6 +45,6 @@ class TwitterModel
     PubSub.publish 'tweet/new', data
 
 
-# Define called in require
+# Define called by require
 define ->
   return TwitterModel

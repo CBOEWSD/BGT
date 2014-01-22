@@ -20,7 +20,7 @@ class TwitterView
     # Subscribe to new tweet events
     PubSub.subscribe 'tweet/new', @handleTweet
 
-  # ## `this.handleTweet`
+  # ## this.handleTweet
   # Called on the event of a new tweet being published
   handleTweet: (e, data) ->
     # Check that data exists
@@ -32,7 +32,7 @@ class TwitterView
       else
         self.renderTweet data.tweet
 
-  # ## `this.renderTweet`
+  # ## this.renderTweet
   # Using our handlebars template we render the new tweet
   # to our module.
   renderTweet: (tweet) ->

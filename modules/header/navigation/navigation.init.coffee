@@ -32,7 +32,7 @@ class Navigation
     #Add class for subUl parents
     @.hasSub(@.$subUls)
 
-  # ## `this.bind`
+  # ## this.bind
   # Bind up events with actions.
   bind: ->
     # Bind hover (mousein and out) event
@@ -53,7 +53,7 @@ class Navigation
     # Bind swipe for mobile menu
     @.$el.swipe @.swipeSettings
 
-  # ## `this.clickTap`
+  # ## this.clickTap
   # A catch all method for click and touch/tap events
   # directed out of the swipe library.
   clickTap: (e, target) ->
@@ -95,13 +95,13 @@ class Navigation
     if $target.is('a') and $target.attr('href')?
       window.location = $target.attr('href')
 
-  # ##`this.hasSub`
+  # ## this.hasSub
   # Adds a class to list items that have
   # a sub menu to them.
   hasSub: ($uls) ->
     $uls.parents('li').addClass('hasSubMenu')
 
-  # ## `this.hoverTopLi`
+  # ## this.hoverTopLi
   # Fired on hover in/out of top level LI elements.
   hoverTopLi: (e) ->
     # If we're in mobile ignore this event
@@ -117,7 +117,7 @@ class Navigation
     else
       self.hideSubUl @, $subUl
 
-  # ## `this.showSubUl`
+  # ## this.showSubUl
   # Show sub menu element.
   # We use specs for the element and the viewport to position
   # correctly - we do not want the element to be outside
@@ -154,12 +154,12 @@ class Navigation
         left = fullWidth - specs.viewport + 20
         $subUl.css('left', specs.parent.position.left - left)
 
-  # ## `this.hideSubUl`
+  # ## this.hideSubUl
   # Strip sub menu of our applied styles.
   hideSubUl: (el, $subUl) ->
     $subUl.removeAttr('style')
 
-  # ## `this.mobileToggle`
+  # ## this.mobileToggle
   # Expands and collapses the mobile navigataion.
   mobileToggle: (e) ->
     e.preventDefault()
@@ -190,7 +190,7 @@ class Navigation
         .toggleClass('showMobileMenu')
     , 50
 
-  # ## `this.mobileShowSubUl`
+  # ## this.mobileShowSubUl
   # Show submenu on mobile.
   mobileShowSubUl: ($subUl) ->
 
@@ -220,14 +220,14 @@ class Navigation
     settings.tap = @.clickTap
     $subUl.swipe settings
 
-  # ## `this.mobileHideSubUl`
+  # ## this.mobileHideSubUl
   # Hide submenu on mobile.
   mobileHideSubUl: ($subUl) ->
     setTimeout ->
       $subUl.removeClass('mobileShow')
     , 100
 
-  # ## `this.swipeTopUl`
+  # ## this.swipeTopUl
   # On touch start begin moving the selected element
   swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
     # If we're in desktop ignore this event
@@ -265,13 +265,13 @@ class Navigation
     else
       self.swipeTopUlReset($el)
 
-  # ## `this.swipeTopUlReset`
+  # ## this.swipeTopUlReset
   # A reset method called at several points within the
   # swipe method. Abstraction method.
   swipeTopUlReset: ($el) ->
     $el.removeClass('removetrans').css('transform', '')
 
-  # ## `this.swipeSubUl`
+  # ## this.swipeSubUl
   # On touch start begin moving the selected element
   # Unfortunately we cannot use the same method as the top
   # menu as we need to change different properties.
@@ -312,7 +312,7 @@ class Navigation
     else
       self.swipeSubUlReset($el)
 
-  # ## `this.swipeSubUlReset`
+  # ## this.swipeSubUlReset
   # A reset method called at several points within the
   # swipe method. Abstraction method.
   swipeSubUlReset: ($el) ->
@@ -320,6 +320,5 @@ class Navigation
 
 
 
-
-# Init our class
+# ### Init
 navigation = new Navigation $('.navigation')

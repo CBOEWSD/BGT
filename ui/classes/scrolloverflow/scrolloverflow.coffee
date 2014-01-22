@@ -10,6 +10,9 @@ class ScrollOverflow
 
   # ## Constructor
   constructor: ($, $el, minviewport)->
+    # Log: construction event
+    @log.add 'notification', 'Constructed.', @
+
     # This/that
     self = @
 
@@ -25,6 +28,12 @@ class ScrollOverflow
     @setHeight()
     @bindUp()
 
+  # ## this.log
+  # Add local instance of logging to this module.
+  # Can be called with:
+  # ``` @log.add 'notification', 'message...', @ ```
+  log: new LogHandler 'ScrollOverflow'
+
   # ## `this.addTSE`
   # Add TSE related classes and init
   addTSE: ->
@@ -36,6 +45,9 @@ class ScrollOverflow
       $inside.addClass 'tse-content'
       $inside.addClass 'vertical'
 
+      # Log: method called
+      @log.add 'notification', 'addTSE method called on.', $this
+
       $('.tse-scrollable', $this).TrackpadScrollEmulator()
 
   # ## `this.destroy`
@@ -45,6 +57,9 @@ class ScrollOverflow
       $this = $(this)
       $inside = $ '.scrolloverflow-inside', $this
       $wrap = $ 'tse-scrollable', $this
+
+      # Log: method called
+      @log.add 'notification', 'destroy method called on.', $this
 
       if $wrap.length > 0
         $inside.unwrap()
@@ -59,6 +74,9 @@ class ScrollOverflow
     self.$el.each ->
       $this = $(this)
       $inside = $ '.tse-scrollable', $this
+
+      # Log: method called
+      @log.add 'notification', 'setHeight method called on.', $this
 
       # Hide to calc height
       $inside.removeClass('shown')
@@ -80,6 +98,9 @@ class ScrollOverflow
   # checking for if a DOM event has changed something in the last second.
   bindUp: ->
     $('body').bind 'DOMSubtreeModified', self.changeEvent
+
+    # Log: method called
+    @log.add 'notification', 'bindUp method called, listening for DOMSubtreeModified.', 'body'
 
     # This interval prevents us from firing multiple instances of
     # `this.setHeight` in quick succession. We will only ever fire

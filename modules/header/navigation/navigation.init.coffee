@@ -7,6 +7,9 @@ class Navigation
 
   # ## Constructor
   constructor: ($el) ->
+    # Log: construction event
+    @log.add 'notification', 'Constructed.', @
+
     # Objects
     @.$el = $el
     @.$topLis = $ '.menu > li', $el
@@ -32,9 +35,18 @@ class Navigation
     #Add class for subUl parents
     @.hasSub(@.$subUls)
 
+  # ## this.log
+  # Add local instance of logging to this module.
+  # Can be called with:
+  # ``` @log.add 'notification', 'message...', @ ```
+  log: new LogHandler 'Navigation'
+
   # ## this.bind
   # Bind up events with actions.
   bind: ->
+    # Log: method called.
+    @log.add 'notification', 'Bind method called.', @
+
     # Bind hover (mousein and out) event
     @.$topLis.hover @.hoverTopLi
 
@@ -46,9 +58,9 @@ class Navigation
     $('a', @.$topLis).live 'click', (e) ->
       # If we're in desktop ignore this event
       return true if Response.viewportW() > 767
-
-      console.log 'prevented'
       e.preventDefault()
+      # Log: Natural click prevented
+      self.log.add 'notification', 'Prevented click event, defered to tap (touchSwipe lib).', @
 
     # Bind swipe for mobile menu
     @.$el.swipe @.swipeSettings
@@ -60,13 +72,17 @@ class Navigation
     # If we're in desktop ignore this event
     return true if Response.viewportW() > 767
 
-    console.log 'this is firing'
+    # Log: Method called
+    self.log.add 'notification', 'clickTap method called.', @
 
     # Get target element and parent LI
     $target = $(target)
 
     # Catch if its a back button and trigger the click event appropriately
     if $target.hasClass('mobileclose') or $target.hasClass('mobileback')
+      # Log: Is a back button
+      self.log.add 'notification', 'Clicked element was a back/close element.', @
+
       # Prevent link click
       e.preventDefault()
       e.stopPropagation()
@@ -93,6 +109,10 @@ class Navigation
         return self.mobileShowSubUl $subUl
 
     if $target.is('a') and $target.attr('href')?
+      # Log: Method called
+      self.log.add 'notification', 'Link clicked, directing user to page.', @
+
+      # Redirect page to URL
       window.location = $target.attr('href')
 
   # ## this.hasSub
@@ -123,6 +143,9 @@ class Navigation
   # correctly - we do not want the element to be outside
   # of our viewport on desktop or tablet.
   showSubUl: (el, $subUl) ->
+    # Log: Method called
+    self.log.add 'notification', 'showSubUl method called.', el
+
     # Pull element object
     $el = $(el)
 
@@ -164,12 +187,18 @@ class Navigation
   mobileToggle: (e) ->
     e.preventDefault()
 
+    # Log: Method called
+    self.log.add 'notification', 'mobileToggle method called.', @
+
     $mobileMainTitle = $ '.mobileMainTitle', self.$el
     # If the main title does not exist, we add it
     if $mobileMainTitle.length < 1
       $mobileMainTitle = $ '<div class="mobileMainTitle mobileCategory mobileclose" />'
       $mobileMainTitle.text 'Home'
       self.$topLis.first().before $mobileMainTitle
+
+      # Log: Creation event
+      self.log.add 'notification', 'Main title created, this is created only once.', $mobileMainTitle
 
     $closeOverlay = $ '.mobileNavOverlay'
     # If the close overlay does not exist, we add it
@@ -185,6 +214,9 @@ class Navigation
       settings.allowPageScroll = 'none'
       $closeOverlay.swipe settings
 
+      # Log: Creation event
+      self.log.add 'notification', 'Close overlay created, this is created only once.', $closeOverlay
+
     setTimeout ->
       $('body')
         .toggleClass('showMobileMenu')
@@ -193,6 +225,8 @@ class Navigation
   # ## this.mobileShowSubUl
   # Show submenu on mobile.
   mobileShowSubUl: ($subUl) ->
+    # Log: Method called
+    self.log.add 'notification', 'mobileShowSubUl method called.', $subUl
 
     # Baack element object
     $landingPage = $ '.landing', $subUl
@@ -204,12 +238,18 @@ class Navigation
       $('a', $landingPage).append ' Main'
       $subUl.prepend $landingPage
 
+      # Log: Creation event
+      self.log.add 'notification', 'Landing page (top level link) created, this is created only once.', $landingPage
+
     $mobileCategory = $ '.mobileCategory', $subUl
     # If the category title does not exist, we add it
     if $mobileCategory.length < 1
       $mobileCategory = $ '<div class="mobileCategory mobileback" />'
       $mobileCategory.html $subUl.parent('li').children('a').text()
       $landingPage.before $mobileCategory
+
+      # Log: Creation event
+      self.log.add 'notification', 'Category item created, this is created only once.', $mobileCategory
 
     $subUl.addClass('mobileShow')
 
@@ -250,6 +290,9 @@ class Navigation
 
       if phase == 'end'
         if distance > 50
+          # Log: Menu closed
+          self.log.add 'notification', 'Mobile menu closed with swipe.', $el
+
           # If we swiped we stop the event
           # this prevents links firing and other such events
           e.preventDefault()
@@ -296,6 +339,9 @@ class Navigation
 
       if phase == 'end'
         if distance > 50
+          # Log: Menu closed
+          self.log.add 'notification', 'Sub menu closed with swipe.', $el
+
           # If we swiped we stop the event
           # this prevents links firing and other such events
           e.preventDefault()

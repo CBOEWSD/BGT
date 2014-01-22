@@ -8,6 +8,9 @@ class TwitterModel
 
   # ## Constructor
   constructor: ($, io, hbs) ->
+    # Log: construction event
+    @log.add 'notification', '[Model] Constructed.', @
+
     # Set this/that
     self = @
 
@@ -17,10 +20,19 @@ class TwitterModel
     # Start connection
     self.start()
 
+  # ## this.log
+  # Add local instance of logging to this module.
+  # Can be called with:
+  # ``` @log.add 'notification', 'message...', @ ```
+  log: new LogHandler 'Twitter'
+
   # ## this.start
   start: ->
     # Create connection
     self.socket = self.connect()
+
+    # Log: Method called.
+    self.log.add 'notification', '[Model] start method called.', self.socket
 
     # Listen for events
     self.listen 'tweet'
@@ -35,12 +47,18 @@ class TwitterModel
   # Takes an event name and listens for that event
   # After which `this.newTweet` is called.
   listen: (theEvent) ->
+    # Log: Method called.
+    self.log.add 'notification', '[Model] listener set for socket event.', theEvent
+
     self.socket.on theEvent, self.newTweet
 
   # ## this.newTweet
   # Simply publishes the event and data to the rest of our
   # application. This cna be used by any module/analytics throughout.
   newTweet: (data) ->
+    # Log: Method called.
+    self.log.add 'notification', '[Model] newTweet published.', data
+
     # Publish event to global scope
     PubSub.publish 'tweet/new', data
 

@@ -175,10 +175,6 @@ $width: 70%;
   }
 
 
-  .topbar {
-    @include moveLeft(left);
-  }
-
   .mobileNavOverlay {
     position: absolute;
     top: 0;

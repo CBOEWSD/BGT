@@ -31,7 +31,7 @@ class ScrollOverflow
   # ## this.log
   # Add local instance of logging to this module.
   # Can be called with:
-  # ``` @log.add 'notification', 'message...', @ ```
+  # ``` self.log.add 'notification', 'message...', @ ```
   log: new LogHandler 'ScrollOverflow'
 
   # ## `this.addTSE`
@@ -46,7 +46,7 @@ class ScrollOverflow
       $inside.addClass 'vertical'
 
       # Log: method called
-      @log.add 'notification', 'addTSE method called on.', $this
+      self.log.add 'notification', 'addTSE method called on.', $this
 
       $('.tse-scrollable', $this).TrackpadScrollEmulator()
 
@@ -59,7 +59,7 @@ class ScrollOverflow
       $wrap = $ 'tse-scrollable', $this
 
       # Log: method called
-      @log.add 'notification', 'destroy method called on.', $this
+      self.log.add 'notification', 'destroy method called on.', $this
 
       if $wrap.length > 0
         $inside.unwrap()
@@ -76,7 +76,7 @@ class ScrollOverflow
       $inside = $ '.tse-scrollable', $this
 
       # Log: method called
-      @log.add 'notification', 'setHeight method called on.', $this
+      self.log.add 'notification', 'setHeight method called on.', $this
 
       # Hide to calc height
       $inside.removeClass('shown')
@@ -100,7 +100,7 @@ class ScrollOverflow
     $('body').bind 'DOMSubtreeModified', self.changeEvent
 
     # Log: method called
-    @log.add 'notification', 'bindUp method called, listening for DOMSubtreeModified.', 'body'
+    self.log.add 'notification', 'bindUp method called, listening for DOMSubtreeModified.', 'body'
 
     # This interval prevents us from firing multiple instances of
     # `this.setHeight` in quick succession. We will only ever fire

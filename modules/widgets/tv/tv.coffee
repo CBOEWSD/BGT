@@ -36,7 +36,8 @@ class WidgetTV
 
     # Grab Embed URL from clicked element
     url = $(@).data('embedurl')
-    $embed = $('.prime .embed', $(@).closest('.widget-tv'))
+    $placeholder = $ '.prime', $(@).closest('.widget-tv')
+    $embed = $('.embed', $placeholder)
 
     # Grab embed element type
     type = $embed.prop('tagName').toLowerCase()
@@ -45,6 +46,19 @@ class WidgetTV
     if type == 'iframe'
       $embed.attr 'src', url
       self.log.add 'notification', 'Prime video changed.', $embed
+    if type == 'object'
+      # Grab to dynamic params
+      $param = $ 'param[name="flashVars"]', $embed
+      # Split the params into an object
+      # Before placing reinserting the new value attribute
+      value = window.query2object($param.attr('value'))
+      value.mediaId = url
+      value = decodeURIComponent($.param(value))
+      $param.attr 'value', value
+
+      # To reload the object we remove from DOM and replace
+      $embed.detach()
+      $placeholder.append $embed
     else
       self.log.add 'error', 'Embed element type not accounted for.', $embed
 

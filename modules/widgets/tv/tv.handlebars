@@ -2,7 +2,30 @@
   {{> widgets/widget-title}}
 
   <div class="prime">
-    <iframe class="embed" width="560" height="315" src="{{videos.0.embedurl}}" frameborder="0" allowfullscreen></iframe>
+    <object
+      type="application/x-shockwave-flash"
+      id="limelight_player_16878"
+      name="limelight_player_16878"
+      class="LimelightEmbeddedPlayerFlash embed"
+      width="249"
+      height="168"
+      data="http://assets.delvenetworks.com/player/loader.swf">
+      <param
+        name="movie"
+        value="http://assets.delvenetworks.com/player/loader.swf">
+      <param
+        name="wmode"
+        value="window">
+      <param
+        name="allowScriptAccess"
+        value="always">
+      <param
+        name="allowFullScreen"
+        value="true">
+      <param
+        name="flashVars"
+        value="playerForm=MiniPlayer&mediaId={{videos.0.embedurl}}">
+    </object>
   </div>
   <ul class="options">
     {{#each videos}}

@@ -30,6 +30,7 @@ class WidgetTV
   # Binds click events to thumbnail icons.
   binds: ->
     @.$options.bind 'click', self.changePrime
+    PubSub.subscribe 'resize', self.resizeEvent
 
   # ## this.changePrime()
   # Fired on click or touch event of thumbnail selector.
@@ -85,13 +86,29 @@ class WidgetTV
     $parent = $obj.parent('.prime')
     newWidth = $parent.width()
     newHeight = $parent.innerHeight()
-    $obj.attr('width', newWidth).attr('height', newHeight)
+    $obj.attr('width', newWidth)
+    .attr('height', newHeight)
+    .css('width', newWidth)
+    .css('height', newHeight)
 
   # ## this.limeLightInit()
   # Initialized the embed plugin for mobile embedding.
   limeLightInit: (id) ->
     return false unless id?
     LimelightPlayerUtil.initEmbed(id)
+
+  # ## this.resizeEvent
+  # On viewport resize event we check if the limelight wrapper is active
+  # for each we resize to the new appropriate size.
+  resizeEvent: (e) ->
+    $footprint = $('.limelight-player-footprint', self.$el)
+
+    # Check we have at least one
+    return false if $footprint.length < 1
+
+    # for each resize
+    $footprint.each ->
+      self.setDimensions $(@)
 
 # ## Module definition
 # Called by require.

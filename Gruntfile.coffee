@@ -80,11 +80,25 @@ module.exports = (grunt) ->
         options:
           logConcurrentOutput: true
 
+    #
+    hargen:
+      qa:
+        options:
+          urls:
+            'cboe_qa.har': 'http://qa-cboe.bgtpartners.com'
+          output: './__benchmarks'
+      dev:
+        options:
+          urls:
+            'cboe_dev.har': 'http://dev-cboe.bgtpartners.com'
+          output: './__benchmarks'
+
   }
 
   # ### Load Grunt Modules
   # [Matchdep](https://github.com/tkellen/node-matchdep) - used to load `grunt-` modules.
   require('matchdep').filterDev('grunt-*').forEach grunt.loadNpmTasks
+  grunt.loadNpmTasks 'grunt-har-gen'
 
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']

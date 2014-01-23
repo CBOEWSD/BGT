@@ -37,6 +37,7 @@
     "grunt-cucumber": "~0.2.3",
     "chai": "~1.8.1",
     "webdriverjs": "~0.7.14",
-    "grunt-contrib-handlebars": "~0.6.0"
+    "grunt-contrib-handlebars": "~0.6.0",
+    "grunt-har-gen": "~0.4.0"
   }
 }

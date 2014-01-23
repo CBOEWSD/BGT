@@ -14,3 +14,5 @@ modules/**/*.css
 ui/base/**/*.css
 ui/classes/**/*.css
 ui/templates
+
+__benchmarks/

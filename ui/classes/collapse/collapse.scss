@@ -62,9 +62,5 @@ $class: '.collapse';
 
   &.open, &.open * {
     @include Open;
-
-    .expander {
-      background: red;
-    }
   }
 }

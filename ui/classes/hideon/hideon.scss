@@ -8,15 +8,15 @@
 .hideonmobile {
   @media screen and (max-width: $screenSmall) {
     position: fixed;
-    top: 200%;
-    display: none;
+    top: 2000%;
+    right: -2000%;
   }
 }
 
 .hideondesktop {
   @media screen and (min-width: $screenSmall) {
     position: fixed;
-    top: 200%;
-    display: none;
+    top: 2000%;
+    right: -2000%;
   }
 }

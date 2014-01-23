@@ -10,7 +10,11 @@
         {{/if}}
 
         {{#if this.thumbnail}}
-          <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{this.thumbnail.src}}" alt="{{this.title}}" class="thumbnail">
+          <img
+            src="/ui/assets/images/placeholders/blank.gif"
+            data-echo="{{this.thumbnail.src}}"
+            alt="{{this.title}}"
+            class="thumbnail {{#each this.thumbnail.classes}} {{this}} {{/each}}">
         {{/if}}
 
         {{#if this.title}}

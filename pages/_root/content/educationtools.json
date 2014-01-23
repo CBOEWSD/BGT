@@ -12,7 +12,8 @@
         "url": "#"
       },
       "thumbnail": {
-        "src": "/ui/assets/images/education/cboe.jpg"
+        "src": "/ui/assets/images/education/cboe.jpg",
+        "classes": ["hideonmobile"]
       },
       "title": "TradeBuilder With Trade Analyzer"
     },{

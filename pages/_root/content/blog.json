@@ -12,7 +12,8 @@
         "url": "#"
       },
       "thumbnail": {
-        "src": "/ui/assets/images/blog/thumb-free-cboe-risk-management.jpg"
+        "src": "/ui/assets/images/blog/thumb-free-cboe-risk-management.jpg",
+        "classes": ["hideonmobile"]
       },
       "title": "FREE CBOE Risk Management Conference Day 2 Recap"
     },{

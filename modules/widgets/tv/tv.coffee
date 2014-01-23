@@ -17,6 +17,9 @@ class WidgetTV
     # Bind up clicks
     self.binds()
 
+    # Init limelight on all players
+    self.initPlayers()
+
   # ## this.log
   # Add local instance of logging to this module.
   # Can be called with:
@@ -59,8 +62,36 @@ class WidgetTV
       # To reload the object we remove from DOM and replace
       $embed.detach()
       $placeholder.append $embed
+
+      # Init limelight
+      self.limeLightInit($embed.attr('id'))
     else
       self.log.add 'error', 'Embed element type not accounted for.', $embed
+
+  # ## this.initPlayers()
+  # Called by the constructor to set the initial view for
+  # mobile and tablet devices and other such requirements for player.
+  initPlayers: ->
+    $players = $ 'object', self.$el
+
+    $players.each ->
+      self.setDimensions($(@))
+      self.limeLightInit $(@).attr('id')
+
+  # ## this.setDimensions()
+  # Sets the width and height of the object placeholder
+  # for the limelight plugin to resolve.
+  setDimensions: ($obj) ->
+    $parent = $obj.parent('.prime')
+    newWidth = $parent.width()
+    newHeight = $parent.innerHeight()
+    $obj.attr('width', newWidth).attr('height', newHeight)
+
+  # ## this.limeLightInit()
+  # Initialized the embed plugin for mobile embedding.
+  limeLightInit: (id) ->
+    return false unless id?
+    LimelightPlayerUtil.initEmbed(id)
 
 # ## Module definition
 # Called by require.

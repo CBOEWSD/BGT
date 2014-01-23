@@ -1,9 +1,7 @@
 __psds/
 .nodemonignore
 _compiled/
-*.js
 *.css
-**/*.js
 **/*.css
 node_modules/
 ui/docs/
@@ -15,3 +13,4 @@ npm-debug.log
 modules/**/*.css
 ui/base/**/*.css
 ui/classes/**/*.css
+ui/templates

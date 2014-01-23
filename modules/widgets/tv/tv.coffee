@@ -30,6 +30,7 @@ class WidgetTV
   # Binds click events to thumbnail icons.
   binds: ->
     @.$options.bind 'click', self.changePrime
+    # Subscribe to global resize tracker
     PubSub.subscribe 'resize', self.resizeEvent
 
   # ## this.changePrime()
@@ -95,6 +96,10 @@ class WidgetTV
   # Initialized the embed plugin for mobile embedding.
   limeLightInit: (id) ->
     return false unless id?
+    # log
+    self.log.add 'notification', 'Limelight player initialized.', id
+
+    # init limelight
     LimelightPlayerUtil.initEmbed(id)
 
   # ## this.resizeEvent
@@ -105,6 +110,9 @@ class WidgetTV
 
     # Check we have at least one
     return false if $footprint.length < 1
+
+    # log
+    self.log.add 'notification', 'Resize event: modifying limelight footprint.', $footprint
 
     # for each resize
     $footprint.each ->

@@ -58,14 +58,14 @@ $bordercolor: lighten($colorGrey2, 7%);
       .line {
         position: absolute;
         left: 106px;
-        top: 50%;
+        top: 61%;
         margin-top: -3px;
         color: $colorBlue1;
         font: {
-          size: .6em;
+          size: .7em;
         }
         text-transform: uppercase;
-        width: 110px;
+        width: 183px;
       }
     }
   }

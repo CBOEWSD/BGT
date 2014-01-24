@@ -92,6 +92,11 @@ module.exports = (grunt) ->
           urls:
             'cboe_dev.har': 'http://dev-cboe.bgtpartners.com'
           output: './__benchmarks'
+      local:
+        options:
+          urls:
+            'cboe_local.har': 'http://localhost:3001'
+          output: './__benchmarks'
 
   }
 

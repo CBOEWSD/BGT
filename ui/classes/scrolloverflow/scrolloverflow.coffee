@@ -65,15 +65,11 @@ class ScrollOverflow
     # Flag that we have removed TSE
     self.active = false
 
-    console.log 'destroy tse'
-
     # Remove TSE from each
     self.$el.each ->
       $this = $(@)
       $inside = $ '.scrolloverflow-inside', $this
       $wrap = $ '.tse-scrollable', $this
-
-      console.log $wrap
 
       $wrap.TrackpadScrollEmulator('destroy')
 
@@ -90,10 +86,11 @@ class ScrollOverflow
   # For each instance of the class we will detect the height without the inner content
   # and adjust the inner content element appropriately.
   setHeight: ->
-    return false if !self.active
     self.$el.each ->
       $this = $(this)
       $inside = $ '.tse-scrollable', $this
+
+      #return false if !$inside.hasClass 'tse-scrollable'
 
       # Log: method called
       self.log.add 'notification', 'setHeight method called on.', $this
@@ -106,6 +103,12 @@ class ScrollOverflow
       newHeight = $this.innerHeight() - $paddingVert
       $paddingHoriz = parseInt($this.css('padding-right')) + parseInt($this.css('padding-left'))
       newWidth = $this.innerWidth() - $paddingHoriz
+
+      # If the returned result is 0 we'll not set a height param
+      if newHeight == 0
+        newHeight = ''
+
+      console.log newHeight, newWidth
 
       # Set new height and show element if not displayed
       $inside.height newHeight
@@ -128,12 +131,17 @@ class ScrollOverflow
     setInterval ->
       if self.shouldI
         self.setHeight()
-        if Response.viewportW() <= self.minvp and self.active
-          self.destroy()
-        else if !self.active
-          self.addTSE()
         self.shouldI = false
     , 3000
+
+    # Window resize listener
+    PubSub.subscribe 'resize', ->
+      # Remove TSE if we drop below viewport range
+      # Add it back if we go above again
+      if Response.viewportW() <= self.minvp
+        self.destroy()
+      else
+        self.addTSE()
 
   # ## `this.changeEvent`
   # Set `this.shouldI` to `true` for the next interval check

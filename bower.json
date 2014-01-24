@@ -2,7 +2,7 @@
   "name": "node-starter",
   "version": "0.0.0",
   "dependencies": {
-    "jquery": "~1.8.0",
+    "jquery": "~1.9.1",
     "requirejs": "~2.1.8",
     "echojs": "~1.4.0",
     "pubsub-js": "~1.4.0",

@@ -55,7 +55,7 @@ class Navigation
 
     # Prevent a default anchor link action
     # when clicked if the parent haas a sub menu
-    $('a', @.$topLis).live 'click', (e) ->
+    $('a', @.$topLis).on 'click', (e) ->
       # If we're in desktop ignore this event
       return true if Response.viewportW() > 767
       e.preventDefault()

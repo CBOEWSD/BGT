@@ -53,7 +53,7 @@ class ScrollOverflow
       $inside.addClass 'vertical'
 
       # Log: method called
-      self.log.add 'notification', 'addTSE method called on.', $this
+      self.log.add 'notification', 'addTSE method called.', $this
 
       $('.tse-scrollable', $this).TrackpadScrollEmulator()
 
@@ -72,6 +72,9 @@ class ScrollOverflow
       $wrap = $ '.tse-scrollable', $this
 
       $wrap.TrackpadScrollEmulator('destroy')
+
+      # Log: method called
+      self.log.add 'notification', 'destroy method called.', $this
 
       if $wrap.length > 0
         $inside.unwrap()
@@ -107,8 +110,6 @@ class ScrollOverflow
       # If the returned result is 0 we'll not set a height param
       if newHeight == 0
         newHeight = ''
-
-      console.log newHeight, newWidth
 
       # Set new height and show element if not displayed
       $inside.height newHeight

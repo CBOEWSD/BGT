@@ -4,6 +4,7 @@
 # pseudo-language.
 sass = require 'node-sass'
 coffee = require 'coffee-script'
+uglify = require 'uglify-js'
 path = require 'path'
 
 # ## sassRenderer
@@ -34,7 +35,7 @@ exports.coffeeRenderer = (file, abpath, index, isLast, callback) ->
   if /\.coffee/.test abpath
     console.log "Compiling #{abpath}"
     # Render and call callback
-    callback coffee.compile(file)
+    callback uglify.minify(coffee.compile(file), {fromString: true}).code
   else
     # Not coffee? Pass file contents on, could be a .js file.
-    callback file
+    callback uglify.minify(file, {fromString: true}).code

@@ -47,9 +47,6 @@ class Navigation
     # Log: method called.
     @log.add 'notification', 'Bind method called.', @
 
-    # Bind hover (mousein and out) event
-    @.$topLis.hover @.hoverTopLi
-
     # Mobile expand
     @.$navIcon.click @.mobileToggle
 
@@ -57,10 +54,12 @@ class Navigation
     # when clicked if the parent haas a sub menu
     $('a', @.$topLis).on 'click', (e) ->
       # If we're in desktop ignore this event
-      return true if Response.viewportW() > 767
-      e.preventDefault()
-      # Log: Natural click prevented
-      self.log.add 'notification', 'Prevented click event, defered to tap (touchSwipe lib).', @
+      if Response.viewportW() > 767
+        self.clickTopLi(e, @)
+      else
+        e.preventDefault()
+        # Log: Natural click prevented
+        self.log.add 'notification', 'Prevented click event, defered to tap (touchSwipe lib).', @
 
     # Bind swipe for mobile menu
     @.$el.swipe @.swipeSettings
@@ -121,66 +120,32 @@ class Navigation
   hasSub: ($uls) ->
     $uls.parents('li').addClass('hasSubMenu')
 
-  # ## this.hoverTopLi
-  # Fired on hover in/out of top level LI elements.
-  hoverTopLi: (e) ->
+
+
+
+
+  clickTopLi: (e, target) ->
     # If we're in mobile ignore this event
     return false if Response.viewportW() < 768
 
     # Grab Submenu, if it doesn't exist do nothing more
-    $subUl = $('> ul', @)
-    return false unless $subUl.length > 0
+    $parentLi = $(target).parent('li')
+    $subUl = $('> ul', $parentLi)
+    return true unless $subUl.length > 0
+    e.preventDefault()
 
-    # Show? or hide...
-    if e.type == 'mouseenter'
-      self.showSubUl @, $subUl
-    else
-      self.hideSubUl @, $subUl
+    self.$topLis.removeClass 'shown'
+    $parentLi.addClass 'shown'
 
-  # ## this.showSubUl
-  # Show sub menu element.
-  # We use specs for the element and the viewport to position
-  # correctly - we do not want the element to be outside
-  # of our viewport on desktop or tablet.
-  showSubUl: (el, $subUl) ->
-    # Log: Method called
-    self.log.add 'notification', 'showSubUl method called.', el
+    self.adjustExpander $subUl.outerHeight()
 
-    # Pull element object
-    $el = $(el)
+  adjustExpander: (height) ->
+    if typeof height != 'number'
+      self.log.add 'error', 'adjustExpander: Height not a number', height
+      return false
 
-    # Specs
-    specs = {
-      viewport: Response.viewportW()
-      offset: $subUl.offset()
-      width: $subUl.width()
-      parent:
-        offset: $el.offset()
-        # Offset from parent not viewport
-        position: $el.position()
-    }
+    $('.desktopExpander').css 'height', height
 
-    # If menu is wider than viewport
-    if specs.viewport < specs.width
-      # Make full width (viewport)
-      $subUl.css('left', 0)
-            .css('width', '100%')
-    else
-      fullWidth = specs.width + specs.parent.offset.left
-      # Check if we can move the menu without going off viewport
-      if fullWidth < specs.viewport
-        $subUl.css('left', specs.parent.position.left)
-
-      # if we're going to exit the viewporty
-      else
-        # Calculate how much we need to pull left to keep in viewport
-        left = fullWidth - specs.viewport + 20
-        $subUl.css('left', specs.parent.position.left - left)
-
-  # ## this.hideSubUl
-  # Strip sub menu of our applied styles.
-  hideSubUl: (el, $subUl) ->
-    $subUl.removeAttr('style')
 
   # ## this.mobileToggle
   # Expands and collapses the mobile navigataion.

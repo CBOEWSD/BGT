@@ -20,6 +20,7 @@ class ScrollOverflow
     self.$el = $el
     self.shouldI = false
     self.minvp = minviewport
+    self.active = false
 
     # Add TSE lib
     @addTSE()
@@ -37,8 +38,14 @@ class ScrollOverflow
   # ## `this.addTSE`
   # Add TSE related classes and init
   addTSE: ->
+    return false if self.active
+
+    # Flag that we have applied TSE
+    self.active = true
+
+    # Add TSE to each
     self.$el.each ->
-      $this = $(this)
+      $this = $(@)
       $inside = $ '.scrolloverflow-inside', $this
 
       $this.wrapInner '<div class="tse-scrollable"/>'
@@ -53,16 +60,28 @@ class ScrollOverflow
   # ## `this.destroy`
   # Removes all bindings and setup, this allows for collapse to mobile.
   destroy: ->
-    self.$el.each ->
-      $this = $(this)
-      $inside = $ '.scrolloverflow-inside', $this
-      $wrap = $ 'tse-scrollable', $this
+    return false if !self.active
 
-      # Log: method called
-      self.log.add 'notification', 'destroy method called on.', $this
+    # Flag that we have removed TSE
+    self.active = false
+
+    console.log 'destroy tse'
+
+    # Remove TSE from each
+    self.$el.each ->
+      $this = $(@)
+      $inside = $ '.scrolloverflow-inside', $this
+      $wrap = $ '.tse-scrollable', $this
+
+      console.log $wrap
+
+      $wrap.TrackpadScrollEmulator('destroy')
 
       if $wrap.length > 0
         $inside.unwrap()
+        $wrap.removeClass 'tse-scrollable'
+        $inside.css 'height', ''
+        $inside.css 'overflow-y', ''
 
       $inside.removeClass 'tse-content'
       $inside.removeClass 'vertical'
@@ -71,6 +90,7 @@ class ScrollOverflow
   # For each instance of the class we will detect the height without the inner content
   # and adjust the inner content element appropriately.
   setHeight: ->
+    return false if !self.active
     self.$el.each ->
       $this = $(this)
       $inside = $ '.tse-scrollable', $this
@@ -108,6 +128,10 @@ class ScrollOverflow
     setInterval ->
       if self.shouldI
         self.setHeight()
+        if Response.viewportW() <= self.minvp and self.active
+          self.destroy()
+        else if !self.active
+          self.addTSE()
         self.shouldI = false
     , 3000
 

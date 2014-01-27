@@ -44,9 +44,10 @@ $view: '.view-index';
 
       &:first-child {
         border-left: none;
-      }
-      &:last-child {
-        border-right: none;
+
+        + .column50 {
+          border-right: none;
+        }
       }
     }
   }

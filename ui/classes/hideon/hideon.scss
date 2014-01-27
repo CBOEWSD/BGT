@@ -14,6 +14,8 @@
 }
 
 .hideondesktop {
+  display: none\9;
+
   @media screen and (min-width: $screenSmall) {
     position: fixed;
     top: 2000%;

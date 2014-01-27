@@ -8,13 +8,15 @@
 
 $module: '.widget';
 
+$borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
+
 // Work around for firefox display:table-cell and positions
 // Cannot position relative and sit the border within the
 // context of that element. Using boxshadow which is supported in
 // FF but not other versions of IE.
 @-moz-document url-prefix() {
   #{$module} {
-    @include box-shadow(inset 0 4px 0 $colorBlue2);
+    @include box-shadow(inset 0 4px 0 $colorBlue2, $borderShad !important);
 
     &:before {
       display: none !important;
@@ -26,7 +28,7 @@ $module: '.widget';
   background: #fff;
   padding: 14px 10px 10px;
   position: relative;
-  @include box-shadow(inset 0 0 0 1px darken($colorGrey2, 10%));
+  @include box-shadow($borderShad);
 
   &:before {
     display: block; content: '';

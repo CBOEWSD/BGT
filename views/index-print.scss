@@ -1,0 +1,13 @@
+@media print {
+  .view-index {
+
+    .row {
+      display: block;
+
+      .column1, .column2, .column50 {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

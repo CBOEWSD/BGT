@@ -12,7 +12,7 @@ GLOBAL.exphbs  = require 'express3-handlebars'
 GLOBAL.fs = require 'fs'
 assetManager = require './_application/assets'
 minify = require 'express-minify'
-twitterSocket = require './_twitter/socket'
+twitterSocket = require './_application/_twitter/socket'
 assetConnect = require 'connect-assetmanager'
 handlers = require './_application/handlers'
 

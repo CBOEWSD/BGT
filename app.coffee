@@ -56,7 +56,7 @@ assetManager.addBundle {
   name: 'css'
   files: [
     'ui/base/**/*.scss'
-    'ui/views/**/*.scss'
+    'views/**/*.scss'
     'ui/classes/**/*.scss'
     'modules/**/*.scss'
   ]
@@ -130,6 +130,10 @@ app.use '/modules', sass.middleware {
   src: __dirname + '/modules'
   debug: !isProd
 }
+app.use '/views', sass.middleware {
+  src: __dirname + '/views'
+  debug: !isProd
+}
 app.use '/ui', coffee {
   src: __dirname + '/ui'
   compress: isProd
@@ -149,6 +153,7 @@ app.use '/modules', coffee {
 app.use '/ui', express.static path.join(__dirname, 'ui')
 app.use '/_compiled', express.static path.join(__dirname, '_compiled')
 app.use '/modules', express.static path.join(__dirname, 'modules')
+app.use '/views', express.static path.join(__dirname, 'views')
 
 app.use express.favicon()
 app.use express.logger('dev')

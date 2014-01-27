@@ -36,7 +36,7 @@ $module: '.topbar';
         &.sprite {
           background: url(/modules/header/topbar/assets/sprite.jpg) no-repeat top center;
           text-indent: -5000em;
-          color: rgba(0, 0, 0, 0) !important;
+          color: rgba(19, 95, 173, 0) !important;
           text-align: left;
           height: 20px;
 
@@ -92,7 +92,7 @@ $module: '.topbar';
           text-align: left;
           background: none;
           text-indent: -5000em;
-          color: rgba(0, 0, 0, 0) !important;
+          color: rgba(19, 95, 173, 0) !important;
           @include border-radius(0);
           @include box-shadow(none);
         }

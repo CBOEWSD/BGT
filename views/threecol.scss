@@ -1,0 +1,15 @@
+/*
+  View: threecol
+  Description: Styling for threecol view.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$view: '.view-threecol';
+
+#{$view} {
+
+}

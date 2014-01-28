@@ -72,7 +72,7 @@ $view: '.view-index';
     }
   }
 
-  @media screen and (max-width: $screenSmall) {
+  @media screen and (max-width: $screenSmallMax) {
     .row {
       display: block;
       padding: 0 10px;

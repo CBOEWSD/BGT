@@ -6,7 +6,7 @@
 @import './ui/base/settings';
 
 .hideonmobile {
-  @media screen and (max-width: $screenSmall) {
+  @media screen and (max-width: $screenSmallMax) {
     position: fixed;
     top: 2000%;
     right: -2000%;
@@ -16,7 +16,7 @@
 .hideondesktop {
   display: none\9;
 
-  @media screen and (min-width: $screenSmall) {
+  @media screen and (min-width: $screenSmallMax) {
     position: fixed;
     top: 2000%;
     right: -2000%;

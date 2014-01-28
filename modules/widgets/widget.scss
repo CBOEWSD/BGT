@@ -91,7 +91,7 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
     }
   }
 
-  @media screen and (max-width: $screenSmall) {
+  @media screen and (max-width: $screenSmallMax) {
     margin: 10px 0;
   }
 }

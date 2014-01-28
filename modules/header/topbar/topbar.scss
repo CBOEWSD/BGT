@@ -64,7 +64,7 @@ $module: '.topbar';
     }
   }
 
-  @media screen and (max-width: $screenSmall) {
+  @media screen and (max-width: $screenSmallMax) {
     background: $colorBlue1;
     position: fixed;
     top: 0;

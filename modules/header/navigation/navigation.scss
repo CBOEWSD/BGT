@@ -93,7 +93,7 @@ $3dsize: 4px;
         &>li {
           @include column(6);
 
-          @media screen and (min-width: $screenSmall) {
+          @media screen and (min-width: $screenSmallMax) {
             &.menu {
               li {
                 border-bottom: 1px solid lighten($colorGrey1, 65%);
@@ -185,7 +185,7 @@ $3dsize: 4px;
     }
   }
 
-  @media screen and (max-width: 1000px) and (min-width: $screenSmall) {
+  @media screen and (max-width: 1000px) and (min-width: $screenSmallMax) {
     .menu {
       &>li {
         &:hover {
@@ -200,7 +200,7 @@ $3dsize: 4px;
     }
   }
 
-  @media screen and (max-width: 850px) and (min-width: $screenSmall) {
+  @media screen and (max-width: 850px) and (min-width: $screenSmallMax) {
     .menu {
       &>li {
         & > a {

@@ -58,7 +58,7 @@ $module: '.footer';
     min-height: 37px;
   }
 
-  @media screen and (max-width: $screenSmall) {
+  @media screen and (max-width: $screenSmallMax) {
     .menu-1, .menu-2, .disclaimer {
       margin: 30px 0;
 

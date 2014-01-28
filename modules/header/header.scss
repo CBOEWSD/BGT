@@ -150,6 +150,7 @@ $bordercolor: lighten($colorGrey2, 7%);
         }
       }
     }
-
   }
+
+  @import 'print';
 }

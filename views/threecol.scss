@@ -11,5 +11,15 @@
 $view: '.view-threecol';
 
 #{$view} {
+  .topspan {
+    @include outerRow();
+  }
 
+  .main {
+    background: #fff;
+    border: 1px solid darken($colorGrey2, 5%);
+    clear: both;
+    margin: 0 13px;
+    padding: 20px 0;
+  }
 }

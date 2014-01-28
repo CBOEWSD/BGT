@@ -6,6 +6,9 @@
     "description": "This is a description"
   },
   "modules": {
+    "topspan": [{
+      "breadcrumbs/breadcrumbs": ""
+      }],
     "widget1": [{
       "widgets/hero/hero": "hero.json"
       }]

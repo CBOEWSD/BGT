@@ -1,16 +1,55 @@
 {
-  "view": "threecol",
-  "title": "Three Col View",
-  "meta": {
-    "keywords": "some, keywords",
-    "description": "This is a description"
-  },
-  "modules": {
-    "topspan": [{
-      "breadcrumbs/breadcrumbs": ""
-      }],
-    "col1": [{
-      "widgets/side-navigation/nav": ""
-      }]
-  }
+   "view":"threecol",
+   "title":"Three Col View",
+   "meta":{
+      "keywords":"some, keywords",
+      "description":"This is a description"
+   },
+   "placeholders":{
+      "topspan":[
+         {
+            "breadcrumbs/breadcrumbs":""
+         }
+      ],
+      "col1":[
+         {
+            "widgets/side-navigation/nav":""
+         }
+      ],
+      "col2":[
+         {
+            "widgets/content/content":"intro.md"
+         },
+         {
+            "row":[
+               {
+                  "widgets/hero/hero":"hero.json"
+               },
+               {
+                  "ads/square_300/300":"sidebar/_config.json"
+               }
+            ]
+         },
+         {
+            "row":[
+               {
+                  "widgets/content/content":"intro.md"
+               },
+               {
+                  "widgets/content/content":"intro.md"
+               }
+            ]
+         },
+         {
+            "row":[
+               {
+                  "widgets/content/content":"intro.md"
+               },
+               {
+                  "widgets/content/content":"intro.md"
+               }
+            ]
+         }
+      ]
+   }
 }

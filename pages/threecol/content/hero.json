@@ -1,0 +1,37 @@
+{
+   "background":"/ui/assets/images/heros/hero-800x325.jpg",
+   "slides":[
+      {
+         "title":"CBOE Products",
+         "text":"CBOE Introduces New Short-Term Volatility Index",
+         "link":{
+            "text":"Learn More",
+            "url":"#"
+         }
+      },
+      {
+         "title":"CBOE Products",
+         "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+         "link":{
+            "text":"Learn More",
+            "url":"#"
+         }
+      },
+      {
+         "title":"CBOE Products",
+         "text":"Aenean nec augue vel lectus gravida laoreet",
+         "link":{
+            "text":"Learn More",
+            "url":"#"
+         }
+      },
+      {
+         "title":"CBOE Products",
+         "text":"Sed consectetur viverra neque, sit amet pulvinar",
+         "link":{
+            "text":"Learn More",
+            "url":"#"
+         }
+      }
+   ]
+}

@@ -24,7 +24,7 @@ $view: '.view-threecol';
     @include clearfix();
 
     .col1, .col3 {
-      @include column(3);
+      @include column(2);
     }
 
     .col1 {
@@ -32,7 +32,7 @@ $view: '.view-threecol';
     }
 
     .col2 {
-      @include column(6);
+      @include column(8);
     }
 
     .col3 {

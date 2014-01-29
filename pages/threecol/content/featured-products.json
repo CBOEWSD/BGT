@@ -1,32 +1,48 @@
 {
    "slides":[
       {
-         "title":"CBOE Products",
-         "text":"CBOE Introduces New Short-Term Volatility Index",
+         "title":"Featured Product:",
+         "text":"Binary Options",
+         "image": {
+            "src": "/ui/assets/images/featured-products/binary-options.jpg"
+         },
+         "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
          "link":{
             "text":"Learn More",
             "url":"#"
          }
       },
       {
-         "title":"CBOE Products",
-         "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+         "title":"Featured Product:",
+         "text":"Binary Options",
+         "image": {
+            "src": "/ui/assets/images/featured-products/binary-options.jpg"
+         },
+         "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
          "link":{
             "text":"Learn More",
             "url":"#"
          }
       },
       {
-         "title":"CBOE Products",
-         "text":"Aenean nec augue vel lectus gravida laoreet",
+         "title":"Featured Product:",
+         "text":"Binary Options",
+         "image": {
+            "src": "/ui/assets/images/featured-products/binary-options.jpg"
+         },
+         "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
          "link":{
             "text":"Learn More",
             "url":"#"
          }
       },
       {
-         "title":"CBOE Products",
-         "text":"Sed consectetur viverra neque, sit amet pulvinar",
+         "title":"Featured Product:",
+         "text":"Binary Options",
+         "image": {
+            "src": "/ui/assets/images/featured-products/binary-options.jpg"
+         },
+         "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
          "link":{
             "text":"Learn More",
             "url":"#"

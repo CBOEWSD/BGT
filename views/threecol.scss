@@ -43,10 +43,15 @@ $view: '.view-threecol';
       width: 100%;
 
       .row {
-        @include innerRow();
+        display: table;
+        width: 100%;
+        table-layout: fixed;
 
         .column {
-          @include column(6);
+          display: table-cell;
+          vertical-align: top;
+          width: 50%;
+          padding: 15px;
         }
       }
     }

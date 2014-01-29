@@ -9,8 +9,8 @@
     "topspan": [{
       "breadcrumbs/breadcrumbs": ""
       }],
-    "widget1": [{
-      "widgets/hero/hero": "hero.json"
+    "col1": [{
+      "widgets/side-navigation/nav": ""
       }]
   }
 }

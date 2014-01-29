@@ -23,7 +23,7 @@
          {
             "row":[
                {
-                  "widgets/hero/hero":"hero.json"
+                  "widgets/hero/hero":"featured-products.json"
                },
                {
                   "ads/square_300/300":"sidebar/_config.json"

@@ -18,7 +18,21 @@
       </div>
 
       <div class="col2">
-        col2
+        {{#each col2}}
+          {{#each this}}
+
+            <div class="{{@key}}">
+              {{#each this}}
+                <div class="column">
+                  {{{this}}}
+                </div>
+              {{/each}}
+            </div>
+
+          {{else}}
+            {{{this}}}
+          {{/each}}
+        {{/each}}
       </div>
 
       <div class="col3">

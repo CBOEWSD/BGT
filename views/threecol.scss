@@ -41,6 +41,14 @@ $view: '.view-threecol';
 
     .col2 {
       width: 100%;
+
+      .row {
+        @include innerRow();
+
+        .column {
+          @include column(6);
+        }
+      }
     }
 
     .col3 {

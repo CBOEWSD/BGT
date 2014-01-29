@@ -16,6 +16,9 @@ $view: '.view-threecol';
   }
 
   .main {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
     background: #fff;
     border: 1px solid darken($colorGrey2, 5%);
     clear: both;
@@ -23,8 +26,13 @@ $view: '.view-threecol';
     padding: 20px 0;
     @include clearfix();
 
+    .col1, .col2, .col3 {
+      display: table-cell;
+      padding: 0 15px;
+    }
+
     .col1, .col3 {
-      @include column(2);
+      width: 200px;
     }
 
     .col1 {
@@ -32,7 +40,7 @@ $view: '.view-threecol';
     }
 
     .col2 {
-      @include column(8);
+      width: 100%;
     }
 
     .col3 {

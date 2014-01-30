@@ -142,18 +142,20 @@ $3dsize: 6px;
   }
 
   @media screen and (max-width: $screenSmallMax) {
-    min-height: 0;
+    &.hero {
+      min-height: 0;
 
-    .background {
-      position: fixed;
-      top: 200%;
-    }
+      .background {
+        position: fixed;
+        top: 200%;
+      }
 
-    .slides {
-      position: relative;
+      .slides {
+        position: relative;
 
-      .slide {
-        width: 100%;
+        .slide {
+          width: 100%;
+        }
       }
     }
   }

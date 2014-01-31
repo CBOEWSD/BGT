@@ -1,6 +1,6 @@
 /*
-  View: index
-  Description: Styling for index view.
+  View: default
+  Description: Styling for default view.
 */
 
 @import './ui/base/settings';
@@ -8,7 +8,7 @@
 @import './ui/base/_includes/grid';
 @import './ui/base/_includes/clearfix';
 
-$view: '.view-index';
+$view: '.view-default';
 
 #{$view} {
 

@@ -1,127 +1,98 @@
 {
-   "view":"threecol",
-   "title":"Three Col View",
-   "meta":{
-      "keywords":"some, keywords",
-      "description":"This is a description"
-   },
-   "placeholders":{
-      "topspan":[
-         {
-            "breadcrumbs/breadcrumbs":""
-         }
-      ],
-      "col1":[
-         {
-            "widgets/side-navigation/nav":""
-         }
-      ],
-      "col2":[
-         {
-            "widgets/content/content":"intro.md"
-         },
-         {
-            "row":[
-               {
-                  "widgets/hero/copybased":"featured-products.json"
-               },
-               {
-                  "ads/square_300/300":"sidebar/_config.json"
-               }
-            ]
-         },
-         {
-            "row":[
-               {
-                  "widgets/widget": {
+    "view": "threecol",
+    "title": "Three Col View",
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "placeholders": {
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": ""
+        }],
+        "col1": [{
+            "widgets/side-navigation/nav": ""
+        }],
+        "col2": [{
+            "widgets/content/content": "intro.md"
+        }, {
+            "row": [{
+                "widgets/hero/copybased": "featured-products.json"
+            }, {
+                "ads/square_300/300": "sidebar/_config.json"
+            }]
+        }, {
+            "row": [{
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/indexes.md"
+                        "widgets/content/content": "boxes/indexes.md"
                     }
-                  }
-               },
-               {
-                  "widgets/widget": {
+                }
+            }, {
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/equities.md"
+                        "widgets/content/content": "boxes/equities.md"
                     }
-                  }
-               }
-            ]
-         },
-         {
-            "row":[
-               {
-                  "widgets/widget": {
+                }
+            }]
+        }, {
+            "row": [{
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/minis.md"
+                        "widgets/content/content": "boxes/minis.md"
                     }
-                  }
-               },
-               {
-                  "widgets/widget": {
+                }
+            }, {
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/exchange-traded.md"
+                        "widgets/content/content": "boxes/exchange-traded.md"
                     }
-                  }
-               }
-            ]
-         },
-         {
-            "row":[
-               {
-                  "widgets/widget": {
+                }
+            }]
+        }, {
+            "row": [{
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/weeklys.md"
+                        "widgets/content/content": "boxes/weeklys.md"
                     }
-                  }
-               },
-               {
-                  "widgets/widget": {
+                }
+            }, {
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/quarterlys.md"
+                        "widgets/content/content": "boxes/quarterlys.md"
                     }
-                  }
-               }
-            ]
-         },
-         {
-            "row":[
-               {
-                  "widgets/widget": {
+                }
+            }]
+        }, {
+            "row": [{
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/flex.md"
+                        "widgets/content/content": "boxes/flex.md"
                     }
-                  }
-               },
-               {
-                  "widgets/widget": {
+                }
+            }, {
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/leaps.md"
+                        "widgets/content/content": "boxes/leaps.md"
                     }
-                  }
-               }
-            ]
-         },
-         {
-            "row":[
-               {
-                  "widgets/widget": {
+                }
+            }]
+        }, {
+            "row": [{
+                "widgets/widget": {
                     "classes": ["noborders"],
                     "content": {
-                      "widgets/content/content":"boxes/credits.md"
+                        "widgets/content/content": "boxes/credits.md"
                     }
-                  }
-               }
-            ]
-         }
-      ]
-   }
+                }
+            }]
+        }]
+    }
 }

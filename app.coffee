@@ -111,7 +111,7 @@ app.set 'port', process.env.PORT || pkg.server.port || 3000
 app.set 'views', __dirname + '/views'
 app.engine 'handlebars', exphbs
   defaultLayout: 'main'
-  layoutsDir:  __dirname + '/views/layouts'
+  layoutsDir:  __dirname + '/views/_layouts'
   partialsDir: [
     __dirname + '/modules'
   ]

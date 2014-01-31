@@ -30,6 +30,10 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
   position: relative;
   @include box-shadow($borderShad);
 
+  &.noborders {
+    @include box-shadow(none);
+  }
+
   &:before {
     display: block; content: '';
     position:absolute;

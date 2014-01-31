@@ -1,13 +1,127 @@
 {
-    "view": "threecol",
-    "title": "Three Col View",
-    "meta": {
-        "keywords": "some, keywords",
-        "description": "This is a description"
-    },
-    "modules": {
-        "widget1": [{
-            "widgets/hero/hero": "hero.json"
-        }]
-    }
+   "view":"threecol",
+   "title":"Three Col View",
+   "meta":{
+      "keywords":"some, keywords",
+      "description":"This is a description"
+   },
+   "placeholders":{
+      "topspan":[
+         {
+            "breadcrumbs/breadcrumbs":""
+         }
+      ],
+      "col1":[
+         {
+            "widgets/side-navigation/nav":""
+         }
+      ],
+      "col2":[
+         {
+            "widgets/content/content":"intro.md"
+         },
+         {
+            "row":[
+               {
+                  "widgets/hero/copybased":"featured-products.json"
+               },
+               {
+                  "ads/square_300/300":"sidebar/_config.json"
+               }
+            ]
+         },
+         {
+            "row":[
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/indexes.md"
+                    }
+                  }
+               },
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/equities.md"
+                    }
+                  }
+               }
+            ]
+         },
+         {
+            "row":[
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/minis.md"
+                    }
+                  }
+               },
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/exchange-traded.md"
+                    }
+                  }
+               }
+            ]
+         },
+         {
+            "row":[
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/weeklys.md"
+                    }
+                  }
+               },
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/quarterlys.md"
+                    }
+                  }
+               }
+            ]
+         },
+         {
+            "row":[
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/flex.md"
+                    }
+                  }
+               },
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/leaps.md"
+                    }
+                  }
+               }
+            ]
+         },
+         {
+            "row":[
+               {
+                  "widgets/widget": {
+                    "classes": ["noborders"],
+                    "content": {
+                      "widgets/content/content":"boxes/credits.md"
+                    }
+                  }
+               }
+            ]
+         }
+      ]
+   }
 }

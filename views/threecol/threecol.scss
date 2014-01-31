@@ -11,5 +11,53 @@
 $view: '.view-threecol';
 
 #{$view} {
+  .topspan {
+    @include outerRow();
+  }
 
+  .main {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+    background: #fff;
+    border: 1px solid darken($colorGrey2, 5%);
+    clear: both;
+    margin: 0 13px;
+    padding: 20px 0;
+    @include clearfix();
+
+    .col1, .col2, .col3 {
+      display: table-cell;
+      padding: 0 15px;
+    }
+
+    .col1, .col3 {
+      width: 200px;
+    }
+
+    .col1 {
+      padding-left: 0;
+    }
+
+    .col2 {
+      width: 100%;
+
+      .row {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+
+        .column {
+          display: table-cell;
+          vertical-align: top;
+          width: 50%;
+          padding: 15px;
+        }
+      }
+    }
+
+    .col3 {
+
+    }
+  }
 }

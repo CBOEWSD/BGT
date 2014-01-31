@@ -1,6 +1,4 @@
-<div class="widget-hero hero">
-  <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{background}}" alt="" class="background">
-
+<div class="widget-hero copybased">
   <div class="slides">
     {{#each slides}}
     <div class="slide" data-slideid="{{@index}}">
@@ -10,6 +8,19 @@
       <h2>
         {{text}}
       </h2>
+
+      {{#if image}}
+      <img 
+      src="{{image.src}}" 
+      alt="{{#if image.alt}}{{image.alt}}{{else}}{{text}}{{/if}}"
+      class="hideonmobile">
+      {{/if}}
+
+      {{#if description}}
+      <p>
+      	{{{description}}}
+      </p>
+      {{/if}}
 
       {{#if link}}
       <a href="{{link.url}}" title="{{link.text}}" class="link">

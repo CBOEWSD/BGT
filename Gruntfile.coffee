@@ -38,14 +38,6 @@ module.exports = (grunt) ->
         options:
           output: './ui/docs'
 
-    # [CoffeeScript Linting](https://github.com/vojtajina/grunt-coffeelint)
-    coffeelint:
-      app: [
-        '*.coffee',
-        'ui/**/*.coffee',
-        'routes/**/*.coffee'
-      ]
-
     # [Grunt-Qunit-Junit](https://github.com/sbrandwoo/grunt-qunit-junit)
     qunit_junit:
       options:
@@ -88,15 +80,43 @@ module.exports = (grunt) ->
         options:
           logConcurrentOutput: true
 
+    # [Grunt-Har-Gen](https://npmjs.org/package/grunt-har-gen)
+    hargen:
+      qa:
+        options:
+          urls:
+            'cboe_qa.har': 'http://qa-cboe.bgtpartners.com'
+          output: './__benchmarks'
+      dev:
+        options:
+          urls:
+            'cboe_dev.har': 'http://dev-cboe.bgtpartners.com'
+          output: './__benchmarks'
+      local:
+        options:
+          urls:
+            'cboe_local.har': 'http://localhost:3001'
+          output: './__benchmarks'
+
+    # [Grunt-JSBeautifier](https://npmjs.org/package/grunt-jsbeautifier)
+    jsbeautifier:
+      files: ['./pages/**/*.json']
+      options:
+        json:
+          fileTypes: ['.json']
+
   }
 
   # ### Load Grunt Modules
   # [Matchdep](https://github.com/tkellen/node-matchdep) - used to load `grunt-` modules.
   require('matchdep').filterDev('grunt-*').forEach grunt.loadNpmTasks
+  grunt.loadNpmTasks 'grunt-har-gen'
 
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
   grunt.registerTask 'dev', ['docco', 'handlebars']
+  grunt.registerTask 'prod', ['handlebars']
+  grunt.registerTask 'json', ['jsbeautifier']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
 
 

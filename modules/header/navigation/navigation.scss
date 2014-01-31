@@ -18,16 +18,17 @@ $3dsize: 4px;
 
   .menu {
     padding: 0;
+    position: relative;
 
     &>li {
       @include inline-block();
-      position: relative;
 
       &>a {
         @include inline-block();
         position: relative;
         color: #fff;
         padding: 10px 15px;
+        padding: 10px 10px \9;
         text-decoration: none;
         font: {
           weight: 700;
@@ -76,8 +77,11 @@ $3dsize: 4px;
         padding: 15px 0 5px 0;
         width: 550px;
         margin-top: -3px;
-        @include box-shadow(0 -1px 1px rgba(0,0,0,.1));
         left: -5000em;
+
+        border-left: 1px solid darken(#fff, 10%);
+        border-right: 1px solid darken(#fff, 10%);
+        border-bottom: 1px solid darken(#fff, 10%);
 
         &.hasthird {
           width: 800px;
@@ -89,22 +93,24 @@ $3dsize: 4px;
         &>li {
           @include column(6);
 
-          &.menu {
-            li {
-              border-bottom: 1px solid lighten($colorGrey1, 65%);
-              font: {
-                size: .9em;
-              }
-              display:block;
-
-              a {
+          @media screen and (min-width: $screenSmallMax) {
+            &.menu {
+              li {
+                border-bottom: 1px solid lighten($colorGrey1, 65%);
                 font: {
-                  weight: 600;
+                  size: .9em;
                 }
-                color: $colorGrey1;
-                text-decoration: none;
-                display: block;
-                padding: 5px 0;
+                display:block;
+
+                a {
+                  font: {
+                    weight: 400;
+                  }
+                  color: $colorGrey1;
+                  text-decoration: none;
+                  display: block;
+                  padding: 5px 0;
+                }
               }
             }
           }
@@ -116,6 +122,15 @@ $3dsize: 4px;
                 weight: 600;
               }
               margin: 0;
+            }
+
+            ul {
+              li {
+                border-top: 1px solid $colorGrey2;
+                &:first-child {
+                  border-top: none;
+                }
+              }
             }
 
             a {
@@ -169,4 +184,36 @@ $3dsize: 4px;
       }
     }
   }
+
+  @media screen and (max-width: 1000px) and (min-width: $screenSmallMax) {
+    .menu {
+      &>li {
+        &:hover {
+          &>ul {
+            left: -10px;
+          }
+        }
+        &.social {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 850px) and (min-width: $screenSmallMax) {
+    .menu {
+      &>li {
+        & > a {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  /*
+    Mobile abstracted.
+    See `navigation_mobile.scss` for mobile styles
+    */
+
+  @import 'print';
 }

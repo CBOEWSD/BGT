@@ -7,7 +7,9 @@ $el = $('.widget-tv')
 # Check if at least 1 instance of module
 if $el.length > 0
   # Load module
-  require ['/modules/widgets/tv/tv.js'], (tv) ->
+  require [
+    '/modules/widgets/tv/tv.js',
+    '/modules/widgets/tv/embed-1.5.4/embed.js'], (tv) ->
     # Initialize for each
     $el.each ->
       new tv @

@@ -1,15 +1,16 @@
 {
-  "widget": {
-    "classes": ["subwidget"],
-    "title": "Press Release"
-  },
-  "items": [{
-      "link": {
-        "url": "#"
-      },
-      "thumbnail": {
-        "src": "/ui/assets/images/press/feature-320x110.jpg"
-      },
-      "title": "CBOE Holdings Reports November Volume"
+    "widget": {
+        "classes": ["subwidget"],
+        "title": "Press Release"
+    },
+    "items": [{
+        "link": {
+            "url": "#"
+        },
+        "thumbnail": {
+            "src": "/ui/assets/images/press/feature-320x110.jpg",
+            "classes": ["hideonmobile"]
+        },
+        "title": "CBOE Holdings Reports November Volume"
     }]
 }

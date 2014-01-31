@@ -29,4 +29,11 @@ $module: '.quicksearch';
   button[type="submit"] {
     padding-top: 7px; padding-bottom: 7px;
   }
+
+
+  @media screen and (max-width: 900px) {
+    input[type="text"] {
+      width: 75%;
+    }
+  }
 }

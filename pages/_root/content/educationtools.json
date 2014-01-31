@@ -1,34 +1,35 @@
 {
-  "widget": {
-    "title": "Educational Tools",
-    "promo": {
-      "class": "tradestation",
-      "url": "#"
-    }
-  },
-  "items": [{
-      "classes": ["focus"],
-      "link": {
-        "url": "#"
-      },
-      "thumbnail": {
-        "src": "/ui/assets/images/education/cboe.jpg"
-      },
-      "title": "TradeBuilder With Trade Analyzer"
-    },{
-      "link": {
-        "url": "#"
-      },
-      "title": "Virtual Trading Tools"
-    },{
-      "link": {
-        "url": "#"
-      },
-      "title": "Volatility Tools"
-    },{
-      "link": {
-        "url": "#"
-      },
-      "title": "Calculator"
+    "widget": {
+        "title": "Educational Tools",
+        "promo": {
+            "class": "tradestation",
+            "url": "#"
+        }
+    },
+    "items": [{
+        "classes": ["focus"],
+        "link": {
+            "url": "#"
+        },
+        "thumbnail": {
+            "src": "/ui/assets/images/education/cboe.jpg",
+            "classes": ["hideonmobile"]
+        },
+        "title": "TradeBuilder With Trade Analyzer"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "title": "Virtual Trading Tools"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "title": "Volatility Tools"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "title": "Calculator"
     }]
 }

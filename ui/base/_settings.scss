@@ -6,6 +6,7 @@ $fontFamilyBold: "Arial Black", Gadget, sans-serif;
 // Brand Colors
 $colorBlue1: #135fad;
 $colorBlue2: #12b7ed;
+$colorBlue3: #0d335a;
 $colorGrey1: #313538;
 $colorGrey2: #ddd;
 $colorGreen1: #2ca62d;
@@ -24,5 +25,8 @@ $blockGridElements: 12 !default; // Highest number of block grid elements, Maxim
 
 // Primary Media Queries
 $screenSmall: 768px !default;
+$screenSmallMax: ($screenSmall - 1);
 $screenMedium: 1279px !default;
+$screenMediumMax: ($screenMedium - 1);
 $screenXlarge: 1441px !default;
+$screenXlargeMax: ($screenXlarge - 1);

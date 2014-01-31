@@ -11,26 +11,40 @@
 $module: '.snapshot';
 
 #{$module} {
+  h3 {
+    margin: 20px 0;
+  }
+
   .volume {
     margin: 0;
     list-style: none;
     padding: 0;
     @include clearfix();
     display: table;
+    width: 100%;
 
     li {
       display: table-cell;
       text-align: center;
       width: 20%;
       border-left: 1px solid $colorGrey2;
+      vertical-align: bottom;
+      line-height: 1em;
 
       &:first-child {
         border-left: none;
       }
 
+      .before {
+        font: {
+          weight: 700;
+          size: .75em;
+        }
+      }
+
       h5 {
         font: {
-          size: 1em;
+          size: 1.1em;
           weight: 400;
           family: $fontFamilyBold;
         }

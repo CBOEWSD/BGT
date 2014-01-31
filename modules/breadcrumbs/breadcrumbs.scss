@@ -1,0 +1,59 @@
+/*
+  Module: Breadcrumb
+  Description: Listed breadcrumb navigation with flyout on hover. Removed on mobile
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.breadcrumbs';
+
+#{$module} {
+  @include column(12);
+  margin: 20px 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    padding: 0 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      color: $colorBlue1;
+      text-decoration: underline;
+      font: {
+        weight: 700;
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 3px 0 3px 5px;
+        border-color: transparent transparent transparent lighten($colorGrey1, 40%);
+        right: -15px;
+        top: 50%;
+        margin-top: -3px;
+      }
+    }
+    &.active, &:last-child {
+      a {
+        color: $colorGrey1;
+        text-decoration: none;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

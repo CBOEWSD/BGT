@@ -1,9 +1,9 @@
 {
-  "widget": {
-    "title": "CBOE News",
-    "promo": {
-      "class": "tradestation",
-      "url": "#"
+    "widget": {
+        "title": "CBOE News",
+        "promo": {
+            "class": "tradestation",
+            "url": "#"
+        }
     }
-  }
 }

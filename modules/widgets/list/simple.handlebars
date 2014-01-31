@@ -1,6 +1,6 @@
-{{> widgets/widget-title}}
-
 <div class="widget-list simple {{#each this.classes}} {{this}} {{/each}}">
+  {{> widgets/widget-title}}
+
   <ul>
     {{#each items}}
 
@@ -10,12 +10,18 @@
         {{/if}}
 
         {{#if this.thumbnail}}
-          <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{this.thumbnail.src}}" alt="{{this.title}}" class="thumbnail">
+          <img
+            src="/ui/assets/images/placeholders/blank.gif"
+            data-echo="{{this.thumbnail.src}}"
+            alt="{{this.title}}"
+            class="thumbnail {{#each this.thumbnail.classes}} {{this}} {{/each}}">
         {{/if}}
 
+        {{#if this.title}}
         <h2 class="title">
           {{this.title}}
         </h2>
+        {{/if}}
 
         {{#if this.meta}}
         <strong class="meta">

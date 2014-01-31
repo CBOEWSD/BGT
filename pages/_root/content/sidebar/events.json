@@ -1,13 +1,13 @@
 {
-  "widget": {
-    "classes": ["subwidget"],
-    "title": "Events"
-  },
-  "items": [{
-      "link": {
-        "url": "#"
-      },
-      "meta": "December 17th 3:30 CDT",
-      "title": "Webcast: Why are Weeklys the Latest Rage?"
+    "widget": {
+        "classes": ["subwidget"],
+        "title": "Events"
+    },
+    "items": [{
+        "link": {
+            "url": "#"
+        },
+        "meta": "December 17th 3:30 CDT",
+        "title": "Webcast: Why are Weeklys the Latest Rage?"
     }]
 }

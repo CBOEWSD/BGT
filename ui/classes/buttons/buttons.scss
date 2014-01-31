@@ -17,13 +17,32 @@ $class: '.button';
     size: 1em;
     weight: 600;
   }
-  text-shadow: 1px 1px 0 rgba(0,0,0,.3);
   text-decoration: none;
   color: #fff;
   border: none;
   @include box-shadow(1px 1px 0 rgba(0,0,0,.1));
 
+  &:hover {
+    background: lighten($colorBlue1, 10%);
+    text-decoration: none;
+  }
+
   &.green {
     background: $colorGreen1;
+    color: #fff;
+
+      &:hover {
+        color: #fff;
+        background: lighten($colorGreen1, 10%);
+      }
+  }
+
+  &.white {
+    background: #fff;
+    color: $colorBlue1;
+
+      &:hover {
+        background: darken(#fff, 10%);
+      }
   }
 }

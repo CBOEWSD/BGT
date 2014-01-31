@@ -1,8 +1,33 @@
-{{> widgets/widget-title}}
+<div class="widget-tv {{#each classes}} {{this}} {{/each}}">
+  {{> widgets/widget-title}}
 
-<div class="widget-tv">
   <div class="prime">
-    <iframe class="embed" width="560" height="315" src="{{videos.0.embedurl}}" frameborder="0" allowfullscreen></iframe>
+    <!--<object
+      type="application/x-shockwave-flash"
+      id="{{id}}"
+      name="{{id}}"
+      class="LimelightEmbeddedPlayerFlash embed"
+      width="600"
+      height="400"
+      data="http://assets.delvenetworks.com/player/loader.swf">
+      <param
+        name="movie"
+        value="http://assets.delvenetworks.com/player/loader.swf">
+      <param
+        name="wmode"
+        value="window">
+      <param
+        name="allowScriptAccess"
+        value="always">
+      <param
+        name="allowFullScreen"
+        value="true">
+      <param
+        name="flashVars"
+        value="playerForm=MiniPlayer&mediaId={{videos.0.embedurl}}">
+    </object>-->
+
+    <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/video.jpg" alt="">
   </div>
   <ul class="options">
     {{#each videos}}

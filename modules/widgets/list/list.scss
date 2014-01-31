@@ -42,8 +42,6 @@ $module: '.widget-list';
 
       a {
         display: block;
-        color: $colorGrey1;
-        text-decoration: none;
         @include clearfix();
       }
 
@@ -87,6 +85,21 @@ $module: '.widget-list';
     &.four {
       li {
         width: 25%;
+      }
+    }
+
+    @media screen and (max-width: $screenSmallMax) {
+      margin: 0; padding: 0;
+
+      li,
+      &.two li,
+      &.three li,
+      &.four li {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin: 10px 0;
       }
     }
   }

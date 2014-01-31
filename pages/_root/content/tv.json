@@ -1,22 +1,20 @@
 {
-  "widget": {
-    "title": "CBOE TV",
-    "promo": {
-      "class": "tradestation",
-      "url": "#"
-    }
-  },
-  "id": "cboetv-homepage-1",
-  "videos": [{
-    "image": "/ui/assets/images/videos/video-thumb.jpg",
-    "embedurl": "c516d4241cc74da78cf183791c64f874"
+    "widget": {
+        "title": "CBOE TV",
+        "promo": {
+            "class": "tradestation",
+            "url": "#"
+        }
     },
-    {
-    "image": "/ui/assets/images/videos/video-thumb.jpg",
-    "embedurl": "a62cc92bb9134e9da5d34e01b1232a03"
-    },
-    {
-    "image": "/ui/assets/images/videos/video-thumb.jpg",
-    "embedurl": "c516d4241cc74da78cf183791c64f874"
+    "id": "cboetv-homepage-1",
+    "videos": [{
+        "image": "/ui/assets/images/videos/video-thumb.jpg",
+        "embedurl": "c516d4241cc74da78cf183791c64f874"
+    }, {
+        "image": "/ui/assets/images/videos/video-thumb.jpg",
+        "embedurl": "a62cc92bb9134e9da5d34e01b1232a03"
+    }, {
+        "image": "/ui/assets/images/videos/video-thumb.jpg",
+        "embedurl": "c516d4241cc74da78cf183791c64f874"
     }]
 }

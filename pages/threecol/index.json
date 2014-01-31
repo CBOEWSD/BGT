@@ -1,13 +1,13 @@
 {
-  "view": "threecol",
-  "title": "Three Col View",
-  "meta": {
-    "keywords": "some, keywords",
-    "description": "This is a description"
-  },
-  "modules": {
-    "widget1": [{
-      "widgets/hero/hero": "hero.json"
-      }]
-  }
+    "view": "threecol",
+    "title": "Three Col View",
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "modules": {
+        "widget1": [{
+            "widgets/hero/hero": "hero.json"
+        }]
+    }
 }

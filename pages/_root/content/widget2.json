@@ -1,9 +1,9 @@
 {
-  "widget": {
-    "title": "Market Snapshot",
-    "promo": {
-      "class": "tradestation",
-      "url": "#"
+    "widget": {
+        "title": "Market Snapshot",
+        "promo": {
+            "class": "tradestation",
+            "url": "#"
+        }
     }
-  }
 }

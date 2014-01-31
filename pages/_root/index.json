@@ -1,45 +1,66 @@
 {
-    "title": "Home",
-    "meta": {
-        "keywords": "some, keywords",
-        "description": "This is a description"
-    },
-    "modules": {
-        "widget1": [{
-            "widgets/hero/hero": "hero.json"
-        }],
-        "widget2": [{
-            "widgets/snapshot/snapshot": "widget2.json"
-        }],
-        "widget3": [{
-            "widgets/tv/tv": "tv.json"
-        }, {
-            "widgets/list/simple": "options.json"
-        }],
-        "widget4": [{
-            "widgets/list/simple": "blog.json"
-        }, {
-            "widgets/list/simple": "educationtools.json"
-        }],
-        "widget5": [{
-            "widgets/list/simple": "stories.json"
-        }],
-        "sidebar": [{
-            "widgets/widget-title": "sidebar/_config.json"
-        }, {
-            "widgets/list/simple": "sidebar/press.json"
-        }, {
-            "widgets/list/simple": "sidebar/events.json"
-        }, {
-            "widgets/twitter/twitter": "sidebar/twitter.json"
-        }, {
-            "ads/square_300/300": "sidebar/_config.json"
-        }, {
-            "widgets/list/simple": "sidebar/press.json"
-        }, {
-            "widgets/list/simple": "sidebar/events.json"
-        }, {
-            "ads/square_300/300": "sidebar/_config.json"
-        }]
-    }
+   "title":"Home",
+   "meta":{
+      "keywords":"some, keywords",
+      "description":"This is a description"
+   },
+   "placeholders":{
+      "widget1":[
+         {
+            "widgets/hero/hero":"hero.json"
+         }
+      ],
+      "widget2":[
+         {
+            "widgets/snapshot/snapshot":"widget2.json"
+         }
+      ],
+      "widget3":[
+         {
+            "widgets/tv/tv":"tv.json"
+         },
+         {
+            "widgets/list/simple":"options.json"
+         }
+      ],
+      "widget4":[
+         {
+            "widgets/list/simple":"blog.json"
+         },
+         {
+            "widgets/list/simple":"educationtools.json"
+         }
+      ],
+      "widget5":[
+         {
+            "widgets/list/simple":"stories.json"
+         }
+      ],
+      "sidebar":[
+         {
+            "widgets/widget-title":"sidebar/_config.json"
+         },
+         {
+            "widgets/list/simple":"sidebar/press.json"
+         },
+         {
+            "widgets/list/simple":"sidebar/events.json"
+         },
+         {
+            "widgets/twitter/twitter":"sidebar/twitter.json"
+         },
+         {
+            "ads/square_300/300":"sidebar/_config.json"
+         },
+         {
+            "widgets/list/simple":"sidebar/press.json"
+         },
+         {
+            "widgets/list/simple":"sidebar/events.json"
+         },
+         {
+            "ads/square_300/300":"sidebar/_config.json"
+         }
+      ]
+   }
 }

@@ -8,6 +8,7 @@ http = require 'http'
 path = require 'path'
 sass = require 'node-sass'
 coffee = require 'coffee-middleware'
+_ = require 'lodash'
 GLOBAL.exphbs  = require 'express3-handlebars'
 GLOBAL.fs = require 'fs'
 assetManager = require './_application/assets'
@@ -117,61 +118,82 @@ app.engine 'handlebars', exphbs
   ]
 app.set 'view engine', 'handlebars'
 
-# ### Set Middleware
-app.use '/ui', sass.middleware {
-  src: __dirname + '/ui'
-  debug: !isProd
-}
-app.use '/_compiled', sass.middleware {
-  src: __dirname + '/_compiled'
-  debug: !isProd
-}
-app.use '/modules', sass.middleware {
-  src: __dirname + '/modules'
-  debug: !isProd
-}
-app.use '/views', sass.middleware {
-  src: __dirname + '/views'
-  debug: !isProd
-}
-app.use '/ui', coffee {
-  src: __dirname + '/ui'
-  compress: isProd
-  debug: !isProd
-}
-app.use '/_compiled', coffee {
-  src: __dirname + '/_compiled'
-  compress: isProd
-  debug: !isProd
-}
-app.use '/modules', coffee {
-  src: __dirname + '/modules'
-  compress: isProd
-  debug: !isProd
-}
-# ### Set public dir
-app.use '/ui', express.static path.join(__dirname, 'ui')
-app.use '/_compiled', express.static path.join(__dirname, '_compiled')
-app.use '/modules', express.static path.join(__dirname, 'modules')
-app.use '/views', express.static path.join(__dirname, 'views')
 
-app.use express.favicon()
-app.use express.logger('dev')
-app.use express.bodyParser()
-app.use express.methodOverride()
-app.use app.router
 
-# development only
-if 'development' == app.get('env')
-  app.use express.errorHandler()
+# Creat HBS
+hbs = exphbs.create
+  defaultLayout: 'main'
+  layoutsDir:  __dirname + '/views/layouts'
+  partialsDir: [
+    __dirname + '/modules'
+  ]
 
-# Routing paths
-app.get '*', routes.index
+# Load modules
+hbs.loadPartials (err,partials) ->
+  #set middleware to pass through the handlebars instance
+  app.use (req, res, next) ->
+    res.locals.hbs = hbs
+    res.locals.moduleNames = _.keys partials
+    next()
+    return
 
-# Create server, use custom port if specified
-# otherwise use port in package.json
-server = http.createServer(app).listen app.get('port'), ->
-  console.log 'Server listening on port ' + app.get('port')
+  # ### Set Middleware
+  app.use '/ui', sass.middleware {
+    src: __dirname + '/ui'
+    debug: !isProd
+  }
+  app.use '/_compiled', sass.middleware {
+    src: __dirname + '/_compiled'
+    debug: !isProd
+  }
+  app.use '/modules', sass.middleware {
+    src: __dirname + '/modules'
+    debug: !isProd
+  }
+  app.use '/views', sass.middleware {
+    src: __dirname + '/views'
+    debug: !isProd
+  }
+  app.use '/ui', coffee {
+    src: __dirname + '/ui'
+    compress: isProd
+    debug: !isProd
+  }
+  app.use '/_compiled', coffee {
+    src: __dirname + '/_compiled'
+    compress: isProd
+    debug: !isProd
+  }
+  app.use '/modules', coffee {
+    src: __dirname + '/modules'
+    compress: isProd
+    debug: !isProd
+  }
 
-# Start Socket listening
-twitterSocket server
+
+  # ### Set public dir
+  app.use '/ui', express.static path.join(__dirname, 'ui')
+  app.use '/_compiled', express.static path.join(__dirname, '_compiled')
+  app.use '/modules', express.static path.join(__dirname, 'modules')
+  app.use '/views', express.static path.join(__dirname, 'views')
+
+  app.use express.favicon()
+  app.use express.logger('dev')
+  app.use express.bodyParser()
+  app.use express.methodOverride()
+  app.use app.router
+
+  # development only
+  if 'development' == app.get('env')
+    app.use express.errorHandler()
+
+  # Routing paths
+  app.get '*', routes.index
+
+  # Create server, use custom port if specified
+  # otherwise use port in package.json
+  server = http.createServer(app).listen app.get('port'), ->
+    console.log 'Server listening on port ' + app.get('port')
+
+  # Start Socket listening
+  twitterSocket server

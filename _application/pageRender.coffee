@@ -21,7 +21,7 @@ class PageRender
   # namespace issues with this. Sets the initial
   # `folderPath` expectation and calls the next
   # step in the process.
-  constructor: (request, response)->
+  constructor: (request, response, handlebars)->
     pr = @
     req = request
     res = response
@@ -29,6 +29,7 @@ class PageRender
     deferred = q.defer()
 
     pr.page.folderPath = './pages' + req.url
+    pr.page.configPath = './pages/config.json'
     # console.log pr.page
 
     return pr.findFolder()
@@ -62,8 +63,15 @@ class PageRender
           if(err)
             deferred.reject new Error(error)
           else
-            q(new ModuleRender(JSON.parse(content), pr.page.folderPath)).then (modules) ->
-              deferred.resolve _.extend modules, JSON.parse content
+             q(new ModuleRender((JSON.parse content), res.locals.hbs, res.locals.moduleNames,  pr.page.folderPath)).then (modules) ->
+              fs.exists pr.page.configPath, (bool) ->
+                if bool
+                  fs.readFile pr.page.configPath, "utf-8", (err, config) ->
+                    obj = _.extend modules, JSON.parse content
+                    obj = _.extend obj, JSON.parse config
+                    deferred.resolve obj
+                else
+                  deferred.resolve _.extend modules, JSON.parse content
       else
         pr.rootFolder()
 

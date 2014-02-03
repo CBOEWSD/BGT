@@ -22,7 +22,6 @@ $view: '.view-threecol';
     background: #fff;
     border: 1px solid darken($colorGrey2, 5%);
     clear: both;
-    margin: 0 13px;
     padding: 20px 0;
     @include clearfix();
 
@@ -58,6 +57,42 @@ $view: '.view-threecol';
 
     .col3 {
 
+    }
+  }
+
+
+  @media screen and (max-width: 950px) {
+    .main {
+      .col2 {
+        .row {
+          display: block;
+
+          .column {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screenSmallMax) {
+    .main {
+      display: block;
+
+      .col1, .col2, .col3 {
+        display: block;
+        padding: 0 15px;
+        width: 100%;
+      }
+
+      .col2 {
+        .row {
+          .column {
+            padding: 0;
+          }
+        }
+      }
     }
   }
 }

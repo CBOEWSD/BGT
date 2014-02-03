@@ -80,7 +80,7 @@ module.exports = (grunt) ->
         options:
           logConcurrentOutput: true
 
-    #
+    # [Grunt-Har-Gen](https://npmjs.org/package/grunt-har-gen)
     hargen:
       qa:
         options:
@@ -98,6 +98,13 @@ module.exports = (grunt) ->
             'cboe_local.har': 'http://localhost:3001'
           output: './__benchmarks'
 
+    # [Grunt-JSBeautifier](https://npmjs.org/package/grunt-jsbeautifier)
+    jsbeautifier:
+      files: ['./pages/**/*.json']
+      options:
+        json:
+          fileTypes: ['.json']
+
   }
 
   # ### Load Grunt Modules
@@ -109,6 +116,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', ['concurrent:dev']
   grunt.registerTask 'dev', ['docco', 'handlebars']
   grunt.registerTask 'prod', ['handlebars']
+  grunt.registerTask 'json', ['jsbeautifier']
   grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
 
 

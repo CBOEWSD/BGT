@@ -6,7 +6,8 @@
 $ ->
   PubSub.subscribe 'resize', ->
     # Only do this above mobile viewport
-    return false if Response.viewportW() < 768
+    if Response.viewportW() < 768 or $('html').hasClass 'lt-ie9'
+      return false
 
     $('.row').css('display', 'block')
 

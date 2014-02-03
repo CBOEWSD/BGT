@@ -18,4 +18,30 @@ $module: '.advert';
       border: 4px solid #fff;
     }
   }
+  &.full-width {
+    text-align: center;
+    margin: 0 auto;
+    padding: 35px 0 25px;
+    border-top:5px solid #000000;
+    background-color: $colorGrey1; 
+
+    img {
+      display: inline-block; 
+    }  
+  }
+  .container-ad{
+    position: relative;
+    display: inline-block;
+  }
+  .close-ad{
+    font:10px Arial, Helvetica, sans-serif;
+    color:#ffffff;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+  }
 }

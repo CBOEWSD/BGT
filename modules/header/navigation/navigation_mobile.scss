@@ -16,7 +16,7 @@ $width: 70%;
 }
 
 
-@media screen and (max-width: $screenSmall) {
+@media screen and (max-width: $screenSmallMax) {
   #{$module} {
     position: absolute;
     overflow-y: hidden;

@@ -1,5 +1,8 @@
 <!doctype html>
-<html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <title>{{title}} - CBOE</title>
@@ -11,6 +14,9 @@
   <!-- Responsive -->
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
+  <!-- IE/Chrome Compat -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
   {{{renderStyles 'css'}}}
 
   <!--
@@ -20,16 +26,12 @@
   </script>
 
   <!--
-    SHIMS
+    Pre-DOM SHIMS
     These fix issues in legacy browsers where certain
     features are not supported.
   -->
-  <!--[if lt IE 10]>
-  <script src="/ui/classes/shims/ie-lt10.js"></script>
-  <![endif]-->
   <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <script src="/ui/libs/respond/dest/respond.src.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
 
 </head>
@@ -53,6 +55,16 @@
 
   {{{renderScripts 'libs'}}}
   {{{renderScripts 'initCoffee'}}}
+
+
+  <!--
+    Post-DOM SHIMS
+    These fix issues in legacy browsers where certain
+    features are not supported.
+  -->
+  <!--[if lt IE 10]>
+  <script src="/ui/classes/shims/ie-lt10.js" type="text/javascript"></script>
+  <![endif]-->
 
 </body>
 </html>

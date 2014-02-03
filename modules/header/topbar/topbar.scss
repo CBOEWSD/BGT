@@ -36,6 +36,7 @@ $module: '.topbar';
         &.sprite {
           background: url(/modules/header/topbar/assets/sprite.jpg) no-repeat top center;
           text-indent: -5000em;
+          color: rgba(19, 95, 173, 0) !important;
           text-align: left;
           height: 20px;
 
@@ -63,7 +64,7 @@ $module: '.topbar';
     }
   }
 
-  @media screen and (max-width: $screenSmall) {
+  @media screen and (max-width: $screenSmallMax) {
     background: $colorBlue1;
     position: fixed;
     top: 0;
@@ -91,6 +92,7 @@ $module: '.topbar';
           text-align: left;
           background: none;
           text-indent: -5000em;
+          color: rgba(19, 95, 173, 0) !important;
           @include border-radius(0);
           @include box-shadow(none);
         }
@@ -130,4 +132,6 @@ $module: '.topbar';
     }
 
   }
+
+  @import 'print';
 }

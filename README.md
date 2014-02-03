@@ -51,7 +51,7 @@ Code standards are defined in `./.editorconfig` and should be followed at all ti
 
 ### Code Documentation
 
-We are using [Docco](http://jashkenas.github.io/docco/) for annotated documentation. The process of building the documentation is automated by Grunt so will always be up to date locally (compiled = not in source control). The documentation can be read by simply going to `http://<local>/docs/` and browsing using the menu at the top right.
+We are using [Docco](http://jashkenas.github.io/docco/) for annotated documentation. The process of building the documentation is automated by Grunt so will always be up to date locally (compiled = not in source control). The documentation can be read by simply going to `http://<local>/ui/docs/` and browsing using the menu at the top right.
 
 With that said, please make sure to document any code submitted to this project properly and using [Markdown](http://daringfireball.net/projects/markdown/) syntax.
 
@@ -72,8 +72,11 @@ This does a number of things:
 
 * Our bundles are concatinated into single files
 * Assets, including those not bundled, are minified
-* All development logging stypes are disabled
+* All development logging stdout is disabled
 * All debug modes are flagged disabled
+* Variable `window.debug` is set false for client-side
+* Compression is enabled
+* Expiry cache for client-side set
 
 **Note:** Remember to switch back to development env with `export NODE_ENV=development`.
 

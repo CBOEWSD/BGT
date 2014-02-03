@@ -5,7 +5,7 @@ PageRender = require './pageRender.coffee'
 exports.index = (req, res) ->
   return q(new PageRender(req, res)).then (content) ->
     res.locals = content
-    res.render (if (typeof (content.view) isnt 'undefined') then content.view else 'index'),
+    res.render (if (typeof (content.view) isnt 'undefined') then content.view else 'default'),
       {
         helpers:
           renderScripts: renderScripts

@@ -29,7 +29,7 @@ $module: '.widget-tv';
     }
   }
 
-  @media screen and (max-width: $screenSmall) {
+  @media screen and (max-width: $screenSmallMax) {
     .options {
       li {
         float: left;

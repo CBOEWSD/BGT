@@ -1,6 +1,6 @@
 /*
-  View: Homepage
-  Description: Styling for homepage view.
+  View: default
+  Description: Styling for default view.
 */
 
 @import './ui/base/settings';
@@ -8,7 +8,7 @@
 @import './ui/base/_includes/grid';
 @import './ui/base/_includes/clearfix';
 
-$view: '.view-homepage';
+$view: '.view-default';
 
 #{$view} {
 
@@ -44,9 +44,10 @@ $view: '.view-homepage';
 
       &:first-child {
         border-left: none;
-      }
-      &:last-child {
-        border-right: none;
+
+        + .column50 {
+          border-right: none;
+        }
       }
     }
   }
@@ -71,7 +72,7 @@ $view: '.view-homepage';
     }
   }
 
-  @media screen and (max-width: $screenSmall) {
+  @media screen and (max-width: $screenSmallMax) {
     .row {
       display: block;
       padding: 0 10px;

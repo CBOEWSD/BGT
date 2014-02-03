@@ -22,7 +22,8 @@
     "twitter": "~0.2.5",
     "connect-assetmanager": "0.0.28",
     "coffee-script": "~1.6.3",
-    "uglify-js": "~2.4.11"
+    "uglify-js": "~2.4.11",
+    "marked": "~0.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -39,6 +40,7 @@
     "chai": "~1.8.1",
     "webdriverjs": "~0.7.14",
     "grunt-contrib-handlebars": "~0.6.0",
-    "grunt-har-gen": "~0.4.0"
+    "grunt-har-gen": "~0.4.0",
+    "grunt-jsbeautifier": "~0.2.6"
   }
 }

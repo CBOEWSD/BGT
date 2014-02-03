@@ -15,28 +15,10 @@ $3dsize: 6px;
 #{$module} {
   overflow: hidden;
   position: relative;
-  min-height: 300px;
-
-  .background {
-    position: absolute;
-    top: 0; left: $3dsize;
-    z-index: 0;
-    max-width: 800px !important; // exception to responsive scaling
-  }
 
   .slides {
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%;
 
     .slide {
-      background: $colorGreen1;
-      width: 65%;
-      color: #fff;
-      padding: 15px;
-      border-top: $3dsize solid $colorGreen2;
-      border-right: $3dsize solid $colorGreen3;
-      position: relative;
       left: -5000em;
       position: absolute;
 
@@ -44,35 +26,6 @@ $3dsize: 6px;
         position: relative;
         left: 0;
         @include fadeIn(1s);
-      }
-
-      &:before {
-        display: block; content: ""; position: absolute;
-
-        top: -$3dsize;
-        left: 0;
-        border-style: solid;
-        border-width: $3dsize $3dsize 0 0;
-        border-color: $colorGrey2 transparent transparent transparent;
-      }
-
-      h5 {
-        color: $colorGreen2;
-        font: {
-          size: 1em;
-          weight: 600;
-        }
-        text-transform: uppercase;
-        margin: 0;
-      }
-
-      h2 {
-        font: {
-          size: 1.6em;
-          weight: 400;
-        }
-        padding-right: 20px;
-        margin: 10px 0 35px;
       }
 
       .link {
@@ -94,7 +47,6 @@ $3dsize: 6px;
 
     .controls {
       padding: 0; margin: 0; list-style: none;
-
       position: absolute;
       bottom: 17px;
       left: 11px;
@@ -114,19 +66,96 @@ $3dsize: 6px;
     }
   }
 
-  @media screen and (max-width: $screenSmall) {
-    min-height: 0;
+
+  &.hero {
+    min-height: 300px;
 
     .background {
-      position: fixed;
-      top: 200%;
+      position: absolute;
+      top: 0; left: $3dsize;
+      z-index: 0;
+      max-width: 800px !important; // exception to responsive scaling
     }
 
     .slides {
-      position: relative;
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
 
       .slide {
-        width: 100%;
+        background: $colorGreen1;
+        width: 65%;
+        color: #fff;
+        padding: 15px;
+        border-top: $3dsize solid $colorGreen2;
+        border-right: $3dsize solid $colorGreen3;
+
+        &:before {
+          display: block; content: ""; position: absolute;
+
+          top: -$3dsize;
+          left: 0;
+          border-style: solid;
+          border-width: $3dsize $3dsize 0 0;
+          border-color: $colorGrey2 transparent transparent transparent;
+        }
+
+
+        h5 {
+          color: $colorGreen2;
+          font: {
+            size: 1em;
+            weight: 600;
+          }
+          text-transform: uppercase;
+          margin: 0;
+        }
+
+        h2 {
+          font: {
+            size: 1.6em;
+            weight: 400;
+          }
+          padding-right: 20px;
+          margin: 10px 0 35px;
+        }
+      }
+    }
+  }
+
+  &.copybased {
+    .slides {
+      .slide {
+        padding-bottom: 30px;
+      }
+    }
+
+    .controls {
+      li {
+        background: lighten($colorGrey1, 60%);
+
+        &.active {
+          background: $colorGrey1;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screenSmallMax) {
+    &.hero {
+      min-height: 0;
+
+      .background {
+        position: fixed;
+        top: 200%;
+      }
+
+      .slides {
+        position: relative;
+
+        .slide {
+          width: 100%;
+        }
       }
     }
   }

@@ -11,6 +11,7 @@ $classPrefix: '.icon-';
 #{$classPrefix}social {
   background: url(/ui/classes/icons/assets/social.jpg) no-repeat top left;
   text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
   width: 20px;
   height: 20px;
   text-align: left;
@@ -38,6 +39,7 @@ $classPrefix: '.icon-';
 
 #{$classPrefix}logo {
   text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
   text-align: left;
   display: inline-block;
 

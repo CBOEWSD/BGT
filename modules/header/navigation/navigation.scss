@@ -82,7 +82,7 @@ $3dsize: 4px;
       &>ul {
         position: absolute;
         background: #fff;
-        padding: 15px 0 5px 0;
+        padding: 15px 140px 5px;
         width: 100%;
         left: -5000em;
 
@@ -190,11 +190,6 @@ $3dsize: 4px;
   @media screen and (max-width: 1000px) and (min-width: $screenSmallMax) {
     .menu {
       &>li {
-        &:hover {
-          &>ul {
-            left: -10px;
-          }
-        }
         &.social {
           display: none;
         }

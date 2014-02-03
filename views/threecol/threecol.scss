@@ -46,7 +46,7 @@ $view: '.view-threecol';
     .col2 {
       width: 100%;
 
-      .row {
+      .row-2, .row-1 {
         display: table;
         width: 100%;
         table-layout: fixed;
@@ -54,8 +54,15 @@ $view: '.view-threecol';
         .column {
           display: table-cell;
           vertical-align: top;
-          width: 50%;
           padding: 15px;
+        }
+      }
+      .row-1 {
+        width: 50%;
+      }
+      .row-2 {
+        .column {
+          width: 50%;
         }
       }
     }
@@ -69,8 +76,9 @@ $view: '.view-threecol';
   @media screen and (max-width: 950px) {
     .main {
       .col2 {
-        .row {
+        .row-1, .row-2 {
           display: block;
+          width: 100%;
 
           .column {
             display: block;
@@ -92,7 +100,7 @@ $view: '.view-threecol';
       }
 
       .col2 {
-        .row {
+        .row-1, .row-2 {
           .column {
             padding: 0;
           }

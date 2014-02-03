@@ -12,6 +12,7 @@
       "noborder",
       "collapse"
    ],
+   "showad": true,
    "items":[
       {
          "link":{
@@ -53,7 +54,19 @@
          "link":{
             "url":"#"
          },
-         "description":"Pay less to invest with $7.95 online trades at Fidelity."
+         "description":"Get TradeStation FREE until 2014 when you can open an account today."
+      },
+      {
+         "link":{
+            "url":"#"
+         },
+         "description":"Trade options, stocks, futures + forex on a single platform. thinkorswing by TD ameritrade. Advertisement."
+      },
+      {
+         "link":{
+            "url":"#"
+         },
+         "description":"Professional trading solutions for active traders."
       },
       {
          "link":{

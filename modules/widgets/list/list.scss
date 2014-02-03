@@ -5,6 +5,7 @@
 
 @import './ui/base/settings';
 @import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
 @import './ui/base/_includes/clearfix';
 
 $module: '.widget-list';
@@ -101,6 +102,15 @@ $module: '.widget-list';
         padding: 0;
         margin: 10px 0;
       }
+    }
+  }
+
+  &.showad {
+    ul {
+      @include column(8);
+    }
+    .ad {
+      @include column(4);
     }
   }
 

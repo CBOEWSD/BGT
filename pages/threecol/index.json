@@ -26,7 +26,7 @@
                   "widgets/hero/copybased":"featured-products.json"
                },
                {
-                  "ads/square_300/300":"sidebar/_config.json"
+                  "ads/square_300/block":""
                }
             ]
          },

@@ -152,11 +152,25 @@ class Navigation
   # This method adjusts the height of the expander element
   # which reveals the submenu on desktop.
   adjustExpander: (height) ->
+    # If the height is not specified
     if typeof height != 'number'
-      self.log.add 'error', 'adjustExpander: Height not a number', height
-      return false
+      # Check for an existing active item
+      $activeLi = self.$topLis.siblings('.shown');
 
+      # If we have an active item set height to equal it
+      if $activeLi.length > 0
+        height = $('> ul', $activeLi).outerHeight()
+      else
+        self.log.add 'error', 'adjustExpander: Height not a number', height
+        return false
+
+    # Set height for expander
     $('.desktopExpander').css 'height', height
+
+    # On first time subscribe to resize event to change height of
+    # expander on viewport change.
+    if !self.expResize?
+      self.expResize = PubSub.subscribe 'resize', self.adjustExpander
 
   # ## this.mobileToggle
   # Expands and collapses the mobile navigataion.

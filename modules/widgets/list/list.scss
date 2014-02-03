@@ -65,6 +65,23 @@ $module: '.widget-list';
   &.simple {
   }
 
+  &.links {
+    ul {
+      li {
+        border-top: none;
+        padding: 5px 0;
+
+        a {
+          color: $colorBlue1;
+        }
+
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
   &.list-columns {
     li {
       float:left;

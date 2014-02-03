@@ -3,13 +3,13 @@
 <div class="body view-threecol">
   <div class="container">
 
-    <div class="topspan">
+    <section class="topspan">
       {{#each topspan}}
         {{{this}}}
       {{/each}}
-    </div>
+    </section>
 
-    <div class="main">
+    <section class="main">
 
       <div class="col1">
         {{#each col1}}
@@ -41,13 +41,13 @@
         {{/each}}
       </div>
 
-    </div>
+    </section>
 
-    <div class="bottomspan">
+    <section class="bottomspan">
       {{#each bottomspan}}
         {{{this}}}
       {{/each}}
-    </div>
+    </section>
 
     {{> ads/span/slim}}
 

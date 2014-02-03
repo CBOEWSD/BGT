@@ -146,6 +146,12 @@
         {
           "widgets/list/links":"related.json"
         }
+      ],
+
+      "bottomspan": [
+        {
+          "widgets/widget":"bottomspan/widget.json"
+        }
       ]
    }
 }

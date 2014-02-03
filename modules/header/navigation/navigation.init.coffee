@@ -120,10 +120,9 @@ class Navigation
   hasSub: ($uls) ->
     $uls.parents('li').addClass('hasSubMenu')
 
-
-
-
-
+  # ## this.clickTopLi
+  # Desktop interaction with top menu item, this will expand
+  # the navigation pushing the page down.
   clickTopLi: (e, target) ->
     # If we're in mobile ignore this event
     return false if Response.viewportW() < 768
@@ -134,18 +133,30 @@ class Navigation
     return true unless $subUl.length > 0
     e.preventDefault()
 
-    self.$topLis.removeClass 'shown'
-    $parentLi.addClass 'shown'
+    # If click is the already shown nav we hide the expander
+    if $parentLi.hasClass 'shown'
+      self.adjustExpander 0
+      # Allow time for the animation to finish before we
+      # remove the shown state from this item
+      setTimeout ->
+        $parentLi.removeClass 'shown'
+      , 500
+    # Else we close the active item and show the next item
+    else
+      self.$topLis.removeClass 'shown'
+      $parentLi.addClass 'shown'
 
-    self.adjustExpander $subUl.outerHeight()
+      self.adjustExpander $subUl.outerHeight()
 
+  # ## this.adjustExpander
+  # This method adjusts the height of the expander element
+  # which reveals the submenu on desktop.
   adjustExpander: (height) ->
     if typeof height != 'number'
       self.log.add 'error', 'adjustExpander: Height not a number', height
       return false
 
     $('.desktopExpander').css 'height', height
-
 
   # ## this.mobileToggle
   # Expands and collapses the mobile navigataion.

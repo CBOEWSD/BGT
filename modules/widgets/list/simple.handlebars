@@ -1,4 +1,4 @@
-<div class="widget-list simple {{#each this.classes}} {{this}} {{/each}}">
+<div class="widget-list simple {{#each this.classes}} {{this}} {{/each}} {{#if showad}} showad {{/if}}">
   {{> widgets/widget-title}}
 
   <ul>
@@ -42,4 +42,10 @@
 
     {{/each}}
   </ul>
+
+  {{#if showad}}
+    <div class="ad">
+      {{> ads/square_300/block}}
+    </div>
+  {{/if}}
 </div>

@@ -172,8 +172,6 @@ class Navigation
       $active = self.$topLis.siblings('.shown')
       self.clickTopLi e, $active.children('a')
 
-
-
   # ## this.clickTopLi
   # Desktop interaction with top menu item, this will expand
   # the navigation pushing the page down.
@@ -217,6 +215,10 @@ class Navigation
       else
         self.log.add 'error', 'adjustExpander: Height not a number', height
         return false
+
+    # If we are opening we will want to add some space at the bottom
+    if height > 0
+      height = height + 30
 
     # Set height for expander
     self.$expander.css 'height', height

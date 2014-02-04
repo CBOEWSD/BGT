@@ -28,6 +28,7 @@ $3dsize: 4px;
       @include outerRow();
       height: 100%;
       overflow: hidden;
+      pointer-events: none;
 
       div {
         position: absolute;
@@ -47,6 +48,10 @@ $3dsize: 4px;
           left: 50%;
         }
       }
+    }
+
+    @media screen and (max-width: $screenSmallMax) {
+      display: none;
     }
   }
 

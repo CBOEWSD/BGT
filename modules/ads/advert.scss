@@ -18,6 +18,9 @@ $module: '.advert';
       border: 4px solid #fff;
     }
   }
+  &.tall {
+    margin: 15px 0;
+  }
   &.full-width {
     text-align: center;
     margin: 0 auto;

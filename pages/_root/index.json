@@ -50,7 +50,7 @@
             "widgets/twitter/twitter":"sidebar/twitter.json"
          },
          {
-            "ads/square_300/300":"sidebar/_config.json"
+            "ads/square_300/block":"sidebar/_config.json"
          },
          {
             "widgets/list/simple":"sidebar/press.json"
@@ -59,7 +59,7 @@
             "widgets/list/simple":"sidebar/events.json"
          },
          {
-            "ads/square_300/300":"sidebar/_config.json"
+            "ads/square_300/block":"sidebar/_config.json"
          }
       ]
    }

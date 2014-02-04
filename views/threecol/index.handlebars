@@ -1,15 +1,19 @@
+<div class="hideonmobile">
+  {{> ads/span/slim-dark}}
+</div>
+
 {{> header/header}}
 
 <div class="body view-threecol">
   <div class="container">
 
-    <div class="topspan">
+    <section class="topspan">
       {{#each topspan}}
         {{{this}}}
       {{/each}}
-    </div>
+    </section>
 
-    <div class="main">
+    <section class="main">
 
       <div class="col1">
         {{#each col1}}
@@ -21,7 +25,7 @@
         {{#each col2}}
           {{#each this}}
 
-            <div class="{{@key}}">
+            <div class="{{@key}}-{{this.length}}">
               {{#each this}}
                 <div class="column">
                   {{{this}}}
@@ -36,10 +40,18 @@
       </div>
 
       <div class="col3">
-        col3
+        {{#each col3}}
+          {{{this}}}
+        {{/each}}
       </div>
 
-    </div>
+    </section>
+
+    <section class="bottomspan">
+      {{#each bottomspan}}
+        {{{this}}}
+      {{/each}}
+    </section>
 
     {{> ads/span/slim}}
 

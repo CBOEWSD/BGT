@@ -15,6 +15,11 @@ $view: '.view-threecol';
     @include outerRow();
   }
 
+  .bottomspan {
+    @include outerRow();
+    margin-top: 35px;
+  }
+
   .main {
     display: table;
     table-layout:fixed;
@@ -22,7 +27,6 @@ $view: '.view-threecol';
     background: #fff;
     border: 1px solid darken($colorGrey2, 5%);
     clear: both;
-    margin: 0 13px;
     padding: 20px 0;
     @include clearfix();
 
@@ -42,7 +46,7 @@ $view: '.view-threecol';
     .col2 {
       width: 100%;
 
-      .row {
+      .row-2, .row-1 {
         display: table;
         width: 100%;
         table-layout: fixed;
@@ -50,14 +54,58 @@ $view: '.view-threecol';
         .column {
           display: table-cell;
           vertical-align: top;
-          width: 50%;
           padding: 15px;
+        }
+      }
+      .row-1 {
+        width: 50%;
+      }
+      .row-2 {
+        .column {
+          width: 50%;
         }
       }
     }
 
     .col3 {
 
+    }
+  }
+
+
+  @media screen and (max-width: 950px) {
+    .main {
+      .col2 {
+        .row-1, .row-2 {
+          display: block;
+          width: 100%;
+
+          .column {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screenSmallMax) {
+    .main {
+      display: block;
+
+      .col1, .col2, .col3 {
+        display: block;
+        padding: 0 15px;
+        width: 100%;
+      }
+
+      .col2 {
+        .row-1, .row-2 {
+          .column {
+            padding: 0;
+          }
+        }
+      }
     }
   }
 }

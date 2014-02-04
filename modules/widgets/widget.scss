@@ -44,6 +44,24 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
     height:4px;
   }
 
+  h2 {
+    a {
+      display: block;
+
+      &:after {
+        display: inline-block;
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 4px 0 4px 8px;
+        border-color: transparent transparent transparent $colorGrey1;
+        vertical-align: middle;
+        margin: -3px 0 0 7px;
+      }
+    }
+  }
+
   h3 {
     font: {
       size: 1.3em;

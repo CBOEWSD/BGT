@@ -62,6 +62,8 @@ Repository Issue Track - For general development discussion and/or tracking.
 
 ## Production vs Development
 
+**Production mode is purely for demonstration purpose.**
+
 This project is setup in such a way that a production configuration can be mirrored quite simply by flagging your `NODE_ENV` variable to `production`. This can be done by entering the following in your console:
 
 ```

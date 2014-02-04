@@ -15,6 +15,7 @@ class Navigation
     @.$topLis = $ '.menu > li', $el
     @.$subUls = $ '> ul', @.$topLis
     @.$navIcon = $ '.topbar .navicon'
+    @.$expander = $ '.desktopExpander'
 
     # Swipe base settings
     @.swipeSettings = {
@@ -32,8 +33,11 @@ class Navigation
     # Bind up events with methods
     @.bind()
 
-    #Add class for subUl parents
+    # Add class for subUl parents
     @.hasSub(@.$subUls)
+
+    # Add controls for expander (desktop)
+    @.expanderControls.setup()
 
   # ## this.log
   # Add local instance of logging to this module.
@@ -120,6 +124,56 @@ class Navigation
   hasSub: ($uls) ->
     $uls.parents('li').addClass('hasSubMenu')
 
+  # ## this.expanderControls
+  # Adds the navigation (desktop) controls for the expander
+  # based navigation. [left/right/close]
+  expanderControls:
+    # ### this.expanderControls.setup
+    # This method is initially called to add the controls
+    # on DOM ready.
+    setup: () ->
+      self.$controls = $('<div/>').addClass('controls')
+      self.$controls.$left = $('<div/>').addClass('left').text('Left')
+      self.$controls.$right = $('<div/>').addClass('right').text('Right')
+      self.$controls.$close = $('<div/>').addClass('close').text('Close')
+
+      # Bind click events
+      self.$controls.$left.bind 'click', this.left
+      self.$controls.$right.bind 'click', this.right
+      self.$controls.$close.bind 'click', this.close
+
+      self.$controls.append(self.$controls.$left, self.$controls.$right, self.$controls.$close)
+      self.$expander.append(self.$controls)
+
+    # ### this.expanderControls.left
+    left: (e) ->
+      $menus = self.$topLis.siblings('.hasSubMenu')
+      $active = $menus.siblings('.shown')
+      count = $menus.length-1
+      index = $menus.index $active
+      next = if index-1 < 0 then count else index-1
+
+      # Select the previous item and pass it to the `this.clickTopLi` method
+      self.clickTopLi e, $menus.eq(next).children('a')
+
+    # ### this.expanderControls.right
+    right: (e) ->
+      $menus = self.$topLis.siblings('.hasSubMenu')
+      $active = $menus.siblings('.shown')
+      count = $menus.length-1
+      index = $menus.index $active
+      next = if index+1 > count then 0 else index+1
+
+      # Select the next item and pass it to the `this.clickTopLi` method
+      self.clickTopLi e, $menus.eq(next).children('a')
+
+    # ### this.expanderControls.close
+    close: (e) ->
+      $active = self.$topLis.siblings('.shown')
+      self.clickTopLi e, $active.children('a')
+
+
+
   # ## this.clickTopLi
   # Desktop interaction with top menu item, this will expand
   # the navigation pushing the page down.
@@ -165,7 +219,7 @@ class Navigation
         return false
 
     # Set height for expander
-    $('.desktopExpander').css 'height', height
+    self.$expander.css 'height', height
 
     # On first time subscribe to resize event to change height of
     # expander on viewport change.

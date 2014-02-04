@@ -22,6 +22,32 @@ $3dsize: 4px;
     @include transition(ease-in-out height .5s);
     background: #fff;
     width: 100%;
+
+    .controls {
+      position: relative;
+      @include outerRow();
+      height: 100%;
+      overflow: hidden;
+
+      div {
+        position: absolute;
+        display: block;
+        z-index: 1000;
+
+        &.left {
+          left: 0;
+          top: 50%;
+        }
+        &.right {
+          right: 0;
+          top: 50%;
+        }
+        &.close {
+          bottom: 0;
+          left: 50%;
+        }
+      }
+    }
   }
 
   .menu {

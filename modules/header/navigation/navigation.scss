@@ -5,6 +5,7 @@
 
 @import './ui/base/settings';
 @import './ui/base/_includes/grid';
+@import './ui/base/_includes/animation/fadein';
 @import './ui/base/_includes/compass/css3';
 
 $module: '.navigation';
@@ -104,6 +105,7 @@ $3dsize: 4px;
 
         & > ul {
           left: 0;
+          @include fadeIn(.3s);
         }
       }
 

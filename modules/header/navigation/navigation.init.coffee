@@ -137,6 +137,8 @@ class Navigation
       self.$controls.$right = $('<div/>').addClass('right').text('Right')
       self.$controls.$close = $('<div/>').addClass('close').text('Close')
 
+      self.log.add 'notice', 'expanderControls.setup: Created controls', self.$controls
+
       # Bind click events
       self.$controls.$left.bind 'click', this.left
       self.$controls.$right.bind 'click', this.right

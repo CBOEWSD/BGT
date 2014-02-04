@@ -18,6 +18,10 @@
 
   @mixin outerRow() {
     width: $rowWidth; max-width: 100%; min-width: $screenSmall; margin: 0 auto; @include clearfixs;
+    @media screen and (max-width: $screenSmall - 1) {
+      min-width: 0px;
+      width: 100%;
+    }
   }
 
   // Inner row mixin for nested rows, must be a child of an outer-row element. $behavior can be 'collapse' to get rid of margins

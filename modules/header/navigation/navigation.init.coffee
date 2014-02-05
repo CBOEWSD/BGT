@@ -223,7 +223,7 @@ class Navigation
       height = height + 30
 
     # Set height for expander
-    self.$expander.css 'height', height
+    self.$expander.animate {'height', height}, 500
 
     # On first time subscribe to resize event to change height of
     # expander on viewport change.

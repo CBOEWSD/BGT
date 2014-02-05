@@ -19,8 +19,9 @@ $3dsize: 4px;
   overflow: hidden;
 
   .desktopExpander {
-    height: 0;
-    @include transition(ease-in-out height .5s);
+    height: 1000px;
+    max-height: 0;
+    @include transition(ease-in-out max-height .5s);
     background: #fff;
     width: 100%;
     overflow: hidden;

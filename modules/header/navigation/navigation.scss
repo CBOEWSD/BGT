@@ -23,12 +23,21 @@ $3dsize: 4px;
     @include transition(ease-in-out height .5s);
     background: #fff;
     width: 100%;
+    overflow: hidden;
+
+    &:after {
+      display: block; content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: $3dsize;
+      background: #ccc;
+    }
 
     .controls {
       position: relative;
       @include outerRow();
       height: 100%;
-      overflow: hidden;
       background:none !important;
       pointer-events: none;
 
@@ -52,6 +61,38 @@ $3dsize: 4px;
         &.close {
           bottom: 0;
           left: 50%;
+          background: $colorBlue1;
+          border-bottom: $3dsize solid $colorBlue2;
+          padding: 3px 10px;
+
+          span {
+            vertical-align: middle;
+            margin-top: -2px;
+          }
+
+          &:before {
+            display: block; content: "";
+            position: absolute;
+            bottom: -$3dsize;
+            left: -$3dsize;
+            height: 0;
+            width: 0;
+            border-style: solid;
+            border-width: 0 0 #{$3dsize} #{$3dsize};
+            border-color: transparent transparent $colorBlue2 transparent;
+          }
+
+          &:after {
+            display: block; content: "";
+            position: absolute;
+            bottom: -$3dsize;
+            right: 0;
+            height: 0;
+            width: 0;
+            border-style: solid;
+            border-width: 0 0 #{$3dsize} #{$3dsize};
+            border-color: transparent transparent #ccc transparent;
+          }
         }
       }
     }

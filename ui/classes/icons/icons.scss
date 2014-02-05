@@ -44,18 +44,21 @@ $classPrefix: '.icon-';
   display: inline-block;
 
   &.tradestation {
-    background: url(/ui/classes/icons/assets/logo-tradestation.jpg) no-repeat top left;
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -180px;
     width: 83px;
     height: 16px;
   }
   &.optionshub {
-    background: url(/ui/classes/icons/assets/logo-cboe_options_hub.jpg) no-repeat top left;
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -128px;
     width: 98px;
     height: 27px;
   }
 
   &.cboe {
-    background: url(/ui/classes/icons/assets/logo.png) no-repeat center center;
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -78px;
     width: 73px;
     height: 26px;
   }

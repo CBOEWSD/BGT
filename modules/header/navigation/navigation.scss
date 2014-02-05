@@ -65,6 +65,15 @@ $3dsize: 4px;
           border-bottom: $3dsize solid $colorBlue2;
           padding: 3px 10px;
 
+          &:hover {
+            background: $colorRed1;
+            border-bottom: $3dsize solid lighten($colorRed1, 25%);
+
+            &:before {
+              border-color: transparent transparent lighten($colorRed1, 25%) transparent;
+            }
+          }
+
           span {
             vertical-align: middle;
             margin-top: -2px;

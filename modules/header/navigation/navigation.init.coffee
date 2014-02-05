@@ -221,9 +221,10 @@ class Navigation
     # If we are opening we will want to add some space at the bottom
     if height > 0
       height = height + 30
+      self.$expander.css('height', height)
 
     # Set height for expander
-    self.$expander.css 'max-height', height
+    self.$expander.css('max-height', height)
 
     # On first time subscribe to resize event to change height of
     # expander on viewport change.

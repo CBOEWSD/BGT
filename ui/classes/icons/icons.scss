@@ -60,3 +60,34 @@ $classPrefix: '.icon-';
     height: 26px;
   }
 }
+
+#{$classPrefix}arrows {
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+  text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
+  text-align: left;
+  display: inline-block;
+  width: 23px;
+  height: 44px;
+
+  &.right {
+    background-position: 0 0;
+  }
+  &.left {
+    background-position: -23px 0;
+  }
+}
+
+#{$classPrefix}smallarrows {
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+  text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
+  text-align: left;
+  display: inline-block;
+  width: 13px;
+  height: 9px;
+
+  &.up {
+    background-position: -17px -51px;
+  }
+}

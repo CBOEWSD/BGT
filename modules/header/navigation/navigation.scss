@@ -42,10 +42,12 @@ $3dsize: 4px;
         &.left {
           left: 0;
           top: 50%;
+          margin-top: -22px;
         }
         &.right {
           right: 0;
           top: 50%;
+          margin-top: -22px;
         }
         &.close {
           bottom: 0;

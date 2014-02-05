@@ -133,8 +133,8 @@ class Navigation
     # on DOM ready.
     setup: () ->
       self.$controls = $('<div/>').addClass('controls')
-      self.$controls.$left = $('<div/>').addClass('left').text('Left')
-      self.$controls.$right = $('<div/>').addClass('right').text('Right')
+      self.$controls.$left = $('<div/>').addClass('icon-arrows left').text('Left')
+      self.$controls.$right = $('<div/>').addClass('icon-arrows right').text('Right')
       self.$controls.$close = $('<div/>').addClass('close').text('Close')
 
       self.log.add 'notice', 'expanderControls.setup: Created controls', self.$controls

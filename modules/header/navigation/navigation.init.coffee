@@ -132,6 +132,20 @@ class Navigation
     # This method is initially called to add the controls
     # on DOM ready.
     setup: () ->
+      this.swipe()
+      this.create()
+
+    # ### this.expanderControls.swipe
+    swipe: (e, phase, direction, distance, duration, fingerCount) ->
+      if phase == 'end'
+        if distance > 50
+          if direction == 'left'
+            self.$controls.$right.trigger 'click'
+          else if direction == 'right'
+            self.$controls.$left.trigger 'click'
+
+    # ### this.expanderControls.create
+    create: () ->
       self.$controls = $('<div/>').addClass('controls')
       self.$controls.$left = $('<div/>').addClass('icon-arrows left').text('Left')
       self.$controls.$right = $('<div/>').addClass('icon-arrows right').text('Right')
@@ -318,8 +332,9 @@ class Navigation
   # ## this.swipeTopUl
   # On touch start begin moving the selected element
   swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
-    # If we're in desktop ignore this event
-    return false if Response.viewportW() > 767
+    # If we're in desktop pass to expander controls
+    if Response.viewportW() > 767
+      return self.expanderControls.swipe(e, phase, direction, distance, duration, fingerCount)
 
     # Prevent bubble
     e.stopPropagation()

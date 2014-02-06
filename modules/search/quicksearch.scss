@@ -30,6 +30,16 @@ $module: '.quicksearch';
     padding-top: 7px; padding-bottom: 7px;
   }
 
+  .gsc-control-cse, .gsc-control-cse-en {
+    padding: 0;
+    background: none;
+    border: none;
+
+    .gsc-results-wrapper-overlay {
+      text-align: left;
+    }
+  }
+
 
   @media screen and (max-width: 900px) {
     input[type="text"] {

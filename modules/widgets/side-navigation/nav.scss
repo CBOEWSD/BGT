@@ -79,6 +79,7 @@ $pullSide: 6px;
         &>a {
           background: $colorBlue2;
           padding-right: 40px;
+          margin-left: 0;
 
           &:after, &:before {
             display: none;

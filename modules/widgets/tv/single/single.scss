@@ -25,6 +25,10 @@ $module: '.widget-tv.single';
         width: 60%;
         .wrapper {
           border: 15px solid lighten($colorGrey2, 5%);
+
+          img {
+            width: 100%;
+          }
         }
       }
 

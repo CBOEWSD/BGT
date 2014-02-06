@@ -46,7 +46,7 @@ $view: '.view-threecol';
     .col2 {
       width: 100%;
 
-      .row-2, .row-1 {
+      .twocolrow-2, .twocolrow-1 {
         display: table;
         width: 100%;
         table-layout: fixed;
@@ -57,10 +57,10 @@ $view: '.view-threecol';
           padding: 15px;
         }
       }
-      .row-1 {
+      .twocolrow-1 {
         width: 50%;
       }
-      .row-2 {
+      .twocolrow-2 {
         .column {
           width: 50%;
         }
@@ -76,7 +76,7 @@ $view: '.view-threecol';
   @media screen and (max-width: 950px) {
     .main {
       .col2 {
-        .row-1, .row-2 {
+        .twocolrow-1, .twocolrow-2 {
           display: block;
           width: 100%;
 
@@ -100,7 +100,7 @@ $view: '.view-threecol';
       }
 
       .col2 {
-        .row-1, .row-2 {
+        .twocolrow-1, .twocolrow-2 {
           .column {
             padding: 0;
           }

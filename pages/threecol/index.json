@@ -21,7 +21,7 @@
             "widgets/content/content":"intro.md"
          },
          {
-            "row":[
+            "twocolrow":[
                {
                   "widgets/hero/copybased":"featured-products.json"
                },
@@ -31,7 +31,7 @@
             ]
          },
          {
-            "row":[
+            "twocolrow":[
                {
                   "widgets/widget":{
                      "classes":[
@@ -55,7 +55,7 @@
             ]
          },
          {
-            "row":[
+            "twocolrow":[
                {
                   "widgets/widget":{
                      "classes":[
@@ -79,7 +79,7 @@
             ]
          },
          {
-            "row":[
+            "twocolrow":[
                {
                   "widgets/widget":{
                      "classes":[
@@ -103,7 +103,7 @@
             ]
          },
          {
-            "row":[
+            "twocolrow":[
                {
                   "widgets/widget":{
                      "classes":[
@@ -127,7 +127,7 @@
             ]
          },
          {
-            "row":[
+            "twocolrow":[
                {
                   "widgets/widget":{
                      "classes":[

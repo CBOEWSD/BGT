@@ -1,0 +1,61 @@
+/*
+  Module: TV Widget .single
+  Description: Singlular version of CBOE video.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/responsiveembed';
+
+$module: '.widget-tv.single';
+
+#{$module} {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+
+  .tab {
+    &>div {
+      vertical-align: top;
+      display: table-cell;
+
+      &.video {
+        width: 60%;
+        .wrapper {
+          border: 15px solid lighten($colorGrey2, 5%);
+        }
+      }
+
+      &.copy {
+        padding-left: 20px;
+        width: 40%;
+
+        h1, h2, h3, h4, h5 {
+          color: $colorBlue1;
+          margin: 0 0 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .tab {
+      display: block;
+
+      &>div {
+        display: block;
+
+        &.video, &.copy {
+          width: 100%;
+        }
+
+        &.copy {
+          margin: 15px 0 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

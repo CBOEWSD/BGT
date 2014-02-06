@@ -38,7 +38,7 @@
                         "noborders"
                      ],
                      "content":{
-                        "widgets/content/content":"boxes/minis.md"
+                        "widgets/tv/single/single":"box1/video.json"
                      }
                   }
                }
@@ -52,7 +52,7 @@
                         "noborders"
                      ],
                      "content":{
-                        "widgets/content/content":"boxes/minis.md"
+                        "widgets/content/content":"box2/content.md"
                      }
                   }
                }

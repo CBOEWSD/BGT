@@ -154,9 +154,9 @@ class Navigation
       self.log.add 'notice', 'expanderControls.setup: Created controls', self.$controls
 
       # Bind click events
-      self.$controls.$left.bind 'click touchend', this.left
-      self.$controls.$right.bind 'click touchend', this.right
-      self.$controls.$close.bind 'click touchend', this.close
+      self.$controls.$left.bind 'click touchstart', this.left
+      self.$controls.$right.bind 'click touchstart', this.right
+      self.$controls.$close.bind 'click touchstart', this.close
 
       self.$controls.append(self.$controls.$left, self.$controls.$right, self.$controls.$close)
       self.$expander.append(self.$controls)

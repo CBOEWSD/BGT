@@ -70,4 +70,52 @@ $pullSide: 6px;
       }
     }
   }
+
+  @media screen and (max-width: $screenSmallMax) {
+    &>ul {
+      &>li {
+        &>a {
+          background: $colorBlue2;
+          padding-right: 40px;
+
+          &:after, &:before {
+            display: none;
+          }
+
+          &:after {
+            display: block;
+            position: absolute;
+            margin-left: -30px;
+            margin-top: -10px;
+            content: '+';
+            top: 50%;
+            height: 20px;
+            width: 20px;
+            border: none;
+            background: #fff;
+            color: $colorBlue2;
+            text-align: center;
+            line-height: 20px;
+          }
+        }
+
+        &.expanded {
+          &>a {
+            &:after {
+              content: '-';
+            }
+          }
+
+          ul {
+            max-height: none;
+          }
+        }
+
+        ul {
+          max-height: 0;
+          overflow: hidden;
+        }
+      }
+    }
+  }
 }

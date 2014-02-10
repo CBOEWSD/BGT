@@ -1,7 +1,9 @@
-# # Collapse Class
-# This class allows for an element to be collapsed down
-# to only show a `expander` button on mobile.
-# This is useful for saving valuable viewport real estate.
+###
+  # Collapse Class
+  This class allows for an element to be collapsed down
+  to only show a `expander` button on mobile.
+  This is useful for saving valuable viewport real estate.
+###
 
 $ ->
   # Collection of elements with collapse class

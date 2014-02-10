@@ -1,6 +1,8 @@
-# # console.log
-# Fix for browsers with lack of support for
-# the console object.
+###
+  # console.log
+  Fix for browsers with lack of support for
+  the console object.
+###
 
 # Empty method wrapper
 ->

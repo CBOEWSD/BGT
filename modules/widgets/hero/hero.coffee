@@ -1,6 +1,9 @@
 class WidgetHero
   self = {}
 
+  ###
+    ## Constructor
+  ###
   constructor: ($, el, timer) ->
     @.$el = $ el
 
@@ -25,15 +28,19 @@ class WidgetHero
 
     @log.add 'notification', 'Widget constructed.', @
 
-  # ## this.log
-  # Add local instance of logging to this module.
-  # Can be called with:
-  # ``` @log.add 'notification', 'message...', @ ```
+  ###
+    ## this.log
+    Add local instance of logging to this module.
+    Can be called with:
+    ``` @log.add 'notification', 'message...', @ ```
+  ###
   log: new LogHandler 'WidgetHero'
 
-  # ## this.createControls
-  # Method is called on initialization to create control
-  # elements - a list based menu - and bind up click events
+  ###
+    ## this.createControls
+    Method is called on initialization to create control
+    elements - a list based menu - and bind up click events
+  ###
   createControls: ->
     # Create controls element
     self.$controls = $('<ul />').addClass 'controls'
@@ -54,11 +61,13 @@ class WidgetHero
     # Set binds
     self.$controls.$ind.bind 'click', self.controlClick
 
-  # ## this.controlClick
-  # Called on click of an individual control item
-  # from the `this.$controls.$ind` group.
-  # Method will grab the index of clicked item and
-  # pass that through to the `this.showSlide` method.
+  ###
+    ## this.controlClick
+    Called on click of an individual control item
+    from the `this.$controls.$ind` group.
+    Method will grab the index of clicked item and
+    pass that through to the `this.showSlide` method.
+  ###
   controlClick: (e) ->
     self.log.add 'notification', 'Slide control clicked.', @
 
@@ -68,10 +77,12 @@ class WidgetHero
     # Pass index to showSlide method
     self.showSlide $('li', self.$controls).index(@)
 
-  # ## this.showSlide
-  # Given an index this method will disable any currently
-  # active slide by removing `active` class and enable the
-  # given index slide.
+  ###
+    ## this.showSlide
+    Given an index this method will disable any currently
+    active slide by removing `active` class and enable the
+    given index slide.
+  ###
   showSlide: (index) ->
     $next = $(self.$slides.get(index))
     $nextControl = $(self.$controls.$ind.get(index))
@@ -86,10 +97,12 @@ class WidgetHero
     $next.addClass 'active'
     $nextControl.addClass 'active'
 
-  # ## this.nextSlide
-  # Finds next slide element to be shown in order of index.
-  # If currently at last element then returns to start.
-  # Returns slide index.
+  ###
+    ## this.nextSlide
+    Finds next slide element to be shown in order of index.
+    If currently at last element then returns to start.
+    Returns slide index.
+  ###
   nextSlide: ->
     index = {
       current: self.$slides.filter('.active').index()
@@ -108,8 +121,10 @@ class WidgetHero
 
     return index.next
 
-  # ## this.automate
-  # A timeout triggered event switching to the next slide.
+  ###
+    ## this.automate
+    A timeout triggered event switching to the next slide.
+  ###
   automate: (time) ->
     # Check if timeout set, if not default to 4s
     self.time = if typeof time == 'number' then time else false
@@ -122,8 +137,10 @@ class WidgetHero
     self.$el.mouseover self.pauseTimer
     self.$el.mouseout self.startTimer
 
-  # ## this.startTimer
-  # Called on construction and on mouseout events.
+  ###
+    ## this.startTimer
+    Called on construction and on mouseout events.
+  ###
   startTimer: () ->
     # Rotate slides based on `time` setting
     self.timer = setInterval ->
@@ -131,8 +148,10 @@ class WidgetHero
       self.showSlide self.nextSlide()
     , self.time
 
-  # ## this.pauseTimer
-  # Pauses timer on hover (mouseover) events.
+  ###
+    ## this.pauseTimer
+    Pauses timer on hover (mouseover) events.
+  ###
   pauseTimer: () ->
     window.clearInterval self.timer
 

@@ -1,11 +1,15 @@
-# # Header
-# Contains basic bindings for header module.
-# Simple bindings such as the top search binding on mobile.
+###
+# Header
+Contains basic bindings for header module.
+Simple bindings such as the top search binding on mobile.
+###
 
 class Header
   self = {}
 
-  # ## Constructor
+  ###
+  ## Constructor
+  ###
   constructor: () ->
     # Log: construction event
     @log.add 'notification', 'Constructed.', @
@@ -20,10 +24,12 @@ class Header
     # Bind mobile toggle
     @.$topSearchExpander.click @.toggleTopSearch
 
-  # ## this.log
-  # Add local instance of logging to this module.
-  # Can be called with:
-  # ``` @log.add 'notification', 'message...', @ ```
+  ###
+  ## this.log
+  Add local instance of logging to this module.
+  Can be called with:
+  ``` @log.add 'notification', 'message...', @ ```
+  ###
   log: new LogHandler 'Header'
 
   # ## this.toggleTopSearch
@@ -35,5 +41,7 @@ class Header
     # Log: Clicked event fired.
     self.log.add 'notification', 'Top search toggled.', self.$topSearch
 
-# ### Init
+###
+## Init
+###
 header = new Header

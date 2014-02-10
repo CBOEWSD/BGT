@@ -1,5 +1,7 @@
-# # Side Nav Init
-# Calls in dependencies if side navigation module exists on page.
+###
+  # Side Nav Init
+  Calls in dependencies if side navigation module exists on page.
+###
 
 # Define module
 $el = $('.side-navigation')

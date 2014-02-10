@@ -1,5 +1,7 @@
-# # ScrollOverflow
-# Provides the ability to set scrollbars within certain elements
+###
+  # ScrollOverflow
+  Provides the ability to set scrollbars within certain elements
+###
 
 # Define module
 $el = $('.scrolloverflow')
@@ -10,9 +12,11 @@ minvp = 767
 # Loaded catch to prevent loop
 loaded = false
 
-# Load class callable method
-# We only need this class called for desktop
-# or when device hits correct viewport.
+###
+  Load class callable method
+  We only need this class called for desktop
+  or when device hits correct viewport.
+###
 load = ->
   return false if loaded
 

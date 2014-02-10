@@ -1,7 +1,12 @@
-# ## Application LogHandler
-# Can be called in each module if a log is required
-# simply by adding `log: new LogHandler 'moduleName'`
+###
+  # Application LogHandler
+  Can be called in each module if a log is required
+  simply by adding `log: new LogHandler 'moduleName'`
+###
 class @LogHandler
+  ###
+    ## Constructor
+  ###
   constructor: (module) ->
     window.log = window.log or {}
 
@@ -11,8 +16,10 @@ class @LogHandler
     # Set default module name to be the app
     @module = module || 'Application'
 
-  # ### Add new log
-  # Passing in variable data to be pushed into log
+  ###
+    ## Add new log
+    Passing in variable data to be pushed into log
+  ###
   add: (type, message, extended) ->
     object = {
       message: message

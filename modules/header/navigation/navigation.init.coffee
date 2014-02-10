@@ -1,11 +1,15 @@
-# # Navigation
-# Controls the display of the navigation
-# menu trhough desktop and tablet.
+###
+  # Navigation
+  Controls the display of the navigation
+  menu trhough desktop and tablet.
+###
 
 class Navigation
   self = undefined
 
-  # ## Constructor
+  ###
+    ## Constructor
+  ###
   constructor: ($el) ->
     # Log: construction event
     @log.add 'notification', 'Constructed.', @
@@ -39,14 +43,18 @@ class Navigation
     # Add controls for expander (desktop)
     @.expanderControls.setup()
 
-  # ## this.log
-  # Add local instance of logging to this module.
-  # Can be called with:
-  # ``` @log.add 'notification', 'message...', @ ```
+  ###
+    ## this.log
+    Add local instance of logging to this module.
+    Can be called with:
+    ``` @log.add 'notification', 'message...', @ ```
+  ###
   log: new LogHandler 'Navigation'
 
-  # ## this.bind
-  # Bind up events with actions.
+  ###
+    ## this.bind
+    Bind up events with actions.
+  ###
   bind: ->
     # Log: method called.
     @log.add 'notification', 'Bind method called.', @
@@ -68,9 +76,11 @@ class Navigation
     # Bind swipe for mobile menu
     @.$el.swipe @.swipeSettings
 
-  # ## this.clickTap
-  # A catch all method for click and touch/tap events
-  # directed out of the swipe library.
+  ###
+    ## this.clickTap
+    A catch all method for click and touch/tap events
+    directed out of the swipe library.
+  ###
   clickTap: (e, target) ->
     # If we're in desktop ignore this event
     return true if Response.viewportW() > 767
@@ -118,15 +128,19 @@ class Navigation
       # Redirect page to URL
       window.location = $target.attr('href')
 
-  # ## this.hasSub
-  # Adds a class to list items that have
-  # a sub menu to them.
+  ###
+    ## this.hasSub
+    Adds a class to list items that have
+    a sub menu to them.
+  ###
   hasSub: ($uls) ->
     $uls.parents('li').addClass('hasSubMenu')
 
-  # ## this.expanderControls
-  # Adds the navigation (desktop) controls for the expander
-  # based navigation. [left/right/close]
+  ###
+    ## this.expanderControls
+    Adds the navigation (desktop) controls for the expander
+    based navigation. [left/right/close]
+  ###
   expanderControls:
     # ### this.expanderControls.setup
     # This method is initially called to add the controls
@@ -188,9 +202,11 @@ class Navigation
       $active = self.$topLis.siblings('.shown')
       self.clickTopLi e, $active.children('a')
 
-  # ## this.clickTopLi
-  # Desktop interaction with top menu item, this will expand
-  # the navigation pushing the page down.
+  ###
+    ## this.clickTopLi
+    Desktop interaction with top menu item, this will expand
+    the navigation pushing the page down.
+  ###
   clickTopLi: (e, target) ->
     # If we're in mobile ignore this event
     return false if Response.viewportW() < 768
@@ -216,9 +232,11 @@ class Navigation
 
       self.adjustExpander $subUl.outerHeight()
 
-  # ## this.adjustExpander
-  # This method adjusts the height of the expander element
-  # which reveals the submenu on desktop.
+  ###
+    ## this.adjustExpander
+    This method adjusts the height of the expander element
+    which reveals the submenu on desktop.
+  ###
   adjustExpander: (height) ->
     # If the height is not specified
     if typeof height != 'number'
@@ -244,8 +262,10 @@ class Navigation
     if !self.expResize?
       self.expResize = PubSub.subscribe 'resize', self.adjustExpander
 
-  # ## this.mobileToggle
-  # Expands and collapses the mobile navigataion.
+  ###
+    ## this.mobileToggle
+    Expands and collapses the mobile navigataion.
+  ###
   mobileToggle: (e) ->
     e.preventDefault()
 
@@ -284,8 +304,10 @@ class Navigation
         .toggleClass('showMobileMenu')
     , 50
 
-  # ## this.mobileShowSubUl
-  # Show submenu on mobile.
+  ###
+    ## this.mobileShowSubUl
+    Show submenu on mobile.
+  ###
   mobileShowSubUl: ($subUl) ->
     # Log: Method called
     self.log.add 'notification', 'mobileShowSubUl method called.', $subUl
@@ -322,15 +344,19 @@ class Navigation
     settings.tap = @.clickTap
     $subUl.swipe settings
 
-  # ## this.mobileHideSubUl
-  # Hide submenu on mobile.
+  ###
+    ## this.mobileHideSubUl
+    Hide submenu on mobile.
+  ###
   mobileHideSubUl: ($subUl) ->
     setTimeout ->
       $subUl.removeClass('mobileShow')
     , 100
 
-  # ## this.swipeTopUl
-  # On touch start begin moving the selected element
+  ###
+    ## this.swipeTopUl
+    On touch start begin moving the selected element
+  ###
   swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
     # If we're in desktop pass to expander controls
     if Response.viewportW() > 767
@@ -371,16 +397,20 @@ class Navigation
     else
       self.swipeTopUlReset($el)
 
-  # ## this.swipeTopUlReset
-  # A reset method called at several points within the
-  # swipe method. Abstraction method.
+  ###
+    ## this.swipeTopUlReset
+    A reset method called at several points within the
+    swipe method. Abstraction method.
+  ###
   swipeTopUlReset: ($el) ->
     $el.removeClass('removetrans').css('transform', '')
 
-  # ## this.swipeSubUl
-  # On touch start begin moving the selected element
-  # Unfortunately we cannot use the same method as the top
-  # menu as we need to change different properties.
+  ###
+    ## this.swipeSubUl
+    On touch start begin moving the selected element
+    Unfortunately we cannot use the same method as the top
+    menu as we need to change different properties.
+  ###
   swipeSubUl: (e, phase, direction, distance, duration, fingerCount) ->
     # If we're in desktop ignore this event
     return false if Response.viewportW() > 767
@@ -421,13 +451,15 @@ class Navigation
     else
       self.swipeSubUlReset($el)
 
-  # ## this.swipeSubUlReset
-  # A reset method called at several points within the
-  # swipe method. Abstraction method.
+  ###
+    ## this.swipeSubUlReset
+    A reset method called at several points within the
+    swipe method. Abstraction method.
+  ###
   swipeSubUlReset: ($el) ->
     $el.removeClass('removetrans').css('margin-left', '')
 
-
-
-# ### Init
+###
+## Init
+###
 navigation = new Navigation $('.navigation')

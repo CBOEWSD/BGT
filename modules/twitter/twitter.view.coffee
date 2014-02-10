@@ -1,12 +1,16 @@
-# # Twitter View
-# This is our view layer tied with the events coming frm
-# `twitter.model.coffee` and rendering the response data
-# to the page.
+###
+# Twitter View
+This is our view layer tied with the events coming frm
+`twitter.model.coffee` and rendering the response data
+to the page.
+###
 
 class TwitterView
   self = {}
 
-  # ## Constructor
+  ###
+    ## Constructor
+  ###
   constructor: (el, tpl) ->
     # Log: construction event
     @log.add 'notification', '[View] Constructed.', @
@@ -24,14 +28,18 @@ class TwitterView
     PubSub.subscribe 'tweet/new', @handleTweet
     PubSub.subscribe 'tweet/error', @handleError
 
-  # ## this.log
-  # Add local instance of logging to this module.
-  # Can be called with:
-  # ``` @log.add 'notification', 'message...', @ ```
+  ###
+    ## this.log
+    Add local instance of logging to this module.
+    Can be called with:
+    ``` @log.add 'notification', 'message...', @ ```
+  ###
   log: new LogHandler 'Twitter'
 
-  # ## this.handleTweet
-  # Called on the event of a new tweet being published
+  ###
+    ## this.handleTweet
+    Called on the event of a new tweet being published
+  ###
   handleTweet: (data) ->
     # Log: method called
     self.log.add 'notification', '[View] handleTweet called.', data
@@ -48,14 +56,18 @@ class TwitterView
       # Log: bad data
       self.log.add 'warning', '[View] data appears to be undefined or not an object.', data
 
-  # ## this.handleError
-  # Handle error pubsub event from Twitter model
+  ###
+    ## this.handleError
+    Handle error pubsub event from Twitter model
+  ###
   handleError: (e, err) ->
     self.$el.html 'There was an error connecting with the server.'
 
-  # ## this.renderTweet
-  # Using our handlebars template we render the new tweet
-  # to our module.
+  ###
+    ## this.renderTweet
+    Using our handlebars template we render the new tweet
+    to our module.
+  ###
   renderTweet: (tweet) ->
     self.$el.html self.view tweet
 

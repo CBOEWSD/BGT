@@ -105,6 +105,20 @@ module.exports = (grunt) ->
         json:
           fileTypes: ['.json']
 
+    prettify:
+      options:
+        indent: 4
+        indent_char: ' '
+        wrap_line_length: 78
+        brace_style: 'expand'
+        unformatted: ['sub', 'sup', 'b', 'i', 'u']
+      static:
+        expand: true
+        cwd: '_static/'
+        ext: '.html'
+        src: '**/*.html'
+        dest: '_static/'
+
   }
 
   # ### Load Grunt Modules

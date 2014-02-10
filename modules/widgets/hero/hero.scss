@@ -22,6 +22,10 @@ $3dsize: 6px;
       left: -5000em;
       position: absolute;
 
+      h5 {
+        margin-bottom: 10px;
+      }
+
       &.active {
         position: relative;
         left: 0;

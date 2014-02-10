@@ -15,16 +15,21 @@ $view: '.view-threecol';
     @include outerRow();
   }
 
+  .bottomspan {
+    @include outerRow();
+    margin-top: 35px;
+  }
+
   .main {
     display: table;
-    table-layout:fixed;
+    table-layout: fixed;
     width: 100%;
     background: #fff;
     border: 1px solid darken($colorGrey2, 5%);
     clear: both;
-    margin: 0 13px;
     padding: 20px 0;
     @include clearfix();
+    margin-bottom: 20px;
 
     .col1, .col2, .col3 {
       display: table-cell;
@@ -42,7 +47,7 @@ $view: '.view-threecol';
     .col2 {
       width: 100%;
 
-      .row {
+      .twocolrow-2, .twocolrow-1 {
         display: table;
         width: 100%;
         table-layout: fixed;
@@ -50,14 +55,63 @@ $view: '.view-threecol';
         .column {
           display: table-cell;
           vertical-align: top;
-          width: 50%;
           padding: 15px;
         }
+      }
+      .twocolrow-1 {
+        width: 50%;
+      }
+      .twocolrow-2 {
+        .column {
+          width: 50%;
+        }
+      }
+
+      .onecolrow-2, .onecolrow-1 {
+        margin: 25px 0;
       }
     }
 
     .col3 {
 
+    }
+  }
+
+
+  @media screen and (max-width: 950px) {
+    .main {
+      .col2 {
+        .twocolrow-1, .twocolrow-2 {
+          display: block;
+          width: 100%;
+
+          .column {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screenSmallMax) {
+    .main {
+      display: block;
+      margin-top: 20px;
+
+      .col1, .col2, .col3 {
+        display: block;
+        padding: 0 15px;
+        width: 100%;
+      }
+
+      .col2 {
+        .twocolrow-1, .twocolrow-2 {
+          .column {
+            padding: 0;
+          }
+        }
+      }
     }
   }
 }

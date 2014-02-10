@@ -15,6 +15,7 @@ class Navigation
     @.$topLis = $ '.menu > li', $el
     @.$subUls = $ '> ul', @.$topLis
     @.$navIcon = $ '.topbar .navicon'
+    @.$expander = $ '.desktopExpander'
 
     # Swipe base settings
     @.swipeSettings = {
@@ -32,8 +33,11 @@ class Navigation
     # Bind up events with methods
     @.bind()
 
-    #Add class for subUl parents
+    # Add class for subUl parents
     @.hasSub(@.$subUls)
+
+    # Add controls for expander (desktop)
+    @.expanderControls.setup()
 
   # ## this.log
   # Add local instance of logging to this module.
@@ -47,20 +51,19 @@ class Navigation
     # Log: method called.
     @log.add 'notification', 'Bind method called.', @
 
-    # Bind hover (mousein and out) event
-    @.$topLis.hover @.hoverTopLi
-
     # Mobile expand
     @.$navIcon.click @.mobileToggle
 
     # Prevent a default anchor link action
     # when clicked if the parent haas a sub menu
-    $('a', @.$topLis).on 'click', (e) ->
+    $('a', @.$topLis).on 'click touchend', (e) ->
       # If we're in desktop ignore this event
-      return true if Response.viewportW() > 767
-      e.preventDefault()
-      # Log: Natural click prevented
-      self.log.add 'notification', 'Prevented click event, defered to tap (touchSwipe lib).', @
+      if Response.viewportW() > 767
+        self.clickTopLi(e, @)
+      else
+        e.preventDefault()
+        # Log: Natural click prevented
+        self.log.add 'notification', 'Prevented click event, defered to tap (touchSwipe lib).', @
 
     # Bind swipe for mobile menu
     @.$el.swipe @.swipeSettings
@@ -121,66 +124,125 @@ class Navigation
   hasSub: ($uls) ->
     $uls.parents('li').addClass('hasSubMenu')
 
-  # ## this.hoverTopLi
-  # Fired on hover in/out of top level LI elements.
-  hoverTopLi: (e) ->
+  # ## this.expanderControls
+  # Adds the navigation (desktop) controls for the expander
+  # based navigation. [left/right/close]
+  expanderControls:
+    # ### this.expanderControls.setup
+    # This method is initially called to add the controls
+    # on DOM ready.
+    setup: () ->
+      this.swipe()
+      this.create()
+
+    # ### this.expanderControls.swipe
+    swipe: (e, phase, direction, distance, duration, fingerCount) ->
+      if phase == 'end'
+        if distance > 50
+          if direction == 'left'
+            self.$controls.$right.trigger 'click'
+          else if direction == 'right'
+            self.$controls.$left.trigger 'click'
+
+    # ### this.expanderControls.create
+    create: () ->
+      self.$controls = $('<div/>').addClass('controls')
+      self.$controls.$left = $('<div/>').addClass('icon-arrows left').text('Left')
+      self.$controls.$right = $('<div/>').addClass('icon-arrows right').text('Right')
+      self.$controls.$close = $('<div/>').addClass('close').html('<span class="icon-smallarrows up">Close</span>')
+
+      self.log.add 'notice', 'expanderControls.setup: Created controls', self.$controls
+
+      # Bind click events
+      self.$controls.$left.bind 'click touchstart', this.left
+      self.$controls.$right.bind 'click touchstart', this.right
+      self.$controls.$close.bind 'click touchstart', this.close
+
+      self.$controls.append(self.$controls.$left, self.$controls.$right, self.$controls.$close)
+      self.$expander.append(self.$controls)
+
+    # ### this.expanderControls.left
+    left: (e) ->
+      $menus = self.$topLis.siblings('.hasSubMenu')
+      $active = $menus.siblings('.shown')
+      count = $menus.length-1
+      index = $menus.index $active
+      next = if index-1 < 0 then count else index-1
+
+      # Select the previous item and pass it to the `this.clickTopLi` method
+      self.clickTopLi e, $menus.eq(next).children('a')
+
+    # ### this.expanderControls.right
+    right: (e) ->
+      $menus = self.$topLis.siblings('.hasSubMenu')
+      $active = $menus.siblings('.shown')
+      count = $menus.length-1
+      index = $menus.index $active
+      next = if index+1 > count then 0 else index+1
+
+      # Select the next item and pass it to the `this.clickTopLi` method
+      self.clickTopLi e, $menus.eq(next).children('a')
+
+    # ### this.expanderControls.close
+    close: (e) ->
+      $active = self.$topLis.siblings('.shown')
+      self.clickTopLi e, $active.children('a')
+
+  # ## this.clickTopLi
+  # Desktop interaction with top menu item, this will expand
+  # the navigation pushing the page down.
+  clickTopLi: (e, target) ->
     # If we're in mobile ignore this event
     return false if Response.viewportW() < 768
 
     # Grab Submenu, if it doesn't exist do nothing more
-    $subUl = $('> ul', @)
-    return false unless $subUl.length > 0
+    $parentLi = $(target).parent('li')
+    $subUl = $('> ul', $parentLi)
+    return true unless $subUl.length > 0
+    e.preventDefault()
 
-    # Show? or hide...
-    if e.type == 'mouseenter'
-      self.showSubUl @, $subUl
+    # If click is the already shown nav we hide the expander
+    if $parentLi.hasClass 'shown'
+      self.adjustExpander 0
+      # Allow time for the animation to finish before we
+      # remove the shown state from this item
+      setTimeout ->
+        $parentLi.removeClass 'shown'
+      , 500
+    # Else we close the active item and show the next item
     else
-      self.hideSubUl @, $subUl
+      self.$topLis.removeClass 'shown'
+      $parentLi.addClass 'shown'
 
-  # ## this.showSubUl
-  # Show sub menu element.
-  # We use specs for the element and the viewport to position
-  # correctly - we do not want the element to be outside
-  # of our viewport on desktop or tablet.
-  showSubUl: (el, $subUl) ->
-    # Log: Method called
-    self.log.add 'notification', 'showSubUl method called.', el
+      self.adjustExpander $subUl.outerHeight()
 
-    # Pull element object
-    $el = $(el)
+  # ## this.adjustExpander
+  # This method adjusts the height of the expander element
+  # which reveals the submenu on desktop.
+  adjustExpander: (height) ->
+    # If the height is not specified
+    if typeof height != 'number'
+      # Check for an existing active item
+      $activeLi = self.$topLis.siblings('.shown');
 
-    # Specs
-    specs = {
-      viewport: Response.viewportW()
-      offset: $subUl.offset()
-      width: $subUl.width()
-      parent:
-        offset: $el.offset()
-        # Offset from parent not viewport
-        position: $el.position()
-    }
-
-    # If menu is wider than viewport
-    if specs.viewport < specs.width
-      # Make full width (viewport)
-      $subUl.css('left', 0)
-            .css('width', '100%')
-    else
-      fullWidth = specs.width + specs.parent.offset.left
-      # Check if we can move the menu without going off viewport
-      if fullWidth < specs.viewport
-        $subUl.css('left', specs.parent.position.left)
-
-      # if we're going to exit the viewporty
+      # If we have an active item set height to equal it
+      if $activeLi.length > 0
+        height = $('> ul', $activeLi).outerHeight()
       else
-        # Calculate how much we need to pull left to keep in viewport
-        left = fullWidth - specs.viewport + 20
-        $subUl.css('left', specs.parent.position.left - left)
+        self.log.add 'error', 'adjustExpander: Height not a number', height
+        return false
 
-  # ## this.hideSubUl
-  # Strip sub menu of our applied styles.
-  hideSubUl: (el, $subUl) ->
-    $subUl.removeAttr('style')
+    # If we are opening we will want to add some space at the bottom
+    if height > 0
+      height = height + 30
+
+    # Set height for expander
+    self.$expander.animate {'height', height}, 500
+
+    # On first time subscribe to resize event to change height of
+    # expander on viewport change.
+    if !self.expResize?
+      self.expResize = PubSub.subscribe 'resize', self.adjustExpander
 
   # ## this.mobileToggle
   # Expands and collapses the mobile navigataion.
@@ -270,8 +332,9 @@ class Navigation
   # ## this.swipeTopUl
   # On touch start begin moving the selected element
   swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
-    # If we're in desktop ignore this event
-    return false if Response.viewportW() > 767
+    # If we're in desktop pass to expander controls
+    if Response.viewportW() > 767
+      return self.expanderControls.swipe(e, phase, direction, distance, duration, fingerCount)
 
     # Prevent bubble
     e.stopPropagation()

@@ -3,6 +3,10 @@
 @import './ui/base/_typography';
 @import './ui/base/_includes/compass/css3';
 
+html {
+  overflow-x: hidden;
+}
+
 // Base from body styling
 body {
   font: {

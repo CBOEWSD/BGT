@@ -44,19 +44,53 @@ $classPrefix: '.icon-';
   display: inline-block;
 
   &.tradestation {
-    background: url(/ui/classes/icons/assets/logo-tradestation.jpg) no-repeat top left;
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -180px;
     width: 83px;
     height: 16px;
   }
   &.optionshub {
-    background: url(/ui/classes/icons/assets/logo-cboe_options_hub.jpg) no-repeat top left;
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -128px;
     width: 98px;
     height: 27px;
   }
 
   &.cboe {
-    background: url(/ui/classes/icons/assets/logo.png) no-repeat center center;
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -78px;
     width: 73px;
     height: 26px;
+  }
+}
+
+#{$classPrefix}arrows {
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+  text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
+  text-align: left;
+  display: inline-block;
+  width: 23px;
+  height: 44px;
+
+  &.right {
+    background-position: 0 0;
+  }
+  &.left {
+    background-position: -23px 0;
+  }
+}
+
+#{$classPrefix}smallarrows {
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+  text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
+  text-align: left;
+  display: inline-block;
+  width: 13px;
+  height: 9px;
+
+  &.up {
+    background-position: -17px -51px;
   }
 }

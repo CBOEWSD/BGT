@@ -23,7 +23,10 @@
     "connect-assetmanager": "0.0.28",
     "coffee-script": "~1.6.3",
     "uglify-js": "~2.4.11",
-    "marked": "~0.3.0"
+    "marked": "~0.3.0",
+    "mkdirp": "~0.3.5",
+    "url": "~0.7.9",
+    "colors": "~0.6.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -41,6 +44,7 @@
     "webdriverjs": "~0.7.14",
     "grunt-contrib-handlebars": "~0.6.0",
     "grunt-har-gen": "~0.4.0",
-    "grunt-jsbeautifier": "~0.2.6"
+    "grunt-jsbeautifier": "~0.2.6",
+    "grunt-prettify": "~0.3.4"
   }
 }

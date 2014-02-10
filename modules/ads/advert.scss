@@ -18,16 +18,19 @@ $module: '.advert';
       border: 4px solid #fff;
     }
   }
+  &.tall {
+    margin: 15px 0;
+  }
   &.full-width {
     text-align: center;
     margin: 0 auto;
     padding: 35px 0 25px;
     border-top:5px solid #000000;
-    background-color: $colorGrey1; 
+    background-color: $colorGrey1;
 
     img {
-      display: inline-block; 
-    }  
+      display: inline-block;
+    }
   }
   .container-ad{
     position: relative;
@@ -43,5 +46,10 @@ $module: '.advert';
       &:hover{
         text-decoration: underline;
       }
+  }
+
+  &.dark {
+    background: $colorGrey1;
+    padding: 1px 0;
   }
 }

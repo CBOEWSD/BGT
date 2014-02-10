@@ -1,0 +1,21 @@
+<article class="widget-tv single {{#each classes}} {{this}} {{/each}}">
+  {{#if title}}
+  <h2>
+    {{{title}}}
+  </h2>
+  {{/if}}
+  <div class="tab">
+    <div class="video">
+      <div class="wrapper">
+        {{#if placeholder}}
+        <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{placeholder.src}}" alt="{{placeholder.alt}}">
+        {{/if}}
+      </div>
+    </div>
+    <div class="copy">
+      {{#if copy}}
+        {{{copy}}}
+      {{/if}}
+    </div>
+  </div>
+</article>

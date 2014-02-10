@@ -11,6 +11,7 @@
     "trackpad-scroll-emulator": "https://github.com/jnicol/trackpad-scroll-emulator.git",
     "jquery-placeholder": "~2.0.7",
     "respond": "~1.4.2",
-    "jquery-touchswipe": "~1.6.4"
+    "jquery-touchswipe": "~1.6.4",
+    "socket.io-client": "~0.9.16"
   }
 }

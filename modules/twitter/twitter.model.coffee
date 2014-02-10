@@ -31,6 +31,8 @@ class TwitterModel
     # Create connection
     self.socket = self.connect()
 
+    self.socket.on 'error', self.error
+
     # Log: Method called.
     self.log.add 'notification', '[Model] start method called.', self.socket
 
@@ -41,7 +43,14 @@ class TwitterModel
   # ## this.connect
   # Simply creates and returns a connection to the host socket
   connect: () ->
-    return self.socket = io.connect self.host
+    return io.connect self.host
+
+  # ## this.error
+  # Error handler for socket.io events
+  error: (err) ->
+    self.log.add 'error', '[Model] socket error.', err
+    PubSub.publish 'tweet/error', err
+    return err
 
   # ## this.listen
   # Takes an event name and listens for that event

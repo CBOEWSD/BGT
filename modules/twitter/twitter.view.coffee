@@ -22,6 +22,7 @@ class TwitterView
 
     # Subscribe to new tweet events
     PubSub.subscribe 'tweet/new', @handleTweet
+    PubSub.subscribe 'tweet/error', @handleError
 
   # ## this.log
   # Add local instance of logging to this module.
@@ -31,7 +32,7 @@ class TwitterView
 
   # ## this.handleTweet
   # Called on the event of a new tweet being published
-  handleTweet: (e, data) ->
+  handleTweet: (data) ->
     # Log: method called
     self.log.add 'notification', '[View] handleTweet called.', data
 
@@ -46,6 +47,11 @@ class TwitterView
     else
       # Log: bad data
       self.log.add 'warning', '[View] data appears to be undefined or not an object.', data
+
+  # ## this.handleError
+  # Handle error pubsub event from Twitter model
+  handleError: (e, err) ->
+    self.$el.html 'There was an error connecting with the server.'
 
   # ## this.renderTweet
   # Using our handlebars template we render the new tweet

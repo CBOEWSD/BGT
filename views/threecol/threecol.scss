@@ -11,6 +11,8 @@
 $view: '.view-threecol';
 
 #{$view} {
+  padding: 0 7px;
+
   .topspan {
     @include outerRow();
   }

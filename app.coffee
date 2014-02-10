@@ -16,6 +16,7 @@ minify = require 'express-minify'
 twitterSocket = require './_application/_twitter/socket'
 assetConnect = require 'connect-assetmanager'
 handlers = require './_application/handlers'
+colors = require 'colors'
 
 # Load our package JSON file
 pkg = require './package.json'
@@ -130,6 +131,11 @@ hbs = exphbs.create
 
 # Load modules
 hbs.loadPartials (err,partials) ->
+  if 'static' == app.get('env')
+    console.warn '  ** Warning:'.underline.yellow, 'Application started in static generator mode!'
+    # Set static generator middleware
+    app.use require('./_application/static').middleware
+
   #set middleware to pass through the handlebars instance
   app.use (req, res, next) ->
     res.locals.hbs = hbs

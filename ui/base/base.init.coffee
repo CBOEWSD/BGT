@@ -11,5 +11,5 @@ requirejs.config {
     echojs: '/ui/libs/echojs/dist/echo'
     pubsub: '/ui/libs/pubsub-js/src/pubsub'
     templates: '/ui/templates/templates'
-    socketio: '/socket.io/socket.io'
+    socketio: '/ui/libs/socket.io-client/dist/socket.io'
 }

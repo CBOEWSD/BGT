@@ -44,6 +44,7 @@
     "webdriverjs": "~0.7.14",
     "grunt-contrib-handlebars": "~0.6.0",
     "grunt-har-gen": "~0.4.0",
-    "grunt-jsbeautifier": "~0.2.6"
+    "grunt-jsbeautifier": "~0.2.6",
+    "grunt-prettify": "~0.3.4"
   }
 }

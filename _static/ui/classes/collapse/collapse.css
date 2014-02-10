@@ -1,0 +1,39 @@
+/*
+  Class: collapse
+  Description:
+    This class will collapse the widget only showing the first
+    title. This title will be bound to click/touch event to expand.
+*/
+.collapse {
+  position: relative;
+  cursor: pointer; }
+  .collapse .expander {
+    display: none; }
+  @media screen and (max-width: 767px) {
+    .collapse * {
+      display: none; }
+    .collapse .widget-title:first-child, .collapse .widget-title:first-child * {
+      display: block; }
+    .collapse .expander {
+      *zoom: 1;
+      clear: both;
+      display: block;
+      background: #135fad;
+      left: 0;
+      bottom: -12px;
+      width: 100%;
+      margin-top: 10px;
+      color: white;
+      font-weight: 700;
+      font-size: 0.9em;
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+      padding: 5px 0; }
+      .collapse .expander:before, .collapse .expander:after {
+        content: " ";
+        display: table; }
+      .collapse .expander:after {
+        clear: both; } }
+  .collapse.open, .collapse.open * {
+    display: block; }

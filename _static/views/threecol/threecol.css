@@ -1,0 +1,90 @@
+/*
+  View: threecol
+  Description: Styling for threecol view.
+*/
+.view-threecol .topspan {
+  width: 1100px;
+  max-width: 100%;
+  min-width: 768px;
+  margin: 0 auto;
+  *zoom: 1; }
+  .view-threecol .topspan:before, .view-threecol .topspan:after {
+    content: " ";
+    display: table; }
+  .view-threecol .topspan:after {
+    clear: both; }
+  @media screen and (max-width: 767px) {
+    .view-threecol .topspan {
+      min-width: 0px;
+      width: 100%; } }
+.view-threecol .bottomspan {
+  width: 1100px;
+  max-width: 100%;
+  min-width: 768px;
+  margin: 0 auto;
+  *zoom: 1;
+  margin-top: 35px; }
+  .view-threecol .bottomspan:before, .view-threecol .bottomspan:after {
+    content: " ";
+    display: table; }
+  .view-threecol .bottomspan:after {
+    clear: both; }
+  @media screen and (max-width: 767px) {
+    .view-threecol .bottomspan {
+      min-width: 0px;
+      width: 100%; } }
+.view-threecol .main {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  background: white;
+  border: 1px solid #d0d0d0;
+  clear: both;
+  padding: 20px 0;
+  *zoom: 1;
+  margin-bottom: 20px; }
+  .view-threecol .main:before, .view-threecol .main:after {
+    content: " ";
+    display: table; }
+  .view-threecol .main:after {
+    clear: both; }
+  .view-threecol .main .col1, .view-threecol .main .col2, .view-threecol .main .col3 {
+    display: table-cell;
+    padding: 0 15px; }
+  .view-threecol .main .col1, .view-threecol .main .col3 {
+    width: 200px; }
+  .view-threecol .main .col1 {
+    padding-left: 0; }
+  .view-threecol .main .col2 {
+    width: 100%; }
+    .view-threecol .main .col2 .twocolrow-2, .view-threecol .main .col2 .twocolrow-1 {
+      display: table;
+      width: 100%;
+      table-layout: fixed; }
+      .view-threecol .main .col2 .twocolrow-2 .column, .view-threecol .main .col2 .twocolrow-1 .column {
+        display: table-cell;
+        vertical-align: top;
+        padding: 15px; }
+    .view-threecol .main .col2 .twocolrow-1 {
+      width: 50%; }
+    .view-threecol .main .col2 .twocolrow-2 .column {
+      width: 50%; }
+    .view-threecol .main .col2 .onecolrow-2, .view-threecol .main .col2 .onecolrow-1 {
+      margin: 25px 0; }
+@media screen and (max-width: 950px) {
+  .view-threecol .main .col2 .twocolrow-1, .view-threecol .main .col2 .twocolrow-2 {
+    display: block;
+    width: 100%; }
+    .view-threecol .main .col2 .twocolrow-1 .column, .view-threecol .main .col2 .twocolrow-2 .column {
+      display: block;
+      width: 100%; } }
+@media screen and (max-width: 767px) {
+  .view-threecol .main {
+    display: block;
+    margin-top: 20px; }
+    .view-threecol .main .col1, .view-threecol .main .col2, .view-threecol .main .col3 {
+      display: block;
+      padding: 0 15px;
+      width: 100%; }
+    .view-threecol .main .col2 .twocolrow-1 .column, .view-threecol .main .col2 .twocolrow-2 .column {
+      padding: 0; } }

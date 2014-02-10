@@ -1,0 +1,135 @@
+/*
+  Module: Navigation
+  Description: Global navigation module called into the header.
+*/
+@media screen and (max-width: 767px) {
+  .navigation {
+    position: absolute;
+    overflow-y: hidden;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    top: 0;
+    width: 70%;
+    height: 100%;
+    -webkit-transition: all, 0.5s;
+    -webkit-transition-delay: ease-in-out;
+    -moz-transition: all, 0.5s, ease-in-out;
+    -o-transition: all, 0.5s, ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 9000;
+    background: white; }
+    .showMobileMenu .navigation {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0); }
+    .navigation > .menu {
+      overflow-y: auto;
+      height: 100%; }
+    .navigation .menu {
+      padding: 0; }
+      .navigation .menu .mobileCategory {
+        color: white;
+        background: #156abf;
+        text-transform: uppercase;
+        line-height: 45px;
+        font-size: 1.2em;
+        font-weight: 700;
+        padding: 0 0 0 10%;
+        border-bottom: 1px solid white; }
+        .navigation .menu .mobileCategory a {
+          font-size: 1em;
+          padding: 0;
+          border-bottom: none;
+          color: white; }
+        .navigation .menu .mobileCategory:after {
+          display: none; }
+      .navigation .menu li.hasSubMenu > a, .navigation .menu .mobileclose, .navigation .menu .mobileback {
+        position: relative; }
+        .navigation .menu li.hasSubMenu > a:after, .navigation .menu .mobileclose:after, .navigation .menu .mobileback:after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 5%;
+          top: 50%;
+          margin-top: -5px;
+          width: 0px;
+          height: 0px;
+          border-style: solid;
+          border-width: 5px 0 5px 5px;
+          border-color: transparent transparent transparent #135fad; }
+      .navigation .menu .mobileclose:after, .navigation .menu .mobileback:after {
+        border-width: 5px 5px 5px 0;
+        border-color: transparent white transparent transparent;
+        left: 5%; }
+      .navigation .menu li {
+        display: block;
+        width: 100%; }
+        .navigation .menu li a {
+          color: #135fad;
+          font-size: 1.2em;
+          font-weight: 700;
+          display: block;
+          border-bottom: 1px solid #719fce;
+          padding: 15px 20px 15px 30px; }
+        .navigation .menu li .landing a {
+          color: #21a825;
+          padding-left: 20px; }
+        .navigation .menu li ul {
+          padding: 0; }
+      .navigation .menu > li:hover > ul {
+        left: 0; }
+      .navigation .menu > li > a:hover:before {
+        display: none; }
+      .navigation .menu > li > ul, .navigation .menu > li > ul.hasthird {
+        position: absolute;
+        overflow-y: auto;
+        top: 0;
+        margin-left: -100%;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 9001;
+        left: 0;
+        margin-top: 0;
+        border: none;
+        -webkit-transition: margin-left, 0.5s;
+        -webkit-transition-delay: ease-in-out;
+        -moz-transition: margin-left, 0.5s, ease-in-out;
+        -o-transition: margin-left, 0.5s, ease-in-out;
+        transition: margin-left 0.5s ease-in-out; }
+        .navigation .menu > li > ul > li, .navigation .menu > li > ul.hasthird > li {
+          display: none; }
+          .navigation .menu > li > ul > li.menu, .navigation .menu > li > ul.hasthird > li.menu {
+            display: block;
+            padding: 0; }
+        .navigation .menu > li > ul.mobileShow, .navigation .menu > li > ul.hasthird.mobileShow {
+          margin-left: 0; }
+      .navigation .menu > li.social {
+        display: none; }
+  body {
+    left: 0;
+    position: relative;
+    -webkit-backface-visibility: hidden; }
+  .mobileNavOverlay {
+    position: absolute;
+    top: 0;
+    left: -200%;
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-indent: -5000em;
+    z-index: 9000;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    background: #333333; }
+    .showMobileMenu .mobileNavOverlay {
+      left: 0; } }
+
+@media screen and (min-width: 768px) {
+  .mobileback, .mobileCategory, .mobileclose, .mobileNavOverlay {
+    display: none; } }

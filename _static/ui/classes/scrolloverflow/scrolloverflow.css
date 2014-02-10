@@ -1,0 +1,17 @@
+/*
+	Class: ScrollOverflow
+	Description: Allows for internal elements to be absolute and not extend past height of parent element.
+*/
+.scrolloverflow {
+  position: relative;
+  overflow: hidden; }
+  .scrolloverflow .tse-scrollable {
+    position: absolute !important;
+    left: -5000em !important; }
+    .scrolloverflow .tse-scrollable.shown {
+      position: relative !important;
+      left: 0 !important; }
+  @media screen and (max-width: 767px) {
+    .scrolloverflow .scrolloverflow-inside {
+      position: relative;
+      height: auto !important; } }

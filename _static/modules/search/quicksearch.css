@@ -1,0 +1,37 @@
+/*
+  Module: QuickSearch
+  Description: Quick search module. Layer of abstraction will allow us to in theory drop this module in many places. Primary location designed for is in the header module.
+*/
+.quicksearch {
+  text-align: right; }
+  .quicksearch> {
+    font-size: 0; }
+  .quicksearch input[type="text"] {
+    margin: 0;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 7px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    background: white; }
+  .quicksearch button[type="submit"] {
+    padding-top: 7px;
+    padding-bottom: 7px; }
+  .quicksearch .gsc-control-cse, .quicksearch .gsc-control-cse-en {
+    padding: 0;
+    background: none;
+    border: none; }
+    .quicksearch .gsc-control-cse .gsc-results-wrapper-overlay, .quicksearch .gsc-control-cse-en .gsc-results-wrapper-overlay {
+      text-align: left; }
+  @media screen and (max-width: 900px) {
+    .quicksearch input[type="text"] {
+      width: 75%; } }

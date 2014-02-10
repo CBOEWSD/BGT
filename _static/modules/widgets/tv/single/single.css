@@ -1,0 +1,33 @@
+/*
+  Module: TV Widget .single
+  Description: Singlular version of CBOE video.
+*/
+.widget-tv.single {
+  display: table;
+  width: 100%;
+  table-layout: fixed; }
+  .widget-tv.single .tab > div {
+    vertical-align: top;
+    display: table-cell; }
+    .widget-tv.single .tab > div.video {
+      width: 60%; }
+      .widget-tv.single .tab > div.video .wrapper {
+        border: 15px solid #eaeaea; }
+        .widget-tv.single .tab > div.video .wrapper img {
+          width: 100%; }
+    .widget-tv.single .tab > div.copy {
+      padding-left: 20px;
+      width: 40%; }
+      .widget-tv.single .tab > div.copy h1, .widget-tv.single .tab > div.copy h2, .widget-tv.single .tab > div.copy h3, .widget-tv.single .tab > div.copy h4, .widget-tv.single .tab > div.copy h5 {
+        color: #135fad;
+        margin: 0 0 10px; }
+  @media screen and (max-width: 900px) {
+    .widget-tv.single .tab {
+      display: block; }
+      .widget-tv.single .tab > div {
+        display: block; }
+        .widget-tv.single .tab > div.video, .widget-tv.single .tab > div.copy {
+          width: 100%; }
+        .widget-tv.single .tab > div.copy {
+          margin: 15px 0 0;
+          padding: 0; } }

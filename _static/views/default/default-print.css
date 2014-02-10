@@ -1,0 +1,6 @@
+@media print {
+  .view-default .row {
+    display: block; }
+    .view-default .row .column1, .view-default .row .column2, .view-default .row .column50 {
+      display: block;
+      width: 100%; } }

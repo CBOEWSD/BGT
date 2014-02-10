@@ -1,0 +1,13 @@
+/*
+  Module: Twitter
+  Description: Twitter module that can be called as a widget or standalone
+*/
+.twitter .api .tweet {
+  display: table; }
+  .twitter .api .tweet .avatar, .twitter .api .tweet .message {
+    display: table-cell;
+    vertical-align: top; }
+  .twitter .api .tweet .avatar {
+    width: 50px; }
+  .twitter .api .tweet .message {
+    padding-left: 10px; }

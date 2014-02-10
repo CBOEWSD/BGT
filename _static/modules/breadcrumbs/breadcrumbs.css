@@ -1,0 +1,47 @@
+/*
+  Module: Breadcrumb
+  Description: Listed breadcrumb navigation with flyout on hover. Removed on mobile
+*/
+.breadcrumbs {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 20px 0;
+  list-style: none; }
+  @media only screen and (max-width: 767px) {
+    .breadcrumbs {
+      float: none;
+      width: auto; } }
+  .breadcrumbs li {
+    display: inline-block;
+    padding: 0 10px; }
+    .breadcrumbs li:first-child {
+      padding-left: 0; }
+    .breadcrumbs li a {
+      display: inline-block;
+      position: relative;
+      color: #135fad;
+      text-decoration: underline;
+      font-weight: 700; }
+      .breadcrumbs li a:after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 3px 0 3px 5px;
+        border-color: transparent transparent transparent #949ca1;
+        right: -15px;
+        top: 50%;
+        margin-top: -3px; }
+    .breadcrumbs li.active a, .breadcrumbs li:last-child a {
+      color: #313538;
+      text-decoration: none; }
+      .breadcrumbs li.active a:after, .breadcrumbs li:last-child a:after {
+        display: none; }
+  @media screen and (max-width: 767px) {
+    .breadcrumbs {
+      display: none; } }

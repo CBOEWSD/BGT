@@ -1,0 +1,57 @@
+/*
+  Module: Footer
+  Description: Global footer module.
+*/
+.footer {
+  background: #135fad;
+  padding: 20px 0;
+  color: white; }
+  .footer .menu-1, .footer .menu-2 {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 25%; }
+    @media only screen and (max-width: 767px) {
+      .footer .menu-1, .footer .menu-2 {
+        float: none;
+        width: auto; } }
+    .footer .menu-1 ul, .footer .menu-2 ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .footer .menu-1 ul li, .footer .menu-2 ul li {
+        margin: 0; }
+      .footer .menu-1 ul a, .footer .menu-2 ul a {
+        color: white;
+        display: block;
+        margin: 10px 0;
+        text-decoration: none; }
+  .footer .disclaimer {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 50%; }
+    @media only screen and (max-width: 767px) {
+      .footer .disclaimer {
+        float: none;
+        width: auto; } }
+    .footer .disclaimer .icon-logo {
+      margin-top: -4px; }
+    .footer .disclaimer p {
+      font-size: 0.8em;
+      line-height: 1.3em; }
+  .footer h3 {
+    font-weight: 400;
+    font-size: 1.4em;
+    border-bottom: 1px solid #3c93ea;
+    padding-bottom: 10px;
+    min-height: 37px; }
+  @media screen and (max-width: 767px) {
+    .footer .menu-1, .footer .menu-2, .footer .disclaimer {
+      margin: 30px 0; }
+      .footer .menu-1:first-child, .footer .menu-2:first-child, .footer .disclaimer:first-child {
+        margin-top: 0; }
+    .footer h3 {
+      margin: 10px 0; } }

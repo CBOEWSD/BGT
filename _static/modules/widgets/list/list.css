@@ -1,0 +1,94 @@
+/*
+  Module: List Widgets
+  Description: Used for several styling and format of list based widgets.
+*/
+.widget-list {
+  *zoom: 1; }
+  .widget-list:before, .widget-list:after {
+    content: " ";
+    display: table; }
+  .widget-list:after {
+    clear: both; }
+  .widget-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .widget-list ul li {
+      border-top: 1px solid #dddddd;
+      padding: 10px 0;
+      *zoom: 1; }
+      .widget-list ul li:before, .widget-list ul li:after {
+        content: " ";
+        display: table; }
+      .widget-list ul li:after {
+        clear: both; }
+      .widget-list ul li:first-child {
+        border-top: none;
+        padding-top: 0; }
+      .widget-list ul li .thumbnail {
+        float: left;
+        margin: 0 15px 10px 0; }
+      .widget-list ul li h2, .widget-list ul li p {
+        margin: 3px 0; }
+      .widget-list ul li h2 {
+        font-size: 1.2em; }
+      .widget-list ul li a {
+        display: block;
+        *zoom: 1; }
+        .widget-list ul li a:before, .widget-list ul li a:after {
+          content: " ";
+          display: table; }
+        .widget-list ul li a:after {
+          clear: both; }
+      .widget-list ul li.focus h2 {
+        font-size: 1.4em; }
+  .widget-list.noborder li {
+    border-top: none; }
+  .widget-list.links ul li {
+    border-top: none;
+    padding: 5px 0; }
+    .widget-list.links ul li a {
+      color: #135fad; }
+    .widget-list.links ul li:first-child {
+      padding-top: 0; }
+  .widget-list.list-columns li {
+    float: left;
+    display: inline;
+    padding-top: 0;
+    padding-right: 10px; }
+  .widget-list.list-columns.two li {
+    width: 50%; }
+  .widget-list.list-columns.three li {
+    width: 33%; }
+  .widget-list.list-columns.four li {
+    width: 25%; }
+  @media screen and (max-width: 767px) {
+    .widget-list.list-columns {
+      margin: 0;
+      padding: 0; }
+      .widget-list.list-columns li, .widget-list.list-columns.two li, .widget-list.list-columns.three li, .widget-list.list-columns.four li {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin: 10px 0; } }
+  .widget-list.showad ul {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 66.66667%; }
+    @media only screen and (max-width: 767px) {
+      .widget-list.showad ul {
+        float: none;
+        width: auto; } }
+  .widget-list.showad .ad {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 33.33333%; }
+    @media only screen and (max-width: 767px) {
+      .widget-list.showad .ad {
+        float: none;
+        width: auto; } }

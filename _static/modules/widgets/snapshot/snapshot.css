@@ -1,0 +1,42 @@
+/*
+  Module: Snapshot Widget
+  Description: Market snapshot widget designed to be connected with Market API.
+*/
+.snapshot h3 {
+  margin: 20px 0; }
+.snapshot .volume {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  *zoom: 1;
+  display: table;
+  width: 100%; }
+  .snapshot .volume:before, .snapshot .volume:after {
+    content: " ";
+    display: table; }
+  .snapshot .volume:after {
+    clear: both; }
+  .snapshot .volume li {
+    display: table-cell;
+    text-align: center;
+    width: 20%;
+    border-left: 1px solid #dddddd;
+    vertical-align: bottom;
+    line-height: 1em; }
+    .snapshot .volume li:first-child {
+      border-left: none; }
+    .snapshot .volume li .before {
+      font-weight: 700;
+      font-size: 0.75em; }
+    .snapshot .volume li h5 {
+      font-size: 1.1em;
+      font-weight: 400;
+      font-family: "Arial Black", Gadget, sans-serif;
+      margin: 0; }
+    .snapshot .volume li .negative, .snapshot .volume li .positive {
+      font-size: 0.9em;
+      font-weight: 700; }
+    .snapshot .volume li .negative {
+      color: #b7120b; }
+    .snapshot .volume li .positive {
+      color: #21a825; }

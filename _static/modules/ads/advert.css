@@ -1,0 +1,35 @@
+/*
+  Module: Advert
+  Description: Styling for all advert formats
+*/
+.advert.slim {
+  text-align: center;
+  margin: 20px auto; }
+  .advert.slim img {
+    display: inline-block;
+    border: 4px solid white; }
+.advert.tall {
+  margin: 15px 0; }
+.advert.full-width {
+  text-align: center;
+  margin: 0 auto;
+  padding: 35px 0 25px;
+  border-top: 5px solid black;
+  background-color: #313538; }
+  .advert.full-width img {
+    display: inline-block; }
+.advert .container-ad {
+  position: relative;
+  display: inline-block; }
+.advert .close-ad {
+  font: 10px Arial, Helvetica, sans-serif;
+  color: white;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  cursor: pointer; }
+  .advert .close-ad:hover {
+    text-decoration: underline; }
+.advert.dark {
+  background: #313538;
+  padding: 1px 0; }

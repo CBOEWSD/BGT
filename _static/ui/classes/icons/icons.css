@@ -1,0 +1,69 @@
+/*
+	Class: Icons
+	Description: Contains generic items that can be used in various areas across the site.
+*/
+.icon-social {
+  background: url(/ui/classes/icons/assets/social.jpg) no-repeat top left;
+  text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
+  width: 20px;
+  height: 20px;
+  text-align: left;
+  display: inline-block; }
+  .icon-social.twitter {
+    background-position: -3px 0; }
+  .icon-social.youtube {
+    background-position: -29px 0; }
+  .icon-social.facebook {
+    background-position: -55px 0; }
+  .icon-social.linkedin {
+    background-position: -80px 0; }
+  .icon-social.ios {
+    background-position: -105px 0; }
+  .icon-social.rss {
+    background-position: -133px 0; }
+
+.icon-logo {
+  text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
+  text-align: left;
+  display: inline-block; }
+  .icon-logo.tradestation {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -180px;
+    width: 83px;
+    height: 16px; }
+  .icon-logo.optionshub {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -128px;
+    width: 98px;
+    height: 27px; }
+  .icon-logo.cboe {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    background-position: 0 -78px;
+    width: 73px;
+    height: 26px; }
+
+.icon-arrows {
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+  text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
+  text-align: left;
+  display: inline-block;
+  width: 23px;
+  height: 44px; }
+  .icon-arrows.right {
+    background-position: 0 0; }
+  .icon-arrows.left {
+    background-position: -23px 0; }
+
+.icon-smallarrows {
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+  text-indent: -5000em;
+  color: rgba(19, 95, 173, 0) !important;
+  text-align: left;
+  display: inline-block;
+  width: 13px;
+  height: 9px; }
+  .icon-smallarrows.up {
+    background-position: -17px -51px; }

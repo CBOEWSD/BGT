@@ -1,0 +1,269 @@
+/*
+  Module: Navigation
+  Description: Global navigation module called into the header.
+*/
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.navigation {
+  background: #135fad;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  /*
+    Mobile abstracted.
+    See `navigation_mobile.scss` for mobile styles
+    */ }
+  .navigation .desktopExpander {
+    height: 0;
+    background: white;
+    width: 100%;
+    overflow: hidden; }
+    .navigation .desktopExpander:after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #cccccc; }
+    .navigation .desktopExpander .controls {
+      position: relative;
+      width: 1100px;
+      max-width: 100%;
+      min-width: 768px;
+      margin: 0 auto;
+      *zoom: 1;
+      height: 100%;
+      background: none !important;
+      pointer-events: none; }
+      .navigation .desktopExpander .controls:before, .navigation .desktopExpander .controls:after {
+        content: " ";
+        display: table; }
+      .navigation .desktopExpander .controls:after {
+        clear: both; }
+      @media screen and (max-width: 767px) {
+        .navigation .desktopExpander .controls {
+          min-width: 0px;
+          width: 100%; } }
+      .navigation .desktopExpander .controls div {
+        position: absolute;
+        display: block;
+        z-index: 1000;
+        pointer-events: auto;
+        cursor: pointer; }
+        .navigation .desktopExpander .controls div.left {
+          left: 0;
+          top: 50%;
+          margin-top: -22px; }
+        .navigation .desktopExpander .controls div.right {
+          right: 0;
+          top: 50%;
+          margin-top: -22px; }
+        .navigation .desktopExpander .controls div.close {
+          bottom: 0;
+          left: 50%;
+          background: #135fad;
+          border-bottom: 4px solid #12b7ed;
+          padding: 3px 10px; }
+          .navigation .desktopExpander .controls div.close:hover {
+            background: #b7120b;
+            border-bottom: 4px solid #f4534d; }
+            .navigation .desktopExpander .controls div.close:hover:before {
+              border-color: transparent transparent #f4534d transparent; }
+          .navigation .desktopExpander .controls div.close span {
+            vertical-align: middle;
+            margin-top: -2px; }
+          .navigation .desktopExpander .controls div.close:before {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: -4px;
+            height: 0;
+            width: 0;
+            border-style: solid;
+            border-width: 0 0 4px 4px;
+            border-color: transparent transparent #12b7ed transparent; }
+          .navigation .desktopExpander .controls div.close:after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            right: 0;
+            height: 0;
+            width: 0;
+            border-style: solid;
+            border-width: 0 0 4px 4px;
+            border-color: transparent transparent #cccccc transparent; }
+    @media screen and (max-width: 767px) {
+      .navigation .desktopExpander {
+        display: none; } }
+  .navigation .menu {
+    padding: 0;
+    position: relative; }
+    .navigation .menu > li {
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline; }
+      .navigation .menu > li > a {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom: 1;
+        *display: inline;
+        position: relative;
+        color: white;
+        padding: 10px 15px;
+        padding: 10px 10px \9;
+        text-decoration: none;
+        font-weight: 700; }
+      .navigation .menu > li.shown > a {
+        background: white;
+        color: #313538; }
+        .navigation .menu > li.shown > a:before {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-style: solid;
+          border-width: 4px 4px 0 0;
+          border-color: #135fad transparent transparent transparent; }
+        .navigation .menu > li.shown > a:after {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -4px;
+          border-style: solid;
+          border-width: 4px 4px 0 0;
+          border-color: white transparent transparent transparent; }
+      .navigation .menu > li.shown > ul {
+        left: 0;
+        -moz-animation: fadeIn 0.3s;
+        -webkit-animation: fadeIn 0.3s;
+        -o-animation: fadeIn 0.3s;
+        -ms-animation: fadeIn 0.3s;
+        animation: fadeIn 0.3s; }
+      .navigation .menu > li ul, .navigation .menu > li li {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+      .navigation .menu > li > ul {
+        position: absolute;
+        background: white;
+        padding: 15px 80px 5px;
+        width: 100%;
+        left: -5000em; }
+        .navigation .menu > li > ul.hasthird > li {
+          float: left;
+          position: relative;
+          min-height: 1px;
+          padding: 0 15px;
+          width: 33.33333%; }
+          @media only screen and (max-width: 767px) {
+            .navigation .menu > li > ul.hasthird > li {
+              float: none;
+              width: auto; } }
+        .navigation .menu > li > ul > li {
+          float: left;
+          position: relative;
+          min-height: 1px;
+          padding: 0 15px;
+          width: 50%; }
+          @media only screen and (max-width: 767px) {
+            .navigation .menu > li > ul > li {
+              float: none;
+              width: auto; } }
+          @media screen and (min-width: 767px) {
+            .navigation .menu > li > ul > li.menu li {
+              border-bottom: 1px solid #d8dbdd;
+              font-size: 0.9em;
+              display: block; }
+              .navigation .menu > li > ul > li.menu li a {
+                font-weight: 400;
+                color: #313538;
+                text-decoration: none;
+                display: block;
+                padding: 5px 0; } }
+          .navigation .menu > li > ul > li.feed .title {
+            color: #135fad;
+            font-weight: 600;
+            margin: 0; }
+          .navigation .menu > li > ul > li.feed ul li {
+            border-top: 1px solid #dddddd; }
+            .navigation .menu > li > ul > li.feed ul li:first-child {
+              border-top: none; }
+          .navigation .menu > li > ul > li.feed a {
+            color: #313538;
+            text-decoration: none;
+            display: block;
+            padding: 20px 0;
+            border-bottom: 1px solid #d8dbdd;
+            font-weight: 600; }
+            .navigation .menu > li > ul > li.feed a .date {
+              display: block;
+              font-size: 0.9em;
+              font-weight: 400;
+              color: #61696e; }
+            .navigation .menu > li > ul > li.feed a:last-child {
+              border-bottom: none;
+              padding-bottom: 10px; }
+      .navigation .menu > li.social {
+        float: right;
+        margin-right: 12px; }
+        .navigation .menu > li.social a {
+          padding: 7px 3px; }
+        .navigation .menu > li.social:hover > a {
+          background: none; }
+          .navigation .menu > li.social:hover > a:before {
+            display: none; }
+          .navigation .menu > li.social:hover > a:after {
+            display: none; }
+  @media screen and (max-width: 1000px) and (min-width: 767px) {
+    .navigation .menu > li.social {
+      display: none; } }
+  @media screen and (max-width: 850px) and (min-width: 767px) {
+    .navigation .menu > li > a {
+      padding: 10px; } }
+  @media print {
+    .navigation {
+      display: none; } }

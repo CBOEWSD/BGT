@@ -1,0 +1,17 @@
+/*
+  Class: Hideon
+  Description: Used to remove certain elements between mobile/desktop views.
+*/
+@media screen and (max-width: 767px) {
+  .hideonmobile {
+    position: fixed;
+    top: 2000%;
+    right: -2000%; } }
+
+.hideondesktop {
+  display: none\9; }
+  @media screen and (min-width: 767px) {
+    .hideondesktop {
+      position: fixed;
+      top: 2000%;
+      right: -2000%; } }

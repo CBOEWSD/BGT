@@ -1,0 +1,7 @@
+/*
+	Class: Forms
+	Description: Generic styles and classes related forms.
+*/
+input[type="text"], input[type="tel"], input[type="email"] {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px; }

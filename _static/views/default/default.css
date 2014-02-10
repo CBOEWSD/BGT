@@ -1,0 +1,59 @@
+/*
+  View: default
+  Description: Styling for default view.
+*/
+.view-default .row {
+  *zoom: 1;
+  margin: 20px 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+  .view-default .row:before, .view-default .row:after {
+    content: " ";
+    display: table; }
+  .view-default .row:after {
+    clear: both; }
+  .view-default .row .row:first-child {
+    margin-top: 0; }
+  .view-default .row .row:last-child {
+    margin-bottom: 0; }
+  .view-default .row .column1, .view-default .row .column2, .view-default .row .column50 {
+    display: table-cell;
+    vertical-align: top;
+    border-left: 7px solid #dddddd;
+    border-right: 7px solid #dddddd; }
+  .view-default .row .column1 {
+    width: 66.666%; }
+  .view-default .row .column2 {
+    width: 33.333%; }
+  .view-default .row .column50 {
+    width: 50%; }
+    .view-default .row .column50:first-child {
+      border-left: none; }
+      .view-default .row .column50:first-child + .column50 {
+        border-right: none; }
+@media screen and (max-width: 900px) {
+  .view-default .row .column1 .row {
+    margin: 0; }
+    .view-default .row .column1 .row .column50, .view-default .row .column1 .row .col {
+      display: block;
+      width: 100%;
+      border: none;
+      margin: 10px 0; }
+      .view-default .row .column1 .row .column50:first-child, .view-default .row .column1 .row .col:first-child {
+        margin-top: 0; } }
+@media screen and (max-width: 767px) {
+  .view-default .row {
+    display: block;
+    padding: 0 10px;
+    margin: 0; }
+    .view-default .row .row {
+      padding: 0; }
+    .view-default .row .column1, .view-default .row .column2, .view-default .row .column3, .view-default .row .column50 {
+      display: block;
+      width: 100%;
+      border: none; }
+    .view-default .row.secondRow {
+      display: table; }
+      .view-default .row.secondRow .column1 {
+        display: table-footer-group; } }

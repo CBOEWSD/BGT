@@ -30,10 +30,28 @@ $module: '.quicksearch';
     padding-top: 7px; padding-bottom: 7px;
   }
 
+  form.gsc-search-box {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
   .gsc-control-cse, .gsc-control-cse-en {
     padding: 0;
     background: none;
     border: none;
+
+    input.gsc-search-button {
+      background-color: $colorBlue1 !important;
+      padding: 9px 15px !important;
+      height: auto !important;
+      border-color: $colorBlue1 !important;
+    }
+    td.gsc-input {
+      padding-right: 7px !important;
+    }
+
+    .gsc-clear-button {
+      display: none;
+    }
 
     .gsc-results-wrapper-overlay {
       text-align: left;

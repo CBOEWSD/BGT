@@ -67,3 +67,22 @@
   height: 9px; }
   .icon-smallarrows.up {
     background-position: -17px -51px; }
+  .icon-smallarrows.right {
+    background-position: -17px -51px; }
+
+.icon-css-arrows > li, .icon-css-arrows > a {
+  position: relative;
+  padding-left: 15px; }
+  .icon-css-arrows > li:before, .icon-css-arrows > a:before {
+    display: inline-block;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 6px 0 6px 7px;
+    border-color: transparent transparent transparent black;
+    margin: 0 5px -2px 0;
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    margin-top: -6px; }

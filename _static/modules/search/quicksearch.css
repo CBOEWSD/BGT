@@ -26,10 +26,24 @@
   .quicksearch button[type="submit"] {
     padding-top: 7px;
     padding-bottom: 7px; }
+  .quicksearch form.gsc-search-box {
+    padding: 0 !important;
+    margin: 0 !important; }
   .quicksearch .gsc-control-cse, .quicksearch .gsc-control-cse-en {
     padding: 0;
     background: none;
     border: none; }
+    .quicksearch .gsc-control-cse input.gsc-search-button, .quicksearch .gsc-control-cse-en input.gsc-search-button {
+      background-color: #135fad !important;
+      padding: 9px 15px !important;
+      height: auto !important;
+      border-color: #135fad !important; }
+      .quicksearch .gsc-control-cse input.gsc-search-button:hover, .quicksearch .gsc-control-cse-en input.gsc-search-button:hover {
+        background-color: #1879db !important; }
+    .quicksearch .gsc-control-cse td.gsc-input, .quicksearch .gsc-control-cse-en td.gsc-input {
+      padding-right: 7px !important; }
+    .quicksearch .gsc-control-cse .gsc-clear-button, .quicksearch .gsc-control-cse-en .gsc-clear-button {
+      display: none; }
     .quicksearch .gsc-control-cse .gsc-results-wrapper-overlay, .quicksearch .gsc-control-cse-en .gsc-results-wrapper-overlay {
       text-align: left; }
   @media screen and (max-width: 900px) {

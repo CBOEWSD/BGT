@@ -1,0 +1,13 @@
+/*
+  Class: text
+  Description: These classes are related to text styling and can be applied where
+  and as needed.
+*/
+.text-green {
+  color: #21a825; }
+
+.text-larger-12 {
+  font-size: 1.2em; }
+
+.text-larger-13 {
+  font-size: 1.2em; }

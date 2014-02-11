@@ -43,6 +43,8 @@
   .widget-hero .slides .slide {
     left: -5000em;
     position: absolute; }
+    .widget-hero .slides .slide h5 {
+      margin-bottom: 10px; }
     .widget-hero .slides .slide.active {
       position: relative;
       left: 0;
@@ -132,6 +134,12 @@
           margin: 10px 0 35px; }
   .widget-hero.copybased .slides .slide {
     padding-bottom: 30px; }
+    .widget-hero.copybased .slides .slide h2 {
+      margin-top: 0;
+      margin-bottom: 10px; }
+    .widget-hero.copybased .slides .slide h5 {
+      margin-bottom: 0;
+      color: #aaaaaa; }
   .widget-hero.copybased .controls li {
     background: #caced1; }
     .widget-hero.copybased .controls li.active {
@@ -145,4 +153,10 @@
       .widget-hero.hero .slides {
         position: relative; }
         .widget-hero.hero .slides .slide {
-          width: 100%; } }
+          width: 100%; }
+    .widget-hero.copybased {
+      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding: 0 15px; } }

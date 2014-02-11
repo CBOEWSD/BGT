@@ -14,18 +14,19 @@
     .breadcrumbs {
       float: none;
       width: auto; } }
-  .breadcrumbs li {
+  .breadcrumbs > li {
     display: inline-block;
-    padding: 0 10px; }
-    .breadcrumbs li:first-child {
+    padding: 0 10px;
+    position: relative; }
+    .breadcrumbs > li:first-child {
       padding-left: 0; }
-    .breadcrumbs li a {
+    .breadcrumbs > li > a {
       display: inline-block;
       position: relative;
       color: #135fad;
       text-decoration: underline;
       font-weight: 700; }
-      .breadcrumbs li a:after {
+      .breadcrumbs > li > a:after {
         display: block;
         position: absolute;
         content: '';
@@ -37,11 +38,29 @@
         right: -15px;
         top: 50%;
         margin-top: -3px; }
-    .breadcrumbs li.active a, .breadcrumbs li:last-child a {
+    .breadcrumbs > li.active > a, .breadcrumbs > li:last-child > a {
       color: #313538;
       text-decoration: none; }
-      .breadcrumbs li.active a:after, .breadcrumbs li:last-child a:after {
+      .breadcrumbs > li.active > a:after, .breadcrumbs > li:last-child > a:after {
         display: none; }
+    .breadcrumbs > li ul {
+      position: absolute;
+      z-index: 50;
+      left: -5000em;
+      background: #135fad;
+      width: 150px;
+      padding: 0;
+      border-top: 4px solid #12b7ed; }
+      .breadcrumbs > li ul li {
+        display: block;
+        padding: 0; }
+        .breadcrumbs > li ul li a {
+          display: block;
+          width: 100%;
+          padding: 6px 10px;
+          color: white; }
+    .breadcrumbs > li.show ul, .breadcrumbs > li:hover ul {
+      left: 10px; }
   @media screen and (max-width: 767px) {
     .breadcrumbs {
       display: none; } }

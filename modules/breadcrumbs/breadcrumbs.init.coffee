@@ -31,6 +31,14 @@ class Breadcrumbs
 
     self.$menus.bind 'click', self.click
     self.$menus.bind 'mouseenter', self.mouseenter
+    $(document).bind 'click', self.close
+
+  ###
+    ## this.close
+    Called to close any shown menus by removing `show` class
+  ###
+  close: ->
+    self.$menus.removeClass 'show'
 
   ###
     ## this.click
@@ -41,13 +49,14 @@ class Breadcrumbs
   ###
   click: (e) ->
     e.preventDefault()
+    e.stopPropagation()
 
     $this = $(@)
 
     if $this.hasClass 'show'
-      $this.removeClass 'show'
+      self.close()
     else
-      self.$menus.removeClass 'show'
+      self.close()
       $this.addClass 'show'
 
   ###
@@ -61,7 +70,7 @@ class Breadcrumbs
 
     return false if $this.hasClass 'show'
 
-    self.$menus.removeClass 'show'
+    self.close()
 
 
 ###

@@ -131,6 +131,15 @@ $3dsize: 6px;
     .slides {
       .slide {
         padding-bottom: 30px;
+
+        h2 {
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
+        h5 {
+          margin-bottom: 0;
+          color: darken($colorGrey2, 20%);
+        }
       }
     }
 

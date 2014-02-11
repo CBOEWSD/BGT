@@ -93,4 +93,29 @@ $classPrefix: '.icon-';
   &.up {
     background-position: -17px -51px;
   }
+
+  &.right {
+    background-position: -17px -51px;
+  }
+}
+
+#{$classPrefix}css-arrows {
+  > li, > a {
+    position: relative;
+    padding-left: 15px;
+
+    &:before {
+      display: inline-block; content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 6px 0 6px 7px;
+      border-color: transparent transparent transparent #000;
+      margin: 0 5px -2px 0;
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      margin-top: -6px;
+    }
+  }
 }

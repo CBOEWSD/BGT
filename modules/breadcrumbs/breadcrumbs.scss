@@ -14,15 +14,16 @@ $module: '.breadcrumbs';
   margin: 20px 0;
   list-style: none;
 
-  li {
+  >li {
     display: inline-block;
     padding: 0 10px;
+    position: relative;
 
     &:first-child {
       padding-left: 0;
     }
 
-    a {
+    >a {
       display: inline-block;
       position: relative;
       color: $colorBlue1;
@@ -46,13 +47,41 @@ $module: '.breadcrumbs';
       }
     }
     &.active, &:last-child {
-      a {
+      >a {
         color: $colorGrey1;
         text-decoration: none;
 
         &:after {
           display: none;
         }
+      }
+    }
+
+    ul {
+      position: absolute;
+      z-index: 50;
+      left: -5000em;
+      background: $colorBlue1;
+      width: 150px;
+      padding: 0;
+      border-top: 4px solid $colorBlue2;
+
+      li {
+        display: block;
+        padding: 0;
+
+        a {
+          display: block;
+          width: 100%;
+          padding: 6px 10px;
+          color: #fff;
+        }
+      }
+    }
+
+    &.active, &:hover {
+      ul {
+        left: 10px;
       }
     }
   }

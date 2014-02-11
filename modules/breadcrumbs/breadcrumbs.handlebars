@@ -4,9 +4,30 @@
       CBOE
     </a>
   </li>
-  <li class="active">
-    <a href="/">
-      Products
-    </a>
-  </li>
+  {{#each levels}}
+    <li>
+      <a href="{{this.link.url}}" title="{{this.link.text}}">
+        {{this.link.text}}
+      </a>
+
+      {{#if children}}
+      <ul>
+        <li>
+          <a href="{{this.link.url}}" title="{{this.link.text}} landing page">
+            {{this.link.text}}
+          </a>
+        </li>
+
+        {{#each children}}
+        <li>
+          <a href="{{this.link.url}}" title="{{this.link.text}}">
+            {{this.link.text}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+
+    </li>
+  {{/each}}
 </ul>

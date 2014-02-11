@@ -79,7 +79,7 @@ $module: '.breadcrumbs';
       }
     }
 
-    &.active, &:hover {
+    &.show, &:hover {
       ul {
         left: 10px;
       }

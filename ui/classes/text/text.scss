@@ -1,0 +1,25 @@
+/*
+  Class: text
+  Description: These classes are related to text styling and can be applied where
+  and as needed.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/scrollbars';
+
+$class: '.text-';
+
+#{$class}green {
+  color: $colorGreen1;
+}
+
+#{$class}larger-12 {
+  font: {
+    size: 1.2em;
+  }
+}#{$class}larger-13 {
+  font: {
+    size: 1.2em;
+  }
+}

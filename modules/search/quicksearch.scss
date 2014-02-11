@@ -44,6 +44,10 @@ $module: '.quicksearch';
       padding: 9px 15px !important;
       height: auto !important;
       border-color: $colorBlue1 !important;
+
+      &:hover {
+        background-color: lighten($colorBlue1, 10%) !important;
+      }
     }
     td.gsc-input {
       padding-right: 7px !important;

@@ -6,7 +6,6 @@
 @import './ui/base/settings';
 @import './ui/base/_includes/grid';
 @import './ui/base/_includes/compass/css3';
-@import './ui/base/_includes/animation/fadein';
 
 $module: 'article.content';
 
@@ -16,6 +15,99 @@ $module: 'article.content';
 
     &:hover, &:active {
       color: $colorGrey1;
+    }
+  }
+
+  table {
+    width: 100%;
+    margin: 25px 0;
+
+    font: {
+      weight: 700;
+    }
+
+    thead {
+      background: $colorBlue1;
+      color: #fff;
+
+      tr {
+        th {
+          padding: 8px 0;
+          text-transform: uppercase;
+
+          &:first-child {
+            border-right: 1px solid #fff;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-top: 1px solid #fff;
+
+        td {
+          padding: 8px 2px;
+          text-align: center;
+          border-left: 1px solid #fff;
+
+          &:first-child {
+            background: $colorGreen1;
+            color: #fff;
+            text-transform: uppercase;
+            border-left: none;
+          }
+        }
+
+        &:nth-child(even) {
+          background: lighten($colorGrey2, 7%);
+
+          td {
+            &:first-child {
+              background: lighten($colorGreen1, 15%);
+            }
+          }
+        }
+        &:nth-child(odd) {
+          background: lighten($colorGrey2, 1%);
+        }
+      }
+    }
+  }
+
+  /*
+    Overwrites for default restable styles
+  */
+  .tabletolist {
+    > li {
+      .titles {
+        background-color: $colorBlue1;
+      }
+
+      ul {
+        > li {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+          padding: 0;
+
+          .row_headers, .row_data {
+            display: table-cell;
+            width: 50%;
+            float: none;
+            padding: 10px;
+          }
+
+          .row_headers {
+            background-color: $colorGreen1;
+            color: #fff;
+            font: {
+              weight: 700;
+            }
+            text-transform: uppercase;
+          }
+        }
+      }
     }
   }
 }

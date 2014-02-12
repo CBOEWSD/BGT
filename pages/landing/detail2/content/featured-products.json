@@ -1,0 +1,47 @@
+{
+    "slides": [{
+        "title": "Featured Product:",
+        "text": "Binary Options",
+        "image": {
+            "src": "/ui/assets/images/featured-products/binary-options.jpg"
+        },
+        "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
+        "link": {
+            "text": "Learn More",
+            "url": "#"
+        }
+    }, {
+        "title": "Featured Product:",
+        "text": "Lorem ipsum dolor",
+        "image": {
+            "src": "/ui/assets/images/featured-products/binary-options.jpg"
+        },
+        "description": "uisque gravida congue consectetur. Nunc eget tincidunt enim. Mauris laoreet nunc arcu, in vehicula eros posuere a. Suspendisse potenti. Nam sapien lacus, bibendum ut odio auctor, elementum commodo dui.",
+        "link": {
+            "text": "Learn More",
+            "url": "#"
+        }
+    }, {
+        "title": "Featured Product:",
+        "text": "Binary Options",
+        "image": {
+            "src": "/ui/assets/images/featured-products/binary-options.jpg"
+        },
+        "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
+        "link": {
+            "text": "Learn More",
+            "url": "#"
+        }
+    }, {
+        "title": "Featured Product:",
+        "text": "Binary Options",
+        "image": {
+            "src": "/ui/assets/images/featured-products/binary-options.jpg"
+        },
+        "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
+        "link": {
+            "text": "Learn More",
+            "url": "#"
+        }
+    }]
+}

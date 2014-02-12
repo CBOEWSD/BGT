@@ -50,7 +50,7 @@ class SideNavigation
     mobile viewports as this feature is not required.
   ###
   scrollEvent: (e) ->
-    return true if Response.viewportW() < 768
+    return self.stickyOff() if Response.viewportW() < 768
     self.getParams()
     self.checkSticky(e)
 

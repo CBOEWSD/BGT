@@ -135,8 +135,8 @@ class ScrollOverflow
     We set a listen for the DOM change event and also start our interval
     checking for if a DOM event has changed something in the last second.
   ###
-  bindUp: ->
-    $('body').bind 'DOMSubtreeModified', self.changeEvent
+  bindUp: ->=
+    PubSub.subscribe 'DomChange', self.changeEvent
 
     # Log: method called
     self.log.add 'notification', 'bindUp method called, listening for DOMSubtreeModified.', 'body'

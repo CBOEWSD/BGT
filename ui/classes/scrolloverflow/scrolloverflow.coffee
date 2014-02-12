@@ -135,7 +135,7 @@ class ScrollOverflow
     We set a listen for the DOM change event and also start our interval
     checking for if a DOM event has changed something in the last second.
   ###
-  bindUp: ->=
+  bindUp: ->
     PubSub.subscribe 'DomChange', self.changeEvent
 
     # Log: method called

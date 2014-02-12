@@ -81,8 +81,12 @@ class PageRender
   # folder which may contain the page data. If we don't find
   # it then we'll return a 404.
   rootFolder: ->
-    pr.page.folderPath = pr.page.folderPath + '_root'
+    console.log pr.page.folderPath
+
+    pr.page.folderPath = pr.page.folderPath + '/_root'
     pr.page.indexPath = pr.page.folderPath + '/index.json'
+
+    console.log pr.page.folderPath
 
     # console.log pr.page
 

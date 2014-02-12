@@ -16,4 +16,5 @@ requirejs.config {
     pubsub: '/ui/libs/pubsub-js/src/pubsub'
     templates: '/ui/templates/templates'
     socketio: '/ui/libs/socket.io-client/dist/socket.io'
+    restable: '/ui/libs/ReStable/jquery.restable'
 }

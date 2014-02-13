@@ -24,3 +24,9 @@ Echo.init {
 ###
 PubSub.subscribe 'resize', ->
   Echo.render();
+
+PubSub.subscribe 'DomChange', ->
+  Echo.render()
+
+$(document).scroll ->
+  Echo.render()

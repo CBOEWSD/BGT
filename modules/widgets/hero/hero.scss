@@ -152,6 +152,25 @@ $3dsize: 6px;
         }
       }
     }
+
+    &.slim {
+      .slides {
+        .slide {
+          padding-bottom: 25px;
+
+          .link {
+            left: 0;
+            right: auto;
+            position:relative;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      .controls {
+        left: 0;
+      }
+    }
   }
 
   @media screen and (max-width: $screenSmallMax) {

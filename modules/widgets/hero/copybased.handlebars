@@ -1,4 +1,4 @@
-<div class="widget-hero copybased">
+<div class="widget-hero copybased {{#each classes}} {{this}} {{/each}}">
   <div class="slides">
     {{#each slides}}
     <div class="slide" data-slideid="{{@index}}">
@@ -10,8 +10,8 @@
       </h2>
 
       {{#if image}}
-      <img 
-      src="{{image.src}}" 
+      <img
+      src="{{image.src}}"
       alt="{{#if image.alt}}{{image.alt}}{{else}}{{text}}{{/if}}"
       class="hideonmobile">
       {{/if}}

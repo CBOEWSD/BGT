@@ -2,42 +2,63 @@
   Module: Content Block
   Description: A content block holder using an article node.
 */
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-article.content a {
-  color: #135fad; }
-  article.content a:hover, article.content a:active {
-    color: #313538; }
+article.content {
+  /*
+    Overwrites for default restable styles
+  */ }
+  article.content a {
+    color: #135fad; }
+    article.content a:hover, article.content a:active {
+      color: #313538; }
+  article.content .float-right {
+    float: right;
+    margin: 0 0 10px 10px; }
+  article.content table {
+    width: 100%;
+    margin: 25px 0;
+    font-weight: 700; }
+    article.content table thead {
+      background: #135fad;
+      color: white; }
+      article.content table thead tr th {
+        padding: 8px 0;
+        text-transform: uppercase; }
+        article.content table thead tr th:first-child {
+          border-right: 1px solid white; }
+    article.content table tbody tr {
+      border-top: 1px solid white; }
+      article.content table tbody tr td {
+        padding: 8px 2px;
+        text-align: center;
+        border-left: 1px solid white; }
+        article.content table tbody tr td:first-child {
+          background: #21a825;
+          color: white;
+          text-transform: uppercase;
+          border-left: none; }
+      article.content table tbody tr:nth-child(even) {
+        background: #efefef; }
+        article.content table tbody tr:nth-child(even) td:first-child {
+          background: #3dd93f; }
+      article.content table tbody tr:nth-child(odd) {
+        background: #e0e0e0; }
+  article.content .tabletolist > li .titles {
+    background-color: #135fad; }
+  article.content .tabletolist > li ul > li {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    padding: 0; }
+    article.content .tabletolist > li ul > li .row_headers, article.content .tabletolist > li ul > li .row_data {
+      display: table-cell;
+      width: 50%;
+      float: none;
+      padding: 10px; }
+    article.content .tabletolist > li ul > li .row_headers {
+      background-color: #21a825;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase; }
+  @media screen and (max-width: 950px) {
+    article.content .float-right.advert {
+      width: 50%; } }

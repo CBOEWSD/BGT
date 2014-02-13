@@ -1,0 +1,76 @@
+/*
+  Module: Weeklys Form
+  Description:
+*/
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.forms.weeklys {
+  background: #dddddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0 20px; }
+  .forms.weeklys h3 {
+    margin-top: 0;
+    margin-bottom: 10px; }
+  .forms.weeklys form {
+    display: table;
+    width: 100%;
+    table-layout: fixed; }
+    .forms.weeklys form .col {
+      display: table-cell;
+      width: 80px;
+      padding: 0 10px; }
+      .forms.weeklys form .col:first-child {
+        width: auto;
+        padding: 0 0; }
+      .forms.weeklys form .col input {
+        width: 100%; }
+  @media screen and (max-width: 767px) {
+    .forms.weeklys form {
+      display: block; }
+      .forms.weeklys form .col {
+        display: inline-block;
+        width: 49.4%;
+        padding: 0; }
+        .forms.weeklys form .col:first-child {
+          width: 100%;
+          margin-bottom: 5px; }
+        .forms.weeklys form .col button {
+          width: 100%; } }

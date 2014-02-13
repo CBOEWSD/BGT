@@ -10,7 +10,13 @@
     -o-box-shadow: inset 0 4px 0 #12b7ed, inset 0 0 0 1px #c4c4c4 !important;
     box-shadow: inset 0 4px 0 #12b7ed, inset 0 0 0 1px #c4c4c4 !important; }
     .widget:before {
-      display: none !important; } }
+      display: none !important; }
+    .widget.noborders {
+      -webkit-box-shadow: inset 0 4px 0 #12b7ed !important;
+      -moz-box-shadow: inset 0 4px 0 #12b7ed !important;
+      -ms-box-shadow: inset 0 4px 0 #12b7ed !important;
+      -o-box-shadow: inset 0 4px 0 #12b7ed !important;
+      box-shadow: inset 0 4px 0 #12b7ed !important; } }
 
 .widget {
   background: white;

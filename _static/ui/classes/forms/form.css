@@ -2,6 +2,14 @@
 	Class: Forms
 	Description: Generic styles and classes related forms.
 */
-input[type="text"], input[type="tel"], input[type="email"] {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px; }
+input {
+  border: 1px solid #c4c4c4;
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  input[type="text"], input[type="tel"], input[type="email"] {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px; }

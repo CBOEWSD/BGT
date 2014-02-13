@@ -52,6 +52,7 @@
       clear: both; }
     .view-threecol .main .col1, .view-threecol .main .col2, .view-threecol .main .col3 {
       display: table-cell;
+      vertical-align: top;
       padding: 0 15px; }
     .view-threecol .main .col1, .view-threecol .main .col3 {
       width: 200px; }

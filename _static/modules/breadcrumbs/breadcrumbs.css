@@ -61,6 +61,15 @@
           color: white; }
     .breadcrumbs > li.show ul, .breadcrumbs > li:hover ul {
       left: 10px; }
+  .breadcrumbs.fixed {
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    background: #dddddd;
+    z-index: 100;
+    margin: 0;
+    border-left: 20px #dddddd solid;
+    margin-left: -20px; }
   @media screen and (max-width: 767px) {
     .breadcrumbs {
       display: none; } }

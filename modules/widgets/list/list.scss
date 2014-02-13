@@ -44,6 +44,10 @@ $module: '.widget-list';
       a {
         display: block;
         @include clearfix();
+
+        &:hover, &:active {
+          color: $colorGrey1;
+        }
       }
 
       &.focus {
@@ -73,6 +77,10 @@ $module: '.widget-list';
 
         a {
           color: $colorBlue1;
+
+          &:hover, &:active {
+            color: $colorGrey1;
+          }
         }
 
         &:first-child {

@@ -75,6 +75,10 @@ $module: '.breadcrumbs';
           width: 100%;
           padding: 6px 10px;
           color: #fff;
+
+          &:hover, &:active {
+            background: lighten($colorBlue1, 10%);
+          }
         }
       }
     }
@@ -93,8 +97,19 @@ $module: '.breadcrumbs';
     background: $colorGrey2;
     z-index: 100;
     margin: 0;
-    border-left: 20px $colorGrey2 solid;
-    margin-left: -20px;
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      background: $colorGrey2;
+      height: 100%;
+      width: 20px;
+    }
+    &:before {
+      left: -20px;
+    }
   }
 
   @media screen and (max-width: $screenSmallMax) {

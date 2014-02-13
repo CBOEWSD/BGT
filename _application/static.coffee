@@ -46,8 +46,8 @@ module.exports =
       path = req.originalUrl.replace fileName, ''
 
       # If we are on a html (root) page, change to index and write to folder
-      if path == '/'
-        path = '/'+fileName+'/'
+      if fileName.indexOf('.') == -1
+        path = path+'/'+fileName+'/'
         fileName = 'index.html'
 
       # Create our directory path
@@ -68,7 +68,7 @@ module.exports =
         method options.staticPath + path + fileName, chunk, (err) ->
             throw err if err
 
-            console.log options.staticPath + path + fileName, 'appended!'
+            #console.log options.staticPath + path + fileName, 'appended!'
 
       # End process
       return write.call(res, chunk, encoding)

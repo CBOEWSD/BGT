@@ -144,6 +144,15 @@
     background: #caced1; }
     .widget-hero.copybased .controls li.active {
       background: #313538; }
+  .widget-hero.copybased.slim .slides .slide {
+    padding-bottom: 25px; }
+    .widget-hero.copybased.slim .slides .slide .link {
+      left: 0;
+      right: auto;
+      position: relative;
+      margin-top: 15px; }
+  .widget-hero.copybased.slim .controls {
+    left: 0; }
   @media screen and (max-width: 767px) {
     .widget-hero.hero {
       min-height: 0; }

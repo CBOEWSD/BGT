@@ -46,6 +46,10 @@ $3dsize: 6px;
           weight: 400;
           size: .9em;
         }
+
+        &:hover, &:active {
+          background: lighten($colorGreen3, 10%);
+        }
       }
     }
 

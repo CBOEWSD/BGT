@@ -6,7 +6,7 @@ Sed in elit quam. Vivamus massa urna, facilisis a odio pellentesque, lacinia con
 
 In a est nibh. Donec a interdum turpis. Donec ultrices ultricies tempor. Vivamus at orci at eros semper ullamcorper. Proin rhoncus tortor ut eros mollis, ut rutrum tellus gravida. Proin aliquam varius libero nec sollicitudin. Suspendisse vitae odio libero. Nam volutpat leo at magna commodo, a pretium nisl accumsan. Fusce augue augue, tristique vitae felis sed, placerat rhoncus tellus. Donec tristique est id felis ultricies, quis tempus sapien feugiat. Nullam nec tincidunt lorem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque et purus eu massa tristique adipiscing vitae quis massa.
 
-*For a list of closing times click on an option below:*
+<span class="text-grey">*For a list of closing times click on an option below:*</span>
 
 <div class="button blue">[Options on ETFs](#)</div> <div class="button grey">[Options on ETNs](#)</div>
 

@@ -18,6 +18,11 @@ $module: 'article.content';
     }
   }
 
+  .float-right {
+    float: right;
+    margin: 0 0 10px 10px;
+  }
+
   table {
     width: 100%;
     margin: 25px 0;
@@ -107,6 +112,14 @@ $module: 'article.content';
             text-transform: uppercase;
           }
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    .float-right {
+      &.advert {
+        width: 50%;
       }
     }
   }

@@ -1,5 +1,9 @@
 ## Extended listings for Equity, ETF, ETN and Index Weekly Options
 
+<div class="float-right advert hideonmobile">
+  <img src="/ui/assets/images/placeholders/advert-1.jpg">
+</div>
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac enim vel risus venenatis sodales. Proin eget felis tincidunt, molestie erat vel, consectetur nisi. Donec laoreet massa quis risus consectetur blandit. Maecenas quis velit quis dolor consequat bibendum id eu augue. Nam at nibh arcu. Maecenas viverra imperdiet diam vitae mattis. In et pretium magna. Maecenas vitae sapien erat. Morbi eleifend lectus turpis, ac adipiscing risus aliquet sed. Morbi a augue vel ipsum consequat ultrices et id lacus. Morbi sollicitudin sagittis dapibus. In ornare, massa id luctus facilisis, odio eros vulputate diam, at dictum turpis lectus ut libero. Suspendisse imperdiet risus quis lectus ultricies hendrerit. Nulla facilisi. Etiam rhoncus sollicitudin sem vitae ultrices.
 
 Aliquam vitae eros pretium, gravida tellus ut, feugiat mauris. In interdum nec nisi id tempor. Vestibulum quis ullamcorper tortor. Aliquam fringilla tempus odio nec rhoncus. Pellentesque blandit, metus sed fringilla blandit, nisi turpis rhoncus dui, vel lacinia justo magna ac augue. Fusce euismod lectus quis felis dignissim, sed ultricies lacus dictum. Etiam turpis lectus, vehicula in eleifend at, interdum vitae turpis. Maecenas sed vestibulum odio. Proin eget diam sit amet orci sollicitudin ultrices id quis dolor. Fusce tincidunt sed magna eget posuere. Vestibulum commodo, justo vitae cursus gravida, nibh lacus vestibulum purus, ut viverra magna magna ac tellus. Aenean porta risus id purus sollicitudin lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo elit molestie, commodo nisl a, varius mi. Nulla in condimentum augue, aliquet eleifend tortor.

@@ -36,7 +36,13 @@ class Breadcrumbs
     $(document).bind 'scroll', self.scrollEvent
     PubSub.subscribe 'DomChange', self.scrollEvent
 
+  ###
+    ## this.scrollEven
+    Fired on `document` scroll event. This method will update the
+    `params` object before checking if the module should be fixed.
+  ###
   scrollEvent: (e) ->
+    return false if Response.viewportW < 768
     self.getParams()
 
     if self.params.scrolled > self.params.fromTop
@@ -44,16 +50,29 @@ class Breadcrumbs
     else
       self.unFixMenu()
 
+  ###
+    ## this.fixMenu
+    This method will fix the menu to the top of the viewport
+    whilst also ensuring the parent element does not collapse entirely.
+  ###
   fixMenu: ->
     return false if self.$el.hasClass 'fixed'
 
     self.$el.parent().css 'height', self.$el.parent().height()
     self.$el.addClass 'fixed'
 
+  ###
+    ## this.unFixMenu
+    Will remove any attributes set by `this.fixMenu`
+  ###
   unFixMenu: ->
     self.$el.removeClass 'fixed'
     self.$el.parent().css 'height', ''
 
+  ###
+    ## this.getParams
+    Parameters required to calculate if and how the module should be fixed.
+  ###
   getParams: ->
     self.params = {}
     self.params.fromTop = self.$el.parent().offset().top

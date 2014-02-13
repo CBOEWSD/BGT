@@ -21,6 +21,10 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
     &:before {
       display: none !important;
     }
+
+    &.noborders {
+      @include box-shadow(inset 0 4px 0 $colorBlue2 !important);
+    }
   }
 }
 

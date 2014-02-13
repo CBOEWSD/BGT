@@ -20,7 +20,6 @@ $3dsize: 4px;
 
   .desktopExpander {
     height: 0;
-    //@include transition(ease-in-out height .5s);
     background: #fff;
     width: 100%;
     overflow: hidden;
@@ -127,6 +126,10 @@ $3dsize: 4px;
         text-decoration: none;
         font: {
           weight: 700;
+        }
+
+        &:hover, &:active {
+          background-color: lighten($colorBlue1, 4%);
         }
       }
 

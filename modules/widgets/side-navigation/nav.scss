@@ -12,6 +12,8 @@ $module: '.side-navigation';
 $pullSide: 6px;
 
 #{$module} {
+  z-index: 1;
+
   ul, li {
     list-style: none;
     margin: 0;

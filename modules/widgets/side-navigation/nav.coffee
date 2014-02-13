@@ -17,7 +17,7 @@ class SideNavigation
 
     # Add globals
     self.$el = $ el
-    self.offset = 20
+    self.offset = 50
     self.params = {}
     self.params.fromTop = self.$el.offset().top
 

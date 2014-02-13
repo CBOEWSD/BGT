@@ -33,6 +33,32 @@ class Breadcrumbs
     self.$menus.bind 'mouseenter', self.mouseenter
     $(document).bind 'click', self.close
 
+    $(document).bind 'scroll', self.scrollEvent
+    PubSub.subscribe 'DomChange', self.scrollEvent
+
+  scrollEvent: (e) ->
+    self.getParams()
+
+    if self.params.scrolled > self.params.fromTop
+      self.fixMenu()
+    else
+      self.unFixMenu()
+
+  fixMenu: ->
+    return false if self.$el.hasClass 'fixed'
+
+    self.$el.parent().css 'height', self.$el.parent().height()
+    self.$el.addClass 'fixed'
+
+  unFixMenu: ->
+    self.$el.removeClass 'fixed'
+    self.$el.parent().css 'height', ''
+
+  getParams: ->
+    self.params = {}
+    self.params.fromTop = self.$el.parent().offset().top
+    self.params.scrolled = $(document).scrollTop()
+
   ###
     ## this.close
     Called to close any shown menus by removing `show` class

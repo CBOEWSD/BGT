@@ -13,4 +13,8 @@ input {
       size: 12px;
     }
   }
+
+  border: 1px solid darken($colorGrey2, 10%);
+  padding: 5px;
+  @include border-radius(5px);
 }

@@ -88,6 +88,9 @@
                   }
                },
                {
+                  "widgets/forms/weeklys":""
+               },
+               {
                   "widgets/graphpc/graphpc":""
                }
             ]

@@ -122,5 +122,16 @@ $module: 'article.content';
         width: 50%;
       }
     }
+
+    .button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+
+      a {
+        display: block;
+      }
+    }
   }
 }

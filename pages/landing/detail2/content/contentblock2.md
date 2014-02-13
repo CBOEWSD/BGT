@@ -8,6 +8,6 @@ In a est nibh. Donec a interdum turpis. Donec ultrices ultricies tempor. Vivamus
 
 *For a list of closing times click on an option below:*
 
-[Options on ETFs](#) [Options on ETNs](#)
+<div class="button blue">[Options on ETFs](#)</div> <div class="button grey">[Options on ETNs](#)</div>
 
 Current Listing and expiration dates are noted on [AVAILABLE WEEKLYS](#).

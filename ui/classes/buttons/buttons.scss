@@ -22,6 +22,16 @@ $class: '.button';
   border: none;
   @include box-shadow(1px 1px 0 rgba(0,0,0,.1));
 
+  a {
+    color: #fff !important;
+    font: {
+      weight: 700;
+    }
+    display: inline-block;
+    margin: -5px -20px;
+    padding: 5px 20px;
+  }
+
   &:hover {
     background: lighten($colorBlue1, 10%);
     text-decoration: none;
@@ -44,5 +54,13 @@ $class: '.button';
       &:hover {
         background: darken(#fff, 10%);
       }
+  }
+
+  &.grey {
+    background: lighten($colorGrey1, 30%);
+
+    &:hover {
+      background: $colorGrey1;
+    }
   }
 }

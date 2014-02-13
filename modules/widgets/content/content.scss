@@ -10,6 +10,8 @@
 $module: 'article.content';
 
 #{$module} {
+  word-wrap: break-word;
+
   a {
     color: $colorBlue1;
 

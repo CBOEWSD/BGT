@@ -42,7 +42,7 @@ class Breadcrumbs
     `params` object before checking if the module should be fixed.
   ###
   scrollEvent: (e) ->
-    return false if Response.viewportW < 768
+    return true if Response.viewportW < 768
     self.getParams()
 
     if self.params.scrolled > self.params.fromTop
@@ -56,7 +56,7 @@ class Breadcrumbs
     whilst also ensuring the parent element does not collapse entirely.
   ###
   fixMenu: ->
-    return false if self.$el.hasClass 'fixed'
+    return true if self.$el.hasClass 'fixed'
 
     self.$el.parent().css 'height', self.$el.parent().height()
     self.$el.addClass 'fixed'

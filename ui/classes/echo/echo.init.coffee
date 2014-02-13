@@ -27,6 +27,3 @@ PubSub.subscribe 'resize', ->
 
 PubSub.subscribe 'DomChange', ->
   Echo.render()
-
-$(document).scroll ->
-  Echo.render()

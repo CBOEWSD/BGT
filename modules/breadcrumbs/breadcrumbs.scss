@@ -75,6 +75,10 @@ $module: '.breadcrumbs';
           width: 100%;
           padding: 6px 10px;
           color: #fff;
+
+          &:hover, &:active {
+            background: lighten($colorBlue1, 10%);
+          }
         }
       }
     }

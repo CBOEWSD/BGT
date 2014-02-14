@@ -23,9 +23,6 @@ class PublishScroll
     $(document).bind 'scroll', self.shouldFire
     $(document).bind 'touchmove', self.shouldFire
 
-    # Check if flag has bee set
-    self.periodicCheck()
-
   ###
     ## `this.shouldFire`
     Scroll event fired immediately. Scroll is usually heavily

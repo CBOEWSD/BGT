@@ -21,9 +21,9 @@ class PublishScroll
 
     # Listen for scroll
     $(document).bind 'scroll', self.shouldFire
-    $(document).bind 'touchmove', self.shouldFire
-    $(document).bind 'tochend', self.shouldFire
-    $(document).bind 'gesturechange', self.shouldFire
+    $(document).on 'touchmove', self.shouldFire
+    $(document).on 'tochend', self.shouldFire
+    $(document).on 'gesturechange', self.shouldFire
 
     # Check if flag has bee set
     self.periodicCheck()

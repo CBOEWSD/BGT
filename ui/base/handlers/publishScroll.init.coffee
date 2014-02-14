@@ -22,6 +22,7 @@ class PublishScroll
     # Listen for scroll
     $(document).bind 'scroll', self.shouldFire
     $(document).bind 'touchmove', self.shouldFire
+    $(document).bind 'tochend', self.shouldFire
     $(document).bind 'gesturechange', self.shouldFire
 
     # Check if flag has bee set
@@ -33,6 +34,7 @@ class PublishScroll
     dependant upon timing so we have no delay in this event.
   ###
   shouldFire: (e) ->
+    alert 'fired'
     self.fireIt = true
 
   ###
@@ -42,11 +44,12 @@ class PublishScroll
   ###
   periodicCheck: ->
     setInterval ->
+      console.log 'checking'
       if self.fireIt
         PubSub.publish 'scroll'
         $(document).trigger 'contScroll'
         self.fireIt = false
-    , 50
+    , 500
 
 # Add an events object to global
 window.events = window.events or {}

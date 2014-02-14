@@ -35,6 +35,7 @@ class PublishScroll
   ###
   shouldFire: (e) ->
     self.fireIt = true
+    $(document).trigger 'contScroll'
 
   ###
     ## `this.periodicCheck`

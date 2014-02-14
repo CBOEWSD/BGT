@@ -34,7 +34,6 @@ class PublishScroll
     dependant upon timing so we have no delay in this event.
   ###
   shouldFire: (e) ->
-    alert 'fired'
     self.fireIt = true
 
   ###

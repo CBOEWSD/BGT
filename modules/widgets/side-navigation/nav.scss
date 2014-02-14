@@ -12,6 +12,7 @@ $module: '.side-navigation';
 $pullSide: 6px;
 
 #{$module} {
+  -webkit-transform: translateZ(0px);
   z-index: 1;
 
   ul, li {

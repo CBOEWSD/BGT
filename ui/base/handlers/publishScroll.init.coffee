@@ -25,31 +25,13 @@ class PublishScroll
     $(document).on 'tochend', self.shouldFire
     $(document).on 'gesturechange', self.shouldFire
 
-    # Check if flag has bee set
-    self.periodicCheck()
-
   ###
     ## `this.shouldFire`
     Scroll event fired immediately. Scroll is usually heavily
     dependant upon timing so we have no delay in this event.
   ###
   shouldFire: (e) ->
-    self.fireIt = true
     $(document).trigger 'contScroll'
-
-  ###
-    ## `this.periodicCheck`
-    Will check every second to see
-    if the event should be published.
-  ###
-  periodicCheck: ->
-    setInterval ->
-      console.log 'checking'
-      if self.fireIt
-        PubSub.publish 'scroll'
-        $(document).trigger 'contScroll'
-        self.fireIt = false
-    , 500
 
 # Add an events object to global
 window.events = window.events or {}

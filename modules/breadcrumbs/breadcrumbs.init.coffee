@@ -42,8 +42,8 @@ class Breadcrumbs
     `params` object before checking if the module should be fixed.
   ###
   scrollEvent: (e) ->
-    alert 'firing event!!!!!'
-    return true if Response.viewportW < 768
+    alert 'firing event!!!!! ', Response.viewportW()
+    return true if Response.viewportW() < 768
     self.getParams()
 
     if self.params.scrolled > self.params.fromTop

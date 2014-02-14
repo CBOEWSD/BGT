@@ -10,6 +10,8 @@
 $module: '.breadcrumbs';
 
 #{$module} {
+  -webkit-transform: translateZ(0px);
+
   @include column(12);
   margin: 20px 0;
   list-style: none;

@@ -15,6 +15,7 @@ body {
   }
   background: $colorBlue1;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: none;
 }
 
 .body {

@@ -34,6 +34,8 @@ class SideNavigation
 
     PubSub.subscribe 'scroll', self.scrollEvent
     PubSub.subscribe 'DomChange', self.scrollEvent
+    $(document).bind 'touchmove', self.scrollEvent
+    $(document).bind 'gesturechange', self.scrollEvent
 
   ###
     ## this.toggleMenu

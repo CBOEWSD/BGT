@@ -32,8 +32,8 @@ class SideNavigation
 
     self.$topAnchors.bind 'click touchstart', self.toggleMenu
 
-    PubSub.subscribe 'scroll', self.scrollEvent
     PubSub.subscribe 'DomChange', self.scrollEvent
+    $(document).bind 'contScroll', self.scrollEvent
 
   ###
     ## this.toggleMenu

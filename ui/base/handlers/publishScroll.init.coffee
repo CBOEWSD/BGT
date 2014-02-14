@@ -44,8 +44,9 @@ class PublishScroll
     setInterval ->
       if self.fireIt
         PubSub.publish 'scroll'
+        $(document).trigger 'contScroll'
         self.fireIt = false
-    , 10
+    , 50
 
 # Add an events object to global
 window.events = window.events or {}

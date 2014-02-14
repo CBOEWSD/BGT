@@ -35,6 +35,7 @@ class Breadcrumbs
 
     PubSub.subscribe 'DomChange', self.scrollEvent
     PubSub.subscribe 'scroll', self.scrollEvent
+    $(document).bind 'touchmove', self.scrollEvent
 
   ###
     ## this.scrollEven

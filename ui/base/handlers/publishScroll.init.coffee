@@ -22,6 +22,7 @@ class PublishScroll
     # Listen for scroll
     $(document).bind 'scroll', self.shouldFire
     $(document).bind 'touchmove', self.shouldFire
+    $(document).bind 'gesturechange', self.shouldFire
 
   ###
     ## `this.shouldFire`

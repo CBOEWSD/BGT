@@ -35,7 +35,6 @@ class Breadcrumbs
 
     PubSub.subscribe 'DomChange', self.scrollEvent
     $(document).bind 'contScroll', self.scrollEvent
-    #$(document).on 'touchmove', self.scrollEvent
 
   ###
     ## this.scrollEven
@@ -43,7 +42,6 @@ class Breadcrumbs
     `params` object before checking if the module should be fixed.
   ###
   scrollEvent: (e) ->
-    alert 'firing event!!!!! ' + Response.viewportW()
     return true if Response.viewportW() < 768
     self.getParams()
 

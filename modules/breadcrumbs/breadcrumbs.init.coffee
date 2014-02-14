@@ -33,9 +33,8 @@ class Breadcrumbs
     self.$menus.bind 'mouseenter', self.mouseenter
     $(document).bind 'click', self.close
 
-    $(document).bind 'scroll', self.scrollEvent
     PubSub.subscribe 'DomChange', self.scrollEvent
-    $(document).bind 'touchmove', self.scrollEvent
+    PubSub.subscribe 'scroll', self.scrollEvent
 
   ###
     ## this.scrollEven

@@ -9,6 +9,7 @@
 ###
 
 class PublishScroll
+  self = undefined
 
   ###
     ## Constructor

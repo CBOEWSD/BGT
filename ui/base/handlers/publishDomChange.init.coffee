@@ -3,8 +3,8 @@
   Allows for modules or classes to subscribe for the body
   `DOMSubtreeModified` event to be fired periodically.
   This will fire when any DOM node is change in the body.
-  A good example of this is when an image is loaded using EchoJS. 
-  This does a number of things.  Primarily, it allows for 
+  A good example of this is when an image is loaded using EchoJS.
+  This does a number of things.  Primarily, it allows for
   periodic checking and firing as opposed to continuous firing.
   The event that subscriberrs are listening for will only happen
   once a second and prevent a performance issue for
@@ -12,6 +12,7 @@
 ###
 
 class DomChange
+  self = undefined
 
   ###
     ## Constructor

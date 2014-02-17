@@ -11,6 +11,40 @@
 $module: '.snapshot';
 
 #{$module} {
+  .graph {
+    position: relative;
+    height: 125px;
+
+    .siderail {
+      background: $colorGrey1;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 40px;
+      display: table;
+
+      li {
+        display: table-row;
+        width: 100%;
+        color: lighten($colorGrey1, 30%);
+        font: {
+          weight: 700;
+        }
+
+        a {
+          display: table-cell;
+          color: #fff;
+          padding: 0 5px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
   h3 {
     margin: 20px 0;
   }

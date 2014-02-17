@@ -25,10 +25,6 @@ class PublishScroll
     $(document).on 'tochend', self.shouldFire
     $(document).on 'gesturechange', self.shouldFire
 
-    setInterval ->
-      alert 'checking...'
-    , 1000
-
   ###
     ## `this.shouldFire`
     Scroll event fired immediately. Scroll is usually heavily

@@ -109,6 +109,7 @@ $module: '.snapshot';
     .graph {
       left: 0;
       position: relative;
+      @include fadeIn( 1s );
     }
     .loading {
       display: none;

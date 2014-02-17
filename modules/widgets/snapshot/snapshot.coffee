@@ -8,7 +8,7 @@ class Snapshot
   self = undefined
 
   ###
-    ## Construcotr
+    ## Constructor
   ###
   constructor: ($el) ->
     self = @

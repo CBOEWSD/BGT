@@ -7,13 +7,18 @@
 @import './ui/base/_includes/compass/css3';
 @import './ui/base/_includes/grid';
 @import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/fadein';
 
 $module: '.snapshot';
 
 #{$module} {
   .graph {
     position: relative;
-    height: 125px;
+    height: 170px;
+
+    /* settings while loading */
+    position: absolute;
+    left: -5000em;
 
     .siderail {
       background: $colorGrey1;
@@ -24,11 +29,13 @@ $module: '.snapshot';
       left: 0;
       top: 0;
       height: 100%;
-      width: 40px;
-      display: table;
+      width: 45px;
+      z-index: 1;
 
       li {
-        display: table-row;
+        display: block;
+        position:relative;
+        height: 20%;
         width: 100%;
         color: lighten($colorGrey1, 30%);
         font: {
@@ -36,17 +43,83 @@ $module: '.snapshot';
         }
 
         a {
-          display: table-cell;
+          display: block;
+          height: 100%;
           color: #fff;
           padding: 0 5px;
           vertical-align: middle;
+          position: relative;
+          line-height: 34px;
+
+          &:hover {
+            background: lighten($colorGrey1, 5%);
+          }
+
+          &.active {
+            background: $colorBlue1;
+
+            &:after {
+              content: ''; display: block; position: absolute;
+              box-sizing: border-box;
+              top: 0;
+              left: 100%;
+              width: 0;
+              //height: 100%;
+              border-style: solid;
+              border-width: 17px 0 17px 9px;
+              border-color: transparent transparent transparent $colorBlue1;
+            }
+          }
+        }
+      }
+    }
+
+    .images {
+      text-align: right;
+
+      .image {
+        position: absolute; left: -5000em;
+
+        img {
+          display: inline-block;
+        }
+
+        &.active {
+          position: relative;
+          left: 0;
+          @include fadeIn( 1s );
         }
       }
     }
   }
 
+  .loading {
+    width: 100%;
+    vertical-align: middle;
+    height: 170px;
+    text-align: center;
+    line-height: 170px;
+    font: {
+      weight: 700;
+    }
+    color: lighten($colorGrey1, 30%);
+  }
+
+  &.loaded {
+    .graph {
+      left: 0;
+      position: relative;
+    }
+    .loading {
+      display: none;
+    }
+  }
+
   h3 {
-    margin: 20px 0;
+    margin: 4px 0;
+    font: {
+      size: 1em !important;
+    }
   }
 
   .volume {

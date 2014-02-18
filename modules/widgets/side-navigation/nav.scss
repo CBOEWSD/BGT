@@ -14,6 +14,10 @@ $pullSide: 6px;
 #{$module} {
   -webkit-transform: translateZ(0px);
   z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  background: #fff;
 
   ul, li {
     list-style: none;

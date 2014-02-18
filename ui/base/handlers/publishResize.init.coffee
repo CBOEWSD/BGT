@@ -10,6 +10,7 @@
 ###
 
 class PublishResize
+  self = undefined
 
   ###
     ## Constructor
@@ -21,7 +22,7 @@ class PublishResize
     self.fireIt = false
 
     # Listen for resize
-    $( window ).resize(self.shouldFire)
+    $( window ).bind 'resize', self.shouldFire
 
     # Check if flag has bee set
     self.periodicCheck()

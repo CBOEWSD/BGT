@@ -61,7 +61,6 @@ class SideNavigation
   ###
   getParams: () ->
     $parent = self.$el.parent()
-    self.params.width = $parent.width()
     self.params.height = self.$el.height()
     self.params.pHeight = $parent.height()
     self.params.pTop = $parent.offset().top
@@ -72,15 +71,19 @@ class SideNavigation
     Check if element should be set to sticky or not
   ###
   checkSticky: (e) ->
-    if self.params.scrollTop + self.offset > self.params.pTop
-      position = self.params.scrollTop - self.params.pTop + self.params.height
+    if self.params.pTop + self.offset < self.params.scrollTop
+      moveTo = self.params.scrollTop - self.params.pTop + self.offset
 
-      if self.params.pHeight - self.offset < position
-        difference = self.params.pHeight - position
-
-      self.stickyOn(difference)
+      if moveTo + self.params.height > self.params.pHeight
+        self.stickyOn(self.params.pHeight - self.params.height)
+      else
+        self.stickyOn(moveTo)
     else
       self.stickyOff()
+
+
+
+
 
   ###
     ## this.stickyOn
@@ -91,9 +94,8 @@ class SideNavigation
   ###
   stickyOn: (difference) ->
     self.$el
-    .css('position', 'fixed')
+    .css('position', 'absolute')
     .css('top', if difference? then difference else self.offset)
-    .css('width', self.params.width)
 
   ###
     ## this.stickOff

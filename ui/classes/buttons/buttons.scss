@@ -22,6 +22,10 @@ $class: '.button';
   border: none;
   @include box-shadow(1px 1px 0 rgba(0,0,0,.1));
 
+  &:hover {
+    color: #fff;
+  }
+
   a {
     color: #fff !important;
     font: {

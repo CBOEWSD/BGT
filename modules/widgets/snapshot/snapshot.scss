@@ -12,6 +12,7 @@
 $module: '.snapshot';
 
 #{$module} {
+
   .graph {
     position: relative;
     padding: 0 1px 1px 1px;
@@ -21,6 +22,10 @@ $module: '.snapshot';
     position: absolute;
     left: -5000em;
     width: 200px;
+
+    .button {
+      position: absolute; top: -46px; right: 0;
+    }
 
     .siderail {
       display: table;

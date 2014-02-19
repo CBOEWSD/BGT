@@ -21,7 +21,7 @@ class PublishScroll
     self.fireIt = false
 
     # Listen for scroll
-    $(document).bind 'scroll', self.shouldFire
+    $(window).on 'scroll', self.shouldFire
     $(document).on 'touchmove', self.shouldFire
     $(document).on 'tochend', self.shouldFire
     $(document).on 'gesturechange', self.shouldFire

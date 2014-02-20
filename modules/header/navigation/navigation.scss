@@ -23,15 +23,16 @@ $3dsize: 4px;
     background: #fff;
     width: 100%;
     overflow: hidden;
+    border-bottom: $3dsize solid #ccc;
 
-    &:after {
+    /*&:after {
       display: block; content: '';
       position: absolute;
       bottom: 0; left: 0;
       width: 100%;
       height: $3dsize;
       background: #ccc;
-    }
+    }*/
 
     .controls {
       position: relative;
@@ -58,7 +59,7 @@ $3dsize: 4px;
           margin-top: -22px;
         }
         &.close {
-          bottom: 0;
+          bottom: -$3dsize;
           left: 50%;
           background: $colorBlue1;
           border-bottom: $3dsize solid $colorBlue2;
@@ -172,7 +173,7 @@ $3dsize: 4px;
 
       &>ul {
         position: absolute;
-        background: #fff;
+        background: none;
         padding: 15px 80px 5px;
         width: 100%;
         left: -5000em;

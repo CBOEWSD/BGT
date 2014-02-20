@@ -21,10 +21,13 @@ class PublishScroll
     self.fireIt = false
 
     # Listen for scroll
-    $(document).bind 'scroll', self.shouldFire
+    $(window).on 'scroll', self.shouldFire
     $(document).on 'touchmove', self.shouldFire
     $(document).on 'tochend', self.shouldFire
     $(document).on 'gesturechange', self.shouldFire
+
+    # Periodic check
+    self.periodicCheck()
 
   ###
     ## `this.shouldFire`
@@ -32,7 +35,25 @@ class PublishScroll
     dependant upon timing so we have no delay in this event.
   ###
   shouldFire: (e) ->
+    # This event is a single continous event and will fire each and every
+    # time there is some kind of scroll or touch event.
     $(document).trigger 'contScroll'
+
+    # This will trigger will fire less often scroll events as we
+    # do not always need to track every scroll type event.
+    self.fireIt = true
+
+  ###
+    ## `this.periodicCheck`
+    Will check every second to see
+    if the event should be published.
+  ###
+  periodicCheck: ->
+    setInterval ->
+      if self.fireIt
+        PubSub.publish 'GlobalScroll'
+        self.fireIt = false
+    , 3000
 
 # Add an events object to global
 window.events = window.events or {}

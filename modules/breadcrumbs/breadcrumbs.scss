@@ -10,7 +10,6 @@
 $module: '.breadcrumbs';
 
 #{$module} {
-  -webkit-transform: translateZ(0px);
 
   @include column(12);
   margin: 20px 0;
@@ -48,15 +47,24 @@ $module: '.breadcrumbs';
         margin-top: -3px;
       }
     }
-    &.active, &:last-child {
+
+    @mixin active() {
       >a {
-        color: $colorGrey1;
+        color: $colorGrey1 !important;
         text-decoration: none;
 
         &:after {
           display: none;
         }
       }
+    }
+
+    &.active, &:last-child {
+      @include active;
+    }
+
+    &.last-child {
+      @include active;
     }
 
     ul {

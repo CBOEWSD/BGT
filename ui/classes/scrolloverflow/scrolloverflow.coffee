@@ -115,10 +115,8 @@ class ScrollOverflow
       $inside.removeClass('shown')
 
       # Get numbers
-      $paddingVert = parseInt($this.css('padding-top')) + parseInt($this.css('padding-bottom'))
-      newHeight = $this.innerHeight() - $paddingVert
-      $paddingHoriz = parseInt($this.css('padding-right')) + parseInt($this.css('padding-left'))
-      newWidth = $this.innerWidth() - $paddingHoriz
+      newHeight = $this.height()
+      newWidth = $this.width()
 
       # If the returned result is 0 we'll not set a height param
       if newHeight == 0
@@ -137,6 +135,7 @@ class ScrollOverflow
   ###
   bindUp: ->
     PubSub.subscribe 'DomChange', self.changeEvent
+    PubSub.subscribe 'GlobalScroll', self.changeEvent
 
     # Log: method called
     self.log.add 'notification', 'bindUp method called, listening for DOMSubtreeModified.', 'body'

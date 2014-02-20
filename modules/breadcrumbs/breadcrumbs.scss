@@ -47,9 +47,9 @@ $module: '.breadcrumbs';
         margin-top: -3px;
       }
     }
-    &.active, &:last-child {
+    &.active, &:last-child, &.last-child {
       >a {
-        color: $colorGrey1;
+        color: $colorGrey1 !important;
         text-decoration: none;
 
         &:after {

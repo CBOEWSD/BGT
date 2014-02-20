@@ -47,7 +47,8 @@ $module: '.breadcrumbs';
         margin-top: -3px;
       }
     }
-    &.active, &:last-child, &.last-child {
+
+    @mixin active() {
       >a {
         color: $colorGrey1 !important;
         text-decoration: none;
@@ -56,6 +57,14 @@ $module: '.breadcrumbs';
           display: none;
         }
       }
+    }
+
+    &.active, &:last-child {
+      @include active;
+    }
+
+    &.last-child {
+      @include active;
     }
 
     ul {

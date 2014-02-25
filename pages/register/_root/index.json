@@ -12,6 +12,19 @@
          }
       ],
 
+      "col1": [
+        {
+          "widgets/login/body": {
+            "before": {
+              "widgets/content/content": "register/before.md"
+            },
+            "after": {
+              "widgets/content/content": "register/after.md"
+            }
+          }
+        }
+      ],
+
       "bottomspan": [
         {
           "widgets/widget":"bottomspan/widget.json"

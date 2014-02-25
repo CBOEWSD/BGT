@@ -7,19 +7,6 @@
 @import './ui/base/_includes/compass/css3';
 @import './ui/base/_includes/grid';
 
-input {
-  &[type="text"], &[type="tel"], &[type="email"] {
-    font: {
-      family: 'Open Sans', sans-serif;
-      size: 12px;
-    }
-  }
-
-  border: 1px solid darken($colorGrey2, 10%);
-  padding: 5px;
-  @include border-radius(5px);
-}
-
 form {
 
   fieldset {
@@ -40,7 +27,26 @@ form {
       weight: 700;
       size: .9em;
     }
-    margin: 0 0 5px 0;
+    margin: 5px 0;
+  }
+
+  input {
+    &[type="text"], &[type="tel"], &[type="email"] {
+      font: {
+        family: 'Open Sans', sans-serif;
+        size: 12px;
+      }
+    }
+
+    &[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    border: 1px solid darken($colorGrey2, 10%);
+    padding: 5px;
+    @include border-radius(5px);
   }
 
 }

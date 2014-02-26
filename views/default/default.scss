@@ -21,7 +21,9 @@ $view: '.view-default';
 
     .row {
       &:first-child { margin-top: 0; }
-      &:last-child { margin-bottom: 0; }
+      /* Class is for ie8 targetting */
+      &.last-child { margin-bottom: 0; }
+      &:last-child { margin-bottom: 0 ; }
     }
 
     .column1, .column2, .column50 {

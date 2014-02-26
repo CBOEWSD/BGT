@@ -293,7 +293,7 @@ class Navigation
       # Take the base swipe settings and modify for purpose
       settings = self.swipeSettings
       settings.tap = self.mobileToggle
-      settings.allowPageScroll = 'none'
+      settings.allowPageScroll = 'vertical'
       $closeOverlay.swipe settings
 
       # Log: Creation event

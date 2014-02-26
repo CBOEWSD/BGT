@@ -389,7 +389,7 @@ class Navigation
           # Wait short release before removing
           setTimeout ->
             $el.removeClass('removetrans').css('transform', '')
-            $('body').removeClass('showMobileMenu')
+            $('html').removeClass('showMobileMenu')
 
           , 50
         else

@@ -18,7 +18,7 @@ $width: 70%;
 
 @media screen and (max-width: $screenSmallMax) {
   #{$module} {
-    position: absolute;
+    position: fixed;
     overflow-y: hidden;
     @include transform(translateX(-100%));
     //left: 0; // temp display
@@ -96,16 +96,21 @@ $width: 70%;
       li {
         display: block;
         width: 100%;
+        border-bottom: none!important;
 
         a {
-          color: $colorBlue1;
+          color: $colorBlue1!important;
           font: {
             size: 1.2em;
-            weight: 700;
+            weight: 700!important;
           }
-          display: block;
+          display: block!important;
           border-bottom: 1px solid #719fce;
-          padding: 15px 20px 15px 30px;
+          padding: 15px 20px 15px 30px!important;
+
+          &:hover {
+            background: none;
+          }
         }
 
         .landing {
@@ -172,6 +177,10 @@ $width: 70%;
     left: 0;
     position: relative;
     -webkit-backface-visibility: hidden;
+  }
+
+  html.showMobileMenu {
+    overflow-y: hidden;
   }
 
 

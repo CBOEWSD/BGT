@@ -300,7 +300,7 @@ class Navigation
       self.log.add 'notification', 'Close overlay created, this is created only once.', $closeOverlay
 
     setTimeout ->
-      $('body')
+      $('html')
         .toggleClass('showMobileMenu')
     , 50
 

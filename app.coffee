@@ -109,6 +109,7 @@ if isProd
   app.enable('view cache')
 
 # ### Configure environments settings
+
 app.set 'port', process.env.PORT || pkg.server.port || 3000
 app.set 'views', __dirname + '/views'
 app.engine 'handlebars', exphbs

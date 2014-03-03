@@ -3,6 +3,7 @@
   Description: A content block holder using an article node.
 */
 article.content {
+  word-wrap: break-word;
   /*
     Overwrites for default restable styles
   */ }
@@ -61,4 +62,11 @@ article.content {
       text-transform: uppercase; }
   @media screen and (max-width: 950px) {
     article.content .float-right.advert {
-      width: 50%; } }
+      width: 50%; }
+    article.content .button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0; }
+      article.content .button a {
+        display: block; } }

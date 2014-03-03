@@ -4,7 +4,7 @@
 */
 @media screen and (max-width: 767px) {
   .navigation {
-    position: absolute;
+    position: fixed;
     overflow-y: hidden;
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
@@ -68,14 +68,17 @@
         left: 5%; }
       .navigation .menu li {
         display: block;
-        width: 100%; }
+        width: 100%;
+        border-bottom: none !important; }
         .navigation .menu li a {
-          color: #135fad;
+          color: #135fad !important;
           font-size: 1.2em;
-          font-weight: 700;
-          display: block;
+          font-weight: 700 !important;
+          display: block !important;
           border-bottom: 1px solid #719fce;
-          padding: 15px 20px 15px 30px; }
+          padding: 15px 20px 15px 30px !important; }
+          .navigation .menu li a:hover {
+            background: none; }
         .navigation .menu li .landing a {
           color: #21a825;
           padding-left: 20px; }
@@ -86,7 +89,7 @@
       .navigation .menu > li > a:hover:before {
         display: none; }
       .navigation .menu > li > ul, .navigation .menu > li > ul.hasthird {
-        position: absolute;
+        position: fixed;
         overflow-y: auto;
         top: 0;
         margin-left: -100%;
@@ -115,6 +118,8 @@
     left: 0;
     position: relative;
     -webkit-backface-visibility: hidden; }
+  html.showMobileMenu {
+    overflow-y: hidden; }
   .mobileNavOverlay {
     position: absolute;
     top: 0;

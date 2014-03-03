@@ -50,16 +50,16 @@
     height: 0;
     background: white;
     width: 100%;
-    overflow: hidden; }
-    .navigation .desktopExpander:after {
-      display: block;
-      content: '';
+    overflow: hidden;
+    border-bottom: 4px solid #cccccc;
+    /*&:after {
+      display: block; content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
+      bottom: 0; left: 0;
       width: 100%;
-      height: 4px;
-      background: #cccccc; }
+      height: $3dsize;
+      background: #ccc;
+    }*/ }
     .navigation .desktopExpander .controls {
       position: relative;
       width: 1100px;
@@ -94,7 +94,7 @@
           top: 50%;
           margin-top: -22px; }
         .navigation .desktopExpander .controls div.close {
-          bottom: 0;
+          bottom: -4px;
           left: 50%;
           background: #135fad;
           border-bottom: 4px solid #12b7ed;
@@ -155,6 +155,8 @@
         padding: 10px 10px \9;
         text-decoration: none;
         font-weight: 700; }
+        .navigation .menu > li > a:hover, .navigation .menu > li > a:active {
+          background-color: #156abf; }
       .navigation .menu > li.shown > a {
         background: white;
         color: #313538; }
@@ -189,7 +191,7 @@
         padding: 0; }
       .navigation .menu > li > ul {
         position: absolute;
-        background: white;
+        background: none;
         padding: 15px 80px 5px;
         width: 100%;
         left: -5000em; }
@@ -213,17 +215,16 @@
             .navigation .menu > li > ul > li {
               float: none;
               width: auto; } }
-          @media screen and (min-width: 767px) {
-            .navigation .menu > li > ul > li.menu li {
-              border-bottom: 1px solid #d8dbdd;
-              font-size: 0.9em;
-              display: block; }
-              .navigation .menu > li > ul > li.menu li a {
-                font-weight: 400;
-                color: #313538;
-                text-decoration: none;
-                display: block;
-                padding: 5px 0; } }
+          .navigation .menu > li > ul > li.menu li {
+            border-bottom: 1px solid #d8dbdd;
+            font-size: 0.9em;
+            display: block; }
+            .navigation .menu > li > ul > li.menu li a {
+              font-weight: 400;
+              color: #313538;
+              text-decoration: none;
+              display: block;
+              padding: 5px 0; }
           .navigation .menu > li > ul > li.feed .title {
             color: #135fad;
             font-weight: 600;

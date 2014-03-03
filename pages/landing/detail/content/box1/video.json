@@ -1,11 +1,11 @@
 {
-  "classes":[],
-  "title": "Lorem ipsum ut enim ad minim veniam",
-  "placeholder": {
-    "src": "/ui/assets/images/videos/singlevid.jpg",
-    "alt": "Placeholder"
-  },
-  "copy": {
-    "widgets/content/content":"box1/description.md"
-  }
+    "classes": [],
+    "title": "Lorem ipsum ut enim ad minim veniam",
+    "placeholder": {
+        "src": "/ui/assets/images/videos/singlevid.jpg",
+        "alt": "Placeholder"
+    },
+    "copy": {
+        "widgets/content/content": "box1/description.md"
+    }
 }

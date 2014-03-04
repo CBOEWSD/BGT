@@ -64,7 +64,7 @@ class Navigation
 
     # Prevent a default anchor link action
     # when clicked if the parent haas a sub menu
-    $('a', @.$topLis).on 'click touchend', (e) ->
+    $('a', @.$topLis).on 'click', (e) ->
       # If we're in desktop ignore this event
       if Response.viewportW() > 767
         self.clickTopLi(e, @)
@@ -228,14 +228,6 @@ class Navigation
     e.stopImmediatePropagation()
 
     self.flag = typeof self.flag == 'undefined' ? false : self.flag
-
-    if self.flag
-      return false
-    else
-      self.flag = true
-      setTimeout ->
-        self.flag = false
-      , 100
 
 
     # If click is the already shown nav we hide the expander

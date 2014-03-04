@@ -23,7 +23,7 @@ class Navigation
 
     # Swipe base settings
     @.swipeSettings = {
-      swipeStatus: @.swipeTopUl
+      swipe: @.swipeTopUl
       fingers: 'all'
       excludedElements: 'button'
       tap: @.clickTap
@@ -360,7 +360,7 @@ class Navigation
     # Bind swipes to this element
     # $subUl.bind('touchstart', self.swipeLeft)
     settings = @.swipeSettings
-    settings.swipeStatus = self.swipeSubUl
+    settings.swipe = self.swipeSubUl
     settings.tap = @.clickTap
     $subUl.swipe settings
 
@@ -377,7 +377,7 @@ class Navigation
     ## this.swipeTopUl
     On touch start begin moving the selected element
   ###
-  swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
+  swipeTopUl: (e, direction, distance, duration, fingerCount) ->
     # If we're in desktop pass to expander controls
     if Response.viewportW() > 767
       return self.expanderControls.swipe(e, phase, direction, distance, duration, fingerCount)
@@ -388,34 +388,16 @@ class Navigation
     # Scope current element
     $el = self.$el
 
-    # only do work if we're going left
-    # we may need to expand this action later to account for
-    # left to down swipes or other such cases. Testing will reveal
-    # any quirks with direction.
     if direction == 'left'
+      if distance > 50
+        # Log: Menu closed
+        self.log.add 'notification', 'Mobile menu closed with swipe.', $el
 
-      $el.addClass('removetrans')
-      $el.css 'transform', "translateX(-#{distance}px)"
+        # If we swiped we stop the event
+        # this prevents links firing and other such events
+        e.preventDefault()
 
-      if phase == 'end'
-        if distance > 50
-          # Log: Menu closed
-          self.log.add 'notification', 'Mobile menu closed with swipe.', $el
-
-          # If we swiped we stop the event
-          # this prevents links firing and other such events
-          e.preventDefault()
-
-          # Wait short release before removing
-          setTimeout ->
-            $el.removeClass('removetrans').css('transform', '')
-            $('html').removeClass('showMobileMenu')
-
-          , 50
-        else
-          self.swipeTopUlReset($el)
-    else
-      self.swipeTopUlReset($el)
+        $('html').removeClass('showMobileMenu')
 
   ###
     ## this.swipeTopUlReset
@@ -431,7 +413,7 @@ class Navigation
     Unfortunately we cannot use the same method as the top
     menu as we need to change different properties.
   ###
-  swipeSubUl: (e, phase, direction, distance, duration, fingerCount) ->
+  swipeSubUl: (e, direction, distance, duration, fingerCount) ->
     # If we're in desktop ignore this event
     return false if Response.viewportW() > 767
 
@@ -446,30 +428,18 @@ class Navigation
     # left to down swipes or other such cases. Testing will reveal
     # any quirks with direction.
     if direction == 'left'
+      if distance > 50
+        # Log: Menu closed
+        self.log.add 'notification', 'Sub menu closed with swipe.', $el
 
-      $el.addClass('removetrans')
-      $el.css 'margin-left', -distance
+        # If we swiped we stop the event
+        # this prevents links firing and other such events
+        e.preventDefault()
 
-      if phase == 'end'
-        if distance > 50
-          # Log: Menu closed
-          self.log.add 'notification', 'Sub menu closed with swipe.', $el
+        $el.removeClass('mobileShow').css('margin-left', '')
 
-          # If we swiped we stop the event
-          # this prevents links firing and other such events
-          e.preventDefault()
-
-          # Wait short release before removing
-          setTimeout ->
-            $el.removeClass('mobileShow removetrans').css('margin-left', '')
-
-            # Remove bindings
-            $el.swipe 'destroy'
-          , 50
-        else
-          self.swipeSubUlReset($el)
-    else
-      self.swipeSubUlReset($el)
+        # Remove bindings
+        $el.swipe 'destroy'
 
   ###
     ## this.swipeSubUlReset

@@ -2,6 +2,7 @@
 # Ran using `coffee app.coffee`.
 
 # Module dependencies.
+require('newrelic')
 express = require 'express'
 routes = require './_application'
 http = require 'http'

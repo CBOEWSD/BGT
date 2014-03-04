@@ -227,6 +227,17 @@ class Navigation
     e.preventDefault()
     e.stopImmediatePropagation()
 
+    self.flag = typeof self.flag == 'undefined' ? false : self.flag
+
+    if self.flag
+      return false
+    else
+      self.flag = true
+      setTimeout ->
+        self.flag = false
+      , 100
+
+
     # If click is the already shown nav we hide the expander
     if $parentLi.hasClass 'shown'
       self.adjustExpander 0

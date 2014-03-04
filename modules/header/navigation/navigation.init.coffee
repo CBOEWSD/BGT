@@ -168,15 +168,16 @@ class Navigation
       self.log.add 'notice', 'expanderControls.setup: Created controls', self.$controls
 
       # Bind click events
-      self.$controls.$left.bind 'click touchstart', this.left
-      self.$controls.$right.bind 'click touchstart', this.right
-      self.$controls.$close.bind 'click touchstart', this.close
+      self.$controls.$left.bind 'click touchend', this.left
+      self.$controls.$right.bind 'click touchend', this.right
+      self.$controls.$close.bind 'click touchend', this.close
 
       self.$controls.append(self.$controls.$left, self.$controls.$right, self.$controls.$close)
       self.$expander.append(self.$controls)
 
     # ### this.expanderControls.left
     left: (e) ->
+      e.stopImmediatePropagation()
       $menus = self.$topLis.siblings('.hasSubMenu')
       $active = $menus.siblings('.shown')
       count = $menus.length-1
@@ -188,6 +189,7 @@ class Navigation
 
     # ### this.expanderControls.right
     right: (e) ->
+      e.stopImmediatePropagation()
       $menus = self.$topLis.siblings('.hasSubMenu')
       $active = $menus.siblings('.shown')
       count = $menus.length-1
@@ -199,8 +201,15 @@ class Navigation
 
     # ### this.expanderControls.close
     close: (e) ->
-      $active = self.$topLis.siblings('.shown')
-      self.clickTopLi e, $active.children('a')
+      e.stopImmediatePropagation()
+      if !flag
+        flag = true
+        $active = self.$topLis.siblings('.shown')
+        self.clickTopLi e, $active.children('a')
+
+        setTimeout ->
+          flag = false
+        , 50
 
   ###
     ## this.clickTopLi
@@ -216,6 +225,7 @@ class Navigation
     $subUl = $('> ul', $parentLi)
     return true unless $subUl.length > 0
     e.preventDefault()
+    e.stopImmediatePropagation()
 
     # If click is the already shown nav we hide the expander
     if $parentLi.hasClass 'shown'
@@ -238,6 +248,13 @@ class Navigation
     which reveals the submenu on desktop.
   ###
   adjustExpander: (height) ->
+    # Ignore the resize event for now
+    if height == 'resize'
+      setTimeout ->
+        self.adjustExpander 'delayedResize'
+      , 500
+      return false
+
     # If the height is not specified
     if typeof height != 'number'
       # Check for an existing active item

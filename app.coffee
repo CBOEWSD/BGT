@@ -2,7 +2,7 @@
 # Ran using `coffee app.coffee`.
 
 # Module dependencies.
-require('newrelic')
+require('newrelic') if process.env.NODE_ENV == 'production'
 express = require 'express'
 routes = require './_application'
 http = require 'http'

@@ -100,7 +100,7 @@ class Navigation
       e.preventDefault()
       e.stopPropagation()
 
-      # Triggger close method if close button clicked
+      # Trigger close method if close button clicked
       return self.mobileToggle(e) if $target.hasClass('mobileclose')
 
       return self.mobileHideSubUl($target.parent('.mobileShow')) if $target.hasClass('mobileback')

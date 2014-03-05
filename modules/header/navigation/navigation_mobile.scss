@@ -138,7 +138,7 @@ $width: 70%;
         }
 
         &>ul, &>ul.hasthird {
-          position: fixed;
+          position: absolute;
           overflow-y: auto;
           top: 0;
           //margin-left: -100%;

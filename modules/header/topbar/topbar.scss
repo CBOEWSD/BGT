@@ -134,5 +134,18 @@ $module: '.topbar';
 
   }
 
+  @media screen and (orientation:landscape) {
+    width: 100.1%;
+    .menu {
+      width: 100.1%;
+    }
+  }
+  @media screen and (orientation:portrait) {
+    width: 100%;
+    .menu {
+      width: 100%;
+    }
+  }
+
   @import 'print';
 }

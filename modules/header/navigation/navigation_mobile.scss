@@ -19,18 +19,19 @@ $width: 70%;
 @media screen and (max-width: $screenSmallMax) {
   #{$module} {
     position: fixed;
-    overflow-y: hidden;
-    @include transform(translateX(-100%));
-    //left: 0; // temp display
+    overflow-y: auto;
     top: 0;
-    width: $width;
+    width: 80%;
     height: 100%;
-  	@include moveLeft(all);
-    z-index: 9000;
     background: #fff;
+    z-index: 9001;
+    left: -100%;
+    margin-top: 0;
+    border: none;
+    @include moveLeft(left);
 
     .showMobileMenu & {
-      @include transform(translateX(0));
+      left: 0;
     }
 
     & > .menu {
@@ -151,7 +152,7 @@ $width: 70%;
           margin-top: 0;
           border: none;
           @include moveLeft(transform);
-          @include transform(translate(-100%, 0));
+          @include transform(translateX(-100%));
           -webkit-backface-visibility: hidden;
 
           &>li {
@@ -165,7 +166,7 @@ $width: 70%;
 
           &.mobileShow {
             //margin-left: 0;
-          @include transform(translate(0, 0));
+            @include transform(translateX(0));
           }
         }
 

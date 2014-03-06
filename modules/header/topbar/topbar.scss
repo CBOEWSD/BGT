@@ -31,11 +31,11 @@ $module: '.topbar';
       }
 
       a {
-        @include inline-block();
+        display: block;
 
         &.sprite {
           background: url(/modules/header/topbar/assets/sprite.jpg) no-repeat top center;
-          text-indent: -5000px;
+          text-indent: -5000em;
           color: rgba(19, 95, 173, 0) !important;
           text-align: left;
           height: 20px;

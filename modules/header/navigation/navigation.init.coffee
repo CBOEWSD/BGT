@@ -78,7 +78,6 @@ class Navigation
 
     @.$el.bind 'touchmove', (e) ->
       e.stopImmediatePropagation()
-      return false
 
   ###
     ## this.clickTap

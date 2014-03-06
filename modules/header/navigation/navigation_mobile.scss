@@ -185,12 +185,10 @@ $width: 70%;
     -webkit-backface-visibility: hidden;
   }
 
-  html.showMobileMenu {
-    overflow-y: hidden;
-
-    body {
-      overflow-y: hidden;
-    }
+  html.showMobileMenu, html.showMobileMenu body {
+      max-width:100%;
+      max-height:100%;
+      overflow:hidden;
   }
 
 

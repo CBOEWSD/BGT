@@ -76,6 +76,10 @@ class Navigation
     # Bind swipe for mobile menu
     @.$el.swipe @.swipeSettings
 
+    @.$el.bind 'touchmove', (e) ->
+      e.stopImmediatePropagation()
+      return false
+
   ###
     ## this.clickTap
     A catch all method for click and touch/tap events

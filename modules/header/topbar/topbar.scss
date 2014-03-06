@@ -72,6 +72,7 @@ $module: '.topbar';
     width: 100%;
     z-index: 8000;
     height: 45px;
+    @include transform(translateX(0));
 
     .menu {
       padding: 0 10px;

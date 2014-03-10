@@ -277,7 +277,7 @@ $3dsize: 4px;
     }
   }
 
-  @media screen and (max-width: 1000px) and (min-width: $screenSmallMax) {
+  @media screen and (max-width: 1100px) and (min-width: $screenSmallMax) {
     .menu {
       &>li {
         &.social {
@@ -287,7 +287,7 @@ $3dsize: 4px;
     }
   }
 
-  @media screen and (max-width: 850px) and (min-width: $screenSmallMax) {
+  @media screen and (max-width: 950px) and (min-width: $screenSmallMax) {
     .menu {
       &>li {
         & > a {

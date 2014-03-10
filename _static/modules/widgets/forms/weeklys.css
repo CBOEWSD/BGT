@@ -62,7 +62,7 @@
         padding: 0 0; }
       .forms.weeklys form .col input {
         width: 100%; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 950px) {
     .forms.weeklys form {
       display: block; }
       .forms.weeklys form .col {

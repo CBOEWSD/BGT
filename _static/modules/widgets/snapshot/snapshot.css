@@ -49,6 +49,13 @@
     position: absolute;
     top: -46px;
     right: 0; }
+    @media screen and (max-width: 950px) {
+      .snapshot .graph .button {
+        display: block;
+        position: relative;
+        text-align: center;
+        margin: -10px 0 10px 0;
+        top: 0; } }
   .snapshot .graph .siderail {
     display: table;
     table-layout: fixed;

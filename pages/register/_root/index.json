@@ -1,6 +1,6 @@
 {
    "view":"twocol",
-   "title":"Three Col View",
+   "title":"Register",
    "meta":{
       "keywords":"some, keywords",
       "description":"This is a description"
@@ -15,6 +15,19 @@
       "col1": [
         {
           "widgets/login/body": {
+            "before": {
+              "widgets/content/content": "register/before.md"
+            },
+            "after": {
+              "widgets/content/content": "register/after.md"
+            }
+          }
+        }
+      ],
+
+      "col2": [
+        {
+          "widgets/register/body": {
             "before": {
               "widgets/content/content": "register/before.md"
             },

@@ -15,3 +15,5 @@ views/**/*.css
 ui/templates
 
 __benchmarks/
+
+newrelic_agent.log

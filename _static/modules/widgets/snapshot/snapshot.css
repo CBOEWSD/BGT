@@ -2,8 +2,120 @@
   Module: Snapshot Widget
   Description: Market snapshot widget designed to be connected with Market API.
 */
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.snapshot .graph {
+  position: relative;
+  padding: 0 1px 1px 1px;
+  border: 1px solid #dddddd;
+  /* settings while loading */
+  position: absolute;
+  left: -5000em;
+  width: 200px; }
+  .snapshot .graph .button {
+    position: absolute;
+    top: -46px;
+    right: 0; }
+  .snapshot .graph .siderail {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    background: #135fad;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .snapshot .graph .siderail li {
+      display: table-cell;
+      position: relative;
+      width: 20%;
+      color: #798289;
+      font-weight: 700; }
+      .snapshot .graph .siderail li a {
+        display: block;
+        height: 100%;
+        color: white;
+        padding: 0 5px;
+        vertical-align: middle;
+        position: relative;
+        line-height: 25px; }
+        .snapshot .graph .siderail li a:hover {
+          background: #166dc4; }
+        .snapshot .graph .siderail li a.active {
+          background: white;
+          color: #313538; }
+  .snapshot .graph .images {
+    text-align: right;
+    line-height: 0;
+    overflow: hidden;
+    position: relative; }
+    .snapshot .graph .images .image {
+      position: absolute;
+      left: -5000em; }
+      .snapshot .graph .images .image img {
+        display: inline-block; }
+      .snapshot .graph .images .image.active {
+        position: relative;
+        left: 0;
+        -moz-animation: fadeIn 1s;
+        -webkit-animation: fadeIn 1s;
+        -o-animation: fadeIn 1s;
+        -ms-animation: fadeIn 1s;
+        animation: fadeIn 1s; }
+.snapshot .loading {
+  width: 100%;
+  vertical-align: middle;
+  height: 180px;
+  text-align: center;
+  line-height: 170px;
+  font-weight: 700;
+  color: #798289; }
+.snapshot.loaded .graph {
+  left: 0;
+  position: relative;
+  -moz-animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  width: auto; }
+.snapshot.loaded .loading {
+  display: none; }
 .snapshot h3 {
-  margin: 20px 0; }
+  margin: 4px 0;
+  font-size: 1em !important; }
 .snapshot .volume {
   margin: 0;
   list-style: none;

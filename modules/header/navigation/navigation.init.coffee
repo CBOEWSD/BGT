@@ -23,7 +23,7 @@ class Navigation
 
     # Swipe base settings
     @.swipeSettings = {
-      swipeStatus: @.swipeTopUl
+      swipe: @.swipeTopUl
       fingers: 'all'
       excludedElements: 'button'
       tap: @.clickTap
@@ -64,7 +64,7 @@ class Navigation
 
     # Prevent a default anchor link action
     # when clicked if the parent haas a sub menu
-    $('a', @.$topLis).on 'click touchend', (e) ->
+    $('a', @.$topLis).on 'click', (e) ->
       # If we're in desktop ignore this event
       if Response.viewportW() > 767
         self.clickTopLi(e, @)
@@ -100,7 +100,7 @@ class Navigation
       e.preventDefault()
       e.stopPropagation()
 
-      # Triggger close method if close button clicked
+      # Trigger close method if close button clicked
       return self.mobileToggle(e) if $target.hasClass('mobileclose')
 
       return self.mobileHideSubUl($target.parent('.mobileShow')) if $target.hasClass('mobileback')
@@ -168,15 +168,16 @@ class Navigation
       self.log.add 'notice', 'expanderControls.setup: Created controls', self.$controls
 
       # Bind click events
-      self.$controls.$left.bind 'click touchstart', this.left
-      self.$controls.$right.bind 'click touchstart', this.right
-      self.$controls.$close.bind 'click touchstart', this.close
+      self.$controls.$left.bind 'click touchend', this.left
+      self.$controls.$right.bind 'click touchend', this.right
+      self.$controls.$close.bind 'click touchend', this.close
 
       self.$controls.append(self.$controls.$left, self.$controls.$right, self.$controls.$close)
       self.$expander.append(self.$controls)
 
     # ### this.expanderControls.left
     left: (e) ->
+      e.stopImmediatePropagation()
       $menus = self.$topLis.siblings('.hasSubMenu')
       $active = $menus.siblings('.shown')
       count = $menus.length-1
@@ -188,6 +189,7 @@ class Navigation
 
     # ### this.expanderControls.right
     right: (e) ->
+      e.stopImmediatePropagation()
       $menus = self.$topLis.siblings('.hasSubMenu')
       $active = $menus.siblings('.shown')
       count = $menus.length-1
@@ -199,8 +201,15 @@ class Navigation
 
     # ### this.expanderControls.close
     close: (e) ->
-      $active = self.$topLis.siblings('.shown')
-      self.clickTopLi e, $active.children('a')
+      e.stopImmediatePropagation()
+      if !flag
+        flag = true
+        $active = self.$topLis.siblings('.shown')
+        self.clickTopLi e, $active.children('a')
+
+        setTimeout ->
+          flag = false
+        , 50
 
   ###
     ## this.clickTopLi
@@ -216,6 +225,10 @@ class Navigation
     $subUl = $('> ul', $parentLi)
     return true unless $subUl.length > 0
     e.preventDefault()
+    e.stopImmediatePropagation()
+
+    self.flag = typeof self.flag == 'undefined' ? false : self.flag
+
 
     # If click is the already shown nav we hide the expander
     if $parentLi.hasClass 'shown'
@@ -238,6 +251,13 @@ class Navigation
     which reveals the submenu on desktop.
   ###
   adjustExpander: (height) ->
+    # Ignore the resize event for now
+    if height == 'resize'
+      setTimeout ->
+        self.adjustExpander 'delayedResize'
+      , 500
+      return false
+
     # If the height is not specified
     if typeof height != 'number'
       # Check for an existing active item
@@ -293,14 +313,14 @@ class Navigation
       # Take the base swipe settings and modify for purpose
       settings = self.swipeSettings
       settings.tap = self.mobileToggle
-      settings.allowPageScroll = 'none'
+      settings.allowPageScroll = 'vertical'
       $closeOverlay.swipe settings
 
       # Log: Creation event
       self.log.add 'notification', 'Close overlay created, this is created only once.', $closeOverlay
 
     setTimeout ->
-      $('body')
+      $('html')
         .toggleClass('showMobileMenu')
     , 50
 
@@ -340,7 +360,7 @@ class Navigation
     # Bind swipes to this element
     # $subUl.bind('touchstart', self.swipeLeft)
     settings = @.swipeSettings
-    settings.swipeStatus = self.swipeSubUl
+    settings.swipe = self.swipeSubUl
     settings.tap = @.clickTap
     $subUl.swipe settings
 
@@ -357,7 +377,7 @@ class Navigation
     ## this.swipeTopUl
     On touch start begin moving the selected element
   ###
-  swipeTopUl: (e, phase, direction, distance, duration, fingerCount) ->
+  swipeTopUl: (e, direction, distance, duration, fingerCount) ->
     # If we're in desktop pass to expander controls
     if Response.viewportW() > 767
       return self.expanderControls.swipe(e, phase, direction, distance, duration, fingerCount)
@@ -368,34 +388,16 @@ class Navigation
     # Scope current element
     $el = self.$el
 
-    # only do work if we're going left
-    # we may need to expand this action later to account for
-    # left to down swipes or other such cases. Testing will reveal
-    # any quirks with direction.
     if direction == 'left'
+      if distance > 50
+        # Log: Menu closed
+        self.log.add 'notification', 'Mobile menu closed with swipe.', $el
 
-      $el.addClass('removetrans')
-      $el.css 'transform', "translateX(-#{distance}px)"
+        # If we swiped we stop the event
+        # this prevents links firing and other such events
+        e.preventDefault()
 
-      if phase == 'end'
-        if distance > 50
-          # Log: Menu closed
-          self.log.add 'notification', 'Mobile menu closed with swipe.', $el
-
-          # If we swiped we stop the event
-          # this prevents links firing and other such events
-          e.preventDefault()
-
-          # Wait short release before removing
-          setTimeout ->
-            $el.removeClass('removetrans').css('transform', '')
-            $('body').removeClass('showMobileMenu')
-
-          , 50
-        else
-          self.swipeTopUlReset($el)
-    else
-      self.swipeTopUlReset($el)
+        $('html').removeClass('showMobileMenu')
 
   ###
     ## this.swipeTopUlReset
@@ -411,7 +413,7 @@ class Navigation
     Unfortunately we cannot use the same method as the top
     menu as we need to change different properties.
   ###
-  swipeSubUl: (e, phase, direction, distance, duration, fingerCount) ->
+  swipeSubUl: (e, direction, distance, duration, fingerCount) ->
     # If we're in desktop ignore this event
     return false if Response.viewportW() > 767
 
@@ -426,30 +428,18 @@ class Navigation
     # left to down swipes or other such cases. Testing will reveal
     # any quirks with direction.
     if direction == 'left'
+      if distance > 50
+        # Log: Menu closed
+        self.log.add 'notification', 'Sub menu closed with swipe.', $el
 
-      $el.addClass('removetrans')
-      $el.css 'margin-left', -distance
+        # If we swiped we stop the event
+        # this prevents links firing and other such events
+        e.preventDefault()
 
-      if phase == 'end'
-        if distance > 50
-          # Log: Menu closed
-          self.log.add 'notification', 'Sub menu closed with swipe.', $el
+        $el.removeClass('mobileShow').css('margin-left', '')
 
-          # If we swiped we stop the event
-          # this prevents links firing and other such events
-          e.preventDefault()
-
-          # Wait short release before removing
-          setTimeout ->
-            $el.removeClass('mobileShow removetrans').css('margin-left', '')
-
-            # Remove bindings
-            $el.swipe 'destroy'
-          , 50
-        else
-          self.swipeSubUlReset($el)
-    else
-      self.swipeSubUlReset($el)
+        # Remove bindings
+        $el.swipe 'destroy'
 
   ###
     ## this.swipeSubUlReset

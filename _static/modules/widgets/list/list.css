@@ -40,6 +40,8 @@
           display: table; }
         .widget-list ul li a:after {
           clear: both; }
+        .widget-list ul li a:hover, .widget-list ul li a:active {
+          color: #313538; }
       .widget-list ul li.focus h2 {
         font-size: 1.4em; }
   .widget-list.noborder li {
@@ -49,6 +51,8 @@
     padding: 5px 0; }
     .widget-list.links ul li a {
       color: #135fad; }
+      .widget-list.links ul li a:hover, .widget-list.links ul li a:active {
+        color: #313538; }
     .widget-list.links ul li:first-child {
       padding-top: 0; }
   .widget-list.list-columns li {

@@ -3,7 +3,11 @@
   Description: Listed navigation element designed to be contained in a sidebar or similar.
 */
 .side-navigation {
-  z-index: 1; }
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  background: white; }
   .side-navigation ul, .side-navigation li {
     list-style: none;
     margin: 0;
@@ -18,6 +22,8 @@
     border-bottom: 1px solid #dddddd; }
     .side-navigation > ul li ul li a {
       color: #313538; }
+      .side-navigation > ul li ul li a:hover, .side-navigation > ul li ul li a:active {
+        background: #f2f2f2; }
   .side-navigation > ul > li > a {
     position: relative;
     background-color: #61696e;

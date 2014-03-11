@@ -2,6 +2,7 @@
 # Ran using `coffee app.coffee`.
 
 # Module dependencies.
+require('newrelic') if process.env.NODE_ENV == 'production'
 express = require 'express'
 routes = require './_application'
 http = require 'http'
@@ -109,6 +110,7 @@ if isProd
   app.enable('view cache')
 
 # ### Configure environments settings
+
 app.set 'port', process.env.PORT || pkg.server.port || 3000
 app.set 'views', __dirname + '/views'
 app.engine 'handlebars', exphbs

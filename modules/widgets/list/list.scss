@@ -92,25 +92,25 @@ $module: '.widget-list';
 
   &.list-columns {
     li {
-      float:left;
-      display:inline;
+      display:inline-block;
+      vertical-align: top;
       padding-top: 0;
       padding-right: 10px;
     }
 
     &.two {
       li {
-        width: 50%;
+        width: 49%;
       }
     }
     &.three {
       li {
-        width: 33%;
+        width: 32%;
       }
     }
     &.four {
       li {
-        width: 25%;
+        width: 24%;
       }
     }
 

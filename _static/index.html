@@ -15,6 +15,7 @@
         <!-- IE/Chrome Compat -->
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
         <link href='/ui/base/base.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/base/legacy.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/views/default/default-print.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/views/default/default.css' media='all' rel='stylesheet' type='text/css'>
@@ -536,14 +537,69 @@
                         <div class="scrolloverflow-inside">
                             <h3 class="widget-title ">
                                 Market Snapshot
-                                <div class="promo">
-                                    <a href="#" class="icon-logo tradestation"></a>
-                                </div>
                             </h3>
                             <div class="snapshot">
+                                <!--
+    <div class="graph">
+      <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/snapshot-graph.jpg" alt="">
+    </div>
+  -->
+                                <div class="loading">
+                                    Loading...
+                                </div>
                                 <div class="graph">
-                                    <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/snapshot-graph.jpg"
-                                    alt="">
+                                    <a href="#" class="button">
+                                        View Quote Detail
+                                    </a>
+                                    <ul class="siderail">
+                                        <li>
+                                            <a href="#" data-target="vix">
+                                                VIX
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-target="cboe">
+                                                CBOE
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-target="spx">
+                                                SPX
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-target="oex">
+                                                OEX
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-target="bxm">
+                                                BXM
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="images">
+                                        <div class="image" data-id="vix">
+                                            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/snapshot-graph3.jpg"
+                                            alt="">
+                                        </div>
+                                        <div class="image" data-id="cboe">
+                                            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/snapshot-graph3.jpg"
+                                            alt="">
+                                        </div>
+                                        <div class="image" data-id="spx">
+                                            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/snapshot-graph3.jpg"
+                                            alt="">
+                                        </div>
+                                        <div class="image" data-id="oex">
+                                            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/snapshot-graph3.jpg"
+                                            alt="">
+                                        </div>
+                                        <div class="image" data-id="bxm">
+                                            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/snapshot-graph3.jpg"
+                                            alt="">
+                                        </div>
+                                    </div>
                                 </div>
                                 <h3>
                                     Exchange Volume
@@ -1131,6 +1187,7 @@
         <script src='/ui/base/handlers/logHandler.init.js'></script>
         <script src='/ui/base/handlers/publishDomChange.init.js'></script>
         <script src='/ui/base/handlers/publishResize.init.js'></script>
+        <script src='/ui/base/handlers/publishScroll.init.js'></script>
         <script src='/ui/base/handlers/query2object.init.js'></script>
         <script src='/ui/base/handlers/rows.init.js'></script>
         <script src='/ui/classes/collapse/collapse.init.js'></script>
@@ -1144,6 +1201,7 @@
         <script src='/modules/widgets/content/tables.init.js'></script>
         <script src='/modules/widgets/hero/hero.init.js'></script>
         <script src='/modules/widgets/side-navigation/nav.init.js'></script>
+        <script src='/modules/widgets/snapshot/snapshot.init.js'></script>
         <script src='/modules/widgets/tv/tv.init.js'></script>
         <!--
     Post-DOM SHIMS
@@ -1152,6 +1210,9 @@
   -->
         <!--[if lt IE 10]>
   <script src="/ui/classes/shims/ie-lt10.js" type="text/javascript"></script>
+  <![endif]-->
+        <!--[if lt IE 9]>
+  <script src="/ui/classes/shims/ie-lt9.js" type="text/javascript"></script>
   <![endif]-->
     </body>
 </html>

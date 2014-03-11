@@ -15,6 +15,7 @@
         <!-- IE/Chrome Compat -->
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
         <link href='/ui/base/base.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/base/legacy.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/views/default/default-print.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/views/default/default.css' media='all' rel='stylesheet' type='text/css'>
@@ -1159,6 +1160,7 @@
         <script src='/ui/base/handlers/logHandler.init.js'></script>
         <script src='/ui/base/handlers/publishDomChange.init.js'></script>
         <script src='/ui/base/handlers/publishResize.init.js'></script>
+        <script src='/ui/base/handlers/publishScroll.init.js'></script>
         <script src='/ui/base/handlers/query2object.init.js'></script>
         <script src='/ui/base/handlers/rows.init.js'></script>
         <script src='/ui/classes/collapse/collapse.init.js'></script>
@@ -1172,6 +1174,7 @@
         <script src='/modules/widgets/content/tables.init.js'></script>
         <script src='/modules/widgets/hero/hero.init.js'></script>
         <script src='/modules/widgets/side-navigation/nav.init.js'></script>
+        <script src='/modules/widgets/snapshot/snapshot.init.js'></script>
         <script src='/modules/widgets/tv/tv.init.js'></script>
         <!--
     Post-DOM SHIMS
@@ -1180,6 +1183,9 @@
   -->
         <!--[if lt IE 10]>
   <script src="/ui/classes/shims/ie-lt10.js" type="text/javascript"></script>
+  <![endif]-->
+        <!--[if lt IE 9]>
+  <script src="/ui/classes/shims/ie-lt9.js" type="text/javascript"></script>
   <![endif]-->
     </body>
 </html>

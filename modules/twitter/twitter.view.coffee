@@ -40,7 +40,7 @@ class TwitterView
     ## this.handleTweet
     Called on the event of a new tweet being published
   ###
-  handleTweet: (data) ->
+  handleTweet: (e, data) ->
     # Log: method called
     self.log.add 'notification', '[View] handleTweet called.', data
 

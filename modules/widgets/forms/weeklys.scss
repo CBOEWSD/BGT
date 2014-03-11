@@ -43,7 +43,7 @@ $module: '.forms.weeklys';
     }
   }
 
-  @media screen and (max-width: $screenSmallMax) {
+  @media screen and (max-width: 950px) {
     form {
       display: block;
 

@@ -1,8 +1,8 @@
 {
-	"classes":[
-		"noborders"
-	],
-	"content":{
-		"widgets/list/simple":"bottomspan/stories.json"
-	}
+    "classes": [
+        "noborders"
+    ],
+    "content": {
+        "widgets/list/simple": "bottomspan/stories.json"
+    }
 }

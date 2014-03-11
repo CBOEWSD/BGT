@@ -13,10 +13,14 @@
     display: table; }
   .view-default .row:after {
     clear: both; }
-  .view-default .row .row:first-child {
-    margin-top: 0; }
-  .view-default .row .row:last-child {
-    margin-bottom: 0; }
+  .view-default .row .row {
+    /* Class is for ie8 targetting */ }
+    .view-default .row .row:first-child {
+      margin-top: 0; }
+    .view-default .row .row.last-child {
+      margin-bottom: 0; }
+    .view-default .row .row:last-child {
+      margin-bottom: 0; }
   .view-default .row .column1, .view-default .row .column2, .view-default .row .column50 {
     display: table-cell;
     vertical-align: top;

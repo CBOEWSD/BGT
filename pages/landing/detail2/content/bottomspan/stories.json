@@ -1,78 +1,67 @@
 {
-   "widget":{
-      "title":"Sponsored Stories",
-      "promo":{
-         "class":"tradestation",
-         "url":"#"
-      }
-   },
-   "classes":[
-      "list-columns",
-      "two",
-      "noborder",
-      "collapse"
-   ],
-   "showad": true,
-   "items":[
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"Trade options, stocks, futures + forex on a single platform. thinkorswon by TD Ameritrade."
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"Pay less to invest with $7.95 online trades at fidelity. Advertisement"
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"OPTIONS+ is the new mobile options calculator for iPhone users. Download it today."
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"Free stock and option educational webinars at tradeMONSTER - Register today!"
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"TradeKin covers transfer fess up to $150. Switch today and pay only $4.95/trade."
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"Futures Trades Made Easy. Learn more at Futures Knowledge Center. Advertisement"
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"Get TradeStation FREE until 2014 when you can open an account today."
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"Trade options, stocks, futures + forex on a single platform. thinkorswing by TD ameritrade. Advertisement."
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"Professional trading solutions for active traders."
-      },
-      {
-         "link":{
-            "url":"#"
-         },
-         "description":"Professional trading solutions for active traders."
-      }
-   ]
+    "widget": {
+        "title": "Sponsored Stories",
+        "promo": {
+            "class": "tradestation",
+            "url": "#"
+        }
+    },
+    "classes": [
+        "list-columns",
+        "two",
+        "noborder",
+        "collapse"
+    ],
+    "showad": true,
+    "items": [{
+        "link": {
+            "url": "#"
+        },
+        "description": "Trade options, stocks, futures + forex on a single platform. thinkorswon by TD Ameritrade."
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "Pay less to invest with $7.95 online trades at fidelity. Advertisement"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "OPTIONS+ is the new mobile options calculator for iPhone users. Download it today."
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "Free stock and option educational webinars at tradeMONSTER - Register today!"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "TradeKin covers transfer fess up to $150. Switch today and pay only $4.95/trade."
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "Futures Trades Made Easy. Learn more at Futures Knowledge Center. Advertisement"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "Get TradeStation FREE until 2014 when you can open an account today."
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "Trade options, stocks, futures + forex on a single platform. thinkorswing by TD ameritrade. Advertisement."
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "Professional trading solutions for active traders."
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "description": "Professional trading solutions for active traders."
+    }]
 }

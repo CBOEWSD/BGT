@@ -31,7 +31,7 @@ $module: '.topbar';
       }
 
       a {
-        @include inline-block();
+        display: block;
 
         &.sprite {
           background: url(/modules/header/topbar/assets/sprite.jpg) no-repeat top center;
@@ -75,6 +75,7 @@ $module: '.topbar';
 
     .menu {
       padding: 0 10px;
+      width: 100%;
 
       li {
         margin-left: 10px;
@@ -131,6 +132,19 @@ $module: '.topbar';
       }
     }
 
+  }
+
+  @media screen and (orientation:landscape) {
+    width: 100.1%;
+    .menu {
+      width: 100.1%;
+    }
+  }
+  @media screen and (orientation:portrait) {
+    width: 100%;
+    .menu {
+      width: 100%;
+    }
   }
 
   @import 'print';

@@ -1,79 +1,66 @@
 {
-   "widget":{
-      "title":"Related Links"
-   },
-   "items":[
-      {
-        "link":{
-          "url":"#"
+    "widget": {
+        "title": "Related Links"
+    },
+    "items": [{
+        "link": {
+            "url": "#"
         },
-        "text":"Virtual Trading Tools"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "Virtual Trading Tools"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"Options Calculator"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "Options Calculator"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"CBOE TV"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "CBOE TV"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"Strategies"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "Strategies"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"Virtual Trading Tools"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "Virtual Trading Tools"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"Options Calculator"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "Options Calculator"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"CBOE TV"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "CBOE TV"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"Strategies"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "Strategies"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"Virtual Trading Tools"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "Virtual Trading Tools"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"Options Calculator"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "Options Calculator"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"CBOE TV"
-      },
-      {
-        "link":{
-          "url":"#"
+        "text": "CBOE TV"
+    }, {
+        "link": {
+            "url": "#"
         },
-        "text":"Strategies"
-      }
-   ]
+        "text": "Strategies"
+    }]
 }

@@ -16,10 +16,10 @@
         {
           "widgets/login/body": {
             "before": {
-              "widgets/content/content": "register/before.md"
+              "widgets/content/content": "login/before.md"
             },
             "after": {
-              "widgets/content/content": "register/after.md"
+              "widgets/content/content": "login/after.md"
             }
           }
         }

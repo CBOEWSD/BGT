@@ -11,5 +11,12 @@ $module: '.register-body';
 #{$module} {
   .before {
     min-height: 120px;
+
+    h2 {
+      font: {
+        size: 1.8em;
+        weight: 400;
+      }
+    }
   }
 }

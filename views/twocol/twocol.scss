@@ -19,7 +19,7 @@ $view: '.view-twocol';
 
   .bottomspan {
     @include outerRow();
-    margin-top: 35px;
+    margin: 35px 0;
   }
 
   .main {

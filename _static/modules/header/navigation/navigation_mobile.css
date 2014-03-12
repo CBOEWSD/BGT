@@ -5,33 +5,28 @@
 @media screen and (max-width: 767px) {
   .navigation {
     position: fixed;
-    overflow-y: hidden;
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    transform: translateX(-100%);
+    overflow-y: auto;
     top: 0;
-    width: 70%;
+    width: 80%;
     height: 100%;
-    -webkit-transition: all, 0.5s;
+    background: white;
+    z-index: 9001;
+    left: -100%;
+    margin-top: 0;
+    border: none;
+    -webkit-transition: left, 0.5s;
     -webkit-transition-delay: ease-in-out;
-    -moz-transition: all, 0.5s, ease-in-out;
-    -o-transition: all, 0.5s, ease-in-out;
-    transition: all 0.5s ease-in-out;
-    z-index: 9000;
-    background: white; }
+    -moz-transition: left, 0.5s, ease-in-out;
+    -o-transition: left, 0.5s, ease-in-out;
+    transition: left 0.5s ease-in-out; }
     .showMobileMenu .navigation {
-      -webkit-transform: translateX(0);
-      -moz-transform: translateX(0);
-      -ms-transform: translateX(0);
-      -o-transform: translateX(0);
-      transform: translateX(0); }
+      left: 0; }
     .navigation > .menu {
       overflow-y: auto;
       height: 100%; }
     .navigation .menu {
-      padding: 0; }
+      padding: 0;
+      position: initial; }
       .navigation .menu .mobileCategory {
         color: white;
         background: #156abf;
@@ -89,10 +84,9 @@
       .navigation .menu > li > a:hover:before {
         display: none; }
       .navigation .menu > li > ul, .navigation .menu > li > ul.hasthird {
-        position: fixed;
+        position: absolute;
         overflow-y: auto;
         top: 0;
-        margin-left: -100%;
         width: 100%;
         height: 100%;
         background: white;
@@ -100,26 +94,38 @@
         left: 0;
         margin-top: 0;
         border: none;
-        -webkit-transition: margin-left, 0.5s;
+        -webkit-transition: -webkit-transform, 0.5s;
         -webkit-transition-delay: ease-in-out;
-        -moz-transition: margin-left, 0.5s, ease-in-out;
-        -o-transition: margin-left, 0.5s, ease-in-out;
-        transition: margin-left 0.5s ease-in-out; }
+        -moz-transition: -moz-transform, 0.5s, ease-in-out;
+        -o-transition: -o-transform, 0.5s, ease-in-out;
+        transition: transform 0.5s ease-in-out;
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-backface-visibility: hidden; }
         .navigation .menu > li > ul > li, .navigation .menu > li > ul.hasthird > li {
           display: none; }
           .navigation .menu > li > ul > li.menu, .navigation .menu > li > ul.hasthird > li.menu {
             display: block;
             padding: 0; }
         .navigation .menu > li > ul.mobileShow, .navigation .menu > li > ul.hasthird.mobileShow {
-          margin-left: 0; }
+          -webkit-transform: translateX(0);
+          -moz-transform: translateX(0);
+          -ms-transform: translateX(0);
+          -o-transform: translateX(0);
+          transform: translateX(0); }
       .navigation .menu > li.social {
         display: none; }
   body {
     left: 0;
     position: relative;
     -webkit-backface-visibility: hidden; }
-  html.showMobileMenu {
-    overflow-y: hidden; }
+  html.showMobileMenu, html.showMobileMenu body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden; }
   .mobileNavOverlay {
     position: absolute;
     top: 0;

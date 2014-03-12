@@ -1,6 +1,6 @@
 /*
-	Class: Forms
-	Description: Generic styles and classes related forms.
+  Class: Forms
+  Description: Generic styles and classes related forms.
 */
 
 @import './ui/base/settings';
@@ -16,7 +16,7 @@ form {
     @include box-shadow(inset 0 -1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(255,255,255,.1));
     padding: 20px 0;
 
-    input {
+    input, select {
       width: 100%;
     }
   }
@@ -30,21 +30,18 @@ form {
     margin: 5px 0;
   }
 
-  input {
-    &[type="text"], &[type="tel"], &[type="email"] {
-      font: {
-        family: 'Open Sans', sans-serif;
-        size: 12px;
-      }
+  input, select {
+    font: {
+      family: 'Open Sans', sans-serif;
+      size: 12px;
     }
+    border: 1px solid darken($colorGrey2, 10%);
 
     &[type="checkbox"] {
       display: inline-block;
       width: auto;
       vertical-align: middle;
     }
-
-    border: 1px solid darken($colorGrey2, 10%);
     padding: 5px;
     @include border-radius(5px);
   }

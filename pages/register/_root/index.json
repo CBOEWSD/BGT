@@ -1,0 +1,47 @@
+{
+   "view":"twocol",
+   "title":"Register",
+   "meta":{
+      "keywords":"some, keywords",
+      "description":"This is a description"
+   },
+   "placeholders":{
+      "topspan":[
+         {
+            "breadcrumbs/breadcrumbs":"breadcrumbs.json"
+         }
+      ],
+
+      "col1": [
+        {
+          "widgets/login/body": {
+            "before": {
+              "widgets/content/content": "login/before.md"
+            },
+            "after": {
+              "widgets/content/content": "login/after.md"
+            }
+          }
+        }
+      ],
+
+      "col2": [
+        {
+          "widgets/register/body": {
+            "before": {
+              "widgets/content/content": "register/before.md"
+            },
+            "after": {
+              "widgets/content/content": "register/after.md"
+            }
+          }
+        }
+      ],
+
+      "bottomspan": [
+        {
+          "widgets/widget":"bottomspan/widget.json"
+        }
+      ]
+   }
+}

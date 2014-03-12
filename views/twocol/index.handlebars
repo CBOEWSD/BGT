@@ -1,0 +1,43 @@
+<div class="hideonmobile">
+  {{> ads/span/slim-dark}}
+</div>
+
+{{> header/header}}
+
+<div class="body view-twocol">
+  <div class="container">
+
+    <section class="topspan">
+      {{#each topspan}}
+        {{{this}}}
+      {{/each}}
+    </section>
+
+    {{> widgets/login/span/default}}
+
+    <section class="main">
+
+      <div class="col1">
+        {{#each col1}}
+          {{{this}}}
+        {{/each}}
+      </div>
+
+      <div class="col2">
+        {{#each col2}}
+          {{{this}}}
+        {{/each}}
+      </div>
+
+    </section>
+
+    <section class="bottomspan">
+      {{#each bottomspan}}
+        {{{this}}}
+      {{/each}}
+    </section>
+
+  </div>
+</div>
+
+{{> footer/footer}}

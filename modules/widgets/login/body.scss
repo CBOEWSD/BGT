@@ -1,0 +1,22 @@
+/*
+  Module: Wrapped login form
+  Description: This component simply wraps messaging and styling around the form element.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.login-body';
+
+#{$module} {
+  .before {
+    min-height: 120px;
+
+    h2 {
+      font: {
+        size: 1.8em;
+        weight: 400;
+      }
+    }
+  }
+}

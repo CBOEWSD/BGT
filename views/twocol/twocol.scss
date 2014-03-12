@@ -1,0 +1,58 @@
+/*
+  View: twocol
+  Description: Styling for twocol view.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$view: '.view-twocol';
+
+#{$view} {
+  padding: 0 7px;
+
+  .topspan {
+    @include outerRow();
+  }
+
+  .bottomspan {
+    @include outerRow();
+    margin: 35px 0;
+  }
+
+  .main {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    background: #fff;
+    border: 1px solid darken($colorGrey2, 5%);
+    clear: both;
+    padding: 20px 0;
+    @include clearfix();
+    margin-bottom: 20px;
+
+    .col1, .col2 {
+      display: table-cell;
+      vertical-align: top;
+      padding: 0 15px;
+      width: 50%;
+    }
+
+
+  }
+
+
+  @media screen and (max-width: 950px) {
+    .main {
+
+    }
+  }
+
+  @media screen and (max-width: $screenSmallMax) {
+    .main {
+
+    }
+  }
+}

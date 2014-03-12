@@ -1,0 +1,22 @@
+/*
+  Module: Wrapped register form
+  Description: This component simply wraps messaging and styling around the form element.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.register-body';
+
+#{$module} {
+  .before {
+    min-height: 120px;
+
+    h2 {
+      font: {
+        size: 1.8em;
+        weight: 400;
+      }
+    }
+  }
+}

@@ -1,20 +1,49 @@
 /*
-	Class: Forms
-	Description: Generic styles and classes related forms.
+  Class: Forms
+  Description: Generic styles and classes related forms.
 */
 
 @import './ui/base/settings';
 @import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
 
-input {
-  &[type="text"], &[type="tel"], &[type="email"] {
+form {
+
+  fieldset {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    @include box-shadow(inset 0 -1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(255,255,255,.1));
+    padding: 20px 0;
+
+    input, select {
+      width: 100%;
+    }
+  }
+
+  label {
+    display: block;
+    font: {
+      weight: 700;
+      size: .9em;
+    }
+    margin: 5px 0;
+  }
+
+  input, select {
     font: {
       family: 'Open Sans', sans-serif;
       size: 12px;
     }
+    border: 1px solid darken($colorGrey2, 10%);
+
+    &[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+    padding: 5px;
+    @include border-radius(5px);
   }
 
-  border: 1px solid darken($colorGrey2, 10%);
-  padding: 5px;
-  @include border-radius(5px);
 }

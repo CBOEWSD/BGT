@@ -13,7 +13,6 @@ $module: '.breadcrumbs';
 #{$module} {
   margin: 20px 0;
   list-style: none;
-  @include clearFix2();
   padding: 0 15px;
   width: 100%;
 

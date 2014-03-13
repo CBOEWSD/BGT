@@ -4,16 +4,17 @@
 */
 
 @import './ui/base/settings';
+@import './ui/base/_includes/clearfix';
 @import './ui/base/_includes/grid';
 @import './ui/base/_includes/compass/css3';
 
 $module: '.breadcrumbs';
 
 #{$module} {
-
-  @include column(12);
   margin: 20px 0;
   list-style: none;
+  padding: 0 15px;
+  width: 100%;
 
   >li {
     display: inline-block;

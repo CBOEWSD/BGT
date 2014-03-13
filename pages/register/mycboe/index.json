@@ -9,21 +9,18 @@
       "topspan":[
          {
             "breadcrumbs/breadcrumbs":"breadcrumbs.json"
-         },
-         {
-            "widgets/login/span/default":""
          }
       ],
 
       "col1": [
         {
-          "widgets/forms/body/body": "login/component.json"
+          "widgets/content/content": "signup.md"
         }
       ],
 
       "col2": [
         {
-          "widgets/forms/body/body": "register/component.json"
+          "widgets/forms/body/body": "subscriptions/component.json"
         }
       ],
 

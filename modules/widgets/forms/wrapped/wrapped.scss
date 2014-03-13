@@ -1,0 +1,78 @@
+/*
+  Module: Wrapped form
+  Description: This component simply wraps messaging and styling around the form element.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.form-wrapped';
+
+#{$module} {
+  background: $colorGrey2;
+  padding: 20px 15px;
+  @include border-radius(5px);
+
+
+  .buttons {
+    margin-top: 20px;
+    text-align: center;
+
+    .button {
+      margin: 0 10px;
+    }
+  }
+
+  label.checkbox {
+    padding: 0 0 0 22px;
+    margin: 10px 0;
+    font: {
+      weight: 400;
+    }
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      display: block;
+      float: left;
+      margin: 2px 0 0 -20px;
+    }
+  }
+
+  img {
+    margin: 20px 0;
+  }
+
+  h4,h5 {
+    margin: 0;
+  }
+
+  h3 {
+    margin-top: 0;
+    color: $colorBlue1;
+    font: {
+      size: 1.6em;
+      weight: 400;
+    }
+  }
+
+  .columns {
+    padding: 0 10%;
+
+    &.two {
+      .column {
+        display: inline-block;
+        width: 49.5%;
+        vertical-align: top;
+      }
+    }
+  }
+
+  &.blue {
+    background: $colorBlue1;
+    color: #fff;
+
+    h3 {
+      color: #fff;
+    }
+  }
+}

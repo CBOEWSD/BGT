@@ -10,6 +10,16 @@
 
 $class: '.text-';
 
+#{$class}center {
+  text-align: center;
+}
+#{$class}right {
+  text-align: right;
+}
+#{$class}left {
+  text-align: left;
+}
+
 #{$class}green {
   color: $colorGreen1;
 }

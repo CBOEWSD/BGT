@@ -1,12 +1,16 @@
 
-<section class="register-body">
+<section class="form-body">
+  {{#if before}}
   <div class="before">
     {{{before}}}
   </div>
+  {{/if}}
 
-  {{> widgets/register/wrapped/wrapped}}
+  {{{body}}}
 
+  {{#if after}}
   <div class="after">
     {{{after}}}
   </div>
+  {{/if}}
 </section>

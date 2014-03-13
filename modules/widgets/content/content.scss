@@ -118,6 +118,27 @@ $module: 'article.content';
     }
   }
 
+  ul {
+    list-style: none;
+
+    li {
+      margin: 15px 0;
+      position: relative;
+
+      &:before {
+        content:'\2022 ';
+        color: $colorGreen1;
+        position: absolute;
+        left: -15px;
+        top: 0;
+        font: {
+          size: 2em;
+        }
+        line-height: 15px;
+      }
+    }
+  }
+
   @media screen and (max-width: 950px) {
     .float-right {
       &.advert {

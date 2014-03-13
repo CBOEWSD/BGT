@@ -1,12 +1,12 @@
 /*
-  Module: Wrapped login form
-  Description: This component simply wraps messaging and styling around the form element.
+  Module: Form body
+  Description: This component simply wraps messaging and styling around sub components.
 */
 
 @import './ui/base/settings';
 @import './ui/base/_includes/compass/css3';
 
-$module: '.login-body';
+$module: '.form-body';
 
 #{$module} {
   .before {

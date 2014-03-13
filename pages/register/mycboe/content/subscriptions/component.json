@@ -1,0 +1,14 @@
+{
+  "body": {
+    "widgets/forms/wrapped/wrapped": {
+      "title": "Thank you!",
+      "summary": "Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "form": {
+        "widgets/forms/subscriptions/form": ""
+      }
+    }
+  },
+  "after": {
+    "widgets/content/content": "subscriptions/after.md"
+  }
+}

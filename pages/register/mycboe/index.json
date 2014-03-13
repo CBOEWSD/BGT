@@ -20,6 +20,7 @@
 
       "col2": [
         {
+          "widgets/forms/body/body": "subscriptions/component.json"
         }
       ],
 

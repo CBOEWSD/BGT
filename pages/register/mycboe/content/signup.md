@@ -6,7 +6,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non felis volutpa
 
 <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/register/cboe.jpg" alt="CBOE">
 
-### Dolor eu fugiat nulla pariatur.&bull;
+### Dolor eu fugiat nulla pariatur.
 
 * Maecenas at urna sagittis nisl rhoncus gravida.
 * Vestibulum pellentesque nec purus nec placerat.

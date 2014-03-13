@@ -7,6 +7,7 @@ exports.index = (req, res) ->
     res.locals = content
     res.render (if (typeof (content.view) isnt 'undefined') then content.view else 'default'),
       {
+        layout: if (typeof (content.layout) isnt 'undefined') then content.layout else 'main'
         helpers:
           renderScripts: renderScripts
           renderStyles: renderStyles

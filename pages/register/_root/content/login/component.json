@@ -1,0 +1,18 @@
+{
+  "before": {
+    "widgets/content/content": "login/before.md"
+  },
+  "body": {
+    "widgets/forms/wrapped/wrapped": {
+      "classes": ["blue"],
+      "title": "Log in to myCBOE",
+      "summary": "Duis tempus eros in lectus tempor, vel mollis mi porta.",
+      "form": {
+        "widgets/forms/login/form": ""
+      }
+    }
+  },
+  "after": {
+    "widgets/content/content": "login/after.md"
+  }
+}

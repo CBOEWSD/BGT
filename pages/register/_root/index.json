@@ -17,46 +17,13 @@
 
       "col1": [
         {
-          "widgets/forms/body/body": {
-            "before": {
-              "widgets/content/content": "login/before.md"
-            },
-            "body": {
-              "widgets/forms/wrapped/wrapped": {
-                "classes": ["blue"],
-                "title": "Log in to myCBOE",
-                "summary": "Duis tempus eros in lectus tempor, vel mollis mi porta.",
-                "form": {
-                  "widgets/forms/login/form": ""
-                }
-              }
-            },
-            "after": {
-              "widgets/content/content": "login/after.md"
-            }
-          }
+          "widgets/forms/body/body": "login/component.json"
         }
       ],
 
       "col2": [
         {
-          "widgets/forms/body/body": {
-            "before": {
-              "widgets/content/content": "register/before.md"
-            },
-            "body": {
-              "widgets/forms/wrapped/wrapped": {
-                "title": "Please register for myCBOE",
-                "summary": "Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                "form": {
-                  "widgets/forms/register/form": ""
-                }
-              }
-            },
-            "after": {
-              "widgets/content/content": "register/after.md"
-            }
-          }
+          "widgets/forms/body/body": "register/component.json"
         }
       ],
 

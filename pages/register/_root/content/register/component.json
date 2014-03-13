@@ -1,0 +1,17 @@
+{
+  "before": {
+    "widgets/content/content": "register/before.md"
+  },
+  "body": {
+    "widgets/forms/wrapped/wrapped": {
+      "title": "Please register for myCBOE",
+      "summary": "Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "form": {
+        "widgets/forms/register/form": ""
+      }
+    }
+  },
+  "after": {
+    "widgets/content/content": "register/after.md"
+  }
+}

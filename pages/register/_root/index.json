@@ -11,7 +11,7 @@
             "breadcrumbs/breadcrumbs":"breadcrumbs.json"
          },
          {
-            "widgets/login/span/default":""
+            "widgets/loginspan/span":""
          }
       ],
 

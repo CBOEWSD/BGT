@@ -15,6 +15,7 @@ $module: '.breadcrumbs';
   list-style: none;
   @include clearFix2();
   padding: 0 15px;
+  width: 100%;
 
   >li {
     display: inline-block;

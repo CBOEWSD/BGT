@@ -30,9 +30,16 @@
 
       "col2": [
         {
-          "widgets/register/body": {
+          "widgets/forms/body/body": {
             "before": {
               "widgets/content/content": "register/before.md"
+            },
+            "body": {
+              "widgets/forms/wrapped/wrapped": {
+                "form": {
+                  "widgets/forms/register/form": ""
+                }
+              }
             },
             "after": {
               "widgets/content/content": "register/after.md"

@@ -1,0 +1,39 @@
+/*
+  Module: Register Form
+  Description: The form component of the register form.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.register-form';
+
+#{$module} {
+  .buttons {
+    margin-top: 20px;
+    text-align: center;
+
+    .button {
+      margin: 0 10px;
+    }
+  }
+
+  label.checkbox {
+    padding: 0 0 0 22px;
+    margin: 10px 0;
+    font: {
+      weight: 400;
+    }
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      display: block;
+      float: left;
+      margin: 2px 0 0 -20px;
+    }
+  }
+
+  h4,h5 {
+    margin: 0;
+  }
+}

@@ -1,6 +1,6 @@
 {
    "view":"twocol",
-   "title":"myCBOE Settings",
+   "title":"Thank you!",
    "meta":{
       "keywords":"some, keywords",
       "description":"This is a description"
@@ -9,18 +9,21 @@
       "topspan":[
          {
             "breadcrumbs/breadcrumbs":"breadcrumbs.json"
+         },
+         {
+            "widgets/loginspan/span":""
          }
       ],
 
       "col1": [
         {
-          "widgets/content/content": "signup.md"
+          "widgets/forms/body/body": "login/component.json"
         }
       ],
 
       "col2": [
         {
-          "widgets/forms/body/body": "subscriptions/component.json"
+          "widgets/forms/body/body": "thanks/component.json"
         }
       ],
 

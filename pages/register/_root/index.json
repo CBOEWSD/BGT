@@ -9,6 +9,9 @@
       "topspan":[
          {
             "breadcrumbs/breadcrumbs":"breadcrumbs.json"
+         },
+         {
+            "widgets/login/span/default":""
          }
       ],
 

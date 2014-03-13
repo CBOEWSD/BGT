@@ -21,4 +21,13 @@ $module: '.form-wrapped';
       weight: 400;
     }
   }
+
+  &.blue {
+    background: $colorBlue1;
+    color: #fff;
+
+    h3 {
+      color: #fff;
+    }
+  }
 }

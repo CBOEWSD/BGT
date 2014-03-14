@@ -1,0 +1,11 @@
+{
+  "body": {
+    "widgets/forms/wrapped/wrapped": {
+      "title": "Personal Information",
+      "summary": "Fields marked with an asterisk <span class=\"text-red\">*</span> are required.",
+      "form": {
+        "widgets/forms/settings/form": ""
+      }
+    }
+  }
+}

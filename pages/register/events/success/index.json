@@ -8,7 +8,7 @@
    "placeholders":{
       "topspan":[
          {
-            "breadcrumbs/breadcrumbs":"breadcrumbs.json"
+            "breadcrumbs/breadcrumbs":"../../_root/content/breadcrumbs.json"
          }
       ],
 
@@ -28,21 +28,21 @@
         {
           "_columns/two": {
             "column1": {
-              "widgets/content/content": "image.md"
+              "widgets/content/content": "../../_root/content/image.md"
             },
             "column2": {
-              "widgets/event/event": "event.json"
+              "widgets/event/event": "../../_root/content/event.json"
             }
           }
         },
         {
-          "widgets/forms/body/body": "settings/component.json"
+          "widgets/forms/body/body": "component.json"
         }
       ],
 
       "bottomspan": [
         {
-          "widgets/widget":"bottomspan/widget.json"
+          "widgets/widget":"../../_root/content/bottomspan/widget.json"
         }
       ]
    }

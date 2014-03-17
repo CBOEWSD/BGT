@@ -10,6 +10,7 @@ $module: '.wrap-columns';
 
 #{$module} {
   @include innerRow();
+  margin-bottom: 20px;
 
   &.two {
     .column {

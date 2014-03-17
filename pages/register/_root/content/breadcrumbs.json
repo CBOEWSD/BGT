@@ -1,10 +1,8 @@
 {
-  "levels": [
-    {
-      "link": {
-        "text": "Register for myCBOE",
-        "url": "#"
-      }
-    }
-  ]
+    "levels": [{
+        "link": {
+            "text": "Register for myCBOE",
+            "url": "#"
+        }
+    }]
 }

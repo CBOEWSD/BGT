@@ -1,0 +1,53 @@
+<section class="education-snapshot wrapper">
+  <div class="title-bar">
+    <h2>
+      {{#if title.text}}
+        {{{title.text}}}
+      {{else}}
+      Your Education Snapshot:
+      {{/if}}
+    </h2>
+
+    {{#if title.logout}}
+    <a href="#" class="logout">
+      Log Out
+    </a>
+    {{/if}}
+  </div>
+
+  <div class="inRow">
+    <div class="mainCol">
+      {{> widgets/education-snap/progress/summary }}
+
+
+      <div class="next">
+        <h4>Next Steps:</h4>
+        <ul>
+          {{#each nextSteps}}
+          <li>
+            <a href="{{this.url}}" class="{{#each this.classes}} {{this}} {{/each}}">
+              {{{this.text}}}
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="sideCol">
+      <div class="resources">
+        <h3>View Resources</h3>
+        <ul>
+          {{#each resources}}
+          <li>
+            <a href="{{this.url}}" class="{{#each this.classes}} {{this}} {{/each}}">
+              {{{this.text}}}
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>

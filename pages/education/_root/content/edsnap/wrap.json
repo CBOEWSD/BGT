@@ -37,7 +37,10 @@
   ],
   "extended": [
     {
-      "title": "Required Curriculum"
+      "title": "Required Curriculum",
+      "component": {
+        "accordion/accordion": "edsnap/curriculum.json"
+      }
     }
   ]
 }

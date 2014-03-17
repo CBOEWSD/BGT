@@ -46,6 +46,14 @@ $module: '.form-wrapped';
     margin: 0;
   }
 
+  h1 {
+    color: $colorBlue1;
+    font: {
+      size: 2em;
+    }
+    margin: 0;
+  }
+
   h3 {
     margin-top: 0;
     color: $colorBlue1;

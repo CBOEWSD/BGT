@@ -26,6 +26,16 @@
           }
         },
         {
+          "_columns/two": {
+            "column1": {
+              "widgets/content/content": "image.md"
+            },
+            "column2": {
+              "widgets/event/event": "event.json"
+            }
+          }
+        },
+        {
           "widgets/content/content": "welcome.md"
         },
         {

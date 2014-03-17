@@ -50,4 +50,18 @@
     </div>
   </div>
 
+  {{#if extended}}
+  <div class="extended">
+    {{#each extended}}
+      {{#if this.title}}
+      <h3>
+        {{{this.title}}}
+      </h3>
+      {{/if}}
+
+      {{{this.component}}}
+    {{/each}}
+  </div>
+  {{/if}}
+
 </section>

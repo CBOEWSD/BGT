@@ -1,0 +1,19 @@
+/*
+  Module: Columns
+  Description: Simple wrapper element that can break modules into columns
+*/
+
+@import './ui/base/_includes/grid';
+@import './ui/base/settings';
+
+$module: '.wrap-columns';
+
+#{$module} {
+  @include innerRow();
+
+  &.two {
+    .column {
+      @include column(6);
+    }
+  }
+}

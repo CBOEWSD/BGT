@@ -26,7 +26,7 @@
       {
         "twocolrow": [
           {
-            "widgets/content/content": "contentblock.md"
+            "widgets/hero/copybased": "featured-webcast.json"
           },
           {
             "ads/square_300/block": ""

@@ -32,13 +32,6 @@
             "ads/square_300/block": ""
           }
         ]
-      },
-      {
-        "onecolrow": [
-          {
-            "widgets/content/content": "welcome.md"
-          }
-        ]
       }
     ],
     "col3": [

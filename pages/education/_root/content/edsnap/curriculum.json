@@ -2,7 +2,12 @@
   "items": [
     {
       "title": "Syllabus",
-      "component": "asd"
+      "component": {
+        "widgets/course-status/brief": {
+          "title": "testing title",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque, arcu et elementum malesuada, dolor justo euismod nulla, quis rhoncus sapien quam sed augue."
+        }
+      }
     },
     {
       "title": "Seminars",

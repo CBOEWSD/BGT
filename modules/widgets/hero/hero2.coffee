@@ -1,13 +1,25 @@
-class WidgetHero
-  self = {}
+$ = jQuery
 
-  ###
-    ## Constructor
-  ###
-  constructor: ($, el, timer) ->
+$.fn.extend
+
+  widgetHero: (options) ->
+    self = $.fn.widgetHero
+
+    opts = $.extend {}, self.settings, options
+
+    return $(this).each (i, el) ->
+      self.init el, opts
+
+
+$.extend $.fn.widgetHero,
+  # Default settings
+  settings:
+    timer: 3000
+
+  self = undefined
+
+  init: (el) ->
     @.$el = $ el
-
-    # Declare this/that
     self = @
 
     # Add objects to global
@@ -24,9 +36,9 @@ class WidgetHero
     @.showSlide 0
 
     # Start automation
-    @.automate timer
+    @.automate @.settings.timer
 
-    @log.add 'notification', 'Widget constructed.', @
+    @.log.add 'notification', 'Widget constructed.', @
 
   ###
     ## this.log
@@ -71,9 +83,8 @@ class WidgetHero
     pass that through to the `this.showSlide` method.
   ###
   controlClick: (e) ->
+    console.log @
     self.log.add 'notification', 'Slide control clicked.', @
-
-    console.log $('li', self.$controls).index(@)
 
     # Prevent default actions / bubble up
     e.preventDefault()
@@ -88,15 +99,15 @@ class WidgetHero
     given index slide.
   ###
   showSlide: (index) ->
-    $next = $(self.$slides.get(index))
-    $nextControl = $(self.$controls.$ind.get(index))
+    $next = $(@.$slides.get(index))
+    $nextControl = $(@.$controls.$ind.get(index))
 
     # log
-    self.log.add 'notification', 'Slide activated', $next
+    @.log.add 'notification', 'Slide activated', $next
 
     # Disable currently active slide
-    self.$slides.removeClass 'active'
-    self.$controls.$ind.removeClass 'active'
+    @.$slides.removeClass 'active'
+    @.$controls.$ind.removeClass 'active'
     # Activate next slide
     $next.addClass 'active'
     $nextControl.addClass 'active'
@@ -109,14 +120,14 @@ class WidgetHero
   ###
   nextSlide: ->
     index = {
-      current: self.$slides.filter('.active').index()
-      last: self.$slides.length - 1
+      current: $slides.filter('.active').index()
+      last: $slides.length - 1
     }
 
     # Check if no active item was found
     if index.current == -1
       # log
-      self.log.add 'warning', 'nextSlide: The index of the next slide return -1, reset to 0. This is not expected.', index
+      log.add 'warning', 'nextSlide: The index of the next slide return -1, reset to 0. This is not expected.', index
       # Set to first
       index.current = 0
 
@@ -131,15 +142,15 @@ class WidgetHero
   ###
   automate: (time) ->
     # Check if timeout set, if not default to 4s
-    self.time = if typeof time == 'number' then time else false
-    self.time = time or 4000
+    @.time = if typeof time == 'number' then time else false
+    @.time = time or 4000
 
     # Start timer
-    self.startTimer self.time
+    @.startTimer
 
     # Bind up mouse i/o action
-    self.$el.mouseover self.pauseTimer
-    self.$el.mouseout self.startTimer
+    @.$el.mouseover @.pauseTimer
+    @.$el.mouseout @.startTimer
 
   ###
     ## this.startTimer
@@ -147,18 +158,14 @@ class WidgetHero
   ###
   startTimer: () ->
     # Rotate slides based on `time` setting
-    self.timer = setInterval ->
+    @.timer = setInterval ->
       # Show slide index returned by nextSlide method.
       self.showSlide self.nextSlide()
-    , self.time
+    , @.time
 
   ###
     ## this.pauseTimer
     Pauses timer on hover (mouseover) events.
   ###
   pauseTimer: () ->
-    window.clearInterval self.timer
-
-# Define called in require
-define ->
-  return WidgetHero
+    window.clearInterval @.timer

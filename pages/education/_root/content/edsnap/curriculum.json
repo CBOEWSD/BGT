@@ -5,33 +5,77 @@
       "component": {
         "widgets/course-status/brief": {
           "title": "testing title",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque, arcu et elementum malesuada, dolor justo euismod nulla, quis rhoncus sapien quam sed augue."
+          "content": {
+            "widgets/content/content":"edsnap/example.md"
+          }
         }
       }
     },
     {
       "title": "Seminars",
-      "component": "asd"
+      "component": {
+        "widgets/course-status/brief": {
+          "title": "testing title",
+          "content": {
+            "widgets/content/content":"edsnap/example.md"
+          }
+        }
+      }
     },
     {
       "title": "Online Courses",
-      "component": "asd"
+      "component": {
+        "widgets/course-status/brief": {
+          "title": "testing title",
+          "content": {
+            "widgets/content/content":"edsnap/example.md"
+          }
+        }
+      }
     },
     {
       "title": "Strategy Discussions",
-      "component": "asd"
+      "component": {
+        "widgets/course-status/brief": {
+          "title": "testing title",
+          "content": {
+            "widgets/content/content":"edsnap/example.md"
+          }
+        }
+      }
     },
     {
       "title": "Tasks",
-      "component": "asd"
+      "component": {
+        "widgets/course-status/brief": {
+          "title": "testing title",
+          "content": {
+            "widgets/content/content":"edsnap/example.md"
+          }
+        }
+      }
     },
     {
       "title": "Trading Tools",
-      "component": "asd"
+      "component": {
+        "widgets/course-status/brief": {
+          "title": "testing title",
+          "content": {
+            "widgets/content/content":"edsnap/example.md"
+          }
+        }
+      }
     },
     {
       "title": "Tasks",
-      "component": "asd"
+      "component": {
+        "widgets/course-status/brief": {
+          "title": "testing title",
+          "content": {
+            "widgets/content/content":"edsnap/example.md"
+          }
+        }
+      }
     }
   ]
 }

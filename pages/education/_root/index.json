@@ -39,6 +39,9 @@
         "widgets/list/links": "related.json"
       },
       {
+        "widgets/hero/copybased": "featured-events.json"
+      },
+      {
         "widgets/hero/copybased": "featured-products.json"
       },
       {

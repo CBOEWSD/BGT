@@ -1,6 +1,6 @@
 {
   "view": "threecol",
-  "title": "Three Col View",
+  "title": "Education Landing 2",
   "meta": {
     "keywords": "some, keywords",
     "description": "This is a description"
@@ -8,7 +8,7 @@
   "placeholders": {
     "topspan": [
       {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+        "breadcrumbs/breadcrumbs": "../../_root/content/breadcrumbs.json"
       }
     ],
     "col1": [
@@ -18,12 +18,15 @@
     ],
     "col2": [
       {
-        "widgets/content/content": "intro.md"
+        "widgets/content/content": "../../_root/content/welcome.md"
+      },
+      {
+        "widgets/education-snap/wrap": "edsnap/wrap.json"
       },
       {
         "twocolrow": [
           {
-            "widgets/hero/copybased": "featured-products.json"
+            "widgets/hero/copybased": "../../_root/content/featured-webcast.json"
           },
           {
             "ads/square_300/block": ""
@@ -31,6 +34,9 @@
         ]
       },
       {
+        "widgets/tv/row/row": "../../_root/content/tv/tv.json"
+      },
+      {
         "twocolrow": [
           {
             "widgets/widget": {
@@ -38,7 +44,7 @@
                 "noborders"
               ],
               "content": {
-                "widgets/content/content": "boxes/indexes.md"
+                "widgets/content/content": "boxes/events.md"
               }
             }
           },
@@ -48,7 +54,7 @@
                 "noborders"
               ],
               "content": {
-                "widgets/content/content": "boxes/equities.md"
+                "widgets/content/content": "boxes/online.md"
               }
             }
           }
@@ -62,7 +68,7 @@
                 "noborders"
               ],
               "content": {
-                "widgets/content/content": "boxes/minis.md"
+                "widgets/content/content": "boxes/seminars.md"
               }
             }
           },
@@ -72,7 +78,7 @@
                 "noborders"
               ],
               "content": {
-                "widgets/content/content": "boxes/exchange-traded.md"
+                "widgets/content/content": "boxes/webcasts.md"
               }
             }
           }
@@ -86,7 +92,7 @@
                 "noborders"
               ],
               "content": {
-                "widgets/content/content": "boxes/weeklys.md"
+                "widgets/content/content": "boxes/optionquest.md"
               }
             }
           },
@@ -96,7 +102,7 @@
                 "noborders"
               ],
               "content": {
-                "widgets/content/content": "boxes/quarterlys.md"
+                "widgets/content/content": "boxes/institute.md"
               }
             }
           }
@@ -110,31 +116,7 @@
                 "noborders"
               ],
               "content": {
-                "widgets/content/content": "boxes/flex.md"
-              }
-            }
-          },
-          {
-            "widgets/widget": {
-              "classes": [
-                "noborders"
-              ],
-              "content": {
-                "widgets/content/content": "boxes/leaps.md"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "twocolrow": [
-          {
-            "widgets/widget": {
-              "classes": [
-                "noborders"
-              ],
-              "content": {
-                "widgets/content/content": "boxes/credits.md"
+                "widgets/content/content": "boxes/professionals.md"
               }
             }
           }
@@ -143,7 +125,13 @@
     ],
     "col3": [
       {
-        "widgets/list/links": "related.json"
+        "widgets/list/links": "../../_root/content/related.json"
+      },
+      {
+        "widgets/hero/copybased": "../../_root/content/featured-events.json"
+      },
+      {
+        "widgets/hero/copybased": "../../_root/content/featured-products.json"
       },
       {
         "ads/tall/tall": ""
@@ -151,7 +139,7 @@
     ],
     "bottomspan": [
       {
-        "widgets/widget": "bottomspan/widget.json"
+        "widgets/widget": "../../_root/content/bottomspan/widget.json"
       }
     ]
   }

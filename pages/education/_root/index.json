@@ -32,6 +32,9 @@
             "ads/square_300/block": ""
           }
         ]
+      },
+      {
+        "widgets/tv/row/row": "tv/tv.json"
       }
     ],
     "col3": [

@@ -174,3 +174,40 @@ $classPrefix: '.icon-';
     }
   }
 }
+
+
+#{$classPrefix}meta {
+  position: relative;
+  color: #aaa;
+
+  &:before {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    content: ""; display: inline-block;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    margin-top: -5px;
+  }
+
+  &.views {
+    padding-left: 20px !important;
+
+    &:before {
+      background-position: -2px -254px;
+      width: 15px;
+      height: 10px;
+      margin-top: -5px;
+    }
+  }
+
+  &.likes {
+    padding-left: 17px !important;
+
+    &:before {
+      background-position: -29px -254px;
+      width: 12px;
+      height: 10px;
+      margin-top: -5px;
+    }
+  }
+}

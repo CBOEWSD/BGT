@@ -1,0 +1,52 @@
+
+<div class="widget-tv row">
+  <div class="title">
+    {{#if title}}
+    <h2>
+      {{{title}}}
+      <a href="{{viewall.href}}" class="total">
+        ({{{total}}})
+      </a>
+    </h2>
+    {{/if}}
+
+    {{#if viewall}}
+    <a href="{{viewall.href}}" class="viewall">
+      {{{viewall.text}}}
+    </a>
+    {{/if}}
+  </div>
+
+  <div class="items">
+    {{#each items}}
+    <div class="item">
+      <a href="{{this.url}}">
+        <img
+          src="/ui/assets/images/placeholders/blank.gif"
+          data-echo="{{this.thumbnail.src}}"
+          alt="{{#if thumbnail.alt}}{{thumbnail.alt}}{{else}}{{this.title}}{{/if}}"
+        >
+
+        {{#if this.meta}}
+        <div class="meta">
+          {{#if this.meta.views}}
+            <span class="icon-meta views">
+              {{this.meta.views}}
+            </span>
+          {{/if}}
+          {{#if this.meta.likes}}
+            <span class="icon-meta likes">
+              {{this.meta.likes}}
+            </span>
+          {{/if}}
+        </div>
+        {{/if}}
+
+        <h3>
+          {{{this.title}}}
+        </h3>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</div>

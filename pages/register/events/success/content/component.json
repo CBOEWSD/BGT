@@ -1,10 +1,10 @@
 {
-  "body": {
-    "widgets/forms/wrapped/wrapped": {
-      "classes": ["text-center"],
-      "form": {
-        "widgets/content/content": "thanks.md"
-      }
+    "body": {
+        "widgets/forms/wrapped/wrapped": {
+            "classes": ["text-center"],
+            "form": {
+                "widgets/content/content": "thanks.md"
+            }
+        }
     }
-  }
 }

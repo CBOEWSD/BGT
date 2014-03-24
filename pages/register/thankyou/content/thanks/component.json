@@ -1,14 +1,12 @@
 {
-  "before": {
-    "widgets/content/content": "thanks/before.md"
-  },
-  "body": {
-    "widgets/forms/wrapped/wrapped": {
-      "beforeWidgets": [
-        {
-          "widgets/content/content": "thanks/message.md"
+    "before": {
+        "widgets/content/content": "thanks/before.md"
+    },
+    "body": {
+        "widgets/forms/wrapped/wrapped": {
+            "beforeWidgets": [{
+                "widgets/content/content": "thanks/message.md"
+            }]
         }
-      ]
     }
-  }
 }

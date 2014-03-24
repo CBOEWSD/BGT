@@ -1,6 +1,6 @@
 /*
-	Class: Icons
-	Description: Contains generic items that can be used in various areas across the site.
+  Class: Icons
+  Description: Contains generic items that can be used in various areas across the site.
 */
 
 @import './ui/base/settings';
@@ -116,6 +116,98 @@ $classPrefix: '.icon-';
       left: 2px;
       top: 50%;
       margin-top: -6px;
+    }
+  }
+}
+
+
+#{$classPrefix}before {
+  position: relative;
+  padding-left: 30px !important;
+
+  &:before {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    content: ""; display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+  }
+
+  &.chart {
+    &:before {
+      background-position: -1px -208px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.calendar {
+    &:before {
+      background-position: -28px -206px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.institute {
+    &:before {
+      background-position: -53px -206px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.book {
+    &:before {
+      background-position: -1px -230px;
+      width: 22px;
+      height: 20px;
+    }
+  }
+
+  &.transcript {
+    &:before {
+      background-position: -27px -228px;
+      width: 22px;
+      height: 20px;
+    }
+  }
+}
+
+
+#{$classPrefix}meta {
+  position: relative;
+  color: #aaa;
+
+  &:before {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    content: ""; display: inline-block;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    margin-top: -5px;
+  }
+
+  &.views {
+    padding-left: 20px !important;
+
+    &:before {
+      background-position: -2px -254px;
+      width: 15px;
+      height: 10px;
+      margin-top: -5px;
+    }
+  }
+
+  &.likes {
+    padding-left: 17px !important;
+
+    &:before {
+      background-position: -29px -254px;
+      width: 12px;
+      height: 10px;
+      margin-top: -5px;
     }
   }
 }

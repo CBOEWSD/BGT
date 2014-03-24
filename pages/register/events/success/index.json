@@ -1,49 +1,41 @@
 {
-   "view":"onecol",
-   "title":"Seminars and Event Registration",
-   "meta":{
-      "keywords":"some, keywords",
-      "description":"This is a description"
-   },
-   "placeholders":{
-      "topspan":[
-         {
-            "breadcrumbs/breadcrumbs":"../../_root/content/breadcrumbs.json"
-         }
-      ],
+    "view": "onecol",
+    "title": "Seminars and Event Registration",
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "placeholders": {
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": "../../_root/content/breadcrumbs.json"
+        }],
 
-      "content": [
-        {
-          "widgets/widget-title": {
-            "widget":{
-              "title": "Seminars and Event Registration",
-              "promo": {
-                  "class": "tradestation",
-                  "url": "#"
-              },
-              "classes":["blueborder"]
+        "content": [{
+            "widgets/widget-title": {
+                "widget": {
+                    "title": "Seminars and Event Registration",
+                    "promo": {
+                        "class": "tradestation",
+                        "url": "#"
+                    },
+                    "classes": ["blueborder"]
+                }
             }
-          }
-        },
-        {
-          "_columns/two": {
-            "column1": {
-              "widgets/content/content": "../../_root/content/image.md"
-            },
-            "column2": {
-              "widgets/event/event": "../../_root/content/event.json"
+        }, {
+            "_columns/two": {
+                "column1": {
+                    "widgets/content/content": "../../_root/content/image.md"
+                },
+                "column2": {
+                    "widgets/event/event": "../../_root/content/event.json"
+                }
             }
-          }
-        },
-        {
-          "widgets/forms/body/body": "component.json"
-        }
-      ],
+        }, {
+            "widgets/forms/body/body": "component.json"
+        }],
 
-      "bottomspan": [
-        {
-          "widgets/widget":"../../_root/content/bottomspan/widget.json"
-        }
-      ]
-   }
+        "bottomspan": [{
+            "widgets/widget": "../../_root/content/bottomspan/widget.json"
+        }]
+    }
 }

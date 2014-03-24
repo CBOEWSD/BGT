@@ -1,44 +1,33 @@
 {
-  "title": "Online Event: CBOE's Options Initiative",
-  "meta": [
-    {
-      "title": "Date",
-      "value": "02/13/2014"
-    },
-    {
-      "title": "Place",
-      "value": "Online"
-    },
-    {
-      "title": "Time",
-      "value": "9:00AM - 4:00PM CT"
-    },
-    {
-      "title": "Address",
-      "value": "Online"
-    },
-    {
-      "title": "City",
-      "value": "Online"
-    },
-    {
-      "title": "Phone",
-      "value": "1-877-THE-CBOE"
-    },
-    {
-      "title": "State",
-      "value": "Online"
-    },
-    {
-      "title": "Price",
-      "value": "$895.00"
-    }
-  ],
+    "title": "Online Event: CBOE's Options Initiative",
+    "meta": [{
+        "title": "Date",
+        "value": "02/13/2014"
+    }, {
+        "title": "Place",
+        "value": "Online"
+    }, {
+        "title": "Time",
+        "value": "9:00AM - 4:00PM CT"
+    }, {
+        "title": "Address",
+        "value": "Online"
+    }, {
+        "title": "City",
+        "value": "Online"
+    }, {
+        "title": "Phone",
+        "value": "1-877-THE-CBOE"
+    }, {
+        "title": "State",
+        "value": "Online"
+    }, {
+        "title": "Price",
+        "value": "$895.00"
+    }],
 
-  "policy": [
-    {
-      "title": "Refund Policy",
-      "description": "A $100 administrative fee wil be assessed for cancellations within 7 business days of seminar. A $75 transfer fee will be assessed for transfers. For more information on complaint and refund policies, please contact us at 1-877-843-2263, press 2."
-    }
-  ]
+    "policy": [{
+        "title": "Refund Policy",
+        "description": "A $100 administrative fee wil be assessed for cancellations within 7 business days of seminar. A $75 transfer fee will be assessed for transfers. For more information on complaint and refund policies, please contact us at 1-877-843-2263, press 2."
+    }]
 }

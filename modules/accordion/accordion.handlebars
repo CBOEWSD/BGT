@@ -1,0 +1,13 @@
+
+{{#if items}}
+<dl class="accordion">
+  {{#each items}}
+  <dt>
+    {{{this.title}}}
+  </dt>
+  <dd>
+    {{{this.component}}}
+  </dd>
+  {{/each}}
+</dl>
+{{/if}}

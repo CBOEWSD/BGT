@@ -11,20 +11,20 @@ class WidgetHero
     self = @
 
     # Add objects to global
-    self.$wrapper = $ '.slides', self.$el
-    self.$slides = $ '.slide', self.$wrapper
+    @.$wrapper = $ '.slides', @.$el
+    @.$slides = $ '.slide', @.$wrapper
 
     # Number of slides
-    self.count = self.$slides.length
+    @.count = @.$slides.length
 
     # Create controls
-    self.createControls()
+    @.createControls()
 
     # Show first slide
-    self.showSlide 0
+    @.showSlide 0, self.$el
 
     # Start automation
-    self.automate timer
+    @.automate timer
 
     @log.add 'notification', 'Widget constructed.', @
 
@@ -43,23 +43,25 @@ class WidgetHero
   ###
   createControls: ->
     # Create controls element
-    self.$controls = $('<ul />').addClass 'controls'
+    @.$controls = $('<ul />').addClass 'controls'
 
     # For each slide add a control to controls
-    for x in [0...self.count] by 1
-      self.$controls.append $('<li />')
+    for x in [0...@.count] by 1
+      @.$controls.append $('<li />')
 
     # Append controls to wrapper
-    self.$wrapper.append self.$controls
+    @.$wrapper.append @.$controls
 
     # Add list group to controls object
-    self.$controls.$ind = $ 'li', self.$controls
+    @.$controls.$ind = $ 'li', @.$controls
 
     # Log
-    self.log.add 'notification', 'Slide controls created.', self.$controls
+    @.log.add 'notification', 'Slide controls created.', @.$controls
 
     # Set binds
-    self.$controls.$ind.bind 'click', self.controlClick
+    @.$controls.$ind.bind 'click', @.controlClick
+
+    @.$controls.hide() if @.count < 2
 
   ###
     ## this.controlClick
@@ -71,11 +73,13 @@ class WidgetHero
   controlClick: (e) ->
     self.log.add 'notification', 'Slide control clicked.', @
 
+    $parent = $(@).parents('.widget-hero')
+
     # Prevent default actions / bubble up
     e.preventDefault()
 
     # Pass index to showSlide method
-    self.showSlide $('li', self.$controls).index(@)
+    self.showSlide $('li', $('.controls', $parent)).index(@), $parent
 
   ###
     ## this.showSlide
@@ -83,16 +87,18 @@ class WidgetHero
     active slide by removing `active` class and enable the
     given index slide.
   ###
-  showSlide: (index) ->
-    $next = $(self.$slides.get(index))
-    $nextControl = $(self.$controls.$ind.get(index))
+  showSlide: (index,  $parent) ->
+    $slides = $('.slide', $parent)
+    $controls = $('.controls li', $parent)
+    $next = $($slides.get(index))
+    $nextControl = $($controls.get(index))
 
     # log
     self.log.add 'notification', 'Slide activated', $next
 
     # Disable currently active slide
-    self.$slides.removeClass 'active'
-    self.$controls.$ind.removeClass 'active'
+    $slides.removeClass 'active'
+    $controls.removeClass 'active'
     # Activate next slide
     $next.addClass 'active'
     $nextControl.addClass 'active'
@@ -103,10 +109,12 @@ class WidgetHero
     If currently at last element then returns to start.
     Returns slide index.
   ###
-  nextSlide: ->
+  nextSlide: ($me) ->
+    $slides = $('.slide', $me)
+
     index = {
-      current: self.$slides.filter('.active').index()
-      last: self.$slides.length - 1
+      current: $slides.filter('.active').index()
+      last: $slides.length - 1
     }
 
     # Check if no active item was found
@@ -131,29 +139,43 @@ class WidgetHero
     self.time = time or 4000
 
     # Start timer
-    self.startTimer self.time
+    self.startTimer null, self.$el
 
     # Bind up mouse i/o action
     self.$el.mouseover self.pauseTimer
-    self.$el.mouseout self.startTimer
+    self.$el.mouseout self.playTimer
 
   ###
     ## this.startTimer
     Called on construction and on mouseout events.
   ###
-  startTimer: () ->
+  startTimer: (e, el) ->
+    $me = el or $(@)
+
     # Rotate slides based on `time` setting
-    self.timer = setInterval ->
-      # Show slide index returned by nextSlide method.
-      self.showSlide self.nextSlide()
+    setInterval ->
+      if !$me.hasClass('paused')
+        # Show slide index returned by nextSlide method.
+        self.showSlide self.nextSlide($me), $me
     , self.time
 
   ###
     ## this.pauseTimer
     Pauses timer on hover (mouseover) events.
   ###
-  pauseTimer: () ->
-    window.clearInterval self.timer
+  pauseTimer: (e, el) ->
+    $me = el or $(@)
+
+    $me.addClass 'paused'
+
+  ###
+    ## this.playTimer
+    Plays timer on mouseout events.
+  ###
+  playTimer: (e, el) ->
+    $me = el or $(@)
+
+    $me.removeClass 'paused'
 
 # Define called in require
 define ->

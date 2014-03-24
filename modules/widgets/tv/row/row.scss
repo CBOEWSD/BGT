@@ -1,0 +1,65 @@
+/*
+  Module: TV Widget .row
+  Description: This allows for multiple rows of video thumbnails.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/responsiveembed';
+
+$module: '.widget-tv.row';
+
+#{$module} {
+  margin: 20px 0;
+
+  .title {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-bottom: 1px solid $colorGrey2;
+    padding-bottom: 10px;
+
+    h2, .viewall {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    h2 {
+      .total {
+        color: $colorBlue1;
+
+        &:hover, &:active {
+          color: $colorGrey1;
+        }
+      }
+    }
+
+    .viewall {
+      text-align: right;
+      color: $colorBlue1;
+
+      &:hover, &:active {
+        color: $colorGrey1;
+      }
+    }
+  }
+
+  .items {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 20px 0;
+
+    .item {
+      display: table-cell;
+      vertical-align: top;
+      padding: 10px;
+    }
+  }
+
+  .meta {
+    margin: 10px 0;
+  }
+}

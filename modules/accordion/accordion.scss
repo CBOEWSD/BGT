@@ -1,0 +1,68 @@
+/*
+  Module: Accordion
+  Description: Generic accordion module allowing space for other components to be placed in the body placeholder.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.accordion';
+
+#{$module} {
+  dt {
+    background: $colorBlue2;
+    padding: 10px 40px 10px 15px;
+    color: #fff;
+    font: {
+      weight: 700;
+      size: 1.1em;
+    }
+    border-top: 1px solid #fff;
+    position: relative;
+    cursor: pointer;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      margin-top: -10px;
+      content: '+';
+      top: 50%;
+      height: 20px;
+      right: 5px;
+      width: 20px;
+      border: none;
+      background: #fff;
+      color: $colorBlue2;
+      text-align: center;
+      line-height: 20px;
+    }
+
+    &:hover {
+      background: lighten($colorBlue2, 5%);
+    }
+
+    &.expanded {
+      background: lighten($colorGrey1, 30%);
+
+
+      &:hover {
+        background: lighten($colorGrey1, 35%);
+      }
+      &:after {
+        content: '-';
+      }
+    }
+  }
+
+  dd {
+    padding: 15px;
+    margin: 0;
+    display: none;
+  }
+}

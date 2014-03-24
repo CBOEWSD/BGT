@@ -12,8 +12,6 @@ class Accordion
     self.$el = $ el
     self.$el.$dt = $('>dt', @.$el)
 
-    console.log self
-
     @.listen()
 
     return @

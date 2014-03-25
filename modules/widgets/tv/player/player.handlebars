@@ -1,0 +1,50 @@
+
+<div class="widget-tv player">
+  <div class="title">
+    {{#if title}}
+    <h2>
+      {{{title}}}
+
+      <a href="{{disclaimer.href}}" class="disclaimer">
+        ({{{disclaimer.text}}})
+      </a>
+    </h2>
+    {{/if}}
+
+    {{#if subscribe}}
+    <a href="{{subscribe.href}}" class="subscribe button green">
+      {{{subscribe.text}}}
+    </a>
+    {{/if}}
+  </div>
+
+  <div class="prow">
+    <div class="player">
+      <img
+        src="/ui/assets/images/placeholders/blank.gif"
+        data-echo="ui/assets/images/videos/player.jpg"
+        alt="{{video.title}}"
+      >
+    </div>
+
+    <div class="meta">
+      {{> ads/square_300/block}}
+
+      <div class="share">
+        sharing
+      </div>
+
+      <h3 class="nowplaying">
+        Now Playing
+      </h3>
+
+      <h2>
+        {{{video.title}}}
+      </h2>
+      <p>
+        {{{video.description}}}
+      </p>
+    </div>
+  </div>
+
+</div>

@@ -12,15 +12,20 @@
       }
     ],
     "beforeRow": [
-        {
-            "widgets/tv/player/player": "player/video.json"
-        }
+      {
+        "widgets/tv/player/player": "player/video.json"
+      }
     ],
     "col1": [
       {
         "widgets/sidebar/sidebar": {
-          "classes": ["left"]
+          "classes": [
+            "left"
+          ]
         }
+      },
+      {
+        "ads/tall/tall": ""
       }
     ],
     "col2": [

@@ -1,0 +1,56 @@
+<div class="hideonmobile">
+  {{> ads/span/slim-dark}}
+</div>
+
+{{> header/header}}
+
+<div class="body view-twocolB">
+  <div class="container">
+
+    <section class="topspan">
+      {{#each topspan}}
+        {{{this}}}
+      {{/each}}
+    </section>
+
+    <section class="main">
+
+      <div class="beforeRow">
+        {{#each beforeRow}}
+          {{{this}}}
+        {{/each}}
+      </div>
+
+      <div class="two-col-body">
+
+        <div class="col1">
+          {{#each col1}}
+            {{{this}}}
+          {{/each}}
+        </div>
+
+        <div class="col2">
+          {{#each col2}}
+            {{{this}}}
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="afterRow">
+        {{#each afterRow}}
+          {{{this}}}
+        {{/each}}
+      </div>
+
+    </section>
+
+    <section class="bottomspan">
+      {{#each bottomspan}}
+        {{{this}}}
+      {{/each}}
+    </section>
+
+  </div>
+</div>
+
+{{> footer/footer}}

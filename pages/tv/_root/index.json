@@ -21,6 +21,14 @@
         "widgets/sidebar/sidebar": {
           "classes": [
             "left"
+          ],
+          "search": {
+            "title": "CBOETV"
+          },
+          "components": [
+            {
+              "widgets/sidebar/filter/filter": "test"
+            }
           ]
         }
       },

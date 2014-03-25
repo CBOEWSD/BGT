@@ -1,7 +1,7 @@
 <aside class="sidebar-widget {{#each classes}} {{this}} {{/each}}">
-  <div class="search">
-    search
-  </div>
+  {{> widgets/sidebar/search/search}}
 
-  rest.
+  {{#each components}}
+    {{{this}}}
+  {{/each}}
 </aside>

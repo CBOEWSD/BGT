@@ -47,10 +47,5 @@ $bgcolor: darken($colorGrey2, 9%);
     }
   }
 
-  .search {
-    margin: -15px -15px 15px -15px;
-    padding: 15px;
-    background: darken($bgcolor, 30%);
-    color: #fff;
-  }
+  @import 'search/search';
 }

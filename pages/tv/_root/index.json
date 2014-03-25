@@ -18,7 +18,9 @@
     ],
     "col1": [
       {
-        "widgets/forms/body/body": "login/component.json"
+        "widgets/sidebar/sidebar": {
+          "classes": ["left"]
+        }
       }
     ],
     "col2": [

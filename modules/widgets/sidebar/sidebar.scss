@@ -1,0 +1,56 @@
+/*
+  Module: Sidebar Snapshot component
+  Description: Contains a search component filter and a drop point for a sub module.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/fadein';
+
+$module: '.sidebar-widget';
+
+$bgcolor: darken($colorGrey2, 9%);
+
+#{$module} {
+  background: $bgcolor;
+  padding: 15px;
+  position: relative;
+
+  &:after {
+    display: block; content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+  }
+
+  &.left {
+    margin-left: -20px;
+
+    &:after {
+      left: 0;
+      border-width: 0 5px 5px 0;
+      border-color: transparent $colorGrey1 transparent transparent;
+    }
+  }
+
+  &.right {
+    margin-right: -20px;
+
+    &:after {
+      right: 0;
+      border-width: 5px 5px 0 0;
+      border-color: $colorGrey1 transparent transparent transparent;
+    }
+  }
+
+  .search {
+    margin: -15px -15px 15px -15px;
+    padding: 15px;
+    background: darken($bgcolor, 30%);
+    color: #fff;
+  }
+}

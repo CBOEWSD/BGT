@@ -23,7 +23,16 @@
     ],
     "col2": [
       {
-        "widgets/forms/body/body": "register/component.json"
+        "widgets/tv/row/row": "tv/recent.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/popular.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/education.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/options.json"
       }
     ],
     "bottomspan": [

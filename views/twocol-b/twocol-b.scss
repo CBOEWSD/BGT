@@ -39,15 +39,18 @@ $view: '.view-twocolB';
       width: 100%;
       clear: both;
       @include clearfix();
-      margin-bottom: 20px;
+      margin: 20px 0;
 
       .col1, .col2 {
         display: table-cell;
         vertical-align: top;
         padding: 0 15px;
-        width: 50%;
+        width: 100%;
       }
 
+      .col1 {
+        width: 250px;
+      }
 
     }
   }

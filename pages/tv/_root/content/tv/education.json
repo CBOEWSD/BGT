@@ -1,0 +1,54 @@
+{
+  "title": "Education",
+  "viewall": {
+    "text": "View All",
+    "href": "#"
+  },
+  "total": 201,
+  "items": [
+    {
+      "url": "#",
+      "thumbnail": {
+        "src": "/ui/assets/images/videos/singlevid.jpg"
+      },
+      "meta": {
+        "views": "10,572",
+        "likes": 407
+      },
+      "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    },
+    {
+      "url": "#",
+      "thumbnail": {
+        "src": "/ui/assets/images/videos/singlevid.jpg"
+      },
+      "meta": {
+        "views": "10,572",
+        "likes": 407
+      },
+      "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    },
+    {
+      "url": "#",
+      "thumbnail": {
+        "src": "/ui/assets/images/videos/singlevid.jpg"
+      },
+      "meta": {
+        "views": "10,572",
+        "likes": 407
+      },
+      "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    },
+    {
+      "url": "#",
+      "thumbnail": {
+        "src": "/ui/assets/images/videos/singlevid.jpg"
+      },
+      "meta": {
+        "views": "10,572",
+        "likes": 407
+      },
+      "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    }
+  ]
+}

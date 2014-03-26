@@ -28,6 +28,9 @@
           "components": [
             {
               "widgets/sidebar/filter/filter": "sidebar/filter.json"
+            },
+            {
+              "widgets/content/content": "sidebar/footnote.md"
             }
           ]
         }

@@ -63,6 +63,7 @@ $bgcolor: darken($colorGrey2, 9%);
         padding-left: 8px;
         cursor: default;
         border-bottom: none;
+        background: $colorGrey1;
 
         &:before{display:none;}
       }

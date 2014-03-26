@@ -27,7 +27,7 @@
           },
           "components": [
             {
-              "widgets/sidebar/filter/filter": "test"
+              "widgets/sidebar/filter/filter": "sidebar/filter.json"
             }
           ]
         }

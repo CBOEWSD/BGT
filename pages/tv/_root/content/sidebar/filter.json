@@ -1,0 +1,72 @@
+{
+  "title": "Show Videos",
+  "parent": {
+    "title": "All Videos",
+    "total": 754
+  },
+  "filters": [
+    {
+      "title": "Most Recent",
+      "total": 12,
+      "items": [
+        {
+          "title": "Sub title",
+          "total": 6,
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "total": 4,
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "total": 2,
+          "url": "#menu"
+        }
+      ]
+    },
+    {
+      "title": "Most Recent",
+      "total": 12,
+      "items": [
+        {
+          "title": "Sub title",
+          "total": 6,
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "total": 4,
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "total": 2,
+          "url": "#menu"
+        }
+      ]
+    },
+    {
+      "title": "Most Recent",
+      "total": 12,
+      "items": [
+        {
+          "title": "Sub title",
+          "total": 6,
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "total": 4,
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "total": 2,
+          "url": "#menu"
+        }
+      ]
+    }
+  ]
+}

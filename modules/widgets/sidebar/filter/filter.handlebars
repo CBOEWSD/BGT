@@ -1,0 +1,57 @@
+<div class="filter">
+  {{#if title}}
+  <strong>{{title}}</strong>
+  {{/if}}
+
+  <ul>
+
+    {{#if parent}}
+    <li class="parent">
+      {{{parent.title}}}
+
+      {{#if parent.total}}
+      <span class="total">
+        {{{parent.total}}}
+      </span>
+      {{/if}}
+    </li>
+    {{/if}}
+
+    {{#each filters}}
+    <li>
+      {{#if this.items}}
+      <a class="toplevel">
+        {{{this.title}}}
+
+        {{#if this.total}}
+        <span class="total">
+          {{{this.total}}}
+        </span>
+        {{/if}}
+      </a>
+      {{else}}
+      {{{this.title}}}
+      {{/if}}
+
+      {{#if this.items}}
+      <ul>
+        {{#each this.items}}
+        <li>
+          <a href="{{this.url}}">
+            {{{this.title}}}
+
+            {{#if this.total}}
+            <span class="total">
+              {{{this.total}}}
+            </span>
+            {{/if}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </li>
+    {{/each}}
+
+  </ul>
+</div>

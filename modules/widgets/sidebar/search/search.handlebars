@@ -1,0 +1,16 @@
+
+{{#if search}}
+<form class="search">
+  <strong>Search {{search.title}}:</strong>
+
+  <div class="input">
+    <input type="text" placeholder="Search CBOETV..." name="search-tv">
+    <button type="submit">Search</button>
+  </div>
+
+  <label>
+    Search within results:
+    <input type="checkbox" name="within">
+  </label>
+</form>
+{{/if}}

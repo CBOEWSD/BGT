@@ -1,0 +1,45 @@
+/*
+  Module: Sidebar Snapshot Search subcomponent
+  Description: Imported into the higher level component (sidebar)
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.search';
+
+#{$module} {
+  margin: -15px -15px 15px -15px;
+  padding: 15px;
+  background: darken($bgcolor, 30%);
+  color: #fff;
+
+  .input {
+    position: relative;
+    line-height: 0;
+
+    $buttonWidth: 30px;
+
+    input {
+      width: 100%;
+      padding-right: $buttonWidth;
+    }
+
+    button {
+      position: absolute;
+      right: -1px;
+      top: 0;
+      height: 100%;
+      width: $buttonWidth;
+      background: $colorBlue1;
+      border: none;
+      margin: 0;
+      padding: 0;
+      @include border-radius(0 5px 5px 0);
+
+      &:hover {
+        background: lighten($colorBlue1, 5%);
+      }
+    }
+  }
+}

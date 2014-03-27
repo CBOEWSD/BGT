@@ -1,0 +1,67 @@
+{
+  "view": "twocol-b",
+  "title": "Search Landing",
+  "meta": {
+    "keywords": "some, keywords",
+    "description": "This is a description"
+  },
+  "placeholders": {
+    "topspan": [
+      {
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+      }
+    ],
+    "beforeRow": [
+      {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "201 Results for \"Events\"",
+            "promo": {
+                "class": "tradestation",
+                "url": "#"
+            }
+          }
+        }
+      }
+    ],
+    "col1": [
+      {
+        "widgets/sidebar/sidebar": {
+          "classes": [
+            "left"
+          ],
+          "search": {
+            "title": "word or phrase"
+          },
+          "components": [
+            {
+              "widgets/sidebar/filter/filter": "sidebar/filter.json"
+            }
+          ]
+        }
+      },
+      {
+        "ads/tall/tall": ""
+      }
+    ],
+    "col2": [
+      {
+        "widgets/tv/row/row": "tv/recent.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/popular.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/education.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/options.json"
+      }
+    ],
+    "bottomspan": [
+      {
+        "widgets/widget": "bottomspan/widget.json"
+      }
+    ]
+  }
+}

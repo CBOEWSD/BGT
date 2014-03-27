@@ -1,0 +1,60 @@
+{
+  "title": "Advanced Search",
+  "parent": {
+    "title": "All of CBOE",
+    "total": 201
+  },
+  "filters": [
+    {
+      "title": "CBOE Products",
+      "items": [
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        }
+      ]
+    },
+    {
+      "title": "Investor Relations",
+      "items": [
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        }
+      ]
+    },
+    {
+      "title": "Trading Tools",
+      "items": [
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        },
+        {
+          "title": "Sub title",
+          "url": "#menu"
+        }
+      ]
+    }
+  ]
+}

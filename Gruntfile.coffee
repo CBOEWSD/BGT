@@ -107,6 +107,13 @@ module.exports = (grunt) ->
         src: '**/*.html'
         dest: '_static/'
 
+    gremlins:
+      dev:
+        options:
+          path: 'http://localhost:' + pkg.server.port
+          test: './test/gremlins.test.js'
+
+
   }
 
   # ### Load Grunt Modules
@@ -119,6 +126,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'dev', ['doccoXT', 'handlebars']
   grunt.registerTask 'prod', ['handlebars']
   grunt.registerTask 'release', ['prettify', 'jsbeautifier']
+  grunt.registerTask 'test', ['gremlins']
 
 
   # # Custom tasks
@@ -126,5 +134,14 @@ module.exports = (grunt) ->
   # This is used to directly run the server without monitoring
   # for changes. This is useful for quick runs - such as testing.
   grunt.registerTask 'server', 'Start our local web server.', ->
-    grunt.log.writeln "Started server on port #{pkg.server.port}"
-    require('./app.coffee')
+    done = this.async()
+
+    spawn = require('win-spawn')
+    server = spawn('coffee', ['app.coffee', 'PORT=9999'], {stdio: 'inherit'})
+
+    setTimeout ->
+      done()
+    , 6000
+
+    console.log('Spawned child pid: ' + server.pid)
+

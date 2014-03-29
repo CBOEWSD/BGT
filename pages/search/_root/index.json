@@ -52,7 +52,7 @@
         "widgets/results/results": "results.json"
       },
       {
-        "widgets/tv/row/row": "tv/education.json"
+        "widgets/pagination/pagination": "results.json"
       }
     ],
     "bottomspan": [

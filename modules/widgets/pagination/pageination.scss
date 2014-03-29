@@ -1,0 +1,57 @@
+/*
+  Module: Pagination
+  Description: Pagination
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.pagination';
+
+#{$module} {
+  text-align: center;
+  margin: 20px 0;
+
+  ul {
+    list-style: none;
+    margin: 0; padding: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+        background: $colorBlue1;
+        color: #fff;
+        font: {
+          size: .9em;
+          weight: 700;
+        }
+        padding: 3px 8px;
+        margin: 0 3px;
+
+        &:hover, &:active {
+          background: lighten($colorBlue1, 5%);
+        }
+
+        &.active {
+          background: $colorGreen1;
+        }
+      }
+
+      &.next, &.prev {
+        a {
+          background: none;
+          color: $colorGrey1;
+          padding: 3px 20px;
+        }
+      }
+    }
+  }
+
+  .total {
+    display: block;
+    margin: 10px 0 0 0;
+    color: darken($colorGrey2, 25%);
+  }
+}

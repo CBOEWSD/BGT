@@ -104,6 +104,14 @@ $bgcolor: darken($colorGrey2, 9%);
 
             input {
               margin-top: -7px;
+
+              & + span {
+                color: lighten($colorGrey1, 40%);
+              }
+
+              &:checked + span {
+                 color: $colorGrey1;
+              }
             }
 
             .total {

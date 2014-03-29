@@ -46,7 +46,7 @@
     ],
     "col2": [
       {
-        "widgets/tv/row/row": "tv/recent.json"
+        "ads/sponsered-ad/spns": ""
       },
       {
         "widgets/tv/row/row": "tv/popular.json"

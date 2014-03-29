@@ -1,0 +1,33 @@
+/*
+  Module: Sponsered Results
+  Description: Styling for search sponsered results
+*/
+
+@import './ui/base/_includes/grid';
+@import './ui/base/settings';
+
+$module: '.sponsered';
+
+#{$module} {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  .results, .ad {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .results {
+    width: 100%;
+
+    a {
+      display: block;
+      margin-top: 30px;
+    }
+  }
+
+  .ad {
+    width: 300px;
+  }
+}

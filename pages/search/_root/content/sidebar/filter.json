@@ -9,14 +9,20 @@
       "title": "CBOE Products",
       "items": [
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         },
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         },
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         }
@@ -26,14 +32,20 @@
       "title": "Investor Relations",
       "items": [
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         },
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         },
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         }
@@ -43,14 +55,20 @@
       "title": "Trading Tools",
       "items": [
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         },
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         },
         {
+          "type": "checkbox",
+          "name": "fieldname",
           "title": "Sub title",
           "url": "#menu"
         }

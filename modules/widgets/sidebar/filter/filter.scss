@@ -83,18 +83,30 @@ $bgcolor: darken($colorGrey2, 9%);
           font: {
             size: .9em;
           }
-          a {
+          a, label {
             display: block;
             padding: 6px 10px 6px 50px;
             position: relative;
+            cursor: pointer;
 
-            .total {
+            &:hover, &:active {
+              color: $colorBlue1;
+            }
+
+            .total, input {
               display: block;
               position: absolute;
               margin-right: 10px;
               left: 30px;
               top: 50%;
               line-height: 16px;
+            }
+
+            input {
+              margin-top: -7px;
+            }
+
+            .total {
               margin-top: -8px;
             }
           }

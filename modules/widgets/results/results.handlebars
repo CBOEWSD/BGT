@@ -1,0 +1,42 @@
+<section class="results">
+
+  <div class="title">
+    <h2>
+      Showing {{results.length}} results of {{total}}
+    </h2>
+
+    <select name="perpage">
+      <option>
+        Results per page {{results.length}}
+      </option>
+      <option>
+        Results per page 20
+      </option>
+      <option>
+        Results per page 30
+      </option>
+      <option>
+        Results per page 40
+      </option>
+      <option>
+        Results per page 50
+      </option>
+    </select>
+  </div>
+
+  {{#each results}}
+  <div class="result">
+    <h2>
+      <a href="{{this.url}}">
+        {{{this.title}}}
+      </a>
+    </h2>
+
+    <p>
+      {{{this.snippet}}}
+    </p>
+
+    URL: <a href="{{this.url}}" class="url">{{this.url}}</a>
+  </div>
+  {{/each}}
+</section>

@@ -13,6 +13,11 @@ $module: '.sponsered';
   table-layout: fixed;
   width: 100%;
 
+  .block {
+    background: lighten($colorGrey2, 7%);
+    padding: 10px;
+  }
+
   .results, .ad {
     display: table-cell;
     vertical-align: top;
@@ -24,10 +29,15 @@ $module: '.sponsered';
     a {
       display: block;
       margin-top: 30px;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 
   .ad {
+    padding-left: 15px;
     width: 300px;
   }
 }

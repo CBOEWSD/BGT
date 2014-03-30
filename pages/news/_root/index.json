@@ -22,6 +22,9 @@
             }
           }
         }
+      },
+      {
+        "widgets/hero/w-ad/side-image": "hero.json"
       }
     ],
     "col1": [

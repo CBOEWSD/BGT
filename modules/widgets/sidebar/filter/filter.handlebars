@@ -18,19 +18,21 @@
     {{/if}}
 
     {{#each filters}}
-    <li>
-      {{#if this.items}}
-      <a class="toplevel" unselectable="on">
-        {{{this.title}}}
+    <li class="{{#unless this.title}}expanded{{/unless}}">
+      {{#if this.title}}
+        {{#if this.items}}
+          <a class="toplevel" unselectable="on">
+            {{{this.title}}}
 
-        {{#if this.total}}
-        <span class="total">
-          {{{this.total}}}
-        </span>
+            {{#if this.total}}
+            <span class="total">
+              {{{this.total}}}
+            </span>
+            {{/if}}
+          </a>
+        {{else}}
+          {{{this.title}}}
         {{/if}}
-      </a>
-      {{else}}
-      {{{this.title}}}
       {{/if}}
 
       {{#if this.items}}

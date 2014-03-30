@@ -46,9 +46,6 @@
     ],
     "col2": [
       {
-        "ads/sponsered-ad/spns": ""
-      },
-      {
         "widgets/results/twocol": "results.json"
       },
       {

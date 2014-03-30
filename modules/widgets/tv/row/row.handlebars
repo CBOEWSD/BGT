@@ -4,9 +4,12 @@
     {{#if title}}
     <h2>
       {{{title}}}
-      <a href="{{viewall.href}}" class="total">
-        ({{{total}}})
-      </a>
+
+      {{#if total}}
+        <a href="{{viewall.href}}" class="total">
+          ({{{total}}})
+        </a>
+      {{/if}}
     </h2>
     {{/if}}
 

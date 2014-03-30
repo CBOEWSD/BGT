@@ -46,10 +46,7 @@
     ],
     "col2": [
       {
-        "widgets/results/twocol": "results.json"
-      },
-      {
-        "widgets/pagination/pagination": "results.json"
+        "widgets/tv/row/row": "tv.json"
       }
     ],
     "bottomspan": [

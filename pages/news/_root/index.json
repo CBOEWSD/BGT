@@ -49,7 +49,7 @@
         "ads/sponsered-ad/spns": ""
       },
       {
-        "widgets/results/results": "results.json"
+        "widgets/results/twocol": "results.json"
       },
       {
         "widgets/pagination/pagination": "results.json"

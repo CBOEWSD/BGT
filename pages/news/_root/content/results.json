@@ -1,0 +1,57 @@
+{
+  "total": 201,
+  "filter": "CBOE News",
+  "results": [
+    {
+      "col1": [
+        {
+          "widgets/list/simple": "results/1.json"
+        }
+      ],
+      "col2": [
+        {
+          "widgets/list/simple": "results/2.json"
+        }
+      ]
+    },
+    {
+      "col1": [
+        {
+          "widgets/list/simple": "results/3.json"
+        },
+        {
+          "widgets/list/simple": "results/4.json"
+        }
+      ],
+      "col2": [
+        {
+          "ads/square_300/block": ""
+        }
+      ]
+    },
+    {
+      "col1": [
+        {
+          "widgets/list/simple": "results/1.json"
+        }
+      ],
+      "col2": [
+        {
+          "widgets/list/simple": "results/2.json"
+        }
+      ]
+    },
+    {
+      "col1": [
+        {
+          "widgets/list/simple": "results/3.json"
+        }
+      ],
+      "col2": [
+        {
+          "widgets/list/simple": "results/3.json"
+        }
+      ]
+    }
+  ]
+}

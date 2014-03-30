@@ -1,0 +1,31 @@
+<section class="results twocols">
+
+  <div class="title">
+    <h2>
+      Showing all "{{filter}}"
+    </h2>
+
+    <a href="#" class="viewall">
+      View All
+    </a>
+  </div>
+
+  {{#each results}}
+  <div class="cols">
+
+    <div class="col1">
+      {{#each this.col1}}
+        {{{this}}}
+      {{/each}}
+    </div>
+
+    <div class="col2">
+      {{#each this.col2}}
+        {{{this}}}
+      {{/each}}
+    </div>
+
+  </div>
+  {{/each}}
+
+</section>

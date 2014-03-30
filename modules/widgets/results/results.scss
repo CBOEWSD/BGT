@@ -12,7 +12,7 @@ $module: '.results';
 #{$module} {
   margin: 20px 0;
 
-  .title {
+  &>.title {
     border-bottom: 1px solid $colorGrey2;
     padding-bottom: 10px;
     position: relative;
@@ -48,6 +48,29 @@ $module: '.results';
 
       &:hover, &:active {
         color: $colorGrey1;
+      }
+    }
+  }
+
+  &.twocols {
+    .cols {
+      margin: 20px 0;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      .col1, .col2 {
+        width: 50%;
+        display: table-cell;
+        vertical-align: top;
+        padding: 0;
+      }
+
+      .col1 {
+        padding-right: 7px;
+      }
+      .col2 {
+        padding-left: 7px;
       }
     }
   }

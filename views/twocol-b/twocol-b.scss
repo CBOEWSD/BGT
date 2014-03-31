@@ -56,8 +56,6 @@ $view: '.view-twocolB';
   }
 
 
-
-
   @media screen and (max-width: 950px) {
     .main {
       .two-col-body {
@@ -70,7 +68,20 @@ $view: '.view-twocolB';
 
   @media screen and (max-width: $screenSmallMax) {
     .main {
+      margin-top: 30px;
 
+      .two-col-body {
+        display: block;
+
+        .col1, .col2 {
+          display: block;
+          width: 100%;
+        }
+
+        .col1 {
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 }

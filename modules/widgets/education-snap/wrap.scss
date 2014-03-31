@@ -112,4 +112,24 @@ $module: '.education-snapshot';
   .accordion {
     margin: 0 -16px;
   }
+
+
+  @media screen and (max-width: 1000px) {
+    .inRow {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      border-bottom: 1px solid darken($colorGrey2, 15%);
+
+      .mainCol, .sideCol {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .sideCol {
+        margin-top: 15px;
+      }
+    }
+  }
 }

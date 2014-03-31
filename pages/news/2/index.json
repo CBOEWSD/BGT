@@ -46,6 +46,17 @@
     ],
     "col2": [
       {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "Showing all \"CBOE News\"",
+            "promo": {
+              "url": "#",
+              "text": "View All"
+            }
+          }
+        }
+      },
+      {
         "widgets/results/twocol": "results.json"
       },
       {

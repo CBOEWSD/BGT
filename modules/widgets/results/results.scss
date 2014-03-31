@@ -84,4 +84,16 @@ $module: '.results';
       }
     }
   }
+
+  @media all and (max-width: 900px) {
+    &.twocols {
+      .cols {
+        display: block;
+
+        .col1, .col2 {
+          display: block; width: 100%;
+        }
+      }
+    }
+  }
 }

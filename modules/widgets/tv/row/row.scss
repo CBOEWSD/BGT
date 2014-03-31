@@ -62,4 +62,13 @@ $module: '.widget-tv.row';
   .meta {
     margin: 10px 0;
   }
+
+  @media screen and (max-width: 500px) {
+    .items {
+      .item {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 }

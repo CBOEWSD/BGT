@@ -17,4 +17,37 @@ $module: '.wrap-columns';
       @include column(6);
     }
   }
+
+  .component {
+    margin-bottom: 50px;
+    position: relative;
+
+    &:after {
+      display: block; content: "";
+      border-bottom: 1px solid $colorGrey2;
+      width: 100%;
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding: 0;
+      margin-bottom: 0;
+
+      &:after { display: none; }
+    }
+    &:first-child {
+      border-bottom: none;
+      padding: 0;
+      margin-bottom: 0;
+
+      &:after { display: none; }
+    }
+
+    &>div, &>section, &>article {
+      margin: 0;
+    }
+  }
 }

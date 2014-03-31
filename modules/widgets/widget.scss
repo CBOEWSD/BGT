@@ -122,6 +122,18 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
     top: 0;
     right: 0;
 
+    a {
+      color: $colorBlue1;
+      text-transform: uppercase;
+      font: {
+        size: 10px;
+      }
+
+      &:hover, &:active {
+        color: $colorGrey1;
+      }
+    }
+
     .optionshub {
       margin-top: -4px;
     }

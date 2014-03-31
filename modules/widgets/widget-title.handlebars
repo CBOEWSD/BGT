@@ -4,7 +4,11 @@
 
     {{#if widget.promo}}
     <div class="promo">
-      <a href="{{widget.promo.url}}" class="icon-logo {{widget.promo.class}}"></a>
+      <a
+      href="{{widget.promo.url}}"
+      class="{{#if widget.promo.class}}icon-logo {{widget.promo.class}}{{/if}}">
+      {{{widget.promo.text}}}
+    </a>
     </div>
     {{/if}}
   </h3>

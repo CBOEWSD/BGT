@@ -53,8 +53,8 @@
                 "widget": {
                   "title": "CBOE News",
                   "promo": {
-                    "class": "tradestation",
-                    "url": "#"
+                    "url": "#",
+                    "text": "View All"
                   }
                 }
               }
@@ -81,8 +81,8 @@
                 "widget": {
                   "title": "Market News",
                   "promo": {
-                    "class": "tradestation",
-                    "url": "#"
+                    "url": "#",
+                    "text": "View All"
                   }
                 }
               }

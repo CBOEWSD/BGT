@@ -60,7 +60,11 @@ $view: '.view-twocolB';
 
   @media screen and (max-width: 950px) {
     .main {
-
+      .two-col-body {
+        .col1 {
+          width: 210px;
+        }
+      }
     }
   }
 

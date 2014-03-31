@@ -246,5 +246,13 @@ $3dsize: 6px;
         }
       }
     }
+
+    &.side-image {
+      margin-left: 0;
+
+      .image {
+        display: none;
+      }
+    }
   }
 }

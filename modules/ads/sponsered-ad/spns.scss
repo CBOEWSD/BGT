@@ -40,4 +40,11 @@ $module: '.sponsered';
     padding-left: 15px;
     width: 300px;
   }
+
+  @media all and (max-width: $screenSmallMax) {
+    .results, .ad {
+      display: block;
+      width: 100%;
+    }
+  }
 }

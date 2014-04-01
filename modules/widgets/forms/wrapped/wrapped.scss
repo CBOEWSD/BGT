@@ -101,4 +101,38 @@ $module: '.form-wrapped';
       color: #fff;
     }
   }
+
+  @media all and (max-width: $screenSmallMax) {
+    .columns {
+      display: block;
+      width: 100%;
+
+      &.half-width {
+        width: 100%;
+      }
+
+      &.fourth-width {
+        width: 100%;
+      }
+
+      &.threefourth-width {
+        width: 100%;
+      }
+
+      .column {
+        display: block;
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+      text-align: center;
+
+      .button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
 }

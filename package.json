@@ -47,6 +47,7 @@
     "grunt-har-gen": "~0.4.0",
     "grunt-jsbeautifier": "~0.2.6",
     "grunt-prettify": "~0.3.4",
-    "grunt-docco-xt": "~0.1.2"
+    "grunt-docco-xt": "~0.1.2",
+    "grunt-express-server": "~0.4.13"
   }
 }

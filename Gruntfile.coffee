@@ -107,6 +107,16 @@ module.exports = (grunt) ->
         src: '**/*.html'
         dest: '_static/'
 
+    express:
+      options:
+        cmd: 'coffee'
+        background: true
+        port: 6874235
+        debug: true
+      test:
+        options:
+          script: './app.coffee'
+
   }
 
   # ### Load Grunt Modules
@@ -119,6 +129,8 @@ module.exports = (grunt) ->
   grunt.registerTask 'dev', ['doccoXT', 'handlebars']
   grunt.registerTask 'prod', ['handlebars']
   grunt.registerTask 'release', ['prettify', 'jsbeautifier']
+
+  grunt.registerTask 'test', ['express:test']
 
 
   # # Custom tasks

@@ -10,7 +10,7 @@ $module: '.pagination';
 
 #{$module} {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 0;
 
   ul {
     list-style: none;
@@ -53,5 +53,28 @@ $module: '.pagination';
     display: block;
     margin: 10px 0 0 0;
     color: darken($colorGrey2, 25%);
+  }
+
+  @media all and (max-width: $screenSmallMax) {
+    ul {
+      position: relative;
+      padding-top: 30px;
+
+      li {
+        &.next, &.prev {
+          position: absolute;
+          top: 0;
+          width: 50%;
+        }
+
+        &.next {
+          right: 0;
+        }
+
+        &.prev {
+          left: 0;
+        }
+      }
+    }
   }
 }

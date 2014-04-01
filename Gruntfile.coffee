@@ -111,11 +111,18 @@ module.exports = (grunt) ->
       options:
         cmd: 'coffee'
         background: true
-        port: 6874235
-        debug: true
+        port: pkg.server.test
+        delay: 3000
       test:
         options:
           script: './app.coffee'
+
+    gremlins:
+      dev:
+        options:
+          path: 'http://localhost:' + pkg.server.test
+          test: './test/gremlins.test.js'
+
 
   }
 
@@ -130,13 +137,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'prod', ['handlebars']
   grunt.registerTask 'release', ['prettify', 'jsbeautifier']
 
-  grunt.registerTask 'test', ['express:test']
+  grunt.registerTask 'test', ['express:test', 'gremlins']
 
 
-  # # Custom tasks
-  # ### Server
-  # This is used to directly run the server without monitoring
-  # for changes. This is useful for quick runs - such as testing.
-  grunt.registerTask 'server', 'Start our local web server.', ->
-    grunt.log.writeln "Started server on port #{pkg.server.port}"
-    require('./app.coffee')

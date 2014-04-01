@@ -18,3 +18,11 @@ requirejs.config {
     socketio: '/ui/libs/socket.io-client/dist/socket.io'
     restable: '/ui/libs/ReStable/jquery.restable'
 }
+
+
+
+requirejs.config({
+  paths: {
+    gremlins:  '/ui/libs/gremlins.js/gremlins.min'
+  }
+})

@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "server": {
-    "port": 3001
+    "port": 3001,
+    "test": 3045
   },
   "scripts": {
     "start": "coffee app.coffee",
@@ -48,6 +49,7 @@
     "grunt-jsbeautifier": "~0.2.6",
     "grunt-prettify": "~0.3.4",
     "grunt-docco-xt": "~0.1.2",
-    "grunt-express-server": "~0.4.13"
+    "grunt-express-server": "~0.4.13",
+    "grunt-gremlins": "0.0.3"
   }
 }

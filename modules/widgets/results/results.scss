@@ -93,6 +93,10 @@ $module: '.results';
         .col1, .col2 {
           display: block; width: 100%;
         }
+
+        .col2 {
+          padding-left: 0;
+        }
       }
     }
   }

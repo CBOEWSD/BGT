@@ -89,4 +89,29 @@ $module: '.widget-tv.player';
     }
   }
 
+
+  @media all and (max-width: $screenSmallMax) {
+    .prow {
+      .meta {
+        .advert, .ad {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 600px) {
+    .prow {
+      display: block;
+
+      .meta, .player {
+        display: block;
+        width: 100%;
+      }
+
+      .meta {
+        padding-left: 0;
+      }
+    }
+  }
 }

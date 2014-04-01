@@ -27,26 +27,14 @@ module.exports = (grunt) ->
       tasks: ['handlebars']
 
     # Docco compiles code into annotated web documents
-    docco:
+    doccoXT:
       docs:
         src: [
-          '*.coffee',
-          'ui/**/*.coffee',
-          'modules/**/*.coffee',
-          '_application/**/*.coffee'
+          '_static/**/*.js',
         ]
         options:
+          basedir: '_static'
           output: './ui/docs'
-
-    # [Grunt-Qunit-Junit](https://github.com/sbrandwoo/grunt-qunit-junit)
-    qunit_junit:
-      options:
-        dest: '_tests'
-
-    # [Qunit](https://github.com/gruntjs/grunt-contrib-qunit)
-    qunit:
-      options:
-        urls: 'http://localhost:' + pkg.server.port
 
     # [Grunt-Contrib-Handlebars](https://npmjs.org/package/grunt-contrib-handlebars)
     handlebars:
@@ -128,10 +116,9 @@ module.exports = (grunt) ->
 
   # ### Grunt Tasks
   grunt.registerTask 'default', ['concurrent:dev']
-  grunt.registerTask 'dev', ['docco', 'handlebars']
+  grunt.registerTask 'dev', ['doccoXT', 'handlebars']
   grunt.registerTask 'prod', ['handlebars']
-  grunt.registerTask 'json', ['jsbeautifier']
-  grunt.registerTask 'test', ['server', 'qunit_junit', 'qunit']
+  grunt.registerTask 'release', ['prettify', 'jsbeautifier']
 
 
   # # Custom tasks

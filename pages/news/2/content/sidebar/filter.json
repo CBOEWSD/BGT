@@ -1,0 +1,81 @@
+{
+  "title": "Advanced Search",
+  "filters": [
+    {
+      "items": [
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Quotes & Data",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Product News",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Education",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Strategies",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Tools and Resources",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "CBOE News",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "CBOE Investor Relations",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Institutional",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Options Hub",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Options Institute",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Press Releases",
+          "url": "#menu"
+        },
+        {
+          "type": "checkbox",
+          "name": "fieldname",
+          "title": "Event News",
+          "url": "#menu"
+        }
+      ]
+    }
+  ]
+}

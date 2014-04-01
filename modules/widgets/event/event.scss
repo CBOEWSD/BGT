@@ -1,0 +1,46 @@
+/*
+  Module: Event summary
+  Description: Will print out a summary of the event with meta data array being fed in.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.event';
+
+#{$module} {
+  h2 {
+    color: $colorBlue1;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 30px 0;
+
+    li, strong, span {
+      display: inline-block;
+      width: 49.1%;
+      vertical-align: top;
+    }
+
+    li {
+      padding: 5px 0;
+    }
+  }
+
+  dl {
+    margin: 20px 0;
+
+    dt {
+      font: {
+        weight: 700;
+      }
+      margin: 0 0 5px 0;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+}

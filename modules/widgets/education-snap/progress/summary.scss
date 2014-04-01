@@ -1,0 +1,43 @@
+/*
+  Module: Education Snapshot Wrap
+  Description: Wrapper component to the education snapshot module.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/gradient';
+
+$module: '.progress-summary';
+
+#{$module} {
+  h3 {
+    padding-right: 45px;
+
+    .percent {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: $colorGreen1;
+    }
+  }
+
+  .bar-wrap {
+    background-color: #ffffff; // Old browsers
+    @include gradient(darken($colorGrey2, 9%), darken($colorGrey2, 1%));
+    border: 1px solid darken($colorGrey2, 9%);
+    padding: 7px;
+    @include border-radius(25px);
+
+    .bar {
+      background: $colorGrey1;
+      height: 15px;
+      @include border-radius(25px);
+      overflow: hidden;
+
+      .prog {
+        background: lighten($colorGreen1, 10%);
+        height: 15px;
+      }
+    }
+  }
+}

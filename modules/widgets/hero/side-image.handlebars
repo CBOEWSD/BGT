@@ -1,0 +1,40 @@
+<div class="widget-hero copybased side-image {{#each classes}} {{this}} {{/each}}">
+  <div class="slides">
+    {{#each slides}}
+    <div class="slide" data-slideid="{{@index}}">
+
+      <div class="image">
+        {{#if image}}
+        <img
+        src="{{image.src}}"
+        alt="{{#if image.alt}}{{image.alt}}{{else}}{{text}}{{/if}}"
+        class="hideonmobile">
+        {{/if}}
+      </div>
+
+      <div class="copy">
+        <h5>
+          {{title}}
+        </h5>
+        <h2>
+          {{text}}
+        </h2>
+
+
+        {{#if description}}
+        <p>
+          {{{description}}}
+        </p>
+        {{/if}}
+
+        {{#if link}}
+        <a href="{{link.url}}" title="{{link.text}}" class="link">
+          {{link.text}}
+        </a>
+        {{/if}}
+      </div>
+
+    </div>
+    {{/each}}
+  </div>
+</div>

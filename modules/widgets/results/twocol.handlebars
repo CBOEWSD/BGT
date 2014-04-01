@@ -1,0 +1,25 @@
+<section class="results twocols">
+
+  {{#each results}}
+  <div class="cols">
+
+    <div class="col1">
+      {{#each this.col1}}
+        <div class="component">
+          {{{this}}}
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="col2">
+      {{#each this.col2}}
+        <div class="component">
+          {{{this}}}
+        </div>
+      {{/each}}
+    </div>
+
+  </div>
+  {{/each}}
+
+</section>

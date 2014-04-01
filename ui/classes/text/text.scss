@@ -10,11 +10,24 @@
 
 $class: '.text-';
 
+#{$class}center {
+  text-align: center;
+}
+#{$class}right {
+  text-align: right;
+}
+#{$class}left {
+  text-align: left;
+}
+
 #{$class}green {
   color: $colorGreen1;
 }
 #{$class}grey {
   color: $colorGrey1;
+}
+#{$class}red {
+  color: $colorRed1;
 }
 
 #{$class}larger-12 {

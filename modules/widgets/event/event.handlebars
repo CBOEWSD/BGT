@@ -1,0 +1,32 @@
+<section class="event">
+  {{#if title}}
+    <h2>
+      {{{title}}}
+    </h2>
+  {{/if}}
+
+  {{#if meta}}
+  <ul class="">
+    {{#each meta}}
+    <li>
+      <strong>{{this.title}}:</strong>
+      <span>{{this.value}}</span>
+    </li>
+    {{/each}}
+  </ul>
+  {{/if}}
+
+  {{#if policy}}
+  <dl>
+    {{#each policy}}
+    <dt>
+      {{{this.title}}}:
+    </dt>
+    <dd>
+      {{{this.description}}}
+    </dd>
+    {{/each}}
+  </dl>
+  {{/if}}
+
+</section>

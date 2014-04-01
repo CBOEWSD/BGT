@@ -32,12 +32,7 @@
       .topbar .menu li.hidemobile {
         display: inline-block; }
       .topbar .menu li a {
-        display: -moz-inline-stack;
-        display: inline-block;
-        vertical-align: middle;
-        *vertical-align: auto;
-        zoom: 1;
-        *display: inline; }
+        display: block; }
         .topbar .menu li a.sprite {
           background: url(/modules/header/topbar/assets/sprite.jpg) no-repeat top center;
           text-indent: -5000em;
@@ -66,7 +61,8 @@
       z-index: 8000;
       height: 45px; }
       .topbar .menu {
-        padding: 0 10px; }
+        padding: 0 10px;
+        width: 100%; }
         .topbar .menu li {
           margin-left: 10px;
           padding: 8px 0; }
@@ -111,6 +107,16 @@
           height: 4px;
           background: white;
           box-shadow: 0 8px 0 0 white, 0 16px 0 0 white; } }
+  @media screen and (orientation: landscape) {
+    .topbar {
+      width: 100.1%; }
+      .topbar .menu {
+        width: 100.1%; } }
+  @media screen and (orientation: portrait) {
+    .topbar {
+      width: 100%; }
+      .topbar .menu {
+        width: 100%; } }
   @media print {
     .topbar {
       display: none; } }

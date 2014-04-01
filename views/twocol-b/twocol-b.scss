@@ -1,0 +1,87 @@
+/*
+  View: twocolB
+  Description: Styling for twocol view.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$view: '.view-twocolB';
+
+#{$view} {
+  padding: 0 7px;
+
+  .topspan {
+    @include outerRow();
+  }
+
+  .bottomspan {
+    @include outerRow();
+    margin: 35px 0;
+  }
+
+  .beforeRow, .afterRow {
+      padding: 0 15px;
+  }
+
+  .main {
+      background: #fff;
+      border: 1px solid darken($colorGrey2, 5%);
+      @include clearfix();
+      padding: 20px 0;
+      clear: both;
+
+    .two-col-body {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      clear: both;
+      @include clearfix();
+      margin: 20px 0;
+
+      .col1, .col2 {
+        display: table-cell;
+        vertical-align: top;
+        padding: 0 15px;
+        width: 100%;
+      }
+
+      .col1 {
+        width: 250px;
+      }
+
+    }
+  }
+
+
+  @media screen and (max-width: 950px) {
+    .main {
+      .two-col-body {
+        .col1 {
+          width: 210px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screenSmallMax) {
+    .main {
+      margin-top: 30px;
+
+      .two-col-body {
+        display: block;
+
+        .col1, .col2 {
+          display: block;
+          width: 100%;
+        }
+
+        .col1 {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

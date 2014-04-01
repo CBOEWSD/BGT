@@ -1,0 +1,39 @@
+/*
+  Module: Course Status
+  Description: Displays a course title and current status information
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$module: '.course-status';
+
+#{$module} {
+  .summary {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid darken($colorGrey2, 10%);
+
+    h3, .status {
+      display: table-cell;
+      width: 50%;
+      vertical-align: top;
+    }
+
+    h3 {
+      font: {
+        size: 1.2em;
+      }
+      text-transform: none;
+    }
+
+    .status {
+      text-align: right;
+    }
+  }
+}

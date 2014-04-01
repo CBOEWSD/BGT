@@ -97,6 +97,14 @@ $view: '.view-threecol';
     }
   }
 
+  @media screen and (max-width: 850px) {
+    .main {
+      .col1, .col3 {
+        width: 170px
+      }
+    }
+  }
+
   @media screen and (max-width: $screenSmallMax) {
     .main {
       display: block;

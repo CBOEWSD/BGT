@@ -1,0 +1,1 @@
+<img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/register/cboe.jpg" alt="CBOE">

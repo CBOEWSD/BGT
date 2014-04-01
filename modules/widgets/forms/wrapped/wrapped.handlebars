@@ -1,0 +1,25 @@
+<div class="form-wrapped {{#each classes}} {{this}} {{/each}}">
+  {{#each beforeWidgets}}
+    {{{this}}}
+  {{/each}}
+
+  {{#if title}}
+  <h3>
+    {{{title}}}
+  </h3>
+  {{/if}}
+
+  {{#if summary}}
+  <p>
+    {{{summary}}}
+  </p>
+  {{/if}}
+
+  {{#if form}}
+  {{{form}}}
+  {{/if}}
+
+  {{#each afterWidgets}}
+    {{{this}}}
+  {{/each}}
+</div>

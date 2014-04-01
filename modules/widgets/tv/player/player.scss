@@ -1,0 +1,117 @@
+/*
+  Module: TV Widget .player
+  Description: Large player for single video with detaileed title and description.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/responsiveembed';
+
+$module: '.widget-tv.player';
+
+#{$module} {
+
+  .title {
+    border-bottom: 3px solid $colorBlue2;
+    padding-bottom: 10px;
+    position: relative;
+    margin: 0 0 20px;
+
+    h2 {
+      font: {
+        size: 1.8em;
+      }
+      margin: 0;
+
+      .disclaimer {
+        display: inline-block;
+        width: 250px;
+        font: {
+          size: .4em;
+        }
+        color: $colorBlue1;
+
+        &:hover, &:active {
+          color: $colorGrey1;
+        }
+      }
+    }
+
+    .subscribe {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .prow {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .player, .meta {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .player {
+      width: 70%;
+    }
+
+    .meta {
+      width: 30%;
+      padding-left: 20px;
+
+      .share {
+        float: right;
+      }
+
+      .nowplaying {
+        color: $colorBlue1;
+        text-transform: uppercase;
+        font: {
+          size: 1em;
+        }
+      }
+
+      h2 {
+        font: {
+          size: 1em;
+        }
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+
+  @media all and (max-width: $screenSmallMax) {
+    .prow {
+      .meta {
+        .advert, .ad {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 600px) {
+    .prow {
+      display: block;
+
+      .meta, .player {
+        display: block;
+        width: 100%;
+      }
+
+      .meta {
+        padding-left: 0;
+      }
+    }
+  }
+}

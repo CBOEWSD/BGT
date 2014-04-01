@@ -56,16 +56,16 @@
     .widget-list.links ul li:first-child {
       padding-top: 0; }
   .widget-list.list-columns li {
-    float: left;
-    display: inline;
+    display: inline-block;
+    vertical-align: top;
     padding-top: 0;
     padding-right: 10px; }
   .widget-list.list-columns.two li {
-    width: 50%; }
+    width: 49%; }
   .widget-list.list-columns.three li {
-    width: 33%; }
+    width: 32%; }
   .widget-list.list-columns.four li {
-    width: 25%; }
+    width: 24%; }
   @media screen and (max-width: 767px) {
     .widget-list.list-columns {
       margin: 0;

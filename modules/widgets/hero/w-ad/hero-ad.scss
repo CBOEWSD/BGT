@@ -1,0 +1,38 @@
+/*
+  Module: HeroAd
+  Description: A simple wrapper component around hero banners allowing for ad placemants.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/animation/fadein';
+
+$module: '.hero-ad';
+
+#{$module} {
+
+  &.adright {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .h-placement, .a-placement {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .a-placement {
+      width: 315px;
+      padding-left: 15px;
+    }
+  }
+
+
+  @media screen and (max-width: 900px) {
+    &.adright {
+      .a-placement {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "view": "twocol-b",
+  "title": "CBOETV",
+  "meta": {
+    "keywords": "some, keywords",
+    "description": "This is a description"
+  },
+  "placeholders": {
+    "topspan": [
+      {
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+      }
+    ],
+    "beforeRow": [
+      {
+        "widgets/tv/player/player": "player/video.json"
+      }
+    ],
+    "col1": [
+      {
+        "widgets/sidebar/sidebar": {
+          "classes": [
+            "left"
+          ],
+          "search": {
+            "title": "CBOETV"
+          },
+          "components": [
+            {
+              "widgets/sidebar/filter/filter": "sidebar/filter.json"
+            },
+            {
+              "widgets/content/content": "sidebar/footnote.md"
+            }
+          ]
+        }
+      },
+      {
+        "ads/tall/tall": ""
+      }
+    ],
+    "col2": [
+      {
+        "widgets/tv/row/row": "tv/recent.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/popular.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/education.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/options.json"
+      }
+    ],
+    "bottomspan": [
+      {
+        "widgets/widget": "bottomspan/widget.json"
+      }
+    ]
+  }
+}

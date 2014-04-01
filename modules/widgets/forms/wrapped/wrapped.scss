@@ -91,6 +91,11 @@ $module: '.form-wrapped';
       vertical-align: top;
       padding: 0 10px;
     }
+    .col {
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+    }
   }
 
   &.blue {

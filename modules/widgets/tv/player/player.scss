@@ -113,5 +113,14 @@ $module: '.widget-tv.player';
         padding-left: 0;
       }
     }
+
+    .title {
+      h2 {
+        .disclaimer {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
   }
 }

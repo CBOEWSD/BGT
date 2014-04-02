@@ -268,3 +268,21 @@ $classPrefix: '.icon-';
     height: 20px;
   }
 }
+
+#{$classPrefix}search-only {
+  position: relative;
+  text-indent: -5000em;
+
+  &:before {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat;
+    background-position: -40px -300px;
+    content: ""; display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -8.5px;
+    margin-left: -9px;
+    width: 17px;
+    height: 18px;
+  }
+}

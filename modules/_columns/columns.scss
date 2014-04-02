@@ -12,6 +12,13 @@ $module: '.wrap-columns';
   @include innerRow();
   margin-bottom: 20px;
 
+  &.margin-ten {
+    margin-bottom: 10px;
+  }
+  &.margin-none {
+    margin-bottom: 0;
+  }
+
   &.two {
     .column {
       @include column(6);

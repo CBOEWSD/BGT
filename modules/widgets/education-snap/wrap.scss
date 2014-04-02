@@ -131,5 +131,20 @@ $module: '.education-snapshot';
         margin-top: 15px;
       }
     }
+
+
+  }
+
+  @media screen and (max-width: $screenSmallMax) {
+    .next {
+      ul {
+        display: block;
+
+        li {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
   }
 }

@@ -71,4 +71,16 @@ $module: '.widget-tv.row';
       }
     }
   }
+
+  @media screen and (max-width: 900px) {
+    .items {
+      .item {
+        padding: 5px;
+
+        h3 {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
 }

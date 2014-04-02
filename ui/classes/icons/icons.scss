@@ -239,3 +239,32 @@ $classPrefix: '.icon-';
     }
   }
 }
+
+#{$classPrefix}sharing {
+  text-indent: -5000em;
+  text-align: left;
+  display:inline-block;
+  vertical-align: top;
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+
+  &.facebook {
+    background-position: -3px -271px;
+    width: 10px;
+    height: 20px;
+  }
+  &.twitter {
+    background-position: -25px -271px;
+    width: 24px;
+    height: 20px;
+  }
+  &.mail {
+    background-position: -59px -271px;
+    width: 22px;
+    height: 20px;
+  }
+  &.share {
+    background-position: -2px -298px;
+    width: 27px;
+    height: 20px;
+  }
+}

@@ -64,8 +64,22 @@ $module: '.widget-tv.player';
       width: 30%;
       padding-left: 20px;
 
-      .share {
-        float: right;
+      .sharing {
+        text-align: right;
+        position: relative;
+        z-index:1;
+
+        a {
+        }
+
+        .split {
+          display: inline-block;
+          vertical-align: top;
+          width: 1px;
+          height: 20px;
+          background: $colorGrey2;
+          margin: 0 5px;
+        }
       }
 
       .nowplaying {
@@ -74,6 +88,7 @@ $module: '.widget-tv.player';
         font: {
           size: 1em;
         }
+        margin-top: -10px;
       }
 
       h2 {
@@ -119,6 +134,7 @@ $module: '.widget-tv.player';
         .disclaimer {
           display: block;
           width: 100%;
+          padding-top: 3px;
         }
       }
     }

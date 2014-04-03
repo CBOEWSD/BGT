@@ -1,7 +1,7 @@
 {
   "view": "twocol-b",
   "viewClasses": [
-    "asd"
+    ""
   ],
   "title": "Search Landing",
   "meta": {
@@ -23,6 +23,26 @@
       }
     ],
     "col2": [
+      {
+        "_columns/two": {
+          "classes": [
+            "slimright"
+          ],
+          "column1": [
+            {
+              "widgets/content/content": "intro.md"
+            }
+          ],
+          "column2": [
+            {
+              "ads/square_300/block": ""
+            },
+            {
+              "widgets/quote/quote": "quote.json"
+            }
+          ]
+        }
+      },
       {
         "_columns/two": {
           "column1": [

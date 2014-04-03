@@ -1,0 +1,28 @@
+<div class="quote">
+  <div class="quoted">
+    <span class="icon-quote start"></span>
+    {{{quote}}}
+    <span class="icon-quote end"></span>
+  </div>
+
+  {{#if author}}
+  <div class="author">
+    {{#if author.name}}
+      <strong class="name">
+        {{{author.name}}}
+      </strong>
+    {{/if}}
+    {{#if author.title}}
+      <span class="title">
+        , {{{author.title}}}
+      </span>
+    {{/if}}
+
+    {{#if author.organisation}}
+      <span class="organisation">
+        {{author.organisation}}
+      </span>
+    {{/if}}
+  </div>
+  {{/if}}
+</div>

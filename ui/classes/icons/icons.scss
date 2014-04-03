@@ -286,3 +286,23 @@ $classPrefix: '.icon-';
     height: 18px;
   }
 }
+
+#{$classPrefix}quote {
+  position: relative;
+  text-indent: -5000em;
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat;
+  background-position: 50px -324px;
+  display: inline-block;
+  width: 31px;
+  height: 29px;
+  vertical-align: bottom;
+
+  &.start {
+    background-position: -40px -324px;
+    margin-right: 5px;
+  }
+  &.end {
+    background-position: -3px -324px;
+    margin-left: 5px;
+  }
+}

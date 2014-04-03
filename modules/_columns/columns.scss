@@ -23,6 +23,17 @@ $module: '.wrap-columns';
     .column {
       @include column(6);
     }
+
+    &.slimright {
+      .column {
+        &:first-child {
+          @include column(8);
+        }
+        &:last-child {
+          @include column(4);
+        }
+      }
+    }
   }
 
   .component {

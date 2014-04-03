@@ -1,0 +1,75 @@
+{
+  "view": "twocol-b",
+  "viewClasses": [
+    "asd"
+  ],
+  "title": "Search Landing",
+  "meta": {
+    "keywords": "some, keywords",
+    "description": "This is a description"
+  },
+  "placeholders": {
+    "topspan": [
+      {
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+      }
+    ],
+    "col1": [
+      {
+        "widgets/side-navigation/nav": ""
+      },
+      {
+        "ads/tall/tall": ""
+      }
+    ],
+    "col2": [
+      {
+        "_columns/two": {
+          "column1": [
+            {
+              "widgets/content/content": "boxes/box1.md"
+            }
+          ],
+          "column2": [
+            {
+              "widgets/content/content": "boxes/box2.md"
+            }
+          ]
+        }
+      },
+      {
+        "_columns/two": {
+          "column1": [
+            {
+              "widgets/content/content": "boxes/box3.md"
+            }
+          ],
+          "column2": [
+            {
+              "widgets/content/content": "boxes/box4.md"
+            }
+          ]
+        }
+      },
+      {
+        "_columns/two": {
+          "column1": [
+            {
+              "widgets/content/content": "boxes/box5.md"
+            }
+          ],
+          "column2": [
+            {
+              "widgets/content/content": "boxes/box6.md"
+            }
+          ]
+        }
+      }
+    ],
+    "bottomspan": [
+      {
+        "widgets/widget": "bottomspan/widget.json"
+      }
+    ]
+  }
+}

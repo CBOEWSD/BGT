@@ -79,8 +79,15 @@ $module: '.widget-tv.row';
 
   @media screen and (max-width: 900px) {
     .items {
+      overflow-x: scroll;
+      white-space: nowrap;
+      display: block;
+
       .item {
         padding: 5px;
+        padding: 5px;
+        display: inline-block;
+        white-space: normal;
 
         h3 {
           font-size: 1.1em;

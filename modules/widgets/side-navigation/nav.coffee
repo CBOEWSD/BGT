@@ -61,7 +61,8 @@ class SideNavigation
   ###
   getParams: () ->
     $parent = self.$el.parent()
-    self.params.width = $parent.width()
+    self.params.marginLeft = self.$el.css('margin-left').replace 'px', ''
+    self.params.width = $parent.width() - self.params.marginLeft
     self.params.height = self.$el.height()
     self.params.pHeight = $parent.height()
     self.params.pTop = $parent.offset().top
@@ -95,6 +96,8 @@ class SideNavigation
     .css('top', if difference? then difference else self.offset)
     .css('width', self.params.width)
 
+    self.$el.next().css 'margin-top', self.params.height
+
   ###
     ## this.stickOff
     Removes anything applied by `this.stickyOff`.
@@ -104,6 +107,8 @@ class SideNavigation
     .css('position', '')
     .css('top', '')
     .css('width', '')
+
+    self.$el.next().css 'margin-top', ''
 
 
 # Define module for requirejs

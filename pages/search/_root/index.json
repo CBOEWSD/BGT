@@ -46,7 +46,7 @@
     ],
     "col2": [
       {
-        "ads/sponsered-ad/spns": ""
+        "ads/sponsored-ad/spns": ""
       },
       {
         "widgets/results/results": "results.json"

@@ -18,6 +18,12 @@ $module: 'article.content';
     &:hover, &:active {
       color: $colorGrey1;
     }
+
+
+    img {
+      padding-bottom: 1px;
+      border-bottom: 4px solid $colorBlue2;
+    }
   }
 
   .float-right {
@@ -135,6 +141,24 @@ $module: 'article.content';
           size: 2em;
         }
         line-height: 15px;
+      }
+    }
+  }
+
+  h1, h2, h3, h4 {
+    a {
+      display: block;
+
+      &:after {
+        display: inline-block;
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 4px 0 4px 8px;
+        border-color: transparent transparent transparent $colorGrey1;
+        vertical-align: middle;
+        margin: -3px 0 0 7px;
       }
     }
   }

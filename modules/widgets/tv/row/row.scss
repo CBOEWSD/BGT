@@ -68,16 +68,19 @@ $module: '.widget-tv.row';
     margin: 10px 0;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     .items {
       .item {
-        display: block;
-        width: 100%;
+        padding: 5px;
+
+        h3 {
+          font-size: 1.1em;
+        }
       }
     }
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 500px) {
     .items {
       overflow-x: scroll;
       white-space: nowrap;
@@ -88,6 +91,7 @@ $module: '.widget-tv.row';
         padding: 5px;
         display: inline-block;
         white-space: normal;
+        width: 91%;
 
         h3 {
           font-size: 1.1em;

@@ -13,7 +13,8 @@
       "thumbnail": {
         "src": "/ui/assets/images/news/futures.jpg",
         "classes": [
-          "hideonmobile"
+          "hideonmobile",
+          "nofloat"
         ]
       },
       "title": "CBOE Futures Exchange Announces Launch Data For CBOE Short-Term VIX Futures With Weekly Expirations",

@@ -13,7 +13,8 @@
       "thumbnail": {
         "src": "/ui/assets/images/news/twitter.jpg",
         "classes": [
-          "hideonmobile"
+          "hideonmobile",
+          "nofloat"
         ]
       },
       "title": "CBOE And C2 To List Options On Twitter (TWTR) On November 15",

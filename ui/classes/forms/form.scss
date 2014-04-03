@@ -47,3 +47,29 @@ form {
   }
 
 }
+
+select {
+  cursor: pointer;
+  background: url(/ui/classes/forms/assets/dropdown-arrow.png) no-repeat $colorBlue1;
+  background-position: right 5px top -32px;
+  border-right: 10px solid transparent;
+  color: #fff;
+  @include border-radius(3px);
+  border: none;
+  padding: 5px 25px 5px 9px;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  text-indent : 0.01px;
+  text-overflow : '';
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+@-moz-document url-prefix() {
+  select {
+    padding-right: 5px !important;
+  }
+}

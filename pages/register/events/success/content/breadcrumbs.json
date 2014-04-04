@@ -2,7 +2,7 @@
   "levels": [
     {
       "link": {
-        "text": "Education",
+        "text": "Register for myCBOE",
         "url": "#"
       },
       "children": [
@@ -25,6 +25,18 @@
           }
         }
       ]
+    },
+    {
+      "link": {
+        "text": "Events",
+        "url": "#"
+      }
+    },
+    {
+      "link": {
+        "text": "Success",
+        "url": "#"
+      }
     }
   ]
 }

@@ -8,7 +8,7 @@
   "placeholders": {
     "topspan": [
       {
-        "breadcrumbs/breadcrumbs": "../../_root/content/breadcrumbs.json"
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
       }
     ],
     "content": [

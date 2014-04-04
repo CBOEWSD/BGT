@@ -85,6 +85,7 @@ $pullSide: 6px;
 
   @media screen and (max-width: $screenSmallMax) {
     margin-bottom: 20px;
+    margin-left: 0;
 
     &>ul {
       background: darken(#fff, 5%);

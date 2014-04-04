@@ -297,6 +297,16 @@ $3dsize: 4px;
     }
   }
 
+  @media screen and (max-width: 850px) and (min-width: $screenSmallMax) {
+    .menu {
+      &>li {
+        & > a {
+          padding: 10px 7px;
+        }
+      }
+    }
+  }
+
   /*
     Mobile abstracted.
     See `navigation_mobile.scss` for mobile styles

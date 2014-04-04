@@ -212,8 +212,14 @@ $classPrefix: '.icon-';
     padding-left: 18px !important;
     &:before {
       background-position: -85px 0;
-      width: 31px;
-      height: 29px;
+      width: 11px;
+      height: 14px;
+    }
+
+    &.black {
+      &:before {
+        background-position: -61px 0;
+      }
     }
   }
 }

@@ -114,12 +114,14 @@ $classPrefix: '.icon-';
       margin: 0 5px -2px 0;
       position: absolute;
       left: 2px!important;
-      top: 50%;
-      margin-top: -6px;
+      top: 2px;
     }
   }
 
   > li {
+    > a {
+      display: block;
+    }
     &:before {
       content: "" !important;
     }

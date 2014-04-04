@@ -81,5 +81,11 @@ $module: '.wrap-columns';
       }
     }
 
+    &.margin-none {
+      .column {
+        margin: 0;
+      }
+    }
+
   }
 }

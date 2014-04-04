@@ -76,10 +76,17 @@ $view: '.view-twocolB';
 
       .two-col-body {
         display: block;
+        margin-bottom: 0;
 
         .col1, .col2 {
           display: block;
           width: 100%;
+
+          &>div {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
         }
 
         .col1 {

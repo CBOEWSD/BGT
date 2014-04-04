@@ -68,4 +68,18 @@ $module: '.wrap-columns';
       margin: 0;
     }
   }
+
+  @media all and (max-width: $screenSmallMax) {
+    .column {
+      margin: 30px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
 }

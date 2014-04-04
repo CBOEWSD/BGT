@@ -1,0 +1,35 @@
+/*
+  Module: Education Snapshot Wrap
+  Description: Wrapper component to the education snapshot module.
+*/
+.progress-summary h3 {
+  padding-right: 45px; }
+  .progress-summary h3 .percent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #21a825; }
+.progress-summary .bar-wrap {
+  background-color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c6c6c6), to(#dadada));
+  background: -moz-linear-gradient(top, #c6c6c6, #dadada);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c6c6c6', endColorstr='#dadada');
+  border: 1px solid #c6c6c6;
+  padding: 7px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px; }
+  .progress-summary .bar-wrap .bar {
+    background: #313538;
+    height: 15px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    overflow: hidden; }
+    .progress-summary .bar-wrap .bar .prog {
+      background: #29d32c;
+      height: 15px; }

@@ -3,11 +3,23 @@
   Description: These classes are related to text styling and can be applied where
   and as needed.
 */
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
 .text-green {
   color: #21a825; }
 
 .text-grey {
   color: #313538; }
+
+.text-red {
+  color: #b7120b; }
 
 .text-larger-12 {
   font-size: 1.2em; }

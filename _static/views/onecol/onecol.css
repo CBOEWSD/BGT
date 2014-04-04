@@ -1,0 +1,52 @@
+/*
+  View: onecol
+  Description: Styling for twocol view.
+*/
+.view-onecol {
+  padding: 0 7px; }
+  .view-onecol .topspan {
+    width: 1100px;
+    max-width: 100%;
+    min-width: 768px;
+    margin: 0 auto;
+    *zoom: 1; }
+    .view-onecol .topspan:before, .view-onecol .topspan:after {
+      content: " ";
+      display: table; }
+    .view-onecol .topspan:after {
+      clear: both; }
+    @media screen and (max-width: 767px) {
+      .view-onecol .topspan {
+        min-width: 0px;
+        width: 100%; } }
+  .view-onecol .bottomspan {
+    width: 1100px;
+    max-width: 100%;
+    min-width: 768px;
+    margin: 0 auto;
+    *zoom: 1;
+    margin: 35px 0; }
+    .view-onecol .bottomspan:before, .view-onecol .bottomspan:after {
+      content: " ";
+      display: table; }
+    .view-onecol .bottomspan:after {
+      clear: both; }
+    @media screen and (max-width: 767px) {
+      .view-onecol .bottomspan {
+        min-width: 0px;
+        width: 100%; } }
+  .view-onecol .main {
+    width: 100%;
+    background: white;
+    border: 1px solid #d0d0d0;
+    clear: both;
+    padding: 20px 15px;
+    *zoom: 1;
+    margin-bottom: 20px; }
+    .view-onecol .main:before, .view-onecol .main:after {
+      content: " ";
+      display: table; }
+    .view-onecol .main:after {
+      clear: both; }
+  @media screen and (max-width: 950px) { }
+  @media screen and (max-width: 767px) { }

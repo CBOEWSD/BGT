@@ -1,0 +1,89 @@
+/*
+  Module: Education Snapshot Wrap
+  Description: Wrapper component to the education snapshot module.
+*/
+.education-snapshot {
+  background: #dddddd;
+  padding: 20px 15px;
+  border-left: 1px solid #cbcbcb;
+  border-bottom: 1px solid #cbcbcb;
+  border-right: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  margin-top: 20px; }
+  .education-snapshot h3 {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.4em;
+    letter-spacing: 0.03em;
+    margin: 0 0 15px; }
+  .education-snapshot .inRow {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-bottom: 1px solid #b7b7b7; }
+    .education-snapshot .inRow .mainCol, .education-snapshot .inRow .sideCol {
+      display: table-cell; }
+    .education-snapshot .inRow .sideCol {
+      width: 250px;
+      padding-left: 50px; }
+  .education-snapshot ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0; }
+    .education-snapshot ul li {
+      border-top: 1px solid #b7b7b7;
+      padding: 10px; }
+      .education-snapshot ul li a {
+        display: block;
+        color: #135fad;
+        font-weight: 700;
+        font-size: 1.1em;
+        padding: 10px;
+        margin: -10px; }
+        .education-snapshot ul li a:hover, .education-snapshot ul li a:active {
+          color: #313538; }
+  .education-snapshot .next {
+    margin-top: 17px; }
+    .education-snapshot .next ul {
+      display: table;
+      table-layout: fixed;
+      width: 100%; }
+      .education-snapshot .next ul li {
+        display: table-cell;
+        width: 50%; }
+  .education-snapshot .title-bar {
+    background: #135fad;
+    margin: 0 -16px 20px;
+    color: white;
+    position: relative;
+    padding: 8px 15px; }
+    .education-snapshot .title-bar h2 {
+      margin: 0;
+      font-weight: 400; }
+    .education-snapshot .title-bar .logout {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: white; }
+  .education-snapshot .extended {
+    margin-top: 25px; }
+  .education-snapshot .accordion {
+    margin: 0 -16px; }
+  @media screen and (max-width: 1000px) {
+    .education-snapshot .inRow {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      border-bottom: 1px solid #b7b7b7; }
+      .education-snapshot .inRow .mainCol, .education-snapshot .inRow .sideCol {
+        display: block;
+        width: 100%;
+        padding-left: 0; }
+      .education-snapshot .inRow .sideCol {
+        margin-top: 15px; } }
+  @media screen and (max-width: 767px) {
+    .education-snapshot .next ul {
+      display: block; }
+      .education-snapshot .next ul li {
+        display: block;
+        width: 100%; } }

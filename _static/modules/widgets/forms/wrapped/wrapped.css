@@ -1,0 +1,88 @@
+/*
+  Module: Wrapped form
+  Description: This component simply wraps messaging and styling around the form element.
+*/
+.form-wrapped {
+  background: #dddddd;
+  padding: 20px 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  .form-wrapped .buttons {
+    margin-top: 20px;
+    text-align: center; }
+    .form-wrapped .buttons .button {
+      margin: 0 10px; }
+  .form-wrapped label.checkbox {
+    padding: 0 0 0 22px;
+    margin: 10px 0;
+    font-weight: 400;
+    cursor: pointer; }
+    .form-wrapped label.checkbox input[type="checkbox"] {
+      display: block;
+      float: left;
+      margin: 2px 0 0 -20px; }
+  .form-wrapped img {
+    margin: 20px 0; }
+  .form-wrapped h4, .form-wrapped h5 {
+    margin: 0; }
+  .form-wrapped h1 {
+    color: #135fad;
+    font-size: 2em;
+    margin: 0; }
+  .form-wrapped h3 {
+    margin-top: 0;
+    color: #135fad;
+    font-size: 1.6em;
+    font-weight: 400; }
+  .form-wrapped .columns {
+    padding: 0 10%;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 15px 0; }
+    .form-wrapped .columns.nopadding {
+      padding: 0; }
+    .form-wrapped .columns.half-width {
+      width: 50%; }
+    .form-wrapped .columns.fourth-width {
+      width: 25%; }
+    .form-wrapped .columns.threefourth-width {
+      width: 75%; }
+    .form-wrapped .columns .column {
+      display: table-cell;
+      vertical-align: top;
+      padding: 0 10px; }
+    .form-wrapped .columns .col {
+      display: inline-block;
+      width: 49%;
+      vertical-align: top; }
+  .form-wrapped.blue {
+    background: #135fad;
+    color: white; }
+    .form-wrapped.blue h3 {
+      color: white; }
+  @media all and (max-width: 767px) {
+    .form-wrapped .columns {
+      display: block;
+      width: 100%; }
+      .form-wrapped .columns.half-width {
+        width: 100%; }
+      .form-wrapped .columns.fourth-width {
+        width: 100%; }
+      .form-wrapped .columns.threefourth-width {
+        width: 100%; }
+      .form-wrapped .columns .column {
+        display: block; }
+    .form-wrapped .buttons {
+      margin-top: 20px;
+      text-align: center; }
+      .form-wrapped .buttons .button {
+        display: block;
+        width: 100%;
+        margin: 10px 0; } }
+  @media all and (max-width: 500px) {
+    .form-wrapped .columns .col {
+      width: 100%; } }

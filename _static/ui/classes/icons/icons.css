@@ -1,6 +1,6 @@
 /*
-	Class: Icons
-	Description: Contains generic items that can be used in various areas across the site.
+  Class: Icons
+  Description: Contains generic items that can be used in various areas across the site.
 */
 .icon-social {
   background: url(/ui/classes/icons/assets/social.jpg) no-repeat top left;
@@ -70,12 +70,12 @@
   .icon-smallarrows.right {
     background-position: -17px -51px; }
 
-.icon-css-arrows > li, .icon-css-arrows > a {
+.icon-css-arrows > li > a, .icon-css-arrows > a {
   position: relative;
   padding-left: 15px; }
-  .icon-css-arrows > li:before, .icon-css-arrows > a:before {
+  .icon-css-arrows > li > a:before, .icon-css-arrows > a:before {
     display: inline-block;
-    content: '';
+    content: '' !important;
     width: 0px;
     height: 0px;
     border-style: solid;
@@ -83,6 +83,160 @@
     border-color: transparent transparent transparent black;
     margin: 0 5px -2px 0;
     position: absolute;
-    left: 2px;
+    left: 2px !important;
+    top: 2px; }
+.icon-css-arrows > li > a {
+  display: block; }
+.icon-css-arrows > li:before {
+  content: "" !important; }
+.icon-css-arrows.left {
+  position: relative; }
+  .icon-css-arrows.left:before {
+    display: inline-block;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 4px 8px 4px 0;
+    border-color: transparent #135fad transparent transparent;
+    margin: -1px 3px 0 0; }
+.icon-css-arrows.right {
+  position: relative; }
+  .icon-css-arrows.right:after {
+    display: inline-block;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 4px 0 4px 8px;
+    border-color: transparent transparent transparent #135fad;
+    margin: -1px 0 0 3px; }
+
+.icon-before {
+  position: relative;
+  padding-left: 30px !important; }
+  .icon-before:before {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
     top: 50%;
-    margin-top: -6px; }
+    margin-top: -8px; }
+  .icon-before.chart:before {
+    background-position: -1px -208px;
+    width: 20px;
+    height: 20px; }
+  .icon-before.calendar:before {
+    background-position: -28px -206px;
+    width: 20px;
+    height: 20px; }
+  .icon-before.institute:before {
+    background-position: -53px -206px;
+    width: 20px;
+    height: 20px; }
+  .icon-before.book:before {
+    background-position: -1px -230px;
+    width: 22px;
+    height: 20px; }
+  .icon-before.transcript:before {
+    background-position: -27px -228px;
+    width: 22px;
+    height: 20px; }
+  .icon-before.lock {
+    padding-left: 18px !important; }
+    .icon-before.lock:before {
+      background-position: -85px 0;
+      width: 11px;
+      height: 14px; }
+    .icon-before.lock.black:before {
+      background-position: -61px 0; }
+  .icon-before.status-tick {
+    color: #21a825;
+    padding-left: 18px !important;
+    display: inline-block; }
+    .icon-before.status-tick:before {
+      background-position: -60px -22px;
+      width: 14px;
+      height: 14px; }
+
+.icon-meta {
+  position: relative;
+  color: #aaaaaa; }
+  .icon-meta:before {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    margin-top: -5px; }
+  .icon-meta.views {
+    padding-left: 20px !important; }
+    .icon-meta.views:before {
+      background-position: -2px -254px;
+      width: 15px;
+      height: 10px;
+      margin-top: -5px; }
+  .icon-meta.likes {
+    padding-left: 17px !important; }
+    .icon-meta.likes:before {
+      background-position: -29px -254px;
+      width: 12px;
+      height: 10px;
+      margin-top: -5px; }
+
+.icon-sharing {
+  text-indent: -5000em;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat center center; }
+  .icon-sharing.facebook {
+    background-position: -3px -271px;
+    width: 10px;
+    height: 20px; }
+  .icon-sharing.twitter {
+    background-position: -25px -271px;
+    width: 24px;
+    height: 20px; }
+  .icon-sharing.mail {
+    background-position: -59px -271px;
+    width: 22px;
+    height: 20px; }
+  .icon-sharing.share {
+    background-position: -2px -298px;
+    width: 27px;
+    height: 20px; }
+
+.icon-search-only {
+  position: relative;
+  text-indent: -5000em; }
+  .icon-search-only:before {
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat;
+    background-position: -40px -300px;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -8.5px;
+    margin-left: -9px;
+    width: 17px;
+    height: 18px; }
+
+.icon-quote {
+  position: relative;
+  text-indent: -5000em;
+  background: url(/ui/classes/icons/assets/canvas.png) no-repeat;
+  background-position: 50px -324px;
+  display: inline-block;
+  width: 31px;
+  height: 29px;
+  vertical-align: bottom; }
+  .icon-quote.start {
+    background-position: -40px -324px;
+    margin-right: 5px; }
+  .icon-quote.end {
+    background-position: -3px -324px;
+    margin-left: 5px; }

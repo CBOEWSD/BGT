@@ -1,0 +1,28 @@
+/*
+  Module: Sponsered Results
+  Description: Styling for search sponsered results
+*/
+.sponsered {
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+  .sponsered .block {
+    background: #efefef;
+    padding: 10px; }
+  .sponsered .results, .sponsered .ad {
+    display: table-cell;
+    vertical-align: top; }
+  .sponsered .results {
+    width: 100%; }
+    .sponsered .results a {
+      display: block;
+      margin-top: 30px; }
+      .sponsered .results a:first-child {
+        margin-top: 0; }
+  .sponsered .ad {
+    padding-left: 15px;
+    width: 300px; }
+  @media all and (max-width: 767px) {
+    .sponsered .results, .sponsered .ad {
+      display: block;
+      width: 100%; } }

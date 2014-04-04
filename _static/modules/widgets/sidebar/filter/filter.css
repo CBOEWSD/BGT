@@ -1,0 +1,83 @@
+/*
+  Module: Sidebar - Filter component
+  Description: Filter sub component of sidebar component.
+*/
+.filter > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #c6c6c6;
+  background: white; }
+  .filter > ul > li > a, .filter > ul > li.parent {
+    position: relative;
+    display: block;
+    padding: 8px 10px 8px 25px;
+    background: #dddddd;
+    border-bottom: 1px solid #c6c6c6;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+    -o-user-select: none;
+    user-select: none; }
+    .filter > ul > li > a .total, .filter > ul > li > a:before, .filter > ul > li.parent .total, .filter > ul > li.parent:before {
+      position: absolute;
+      top: 50%;
+      line-height: 14px;
+      margin-top: -7px; }
+    .filter > ul > li > a .total, .filter > ul > li.parent .total {
+      right: 10px; }
+    .filter > ul > li > a:before, .filter > ul > li.parent:before {
+      display: block;
+      content: "+";
+      left: 8px;
+      font-size: 1.4em;
+      font-weight: normal; }
+  .filter > ul > li.parent, .filter > ul > li.expanded > a {
+    background: #135fad;
+    color: white; }
+  .filter > ul > li.parent {
+    padding-left: 8px;
+    cursor: default;
+    border-bottom: none;
+    background: #313538; }
+    .filter > ul > li.parent:before {
+      display: none; }
+  .filter > ul > li ul {
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+    display: none; }
+    .filter > ul > li ul li {
+      font-size: 0.9em; }
+      .filter > ul > li ul li a, .filter > ul > li ul li label {
+        display: block;
+        padding: 6px 10px 6px 50px;
+        position: relative;
+        cursor: pointer; }
+        .filter > ul > li ul li a:hover, .filter > ul > li ul li a:active, .filter > ul > li ul li label:hover, .filter > ul > li ul li label:active {
+          color: #135fad; }
+        .filter > ul > li ul li a .total, .filter > ul > li ul li a input, .filter > ul > li ul li label .total, .filter > ul > li ul li label input {
+          display: block;
+          position: absolute;
+          margin-right: 10px;
+          left: 30px;
+          top: 50%;
+          line-height: 16px; }
+        .filter > ul > li ul li a input, .filter > ul > li ul li label input {
+          margin-top: -7px; }
+          .filter > ul > li ul li a input + span, .filter > ul > li ul li label input + span {
+            color: #949ca1; }
+          .filter > ul > li ul li a input:checked + span, .filter > ul > li ul li label input:checked + span {
+            color: #313538; }
+        .filter > ul > li ul li a .total, .filter > ul > li ul li label .total {
+          margin-top: -8px; }
+  .filter > ul > li.expanded > a:before {
+    content: "-"; }
+  .filter > ul > li.expanded ul {
+    display: block; }

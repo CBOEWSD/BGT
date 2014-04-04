@@ -28,6 +28,8 @@
       .widget-list ul li .thumbnail {
         float: left;
         margin: 0 15px 10px 0; }
+        .widget-list ul li .thumbnail.nofloat {
+          float: none; }
       .widget-list ul li h2, .widget-list ul li p {
         margin: 3px 0; }
       .widget-list ul li h2 {

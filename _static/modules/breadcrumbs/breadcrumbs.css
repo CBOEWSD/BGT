@@ -3,17 +3,10 @@
   Description: Listed breadcrumb navigation with flyout on hover. Removed on mobile
 */
 .breadcrumbs {
-  float: left;
-  position: relative;
-  min-height: 1px;
-  padding: 0 15px;
-  width: 100%;
   margin: 20px 0;
-  list-style: none; }
-  @media only screen and (max-width: 767px) {
-    .breadcrumbs {
-      float: none;
-      width: auto; } }
+  list-style: none;
+  padding: 0 15px;
+  width: 100%; }
   .breadcrumbs > li {
     display: inline-block;
     padding: 0 10px;

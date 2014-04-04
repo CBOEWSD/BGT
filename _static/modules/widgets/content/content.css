@@ -11,6 +11,9 @@ article.content {
     color: #135fad; }
     article.content a:hover, article.content a:active {
       color: #313538; }
+    article.content a img {
+      padding-bottom: 1px;
+      border-bottom: 4px solid #12b7ed; }
   article.content .float-right {
     float: right;
     margin: 0 0 10px 10px; }
@@ -60,6 +63,31 @@ article.content {
       color: white;
       font-weight: 700;
       text-transform: uppercase; }
+  article.content ul {
+    list-style: none; }
+    article.content ul li {
+      margin: 15px 0;
+      position: relative; }
+      article.content ul li:before {
+        content: '\2022 ';
+        color: #21a825;
+        position: absolute;
+        left: -15px;
+        top: 0;
+        font-size: 2em;
+        line-height: 15px; }
+  article.content h1 a, article.content h2 a, article.content h3 a, article.content h4 a {
+    display: block; }
+    article.content h1 a:after, article.content h2 a:after, article.content h3 a:after, article.content h4 a:after {
+      display: inline-block;
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 4px 0 4px 8px;
+      border-color: transparent transparent transparent #313538;
+      vertical-align: middle;
+      margin: -3px 0 0 7px; }
   @media screen and (max-width: 950px) {
     article.content .float-right.advert {
       width: 50%; }

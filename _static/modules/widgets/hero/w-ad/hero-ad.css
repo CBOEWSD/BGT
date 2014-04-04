@@ -1,0 +1,52 @@
+/*
+  Module: HeroAd
+  Description: A simple wrapper component around hero banners allowing for ad placemants.
+*/
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.hero-ad.adright {
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+  .hero-ad.adright .h-placement, .hero-ad.adright .a-placement {
+    display: table-cell;
+    vertical-align: top; }
+  .hero-ad.adright .a-placement {
+    width: 315px;
+    padding-left: 15px; }
+@media screen and (max-width: 900px) {
+  .hero-ad.adright .a-placement {
+    display: none; } }

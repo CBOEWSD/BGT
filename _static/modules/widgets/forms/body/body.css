@@ -1,0 +1,9 @@
+/*
+  Module: Form body
+  Description: This component simply wraps messaging and styling around sub components.
+*/
+.form-body .before {
+  min-height: 120px; }
+  .form-body .before h2 {
+    font-size: 1.8em;
+    font-weight: 400; }

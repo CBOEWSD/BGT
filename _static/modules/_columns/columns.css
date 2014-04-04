@@ -1,0 +1,84 @@
+/*
+  Module: Columns
+  Description: Simple wrapper element that can break modules into columns
+*/
+.wrap-columns {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0 -15px;
+  *zoom: 1;
+  margin-bottom: 20px; }
+  .wrap-columns:before, .wrap-columns:after {
+    content: " ";
+    display: table; }
+  .wrap-columns:after {
+    clear: both; }
+  .wrap-columns.margin-ten {
+    margin-bottom: 10px; }
+  .wrap-columns.margin-none {
+    margin-bottom: 0; }
+  .wrap-columns.two .column {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 50%; }
+    @media only screen and (max-width: 767px) {
+      .wrap-columns.two .column {
+        float: none;
+        width: auto; } }
+  .wrap-columns.two.slimright .column:first-child {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 66.66667%; }
+    @media only screen and (max-width: 767px) {
+      .wrap-columns.two.slimright .column:first-child {
+        float: none;
+        width: auto; } }
+  .wrap-columns.two.slimright .column:last-child {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 33.33333%; }
+    @media only screen and (max-width: 767px) {
+      .wrap-columns.two.slimright .column:last-child {
+        float: none;
+        width: auto; } }
+  .wrap-columns .component {
+    margin-bottom: 50px;
+    position: relative; }
+    .wrap-columns .component:after {
+      display: block;
+      content: "";
+      border-bottom: 1px solid #dddddd;
+      width: 100%;
+      position: absolute;
+      bottom: -15px;
+      left: 0; }
+    .wrap-columns .component:last-child {
+      border-bottom: none;
+      padding: 0;
+      margin-bottom: 0; }
+      .wrap-columns .component:last-child:after {
+        display: none; }
+    .wrap-columns .component:first-child {
+      border-bottom: none;
+      padding: 0;
+      margin-bottom: 0; }
+      .wrap-columns .component:first-child:after {
+        display: none; }
+    .wrap-columns .component > div, .wrap-columns .component > section, .wrap-columns .component > article {
+      margin: 0; }
+  @media all and (max-width: 767px) {
+    .wrap-columns .column {
+      margin: 30px 0; }
+      .wrap-columns .column:first-child {
+        margin-top: 0; }
+      .wrap-columns .column:last-child {
+        margin-bottom: 0; }
+    .wrap-columns.margin-none .column {
+      margin: 0; } }

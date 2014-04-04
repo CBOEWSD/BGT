@@ -1,0 +1,45 @@
+/*
+  Module: Pagination
+  Description: Pagination
+*/
+.pagination {
+  text-align: center;
+  margin: 20px 0 0; }
+  .pagination ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .pagination ul li {
+      display: inline-block; }
+      .pagination ul li a {
+        display: block;
+        background: #135fad;
+        color: white;
+        font-size: 0.9em;
+        font-weight: 700;
+        padding: 3px 8px;
+        margin: 0 3px; }
+        .pagination ul li a:hover, .pagination ul li a:active {
+          background: #166dc4; }
+        .pagination ul li a.active {
+          background: #21a825; }
+      .pagination ul li.next a, .pagination ul li.prev a {
+        background: none;
+        color: #313538;
+        padding: 3px 20px; }
+  .pagination .total {
+    display: block;
+    margin: 10px 0 0 0;
+    color: #9d9d9d; }
+  @media all and (max-width: 767px) {
+    .pagination ul {
+      position: relative;
+      padding-top: 30px; }
+      .pagination ul li.next, .pagination ul li.prev {
+        position: absolute;
+        top: 0;
+        width: 50%; }
+      .pagination ul li.next {
+        right: 0; }
+      .pagination ul li.prev {
+        left: 0; } }

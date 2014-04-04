@@ -1,0 +1,95 @@
+/*
+  Module: Sidebar Snapshot component
+  Description: Contains a search component filter and a drop point for a sub module.
+*/
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.sidebar-widget {
+  background: #c6c6c6;
+  padding: 15px;
+  position: relative;
+  /*
+  Module: Sidebar Snapshot Search subcomponent
+  Description: Imported into the higher level component (sidebar)
+*/ }
+  .sidebar-widget:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0px;
+    height: 0px;
+    border-style: solid; }
+  .sidebar-widget.left {
+    margin-left: -20px; }
+    .sidebar-widget.left:after {
+      left: 0;
+      border-width: 0 5px 5px 0;
+      border-color: transparent #313538 transparent transparent; }
+  .sidebar-widget.right {
+    margin-right: -20px; }
+    .sidebar-widget.right:after {
+      right: 0;
+      border-width: 5px 5px 0 0;
+      border-color: #313538 transparent transparent transparent; }
+  .sidebar-widget .search {
+    margin: -15px -15px 15px -15px;
+    padding: 15px;
+    background: #7a7a7a;
+    color: white; }
+    .sidebar-widget .search .input {
+      position: relative;
+      line-height: 0; }
+      .sidebar-widget .search .input input {
+        width: 100%;
+        padding-right: 30px; }
+      .sidebar-widget .search .input button {
+        position: absolute;
+        right: -1px;
+        top: 0;
+        height: 100%;
+        width: 30px;
+        background: #135fad;
+        border: none;
+        margin: 0;
+        padding: 0;
+        -webkit-border-radius: 0 5px 5px 0;
+        -moz-border-radius: 0 5px 5px 0;
+        -ms-border-radius: 0 5px 5px 0;
+        -o-border-radius: 0 5px 5px 0;
+        border-radius: 0 5px 5px 0; }
+        .sidebar-widget .search .input button:hover {
+          background: #166dc4; }

@@ -7,7 +7,8 @@
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  background: white; }
+  background: white;
+  margin-left: -15px; }
   .side-navigation ul, .side-navigation li {
     list-style: none;
     margin: 0;
@@ -53,7 +54,8 @@
       border-color: transparent transparent transparent #61696e; }
   @media screen and (max-width: 767px) {
     .side-navigation {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      margin-left: 0; }
       .side-navigation > ul {
         background: #f2f2f2; }
         .side-navigation > ul > li > a {

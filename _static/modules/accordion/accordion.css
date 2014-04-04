@@ -1,0 +1,41 @@
+/*
+  Module: Accordion
+  Description: Generic accordion module allowing space for other components to be placed in the body placeholder.
+*/
+.accordion dt {
+  background: #12b7ed;
+  padding: 10px 40px 10px 15px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1em;
+  border-top: 1px solid white;
+  position: relative;
+  cursor: pointer; }
+  .accordion dt:first-child {
+    border-top: none; }
+  .accordion dt:after {
+    display: block;
+    position: absolute;
+    margin-top: -10px;
+    content: '+';
+    top: 50%;
+    height: 20px;
+    right: 5px;
+    width: 20px;
+    border: none;
+    background: white;
+    color: #12b7ed;
+    text-align: center;
+    line-height: 20px; }
+  .accordion dt:hover {
+    background: #2ac1ef; }
+  .accordion dt.expanded {
+    background: #798289; }
+    .accordion dt.expanded:hover {
+      background: #868f95; }
+    .accordion dt.expanded:after {
+      content: '-'; }
+.accordion dd {
+  padding: 15px;
+  margin: 0;
+  display: none; }

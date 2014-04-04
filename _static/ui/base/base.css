@@ -361,22 +361,22 @@ h1 {
 h2 {
   font-size: 1.4em;
   font-weight: 700;
-  margin: 10px 0 20px 0; }
+  margin: 10px 0 10px 0; }
 
 h3 {
   font-size: 1.2em;
   font-weight: 700;
-  margin: 10px 0 20px 0; }
+  margin: 10px 0 10px 0; }
 
 h4 {
   font-size: 1.1em;
   font-weight: 700;
-  margin: 10px 0 20px 0; }
+  margin: 10px 0 10px 0; }
 
 h5 {
   font-size: 1em;
   font-weight: 700;
-  margin: 10px 0 20px 0; }
+  margin: 10px 0 10px 0; }
 
 p {
   font-size: 1em;
@@ -403,3 +403,14 @@ a {
   -webkit-transition: none;
   -o-transition: color 0 ease-in;
   transition: none; }
+
+.twocol {
+  display: table;
+  table-layout: fixed;
+  width: 106%;
+  margin: 0 -3%; }
+  .twocol .col {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding: 0 3%; }

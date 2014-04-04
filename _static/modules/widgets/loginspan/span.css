@@ -1,0 +1,18 @@
+/*
+  Module: Login Span
+  Description: This small module spans horizontally to call out for register/login to a user.
+*/
+.login-span {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: #d0d0d0;
+  font-weight: 700;
+  font-size: 1.3em; }
+  .login-span a {
+    color: #135fad;
+    text-decoration: underline; }
+    .login-span a:hover, .login-span a:active {
+      color: #313538;
+      text-decoration: none; }

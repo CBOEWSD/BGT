@@ -265,6 +265,9 @@
   @media screen and (max-width: 950px) and (min-width: 767px) {
     .navigation .menu > li > a {
       padding: 10px; } }
+  @media screen and (max-width: 850px) and (min-width: 767px) {
+    .navigation .menu > li > a {
+      padding: 10px 7px; } }
   @media print {
     .navigation {
       display: none; } }

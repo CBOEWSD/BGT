@@ -1,0 +1,68 @@
+/*
+  View: twocol
+  Description: Styling for twocol view.
+*/
+.view-twocol {
+  padding: 0 7px; }
+  .view-twocol .topspan {
+    width: 1100px;
+    max-width: 100%;
+    min-width: 768px;
+    margin: 0 auto;
+    *zoom: 1; }
+    .view-twocol .topspan:before, .view-twocol .topspan:after {
+      content: " ";
+      display: table; }
+    .view-twocol .topspan:after {
+      clear: both; }
+    @media screen and (max-width: 767px) {
+      .view-twocol .topspan {
+        min-width: 0px;
+        width: 100%; } }
+  .view-twocol .bottomspan {
+    width: 1100px;
+    max-width: 100%;
+    min-width: 768px;
+    margin: 0 auto;
+    *zoom: 1;
+    margin: 35px 0; }
+    .view-twocol .bottomspan:before, .view-twocol .bottomspan:after {
+      content: " ";
+      display: table; }
+    .view-twocol .bottomspan:after {
+      clear: both; }
+    @media screen and (max-width: 767px) {
+      .view-twocol .bottomspan {
+        min-width: 0px;
+        width: 100%; } }
+  .view-twocol .main {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    background: white;
+    border: 1px solid #d0d0d0;
+    clear: both;
+    padding: 20px 0;
+    *zoom: 1;
+    margin-bottom: 20px; }
+    .view-twocol .main:before, .view-twocol .main:after {
+      content: " ";
+      display: table; }
+    .view-twocol .main:after {
+      clear: both; }
+    .view-twocol .main .col1, .view-twocol .main .col2 {
+      display: table-cell;
+      vertical-align: top;
+      padding: 0 15px;
+      width: 50%; }
+  @media screen and (max-width: 950px) { }
+  @media screen and (max-width: 767px) {
+    .view-twocol .topspan {
+      margin-top: 30px; }
+    .view-twocol .main {
+      display: block; }
+      .view-twocol .main .col1, .view-twocol .main .col2 {
+        display: block;
+        width: 100%; }
+      .view-twocol .main .col2 {
+        margin-top: 50px; } }

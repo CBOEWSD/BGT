@@ -222,6 +222,18 @@ $classPrefix: '.icon-';
       }
     }
   }
+
+  &.status-tick {
+    color: $colorGreen1;
+    padding-left: 18px !important;
+    display: inline-block;
+
+    &:before {
+      background-position: -60px -22px;
+      width: 14px;
+      height: 14px;
+    }
+  }
 }
 
 

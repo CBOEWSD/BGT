@@ -68,7 +68,11 @@ $view: '.view-twocolB';
 
   @media screen and (max-width: $screenSmallMax) {
     .main {
-      margin-top: 30px;
+      margin-top: 20px;
+
+      >div:first-child {
+        margin-top: 0;
+      }
 
       .two-col-body {
         display: block;

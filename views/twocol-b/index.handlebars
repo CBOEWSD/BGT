@@ -15,11 +15,13 @@
 
     <section class="main">
 
-      <div class="beforeRow">
-        {{#each beforeRow}}
-          {{{this}}}
-        {{/each}}
-      </div>
+      {{#if beforeRow}}
+        <div class="beforeRow">
+          {{#each beforeRow}}
+            {{{this}}}
+          {{/each}}
+        </div>
+      {{/if}}
 
       <div class="two-col-body">
 

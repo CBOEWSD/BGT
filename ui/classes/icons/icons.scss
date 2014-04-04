@@ -207,6 +207,15 @@ $classPrefix: '.icon-';
       height: 20px;
     }
   }
+
+  &.lock {
+    padding-left: 18px !important;
+    &:before {
+      background-position: -85px 0;
+      width: 31px;
+      height: 29px;
+    }
+  }
 }
 
 

@@ -43,4 +43,18 @@ $module: '.event';
       margin: 0;
     }
   }
+
+
+  @media all and (max-width: $screenSmallMax) {
+    ul {
+      margin: 10px 0;
+
+      li {
+        strong, span {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
 }

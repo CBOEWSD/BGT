@@ -100,12 +100,12 @@ $classPrefix: '.icon-';
 }
 
 #{$classPrefix}css-arrows {
-  > li, > a {
+  > li > a, > a {
     position: relative;
     padding-left: 15px;
 
     &:before {
-      display: inline-block; content: '';
+      display: inline-block; content: ''!important;
       width: 0px;
       height: 0px;
       border-style: solid;
@@ -113,9 +113,15 @@ $classPrefix: '.icon-';
       border-color: transparent transparent transparent #000;
       margin: 0 5px -2px 0;
       position: absolute;
-      left: 2px;
+      left: 2px!important;
       top: 50%;
       margin-top: -6px;
+    }
+  }
+
+  > li {
+    &:before {
+      content: "" !important;
     }
   }
 

@@ -100,4 +100,15 @@ $module: '.results';
       }
     }
   }
+
+  @media all and (max-width: $screenSmallMax) {
+    > .title {
+      select {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+  }
 }

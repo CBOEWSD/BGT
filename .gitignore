@@ -17,3 +17,6 @@ ui/templates
 __benchmarks/
 
 newrelic_agent.log
+
+.groc.json
+doc/

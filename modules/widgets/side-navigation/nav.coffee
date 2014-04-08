@@ -40,6 +40,7 @@ class SideNavigation
     Toggles a clicked menu open/closed
   ###
   toggleMenu: (e) ->
+    return true if Response.viewportW() > 767
     e.preventDefault();
 
     $(@).parent('li').toggleClass 'expanded'

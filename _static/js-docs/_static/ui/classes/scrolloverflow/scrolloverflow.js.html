@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScrollOverflow Class - scrolloverflow.js</title>
+
+  <link rel="stylesheet" href="../../../../assets/style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="groc-relative-root" content="../../../../"/>
+  <meta name="groc-document-path" content="_static\ui\classes\scrolloverflow\scrolloverflow.js"/>
+  
+</head>
+<body>
+  <div id="file-area">
+    <div id="meta">
+      <code class="file-path">
+      
+        _static\ui\classes\scrolloverflow\scrolloverflow.js
+      
+      </code>
+    </div>
+    <div id="document">
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h1 id="scrolloverflow-class"><a href="#scrolloverflow-class" class="anchor"></a>ScrollOverflow Class</h1><p>  Alows for content to be placed within another block of a certain height
+  and not overflow or push content but instead add a scrollbar.
+  This code will poll for DOM changes and adjust the element if so.
+  Note: we do not adjust immediately, we are polling each change but
+  we will only execute an adjustment every second if needed.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">var</span> ScrollOverflow;
+
+  ScrollOverflow = (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">var</span> self;
+
+    self = {};
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="constructor"><a href="#constructor" class="anchor"></a>Constructor</h2></div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ScrollOverflow</span><span class="hljs-params">($, $el, minviewport)</span> {</span>
+      <span class="hljs-keyword">this</span>.log.add(<span class="hljs-string">'notification'</span>, <span class="hljs-string">'Constructed.'</span>, <span class="hljs-keyword">this</span>);
+      self = <span class="hljs-keyword">this</span>;
+      self.$el = $el;
+      self.shouldI = <span class="hljs-literal">false</span>;
+      self.minvp = minviewport;
+      self.active = <span class="hljs-literal">false</span>;
+      <span class="hljs-keyword">this</span>.addTSE();
+      <span class="hljs-keyword">this</span>.setHeight();
+      <span class="hljs-keyword">this</span>.bindUp();
+    }
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-log"><a href="#this-log" class="anchor"></a>this.log</h2><p>  Add local instance of logging to this module.
+  Can be called with:
+  <code>self.log.add &#39;notification&#39;, &#39;message...&#39;, @</code></p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    ScrollOverflow.prototype.log = <span class="hljs-keyword">new</span> LogHandler(<span class="hljs-string">'ScrollOverflow'</span>);
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-addtse"><a href="#this-addtse" class="anchor"></a><code>this.addTSE</code></h2><p>  Add TSE related classes and init</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    ScrollOverflow.prototype.addTSE = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      <span class="hljs-keyword">if</span> (self.active) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+      }
+      self.active = <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">return</span> self.$el.each(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">var</span> $inside, $<span class="hljs-keyword">this</span>;
+        $<span class="hljs-keyword">this</span> = $(<span class="hljs-keyword">this</span>);
+        $inside = $(<span class="hljs-string">'.scrolloverflow-inside'</span>, $<span class="hljs-keyword">this</span>);
+        $<span class="hljs-keyword">this</span>.wrapInner(<span class="hljs-string">'&lt;div class="tse-scrollable"/&gt;'</span>);
+        $inside.addClass(<span class="hljs-string">'tse-content'</span>);
+        $inside.addClass(<span class="hljs-string">'vertical'</span>);
+        self.log.add(<span class="hljs-string">'notification'</span>, <span class="hljs-string">'addTSE method called.'</span>, $<span class="hljs-keyword">this</span>);
+        <span class="hljs-keyword">return</span> $(<span class="hljs-string">'.tse-scrollable'</span>, $<span class="hljs-keyword">this</span>).TrackpadScrollEmulator();
+      });
+    };
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-destroy"><a href="#this-destroy" class="anchor"></a><code>this.destroy</code></h2><p>  Removes all bindings and setup, this allows for collapse to mobile.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    ScrollOverflow.prototype.destroy = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      <span class="hljs-keyword">if</span> (!self.active) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+      }
+      self.active = <span class="hljs-literal">false</span>;
+      <span class="hljs-keyword">return</span> self.$el.each(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">var</span> $inside, $<span class="hljs-keyword">this</span>, $wrap;
+        $<span class="hljs-keyword">this</span> = $(<span class="hljs-keyword">this</span>);
+        $inside = $(<span class="hljs-string">'.scrolloverflow-inside'</span>, $<span class="hljs-keyword">this</span>);
+        $wrap = $(<span class="hljs-string">'.tse-scrollable'</span>, $<span class="hljs-keyword">this</span>);
+        $wrap.TrackpadScrollEmulator(<span class="hljs-string">'destroy'</span>);
+        self.log.add(<span class="hljs-string">'notification'</span>, <span class="hljs-string">'destroy method called.'</span>, $<span class="hljs-keyword">this</span>);
+        <span class="hljs-keyword">if</span> ($wrap.length &gt; <span class="hljs-number">0</span>) {
+          $inside.unwrap();
+          $wrap.removeClass(<span class="hljs-string">'tse-scrollable'</span>);
+          $inside.css(<span class="hljs-string">'height'</span>, <span class="hljs-string">''</span>);
+          $inside.css(<span class="hljs-string">'overflow-y'</span>, <span class="hljs-string">''</span>);
+        }
+        $inside.removeClass(<span class="hljs-string">'tse-content'</span>);
+        <span class="hljs-keyword">return</span> $inside.removeClass(<span class="hljs-string">'vertical'</span>);
+      });
+    };
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-setheight"><a href="#this-setheight" class="anchor"></a><code>this.setHeight</code></h2><p>  For each instance of the class we will detect the
+  height without the inner content and adjust the inner
+  content element appropriately.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    ScrollOverflow.prototype.setHeight = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      <span class="hljs-keyword">return</span> self.$el.each(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">var</span> $inside, $<span class="hljs-keyword">this</span>, newHeight, newWidth;
+        $<span class="hljs-keyword">this</span> = $(<span class="hljs-keyword">this</span>);
+        $inside = $(<span class="hljs-string">'.tse-scrollable'</span>, $<span class="hljs-keyword">this</span>);
+        self.log.add(<span class="hljs-string">'notification'</span>, <span class="hljs-string">'setHeight method called on.'</span>, $<span class="hljs-keyword">this</span>);
+        $inside.removeClass(<span class="hljs-string">'shown'</span>);
+        newHeight = $<span class="hljs-keyword">this</span>.height();
+        newWidth = $<span class="hljs-keyword">this</span>.width();
+        <span class="hljs-keyword">if</span> (newHeight === <span class="hljs-number">0</span>) {
+          newHeight = <span class="hljs-string">''</span>;
+        }
+        $inside.height(newHeight);
+        $inside.width(newWidth);
+        $inside.addClass(<span class="hljs-string">'shown'</span>);
+        <span class="hljs-keyword">return</span> $inside.TrackpadScrollEmulator(<span class="hljs-string">'recalculate'</span>);
+      });
+    };
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-bindup"><a href="#this-bindup" class="anchor"></a><code>this.bindUp</code></h2><p>  We set a listen for the DOM change event and also start our interval
+  checking for if a DOM event has changed something in the last second.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    ScrollOverflow.prototype.bindUp = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      PubSub.subscribe(<span class="hljs-string">'DomChange'</span>, self.changeEvent);
+      PubSub.subscribe(<span class="hljs-string">'GlobalScroll'</span>, self.changeEvent);
+      self.log.add(<span class="hljs-string">'notification'</span>, <span class="hljs-string">'bindUp method called, listening for DOMSubtreeModified.'</span>, <span class="hljs-string">'body'</span>);</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><p>  This interval prevents us from firing multiple instances of
+  <code>this.setHeight</code> in quick succession. We will only ever fire
+  once in any given second if at all.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">      setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">if</span> (self.shouldI) {
+          self.setHeight();
+          <span class="hljs-keyword">return</span> self.shouldI = <span class="hljs-literal">false</span>;
+        }
+      }, <span class="hljs-number">3000</span>);
+      <span class="hljs-keyword">return</span> PubSub.subscribe(<span class="hljs-string">'resize'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">if</span> (Response.viewportW() &lt;= self.minvp) {
+          <span class="hljs-keyword">return</span> self.destroy();
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> self.addTSE();
+        }
+      });
+    };
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-changeevent"><a href="#this-changeevent" class="anchor"></a><code>this.changeEvent</code></h2><p>  Set <code>this.shouldI</code> to <code>true</code> for the next interval check
+  to adjust the element heights.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    ScrollOverflow.prototype.changeEvent = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
+      <span class="hljs-keyword">return</span> self.shouldI = <span class="hljs-literal">true</span>;
+    };
+
+    <span class="hljs-keyword">return</span> ScrollOverflow;
+
+  })();
+
+  define(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">return</span> ScrollOverflow;
+  });
+
+}).call(<span class="hljs-keyword">this</span>);
+
+<span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2Nyb2xsb3ZlcmZsb3cuanMiLCJzb3VyY2VzIjpbInNjcm9sbG92ZXJmbG93LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLFFBQUE7O0NBQUEsQ0FTTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxDQUFBLENBQU8sQ0FBUDs7Q0FFQTs7O0NBRkE7O0NBS2EsQ0FBSSxDQUFKLENBQUEsT0FBQSxhQUFDO0NBRVosQ0FBeUIsQ0FBckIsQ0FBSCxFQUFELFFBQUE7Q0FBQSxFQUdPLENBQVAsRUFBQTtDQUhBLEVBTUEsQ0FBSSxFQUFKO0NBTkEsRUFPZSxDQUFYLENBUEosQ0FPQSxDQUFBO0NBUEEsRUFRYSxDQUFULENBQUosQ0FBQSxLQVJBO0NBQUEsRUFTYyxDQUFWLENBVEosQ0FTQTtDQVRBLEdBWUMsRUFBRDtDQVpBLEdBZUMsRUFBRCxHQUFBO0NBZkEsR0FnQkMsRUFBRDtDQXZCRixJQUthOztDQW9CYjs7Ozs7O0NBekJBOztDQUFBLEVBK0JBLENBQVMsTUFBQSxNQUFBOztDQUVUOzs7O0NBakNBOztDQUFBLEVBcUNRLEdBQVIsR0FBUTtDQUNOLEdBQWdCLEVBQWhCO0NBQUEsSUFBQSxVQUFPO1FBQVA7Q0FBQSxFQUdjLENBQVYsRUFBSjtDQUdLLEVBQUcsQ0FBSixLQUFVLElBQWQ7Q0FDRSxXQUFBLEVBQUE7Q0FBQSxFQUFRLENBQUEsQ0FBUixHQUFBO0NBQUEsQ0FDc0MsQ0FBNUIsRUFBQSxFQUFWLENBQUEsZ0JBQVU7Q0FEVixJQUdLLEdBQUwsQ0FBQSxzQkFBQTtDQUhBLE1BSU8sQ0FBUCxLQUFBO0NBSkEsTUFLTyxDQUFQLEVBQUE7Q0FMQSxDQVE2QixDQUFyQixDQUFKLENBQUosR0FBQSxNQUFBLFNBQUE7Q0FFQSxDQUFxQixHQUFyQixVQUFBLEVBQUEsS0FBQTtDQVhGLE1BQWM7Q0E1Q2hCLElBcUNROztDQW9CUjs7OztDQXpEQTs7Q0FBQSxFQTZEUyxJQUFULEVBQVM7QUFDVSxDQUFqQixHQUFnQixFQUFoQjtDQUFBLElBQUEsVUFBTztRQUFQO0NBQUEsRUFHYyxDQUFWLENBSEosQ0FHQTtDQUdLLEVBQUcsQ0FBSixLQUFVLElBQWQ7Q0FDRSxXQUFBLFNBQUE7Q0FBQSxFQUFRLENBQUEsQ0FBUixHQUFBO0NBQUEsQ0FDc0MsQ0FBNUIsRUFBQSxFQUFWLENBQUEsZ0JBQVU7Q0FEVixDQUU2QixDQUFyQixFQUFSLEdBQUEsU0FBUTtDQUZSLElBSUssR0FBTCxDQUFBLGFBQUE7Q0FKQSxDQU82QixDQUFyQixDQUFKLENBQUosR0FBQSxNQUFBLFVBQUE7Q0FFQSxFQUFrQixDQUFmLENBQUssQ0FBTCxFQUFIO0NBQ0UsS0FBQSxDQUFPLEdBQVA7Q0FBQSxJQUNLLEtBQUwsQ0FBQSxLQUFBO0NBREEsQ0FFc0IsQ0FBdEIsSUFBTyxDQUFQLEVBQUE7Q0FGQSxDQUcwQixDQUExQixJQUFPLEdBQVAsRUFBQTtVQWJGO0NBQUEsTUFlTyxDQUFQLEdBQUEsRUFBQTtDQUNRLE1BQUQsR0FBUCxDQUFBLElBQUE7Q0FqQkYsTUFBYztDQXBFaEIsSUE2RFM7O0NBMEJUOzs7Ozs7Q0F2RkE7O0NBQUEsRUE2RlcsTUFBWDtDQUNPLEVBQUcsQ0FBSixLQUFVLElBQWQ7Q0FDRSxXQUFBLHVCQUFBO0NBQUEsRUFBUSxDQUFBLENBQVIsR0FBQTtDQUFBLENBQytCLENBQXJCLEVBQUEsRUFBVixDQUFBLFNBQVU7Q0FEVixDQU02QixDQUFyQixDQUFKLENBQUosR0FBQSxNQUFBLGVBQUE7Q0FOQSxNQVNPLENBQVAsR0FBQTtDQVRBLEVBWVksRUFBSyxDQUFMLEVBQVosQ0FBQTtDQVpBLEVBYVcsRUFBSyxHQUFoQjtDQUdBLEdBQUcsQ0FBYSxHQUFoQixDQUFHO0NBQ0QsQ0FBQSxDQUFZLE1BQVosQ0FBQTtVQWpCRjtDQUFBLEtBb0JBLENBQU8sQ0FBUCxDQUFBO0NBcEJBLElBcUJBLEVBQU8sQ0FBUDtDQXJCQSxNQXNCTyxDQUFQO0NBQ1EsTUFBRCxNQUFQLEVBQUEsT0FBQTtDQXhCRixNQUFjO0NBOUZoQixJQTZGVzs7Q0EyQlg7Ozs7O0NBeEhBOztDQUFBLEVBNkhRLEdBQVIsR0FBUTtDQUNOLENBQThCLEVBQUksRUFBbEMsR0FBQSxFQUFBO0NBQUEsQ0FDaUMsRUFBSSxFQUFyQyxHQUFBLEVBQUEsR0FBQTtDQURBLENBSTZCLENBQXJCLENBQUosRUFBSixRQUFBLDJDQUFBO0NBRUE7Ozs7O0NBTkE7Q0FBQSxFQVdZLEdBQVosR0FBWSxFQUFaO0NBQ0UsR0FBRyxHQUFILENBQUE7Q0FDRSxHQUFJLEtBQUosQ0FBQTtDQUNLLEVBQVUsQ0FBWCxHQUFKLFVBQUE7VUFIUTtDQUFaLENBSUUsRUFKRixHQUFZO0NBT0wsQ0FBb0IsQ0FBQSxHQUFyQixFQUFOLENBQUEsSUFBQTtDQUdFLEdBQUcsQ0FBSCxHQUFBLENBQUc7Q0FDSSxHQUFELEdBQUosVUFBQTtNQURGLElBQUE7Q0FHTyxHQUFELEVBQUosV0FBQTtVQU51QjtDQUEzQixNQUEyQjtDQWhKN0IsSUE2SFE7O0NBMkJSOzs7OztDQXhKQTs7Q0FBQSxFQTZKYSxNQUFDLEVBQWQ7Q0FDTyxFQUFVLENBQVgsR0FBSixNQUFBO0NBOUpGLElBNkphOztDQTdKYjs7Q0FWRjs7Q0FBQSxDQTJLQSxDQUFPLEdBQVAsR0FBTztDQUNMLFVBQU8sR0FBUDtDQURGLEVBQU87Q0EzS1AifQ==</span></pre></div>
+      
+      </div>
+    
+    </div>
+  </div>
+
+  <script src="../../../../toc.js"></script>
+  <script src="../../../../assets/libs.js"></script>
+  <script src="../../../../assets/behavior.js"></script>
+</body>
+</html>

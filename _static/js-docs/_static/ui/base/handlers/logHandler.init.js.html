@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application LogHandler - logHandler.init.js</title>
+
+  <link rel="stylesheet" href="../../../../assets/style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="groc-relative-root" content="../../../../"/>
+  <meta name="groc-document-path" content="_static\ui\base\handlers\logHandler.init.js"/>
+  
+</head>
+<body>
+  <div id="file-area">
+    <div id="meta">
+      <code class="file-path">
+      
+        _static\ui\base\handlers\logHandler.init.js
+      
+      </code>
+    </div>
+    <div id="document">
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h1 id="application-loghandler"><a href="#application-loghandler" class="anchor"></a>Application LogHandler</h1><p>  Can be called in each module if a log is required
+  simply by adding <code>log: new LogHandler &#39;moduleName&#39;</code></p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">this</span>.LogHandler = (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span></pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="constructor"><a href="#constructor" class="anchor"></a>Constructor</h2></div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">LogHandler</span><span class="hljs-params">(module)</span> {</span>
+      window.log = window.log || {};
+      <span class="hljs-keyword">this</span>.debug = <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">this</span>.module = module || <span class="hljs-string">'Application'</span>;
+    }
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="add-new-log"><a href="#add-new-log" class="anchor"></a>Add new log</h2><p>  Passing in variable data to be pushed into log</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    LogHandler.prototype.add = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(type, message, extended)</span> {</span>
+      <span class="hljs-keyword">var</span> object;
+      object = {
+        message: message,
+        extended: extended
+      };
+      type = type !== <span class="hljs-string">'error'</span> &amp;&amp; type !== <span class="hljs-string">'warning'</span> &amp;&amp; type !== <span class="hljs-string">'notification'</span> ? <span class="hljs-string">'notification'</span> : type;
+      <span class="hljs-keyword">if</span> (window.debug) {
+        window.log[<span class="hljs-keyword">this</span>.module] = window.log[<span class="hljs-keyword">this</span>.module] || {};
+        window.log[<span class="hljs-keyword">this</span>.module][type] = window.log[<span class="hljs-keyword">this</span>.module][type] || [];
+        window.log[<span class="hljs-keyword">this</span>.module][type].push(object);
+        <span class="hljs-keyword">if</span> (type === <span class="hljs-string">'error'</span> || type === <span class="hljs-string">'warning'</span>) {
+          <span class="hljs-keyword">return</span> console.log(<span class="hljs-keyword">this</span>.module, type, object);
+        }
+      }
+    };
+
+    <span class="hljs-keyword">return</span> LogHandler;
+
+  })();
+
+}).call(<span class="hljs-keyword">this</span>);
+
+<span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9nSGFuZGxlci5pbml0LmpzIiwic291cmNlcyI6WyJsb2dIYW5kbGVyLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLENBS00sRUFBQztDQUNMOzs7Q0FBQTtDQUdhLEVBQUEsQ0FBQSxFQUFBLGNBQUM7Q0FDWixDQUFBLENBQUEsQ0FBMkIsRUFBM0I7Q0FBQSxFQUdTLENBQVIsQ0FBRCxDQUFBO0NBSEEsRUFNVSxDQUFULEVBQUQsT0FOQTtDQUpGLElBR2E7O0NBU2I7Ozs7Q0FaQTs7Q0FBQSxDQWdCWSxDQUFaLENBQUssR0FBQSxDQUFBLENBQUM7Q0FDSixLQUFBLElBQUE7Q0FBQSxFQUFTLEdBQVQ7Q0FBUyxDQUNFLEtBQVQsQ0FBQTtDQURPLENBRUcsTUFBVjtDQUZGLE9BQUE7Q0FBQSxFQU9VLENBQVYsQ0FBa0IsQ0FBbEIsQ0FBVSxFQUFBLEtBQUg7Q0FFUCxHQUFHLENBQUgsQ0FBQTtDQUdFLENBQUEsQ0FBVyxDQUFDLEVBQU4sRUFBTjtDQUFBLENBQUEsQ0FDVyxDQUFDLEVBQU4sRUFBTjtDQURBLEVBRVcsQ0FBQyxFQUFOLEVBQU47Q0FHQSxHQUFHLENBQVEsRUFBUixDQUFILENBQUE7Q0FBcUQsQ0FBYSxDQUFyQixDQUFhLEVBQWIsQ0FBTyxVQUFQO1VBUi9DO1FBVkc7Q0FoQkwsSUFnQks7O0NBaEJMOztDQU5GO0NBQUEifQ==</span></pre></div>
+      
+      </div>
+    
+    </div>
+  </div>
+
+  <script src="../../../../toc.js"></script>
+  <script src="../../../../assets/libs.js"></script>
+  <script src="../../../../assets/behavior.js"></script>
+</body>
+</html>

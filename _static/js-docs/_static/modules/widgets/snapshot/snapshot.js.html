@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snapshot Graph - snapshot.js</title>
+
+  <link rel="stylesheet" href="../../../../assets/style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="groc-relative-root" content="../../../../"/>
+  <meta name="groc-document-path" content="_static\modules\widgets\snapshot\snapshot.js"/>
+  
+</head>
+<body>
+  <div id="file-area">
+    <div id="meta">
+      <code class="file-path">
+      
+        _static\modules\widgets\snapshot\snapshot.js
+      
+      </code>
+    </div>
+    <div id="document">
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h1 id="snapshot-graph"><a href="#snapshot-graph" class="anchor"></a>Snapshot Graph</h1><p>  This module will have <code>toggle</code> type functionality to view
+  each index&#39;s graph on hover/touch events.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">var</span> Snapshot;
+
+  Snapshot = (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">var</span> self;
+
+    self = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>;
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="constructor"><a href="#constructor" class="anchor"></a>Constructor</h2></div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Snapshot</span><span class="hljs-params">($el)</span> {</span>
+      self = <span class="hljs-keyword">this</span>;
+      <span class="hljs-keyword">this</span>.$el = $el;
+      <span class="hljs-keyword">this</span>.$index = $(<span class="hljs-string">'.siderail li a'</span>, <span class="hljs-keyword">this</span>.$el);
+      <span class="hljs-keyword">this</span>.$images = $(<span class="hljs-string">'.images .image'</span>, <span class="hljs-keyword">this</span>.$el);
+      <span class="hljs-keyword">this</span>.log.add(<span class="hljs-string">'notification'</span>, <span class="hljs-string">'Snapshot constructed.'</span>, <span class="hljs-keyword">this</span>);
+      <span class="hljs-keyword">this</span>.bind();
+      <span class="hljs-keyword">this</span>.loaded();
+    }
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments doc-section">
+          <div class="wrapper"><h2 id="this-log"><a href="#this-log" class="anchor"></a>this.log</h2><p>  Add local instance of logging to this module.
+  Can be called with:</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    Snapshot.prototype.log = <span class="hljs-keyword">new</span> LogHandler(<span class="hljs-string">'WidgetHero'</span>);
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-loaded"><a href="#this-loaded" class="anchor"></a>this.loaded</h2><p>  Fired as part of the constructor to remove loading
+  view and trigger showing of first item.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    Snapshot.prototype.loaded = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      self.$el.addClass(<span class="hljs-string">'loaded'</span>);
+      <span class="hljs-keyword">return</span> self.$index.first().trigger(<span class="hljs-string">'click'</span>);
+    };
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-bind"><a href="#this-bind" class="anchor"></a>this.bind</h2><p>  Bind up events to change index.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    Snapshot.prototype.bind = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+      <span class="hljs-keyword">return</span> self.$index.bind(<span class="hljs-string">'click'</span>, self.indexChange);
+    };
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="this-indexchange"><a href="#this-indexchange" class="anchor"></a>this.indexChange</h2><p>  Fired from <code>this.bind</code> method to show selected index image.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">    Snapshot.prototype.indexChange = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
+      <span class="hljs-keyword">var</span> $target, $<span class="hljs-keyword">this</span>;
+      e.preventDefault();
+      self.log.add(<span class="hljs-string">'notification'</span>, <span class="hljs-string">'indexChange method fired.'</span>, e);
+      self.$index.removeClass(<span class="hljs-string">'active'</span>);
+      self.$images.removeClass(<span class="hljs-string">'active'</span>);
+      $<span class="hljs-keyword">this</span> = $(<span class="hljs-keyword">this</span>);
+      $target = $(<span class="hljs-string">'[data-id="'</span> + $<span class="hljs-keyword">this</span>.data(<span class="hljs-string">'target'</span>) + <span class="hljs-string">'"]'</span>);
+      <span class="hljs-keyword">if</span> ($target.length &gt; <span class="hljs-number">0</span>) {
+        $<span class="hljs-keyword">this</span>.addClass(<span class="hljs-string">'active'</span>);
+        <span class="hljs-keyword">return</span> $target.addClass(<span class="hljs-string">'active'</span>);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> self.log.add(<span class="hljs-string">'error'</span>, <span class="hljs-string">'Failed to find target.'</span>, $<span class="hljs-keyword">this</span>);
+      }
+    };
+
+    <span class="hljs-keyword">return</span> Snapshot;
+
+  })();
+</pre></div>
+      
+      </div>
+    
+      <div class="segment">
+      
+        <div class="comments ">
+          <div class="wrapper"><h2 id="define"><a href="#define" class="anchor"></a>Define</h2><p>  Define our module for AMD.</p>
+</div>
+        </div>
+      
+      
+        <div class="code"><pre class="wrapper">  define(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">return</span> Snapshot;
+  });
+
+}).call(<span class="hljs-keyword">this</span>);
+
+<span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic25hcHNob3QuanMiLCJzb3VyY2VzIjpbInNuYXBzaG90LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLEVBQUE7O0NBQUEsQ0FNTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxFQUFPLENBQVAsRUFBQTs7Q0FFQTs7O0NBRkE7O0NBS2EsRUFBQSxDQUFBLGNBQUM7Q0FDWixFQUFPLENBQVAsRUFBQTtDQUFBLEVBR0EsQ0FBQyxFQUFEO0NBSEEsQ0FJK0IsQ0FBcEIsQ0FBVixFQUFELFVBQVc7Q0FKWCxDQUtnQyxDQUFwQixDQUFYLEVBQUQsQ0FBQSxTQUFZO0NBTFosQ0FReUIsQ0FBckIsQ0FBSCxFQUFELFFBQUEsU0FBQTtDQVJBLEdBV0MsRUFBRDtDQVhBLEdBWUMsRUFBRDtDQWxCRixJQUthOztDQWViOzs7Ozs7Q0FwQkE7O0NBQUEsRUEwQkEsQ0FBUyxNQUFBLEVBQUE7O0NBRVQ7Ozs7O0NBNUJBOztDQUFBLEVBaUNRLEdBQVIsR0FBUTtDQUNOLEVBQVEsQ0FBSixFQUFKLEVBQUE7Q0FDSyxHQUFELENBQUosQ0FBVyxDQUFYLE1BQUE7Q0FuQ0YsSUFpQ1E7O0NBSVI7Ozs7Q0FyQ0E7O0NBQUEsRUF5Q00sQ0FBTixLQUFNO0NBQ0MsQ0FBcUIsRUFBdEIsRUFBTyxDQUFYLElBQUEsRUFBQTtDQTFDRixJQXlDTTs7Q0FHTjs7OztDQTVDQTs7Q0FBQSxFQWdEYSxNQUFDLEVBQWQ7Q0FDRSxTQUFBLElBQUE7Q0FBQSxLQUFBLFFBQUE7Q0FBQSxDQUc2QixDQUFyQixDQUFKLEVBQUosUUFBQSxhQUFBO0NBSEEsR0FNSSxFQUFKLEVBQUEsR0FBQTtDQU5BLEdBT0ksRUFBSixDQUFZLENBQVosR0FBQTtDQVBBLEVBU1EsQ0FBQSxDQUFSLENBQUE7Q0FUQSxFQVVVLENBQWUsQ0FBSyxDQUE5QixDQUFBLENBQXlCLElBQWI7Q0FFWixFQUFvQixDQUFqQixFQUFILENBQVU7Q0FDUixJQUFLLEdBQUw7Q0FDUSxNQUFELENBQVAsT0FBQTtNQUZGLEVBQUE7Q0FJTyxDQUFpQixDQUFkLENBQUosQ0FBSixFQUFBLFFBQUEsU0FBQTtRQWpCUztDQWhEYixJQWdEYTs7Q0FoRGI7O0NBUEY7O0NBMEVBOzs7O0NBMUVBOztDQUFBLENBOEVBLENBQU8sR0FBUCxHQUFPO0NBQ0wsT0FBQSxHQUFPO0NBRFQsRUFBTztDQTlFUCJ9</span></pre></div>
+      
+      </div>
+    
+    </div>
+  </div>
+
+  <script src="../../../../toc.js"></script>
+  <script src="../../../../assets/libs.js"></script>
+  <script src="../../../../assets/behavior.js"></script>
+</body>
+</html>

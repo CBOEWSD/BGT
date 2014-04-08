@@ -19,6 +19,7 @@ class Breadcrumbs
 
     # Globals
     @.$el = $ el
+    @.$menus = $('li>ul', self.$el).parent('li')
 
     @.bind()
 
@@ -27,8 +28,6 @@ class Breadcrumbs
     Binds up events to show/hide menu
   ###
   bind: () ->
-    self.$menus = $('li>ul', self.$el).parent('li')
-
     self.$menus.bind 'click', self.click
     self.$menus.bind 'mouseenter', self.mouseenter
     $(document).bind 'click', self.close
@@ -93,6 +92,8 @@ class Breadcrumbs
     with the class `show`.
   ###
   click: (e) ->
+    return true unless $(e.target).parent('li').hasClass('parent')
+
     e.preventDefault()
     e.stopPropagation()
 

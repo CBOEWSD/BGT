@@ -1,0 +1,47 @@
+/*
+  Class:
+  Description:
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/scrollbars';
+
+$class: '.tabs-';
+
+#{$class}bar {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  background: $colorBlue1;
+
+  .tab {
+    display: table-cell;
+    vertical-align: top;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover, &:active {
+      background: lighten($colorBlue1, 5%);
+    }
+
+    &.active {
+      background: #fff;
+      color: $colorGrey1;
+      border-top: 1px solid $colorGrey2;
+      border-bottom: 1px solid $colorGrey2;
+      cursor: default;
+    }
+  }
+}
+
+#{$class}content {
+  .tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

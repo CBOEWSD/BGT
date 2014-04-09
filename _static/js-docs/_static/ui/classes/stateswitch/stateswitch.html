@@ -76,4 +76,83 @@
         <script src="../../../../assets/libs.js"></script>
         <script src="../../../../assets/behavior.js"></script>
     </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>- stateswitch.init.js</title>
+    <link rel="stylesheet" href="../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../" />
+    <meta name="groc-document-path" content="_static\ui\classes\stateswitch\stateswitch.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\ui\classes\stateswitch\stateswitch.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>StateSwitch; StateSwitch = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>modules, self; self =
+                        <span class="hljs-keyword">void</span>
+                        <span class="hljs-number">0</span>; modules =
+                        <span class="hljs-keyword">void</span>
+                        <span class="hljs-number">0</span>;
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">StateSwitch</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self =
+                        <span class="hljs-keyword">this</span>; modules = {}; } StateSwitch.prototype.newModule
+                        =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(name, params)</span>{</span>
+                        modules[name] = modules[name] || {};
+                        <span class="hljs-keyword">if</span>(
+                        <span class="hljs-keyword">typeof</span>params ===
+                        <span class="hljs-string">'undefined'</span>) {
+                        <span class="hljs-keyword">return</span>
+                        <span class="hljs-literal">false</span>; }
+                        <span class="hljs-keyword">if</span>(
+                        <span class="hljs-keyword">typeof</span>params.options ===
+                        <span class="hljs-string">'object'</span>) { modules[name].options = params.options;
+                        }
+                        <span class="hljs-keyword">if</span>(
+                        <span class="hljs-keyword">typeof</span>params.desktop ===
+                        <span class="hljs-string">'object'</span>) { modules[name].desktop = params.desktop;
+                        }
+                        <span class="hljs-keyword">if</span>(
+                        <span class="hljs-keyword">typeof</span>params.mobile ===
+                        <span class="hljs-string">'object'</span>) { modules[name].mobile = params.mobile;
+                        }
+                        <span class="hljs-keyword">return</span>console.log(modules[name]); };
+                        <span class="hljs-keyword">return</span>StateSwitch; })(); window.stateSwitch =
+                        <span
+                        class="hljs-keyword">new</span>StateSwitch; }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3RhdGVzd2l0Y2guaW5pdC5qcyIsInNvdXJjZXMiOlsic3RhdGVzd2l0Y2guaW5pdC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FBQSxLQUFBLEtBQUE7O0NBQUEsQ0FBTTtDQUNKLE9BQUEsS0FBQTs7Q0FBQSxFQUFPLENBQVAsRUFBQTs7Q0FBQSxFQUNVLENBQVYsRUFEQSxDQUNBOztDQUVhLEVBQUEsQ0FBQSxpQkFBQTtDQUNYLEVBQU8sQ0FBUCxFQUFBO0NBQUEsQ0FBQSxDQUdVLEdBQVYsQ0FBQTtDQVBGLElBR2E7O0NBSGIsQ0FTa0IsQ0FBUCxDQUFBLEVBQUEsR0FBWDtDQUVFLENBQUEsQ0FBZ0IsQ0FBUixFQUFSLENBQVE7QUFHTCxDQUFILEdBQUcsQ0FBaUIsQ0FBcEIsS0FBQTtDQUNFLElBQUEsVUFBTztRQUpUO0FBT0csQ0FBSCxHQUFHLENBQXlCLENBQTVCLENBQUcsQ0FBSDtDQUNFLEVBQXdCLENBQWhCLEVBQXNCLENBQXRCLENBQVI7UUFSRjtBQVdHLENBQUgsR0FBRyxDQUF5QixDQUE1QixDQUFHLENBQUg7Q0FDRSxFQUF3QixDQUFoQixFQUFzQixDQUF0QixDQUFSO1FBWkY7QUFhRyxDQUFILEdBQUcsQ0FBd0IsQ0FBM0IsRUFBQTtDQUNFLEVBQXVCLENBQWYsRUFBUixDQUFRLENBQVI7UUFkRjtDQWdCUSxFQUFSLENBQW9CLEdBQWIsTUFBUDtDQTNCRixJQVNXOztDQVRYOztDQURGOztBQThCcUIsQ0E5QnJCLENBOEJBLENBQXFCLEdBQWYsS0FBTjtDQTlCQSJ9</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../toc.js"></script>
+    <script src="../../../../assets/libs.js"></script>
+    <script src="../../../../assets/behavior.js"></script>
+</body>
 </html>

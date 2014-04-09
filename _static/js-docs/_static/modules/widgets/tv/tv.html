@@ -41,19 +41,18 @@
                             <span class="hljs-built_in">require</span>([
                             <span class="hljs-string">'/modules/widgets/tv/tv.js'</span>,
                             <span class="hljs-string">'/modules/widgets/tv/embed-1.5.4/embed.js'</span>],
-                            <span
-                            class="hljs-function">
+                            <span class="hljs-function">
                                 <span class="hljs-keyword">function</span>
                                 <span class="hljs-params">(tv)</span>{</span>
-                                <span class="hljs-keyword">return</span>$el.each(
-                                <span class="hljs-function">
-                                    <span class="hljs-keyword">function</span>
-                                    <span class="hljs-params">()</span>{</span>
-                                <span class="hljs-keyword">return</span>
-                                <span class="hljs-keyword">new</span>tv(
-                                <span class="hljs-keyword">this</span>); }); }); } }).call(
-                                <span class="hljs-keyword">this</span>);
-                                <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHYuaW5pdC5qcyIsInNvdXJjZXMiOlsidHYuaW5pdC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLEVBQUEsR0FBQTs7Q0FBQSxDQVFBLENBQUEsU0FBTTs7Q0FHTixDQUFBLENBQU0sQ0FBSCxFQUFBO0NBRUQsQ0FFRSxDQUE2QyxDQUYvQyxHQUFBLEVBRWdELGtCQUZ4QyxlQUFBO0NBSUYsRUFBRCxDQUFILEtBQVMsSUFBVDtDQUNTLENBQUgsRUFBQSxXQUFBO0NBRE4sTUFBUztDQUpYLElBRStDO0lBZmpEO0NBQUEifQ==</span>
+                            <span class="hljs-keyword">return</span>$el.each(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">return</span>
+                            <span class="hljs-keyword">new</span>tv(
+                            <span class="hljs-keyword">this</span>); }); }); } }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHYuaW5pdC5qcyIsInNvdXJjZXMiOlsidHYuaW5pdC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLEVBQUEsR0FBQTs7Q0FBQSxDQVFBLENBQUEsU0FBTTs7Q0FHTixDQUFBLENBQU0sQ0FBSCxFQUFBO0NBRUQsQ0FFRSxDQUE2QyxDQUYvQyxHQUFBLEVBRWdELGtCQUZ4QyxlQUFBO0NBSUYsRUFBRCxDQUFILEtBQVMsSUFBVDtDQUNTLENBQUgsRUFBQSxXQUFBO0NBRE4sTUFBUztDQUpYLElBRStDO0lBZmpEO0NBQUEifQ==</span>
                         </pre>
                     </div>
                 </div>
@@ -63,6 +62,358 @@
         <script src="../../../../assets/libs.js"></script>
         <script src="../../../../assets/behavior.js"></script>
     </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WidgetTV - tv.js</title>
+    <link rel="stylesheet" href="../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../" />
+    <meta name="groc-document-path" content="_static\modules\widgets\tv\tv.js" />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\widgets\tv\tv.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="widgettv">
+                            <a href="#widgettv" class="anchor"></a>WidgetTV</h1>
+                        <p>This is main code behind the TV widget module. The module
+                            will make use of the global LogHandler class.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>WidgetTV; WidgetTV = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self =
+                        <span class="hljs-keyword">void</span>
+                        <span class="hljs-number">0</span>;
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">WidgetTV</span>
+                            <span class="hljs-params">(el)</span>{</span>
+                        self =
+                        <span class="hljs-keyword">this</span>; self.$el = el; self.$options = $(
+                        <span class="hljs-string">'.options a'</span>, el);
+                        <span class="hljs-keyword">this</span>.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'Widget module constructed.'</span>,
+                        <span class="hljs-keyword">this</span>); self.binds(); self.initPlayers(); }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments doc-section">
+                    <div class="wrapper">
+                        <h2 id="this-log">
+                            <a href="#this-log" class="anchor"></a>this.log</h2>
+                        <p>Add local instance of logging to this module. Can be called
+                            with:
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">WidgetTV.prototype.log =
+                        <span class="hljs-keyword">new</span>LogHandler(
+                        <span class="hljs-string">'WidgetTV'</span>);
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-binds-">
+                            <a href="#this-binds-" class="anchor"></a>this.binds()</h2>
+                        <p>Binds click events to thumbnail icons.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">WidgetTV.prototype.binds =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">this</span>.$options.bind(
+                        <span class="hljs-string">'click'</span>, self.changePrime);
+                        <span class="hljs-keyword">return</span>PubSub.subscribe(
+                        <span class="hljs-string">'resize'</span>, self.resizeEvent); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-changeprime-">
+                            <a href="#this-changeprime-" class="anchor"></a>this.changePrime()</h2>
+                        <p>Fired on click or touch event of thumbnail selector. Changes
+                            prime video based on data set embedurl.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">WidgetTV.prototype.changePrime =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">var</span>$embed, $param, $placeholder, type, url, value;
+                        e.preventDefault(); url = $(
+                        <span class="hljs-keyword">this</span>).data(
+                        <span class="hljs-string">'embedurl'</span>); $placeholder = $(
+                        <span class="hljs-string">'.prime'</span>, $(
+                        <span class="hljs-keyword">this</span>).closest(
+                        <span class="hljs-string">'.widget-tv'</span>)); $embed = $(
+                        <span class="hljs-string">'.embed'</span>, $placeholder); type = $embed.prop(
+                        <span class="hljs-string">'tagName'</span>).toLowerCase();
+                        <span class="hljs-keyword">if</span>(type ===
+                        <span class="hljs-string">'iframe'</span>) { $embed.attr(
+                        <span class="hljs-string">'src'</span>, url); self.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'Prime video changed.'</span>, $embed); }
+                        <span class="hljs-keyword">if</span>(type ===
+                        <span class="hljs-string">'object'</span>) { $param = $(
+                        <span class="hljs-string">'param[name="flashVars"]'</span>, $embed); value = window.query2object($param.attr(
+                        <span class="hljs-string">'value'</span>)); value.mediaId = url; value =
+                        <span class="hljs-built_in">decodeURIComponent</span>($.param(value)); $param.attr(
+                        <span class="hljs-string">'value'</span>, value); $embed.detach(); $placeholder.append($embed);
+                        <span class="hljs-keyword">return</span>self.limeLightInit($embed.attr(
+                        <span class="hljs-string">'id'</span>)); }
+                        <span class="hljs-keyword">else</span>{
+                        <span class="hljs-keyword">return</span>self.log.add(
+                        <span class="hljs-string">'error'</span>,
+                        <span class="hljs-string">'Embed element type not accounted for.'</span>, $embed);
+                        } };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-initplayers-">
+                            <a href="#this-initplayers-" class="anchor"></a>this.initPlayers()</h2>
+                        <p>Called by the constructor to set the initial view for mobile
+                            and tablet devices and other such requirements for
+                            player.
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">WidgetTV.prototype.initPlayers =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>$players; $players = $(
+                        <span class="hljs-string">'object'</span>, self.$el);
+                        <span class="hljs-keyword">return</span>$players.each(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self.setDimensions($(
+                        <span class="hljs-keyword">this</span>));
+                        <span class="hljs-keyword">return</span>self.limeLightInit($(
+                        <span class="hljs-keyword">this</span>).attr(
+                        <span class="hljs-string">'id'</span>)); }); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-setdimensions-">
+                            <a href="#this-setdimensions-" class="anchor"></a>this.setDimensions()</h2>
+                        <p>Sets the width and height of the object placeholder for
+                            the limelight plugin to resolve.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">WidgetTV.prototype.setDimensions =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">($obj)</span>{</span>
+                        <span class="hljs-keyword">var</span>$parent, newHeight, newWidth; $parent = $obj.parent(
+                        <span class="hljs-string">'.prime'</span>); newWidth = $parent.width(); newHeight
+                        = $parent.innerHeight();
+                        <span class="hljs-keyword">return</span>$obj.attr(
+                        <span class="hljs-string">'width'</span>, newWidth).attr(
+                        <span class="hljs-string">'height'</span>, newHeight).css(
+                        <span class="hljs-string">'width'</span>, newWidth).css(
+                        <span class="hljs-string">'height'</span>, newHeight); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-limelightinit-">
+                            <a href="#this-limelightinit-" class="anchor"></a>this.limeLightInit()</h2>
+                        <p>Initialized the embed plugin for mobile embedding.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">WidgetTV.prototype.limeLightInit =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(id)</span>{</span>
+                        <span class="hljs-keyword">if</span>(id ==
+                        <span class="hljs-literal">null</span>) {
+                        <span class="hljs-keyword">return</span>
+                        <span class="hljs-literal">false</span>; } self.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'Limelight player initialized.'</span>, id);
+                        <span class="hljs-keyword">return</span>LimelightPlayerUtil.initEmbed(id); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-resizeevent">
+                            <a href="#this-resizeevent" class="anchor"></a>this.resizeEvent</h2>
+                        <p>On viewport resize event we check if the limelight wrapper
+                            is active for each we resize to the new appropriate
+                            size.
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">WidgetTV.prototype.resizeEvent =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">var</span>$footprint; $footprint = $(
+                        <span class="hljs-string">'.limelight-player-footprint'</span>, self.$el);
+                        <span class="hljs-keyword">if</span>($footprint.length &lt;
+                        <span class="hljs-number">1</span>) {
+                        <span class="hljs-keyword">return</span>
+                        <span class="hljs-literal">false</span>; } self.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'Resize event: modifying limelight footprint.'</span>,
+                        $footprint);
+                        <span class="hljs-keyword">return</span>$footprint.each(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>self.setDimensions($(
+                        <span class="hljs-keyword">this</span>)); }); };
+                        <span class="hljs-keyword">return</span>WidgetTV; })();
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="module-definition">
+                            <a href="#module-definition" class="anchor"></a>Module definition</h2>
+                        <p>Called by require.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">define(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>WidgetTV; }); }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHYuanMiLCJzb3VyY2VzIjpbInR2LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLEVBQUE7O0NBQUEsQ0FNTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxFQUFPLENBQVAsRUFBQTs7Q0FFQTs7O0NBRkE7O0NBS2EsQ0FBQSxDQUFBLENBQUEsY0FBQztDQUVaLEVBQU8sQ0FBUCxFQUFBO0NBQUEsQ0FBQSxDQUdBLENBQUksRUFBSjtDQUhBLENBSWdDLENBQWhCLENBQVosRUFBSixFQUFBLElBQWdCO0NBSmhCLENBTXlCLENBQXJCLENBQUgsRUFBRCxRQUFBLGNBQUE7Q0FOQSxHQVNJLENBQUosQ0FBQTtDQVRBLEdBWUksRUFBSixLQUFBO0NBbkJGLElBS2E7O0NBZ0JiOzs7Ozs7Q0FyQkE7O0NBQUEsRUEyQkEsQ0FBUyxNQUFBOztDQUVUOzs7O0NBN0JBOztDQUFBLEVBaUNPLEVBQVAsSUFBTztDQUNMLENBQXlCLEVBQXhCLEVBQUQsQ0FBQSxDQUFVLEdBQVY7Q0FFTyxDQUFvQixFQUFJLEVBQXpCLEVBQU4sQ0FBQSxFQUFBLEVBQUE7Q0FwQ0YsSUFpQ087O0NBS1A7Ozs7O0NBdENBOztDQUFBLEVBMkNhLE1BQUMsRUFBZDtDQUNFLFNBQUEsb0NBQUE7Q0FBQSxLQUFBLFFBQUE7Q0FBQSxFQUdBLENBQU0sRUFBTixJQUFNO0NBSE4sQ0FJMkIsQ0FBWixDQUFZLEVBQTNCLENBQTJCLENBQVosSUFBZjtDQUpBLENBS3FCLENBQVosR0FBVCxFQUFTLElBQUE7Q0FMVCxFQVFPLENBQVAsRUFBQSxHQUFPLEVBQUE7Q0FHUCxHQUFHLENBQVEsQ0FBWCxFQUFBO0NBQ0UsQ0FBbUIsQ0FBbkIsQ0FBQSxDQUFBLENBQU0sRUFBTjtDQUFBLENBQzZCLENBQXJCLENBQUosRUFBSixFQUFBLE1BQUEsUUFBQTtRQWJGO0NBY0EsR0FBRyxDQUFRLENBQVgsRUFBQTtDQUVFLENBQXNDLENBQTdCLEdBQVQsRUFBQSxpQkFBUztDQUFULEVBR1EsQ0FBb0IsQ0FBNUIsQ0FBYyxDQUFjLENBQTVCLElBQVE7Q0FIUixFQUlnQixFQUFYLEVBQUwsQ0FBQTtDQUpBLEVBS1EsRUFBUixHQUFBLFVBQVE7Q0FMUixDQU1xQixFQUFyQixDQUFBLENBQU0sQ0FBTixDQUFBO0NBTkEsS0FTTSxFQUFOO0NBVEEsS0FVQSxFQUFBLElBQVk7Q0FHUCxHQUFELEVBQXFCLE9BQXpCLEVBQUE7TUFmRixFQUFBO0NBaUJPLENBQWlCLENBQWQsQ0FBSixFQUFKLENBQUEsUUFBQSx3QkFBQTtRQWhDUztDQTNDYixJQTJDYTs7Q0FrQ2I7Ozs7O0NBN0VBOztDQUFBLEVBa0ZhLE1BQUEsRUFBYjtDQUNFLE9BQUEsRUFBQTtDQUFBLENBQXVCLENBQVosQ0FBZ0IsRUFBM0IsRUFBQTtDQUVTLEVBQUssQ0FBZCxJQUFRLENBQU0sSUFBZDtDQUNFLEdBQUksSUFBSixLQUFBO0NBQ0ssR0FBRCxTQUFKLEVBQUE7Q0FGRixNQUFjO0NBckZoQixJQWtGYTs7Q0FPYjs7Ozs7Q0F6RkE7O0NBQUEsRUE4RmUsQ0FBQSxLQUFDLElBQWhCO0NBQ0UsU0FBQSxrQkFBQTtDQUFBLEVBQVUsQ0FBSSxFQUFkLENBQUEsQ0FBVTtDQUFWLEVBQ1csRUFBQSxDQUFYLENBQWtCLENBQWxCO0NBREEsRUFFWSxHQUFaLENBQW1CLEVBQW5CLEVBQVk7Q0FDUCxDQUFjLENBQW5CLENBQUksR0FBSixDQUFBLENBQUEsSUFBQTtDQWxHRixJQThGZTs7Q0FTZjs7OztDQXZHQTs7Q0FBQSxDQTJHZSxDQUFBLE1BQUMsSUFBaEI7Q0FDRSxHQUFvQixFQUFwQixJQUFBO0NBQUEsSUFBQSxVQUFPO1FBQVA7Q0FBQSxDQUU2QixDQUFyQixDQUFKLEVBQUosUUFBQSxpQkFBQTtDQUdvQixDQUFwQixPQUFBLElBQUEsTUFBbUI7Q0FqSHJCLElBMkdlOztDQVFmOzs7OztDQW5IQTs7Q0FBQSxFQXdIYSxNQUFDLEVBQWQ7Q0FDRSxTQUFBO0NBQUEsQ0FBOEMsQ0FBakMsQ0FBcUMsRUFBbEQsSUFBQSxtQkFBYTtDQUdiLEVBQW9DLENBQXBCLEVBQWhCLElBQTBCO0NBQTFCLElBQUEsVUFBTztRQUhQO0NBQUEsQ0FNNkIsQ0FBckIsQ0FBSixFQUFKLElBQUEsSUFBQSxnQ0FBQTtDQUdXLEVBQUssQ0FBaEIsS0FBZ0IsQ0FBTixHQUFWO0NBQ08sR0FBRCxTQUFKLEVBQUE7Q0FERixNQUFnQjtDQWxJbEIsSUF3SGE7O0NBeEhiOztDQVBGOztDQTRJQTs7OztDQTVJQTs7Q0FBQSxDQWdKQSxDQUFPLEdBQVAsR0FBTztDQUNMLE9BQUEsR0FBTztDQURULEVBQU87Q0FoSlAifQ==</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../toc.js"></script>
+    <script src="../../../../assets/libs.js"></script>
+    <script src="../../../../assets/behavior.js"></script>
+</body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TV Widget init - tv.init.js</title>
+    <link rel="stylesheet" href="../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../" />
+    <meta name="groc-document-path" content="_static\modules\widgets\tv\tv.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\widgets\tv\tv.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="tv-widget-init">
+                            <a href="#tv-widget-init" class="anchor"></a>TV Widget init</h1>
+                        <p>The init for this module will check if an instance of the
+                            module exists on the page. If so, it will load the
+                            module and any dependencies before initializing for
+                            each instance of the module.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>$el; $el = $(
+                        <span class="hljs-string">'.widget-tv'</span>);
+                        <span class="hljs-keyword">if</span>($el.length &gt;
+                        <span class="hljs-number">0</span>) {
+                        <span class="hljs-built_in">require</span>([
+                        <span class="hljs-string">'/modules/widgets/tv/tv.js'</span>,
+                        <span class="hljs-string">'/modules/widgets/tv/embed-1.5.4/embed.js'</span>],
+                        <span
+                        class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(tv)</span>{</span>
+                            <span class="hljs-keyword">return</span>$el.each(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">return</span>
+                            <span class="hljs-keyword">new</span>tv(
+                            <span class="hljs-keyword">this</span>); }); }); } }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHYuaW5pdC5qcyIsInNvdXJjZXMiOlsidHYuaW5pdC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLEVBQUEsR0FBQTs7Q0FBQSxDQVFBLENBQUEsU0FBTTs7Q0FHTixDQUFBLENBQU0sQ0FBSCxFQUFBO0NBRUQsQ0FFRSxDQUE2QyxDQUYvQyxHQUFBLEVBRWdELGtCQUZ4QyxlQUFBO0NBSUYsRUFBRCxDQUFILEtBQVMsSUFBVDtDQUNTLENBQUgsRUFBQSxXQUFBO0NBRE4sTUFBUztDQUpYLElBRStDO0lBZmpEO0NBQUEifQ==</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../toc.js"></script>
+    <script src="../../../../assets/libs.js"></script>
+    <script src="../../../../assets/behavior.js"></script>
+</body>
 </html>,
 <!doctype html>
 <html lang="en">

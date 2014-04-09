@@ -81,7 +81,8 @@
                             </h2>
                             <p>Scroll event fired immediately. Scroll is usually heavily
                                 dependant upon timing so we have no delay in this
-                                event.</p>
+                                event.
+                            </p>
                         </div>
                     </div>
                     <div class="code">
@@ -135,4 +136,140 @@
         <script src="../../../../assets/libs.js"></script>
         <script src="../../../../assets/behavior.js"></script>
     </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PublishScroll - publishScroll.init.js</title>
+    <link rel="stylesheet" href="../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../" />
+    <meta name="groc-document-path" content="_static\ui\base\handlers\publishScroll.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\ui\base\handlers\publishScroll.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="publishscroll">
+                            <a href="#publishscroll" class="anchor"></a>PublishScroll</h1>
+                        <p>Allows for modules or classes to subscribe for a window
+                            scroll event to be fired.</p>
+                        <p>
+                            <strong>Note:</strong>We are also listening for
+                            <code>touchmove</code>. This is related to iOS and how it
+                            handles scroll. In iOS scroll events fire on the release
+                            of the users finger from the screen and not during
+                            physical scroll.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>PublishScroll; PublishScroll = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self =
+                        <span class="hljs-keyword">void</span>
+                        <span class="hljs-number">0</span>;
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">PublishScroll</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self =
+                        <span class="hljs-keyword">this</span>; self.fireIt =
+                        <span class="hljs-literal">false</span>; $(window).on(
+                        <span class="hljs-string">'scroll'</span>, self.shouldFire); $(document).on(
+                        <span class="hljs-string">'touchmove'</span>, self.shouldFire); $(document).on(
+                        <span class="hljs-string">'tochend'</span>, self.shouldFire); $(document).on(
+                        <span class="hljs-string">'gesturechange'</span>, self.shouldFire); self.periodicCheck();
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-shouldfire">
+                            <a href="#this-shouldfire" class="anchor"></a>
+                            <code>this.shouldFire</code>
+                        </h2>
+                        <p>Scroll event fired immediately. Scroll is usually heavily
+                            dependant upon timing so we have no delay in this event.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">PublishScroll.prototype.shouldFire =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        $(document).trigger(
+                        <span class="hljs-string">'contScroll'</span>);
+                        <span class="hljs-keyword">return</span>self.fireIt =
+                        <span class="hljs-literal">true</span>; };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-periodiccheck">
+                            <a href="#this-periodiccheck" class="anchor"></a>
+                            <code>this.periodicCheck</code>
+                        </h2>
+                        <p>Will check every second to see if the event should be published.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">PublishScroll.prototype.periodicCheck =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>setInterval(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">if</span>(self.fireIt) { PubSub.publish(
+                        <span class="hljs-string">'GlobalScroll'</span>);
+                        <span class="hljs-keyword">return</span>self.fireIt =
+                        <span class="hljs-literal">false</span>; } },
+                        <span class="hljs-number">3000</span>); };
+                        <span class="hljs-keyword">return</span>PublishScroll; })(); window.events = window.events
+                        || {}; events.scroll =
+                        <span class="hljs-keyword">new</span>PublishScroll; }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGlzaFNjcm9sbC5pbml0LmpzIiwic291cmNlcyI6WyJwdWJsaXNoU2Nyb2xsLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLE9BQUE7O0NBQUEsQ0FVTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxFQUFPLENBQVAsRUFBQTs7Q0FFQTs7O0NBRkE7O0NBS2EsRUFBQSxDQUFBLG1CQUFBO0NBRVgsRUFBTyxDQUFQLEVBQUE7Q0FBQSxFQUVjLENBQVYsQ0FGSixDQUVBO0NBRkEsQ0FLQSxFQUEyQixFQUEzQixFQUFBLEVBQUE7Q0FMQSxDQU1BLEVBQWdDLEVBQWhDLEVBQUEsRUFBQSxDQUFBO0NBTkEsQ0FPQSxFQUE4QixFQUE5QixFQUFBLENBQUEsQ0FBQTtDQVBBLENBUUEsRUFBb0MsRUFBcEMsRUFBQSxFQUFBLEtBQUE7Q0FSQSxHQVdJLEVBQUosT0FBQTtDQWxCRixJQUthOztDQWViOzs7OztDQXBCQTs7Q0FBQSxFQXlCWSxNQUFDLENBQWI7Q0FHRSxLQUFBLENBQUEsQ0FBQSxJQUFBO0NBSUssRUFBUyxDQUFWLEVBQUosT0FBQTtDQWhDRixJQXlCWTs7Q0FTWjs7Ozs7Q0FsQ0E7O0NBQUEsRUF1Q2UsTUFBQSxJQUFmO0NBQ2MsRUFBQSxNQUFBLEVBQVosRUFBQTtDQUNFLEdBQUcsRUFBSCxFQUFBO0NBQ0UsS0FBTSxDQUFOLEdBQUEsSUFBQTtDQUNLLEVBQVMsQ0FBVixFQUFKLFdBQUE7VUFIUTtDQUFaLENBSUUsRUFKRixHQUFZO0NBeENkLElBdUNlOztDQXZDZjs7Q0FYRjs7Q0FBQSxDQTBEQSxDQUFnQixDQUFpQixFQUEzQjs7QUFDVSxDQTNEaEIsQ0EyREEsQ0FBZ0IsR0FBVixPQTNETjtDQUFBIn0=</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../toc.js"></script>
+    <script src="../../../../assets/libs.js"></script>
+    <script src="../../../../assets/behavior.js"></script>
+</body>
 </html>

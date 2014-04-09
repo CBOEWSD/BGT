@@ -129,4 +129,134 @@
         <script src="../../../../assets/libs.js"></script>
         <script src="../../../../assets/behavior.js"></script>
     </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PublishResize - publishResize.init.js</title>
+    <link rel="stylesheet" href="../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../" />
+    <meta name="groc-document-path" content="_static\ui\base\handlers\publishResize.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\ui\base\handlers\publishResize.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="publishresize">
+                            <a href="#publishresize" class="anchor"></a>PublishResize</h1>
+                        <p>Allows for modules or classes to subscribe for a window
+                            resize event to be fired. This does a number of things.
+                            Primarily, it allows for periodic checking and firing
+                            as opposed to continuous firing. The event that subscriberrs
+                            are listening for will only happen once a second and
+                            prevent a performance issue for repeated adustments.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>PublishResize; PublishResize = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self =
+                        <span class="hljs-keyword">void</span>
+                        <span class="hljs-number">0</span>;
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">PublishResize</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self =
+                        <span class="hljs-keyword">this</span>; self.fireIt =
+                        <span class="hljs-literal">false</span>; $(window).bind(
+                        <span class="hljs-string">'resize'</span>, self.shouldFire); self.periodicCheck();
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-shouldfire">
+                            <a href="#this-shouldfire" class="anchor"></a>
+                            <code>this.shouldFire</code>
+                        </h2>
+                        <p>Simply flags the fireIt variable
+                            <code>true</code>
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">PublishResize.prototype.shouldFire =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">return</span>self.fireIt =
+                        <span class="hljs-literal">true</span>; };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-periodiccheck">
+                            <a href="#this-periodiccheck" class="anchor"></a>
+                            <code>this.periodicCheck</code>
+                        </h2>
+                        <p>Will check every second to see if the event should be published.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">PublishResize.prototype.periodicCheck =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>setInterval(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">if</span>(self.fireIt) { PubSub.publish(
+                        <span class="hljs-string">'resize'</span>);
+                        <span class="hljs-keyword">return</span>self.fireIt =
+                        <span class="hljs-literal">false</span>; } },
+                        <span class="hljs-number">1000</span>); };
+                        <span class="hljs-keyword">return</span>PublishResize; })(); window.events = window.events
+                        || {}; events.resize =
+                        <span class="hljs-keyword">new</span>PublishResize; }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGlzaFJlc2l6ZS5pbml0LmpzIiwic291cmNlcyI6WyJwdWJsaXNoUmVzaXplLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7O0NBQUE7Q0FBQTtDQUFBO0NBQUEsS0FBQSxPQUFBOztDQUFBLENBV007Q0FDSixHQUFBLElBQUE7O0NBQUEsRUFBTyxDQUFQLEVBQUE7O0NBRUE7OztDQUZBOztDQUthLEVBQUEsQ0FBQSxtQkFBQTtDQUVYLEVBQU8sQ0FBUCxFQUFBO0NBQUEsRUFFYyxDQUFWLENBRkosQ0FFQTtDQUZBLENBSzJCLEVBQTNCLEVBQUEsRUFBQSxFQUFBO0NBTEEsR0FRSSxFQUFKLE9BQUE7Q0FmRixJQUthOztDQVliOzs7O0NBakJBOztDQUFBLEVBcUJZLE1BQUMsQ0FBYjtDQUNPLEVBQVMsQ0FBVixFQUFKLE9BQUE7Q0F0QkYsSUFxQlk7O0NBR1o7Ozs7O0NBeEJBOztDQUFBLEVBNkJlLE1BQUEsSUFBZjtDQUNjLEVBQUEsTUFBQSxFQUFaLEVBQUE7Q0FDRSxHQUFHLEVBQUgsRUFBQTtDQUNFLEtBQU0sQ0FBTixDQUFBLEVBQUE7Q0FDSyxFQUFTLENBQVYsRUFBSixXQUFBO1VBSFE7Q0FBWixDQUlFLEVBSkYsR0FBWTtDQTlCZCxJQTZCZTs7Q0E3QmY7O0NBWkY7O0NBQUEsQ0FpREEsQ0FBZ0IsQ0FBaUIsRUFBM0I7O0FBQ1UsQ0FsRGhCLENBa0RBLENBQWdCLEdBQVYsT0FsRE47Q0FBQSJ9</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../toc.js"></script>
+    <script src="../../../../assets/libs.js"></script>
+    <script src="../../../../assets/behavior.js"></script>
+</body>
 </html>

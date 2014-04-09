@@ -149,6 +149,469 @@
                         <h2 id="this-log">
                             <a href="#this-log" class="anchor"></a>this.log</h2>
                         <p>Add local instance of logging to this module. Can be called
+                            with:
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterModel.prototype.log =
+                        <span class="hljs-keyword">new</span>LogHandler(
+                        <span class="hljs-string">'Twitter'</span>);
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-start">
+                            <a href="#this-start" class="anchor"></a>this.start</h2>
+                        <p>Called to initialize the web socket and start tracking
+                            events.
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterModel.prototype.start =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self.socket = self.connect(); self.socket.on(
+                        <span class="hljs-string">'error'</span>, self.error); self.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'[Model] start method called.'</span>, self.socket); self.listen(
+                        <span class="hljs-string">'tweet'</span>);
+                        <span class="hljs-keyword">return</span>self.listen(
+                        <span class="hljs-string">'firsttweet'</span>); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-connect">
+                            <a href="#this-connect" class="anchor"></a>this.connect</h2>
+                        <p>Simply creates and returns a connection to the host socket</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterModel.prototype.connect =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>io.connect(self.host); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-error">
+                            <a href="#this-error" class="anchor"></a>this.error</h2>
+                        <p>Error handler for socket.io events</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterModel.prototype.error =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(err)</span>{</span>
+                        self.log.add(
+                        <span class="hljs-string">'error'</span>,
+                        <span class="hljs-string">'[Model] socket error.'</span>, err); PubSub.publish(
+                        <span class="hljs-string">'tweet/error'</span>, err);
+                        <span class="hljs-keyword">return</span>err; };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-listen">
+                            <a href="#this-listen" class="anchor"></a>this.listen</h2>
+                        <p>Takes an event name and listens for that event After which
+                            <code>this.newTweet</code>is called.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterModel.prototype.listen =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(theEvent)</span>{</span>
+                        self.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'[Model] listener set for socket event.'</span>, theEvent);
+                        <span class="hljs-keyword">return</span>self.socket.on(theEvent, self.newTweet); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-newtweet">
+                            <a href="#this-newtweet" class="anchor"></a>this.newTweet</h2>
+                        <p>Simply publishes the event and data to the rest of our
+                            application. This cna be used by any module/analytics
+                            throughout.
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterModel.prototype.newTweet =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(data)</span>{</span>
+                        self.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'[Model] newTweet published.'</span>, data);
+                        <span class="hljs-keyword">return</span>PubSub.publish(
+                        <span class="hljs-string">'tweet/new'</span>, data); };
+                        <span class="hljs-keyword">return</span>TwitterModel; })(); define(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>TwitterModel; }); }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHdpdHRlci5tb2RlbC5qcyIsInNvdXJjZXMiOlsidHdpdHRlci5tb2RlbC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLE1BQUE7O0NBQUEsQ0FRTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxDQUFBLENBQU8sQ0FBUDs7Q0FFQTs7O0NBRkE7O0NBS2EsQ0FBSSxDQUFKLENBQUEsa0JBQUM7Q0FFWixDQUF5QixDQUFyQixDQUFILEVBQUQsUUFBQSxRQUFBO0NBQUEsRUFHTyxDQUFQLEVBQUE7Q0FIQSxFQU1hLENBQVQsRUFBSixFQUFvQyxDQUF2QjtDQU5iLEdBU0ksQ0FBSixDQUFBO0NBaEJGLElBS2E7O0NBYWI7Ozs7OztDQWxCQTs7Q0FBQSxFQXdCQSxDQUFTLEtBQUEsQ0FBQTs7Q0FFVDs7OztDQTFCQTs7Q0FBQSxFQThCTyxFQUFQLElBQU87Q0FFTCxFQUFjLENBQVYsRUFBSixDQUFjO0NBQWQsQ0FFQSxFQUFJLENBQUosQ0FBQSxDQUFBO0NBRkEsQ0FLNkIsQ0FBckIsQ0FBSixFQUFKLFFBQUEsZ0JBQUE7Q0FMQSxHQVFJLEVBQUosQ0FBQTtDQUNLLEdBQUQsRUFBSixNQUFBLENBQUE7Q0F6Q0YsSUE4Qk87O0NBYVA7Ozs7Q0EzQ0E7O0NBQUEsRUErQ1MsSUFBVCxFQUFTO0NBQ1AsQ0FBUyxFQUFhLEdBQWYsTUFBQTtDQWhEVCxJQStDUzs7Q0FHVDs7OztDQWxEQTs7Q0FBQSxFQXNETyxFQUFQLElBQVE7Q0FDTixDQUFzQixDQUFkLENBQUosRUFBSixDQUFBLGdCQUFBO0NBQUEsQ0FDOEIsQ0FBOUIsR0FBQSxDQUFBLE1BQUE7Q0FDQSxFQUFBLFVBQU87Q0F6RFQsSUFzRE87O0NBS1A7Ozs7O0NBM0RBOztDQUFBLEVBZ0VRLEdBQVIsRUFBUSxDQUFDO0NBRVAsQ0FBNkIsQ0FBckIsQ0FBSixFQUFKLEVBQUEsTUFBQSwwQkFBQTtDQUVLLENBQUwsRUFBSSxFQUFPLEVBQVgsS0FBQTtDQXBFRixJQWdFUTs7Q0FNUjs7Ozs7Q0F0RUE7O0NBQUEsRUEyRVUsQ0FBQSxJQUFWLENBQVc7Q0FFVCxDQUE2QixDQUFyQixDQUFKLEVBQUosUUFBQSxlQUFBO0NBR08sQ0FBcUIsRUFBNUIsRUFBTSxDQUFOLElBQUEsRUFBQTtDQWhGRixJQTJFVTs7Q0EzRVY7O0NBVEY7O0NBQUEsQ0E2RkEsQ0FBTyxHQUFQLEdBQU87Q0FDTCxVQUFPLENBQVA7Q0FERixFQUFPO0NBN0ZQIn0=</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../toc.js"></script>
+    <script src="../../../assets/libs.js"></script>
+    <script src="../../../assets/behavior.js"></script>
+</body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter View - twitter.view.js</title>
+    <link rel="stylesheet" href="../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../" />
+    <meta name="groc-document-path" content="_static\modules\twitter\twitter.view.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\twitter\twitter.view.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="twitter-view">
+                            <a href="#twitter-view" class="anchor"></a>Twitter View</h1>
+                        <p>This is our view layer tied with the events coming frm
+                            <code>twitter.model.coffee</code>and rendering the response
+                            data to the page.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>TwitterView; TwitterView = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self = {};
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">TwitterView</span>
+                            <span class="hljs-params">(el, tpl)</span>{</span>
+                        <span class="hljs-keyword">this</span>.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'[View] Constructed.'</span>,
+                        <span class="hljs-keyword">this</span>); self =
+                        <span class="hljs-keyword">this</span>; self.$el = $(el); self.view = window[
+                        <span class="hljs-string">"JST"</span>][
+                        <span class="hljs-string">"modules/twitter/tweet.share.handlebars"</span>]; PubSub.subscribe(
+                        <span class="hljs-string">'tweet/new'</span>,
+                        <span class="hljs-keyword">this</span>.handleTweet); PubSub.subscribe(
+                        <span class="hljs-string">'tweet/error'</span>,
+                        <span class="hljs-keyword">this</span>.handleError); }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments doc-section">
+                    <div class="wrapper">
+                        <h2 id="this-log">
+                            <a href="#this-log" class="anchor"></a>this.log</h2>
+                        <p>Add local instance of logging to this module. Can be called
+                            with:
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterView.prototype.log =
+                        <span class="hljs-keyword">new</span>LogHandler(
+                        <span class="hljs-string">'Twitter'</span>);
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-handletweet">
+                            <a href="#this-handletweet" class="anchor"></a>this.handleTweet</h2>
+                        <p>Called on the event of a new tweet being published</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterView.prototype.handleTweet =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e, data)</span>{</span>
+                        self.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'[View] handleTweet called.'</span>, data);
+                        <span class="hljs-keyword">if</span>(
+                        <span class="hljs-keyword">typeof</span>data.tweet ===
+                        <span class="hljs-string">'object'</span>&amp;&amp;
+                        <span class="hljs-keyword">typeof</span>data.tweet.friends ===
+                        <span class="hljs-string">'undefined'</span>) {
+                        <span class="hljs-keyword">if</span>(
+                        <span class="hljs-keyword">typeof</span>data.tweet[
+                        <span class="hljs-number">0</span>] !==
+                        <span class="hljs-string">'undefined'</span>) {
+                        <span class="hljs-keyword">return</span>self.renderTweet(data.tweet[
+                        <span class="hljs-number">0</span>]); }
+                        <span class="hljs-keyword">else</span>{
+                        <span class="hljs-keyword">return</span>self.renderTweet(data.tweet); } }
+                        <span class="hljs-keyword">else</span>{
+                        <span class="hljs-keyword">return</span>self.log.add(
+                        <span class="hljs-string">'warning'</span>,
+                        <span class="hljs-string">'[View] data appears to be undefined or not an object.'</span>,
+                        data); } };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-handleerror">
+                            <a href="#this-handleerror" class="anchor"></a>this.handleError</h2>
+                        <p>Handle error pubsub event from Twitter model</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterView.prototype.handleError =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e, err)</span>{</span>
+                        <span class="hljs-keyword">return</span>self.$el.html(
+                        <span class="hljs-string">'There was an error connecting with the server.'</span>);
+                        };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-rendertweet">
+                            <a href="#this-rendertweet" class="anchor"></a>this.renderTweet</h2>
+                        <p>Using our handlebars template we render the new tweet to
+                            our module.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">TwitterView.prototype.renderTweet =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(tweet)</span>{</span>
+                        self.$el.html(self.view(tweet));
+                        <span class="hljs-keyword">return</span>
+                        <span class="hljs-keyword">this</span>.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'[View] View rendered.'</span>, self.$el.html()); };
+                        <span class="hljs-keyword">return</span>TwitterView; })(); define(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>TwitterView; }); }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHdpdHRlci52aWV3LmpzIiwic291cmNlcyI6WyJ0d2l0dGVyLnZpZXcuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLEtBQUE7O0NBQUEsQ0FPTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxDQUFBLENBQU8sQ0FBUDs7Q0FFQTs7O0NBRkE7O0NBS2EsQ0FBQSxDQUFBLENBQUEsaUJBQUM7Q0FFWixDQUF5QixDQUFyQixDQUFILEVBQUQsUUFBQSxPQUFBO0NBQUEsRUFHTyxDQUFQLEVBQUE7Q0FIQSxDQU1XLENBQVgsQ0FBSSxFQUFKO0NBTkEsRUFTWSxDQUFSLENBQWUsQ0FBbkIsa0NBQTBCO0NBVDFCLENBWThCLEVBQUMsRUFBL0IsR0FBQSxFQUFBO0NBWkEsQ0FhZ0MsRUFBQyxFQUFqQyxHQUFBLEVBQUEsRUFBQTtDQXBCRixJQUthOztDQWlCYjs7Ozs7O0NBdEJBOztDQUFBLEVBNEJBLENBQVMsS0FBQSxDQUFBOztDQUVUOzs7O0NBOUJBOztDQUFBLENBa0NpQixDQUFKLENBQUEsS0FBQyxFQUFkO0NBRUUsQ0FBNkIsQ0FBckIsQ0FBSixFQUFKLFFBQUEsY0FBQTtBQUdHLENBQUgsR0FBRyxDQUFBLENBQUgsQ0FBcUMsQ0FBbEMsR0FBSDtBQUVLLENBQUgsR0FBRyxDQUFrQixDQUFsQixFQUFILEdBQUE7Q0FDTyxHQUFELENBQXdCLE1BQTVCLE1BQUE7TUFERixJQUFBO0NBSU8sR0FBRCxDQUFKLE1BQUEsTUFBQTtVQU5KO01BQUEsRUFBQTtDQVNPLENBQW1CLENBQWhCLENBQUosS0FBSixNQUFBLHdDQUFBO1FBZFM7Q0FsQ2IsSUFrQ2E7O0NBZ0JiOzs7O0NBbERBOztDQUFBLENBc0RpQixDQUFKLE1BQUMsRUFBZDtDQUNPLEVBQUcsQ0FBSixTQUFKLG1DQUFBO0NBdkRGLElBc0RhOztDQUdiOzs7OztDQXpEQTs7Q0FBQSxFQThEYSxFQUFBLElBQUMsRUFBZDtDQUNFLEVBQVEsQ0FBSixDQUFVLENBQWQ7Q0FHQyxDQUF3QixDQUFyQixDQUFILFNBQUQsQ0FBQSxTQUFBO0NBbEVGLElBOERhOztDQTlEYjs7Q0FSRjs7Q0FBQSxDQTZFQSxDQUFPLEdBQVAsR0FBTztDQUNMLFVBQU87Q0FEVCxFQUFPO0NBN0VQIn0=</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../toc.js"></script>
+    <script src="../../../assets/libs.js"></script>
+    <script src="../../../assets/behavior.js"></script>
+</body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter API Integrations - twitter.init.js</title>
+    <link rel="stylesheet" href="../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../" />
+    <meta name="groc-document-path" content="_static\modules\twitter\twitter.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\twitter\twitter.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="twitter-api-integrations">
+                            <a href="#twitter-api-integrations" class="anchor"></a>Twitter API Integrations</h1>
+                        <p>The init for this module will check if an instance of the
+                            module exists on the page. If so, it will load the
+                            module and any dependencies before initializing for
+                            each instance of the module.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>$el; $el = $(
+                        <span class="hljs-string">'.twitter .api'</span>);
+                        <span class="hljs-keyword">if</span>($el.length &gt;
+                        <span class="hljs-number">0</span>) {
+                        <span class="hljs-built_in">require</span>([
+                        <span class="hljs-string">'jquery'</span>,
+                        <span class="hljs-string">'socketio'</span>,
+                        <span class="hljs-string">'templates'</span>,
+                        <span class="hljs-string">'/modules/twitter/twitter.model.js'</span>,
+                        <span class="hljs-string">'/modules/twitter/twitter.view.js'</span>],
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">($, io, tpl, twitterModel, twitterView)</span>{</span>
+                        <span class="hljs-keyword">var</span>me; me =
+                        <span class="hljs-keyword">new</span>twitterModel($, io);
+                        <span class="hljs-keyword">return</span>$el.each(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>limit; limit =
+                        <span class="hljs-keyword">typeof</span>$(
+                        <span class="hljs-keyword">this</span>).data(
+                        <span class="hljs-string">'limit'</span>) ===
+                        <span class="hljs-string">'number'</span>? $(
+                        <span class="hljs-keyword">this</span>).data(
+                        <span class="hljs-string">'limit'</span>) :
+                        <span class="hljs-number">3</span>;
+                        <span class="hljs-keyword">return</span>me =
+                        <span class="hljs-keyword">new</span>twitterView(
+                        <span class="hljs-keyword">this</span>); }); }); } }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHdpdHRlci5pbml0LmpzIiwic291cmNlcyI6WyJ0d2l0dGVyLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7O0NBQUE7Q0FBQTtDQUFBO0NBQUEsRUFBQSxHQUFBOztDQUFBLENBU0EsQ0FBQSxZQUFNOztDQUdOLENBQUEsQ0FBTSxDQUFILEVBQUE7Q0FFRCxDQUVFLENBSUcsQ0FOTCxHQUFBLENBQVEsQ0FNRixDQU5FLENBQUEsQ0FNSCxzQkFORyxDQUFBO0NBU04sQ0FBQSxRQUFBO0NBQUEsQ0FBQSxDQUFTLENBQUEsRUFBVCxNQUFTO0NBR0wsRUFBRCxDQUFILEtBQVMsSUFBVDtDQUNFLElBQUEsT0FBQTtBQUFXLENBQVgsRUFBVyxDQUFPLENBQWxCLENBQVcsQ0FBTyxDQUFsQjtDQUVxQixDQUFyQixDQUFTLENBQUEsT0FBQSxJQUFUO0NBSEYsTUFBUztDQVpYLElBTUs7SUFwQlA7Q0FBQSJ9</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../toc.js"></script>
+    <script src="../../../assets/libs.js"></script>
+    <script src="../../../assets/behavior.js"></script>
+</body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Model - twitter.model.js</title>
+    <link rel="stylesheet" href="../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../" />
+    <meta name="groc-document-path" content="_static\modules\twitter\twitter.model.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\twitter\twitter.model.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="twitter-model">
+                            <a href="#twitter-model" class="anchor"></a>Twitter Model</h1>
+                        <p>Constructs a stream (using web sockets) to connect with
+                            our local twitter API stream. When a new tweet is received
+                            the event
+                            <code>tweet/new</code>is published along with the data object
+                            for that tweet.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>TwitterModel; TwitterModel = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self = {};
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">TwitterModel</span>
+                            <span class="hljs-params">($, io, hbs)</span>{</span>
+                        <span class="hljs-keyword">this</span>.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'[Model] Constructed.'</span>,
+                        <span class="hljs-keyword">this</span>); self =
+                        <span class="hljs-keyword">this</span>; self.host =
+                        <span class="hljs-string">"http://"</span>+ window.location.host; self.start(); }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments doc-section">
+                    <div class="wrapper">
+                        <h2 id="this-log">
+                            <a href="#this-log" class="anchor"></a>this.log</h2>
+                        <p>Add local instance of logging to this module. Can be called
                             with:</p>
                     </div>
                 </div>

@@ -16,6 +16,9 @@
                 }
               }
             }
+          },
+          {
+            "widgets/snapshot/graphonly/wide": ""
           }
         ]
       }
@@ -31,8 +34,60 @@
                 "title": "VIX Overview",
                 "promo": {
                   "url": "#",
-                  "text": "View All"
+                  "text": "Options Chain"
                 }
+              }
+            }
+          },
+          {
+            "widgets/quote-overview/overview": {
+              "Price": {
+                "last": "16,130.40",
+                "change": "-23.99",
+                "changePCT": "-0.15",
+                "Bid": "n.a",
+                "Ask": "n.a"
+              },
+              "OHLC": {
+                "last": "16,130.40",
+                "change": "-23.99",
+                "changePCT": "-0.15"
+              },
+              "Volumes": {
+                "last": "16,130.40",
+                "change": "-23.99",
+                "changePCT": "-0.15"
+              },
+              "Ratios": {
+                "last": "16,130.40",
+                "change": "-23.99",
+                "changePCT": "-0.15"
+              }
+            }
+          },
+          {
+            "widgets/quote-overview/overview": {
+              "Price": {
+                "last": "16,130.40",
+                "change": "-23.99",
+                "changePCT": "-0.15",
+                "Bid": "n.a",
+                "Ask": "n.a"
+              },
+              "OHLC": {
+                "last": "16,130.40",
+                "change": "-23.99",
+                "changePCT": "-0.15"
+              },
+              "Volumes": {
+                "last": "16,130.40",
+                "change": "-23.99",
+                "changePCT": "-0.15"
+              },
+              "Ratios": {
+                "last": "16,130.40",
+                "change": "-23.99",
+                "changePCT": "-0.15"
               }
             }
           }

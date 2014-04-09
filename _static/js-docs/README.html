@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CBOE - README.md</title>
+        <link rel="stylesheet" href="assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="" />
+        <meta name="groc-document-path" content="README.md" />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    README.md
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="cboe">
+                                <a href="#cboe" class="anchor"></a>CBOE</h1>
+                            <h2 id="getting-started">
+                                <a href="#getting-started" class="anchor"></a>Getting Started</h2>
+                            <p>After cloning the project, browse into the root of
+                                the project in
+                                <a href="http://git-scm.com/downloads">bash</a>and follow these steps.</p>
+                            <p>This project requires three global modules be installed,
+                                <a
+                                href="http://bower.io/">Bower</a>,
+                                    <a href="https://npmjs.org/package/coffee-script">CoffeeScript</a>and
+                                    <a href="https://npmjs.org/package/grunt-cli">Grunt-CLI</a>. If you haven&#39;t installed
+                                    these before please run:</p>
+                            <pre>
+                                <code>npm install coffee
+                                    <span class="hljs-attribute">-script</span>
+                                    <span class="hljs-attribute">-g</span>
+                                    <span class="hljs-subst">&amp;&amp;</span>npm install grunt
+                                    <span class="hljs-attribute">-cli</span>
+                                    <span class="hljs-attribute">-g</span>
+                                    <span class="hljs-subst">&amp;&amp;</span>npm install bower@
+                                    <span class="hljs-number">1.2</span>
+                                    <span class="hljs-number">.6</span>
+                                    <span class="hljs-attribute">-g</span>
+                                </code>
+                            </pre>
+                            <p>Now install the dependencies for this project:</p>
+                            <pre>
+                                <code>npm
+                                    <span class="hljs-keyword">install</span>
+                                </code>
+                            </pre>
+                            <p>Since this is your first time running the project you
+                                will first need to install front-end dependencies,
+                                for which we use
+                                <a href="http://bower.io/">Bower</a>. This step will only need to be ran on
+                                initial setup and if a new front-end library is
+                                added to the project:</p>
+                            <pre>
+                                <code>bower
+                                    <span class="hljs-keyword">install</span>
+                                </code>
+                            </pre>
+                            <p>Lastly, with all dependencies installed, we can now
+                                simply start the project task manager -
+                                <a href="http://gruntjs.com/">Grunt</a>:</p>
+                            <pre>
+                                <code>grunt
+                                </code>
+                            </pre>
+                            <p>
+                                <strong>Note:</strong>The default
+                                <code>grunt</code>task will watch the project for changes
+                                and run appropriate tasks for those changes. For
+                                example, if a Coffee/JavaScript file changes our
+                                annotated documentation will be recompiled. For
+                                any details regarding specific tasks and/or modules
+                                we use please see the documentation for the
+                                <code>Gruntfile.coffee</code>at
+                                <code>http://&lt;local&gt;/docs/Gruntfile.html</code>.</p>
+                            <h2 id="project-standards">
+                                <a href="#project-standards" class="anchor"></a>Project Standards</h2>
+                            <p>This is just a brief guideline for working on this
+                                project and some useful notes.</p>
+                            <h3 id="continuous-integration">
+                                <a href="#continuous-integration" class="anchor"></a>Continuous Integration</h3>
+                            <p>We are using
+                                <a href="http://jenkins-ci.org/">Jenkins</a>as our CI for this project. At the time
+                                of writing this README the CI is configured to:</p>
+                            <ul>
+                                <li>Build the site once every hour (15 mins past the
+                                    hour) and deploy
+                                    <a href="http://dev-cboe.bgtpartners.com/">here</a>
+                                </li>
+                                <li>Poll GitHub for Pull Requests every 5 mins - when
+                                    a pull request is made the CI will build, run
+                                    our tests and report back branch integrity.</li>
+                            </ul>
+                            <h3 id="unit-tests">
+                                <a href="#unit-tests" class="anchor"></a>Unit Tests</h3>
+                            <p>
+                                <strong>This document is being written before module development
+                                    has started on the project so details of tests
+                                    are not yet defined</strong>. It is likely
+                                that our unit tests will be done with
+                                <a href="http://qunitjs.com/">Qunit</a>and managed by Grunt. The tests themselves
+                                will likely reside in the same location as their
+                                module in a sub-folder
+                                <code>tests/</code>. Again, this is not yet defined and
+                                may change, this document will be updated to reflect
+                                that change.</p>
+                            <h3 id="code-standards">
+                                <a href="#code-standards" class="anchor"></a>Code Standards</h3>
+                            <p>Code standards are defined in
+                                <code>./.editorconfig</code>and should be followed at
+                                all times - see
+                                <a href="http://editorconfig.org/">EditorConfig</a>. You can make this easier by installing
+                                IDE extensions for editor config -
+                                <a href="http://visualstudiogallery.msdn.microsoft.com/c8bccfe2-650c-4b42-bc5c-845e21f96328">Visual Studio</a>-
+                                <a href="https://github.com/sindresorhus/editorconfig-sublime">Sublime</a>- these extensions will make IDE configuration
+                                automated.</p>
+                            <h3 id="code-documentation">
+                                <a href="#code-documentation" class="anchor"></a>Code Documentation</h3>
+                            <p>We are using
+                                <a href="http://jashkenas.github.io/docco/">Docco</a>for annotated documentation. The process
+                                of building the documentation is automated by Grunt
+                                so will always be up to date locally (compiled
+                                = not in source control). The documentation can
+                                be read by simply going to
+                                <code>http://&lt;local&gt;/ui/docs/</code>and browsing
+                                using the menu at the top right.</p>
+                            <p>With that said, please make sure to document any code
+                                submitted to this project properly and using
+                                <a
+                                href="http://daringfireball.net/projects/markdown/">Markdown</a>syntax.</p>
+                            <h2 id="issue-tracker">
+                                <a href="#issue-tracker" class="anchor"></a>Issue Tracker</h2>
+                            <p>
+                                <a href="http://jira.bgtpartners.com">Jira</a>- For QA, client facing and such discussion.
+                                Repository Issue Track - For general development
+                                discussion and/or tracking.</p>
+                            <h2 id="production-vs-development">
+                                <a href="#production-vs-development" class="anchor"></a>Production vs Development</h2>
+                            <p>
+                                <strong>Production mode is purely for demonstration purpose.</strong>
+                            </p>
+                            <p>This project is setup in such a way that a production
+                                configuration can be mirrored quite simply by flagging
+                                your
+                                <code>NODE_ENV</code>variable to
+                                <code>production</code>. This can be done by entering
+                                the following in your console:</p>
+                            <pre>
+                                <code>
+                                    <span class="hljs-keyword">export</span>NODE_ENV=production
+                                </code>
+                            </pre>
+                            <p>This does a number of things:</p>
+                            <ul>
+                                <li>Our bundles are concatinated into single files</li>
+                                <li>Assets, including those not bundled, are minified</li>
+                                <li>All development logging stdout is disabled</li>
+                                <li>All debug modes are flagged disabled</li>
+                                <li>Variable
+                                    <code>window.debug</code>is set false for client-side</li>
+                                <li>Compression is enabled</li>
+                                <li>Expiry cache for client-side set</li>
+                            </ul>
+                            <p>
+                                <strong>Note:</strong>Remember to switch back to development
+                                env with
+                                <code>export NODE_ENV=development</code>.</p>
+                            <h2 id="project-contacts">
+                                <a href="#project-contacts" class="anchor"></a>Project Contacts</h2>
+                            <ul>
+                                <li>
+                                    <a href="mailto:david.j.mckeown@us.pwc.com">David McKeown</a>- Lead Developer</li>
+                                <li>
+                                    <a href="mailto:kryssie.c.knowles@pwc.us.com">Kryssie Knowles</a>- Project Manager</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="toc.js"></script>
+        <script src="assets/libs.js"></script>
+        <script src="assets/behavior.js"></script>
+    </body>
+</html>

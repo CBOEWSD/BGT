@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Publish DomChange - publishDomChange.init.js</title>
+        <link rel="stylesheet" href="../../../../assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="../../../../" />
+        <meta name="groc-document-path" content="_static\ui\base\handlers\publishDomChange.init.js"
+        />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    _static\ui\base\handlers\publishDomChange.init.js
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="publish-domchange">
+                                <a href="#publish-domchange" class="anchor"></a>Publish DomChange</h1>
+                            <p>Allows for modules or classes to subscribe for the
+                                body
+                                <code>DOMSubtreeModified</code>event to be fired periodically.
+                                This will fire when any DOM node is change in the
+                                body. A good example of this is when an image is
+                                loaded using EchoJS. This does a number of things.
+                                Primarily, it allows for periodic checking and
+                                firing as opposed to continuous firing. The event
+                                that subscriberrs are listening for will only happen
+                                once a second and prevent a performance issue for
+                                repeated adustments.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>DomChange; DomChange = (
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>self; self =
+                            <span class="hljs-keyword">void</span>
+                            <span class="hljs-number">0</span>;
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="constructor">
+                                <a href="#constructor" class="anchor"></a>Constructor</h2>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-title">DomChange</span>
+                                <span class="hljs-params">()</span>{</span>
+                            self =
+                            <span class="hljs-keyword">this</span>; self.fireIt =
+                            <span class="hljs-literal">false</span>; $(
+                            <span class="hljs-string">'body'</span>).bind(
+                            <span class="hljs-string">'DOMSubtreeModified'</span>, self.shouldFire); self.periodicCheck();
+                            }
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-shouldfire">
+                                <a href="#this-shouldfire" class="anchor"></a>
+                                <code>this.shouldFire</code>
+                            </h2>
+                            <p>Simply flags the fireIt variable
+                                <code>true</code>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">DomChange.prototype.shouldFire =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">(e)</span>{</span>
+                            <span class="hljs-keyword">return</span>self.fireIt =
+                            <span class="hljs-literal">true</span>; };
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-periodiccheck">
+                                <a href="#this-periodiccheck" class="anchor"></a>
+                                <code>this.periodicCheck</code>
+                            </h2>
+                            <p>Will check every second to see if the event should
+                                be published.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">DomChange.prototype.periodicCheck =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">return</span>setInterval(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">if</span>(self.fireIt) { PubSub.publish(
+                            <span class="hljs-string">'DomChange'</span>);
+                            <span class="hljs-keyword">return</span>self.fireIt =
+                            <span class="hljs-literal">false</span>; } },
+                            <span class="hljs-number">1000</span>); };
+                            <span class="hljs-keyword">return</span>DomChange; })(); window.events = window.events
+                            || {}; events.domChange =
+                            <span class="hljs-keyword">new</span>DomChange; }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGlzaERvbUNoYW5nZS5pbml0LmpzIiwic291cmNlcyI6WyJwdWJsaXNoRG9tQ2hhbmdlLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLEdBQUE7O0NBQUEsQ0FhTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxFQUFPLENBQVAsRUFBQTs7Q0FFQTs7O0NBRkE7O0NBS2EsRUFBQSxDQUFBLGVBQUE7Q0FFWCxFQUFPLENBQVAsRUFBQTtDQUFBLEVBRWMsQ0FBVixDQUZKLENBRUE7Q0FGQSxDQUtxQyxFQUFyQyxFQUFBLElBQUEsVUFBQTtDQUxBLEdBUUksRUFBSixPQUFBO0NBZkYsSUFLYTs7Q0FZYjs7OztDQWpCQTs7Q0FBQSxFQXFCWSxNQUFDLENBQWI7Q0FDTyxFQUFTLENBQVYsRUFBSixPQUFBO0NBdEJGLElBcUJZOztDQUdaOzs7OztDQXhCQTs7Q0FBQSxFQTZCZSxNQUFBLElBQWY7Q0FDYyxFQUFBLE1BQUEsRUFBWixFQUFBO0NBQ0UsR0FBRyxFQUFILEVBQUE7Q0FDRSxLQUFNLENBQU4sR0FBQSxDQUFBO0NBQ0ssRUFBUyxDQUFWLEVBQUosV0FBQTtVQUhRO0NBQVosQ0FJRSxFQUpGLEdBQVk7Q0E5QmQsSUE2QmU7O0NBN0JmOztDQWRGOztDQUFBLENBbURBLENBQWdCLENBQWlCLEVBQTNCOztBQUNhLENBcERuQixDQW9EQSxDQUFtQixHQUFiLEdBQU47Q0FwREEifQ==</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../../toc.js"></script>
+        <script src="../../../../assets/libs.js"></script>
+        <script src="../../../../assets/behavior.js"></script>
+    </body>
+</html>

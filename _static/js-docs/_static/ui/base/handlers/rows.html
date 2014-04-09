@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rows - rows.init.js</title>
+        <link rel="stylesheet" href="../../../../assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="../../../../" />
+        <meta name="groc-document-path" content="_static\ui\base\handlers\rows.init.js"
+        />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    _static\ui\base\handlers\rows.init.js
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="rows">
+                                <a href="#rows" class="anchor"></a>Rows</h1>
+                            <p>This method simply listens for resize events and switches
+                                the display mode briefly forcing a re-render of
+                                the page layout. This resolves scaling issues in
+                                certain browsers.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            $(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">return</span>PubSub.subscribe(
+                            <span class="hljs-string">'resize'</span>,
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">if</span>(Response.viewportW() &lt;
+                            <span class="hljs-number">768</span>|| $(
+                            <span class="hljs-string">'html'</span>).hasClass(
+                            <span class="hljs-string">'lt-ie9'</span>)) {
+                            <span class="hljs-keyword">return</span>
+                            <span class="hljs-literal">false</span>; } $(
+                            <span class="hljs-string">'.row'</span>).css(
+                            <span class="hljs-string">'display'</span>,
+                            <span class="hljs-string">'block'</span>);
+                            <span class="hljs-keyword">return</span>setTimeout(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">return</span>$(
+                            <span class="hljs-string">'.row'</span>).css(
+                            <span class="hljs-string">'display'</span>,
+                            <span class="hljs-string">''</span>); },
+                            <span class="hljs-number">50</span>); }); }); }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicm93cy5pbml0LmpzIiwic291cmNlcyI6WyJyb3dzLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxDQU9BLENBQUUsTUFBQTtDQUNPLENBQW9CLENBQUEsR0FBckIsRUFBTixDQUFBLEVBQUE7Q0FFRSxFQUEwQixDQUF2QixFQUFILEVBQVcsQ0FBUjtDQUNELElBQUEsVUFBTztRQURUO0NBQUEsQ0FHeUIsQ0FBekIsR0FBQSxDQUFBLEVBQUE7Q0FFVyxFQUFBLE1BQUEsQ0FBWCxHQUFBO0NBQ0UsQ0FBeUIsQ0FBekIsR0FBQSxHQUFBLE1BQUE7Q0FERixDQUVFLEtBRlM7Q0FQYixJQUEyQjtDQUQ3QixFQUFFO0NBUEYifQ==</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../../toc.js"></script>
+        <script src="../../../../assets/libs.js"></script>
+        <script src="../../../../assets/behavior.js"></script>
+    </body>
+</html>

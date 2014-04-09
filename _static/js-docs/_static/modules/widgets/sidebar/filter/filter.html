@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Filter widget init - filter.init.js</title>
+        <link rel="stylesheet" href="../../../../../assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="../../../../../" />
+        <meta name="groc-document-path" content="_static\modules\widgets\sidebar\filter\filter.init.js"
+        />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    _static\modules\widgets\sidebar\filter\filter.init.js
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="filter-widget-init">
+                                <a href="#filter-widget-init" class="anchor"></a>Filter widget init</h1>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>$el; $el = $(
+                            <span class="hljs-string">'.filter'</span>);
+                            <span class="hljs-keyword">if</span>($el.length &gt;
+                            <span class="hljs-number">0</span>) {
+                            <span class="hljs-built_in">require</span>([
+                            <span class="hljs-string">'/modules/widgets/sidebar/filter/filter.js'</span>],
+                            <span
+                            class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">(filter)</span>{</span>
+                                <span class="hljs-keyword">return</span>
+                                <span class="hljs-keyword">new</span>filter($el); }); } }).call(
+                                <span class="hljs-keyword">this</span>);
+                                <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsdGVyLmluaXQuanMiLCJzb3VyY2VzIjpbImZpbHRlci5pbml0LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7O0NBQUE7Q0FBQTtDQUFBO0NBQUEsRUFBQSxHQUFBOztDQUFBLENBTUEsQ0FBQSxNQUFNOztDQUdOLENBQUEsQ0FBTSxDQUFILEVBQUE7Q0FFRCxDQUF1RCxDQUFBLENBQXZELEVBQXVELENBQXZELEVBQXdELGtDQUFoRDtDQUNLLEVBQVAsQ0FBQSxFQUFBLE9BQUE7Q0FETixJQUF1RDtJQVh6RDtDQUFBIn0=</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../../../toc.js"></script>
+        <script src="../../../../../assets/libs.js"></script>
+        <script src="../../../../../assets/behavior.js"></script>
+    </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>- filter.js</title>
+    <link rel="stylesheet" href="../../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../../" />
+    <meta name="groc-document-path" content="_static\modules\widgets\sidebar\filter\filter.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\widgets\sidebar\filter\filter.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>Filter; Filter = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self = {};
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">Filter</span>
+                            <span class="hljs-params">(el)</span>{</span>
+                        self =
+                        <span class="hljs-keyword">this</span>; self.$el = $(el); self.$toplevel = $(
+                        <span
+                        class="hljs-string">'.toplevel'</span>, el);
+                            <span class="hljs-keyword">this</span>.bind();
+                            <span class="hljs-keyword">return</span>self; }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-bind">
+                            <a href="#this-bind" class="anchor"></a>this.bind</h2>
+                        <p>Bind up event listeners.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Filter.prototype.bind =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>self.$toplevel.bind(
+                        <span class="hljs-string">'click'</span>,
+                        <span class="hljs-keyword">this</span>.eventHandler); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-eventhandler">
+                            <a href="#this-eventhandler" class="anchor"></a>this.eventHandler</h2>
+                        <p>Handles our show/hide event (ex:
+                            <code>click</code>)</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Filter.prototype.eventHandler =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">var</span>$
+                        <span class="hljs-keyword">this</span>; e.preventDefault(); e.stopImmediatePropagation();
+                        $
+                        <span class="hljs-keyword">this</span>= $(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-keyword">if</span>($
+                        <span class="hljs-keyword">this</span>.parent(
+                        <span class="hljs-string">'li'</span>).hasClass(
+                        <span class="hljs-string">'expanded'</span>)) {
+                        <span class="hljs-keyword">return</span>self.hideMenu(e, $
+                        <span class="hljs-keyword">this</span>); }
+                        <span class="hljs-keyword">else</span>{
+                        <span class="hljs-keyword">return</span>self.showMenu(e, $
+                        <span class="hljs-keyword">this</span>); } };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-showmenu">
+                            <a href="#this-showmenu" class="anchor"></a>this.showMenu</h2>
+                        <p>Show sub menu on click event and add
+                            <code>expander</code>class.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Filter.prototype.showMenu =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e, el)</span>{</span>
+                        <span class="hljs-keyword">var</span>$parentLi, $
+                        <span class="hljs-keyword">this</span>; $
+                        <span class="hljs-keyword">this</span>= $(el); $parentLi = $
+                        <span class="hljs-keyword">this</span>.parent(
+                        <span class="hljs-string">'li'</span>);
+                        <span class="hljs-keyword">return</span>$parentLi.addClass(
+                        <span class="hljs-string">'expanded'</span>); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-hidemenu">
+                            <a href="#this-hidemenu" class="anchor"></a>this.hideMenu</h2>
+                        <p>Show sub menu on click event and add
+                            <code>expander</code>class.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Filter.prototype.hideMenu =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e, el)</span>{</span>
+                        <span class="hljs-keyword">var</span>$parentLi, $
+                        <span class="hljs-keyword">this</span>; $
+                        <span class="hljs-keyword">this</span>= $(el); $parentLi = $
+                        <span class="hljs-keyword">this</span>.parent(
+                        <span class="hljs-string">'li'</span>);
+                        <span class="hljs-keyword">return</span>$parentLi.removeClass(
+                        <span class="hljs-string">'expanded'</span>); };
+                        <span class="hljs-keyword">return</span>Filter; })(); define(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>Filter; }); }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsdGVyLmpzIiwic291cmNlcyI6WyJmaWx0ZXIuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0NBQUEsS0FBQTs7Q0FBQSxDQUFNO0NBQ0osR0FBQSxJQUFBOztDQUFBLENBQUEsQ0FBTyxDQUFQOztDQUVBOzs7Q0FGQTs7Q0FLYSxDQUFBLENBQUEsQ0FBQSxZQUFDO0NBRVosRUFBTyxDQUFQLEVBQUE7Q0FBQSxDQUdXLENBQVgsQ0FBSSxFQUFKO0NBSEEsQ0FJZ0MsQ0FBZixDQUFiLEVBQUosR0FBQSxFQUFpQjtDQUpqQixHQU9DLEVBQUQ7Q0FFQSxHQUFBLFNBQU87Q0FoQlQsSUFLYTs7Q0FhYjs7OztDQWxCQTs7Q0FBQSxFQXNCTSxDQUFOLEtBQU07Q0FDQyxDQUF3QixFQUF6QixHQUFKLEVBQWMsR0FBZCxDQUFBO0NBdkJGLElBc0JNOztDQUdOOzs7O0NBekJBOztDQUFBLEVBNkJjLE1BQUMsR0FBZjtDQUNFLElBQUEsS0FBQTtDQUFBLEtBQUEsUUFBQTtDQUFBLEtBQ0Esa0JBQUE7Q0FEQSxFQUdRLENBQUEsQ0FBUixDQUFBO0NBRUEsR0FBRyxDQUFLLENBQVIsRUFBRyxFQUFBO0NBQ0ksQ0FBWSxFQUFiLENBQUosR0FBQSxPQUFBO01BREYsRUFBQTtDQUdPLENBQVksRUFBYixDQUFKLEdBQUEsT0FBQTtRQVRVO0NBN0JkLElBNkJjOztDQVdkOzs7O0NBeENBOztDQUFBLENBNENjLENBQUosS0FBVixDQUFXO0NBQ1QsU0FBQSxNQUFBO0NBQUEsQ0FBUSxDQUFBLEVBQVIsQ0FBQTtDQUFBLEVBQ1ksQ0FBQSxDQUFLLENBQWpCLEdBQUE7Q0FFVSxPQUFWLENBQVMsQ0FBVCxHQUFBO0NBaERGLElBNENVOztDQU1WOzs7O0NBbERBOztDQUFBLENBc0RjLENBQUosS0FBVixDQUFXO0NBQ1QsU0FBQSxNQUFBO0NBQUEsQ0FBUSxDQUFBLEVBQVIsQ0FBQTtDQUFBLEVBQ1ksQ0FBQSxDQUFLLENBQWpCLEdBQUE7Q0FFVSxRQUFELENBQVQsQ0FBQSxFQUFBO0NBMURGLElBc0RVOztDQXREVjs7Q0FERjs7Q0FBQSxDQStEQSxDQUFPLEdBQVAsR0FBTztDQUNMLEtBQUEsS0FBTztDQURULEVBQU87Q0EvRFAifQ==</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../../toc.js"></script>
+    <script src="../../../../../assets/libs.js"></script>
+    <script src="../../../../../assets/behavior.js"></script>
+</body>
+</html>

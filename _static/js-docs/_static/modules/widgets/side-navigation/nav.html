@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Side Nav Init - nav.init.js</title>
+        <link rel="stylesheet" href="../../../../assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="../../../../" />
+        <meta name="groc-document-path" content="_static\modules\widgets\side-navigation\nav.init.js"
+        />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    _static\modules\widgets\side-navigation\nav.init.js
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="side-nav-init">
+                                <a href="#side-nav-init" class="anchor"></a>Side Nav Init</h1>
+                            <p>Calls in dependencies if side navigation module exists
+                                on page.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>$el; $el = $(
+                            <span class="hljs-string">'.side-navigation'</span>);
+                            <span class="hljs-keyword">if</span>($el.length &gt;
+                            <span class="hljs-number">0</span>) {
+                            <span class="hljs-built_in">require</span>([
+                            <span class="hljs-string">'/modules/widgets/side-navigation/nav.js'</span>],
+                            <span
+                            class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">(sideNav)</span>{</span>
+                                <span class="hljs-keyword">var</span>me;
+                                <span class="hljs-keyword">return</span>me =
+                                <span class="hljs-keyword">new</span>sideNav($el); }); } }).call(
+                                <span class="hljs-keyword">this</span>);
+                                <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmF2LmluaXQuanMiLCJzb3VyY2VzIjpbIm5hdi5pbml0LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLEVBQUEsR0FBQTs7Q0FBQSxDQU1BLENBQUEsZUFBTTs7Q0FHTixDQUFBLENBQU0sQ0FBSCxFQUFBO0NBRUQsQ0FBcUQsQ0FBQSxDQUFyRCxHQUFBLEVBQXNELGdDQUE5QztDQUVOLENBQUEsUUFBQTtDQUFpQixDQUFqQixDQUFTLENBQUEsR0FBQSxNQUFUO0NBRkYsSUFBcUQ7SUFYdkQ7Q0FBQSJ9</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../../toc.js"></script>
+        <script src="../../../../assets/libs.js"></script>
+        <script src="../../../../assets/behavior.js"></script>
+    </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Side Navigation - nav.js</title>
+    <link rel="stylesheet" href="../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../" />
+    <meta name="groc-document-path" content="_static\modules\widgets\side-navigation\nav.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\widgets\side-navigation\nav.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="side-navigation">
+                            <a href="#side-navigation" class="anchor"></a>Side Navigation</h1>
+                        <p>The sidebar navigation module will collapse on mobile down
+                            to just a expandable title. This class will control
+                            expansion / collapse of the module on mobile.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>SideNavigation; SideNavigation = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self = {};
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                        <p>Called on initializing (new)</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">SideNavigation</span>
+                            <span class="hljs-params">(el)</span>{</span>
+                        self =
+                        <span class="hljs-keyword">this</span>; self.$el = $(el); self.offset =
+                        <span class="hljs-number">50</span>; self.params = {}; self.params.fromTop = self.$el.offset().top;
+                        self.bind(); }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-bind">
+                            <a href="#this-bind" class="anchor"></a>this.bind</h2>
+                        <p>Binds the top level click/touch event to expand/collapse
+                            the menu</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">SideNavigation.prototype.bind =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self.$topAnchors = $(
+                        <span class="hljs-string">'&gt;ul&gt;li&gt;a'</span>, self.$el); self.$topAnchors.bind(
+                        <span class="hljs-string">'click touchstart'</span>, self.toggleMenu); PubSub.subscribe(
+                        <span class="hljs-string">'DomChange'</span>, self.scrollEvent);
+                        <span class="hljs-keyword">return</span>$(document).bind(
+                        <span class="hljs-string">'contScroll'</span>, self.scrollEvent); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-togglemenu">
+                            <a href="#this-togglemenu" class="anchor"></a>this.toggleMenu</h2>
+                        <p>Toggles a clicked menu open/closed</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">SideNavigation.prototype.toggleMenu =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        e.preventDefault();
+                        <span class="hljs-keyword">return</span>$(
+                        <span class="hljs-keyword">this</span>).parent(
+                        <span class="hljs-string">'li'</span>).toggleClass(
+                        <span class="hljs-string">'expanded'</span>); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-scrollevent">
+                            <a href="#this-scrollevent" class="anchor"></a>this.scrollEvent</h2>
+                        <p>Fired on document scroll. We will prevent any further action
+                            on mobile viewports as this feature is not required.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">SideNavigation.prototype.scrollEvent =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">if</span>(Response.viewportW() &lt;
+                        <span class="hljs-number">768</span>) {
+                        <span class="hljs-keyword">return</span>self.stickyOff(); } self.getParams();
+                        <span class="hljs-keyword">return</span>self.checkSticky(e); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-getparams">
+                            <a href="#this-getparams" class="anchor"></a>this.getParams</h2>
+                        <p>This method will fetch all required information needed
+                            to calculate if and how the element should be set.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">SideNavigation.prototype.getParams =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>$parent; $parent = self.$el.parent(); self.params.marginLeft
+                        = self.$el.css(
+                        <span class="hljs-string">'margin-left'</span>).replace(
+                        <span class="hljs-string">'px'</span>,
+                        <span class="hljs-string">''</span>); self.params.width = $parent.width() - self.params.marginLeft;
+                        self.params.height = self.$el.height(); self.params.pHeight
+                        = $parent.height(); self.params.pTop = $parent.offset().top;
+                        <span class="hljs-keyword">return</span>self.params.scrollTop = $(document).scrollTop();
+                        };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-checksticky">
+                            <a href="#this-checksticky" class="anchor"></a>this.checkSticky</h2>
+                        <p>Check if element should be set to sticky or not</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">SideNavigation.prototype.checkSticky =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">var</span>position;
+                        <span class="hljs-keyword">if</span>(self.params.scrollTop + self.offset &gt; self.params.pTop)
+                        { position = self.params.scrollTop - self.params.pTop +
+                        self.params.height;
+                        <span class="hljs-keyword">if</span>(self.params.pHeight - self.offset &lt; position)
+                        {
+                        <span class="hljs-keyword">return</span>self.stickyOn(self.params.pTop + self.params.pHeight
+                        - self.params.height); }
+                        <span class="hljs-keyword">else</span>{
+                        <span class="hljs-keyword">return</span>self.stickyOn(); } }
+                        <span class="hljs-keyword">else</span>{
+                        <span class="hljs-keyword">return</span>self.stickyOff(); } };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-stickyon">
+                            <a href="#this-stickyon" class="anchor"></a>this.stickyOn</h2>
+                        <p>In the event that
+                            <code>this.checkSticky</code>passes to stickyOn the element
+                            will be fixed using params from
+                            <code>this.getParams</code>. If the difference variable is
+                            set we will apply that as the top attribute; preventing
+                            the element moving outside of the column.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">SideNavigation.prototype.stickyOn =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(difference)</span>{</span>
+                        self.$el.css(
+                        <span class="hljs-string">'position'</span>, difference !=
+                        <span class="hljs-literal">null</span>?
+                        <span class="hljs-string">'absolute'</span>:
+                        <span class="hljs-string">'fixed'</span>).css(
+                        <span class="hljs-string">'top'</span>, difference !=
+                        <span class="hljs-literal">null</span>? difference : self.offset).css(
+                        <span class="hljs-string">'width'</span>, self.params.width);
+                        <span class="hljs-keyword">return</span>self.$el.next().css(
+                        <span class="hljs-string">'margin-top'</span>, self.params.height); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-stickoff">
+                            <a href="#this-stickoff" class="anchor"></a>this.stickOff</h2>
+                        <p>Removes anything applied by
+                            <code>this.stickyOff</code>.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">SideNavigation.prototype.stickyOff =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self.$el.css(
+                        <span class="hljs-string">'position'</span>,
+                        <span class="hljs-string">''</span>).css(
+                        <span class="hljs-string">'top'</span>,
+                        <span class="hljs-string">''</span>).css(
+                        <span class="hljs-string">'width'</span>,
+                        <span class="hljs-string">''</span>);
+                        <span class="hljs-keyword">return</span>self.$el.next().css(
+                        <span class="hljs-string">'margin-top'</span>,
+                        <span class="hljs-string">''</span>); };
+                        <span class="hljs-keyword">return</span>SideNavigation; })(); define(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>SideNavigation; }); }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmF2LmpzIiwic291cmNlcyI6WyJuYXYuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLEtBQUEsUUFBQTs7Q0FBQSxDQU1NO0NBQ0osR0FBQSxJQUFBOztDQUFBLENBQUEsQ0FBTyxDQUFQOztDQUVBOzs7O0NBRkE7O0NBTWEsQ0FBQSxDQUFBLENBQUEsb0JBQUM7Q0FFWixFQUFPLENBQVAsRUFBQTtDQUFBLENBR1csQ0FBWCxDQUFJLEVBQUo7Q0FIQSxDQUFBLENBSWMsQ0FBVixFQUFKO0NBSkEsQ0FBQSxDQUtjLENBQVYsRUFBSjtDQUxBLEVBTXNCLENBQWxCLEVBQUosQ0FBQTtDQU5BLEdBUUksRUFBSjtDQWhCRixJQU1hOztDQVliOzs7O0NBbEJBOztDQUFBLEVBc0JNLENBQU4sS0FBTTtDQUNKLENBQWlDLENBQWQsQ0FBZixFQUFKLElBQW1CLENBQW5CO0NBQUEsQ0FFMEMsRUFBdEMsRUFBSixJQUFBLENBQWdCLE9BQWhCO0NBRkEsQ0FJOEIsRUFBSSxFQUFsQyxHQUFBLEVBQUE7Q0FDQSxDQUErQixFQUEvQixJQUFBLEdBQUEsQ0FBQSxDQUFBO0NBNUJGLElBc0JNOztDQVFOOzs7O0NBOUJBOztDQUFBLEVBa0NZLE1BQUMsQ0FBYjtDQUNFLEtBQUEsUUFBQTtDQUVBLEdBQUEsRUFBQSxJQUFBLENBQUEsRUFBQTtDQXJDRixJQWtDWTs7Q0FLWjs7Ozs7Q0F2Q0E7O0NBQUEsRUE0Q2EsTUFBQyxFQUFkO0NBQ0UsRUFBa0QsQ0FBdkIsRUFBM0IsRUFBbUMsQ0FBUjtDQUEzQixHQUFXLEtBQUosTUFBQTtRQUFQO0NBQUEsR0FDSSxFQUFKLEdBQUE7Q0FDSyxHQUFELE9BQUosRUFBQTtDQS9DRixJQTRDYTs7Q0FLYjs7Ozs7Q0FqREE7O0NBQUEsRUFzRFcsTUFBWDtDQUNFLE1BQUEsR0FBQTtDQUFBLEVBQVUsQ0FBSSxFQUFkLENBQUE7Q0FBQSxDQUNtRSxDQUExQyxDQUFyQixFQUFKLENBQXlCLEdBQXpCLEdBQXlCO0NBRHpCLEVBRW9CLENBQWhCLENBQUosQ0FBQSxDQUEyQixHQUYzQjtDQUFBLEVBR3FCLENBQWpCLEVBQUo7Q0FIQSxFQUlzQixDQUFsQixFQUFKLENBQUE7Q0FKQSxFQUttQixDQUFmLEVBQUosQ0FBMEI7Q0FDckIsRUFBbUIsQ0FBcEIsRUFBTyxFQUFhLENBQXhCLElBQUE7Q0E3REYsSUFzRFc7O0NBU1g7Ozs7Q0EvREE7O0NBQUEsRUFtRWEsTUFBQyxFQUFkO0NBQ0UsT0FBQSxFQUFBO0NBQUEsRUFBMkIsQ0FBeEIsRUFBSCxHQUFHO0NBQ0QsRUFBVyxDQUFJLEVBQU8sRUFBdEIsQ0FBVztDQUVYLEVBQXlCLENBQXRCLEVBQVcsQ0FBWCxDQUFIO0NBQ08sRUFBNEIsQ0FBN0IsRUFBcUIsQ0FBWCxDQUFkLFNBQUE7TUFERixJQUFBO0NBR08sR0FBRCxJQUFKLFNBQUE7VUFOSjtNQUFBLEVBQUE7Q0FRTyxHQUFELEtBQUosTUFBQTtRQVRTO0NBbkViLElBbUVhOztDQVdiOzs7Ozs7O0NBOUVBOztDQUFBLEVBcUZVLEtBQVYsQ0FBVyxDQUFEO0NBQ1IsQ0FDb0IsQ0FBcEIsQ0FESSxDQUFKLENBQUEsQ0FBQSxHQUFBLFFBQ2lCO0NBSVosQ0FBNkIsQ0FBMUIsQ0FBSixFQUF5QyxNQUE3QyxDQUFBO0NBM0ZGLElBcUZVOztDQVFWOzs7O0NBN0ZBOztDQUFBLEVBaUdXLE1BQVg7Q0FDRSxDQUNpQixDQUFqQixDQURJLENBQUosQ0FBQSxDQUFBLEdBQUE7Q0FLSyxDQUE2QixDQUExQixDQUFKLFFBQUosQ0FBQTtDQXZHRixJQWlHVzs7Q0FqR1g7O0NBUEY7O0NBQUEsQ0FrSEEsQ0FBTyxHQUFQLEdBQU87Q0FDTCxVQUFPLEdBQVA7Q0FERixFQUFPO0NBbEhQIn0=</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../toc.js"></script>
+    <script src="../../../../assets/libs.js"></script>
+    <script src="../../../../assets/behavior.js"></script>
+</body>
+</html>

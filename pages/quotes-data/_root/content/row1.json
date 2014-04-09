@@ -1,0 +1,43 @@
+{
+  "classes": [
+    "slimright"
+  ],
+  "column1": [
+    {
+      "widgets/widget": {
+        "content": [
+          {
+            "widgets/widget-title": {
+              "widget": {
+                "title": "Market Snapshot",
+                "promo": {
+                  "url": "#",
+                  "text": "View All"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "column2": [
+    {
+      "widgets/widget": {
+        "content": [
+          {
+            "widgets/widget-title": {
+              "widget": {
+                "title": "VIX Overview",
+                "promo": {
+                  "url": "#",
+                  "text": "View All"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

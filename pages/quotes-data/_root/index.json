@@ -27,6 +27,9 @@
         }
       },
       {
+        "_columns/two": "row1.json"
+      },
+      {
         "widgets/content/content": "welcome.md"
       },
       {

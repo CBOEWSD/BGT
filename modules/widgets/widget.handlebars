@@ -1,3 +1,7 @@
 <div class="widget {{#each classes}} {{this}} {{/each}}">
-  {{{content}}}
+  {{#each content}}
+    {{{this}}}
+  {{else}}
+    {{{content}}}
+  {{/each}}
 </div>

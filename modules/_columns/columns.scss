@@ -25,6 +25,11 @@ $module: '.wrap-columns';
     border-collapse: separate;
     border-spacing: 15px 0;
 
+    * {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
     .column {
       display: table-cell;
       width: 50%;

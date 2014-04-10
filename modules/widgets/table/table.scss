@@ -14,6 +14,8 @@ $module: '.table';
 #{$module} {
   width: 100%;
 
+  border-collapse: collapse;
+
   thead {
     font: {
       size: .9em;

@@ -12,6 +12,11 @@ $module: '.wrap-columns';
   margin: 0 -15px 20px -15px;
   table-layout: fixed;
 
+  * {
+    border-collapse: initial;
+    border-spacing: 0;
+  }
+
   &.margin-ten {
     margin-bottom: 10px;
   }
@@ -24,11 +29,6 @@ $module: '.wrap-columns';
     width: auto;
     border-collapse: separate;
     border-spacing: 15px 0;
-
-    * {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
 
     .column {
       display: table-cell;
@@ -54,11 +54,6 @@ $module: '.wrap-columns';
     width: auto;
     border-collapse: separate;
     border-spacing: 15px 0;
-
-    * {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
 
     .column {
       display: table-cell;

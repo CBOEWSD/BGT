@@ -21,7 +21,18 @@
   ],
   "column2": [
     {
-      "ads/square_300/block": ""
+      "widgets/widget-title": {
+        "widget": {
+          "title": "Exchange Volume",
+          "promo": {
+            "url": "#",
+            "text": "View All"
+          }
+        }
+      }
+    },
+    {
+      "widgets/table/table": "row3/volume.json"
     }
   ]
 }

@@ -1,97 +1,60 @@
 {
+  "widgetWrapper": true,
   "classes": [
     "slimright"
   ],
   "column1": [
     {
-      "widgets/widget": {
-        "content": [
-          {
-            "widgets/widget-title": {
-              "widget": {
-                "title": "Market Snapshot",
-                "promo": {
-                  "url": "#",
-                  "text": "View All"
-                }
-              }
-            }
-          },
-          {
-            "widgets/snapshot/graphonly/wide": ""
+      "widgets/widget-title": {
+        "widget": {
+          "title": "Market Snapshot",
+          "promo": {
+            "url": "#",
+            "text": "View All"
           }
-        ]
+        }
       }
+    },
+    {
+      "widgets/snapshot/graphonly/wide": ""
     }
   ],
   "column2": [
     {
-      "widgets/widget": {
-        "content": [
-          {
-            "widgets/widget-title": {
-              "widget": {
-                "title": "VIX Overview",
-                "promo": {
-                  "url": "#",
-                  "text": "Options Chain"
-                }
-              }
-            }
-          },
-          {
-            "widgets/quote-overview/overview": {
-              "Price": {
-                "last": "16,130.40",
-                "change": "-23.99",
-                "changePCT": "-0.15",
-                "Bid": "n.a",
-                "Ask": "n.a"
-              },
-              "OHLC": {
-                "last": "16,130.40",
-                "change": "-23.99",
-                "changePCT": "-0.15"
-              },
-              "Volumes": {
-                "last": "16,130.40",
-                "change": "-23.99",
-                "changePCT": "-0.15"
-              },
-              "Ratios": {
-                "last": "16,130.40",
-                "change": "-23.99",
-                "changePCT": "-0.15"
-              }
-            }
-          },
-          {
-            "widgets/quote-overview/overview": {
-              "Price": {
-                "last": "16,130.40",
-                "change": "-23.99",
-                "changePCT": "-0.15",
-                "Bid": "n.a",
-                "Ask": "n.a"
-              },
-              "OHLC": {
-                "last": "16,130.40",
-                "change": "-23.99",
-                "changePCT": "-0.15"
-              },
-              "Volumes": {
-                "last": "16,130.40",
-                "change": "-23.99",
-                "changePCT": "-0.15"
-              },
-              "Ratios": {
-                "last": "16,130.40",
-                "change": "-23.99",
-                "changePCT": "-0.15"
-              }
-            }
+      "widgets/widget-title": {
+        "widget": {
+          "title": "VIX Overview",
+          "promo": {
+            "url": "#",
+            "text": "Options Chain"
           }
-        ]
+        }
+      }
+    },
+    {
+      "widgets/quote-overview/overview": {
+        "Price": {
+          "last": "16,130.40",
+          "change": "-23.99",
+          "changePCT": "-0.15",
+          "Bid": "n.a",
+          "Ask": "n.a"
+        },
+        "OHLC": {
+          "last": "16,130.40",
+          "change": "-23.99",
+          "changePCT": "-0.15"
+        },
+        "Volumes": {
+          "last": "16,130.40",
+          "change": "-23.99",
+          "changePCT": "-0.15"
+        },
+        "Ratios": {
+          "last": "16,130.40",
+          "change": "-23.99",
+          "changePCT": "-0.15"
+        }
       }
     }
   ]

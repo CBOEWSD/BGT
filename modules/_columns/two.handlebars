@@ -1,12 +1,12 @@
 <div class="wrap-columns two {{#each classes}} {{this}} {{/each}}">
-  <div class="column">
+  <div class="column {{#if widgetWrapper}} widget {{/if}}">
     {{#each column1}}
       <div class="component">
         {{{this}}}
       </div>
     {{/each}}
   </div>
-  <div class="column">
+  <div class="column {{#if widgetWrapper}} widget {{/if}}">
     {{#each column2}}
       <div class="component">
         {{{this}}}

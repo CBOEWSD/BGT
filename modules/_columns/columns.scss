@@ -6,10 +6,14 @@
 @import './ui/base/_includes/grid';
 @import './ui/base/settings';
 
-$module: '.wrap-columns';
+$module: '.wrap-columns-';
 
-#{$module} {
-  margin: 0 -15px 20px -15px;
+#{$module}outer {
+  margin: 0 -15px;
+}
+
+#{$module}inner {
+  margin: 0 0 20px;
   table-layout: fixed;
 
   * {
@@ -26,7 +30,7 @@ $module: '.wrap-columns';
 
   &.two {
     display: table;
-    width: auto;
+    width: 100%;
     border-collapse: separate;
     border-spacing: 15px 0;
 
@@ -51,7 +55,7 @@ $module: '.wrap-columns';
 
   &.three {
     display: table;
-    width: auto;
+    width: 100%;
     border-collapse: separate;
     border-spacing: 15px 0;
 

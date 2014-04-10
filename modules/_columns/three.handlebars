@@ -1,0 +1,23 @@
+<div class="wrap-columns three {{#each classes}} {{this}} {{/each}}">
+  <div class="column {{#if widgetWrapper}} widget {{/if}}">
+    {{#each column1}}
+      <div class="component">
+        {{{this}}}
+      </div>
+    {{/each}}
+  </div>
+  <div class="column {{#if widgetWrapper}} widget {{/if}}">
+    {{#each column2}}
+      <div class="component">
+        {{{this}}}
+      </div>
+    {{/each}}
+  </div>
+  <div class="column {{#if widgetWrapper}} widget {{/if}}">
+    {{#each column3}}
+      <div class="component">
+        {{{this}}}
+      </div>
+    {{/each}}
+  </div>
+</div>

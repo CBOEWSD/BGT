@@ -9,7 +9,8 @@
 $module: '.wrap-columns';
 
 #{$module} {
-  margin-bottom: 20px;
+  margin: 0 -15px 20px -15px;
+  table-layout: fixed;
 
   &.margin-ten {
     margin-bottom: 10px;
@@ -21,7 +22,6 @@ $module: '.wrap-columns';
   &.two {
     display: table;
     width: auto;
-    margin: 0 -15px;
     border-collapse: separate;
     border-spacing: 15px 0;
 
@@ -42,9 +42,28 @@ $module: '.wrap-columns';
           width: 66.66666%;
         }
         &:last-child {
-          width: 33.33333%;
+          // Accounting for additional spacing (15px)
+          width: 32.6%;
         }
       }
+    }
+  }
+
+  &.three {
+    display: table;
+    width: auto;
+    border-collapse: separate;
+    border-spacing: 15px 0;
+
+    * {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .column {
+      display: table-cell;
+      width: 33.3333%;
+      vertical-align: top;
     }
   }
 

@@ -13,8 +13,8 @@ $module: '.quote-summary';
 
 #{$module} {
   display: table;
-  table-layout: fixed;
   width: 100%;
+  margin-bottom: 20px;
 
   .col {
     display:table-cell;

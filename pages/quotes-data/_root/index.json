@@ -30,6 +30,9 @@
         "_columns/two": "row1.json"
       },
       {
+        "_columns/three": "row2.json"
+      },
+      {
         "widgets/content/content": "welcome.md"
       },
       {

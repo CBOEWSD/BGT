@@ -1,0 +1,35 @@
+/*
+  Module: Table
+  Description: Controlled table component allowing for hide functionality on mobile.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/fadein';
+
+$module: '.table';
+
+#{$module} {
+  width: 100%;
+
+  thead {
+    font: {
+      size: .9em;
+    }
+
+    text-align: left;
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid darken($colorGrey2, 0%);
+
+      td {
+        padding: 1px 2px;
+      }
+    }
+  }
+
+}

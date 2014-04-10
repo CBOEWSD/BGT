@@ -1,0 +1,39 @@
+<table class="table {{#each classes}} {{this}} {{/each}}">
+  {{#if columns}}
+    <thead>
+      {{#each columns}}
+      <th class="{{#unless mobile}} nomobile {{/unless}}" data-id="{{@index}}" data-mobile="{{mobile}}">
+        {{title}}
+      </th>
+      {{/each}}
+    </thead>
+  {{/if}}
+
+  <tbody>
+    {{#each rows}}
+      <tr>
+        {{#each this}}
+          <td>
+            {{#if this.link}}
+            <a
+              href="{{this.link.url}}"
+              title="{{#if this.link.title}}{{this.link.title}}{{/if}}"
+              {{#if this.numericcolor}} data-numericcolor="{{this.content}}" {{/if}}>
+            {{else}}
+            <span
+              {{#if this.numericcolor}} data-numericcolor="{{this.content}}" {{/if}}>
+            {{/if}}
+
+              {{this.prefix}}{{this.content}}{{this.postfix}}
+
+            {{#if this.link}}
+            </a>
+            {{else}}
+            </span>
+            {{/if}}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

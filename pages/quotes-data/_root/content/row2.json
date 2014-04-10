@@ -37,7 +37,7 @@
       }
     },
     {
-      "widgets/list/simple": "row2/company-headlines.json"
+      "widgets/table/table": "row2/table.json"
     }
   ]
 }

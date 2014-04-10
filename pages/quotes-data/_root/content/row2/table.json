@@ -1,0 +1,302 @@
+{
+  "columns": [
+    {
+      "title": "Symbol",
+      "mobile": true
+    },
+    {
+      "title": "Name",
+      "mobile": true
+    },
+    {
+      "title": "Last",
+      "mobile": true
+    },
+    {
+      "title": "Change",
+      "mobile": false
+    },
+    {
+      "title": "Volume",
+      "mobile": false
+    }
+  ],
+  "rows": [
+    [
+      {
+        "content": "BAC",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "BANK OF AM.."
+      },
+      {
+        "content": 16.52
+      },
+      {
+        "content": -0.19,
+        "numericcolor": true
+      },
+      {
+        "content": -1.11,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "RAD",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "RITE AID"
+      },
+      {
+        "content": 6.30
+      },
+      {
+        "content": 0.38,
+        "numericcolor": true
+      },
+      {
+        "content": 6.42,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "KO",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "THE COCA C.."
+      },
+      {
+        "content": 37.43
+      },
+      {
+        "content": -1.50,
+        "numericcolor": true
+      },
+      {
+        "content": -3.85,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "FRX",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "FOREST LAB.."
+      },
+      {
+        "content": 91.76
+      },
+      {
+        "content": 20.37,
+        "numericcolor": true
+      },
+      {
+        "content": 28.53,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "VZ",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "VERIZON CO.."
+      },
+      {
+        "content": 46.03
+      },
+      {
+        "content": -0.48,
+        "numericcolor": true
+      },
+      {
+        "content": -1.03,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "F",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "FORD MOTOR.."
+      },
+      {
+        "content": 15.43
+      },
+      {
+        "content": -0.13,
+        "numericcolor": true
+      },
+      {
+        "content": 0.89,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "VALE",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "VALE S.A."
+      },
+      {
+        "content": 14.53
+      },
+      {
+        "content": 0.13,
+        "numericcolor": true
+      },
+      {
+        "content": 0.89,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "GE",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "GENERAL EL.."
+      },
+      {
+        "content": 25.66
+      },
+      {
+        "content": -0.08,
+        "numericcolor": true
+      },
+      {
+        "content": -0.31,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "EMC",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "EMC CORP.."
+      },
+      {
+        "content": 25.46
+      },
+      {
+        "content": 0.06,
+        "numericcolor": true
+      },
+      {
+        "content": 0.24,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "NOK",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "NOKIA CORP.."
+      },
+      {
+        "content": 7.35
+      },
+      {
+        "content": 0.21,
+        "numericcolor": true
+      },
+      {
+        "content": 2.87,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "GE",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "GENERAL EL.."
+      },
+      {
+        "content": 25.66
+      },
+      {
+        "content": -0.08,
+        "numericcolor": true
+      },
+      {
+        "content": -0.31,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ],
+    [
+      {
+        "content": "EMC",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "EMC CORP"
+      },
+      {
+        "content": 25.46
+      },
+      {
+        "content": 0.06,
+        "numericcolor": true
+      },
+      {
+        "content": 0.24,
+        "numericcolor": true,
+        "postfix": "%"
+      }
+    ]
+  ]
+}

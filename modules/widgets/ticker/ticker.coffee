@@ -23,6 +23,10 @@ class Ticker
     console.log @
     return @
 
+  ###
+    ## Bind
+    Bind up to events such as scroll (touch) and global viewport resize
+  ###
   bind: ->
     @.$left.bind 'click', (e) =>
       e.preventDefault()
@@ -41,30 +45,54 @@ class Ticker
 
     @.$el.trigger 'touchmove'
 
+  ###
+    ## moveLeft
+    Action will move the scroll position left by a pixel amount
+    equal to the width of the inner element.
+  ###
   moveLeft: ->
     @.getParams()
     scroll = @.$bar.scrollLeft() - @.params.width
 
     @.scrollTo(scroll)
 
+  ###
+    ## moveRight
+    Action will move the scroll position right by a pixel amount
+    equal to the width of the inner element.
+  ###
   moveRight: ->
     @.getParams()
     scroll = @.$bar.scrollLeft() + @.params.width
 
     @.scrollTo(scroll)
 
+  ###
+    ## scrollTo
+    Provided a position will scroll component to given position
+  ###
   scrollTo: (position) ->
     @.$bar.animate {
       scrollLeft: position
     }, 1000, =>
       @.scrollEvent()
 
+  ###
+    ## getParams
+    Gets necessary params shared across class.
+  ###
   getParams: ->
     @.params = {
       width: @.$bar.width()
       innerWidth: @.$inner.width()
     }
 
+  ###
+    ## scrollEvent
+    Called from multiple event types.
+    Will check if we have reached the end (left or right) and disable
+    controls as appropriate.
+  ###
   scrollEvent: (e) ->
     scrolled = @.$bar.scrollLeft() + @.params.width
 

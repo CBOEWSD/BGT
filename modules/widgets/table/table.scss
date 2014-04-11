@@ -16,6 +16,14 @@ $module: '.table';
 
   border-collapse: collapse;
 
+  a {
+    color: $colorBlue1;
+
+    &:hover, &:active {
+      color: $colorGrey1;
+    }
+  }
+
   thead {
     font: {
       size: .9em;
@@ -62,4 +70,10 @@ $module: '.table';
     }
   }
 
+
+  @media all and (max-width: $screenSmallMax) {
+    .nomobile {
+      display: none;
+    }
+  }
 }

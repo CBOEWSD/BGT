@@ -1,11 +1,14 @@
 <table class="table {{#each classes}} {{this}} {{/each}}">
+
   {{#if columns}}
     <thead>
-      {{#each columns}}
-      <th class="{{#unless mobile}} nomobile {{/unless}}" data-id="{{@index}}" data-mobile="{{mobile}}">
-        {{title}}
-      </th>
-      {{/each}}
+      <tr>
+        {{#each columns}}
+        <th class="{{#unless mobile}} nomobile {{/unless}}" data-id="{{@index}}" data-mobile="{{mobile}}">
+          {{title}}
+        </th>
+        {{/each}}
+      </tr>
     </thead>
   {{/if}}
 

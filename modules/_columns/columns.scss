@@ -10,11 +10,19 @@ $module: '.wrap-columns-';
 
 #{$module}outer {
   margin: 0 -15px;
+
+  @media all and (max-width: $screenSmallMax) {
+    margin: 0;
+  }
 }
 
 #{$module}inner {
   margin: 0 0 20px;
   table-layout: fixed;
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px 0;
 
   * {
     border-collapse: initial;
@@ -28,16 +36,14 @@ $module: '.wrap-columns-';
     margin-bottom: 0;
   }
 
-  &.two {
-    display: table;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 15px 0;
+  .column {
+    display: table-cell;
+    vertical-align: top;
+  }
 
+  &.two {
     .column {
-      display: table-cell;
       width: 50%;
-      vertical-align: top;
     }
 
     &.slimright {
@@ -54,15 +60,8 @@ $module: '.wrap-columns-';
   }
 
   &.three {
-    display: table;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 15px 0;
-
     .column {
-      display: table-cell;
       width: 33.3333%;
-      vertical-align: top;
     }
   }
 
@@ -100,8 +99,12 @@ $module: '.wrap-columns-';
   }
 
   @media all and (max-width: $screenSmallMax) {
+    display: block;
+
     .column {
       margin: 30px 0;
+      width: 100%!important;
+      display: block;
 
       &:first-child {
         margin-top: 0;

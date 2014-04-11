@@ -20,7 +20,6 @@ class Ticker
 
     @.$el.addClass('loaded')
 
-    console.log @
     return @
 
   ###

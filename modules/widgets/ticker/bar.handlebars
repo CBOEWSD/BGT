@@ -1,5 +1,12 @@
-<section class="ticker-bar">
-  {{#each tickers}}
-    {{> widgets/ticker/item}}
-  {{/each}}
-</section>
+<div class="ticker-bar">
+  <div class="control right">Right</div>
+  <div class="control left">Left</div>
+
+  <section class="bar">
+    <div class="inner">
+      {{#each tickers}}
+        {{> widgets/ticker/item}}
+      {{/each}}
+    </div>
+  </section>
+</div>

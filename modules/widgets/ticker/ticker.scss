@@ -1,0 +1,60 @@
+/*
+  Module: Ticker
+  Description: Ticker items and wrapper (bar) component styling
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$module: '.ticker-';
+
+#{$module}bar {
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+#{$module}item {
+  display: inline-block;
+  margin: 0 15px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  span {
+    display: block;
+  }
+
+  .symbol {
+    font: {
+      size: .8em;
+    }
+  }
+
+  .volume {
+    font: {
+      size: .8em;
+    }
+  }
+
+  .price {
+    font: {
+      size: 1.2em;
+      weight: 700;
+    }
+  }
+
+  .change {
+    font: {
+      size: .9em;
+      weight: 700;
+    }
+    text-align: right;
+  }
+}

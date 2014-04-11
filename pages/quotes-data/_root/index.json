@@ -37,6 +37,9 @@
       },
       {
         "_columns/two": "row4.json"
+      },
+      {
+        "widgets/ticker/bar": "ticker.json"
       }
     ],
     "bottomspan": [

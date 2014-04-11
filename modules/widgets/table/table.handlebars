@@ -1,6 +1,14 @@
 <table class="table {{#each classes}} {{this}} {{/each}}">
 
   {{#if columns}}
+    <colgroup>
+      {{#each columns}}
+      <col class="{{#unless mobile}} nomobile {{/unless}}" />
+      {{/each}}
+    </thead>
+  {{/if}}
+
+  {{#if columns}}
     <thead>
       <tr>
         {{#each columns}}

@@ -72,6 +72,13 @@ $module: '.table';
 
 
   @media all and (max-width: $screenSmallMax) {
+    @include opacity(0);
+
+    &.mobile-load {
+      @include fadeIn( .6s );
+      @include opacity(1);
+    }
+
     .nomobile {
       display: none;
     }

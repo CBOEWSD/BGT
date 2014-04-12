@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Header - header.init.js</title>
+        <link rel="stylesheet" href="../../../assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="../../../" />
+        <meta name="groc-document-path" content="_static\modules\header\header.init.js"
+        />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    _static\modules\header\header.init.js
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="header">
+                                <a href="#header" class="anchor"></a>Header</h1>
+                            <p>Contains basic bindings for header module. Simple bindings
+                                such as the top search binding on mobile.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>Header, header; Header = (
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>self; self = {};
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="constructor">
+                                <a href="#constructor" class="anchor"></a>Constructor</h2>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-title">Header</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">this</span>.log.add(
+                            <span class="hljs-string">'notification'</span>,
+                            <span class="hljs-string">'Constructed.'</span>,
+                            <span class="hljs-keyword">this</span>); self =
+                            <span class="hljs-keyword">this</span>; self.$topSearchExpander = $(
+                            <span class="hljs-string">'.mobileExpandTopSearch'</span>); self.$topSearch =
+                            $(
+                            <span class="hljs-string">'.header .quicksearch'</span>);
+                            <span class="hljs-keyword">this</span>.$topSearchExpander.click(
+                            <span class="hljs-keyword">this</span>.toggleTopSearch); }
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments doc-section">
+                        <div class="wrapper">
+                            <h2 id="this-log">
+                                <a href="#this-log" class="anchor"></a>this.log</h2>
+                            <p>Add local instance of logging to this module. Can be
+                                called with:</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Header.prototype.log =
+                            <span class="hljs-keyword">new</span>LogHandler(
+                            <span class="hljs-string">'Header'</span>); Header.prototype.toggleTopSearch
+                            =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">(e)</span>{</span>
+                            e.preventDefault(); self.$topSearch.toggleClass(
+                            <span class="hljs-string">'open'</span>);
+                            <span class="hljs-keyword">return</span>self.log.add(
+                            <span class="hljs-string">'notification'</span>,
+                            <span class="hljs-string">'Top search toggled.'</span>, self.$topSearch); };
+                            <span class="hljs-keyword">return</span>Header; })();
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="init">
+                                <a href="#init" class="anchor"></a>Init</h2>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">header =
+                            <span class="hljs-keyword">new</span>Header; }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaGVhZGVyLmluaXQuanMiLCJzb3VyY2VzIjpbImhlYWRlci5pbml0LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLFFBQUE7O0NBQUEsQ0FNTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxDQUFBLENBQU8sQ0FBUDs7Q0FFQTs7O0NBRkE7O0NBS2EsRUFBQSxDQUFBLFlBQUE7Q0FFWCxDQUF5QixDQUFyQixDQUFILEVBQUQsUUFBQTtDQUFBLEVBR08sQ0FBUCxFQUFBO0NBSEEsRUFNMEIsQ0FBdEIsRUFBSixZQUFBLE1BQTBCO0NBTjFCLEVBT2tCLENBQWQsRUFBSixJQUFBLFlBQWtCO0NBUGxCLEdBVUMsQ0FBRCxDQUFBLFNBQUEsR0FBb0I7Q0FqQnRCLElBS2E7O0NBY2I7Ozs7OztDQW5CQTs7Q0FBQSxFQXlCQSxDQUFTLElBQUEsRUFBQTs7Q0F6QlQsRUE2QmlCLE1BQUMsTUFBbEI7Q0FDRSxLQUFBLFFBQUE7Q0FBQSxHQUNJLEVBQUosSUFBZSxDQUFmO0NBR0ssQ0FBd0IsQ0FBckIsQ0FBSixNQUFKLEdBQUEsQ0FBQSxPQUFBO0NBbENGLElBNkJpQjs7Q0E3QmpCOztDQVBGOztDQTJDQTs7O0NBM0NBOztBQThDUyxDQTlDVCxDQThDQSxDQUFTLEdBQVQ7Q0E5Q0EifQ==</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../toc.js"></script>
+        <script src="../../../assets/libs.js"></script>
+        <script src="../../../assets/behavior.js"></script>
+    </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Header - header.init.js</title>
+    <link rel="stylesheet" href="../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../" />
+    <meta name="groc-document-path" content="_static\modules\header\header.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\header\header.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="header">
+                            <a href="#header" class="anchor"></a>Header</h1>
+                        <p>Contains basic bindings for header module. Simple bindings
+                            such as the top search binding on mobile.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>Header, header; Header = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self = {};
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">Header</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">this</span>.log.add(
+                        <span class="hljs-string">'notification'</span>,
+                        <span class="hljs-string">'Constructed.'</span>,
+                        <span class="hljs-keyword">this</span>); self =
+                        <span class="hljs-keyword">this</span>; self.$topSearchExpander = $(
+                        <span class="hljs-string">'.mobileExpandTopSearch'</span>); self.$topSearch = $(
+                        <span
+                        class="hljs-string">'.header .quicksearch'</span>);
+                            <span class="hljs-keyword">this</span>.$topSearchExpander.click(
+                            <span class="hljs-keyword">this</span>.toggleTopSearch); }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments doc-section">
+                    <div class="wrapper">
+                        <h2 id="this-log">
+                            <a href="#this-log" class="anchor"></a>this.log</h2>
+                        <p>Add local instance of logging to this module. Can be called
+                            with:</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Header.prototype.log =
+                        <span class="hljs-keyword">new</span>LogHandler(
+                        <span class="hljs-string">'Header'</span>); Header.prototype.toggleTopSearch =
+                        <span
+                        class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                            e.preventDefault(); self.$topSearch.toggleClass(
+                            <span class="hljs-string">'open'</span>);
+                            <span class="hljs-keyword">return</span>self.log.add(
+                            <span class="hljs-string">'notification'</span>,
+                            <span class="hljs-string">'Top search toggled.'</span>, self.$topSearch); };
+                            <span class="hljs-keyword">return</span>Header; })();
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="init">
+                            <a href="#init" class="anchor"></a>Init</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">header =
+                        <span class="hljs-keyword">new</span>Header; }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaGVhZGVyLmluaXQuanMiLCJzb3VyY2VzIjpbImhlYWRlci5pbml0LmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLFFBQUE7O0NBQUEsQ0FNTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxDQUFBLENBQU8sQ0FBUDs7Q0FFQTs7O0NBRkE7O0NBS2EsRUFBQSxDQUFBLFlBQUE7Q0FFWCxDQUF5QixDQUFyQixDQUFILEVBQUQsUUFBQTtDQUFBLEVBR08sQ0FBUCxFQUFBO0NBSEEsRUFNMEIsQ0FBdEIsRUFBSixZQUFBLE1BQTBCO0NBTjFCLEVBT2tCLENBQWQsRUFBSixJQUFBLFlBQWtCO0NBUGxCLEdBVUMsQ0FBRCxDQUFBLFNBQUEsR0FBb0I7Q0FqQnRCLElBS2E7O0NBY2I7Ozs7OztDQW5CQTs7Q0FBQSxFQXlCQSxDQUFTLElBQUEsRUFBQTs7Q0F6QlQsRUE2QmlCLE1BQUMsTUFBbEI7Q0FDRSxLQUFBLFFBQUE7Q0FBQSxHQUNJLEVBQUosSUFBZSxDQUFmO0NBR0ssQ0FBd0IsQ0FBckIsQ0FBSixNQUFKLEdBQUEsQ0FBQSxPQUFBO0NBbENGLElBNkJpQjs7Q0E3QmpCOztDQVBGOztDQTJDQTs7O0NBM0NBOztBQThDUyxDQTlDVCxDQThDQSxDQUFTLEdBQVQ7Q0E5Q0EifQ==</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../toc.js"></script>
+    <script src="../../../assets/libs.js"></script>
+    <script src="../../../assets/behavior.js"></script>
+</body>
+</html>

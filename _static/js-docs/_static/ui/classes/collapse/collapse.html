@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Collapse Class - collapse.init.js</title>
+        <link rel="stylesheet" href="../../../../assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="../../../../" />
+        <meta name="groc-document-path" content="_static\ui\classes\collapse\collapse.init.js"
+        />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    _static\ui\classes\collapse\collapse.init.js
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="collapse-class">
+                                <a href="#collapse-class" class="anchor"></a>Collapse Class</h1>
+                            <p>This class allows for an element to be collapsed down
+                                to only show a
+                                <code>expander</code>button on mobile. This is useful
+                                for saving valuable viewport real estate.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            $(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>$el; $el = $(
+                            <span class="hljs-string">'.collapse'</span>); $el.each(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">return</span>$(
+                            <span class="hljs-keyword">this</span>).append($(
+                            <span class="hljs-string">'&lt;div class="expander"&gt;Expand&lt;/div&gt;'</span>));
+                            });
+                            <span class="hljs-keyword">return</span>$(
+                            <span class="hljs-string">'.expander'</span>, $el).click(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>$parent; $parent = $(
+                            <span class="hljs-keyword">this</span>).parent(
+                            <span class="hljs-string">'.collapse'</span>); $parent.toggleClass(
+                            <span class="hljs-string">'open'</span>);
+                            <span class="hljs-keyword">if</span>($(
+                            <span class="hljs-keyword">this</span>).text() ===
+                            <span class="hljs-string">'Expand'</span>) {
+                            <span class="hljs-keyword">return</span>$(
+                            <span class="hljs-keyword">this</span>).text(
+                            <span class="hljs-string">'Close'</span>); }
+                            <span class="hljs-keyword">else</span>{
+                            <span class="hljs-keyword">return</span>$(
+                            <span class="hljs-keyword">this</span>).text(
+                            <span class="hljs-string">'Expand'</span>); } }); }); }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29sbGFwc2UuaW5pdC5qcyIsInNvdXJjZXMiOlsiY29sbGFwc2UuaW5pdC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLENBT0EsQ0FBRSxNQUFBO0NBRUEsRUFBQSxLQUFBO0NBQUEsRUFBQSxDQUFBLE9BQU07Q0FBTixFQUdHLENBQUgsS0FBUztDQUNQLEdBQUEsRUFBQSxPQUFBLHVCQUFZO0NBRGQsSUFBUztDQU1ULENBQWUsQ0FBZixFQUFBLElBQTBCLEVBQTFCO0NBQ0UsTUFBQSxHQUFBO0NBQUEsRUFBVSxDQUFBLEVBQVYsQ0FBQSxJQUFVO0NBQVYsS0FDQSxDQUFPLElBQVA7Q0FDQSxHQUFHLENBQWUsQ0FBbEIsRUFBQTtDQUNFLEdBQUEsR0FBQSxRQUFBO01BREYsRUFBQTtDQUdFLEdBQUEsSUFBQSxPQUFBO1FBTnNCO0NBQTFCLElBQTBCO0NBWDVCLEVBQUU7Q0FQRiJ9</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../../toc.js"></script>
+        <script src="../../../../assets/libs.js"></script>
+        <script src="../../../../assets/behavior.js"></script>
+    </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collapse Class - collapse.init.js</title>
+    <link rel="stylesheet" href="../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../" />
+    <meta name="groc-document-path" content="_static\ui\classes\collapse\collapse.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\ui\classes\collapse\collapse.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="collapse-class">
+                            <a href="#collapse-class" class="anchor"></a>Collapse Class</h1>
+                        <p>This class allows for an element to be collapsed down to
+                            only show a
+                            <code>expander</code>button on mobile. This is useful for
+                            saving valuable viewport real estate.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        $(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>$el; $el = $(
+                        <span class="hljs-string">'.collapse'</span>); $el.each(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>$(
+                        <span class="hljs-keyword">this</span>).append($(
+                        <span class="hljs-string">'&lt;div class="expander"&gt;Expand&lt;/div&gt;'</span>));
+                        });
+                        <span class="hljs-keyword">return</span>$(
+                        <span class="hljs-string">'.expander'</span>, $el).click(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>$parent; $parent = $(
+                        <span class="hljs-keyword">this</span>).parent(
+                        <span class="hljs-string">'.collapse'</span>); $parent.toggleClass(
+                        <span class="hljs-string">'open'</span>);
+                        <span class="hljs-keyword">if</span>($(
+                        <span class="hljs-keyword">this</span>).text() ===
+                        <span class="hljs-string">'Expand'</span>) {
+                        <span class="hljs-keyword">return</span>$(
+                        <span class="hljs-keyword">this</span>).text(
+                        <span class="hljs-string">'Close'</span>); }
+                        <span class="hljs-keyword">else</span>{
+                        <span class="hljs-keyword">return</span>$(
+                        <span class="hljs-keyword">this</span>).text(
+                        <span class="hljs-string">'Expand'</span>); } }); }); }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29sbGFwc2UuaW5pdC5qcyIsInNvdXJjZXMiOlsiY29sbGFwc2UuaW5pdC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLENBT0EsQ0FBRSxNQUFBO0NBRUEsRUFBQSxLQUFBO0NBQUEsRUFBQSxDQUFBLE9BQU07Q0FBTixFQUdHLENBQUgsS0FBUztDQUNQLEdBQUEsRUFBQSxPQUFBLHVCQUFZO0NBRGQsSUFBUztDQU1ULENBQWUsQ0FBZixFQUFBLElBQTBCLEVBQTFCO0NBQ0UsTUFBQSxHQUFBO0NBQUEsRUFBVSxDQUFBLEVBQVYsQ0FBQSxJQUFVO0NBQVYsS0FDQSxDQUFPLElBQVA7Q0FDQSxHQUFHLENBQWUsQ0FBbEIsRUFBQTtDQUNFLEdBQUEsR0FBQSxRQUFBO01BREYsRUFBQTtDQUdFLEdBQUEsSUFBQSxPQUFBO1FBTnNCO0NBQTFCLElBQTBCO0NBWDVCLEVBQUU7Q0FQRiJ9</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../toc.js"></script>
+    <script src="../../../../assets/libs.js"></script>
+    <script src="../../../../assets/behavior.js"></script>
+</body>
+</html>

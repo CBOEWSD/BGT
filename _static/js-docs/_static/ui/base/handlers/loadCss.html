@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LoadCss - loadCss.init.js</title>
+        <link rel="stylesheet" href="../../../../assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="../../../../" />
+        <meta name="groc-document-path" content="_static\ui\base\handlers\loadCss.init.js"
+        />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    _static\ui\base\handlers\loadCss.init.js
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="loadcss">
+                                <a href="#loadcss" class="anchor"></a>LoadCss</h1>
+                            <p>This class allows for async loading of stylesheet assets.
+                                Unfortunately due to the nature of async loading
+                                of in certain browsers no clear event is fired
+                                for when the asset has finished loading (unlike
+                                JS assets which do). This limits the use of this
+                                method to only certain circumstances.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>loadCss; loadCss =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">(url)</span>{</span>
+                            <span class="hljs-keyword">var</span>link; link = document.createElement(
+                            <span class="hljs-string">'link'</span>); link.type =
+                            <span class="hljs-string">'text/css'</span>; link.rel =
+                            <span class="hljs-string">'stylesheet'</span>; link.href = url; document.getElementsByTagName(
+                            <span class="hljs-string">'head'</span>)[
+                            <span class="hljs-number">0</span>].appendChild(link);
+                            <span class="hljs-keyword">return</span>link; }; window.loadCss = loadCss; }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9hZENzcy5pbml0LmpzIiwic291cmNlcyI6WyJsb2FkQ3NzLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLEtBQUEsQ0FBQTs7Q0FBQSxDQVNBLENBQVUsSUFBVixFQUFXO0NBQ1QsR0FBQSxJQUFBO0NBQUEsRUFBTyxDQUFQLEVBQU8sRUFBUSxLQUFSO0NBQVAsRUFDWSxDQUFaLE1BREE7Q0FBQSxFQUVBLENBQUEsUUFGQTtDQUFBLEVBR1ksQ0FBWjtDQUhBLEdBTUEsRUFBQSxFQUFRLEdBQVIsU0FBQTtDQUdBLEdBQUEsT0FBTztDQW5CVCxFQVNVOztDQVRWLENBc0JBLENBQWlCLEdBQVgsQ0FBTjtDQXRCQSJ9</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../../toc.js"></script>
+        <script src="../../../../assets/libs.js"></script>
+        <script src="../../../../assets/behavior.js"></script>
+    </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoadCss - loadCss.init.js</title>
+    <link rel="stylesheet" href="../../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../../" />
+    <meta name="groc-document-path" content="_static\ui\base\handlers\loadCss.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\ui\base\handlers\loadCss.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="loadcss">
+                            <a href="#loadcss" class="anchor"></a>LoadCss</h1>
+                        <p>This class allows for async loading of stylesheet assets.
+                            Unfortunately due to the nature of async loading of
+                            in certain browsers no clear event is fired for when
+                            the asset has finished loading (unlike JS assets which
+                            do). This limits the use of this method to only certain
+                            circumstances.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>loadCss; loadCss =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(url)</span>{</span>
+                        <span class="hljs-keyword">var</span>link; link = document.createElement(
+                        <span class="hljs-string">'link'</span>); link.type =
+                        <span class="hljs-string">'text/css'</span>; link.rel =
+                        <span class="hljs-string">'stylesheet'</span>; link.href = url; document.getElementsByTagName(
+                        <span class="hljs-string">'head'</span>)[
+                        <span class="hljs-number">0</span>].appendChild(link);
+                        <span class="hljs-keyword">return</span>link; }; window.loadCss = loadCss; }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9hZENzcy5pbml0LmpzIiwic291cmNlcyI6WyJsb2FkQ3NzLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7OztDQUFBO0NBQUE7Q0FBQTtDQUFBLEtBQUEsQ0FBQTs7Q0FBQSxDQVNBLENBQVUsSUFBVixFQUFXO0NBQ1QsR0FBQSxJQUFBO0NBQUEsRUFBTyxDQUFQLEVBQU8sRUFBUSxLQUFSO0NBQVAsRUFDWSxDQUFaLE1BREE7Q0FBQSxFQUVBLENBQUEsUUFGQTtDQUFBLEVBR1ksQ0FBWjtDQUhBLEdBTUEsRUFBQSxFQUFRLEdBQVIsU0FBQTtDQUdBLEdBQUEsT0FBTztDQW5CVCxFQVNVOztDQVRWLENBc0JBLENBQWlCLEdBQVgsQ0FBTjtDQXRCQSJ9</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../toc.js"></script>
+    <script src="../../../../assets/libs.js"></script>
+    <script src="../../../../assets/behavior.js"></script>
+</body>
+</html>

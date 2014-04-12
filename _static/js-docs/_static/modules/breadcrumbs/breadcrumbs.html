@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Breadcrumbs - breadcrumbs.init.js</title>
+        <link rel="stylesheet" href="../../../assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <meta name="groc-relative-root" content="../../../" />
+        <meta name="groc-document-path" content="_static\modules\breadcrumbs\breadcrumbs.init.js"
+        />
+    </head>
+    <body>
+        <div id="file-area">
+            <div id="meta">
+                <code class="file-path">
+                    _static\modules\breadcrumbs\breadcrumbs.init.js
+                </code>
+            </div>
+            <div id="document">
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h1 id="breadcrumbs">
+                                <a href="#breadcrumbs" class="anchor"></a>Breadcrumbs</h1>
+                            <p>Breadcrumbs module with hover/click view state for
+                                sub pages. This script is currently loaded as an
+                                init for a couple of reasons: Size does not justify
+                                AMD It will be on almost all pages</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">(
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>$el, Breadcrumbs, bc; Breadcrumbs = (
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">var</span>self; self =
+                            <span class="hljs-keyword">void</span>
+                            <span class="hljs-number">0</span>;
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="constructor">
+                                <a href="#constructor" class="anchor"></a>Constructor</h2>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-title">Breadcrumbs</span>
+                                <span class="hljs-params">(el)</span>{</span>
+                            self =
+                            <span class="hljs-keyword">this</span>;
+                            <span class="hljs-keyword">this</span>.$el = $(el);
+                            <span class="hljs-keyword">this</span>.bind(); }
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-bind">
+                                <a href="#this-bind" class="anchor"></a>this.bind</h2>
+                            <p>Binds up events to show/hide menu</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Breadcrumbs.prototype.bind =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            self.$menus = $(
+                            <span class="hljs-string">'li&gt;ul'</span>, self.$el).parent(
+                            <span class="hljs-string">'li'</span>); self.$menus.bind(
+                            <span class="hljs-string">'click'</span>, self.click); self.$menus.bind(
+                            <span class="hljs-string">'mouseenter'</span>, self.mouseenter); $(document).bind(
+                            <span class="hljs-string">'click'</span>, self.close); PubSub.subscribe(
+                            <span class="hljs-string">'DomChange'</span>, self.scrollEvent);
+                            <span class="hljs-keyword">return</span>$(document).bind(
+                            <span class="hljs-string">'contScroll'</span>, self.scrollEvent); };
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-scrolleven">
+                                <a href="#this-scrolleven" class="anchor"></a>this.scrollEven</h2>
+                            <p>Fired on
+                                <code>document</code>scroll event. This method will update
+                                the
+                                <code>params</code>object before checking if the module
+                                should be fixed.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Breadcrumbs.prototype.scrollEvent =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">(e)</span>{</span>
+                            <span class="hljs-keyword">if</span>(Response.viewportW() &lt;
+                            <span class="hljs-number">768</span>) {
+                            <span class="hljs-keyword">return</span>
+                            <span class="hljs-literal">true</span>; } self.getParams();
+                            <span class="hljs-keyword">if</span>(self.params.scrolled &gt; self.params.fromTop)
+                            {
+                            <span class="hljs-keyword">return</span>self.fixMenu(); }
+                            <span class="hljs-keyword">else</span>{
+                            <span class="hljs-keyword">return</span>self.unFixMenu(); } };
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-fixmenu">
+                                <a href="#this-fixmenu" class="anchor"></a>this.fixMenu</h2>
+                            <p>This method will fix the menu to the top of the viewport
+                                whilst also ensuring the parent element does not
+                                collapse entirely.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Breadcrumbs.prototype.fixMenu =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">if</span>(self.$el.hasClass(
+                            <span class="hljs-string">'fixed'</span>)) {
+                            <span class="hljs-keyword">return</span>
+                            <span class="hljs-literal">true</span>; } self.$el.parent().css(
+                            <span class="hljs-string">'height'</span>, self.$el.parent().height());
+                            <span class="hljs-keyword">return</span>self.$el.addClass(
+                            <span class="hljs-string">'fixed'</span>); };
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-unfixmenu">
+                                <a href="#this-unfixmenu" class="anchor"></a>this.unFixMenu</h2>
+                            <p>Will remove any attributes set by
+                                <code>this.fixMenu</code>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Breadcrumbs.prototype.unFixMenu =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            self.$el.removeClass(
+                            <span class="hljs-string">'fixed'</span>);
+                            <span class="hljs-keyword">return</span>self.$el.parent().css(
+                            <span class="hljs-string">'height'</span>,
+                            <span class="hljs-string">''</span>); };
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-getparams">
+                                <a href="#this-getparams" class="anchor"></a>this.getParams</h2>
+                            <p>Parameters required to calculate if and how the module
+                                should be fixed.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Breadcrumbs.prototype.getParams =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            self.params = {}; self.params.fromTop = self.$el.parent().offset().top;
+                            <span class="hljs-keyword">return</span>self.params.scrolled = $(document).scrollTop();
+                            };
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-close">
+                                <a href="#this-close" class="anchor"></a>this.close</h2>
+                            <p>Called to close any shown menus by removing
+                                <code>show</code>class</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Breadcrumbs.prototype.close =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">()</span>{</span>
+                            <span class="hljs-keyword">return</span>self.$menus.removeClass(
+                            <span class="hljs-string">'show'</span>); };
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-click">
+                                <a href="#this-click" class="anchor"></a>this.click</h2>
+                            <p>Handles click events on top menu items (li). On click
+                                a
+                                <code>show</code>class will be added to that element
+                                whilst also being removed from any other items
+                                currently with the class
+                                <code>show</code>.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Breadcrumbs.prototype.click =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">(e)</span>{</span>
+                            <span class="hljs-keyword">var</span>$
+                            <span class="hljs-keyword">this</span>; e.preventDefault(); e.stopPropagation();
+                            $
+                            <span class="hljs-keyword">this</span>= $(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-keyword">if</span>($
+                            <span class="hljs-keyword">this</span>.hasClass(
+                            <span class="hljs-string">'show'</span>)) {
+                            <span class="hljs-keyword">return</span>self.close(); }
+                            <span class="hljs-keyword">else</span>{ self.close();
+                            <span class="hljs-keyword">return</span>$
+                            <span class="hljs-keyword">this</span>.addClass(
+                            <span class="hljs-string">'show'</span>); } };
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="this-mouseenter">
+                                <a href="#this-mouseenter" class="anchor"></a>this.mouseenter</h2>
+                            <p>Handles mouse entry event on top menu items (li) Will
+                                remove
+                                <code>show</code>class from any currently shown item
+                                to avoid conflict.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">Breadcrumbs.prototype.mouseenter =
+                            <span class="hljs-function">
+                                <span class="hljs-keyword">function</span>
+                                <span class="hljs-params">(e)</span>{</span>
+                            <span class="hljs-keyword">var</span>$
+                            <span class="hljs-keyword">this</span>; $
+                            <span class="hljs-keyword">this</span>= $(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-keyword">if</span>($
+                            <span class="hljs-keyword">this</span>.hasClass(
+                            <span class="hljs-string">'show'</span>)) {
+                            <span class="hljs-keyword">return</span>
+                            <span class="hljs-literal">false</span>; }
+                            <span class="hljs-keyword">return</span>self.close(); };
+                            <span class="hljs-keyword">return</span>Breadcrumbs; })();
+                        </pre>
+                    </div>
+                </div>
+                <div class="segment">
+                    <div class="comments ">
+                        <div class="wrapper">
+                            <h2 id="init">
+                                <a href="#init" class="anchor"></a>Init</h2>
+                            <p>if there is at least one node on the page, initialize.</p>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre class="wrapper">$el = $(
+                            <span class="hljs-string">'.breadcrumbs'</span>);
+                            <span class="hljs-keyword">if</span>($el.length &gt;
+                            <span class="hljs-number">0</span>) { bc =
+                            <span class="hljs-keyword">new</span>Breadcrumbs($el); } }).call(
+                            <span class="hljs-keyword">this</span>);
+                            <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnJlYWRjcnVtYnMuaW5pdC5qcyIsInNvdXJjZXMiOlsiYnJlYWRjcnVtYnMuaW5pdC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBQUE7Q0FBQTtDQUFBO0NBQUEsS0FBQSxjQUFBOztDQUFBLENBU007Q0FDSixHQUFBLElBQUE7O0NBQUEsRUFBTyxDQUFQLEVBQUE7O0NBRUE7OztDQUZBOztDQUthLENBQUEsQ0FBQSxDQUFBLGlCQUFDO0NBRVosRUFBTyxDQUFQLEVBQUE7Q0FBQSxDQUdRLENBQVIsQ0FBQyxFQUFEO0NBSEEsR0FLQyxFQUFEO0NBWkYsSUFLYTs7Q0FTYjs7OztDQWRBOztDQUFBLEVBa0JNLENBQU4sS0FBTTtDQUNKLENBQXlCLENBQVgsQ0FBVixFQUFKLENBQWM7Q0FBZCxDQUUwQixFQUF0QixDQUFKLENBQUEsQ0FBQTtDQUZBLENBRytCLEVBQTNCLEVBQUosSUFBQSxFQUFBO0NBSEEsQ0FJMEIsRUFBMUIsQ0FBQSxDQUFBLENBQUEsQ0FBQTtDQUpBLENBTThCLEVBQUksRUFBbEMsR0FBQSxFQUFBO0NBQ0EsQ0FBK0IsRUFBL0IsSUFBQSxHQUFBLENBQUEsQ0FBQTtDQTFCRixJQWtCTTs7Q0FVTjs7Ozs7Q0E1QkE7O0NBQUEsRUFpQ2EsTUFBQyxFQUFkO0NBQ0UsRUFBc0MsQ0FBdkIsRUFBZixFQUF1QixDQUFSO0NBQWYsR0FBQSxXQUFPO1FBQVA7Q0FBQSxHQUNJLEVBQUosR0FBQTtDQUVBLEVBQTBCLENBQXZCLEVBQUgsQ0FBQSxDQUFHO0NBQ0ksR0FBRCxHQUFKLFFBQUE7TUFERixFQUFBO0NBR08sR0FBRCxLQUFKLE1BQUE7UUFQUztDQWpDYixJQWlDYTs7Q0FTYjs7Ozs7Q0ExQ0E7O0NBQUEsRUErQ1MsSUFBVCxFQUFTO0NBQ1AsRUFBdUIsQ0FBUixFQUFmLENBQWUsQ0FBQTtDQUFmLEdBQUEsV0FBTztRQUFQO0NBQUEsQ0FFZ0MsQ0FBeEIsQ0FBSixFQUFKLEVBQUE7Q0FDSyxFQUFHLENBQUosR0FBSixDQUFBLEtBQUE7Q0FuREYsSUErQ1M7O0NBTVQ7Ozs7Q0FyREE7O0NBQUEsRUF5RFcsTUFBWDtDQUNFLEVBQVEsQ0FBSixFQUFKLENBQUEsSUFBQTtDQUNLLENBQTJCLENBQXhCLENBQUosRUFBSixFQUFBLEtBQUE7Q0EzREYsSUF5RFc7O0NBSVg7Ozs7Q0E3REE7O0NBQUEsRUFpRVcsTUFBWDtDQUNFLENBQUEsQ0FBYyxDQUFWLEVBQUo7Q0FBQSxFQUNzQixDQUFsQixFQUFKLENBQUE7Q0FDSyxFQUFrQixDQUFuQixFQUFPLEVBQVgsQ0FBdUIsSUFBdkI7Q0FwRUYsSUFpRVc7O0NBS1g7Ozs7Q0F0RUE7O0NBQUEsRUEwRU8sRUFBUCxJQUFPO0NBQ0EsR0FBRCxFQUFPLEtBQVgsRUFBQTtDQTNFRixJQTBFTzs7Q0FHUDs7Ozs7OztDQTdFQTs7Q0FBQSxFQW9GTyxFQUFQLElBQVE7Q0FDTixJQUFBLEtBQUE7Q0FBQSxLQUFBLFFBQUE7Q0FBQSxLQUNBLFNBQUE7Q0FEQSxFQUdRLENBQUEsQ0FBUixDQUFBO0NBRUEsR0FBRyxDQUFLLENBQVIsRUFBRztDQUNJLEdBQUQsQ0FBSixVQUFBO01BREYsRUFBQTtDQUdFLEdBQUksQ0FBSixHQUFBO0NBQ00sSUFBRCxDQUFMLEVBQUEsT0FBQTtRQVZHO0NBcEZQLElBb0ZPOztDQVlQOzs7Ozs7Q0FoR0E7O0NBQUEsRUFzR1ksTUFBQyxDQUFiO0NBQ0UsSUFBQSxLQUFBO0NBQUEsRUFBUSxDQUFBLENBQVIsQ0FBQTtDQUVBLEdBQWdCLENBQUssQ0FBckIsRUFBZ0I7Q0FBaEIsSUFBQSxVQUFPO1FBRlA7Q0FJSyxHQUFELENBQUosUUFBQTtDQTNHRixJQXNHWTs7Q0F0R1o7O0NBVkY7O0NBd0hBOzs7O0NBeEhBOztDQUFBLENBNEhBLENBQUEsV0FBTTs7Q0FDTixDQUFBLENBQU0sQ0FBSCxFQUFBO0NBQ0QsQ0FBQSxDQUFTLENBQVQsT0FBUztJQTlIWDtDQUFBIn0=</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../toc.js"></script>
+        <script src="../../../assets/libs.js"></script>
+        <script src="../../../assets/behavior.js"></script>
+    </body>
+</html>,
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breadcrumbs - breadcrumbs.init.js</title>
+    <link rel="stylesheet" href="../../../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="groc-relative-root" content="../../../" />
+    <meta name="groc-document-path" content="_static\modules\breadcrumbs\breadcrumbs.init.js"
+    />
+</head>
+<body>
+    <div id="file-area">
+        <div id="meta">
+            <code class="file-path">
+                _static\modules\breadcrumbs\breadcrumbs.init.js
+            </code>
+        </div>
+        <div id="document">
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h1 id="breadcrumbs">
+                            <a href="#breadcrumbs" class="anchor"></a>Breadcrumbs</h1>
+                        <p>Breadcrumbs module with hover/click view state for sub
+                            pages. This script is currently loaded as an init for
+                            a couple of reasons: Size does not justify AMD It will
+                            be on almost all pages</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">(
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>$el, Breadcrumbs, bc; Breadcrumbs = (
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">var</span>self; self =
+                        <span class="hljs-keyword">void</span>
+                        <span class="hljs-number">0</span>;
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="constructor">
+                            <a href="#constructor" class="anchor"></a>Constructor</h2>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-title">Breadcrumbs</span>
+                            <span class="hljs-params">(el)</span>{</span>
+                        self =
+                        <span class="hljs-keyword">this</span>;
+                        <span class="hljs-keyword">this</span>.$el = $(el);
+                        <span class="hljs-keyword">this</span>.bind(); }
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-bind">
+                            <a href="#this-bind" class="anchor"></a>this.bind</h2>
+                        <p>Binds up events to show/hide menu</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Breadcrumbs.prototype.bind =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self.$menus = $(
+                        <span class="hljs-string">'li&gt;ul'</span>, self.$el).parent(
+                        <span class="hljs-string">'li'</span>); self.$menus.bind(
+                        <span class="hljs-string">'click'</span>, self.click); self.$menus.bind(
+                        <span class="hljs-string">'mouseenter'</span>, self.mouseenter); $(document).bind(
+                        <span class="hljs-string">'click'</span>, self.close); PubSub.subscribe(
+                        <span class="hljs-string">'DomChange'</span>, self.scrollEvent);
+                        <span class="hljs-keyword">return</span>$(document).bind(
+                        <span class="hljs-string">'contScroll'</span>, self.scrollEvent); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-scrolleven">
+                            <a href="#this-scrolleven" class="anchor"></a>this.scrollEven</h2>
+                        <p>Fired on
+                            <code>document</code>scroll event. This method will update
+                            the
+                            <code>params</code>object before checking if the module should
+                            be fixed.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Breadcrumbs.prototype.scrollEvent =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">if</span>(Response.viewportW() &lt;
+                        <span class="hljs-number">768</span>) {
+                        <span class="hljs-keyword">return</span>
+                        <span class="hljs-literal">true</span>; } self.getParams();
+                        <span class="hljs-keyword">if</span>(self.params.scrolled &gt; self.params.fromTop)
+                        {
+                        <span class="hljs-keyword">return</span>self.fixMenu(); }
+                        <span class="hljs-keyword">else</span>{
+                        <span class="hljs-keyword">return</span>self.unFixMenu(); } };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-fixmenu">
+                            <a href="#this-fixmenu" class="anchor"></a>this.fixMenu</h2>
+                        <p>This method will fix the menu to the top of the viewport
+                            whilst also ensuring the parent element does not collapse
+                            entirely.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Breadcrumbs.prototype.fixMenu =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">if</span>(self.$el.hasClass(
+                        <span class="hljs-string">'fixed'</span>)) {
+                        <span class="hljs-keyword">return</span>
+                        <span class="hljs-literal">true</span>; } self.$el.parent().css(
+                        <span class="hljs-string">'height'</span>, self.$el.parent().height());
+                        <span class="hljs-keyword">return</span>self.$el.addClass(
+                        <span class="hljs-string">'fixed'</span>); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-unfixmenu">
+                            <a href="#this-unfixmenu" class="anchor"></a>this.unFixMenu</h2>
+                        <p>Will remove any attributes set by
+                            <code>this.fixMenu</code>
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Breadcrumbs.prototype.unFixMenu =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self.$el.removeClass(
+                        <span class="hljs-string">'fixed'</span>);
+                        <span class="hljs-keyword">return</span>self.$el.parent().css(
+                        <span class="hljs-string">'height'</span>,
+                        <span class="hljs-string">''</span>); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-getparams">
+                            <a href="#this-getparams" class="anchor"></a>this.getParams</h2>
+                        <p>Parameters required to calculate if and how the module
+                            should be fixed.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Breadcrumbs.prototype.getParams =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        self.params = {}; self.params.fromTop = self.$el.parent().offset().top;
+                        <span class="hljs-keyword">return</span>self.params.scrolled = $(document).scrollTop();
+                        };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-close">
+                            <a href="#this-close" class="anchor"></a>this.close</h2>
+                        <p>Called to close any shown menus by removing
+                            <code>show</code>class</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Breadcrumbs.prototype.close =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">()</span>{</span>
+                        <span class="hljs-keyword">return</span>self.$menus.removeClass(
+                        <span class="hljs-string">'show'</span>); };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-click">
+                            <a href="#this-click" class="anchor"></a>this.click</h2>
+                        <p>Handles click events on top menu items (li). On click a
+                            <code>show</code>class will be added to that element whilst
+                            also being removed from any other items currently with
+                            the class
+                            <code>show</code>.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Breadcrumbs.prototype.click =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">var</span>$
+                        <span class="hljs-keyword">this</span>; e.preventDefault(); e.stopPropagation(); $
+                        <span class="hljs-keyword">this</span>= $(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-keyword">if</span>($
+                        <span class="hljs-keyword">this</span>.hasClass(
+                        <span class="hljs-string">'show'</span>)) {
+                        <span class="hljs-keyword">return</span>self.close(); }
+                        <span class="hljs-keyword">else</span>{ self.close();
+                        <span class="hljs-keyword">return</span>$
+                        <span class="hljs-keyword">this</span>.addClass(
+                        <span class="hljs-string">'show'</span>); } };
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="this-mouseenter">
+                            <a href="#this-mouseenter" class="anchor"></a>this.mouseenter</h2>
+                        <p>Handles mouse entry event on top menu items (li) Will remove
+                            <code>show</code>class from any currently shown item to avoid
+                            conflict.
+                        </p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">Breadcrumbs.prototype.mouseenter =
+                        <span class="hljs-function">
+                            <span class="hljs-keyword">function</span>
+                            <span class="hljs-params">(e)</span>{</span>
+                        <span class="hljs-keyword">var</span>$
+                        <span class="hljs-keyword">this</span>; $
+                        <span class="hljs-keyword">this</span>= $(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-keyword">if</span>($
+                        <span class="hljs-keyword">this</span>.hasClass(
+                        <span class="hljs-string">'show'</span>)) {
+                        <span class="hljs-keyword">return</span>
+                        <span class="hljs-literal">false</span>; }
+                        <span class="hljs-keyword">return</span>self.close(); };
+                        <span class="hljs-keyword">return</span>Breadcrumbs; })();
+                    </pre>
+                </div>
+            </div>
+            <div class="segment">
+                <div class="comments ">
+                    <div class="wrapper">
+                        <h2 id="init">
+                            <a href="#init" class="anchor"></a>Init</h2>
+                        <p>if there is at least one node on the page, initialize.</p>
+                    </div>
+                </div>
+                <div class="code">
+                    <pre class="wrapper">$el = $(
+                        <span class="hljs-string">'.breadcrumbs'</span>);
+                        <span class="hljs-keyword">if</span>($el.length &gt;
+                        <span class="hljs-number">0</span>) { bc =
+                        <span class="hljs-keyword">new</span>Breadcrumbs($el); } }).call(
+                        <span class="hljs-keyword">this</span>);
+                        <span class="hljs-comment">//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnJlYWRjcnVtYnMuaW5pdC5qcyIsInNvdXJjZXMiOlsiYnJlYWRjcnVtYnMuaW5pdC5jb2ZmZWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBQUE7Q0FBQTtDQUFBO0NBQUEsS0FBQSxjQUFBOztDQUFBLENBU007Q0FDSixHQUFBLElBQUE7O0NBQUEsRUFBTyxDQUFQLEVBQUE7O0NBRUE7OztDQUZBOztDQUthLENBQUEsQ0FBQSxDQUFBLGlCQUFDO0NBRVosRUFBTyxDQUFQLEVBQUE7Q0FBQSxDQUdRLENBQVIsQ0FBQyxFQUFEO0NBSEEsR0FLQyxFQUFEO0NBWkYsSUFLYTs7Q0FTYjs7OztDQWRBOztDQUFBLEVBa0JNLENBQU4sS0FBTTtDQUNKLENBQXlCLENBQVgsQ0FBVixFQUFKLENBQWM7Q0FBZCxDQUUwQixFQUF0QixDQUFKLENBQUEsQ0FBQTtDQUZBLENBRytCLEVBQTNCLEVBQUosSUFBQSxFQUFBO0NBSEEsQ0FJMEIsRUFBMUIsQ0FBQSxDQUFBLENBQUEsQ0FBQTtDQUpBLENBTThCLEVBQUksRUFBbEMsR0FBQSxFQUFBO0NBQ0EsQ0FBK0IsRUFBL0IsSUFBQSxHQUFBLENBQUEsQ0FBQTtDQTFCRixJQWtCTTs7Q0FVTjs7Ozs7Q0E1QkE7O0NBQUEsRUFpQ2EsTUFBQyxFQUFkO0NBQ0UsRUFBc0MsQ0FBdkIsRUFBZixFQUF1QixDQUFSO0NBQWYsR0FBQSxXQUFPO1FBQVA7Q0FBQSxHQUNJLEVBQUosR0FBQTtDQUVBLEVBQTBCLENBQXZCLEVBQUgsQ0FBQSxDQUFHO0NBQ0ksR0FBRCxHQUFKLFFBQUE7TUFERixFQUFBO0NBR08sR0FBRCxLQUFKLE1BQUE7UUFQUztDQWpDYixJQWlDYTs7Q0FTYjs7Ozs7Q0ExQ0E7O0NBQUEsRUErQ1MsSUFBVCxFQUFTO0NBQ1AsRUFBdUIsQ0FBUixFQUFmLENBQWUsQ0FBQTtDQUFmLEdBQUEsV0FBTztRQUFQO0NBQUEsQ0FFZ0MsQ0FBeEIsQ0FBSixFQUFKLEVBQUE7Q0FDSyxFQUFHLENBQUosR0FBSixDQUFBLEtBQUE7Q0FuREYsSUErQ1M7O0NBTVQ7Ozs7Q0FyREE7O0NBQUEsRUF5RFcsTUFBWDtDQUNFLEVBQVEsQ0FBSixFQUFKLENBQUEsSUFBQTtDQUNLLENBQTJCLENBQXhCLENBQUosRUFBSixFQUFBLEtBQUE7Q0EzREYsSUF5RFc7O0NBSVg7Ozs7Q0E3REE7O0NBQUEsRUFpRVcsTUFBWDtDQUNFLENBQUEsQ0FBYyxDQUFWLEVBQUo7Q0FBQSxFQUNzQixDQUFsQixFQUFKLENBQUE7Q0FDSyxFQUFrQixDQUFuQixFQUFPLEVBQVgsQ0FBdUIsSUFBdkI7Q0FwRUYsSUFpRVc7O0NBS1g7Ozs7Q0F0RUE7O0NBQUEsRUEwRU8sRUFBUCxJQUFPO0NBQ0EsR0FBRCxFQUFPLEtBQVgsRUFBQTtDQTNFRixJQTBFTzs7Q0FHUDs7Ozs7OztDQTdFQTs7Q0FBQSxFQW9GTyxFQUFQLElBQVE7Q0FDTixJQUFBLEtBQUE7Q0FBQSxLQUFBLFFBQUE7Q0FBQSxLQUNBLFNBQUE7Q0FEQSxFQUdRLENBQUEsQ0FBUixDQUFBO0NBRUEsR0FBRyxDQUFLLENBQVIsRUFBRztDQUNJLEdBQUQsQ0FBSixVQUFBO01BREYsRUFBQTtDQUdFLEdBQUksQ0FBSixHQUFBO0NBQ00sSUFBRCxDQUFMLEVBQUEsT0FBQTtRQVZHO0NBcEZQLElBb0ZPOztDQVlQOzs7Ozs7Q0FoR0E7O0NBQUEsRUFzR1ksTUFBQyxDQUFiO0NBQ0UsSUFBQSxLQUFBO0NBQUEsRUFBUSxDQUFBLENBQVIsQ0FBQTtDQUVBLEdBQWdCLENBQUssQ0FBckIsRUFBZ0I7Q0FBaEIsSUFBQSxVQUFPO1FBRlA7Q0FJSyxHQUFELENBQUosUUFBQTtDQTNHRixJQXNHWTs7Q0F0R1o7O0NBVkY7O0NBd0hBOzs7O0NBeEhBOztDQUFBLENBNEhBLENBQUEsV0FBTTs7Q0FDTixDQUFBLENBQU0sQ0FBSCxFQUFBO0NBQ0QsQ0FBQSxDQUFTLENBQVQsT0FBUztJQTlIWDtDQUFBIn0=</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../toc.js"></script>
+    <script src="../../../assets/libs.js"></script>
+    <script src="../../../assets/behavior.js"></script>
+</body>
+</html>

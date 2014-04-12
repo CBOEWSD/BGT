@@ -1,0 +1,27 @@
+{
+  "widgetWrapper": true,
+  "classes": [
+    "slimright"
+  ],
+  "column1": [
+    {
+      "widgets/widget-title": {
+        "widget": {
+          "title": "Futures",
+          "promo": {
+            "url": "#",
+            "text": "View All"
+          }
+        }
+      }
+    },
+    {
+      "widgets/table/table": "row4/table.json"
+    }
+  ],
+  "column2": [
+    {
+      "ads/square_300/block": ""
+    }
+  ]
+}

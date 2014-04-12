@@ -114,6 +114,11 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
       &:hover, &:active {
         color: $colorGrey1;
       }
+
+      &.button {
+        color: #fff;
+        text-transform: none;
+      }
     }
 
     .optionshub {

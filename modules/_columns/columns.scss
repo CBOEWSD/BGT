@@ -6,11 +6,28 @@
 @import './ui/base/_includes/grid';
 @import './ui/base/settings';
 
-$module: '.wrap-columns';
+$module: '.wrap-columns-';
 
-#{$module} {
-  @include innerRow();
-  margin-bottom: 20px;
+#{$module}outer {
+  margin: 0 -15px;
+
+  @media all and (max-width: $screenSmallMax) {
+    margin: 0;
+  }
+}
+
+#{$module}inner {
+  margin: 0 0 20px;
+  table-layout: fixed;
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px 0;
+
+  * {
+    border-collapse: initial;
+    border-spacing: 0;
+  }
 
   &.margin-ten {
     margin-bottom: 10px;
@@ -19,20 +36,32 @@ $module: '.wrap-columns';
     margin-bottom: 0;
   }
 
+  .column {
+    display: table-cell;
+    vertical-align: top;
+  }
+
   &.two {
     .column {
-      @include column(6);
+      width: 50%;
     }
 
     &.slimright {
       .column {
         &:first-child {
-          @include column(8);
+          width: 66.66666%;
         }
         &:last-child {
-          @include column(4);
+          // Accounting for additional spacing (15px)
+          width: 32.6%;
         }
       }
+    }
+  }
+
+  &.three {
+    .column {
+      width: 33.3333%;
     }
   }
 
@@ -70,8 +99,12 @@ $module: '.wrap-columns';
   }
 
   @media all and (max-width: $screenSmallMax) {
+    display: block;
+
     .column {
       margin: 30px 0;
+      width: 100%!important;
+      display: block;
 
       &:first-child {
         margin-top: 0;

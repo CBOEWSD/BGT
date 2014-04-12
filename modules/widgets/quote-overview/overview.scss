@@ -1,0 +1,32 @@
+/*
+  Module: Index Overview
+  Description: Creates a list of overview items
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/fadein';
+
+$module: '.quote-overview';
+
+#{$module} {
+  .data {
+    .set {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      padding: 5px 0;
+      border-bottom: 1px solid $colorGrey2;
+
+      .key, .value {
+        display: table-cell;
+      }
+
+      .value {
+        text-align: right;
+      }
+    }
+  }
+}

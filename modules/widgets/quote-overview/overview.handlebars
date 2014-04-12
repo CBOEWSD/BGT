@@ -1,0 +1,30 @@
+<div class="quote-overview">
+  {{> widgets/quote-overview/summary}}
+
+  <div class="tabs-wrapper">
+    <div class="tabs-bar">
+      {{#each this}}
+        <div class="tab {{#if @first}} active {{/if}}" data-tabid="{{@index}}">
+          {{@key}}
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="tabs-content">
+      {{#each this}}
+        <dl class="tab data {{#if @first}} active {{/if}}" data-tabid="{{@index}}">
+          {{#each this}}
+            <div class="set">
+              <dt class="key">
+                {{@key}}
+              </dt>
+              <dd class="value" data-numericcolor="{{this}}">
+                {{this}}
+              </dd>
+            </div>
+          {{/each}}
+        </dl>
+      {{/each}}
+    </div>
+  </div>
+</div>

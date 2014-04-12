@@ -1,16 +1,18 @@
-<div class="wrap-columns two {{#each classes}} {{this}} {{/each}}">
-  <div class="column">
-    {{#each column1}}
-      <div class="component">
-        {{{this}}}
-      </div>
-    {{/each}}
-  </div>
-  <div class="column">
-    {{#each column2}}
-      <div class="component">
-        {{{this}}}
-      </div>
-    {{/each}}
+<div class="wrap-columns-outer">
+  <div class="wrap-columns-inner two {{#each classes}} {{this}} {{/each}}">
+    <div class="column {{#if widgetWrapper}} widget {{/if}}">
+      {{#each column1}}
+        <div class="component">
+          {{{this}}}
+        </div>
+      {{/each}}
+    </div>
+    <div class="column {{#if widgetWrapper}} widget {{/if}}">
+      {{#each column2}}
+        <div class="component">
+          {{{this}}}
+        </div>
+      {{/each}}
+    </div>
   </div>
 </div>

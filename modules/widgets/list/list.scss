@@ -50,7 +50,7 @@ $module: '.widget-list';
         @include clearfix();
 
         &:hover, &:active {
-          color: $colorGrey1;
+          color: $colorBlue1;
         }
       }
 
@@ -71,6 +71,18 @@ $module: '.widget-list';
   }
 
   &.simple {
+  }
+
+  &.smaller {
+    li {
+      padding: 7px 0;
+    }
+
+    h2 {
+      font: {
+        size: 1em;
+      }
+    }
   }
 
   &.links {

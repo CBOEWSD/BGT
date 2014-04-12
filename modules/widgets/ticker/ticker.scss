@@ -1,0 +1,115 @@
+/*
+  Module: Ticker
+  Description: Ticker items and wrapper (bar) component styling
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+
+$module: '.ticker-';
+
+#{$module}bar {
+  position: relative;
+  padding: 0 10px;
+
+  &.loaded {
+    .control {
+      @include opacity(1);
+    }
+  }
+
+  .control {
+    @include opacity(0);
+    position: absolute;
+    //text-indent: -5000em;
+    background: $colorBlue1;
+    cursor: pointer;
+    @include transition-property(opacity, background);
+    @include transition-duration(1s);
+    text-align: center;
+    padding: 6px 4px;
+    top: 50%;
+    margin-top: -13px;
+
+    &.left {
+      left: -20px;
+    }
+    &.right {
+      right: -20px;
+    }
+
+    &.disabled {
+      background: $colorGrey1;
+      @include opacity(0.2);
+      cursor: default;
+    }
+  }
+
+
+  .bar {
+    overflow: hidden;
+    white-space: nowrap;
+
+    .inner{
+      float:left;
+    }
+
+    #{$module}item {
+      border-right: 1px solid $colorGrey2;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    @media all and (max-width: $screenSmallMax) {
+      //overflow-x: scroll;
+    }
+  }
+}
+
+#{$module}item {
+  display: inline-block;
+  padding: 0 15px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  span {
+    display: block;
+  }
+
+  .symbol {
+    font: {
+      size: .8em;
+    }
+  }
+
+  .volume {
+    font: {
+      size: .8em;
+    }
+  }
+
+  .price {
+    font: {
+      size: 1.2em;
+      weight: 700;
+    }
+  }
+
+  .change {
+    font: {
+      size: .9em;
+      weight: 700;
+    }
+    text-align: right;
+  }
+}

@@ -1,40 +1,50 @@
 {
-    "widget": {
-        "title": "Options Blog",
-        "promo": {
-            "class": "optionshub",
-            "url": "#"
-        }
+  "widget": {
+    "title": "Options Blog",
+    "promo": {
+      "class": "optionshub",
+      "url": "#"
+    }
+  },
+  "items": [
+    {
+      "classes": [
+        "focus"
+      ],
+      "link": {
+        "url": "#"
+      },
+      "thumbnail": {
+        "src": "/ui/assets/images/blog/thumb-free-cboe-risk-management.jpg",
+        "classes": [
+          "hideonmobile"
+        ]
+      },
+      "title": "FREE CBOE Risk Management Conference Day 2 Recap"
     },
-    "items": [{
-        "classes": ["focus"],
-        "link": {
-            "url": "#"
-        },
-        "thumbnail": {
-            "src": "/ui/assets/images/blog/thumb-free-cboe-risk-management.jpg",
-            "classes": ["hideonmobile"]
-        },
-        "title": "FREE CBOE Risk Management Conference Day 2 Recap"
-    }, {
-        "link": {
-            "url": "#"
-        },
-        "title": "CBOE And C2 To List Options On Twitter (TWTR) On November 15"
-    }, {
-        "link": {
-            "url": "#"
-        },
-        "title": "CBOE Russel 2000 Volatility Index Futures And Options Launch Dates Announced"
-    }, {
-        "link": {
-            "url": "#"
-        },
-        "title": "CBOE Holdings Reports October Volume"
-    }, {
-        "link": {
-            "url": "#"
-        },
-        "title": "CBOE And AFE To Launch Futures And Options"
-    }]
+    {
+      "link": {
+        "url": "#"
+      },
+      "title": "CBOE And C2 To List Options On Twitter (TWTR) On November 15"
+    },
+    {
+      "link": {
+        "url": "#"
+      },
+      "title": "CBOE Russel 2000 Volatility Index Futures And Options Launch Dates Announced"
+    },
+    {
+      "link": {
+        "url": "#"
+      },
+      "title": "CBOE Holdings Reports October Volume"
+    },
+    {
+      "link": {
+        "url": "#"
+      },
+      "title": "CBOE And AFE To Launch Futures And Options"
+    }
+  ]
 }

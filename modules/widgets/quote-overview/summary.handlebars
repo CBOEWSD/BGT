@@ -1,0 +1,22 @@
+<div class="quote-summary">
+  {{#if Price.last}}
+  <div class="col last">
+    <span class="key">
+      LAST
+    </span>
+    <span class="value">
+      {{Price.last}}
+    </span>
+  </div>
+  {{/if}}
+  {{#if Price.change}}
+  <div class="col change">
+    <span class="key">
+      CHANGE
+    </span>
+    <span class="value" data-numericcolor="{{Price.change}}">
+      {{Price.change}}({{Price.changePCT}}%)
+    </span>
+  </div>
+  {{/if}}
+</div>

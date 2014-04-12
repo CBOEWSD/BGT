@@ -1,0 +1,30 @@
+{
+  "widgetWrapper": true,
+  "classes": [
+    "slimright"
+  ],
+  "column1": [
+    {
+      "widgets/widget-title": {
+        "widget": {
+          "title": "Most Active Options"
+        }
+      }
+    },
+    {
+      "widgets/table/table": "row3/table.json"
+    }
+  ],
+  "column2": [
+    {
+      "widgets/widget-title": {
+        "widget": {
+          "title": "Exchange Volume"
+        }
+      }
+    },
+    {
+      "widgets/table/table": "row3/volume.json"
+    }
+  ]
+}

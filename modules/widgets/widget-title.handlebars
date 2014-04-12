@@ -6,7 +6,8 @@
     <div class="promo">
       <a
       href="{{widget.promo.url}}"
-      class="{{#if widget.promo.class}}icon-logo {{widget.promo.class}}{{/if}}">
+      class="{{#if widget.promo.class}}icon-logo {{widget.promo.class}}{{/if}}
+      {{#each widget.promo.classes}} {{this}} {{/each}}">
       {{{widget.promo.text}}}
     </a>
     </div>

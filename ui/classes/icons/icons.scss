@@ -94,8 +94,20 @@ $classPrefix: '.icon-';
     background-position: -17px -51px;
   }
 
+  &.down {
+    background-position: -1px -51px;
+  }
+
   &.right {
-    background-position: -17px -51px;
+    background-position: -86px -50px;
+    width: 9px;
+    height: 13px;
+  }
+
+  &.left {
+    background-position: -67px -50px;
+    width: 9px;
+    height: 13px;
   }
 }
 

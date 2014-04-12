@@ -1,0 +1,42 @@
+/*
+  Module: Index Overview Summary
+  Description: Simply shows highlights items from summary object.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/fadein';
+
+$module: '.quote-summary';
+
+#{$module} {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+
+  .col {
+    display:table-cell;
+    vertical-align: top;
+    text-align: center;
+
+    .key, .value {
+      display: block;
+    }
+
+    .key {
+      text-transform: uppercase;
+      font: {
+        size: .8em;
+        weight: 700;
+      }
+    }
+
+    .value {
+      font: {
+        size: 1.5em;
+      }
+    }
+  }
+}

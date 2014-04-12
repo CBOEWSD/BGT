@@ -1,0 +1,24 @@
+/*
+  Class: Numeric Color
+  Description: Will add a base color for positive and negative numbers
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/scrollbars';
+
+$class: '.numeric-';
+
+@mixin smoother {
+  @include transition-property(color);
+  @include transition-duration(1.5s);
+}
+
+#{$class}positive {
+  @include smoother;
+  color: $colorGreen1;
+}
+#{$class}negative {
+  @include smoother;
+  color: $colorRed1;
+}

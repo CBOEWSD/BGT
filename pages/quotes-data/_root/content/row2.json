@@ -7,11 +7,7 @@
     {
       "widgets/widget-title": {
         "widget": {
-          "title": "Company Headlines",
-          "promo": {
-            "url": "#",
-            "text": "View All"
-          }
+          "title": "Company Headlines"
         }
       }
     },

@@ -26,7 +26,8 @@
           "title": "VIX Overview",
           "promo": {
             "url": "#",
-            "text": "Options Chain"
+            "text": "Options Chain",
+            "classes": ["button blue"]
           }
         }
       }

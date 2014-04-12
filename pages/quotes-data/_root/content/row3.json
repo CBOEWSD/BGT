@@ -7,11 +7,7 @@
     {
       "widgets/widget-title": {
         "widget": {
-          "title": "Most Active Options",
-          "promo": {
-            "url": "#",
-            "text": "View All"
-          }
+          "title": "Most Active Options"
         }
       }
     },
@@ -23,11 +19,7 @@
     {
       "widgets/widget-title": {
         "widget": {
-          "title": "Exchange Volume",
-          "promo": {
-            "url": "#",
-            "text": "View All"
-          }
+          "title": "Exchange Volume"
         }
       }
     },

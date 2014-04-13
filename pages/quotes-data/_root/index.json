@@ -13,17 +13,11 @@
     ],
     "content": [
       {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "MyCBOE Login",
-            "promo": {
-              "class": "tradestation",
-              "url": "#"
-            },
-            "classes": [
-              "blueborder"
-            ]
-          }
+        "widgets/qnd-title/qnd-title": {
+          "title": "Market Overview",
+          "classes": [
+            "blueborder"
+          ]
         }
       },
       {

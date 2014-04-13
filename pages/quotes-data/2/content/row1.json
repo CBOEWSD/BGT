@@ -27,7 +27,9 @@
           "promo": {
             "url": "#",
             "text": "Options Chain",
-            "classes": ["button blue"]
+            "classes": [
+              "button blue"
+            ]
           }
         }
       }
@@ -35,11 +37,7 @@
     {
       "widgets/quote-overview/overview": {
         "Price": {
-          "last": "16,130.40",
-          "change": "-23.99",
-          "changePCT": "-0.15",
-          "Bid": "n.a",
-          "Ask": "n.a"
+          "widgets/table/table": "row1/price.json"
         },
         "OHLC": {
           "last": "16,130.40",
@@ -56,6 +54,57 @@
           "change": "-23.99",
           "changePCT": "-0.15"
         }
+      }
+    },
+    {
+      "widgets/table/table": {
+        "classes": [
+          "last-right"
+        ],
+        "rows": [
+          [
+            {
+              "content": "Last"
+            },
+            {
+              "content": "16,130.40"
+            }
+          ],
+          [
+            {
+              "content": "Change"
+            },
+            {
+              "content": -23.99,
+              "numericcolor": true
+            }
+          ],
+          [
+            {
+              "content": "ChangePCT"
+            },
+            {
+              "content": -0.15,
+              "numericcolor": true
+            }
+          ],
+          [
+            {
+              "content": "Bid"
+            },
+            {
+              "content": "n.a"
+            }
+          ],
+          [
+            {
+              "content": "Ask"
+            },
+            {
+              "content": "n.a"
+            }
+          ]
+        ]
       }
     }
   ]

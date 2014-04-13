@@ -54,7 +54,7 @@ class NumericColor
   ###
   positive: ->
     @.$el.addClass('numeric-positive')
-    @.$el.html('+' + @.value)
+    #@.$el.html('+' + @.value)
     @.$el.trigger('numeric', true)
 
   ###

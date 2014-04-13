@@ -1,9 +1,12 @@
 <div class="quote-overview">
-  {{> widgets/quote-overview/summary}}
+
+  {{#each summary}}
+    {{> widgets/quote-overview/summary}}
+  {{/each}}
 
   <div class="tabs-wrapper">
     <div class="tabs-bar">
-      {{#each this}}
+      {{#each items}}
         <div class="tab {{#if @first}} active {{/if}}" data-tabid="{{@index}}">
           {{@key}}
         </div>
@@ -11,18 +14,9 @@
     </div>
 
     <div class="tabs-content">
-      {{#each this}}
+      {{#each items}}
         <dl class="tab data {{#if @first}} active {{/if}}" data-tabid="{{@index}}">
-          {{#each this}}
-            <div class="set">
-              <dt class="key">
-                {{@key}}
-              </dt>
-              <dd class="value" data-numericcolor="{{this}}">
-                {{this}}
-              </dd>
-            </div>
-          {{/each}}
+          {{{this}}}
         </dl>
       {{/each}}
     </div>

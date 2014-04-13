@@ -27,34 +27,48 @@
           "promo": {
             "url": "#",
             "text": "Options Chain",
-            "classes": ["button blue"]
+            "classes": [
+              "button blue"
+            ]
           }
         }
       }
     },
     {
       "widgets/quote-overview/overview": {
-        "Price": {
-          "last": "16,130.40",
-          "change": "-23.99",
-          "changePCT": "-0.15",
-          "Bid": "n.a",
-          "Ask": "n.a"
-        },
-        "OHLC": {
-          "last": "16,130.40",
-          "change": "-23.99",
-          "changePCT": "-0.15"
-        },
-        "Volumes": {
-          "last": "16,130.40",
-          "change": "-23.99",
-          "changePCT": "-0.15"
-        },
-        "Ratios": {
-          "last": "16,130.40",
-          "change": "-23.99",
-          "changePCT": "-0.15"
+        "summary": [
+          {
+            "item1": {
+              "Last": {
+                "value": 17.04,
+                "prefix": "$"
+              }
+            },
+            "item2": {
+              "Change": {
+                "value": 0.32,
+                "numericcolor": true,
+                "parens": {
+                  "value": 1.88,
+                  "postfix": "%"
+                }
+              }
+            }
+          }
+        ],
+        "items": {
+          "Price": {
+            "widgets/table/table": "row1/price.json"
+          },
+          "OHLC": {
+            "widgets/table/table": "row1/price.json"
+          },
+          "Volumes": {
+            "widgets/table/table": "row1/price.json"
+          },
+          "Ratios": {
+            "widgets/table/table": "row1/price.json"
+          }
         }
       }
     }

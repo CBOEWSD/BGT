@@ -1,5 +1,32 @@
 <div class="snapshot">
 
+  <div class="widget-title title">
+    <h2>{{title.title}}</h2>
+
+    {{#if title.advanced}}
+      <a href="{{title.advanced.url}}" class="advanced">
+        {{title.advanced.text}}
+      </a>
+    {{/if}}
+
+    {{#if meta}}
+    <div class="meta">
+      <span>
+        {{meta.volume}}
+      </span>
+
+      <div class="data">
+        <span data-numericColor="{{meta.change}}">
+          {{meta.change}}
+        </span>
+        <span data-numericcolor="{{meta.changepct}}">
+          {{meta.changepct}}%
+        </span>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+
   <div class="loading">
     Loading...
   </div>

@@ -5,18 +5,20 @@
   ],
   "column1": [
     {
-      "widgets/widget-title": {
-        "widget": {
+      "widgets/snapshot/graphonly/wide": {
+        "title": {
           "title": "Market Snapshot",
-          "promo": {
+          "advanced": {
             "url": "#",
-            "text": "View All"
+            "text": "Advanced Chart"
           }
+        },
+        "meta": {
+          "volume": "15,129,670",
+          "change": -127.87,
+          "changepct": -0.84
         }
       }
-    },
-    {
-      "widgets/snapshot/graphonly/wide": ""
     }
   ],
   "column2": [

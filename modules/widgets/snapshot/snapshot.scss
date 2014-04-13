@@ -173,4 +173,44 @@ $module: '.snapshot';
       .positive { color: $colorGreen1; }
     }
   }
+
+  .title {
+    h2, a {
+      display: inline-block;
+      margin: 0;
+    }
+
+    a {
+      color: $colorBlue1;
+      margin-left: 10px;
+
+      &:hover, &:active {
+        color: $colorGrey1;
+      }
+    }
+
+    .meta {
+      float: right;
+
+      &>span {
+        font: {
+          size: 1.4em;
+          weight: 700;
+        }
+      }
+
+      .data {
+        display: inline-block;
+        vertical-align: top;
+        font: {
+          size: .8em;
+        }
+        line-height: 1em;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
 }

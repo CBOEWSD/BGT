@@ -15,6 +15,12 @@
       {
         "widgets/qnd-title/qnd-title": {
           "title": "Market Overview",
+          "select": [
+            {
+              "text": "VIX",
+              "value": "#"
+            }
+          ],
           "classes": [
             "blueborder"
           ]

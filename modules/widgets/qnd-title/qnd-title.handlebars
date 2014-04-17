@@ -1,19 +1,14 @@
 <div class="widget-title qnd-title {{#each classes}} {{this}} {{/each}}">
   <div class="left">
+    {{#if select}}
     <select>
-      <option>
-        VIX
-      </option>
-      <option>
-        VIX
-      </option>
-      <option>
-        VIX
-      </option>
-      <option>
-        VIX
-      </option>
+      {{#each select}}
+        <option value="{{this.value}}">
+          {{this.text}}
+        </option>
+      {{/each}}
     </select>
+    {{/if}}
     <h1>
       {{title}}
     </h1>

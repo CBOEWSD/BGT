@@ -4,18 +4,33 @@
 */
 
 @import './ui/base/settings';
+@import './ui/base/_includes/grid';
 @import './ui/base/_includes/compass/css3';
 
 $module: '.qnd-title';
 
 #{$module} {
-  h1, select {
-    margin: 0;
-    display: inline-block;
-    vertical-align: middle;
+  @include innerRow();
+  .search-component, .left {
   }
 
-  select {
-    margin-right: 10px;
+  .left {
+    @include column(8);
+    padding-left: 0;
+
+    &>h1, &>select {
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &>select {
+      margin-right: 10px;
+    }
+  }
+
+  .search-component {
+    @include column(4);
+    padding-right: 0;
   }
 }

@@ -1,21 +1,25 @@
 <div class="widget-title qnd-title {{#each classes}} {{this}} {{/each}}">
-  <select>
-    <option>
-      VIX
-    </option>
-    <option>
-      VIX
-    </option>
-    <option>
-      VIX
-    </option>
-    <option>
-      VIX
-    </option>
-  </select>
-  <h1>
-    {{title}}
-  </h1>
+  <div class="left">
+    <select>
+      <option>
+        VIX
+      </option>
+      <option>
+        VIX
+      </option>
+      <option>
+        VIX
+      </option>
+      <option>
+        VIX
+      </option>
+    </select>
+    <h1>
+      {{title}}
+    </h1>
+  </div>
 
-  <!-- search here -->
+  <div class="search-component">
+    {{> search/quicksearch}}
+  </div>
 </div>

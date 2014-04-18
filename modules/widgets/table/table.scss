@@ -110,13 +110,13 @@ $module: '.table';
       > tr {
         &:nth-child(even),
         &:nth-child(odd) {
-          background: lighten($colorGrey2, 5%);
+          background: $colorGrey2
         }
       }
     }
 
     tr:nth-child(even) {
-      background: lighten($colorGrey2, 10%);
+      background: lighten($colorGrey2, 5%);
     }
     tr:nth-child(odd) {
       background: #fff;
@@ -125,21 +125,21 @@ $module: '.table';
 
   &.cellborders {
     tr {
-      border-bottom: 1px solid $colorGrey2;
+      border-bottom: 1px solid darken($colorGrey2, 6%);
 
       &:first-child {
-        border-top: 1px solid $colorGrey2;
+        border-top: 1px solid darken($colorGrey2, 6%);
       }
       &:last-child {
-        border-bottom: 1px solid $colorGrey2;
+        border-bottom: 1px solid darken($colorGrey2, 6%);
       }
     }
 
     td, th {
-      border-right: 1px solid $colorGrey2;
+      border-right: 1px solid darken($colorGrey2, 6%);
 
       &:first-child {
-        border-left: 1px solid $colorGrey2;
+        border-left: 1px solid darken($colorGrey2, 6%);
       }
     }
   }

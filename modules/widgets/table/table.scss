@@ -32,6 +32,18 @@ $module: '.table';
       weight: 700;
     }
   }
+
+  @media all and (max-width: $screenSmallMax) {
+    .title, .right {
+      display: block;
+      float: none;
+      margin: 0;
+    }
+
+    .right {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 #{$module} {
@@ -155,6 +167,10 @@ $module: '.table';
 
     .nomobile {
       display: none;
+    }
+
+    th, td {
+      padding: inherit 4px;
     }
   }
 }

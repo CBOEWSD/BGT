@@ -19,15 +19,15 @@
     },
     {
       "title": "Ask",
-      "mobile": false
+      "mobile": true
     },
     {
       "title": "Vol",
-      "mobile": false
+      "mobile": true
     },
     {
       "title": "Int",
-      "mobile": false
+      "mobile": true
     }
   ],
   "rows": [

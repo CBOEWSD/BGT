@@ -2,7 +2,7 @@
   "columns": [
     {
       "title": "Symbol",
-      "mobile": true
+      "mobile": false
     },
     {
       "title": "Contract",
@@ -10,7 +10,7 @@
     },
     {
       "title": "Type",
-      "mobile": true
+      "mobile": false
     },
     {
       "title": "Ticker",
@@ -18,19 +18,19 @@
     },
     {
       "title": "Last",
-      "mobile": false
+      "mobile": true
     },
     {
       "title": "Change",
       "mobile": false
     },
     {
-      "title": "Change %",
-      "mobile": false
+      "title": "Change%",
+      "mobile": true
     },
     {
       "title": "Volume",
-      "mobile": false
+      "mobile": true
     }
   ],
   "rows": [

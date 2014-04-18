@@ -10,7 +10,7 @@
     },
     {
       "title": "Month",
-      "mobile": true
+      "mobile": false
     },
     {
       "title": "Time",
@@ -18,11 +18,11 @@
     },
     {
       "title": "Last",
-      "mobile": false
+      "mobile": true
     },
     {
       "title": "Change",
-      "mobile": false
+      "mobile": true
     },
     {
       "title": "Open",

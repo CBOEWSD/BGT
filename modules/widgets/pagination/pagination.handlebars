@@ -7,46 +7,54 @@
       </a>
     </li>
 
-    <li>
-      <a href="#">
-        1
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        2
-      </a>
-    </li>
-    <li>
-      <a href="#" class="active">
-        3
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        4
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        5
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        6
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        7
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        8
-      </a>
-    </li>
+    {{#each pages}}
+      <li>
+        <a href="{{this.url}}" title="{{this.text}}" {{#if this.active}} class="active" {{/if}}>
+          {{this.text}}
+        </a>
+      </li>
+    {{else}}
+      <li>
+        <a href="#">
+          1
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          2
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active">
+          3
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          4
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          5
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          6
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          7
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          8
+        </a>
+      </li>
+    {{/each}}
 
     <li class="next">
       <a href="#" class="icon-css-arrows right">
@@ -55,8 +63,10 @@
     </li>
   </ul>
 
-  <span class="total">
-    ({{total}} results)
-  </span>
+  {{#if total}}
+    <span class="total">
+      ({{total}} results)
+    </span>
+  {{/if}}
 
 </div>

@@ -44,6 +44,13 @@ $module: '.wrap-columns-';
   &.two {
     .column {
       width: 50%;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+      &:last-child {
+        padding-left: 10px;
+      }
     }
 
     &.slimright {

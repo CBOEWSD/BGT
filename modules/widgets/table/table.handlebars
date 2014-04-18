@@ -1,3 +1,18 @@
+
+{{#if title}}
+  <div class="table-title">
+    <h2 class="title">
+      {{title.text}}
+    </h2>
+
+    {{#if title.right}}
+      <span class="right">
+        {{title.right}}
+      </span>
+    {{/if}}
+  </div>
+{{/if}}
+
 <table class="table {{#each classes}} {{this}} {{/each}}">
 
   {{#if columns}}

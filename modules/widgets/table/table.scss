@@ -11,6 +11,29 @@
 
 $module: '.table';
 
+
+.table-title {
+  @include clearfix();
+
+  .title {
+    float: left;
+    font: {
+      weight: 400;
+      size: 1.8em;
+    }
+    margin: 0;
+  }
+
+  .right {
+    float: right;
+    margin-top: 7px;
+    text-transform: uppercase;
+    font: {
+      weight: 700;
+    }
+  }
+}
+
 #{$module} {
   width: 100%;
 
@@ -71,8 +94,53 @@ $module: '.table';
   }
 
   &.padvertical {
-    td {
+    td, th {
       padding: 5px inherit;
+    }
+  }
+
+  &.center {
+    th, td {
+      text-align: center;
+    }
+  }
+
+  &.oddeven {
+    > thead {
+      > tr {
+        &:nth-child(even),
+        &:nth-child(odd) {
+          background: lighten($colorGrey2, 5%);
+        }
+      }
+    }
+
+    tr:nth-child(even) {
+      background: lighten($colorGrey2, 10%);
+    }
+    tr:nth-child(odd) {
+      background: #fff;
+    }
+  }
+
+  &.cellborders {
+    tr {
+      border-bottom: 1px solid $colorGrey2;
+
+      &:first-child {
+        border-top: 1px solid $colorGrey2;
+      }
+      &:last-child {
+        border-bottom: 1px solid $colorGrey2;
+      }
+    }
+
+    td, th {
+      border-right: 1px solid $colorGrey2;
+
+      &:first-child {
+        border-left: 1px solid $colorGrey2;
+      }
     }
   }
 

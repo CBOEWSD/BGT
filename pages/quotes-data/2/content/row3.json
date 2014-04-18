@@ -1,0 +1,18 @@
+{
+  "widgetWrapper": true,
+  "classes": [
+    "slimright"
+  ],
+  "column": [
+    {
+      "widgets/widget-title": {
+        "widget": {
+          "title": "Options Chain"
+        }
+      }
+    },
+    {
+      "_columns/two": "row3/table-columns.json"
+    }
+  ]
+}

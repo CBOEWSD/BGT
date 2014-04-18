@@ -27,7 +27,7 @@
         "_columns/three": "row2.json"
       },
       {
-        "_columns/two": "row3.json"
+        "_columns/one": "row3.json"
       }
     ],
     "bottomspan": [

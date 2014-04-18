@@ -104,7 +104,6 @@ $view: '.view-threecol';
   @media screen and (max-width: $screenSmallMax) {
     .main {
       display: block;
-      margin-top: 20px;
 
       .col1, .col2, .col3 {
         display: block;

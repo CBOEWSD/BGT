@@ -76,10 +76,11 @@ $bordercolor: lighten($colorGrey2, 7%);
   }
 
 
-  @media screen and (max-width: $screenSmallMax) {
+  @media all and (max-width: $screenSmallMax) {
     height: auto;
     border-top: none;
     padding-top: 45px;
+    padding-bottom: 30px;
 
     .container {
       display: table;

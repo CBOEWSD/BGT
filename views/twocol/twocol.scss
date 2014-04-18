@@ -51,9 +51,6 @@ $view: '.view-twocol';
   }
 
   @media screen and (max-width: $screenSmallMax) {
-    .topspan {
-      margin-top: 30px;
-    }
     .main {
       display: block;
 

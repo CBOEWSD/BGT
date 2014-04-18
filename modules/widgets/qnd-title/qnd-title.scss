@@ -33,4 +33,14 @@ $module: '.qnd-title';
     @include column(4);
     padding-right: 0;
   }
+
+  @media all and (max-width: $screenSmallMax) {
+    .left, .search-component {
+      padding: 0;
+    }
+
+    .search-component {
+      margin-top: 10px;
+    }
+  }
 }

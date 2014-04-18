@@ -213,4 +213,15 @@ $module: '.snapshot';
       }
     }
   }
+
+  @media all and (max-width: $screenSmallMax) {
+    .title {
+      .meta {
+        float: none;
+        display: block;
+        text-align: right;
+        margin-top: 5px;
+      }
+    }
+  }
 }

@@ -1,6 +1,6 @@
 {
   "view": "onecol",
-  "title": "QND 2",
+  "title": "Quotes and Data 2",
   "meta": {
     "keywords": "some, keywords",
     "description": "This is a description"
@@ -13,17 +13,11 @@
     ],
     "content": [
       {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "(BAC) Bank of America Corp.",
-            "promo": {
-              "class": "tradestation",
-              "url": "#"
-            },
-            "classes": [
-              "blueborder"
-            ]
-          }
+        "widgets/qnd-title/qnd-title": {
+          "title": "(BAC) Bank of America Corp.",
+          "classes": [
+            "blueborder"
+          ]
         }
       },
       {

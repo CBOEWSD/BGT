@@ -24,7 +24,7 @@
     {
       "widgets/widget-title": {
         "widget": {
-          "title": "Market Scanner",
+          "title": "Add to Portfolio",
           "promo": {
             "url": "#",
             "text": "View All"
@@ -33,7 +33,7 @@
       }
     },
     {
-      "widgets/table/table": "row2/table.json"
+      "widgets/content/content": "row2/portfolio.md"
     }
   ]
 }

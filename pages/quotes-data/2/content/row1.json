@@ -5,106 +5,66 @@
   ],
   "column1": [
     {
-      "widgets/widget-title": {
-        "widget": {
+      "widgets/snapshot/graphonly/wide": {
+        "title": {
           "title": "Market Snapshot",
-          "promo": {
+          "advanced": {
             "url": "#",
-            "text": "View All"
+            "text": "Advanced Chart"
           }
+        },
+        "meta": {
+          "volume": "15,129,670",
+          "change": -127.87,
+          "changepct": -0.84
         }
       }
-    },
-    {
-      "widgets/snapshot/graphonly/wide": ""
     }
   ],
   "column2": [
     {
       "widgets/widget-title": {
         "widget": {
-          "title": "VIX Overview",
-          "promo": {
-            "url": "#",
-            "text": "Options Chain",
-            "classes": [
-              "button blue"
-            ]
-          }
+          "title": "BAC Overview"
         }
       }
     },
     {
       "widgets/quote-overview/overview": {
-        "Price": {
-          "widgets/table/table": "row1/price.json"
-        },
-        "OHLC": {
-          "last": "16,130.40",
-          "change": "-23.99",
-          "changePCT": "-0.15"
-        },
-        "Volumes": {
-          "last": "16,130.40",
-          "change": "-23.99",
-          "changePCT": "-0.15"
-        },
-        "Ratios": {
-          "last": "16,130.40",
-          "change": "-23.99",
-          "changePCT": "-0.15"
-        }
-      }
-    },
-    {
-      "widgets/table/table": {
-        "classes": [
-          "last-right"
+        "summary": [
+          {
+            "item1": {
+              "Last": {
+                "value": 17.04,
+                "prefix": "$"
+              }
+            },
+            "item2": {
+              "Change": {
+                "value": 0.32,
+                "numericcolor": true,
+                "parens": {
+                  "value": 1.88,
+                  "postfix": "%"
+                }
+              }
+            }
+          }
         ],
-        "rows": [
-          [
-            {
-              "content": "Last"
-            },
-            {
-              "content": "16,130.40"
-            }
-          ],
-          [
-            {
-              "content": "Change"
-            },
-            {
-              "content": -23.99,
-              "numericcolor": true
-            }
-          ],
-          [
-            {
-              "content": "ChangePCT"
-            },
-            {
-              "content": -0.15,
-              "numericcolor": true
-            }
-          ],
-          [
-            {
-              "content": "Bid"
-            },
-            {
-              "content": "n.a"
-            }
-          ],
-          [
-            {
-              "content": "Ask"
-            },
-            {
-              "content": "n.a"
-            }
-          ]
-        ]
+        "items": {
+          "Price": {
+            "widgets/table/table": "row1/price.json"
+          },
+          "OHLC": {
+            "widgets/table/table": "row1/price.json"
+          },
+          "Volumes": {
+            "widgets/table/table": "row1/price.json"
+          },
+          "Ratios": {
+            "widgets/table/table": "row1/price.json"
+          }
+        }
       }
     }
   ]

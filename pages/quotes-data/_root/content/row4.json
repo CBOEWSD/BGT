@@ -5,15 +5,7 @@
   ],
   "column1": [
     {
-      "widgets/widget-title": {
-        "widget": {
-          "title": "Futures",
-          "promo": {
-            "url": "#",
-            "text": "View All"
-          }
-        }
-      }
+      "widgets/optionable-title/title": "row4/title.json"
     },
     {
       "widgets/table/table": "row4/table.json"

@@ -22,15 +22,7 @@
   ],
   "column3": [
     {
-      "widgets/widget-title": {
-        "widget": {
-          "title": "Market Scanner",
-          "promo": {
-            "url": "#",
-            "text": "View All"
-          }
-        }
-      }
+      "widgets/optionable-title/title": "row2/market-title.json"
     },
     {
       "widgets/table/table": "row2/table.json"

@@ -7,7 +7,15 @@
     {
       "widgets/widget-title": {
         "widget": {
-          "title": "Company Headlines"
+          "title": "Company Headlines",
+          "promo": {
+            "url": "#",
+            "text": "All BAC News",
+            "classes": [
+              "button",
+              "blue"
+            ]
+          }
         }
       }
     },
@@ -24,11 +32,7 @@
     {
       "widgets/widget-title": {
         "widget": {
-          "title": "Add to Portfolio",
-          "promo": {
-            "url": "#",
-            "text": "View All"
-          }
+          "title": "Add to Portfolio"
         }
       }
     },

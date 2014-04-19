@@ -8,7 +8,7 @@
 
 $class: '.button';
 
-#{$class} {
+button, #{$class} {
   background: $colorBlue1;
   display: inline-block;
   @include border-radius(3px);

@@ -5,9 +5,89 @@
   ],
   "column": [
     {
-      "widgets/widget-title": {
-        "widget": {
-          "title": "Options Chain"
+      "widgets/optionable-title/title": {
+        "title": "Options Chain",
+        "form": {
+          "action": "#",
+          "button": {
+            "text": "View Chain"
+          },
+          "items": [
+            {
+              "name": "type",
+              "label": "Chain Type",
+              "options": [
+                {
+                  "value": "123",
+                  "text": "Calls and Puts"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                }
+              ]
+            },
+            {
+              "name": "range",
+              "label": "Options Range",
+              "options": [
+                {
+                  "value": "123",
+                  "text": "All"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                }
+              ]
+            },
+            {
+              "name": "expiration",
+              "label": "Expiration",
+              "options": [
+                {
+                  "value": "123",
+                  "text": "March 2014"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                },
+                {
+                  "value": "123",
+                  "text": "Option"
+                }
+              ]
+            }
+          ]
         }
       }
     },
@@ -15,43 +95,7 @@
       "_columns/two": "row3/table-columns.json"
     },
     {
-      "widgets/pagination/pagination": {
-        "pages": [
-          {
-            "url": "#",
-            "text": "April 2013",
-            "active": true
-          },
-          {
-            "url": "#",
-            "text": "May 2013"
-          },
-          {
-            "url": "#",
-            "text": "Jun 2013"
-          },
-          {
-            "url": "#",
-            "text": "Jul 2013"
-          },
-          {
-            "url": "#",
-            "text": "Aug 2013"
-          },
-          {
-            "url": "#",
-            "text": "Sept 2013"
-          },
-          {
-            "url": "#",
-            "text": "Oct 2013"
-          },
-          {
-            "url": "#",
-            "text": "Nov 2013"
-          }
-        ]
-      }
+      "widgets/pagination/pagination": "row3/pagination.json"
     }
   ]
 }

@@ -48,7 +48,7 @@ form {
 
 }
 
-select {
+select, form select {
   cursor: pointer;
   background: url(/ui/classes/forms/assets/dropdown-arrow.png) no-repeat $colorBlue1;
   background-position: right 5px top -32px;

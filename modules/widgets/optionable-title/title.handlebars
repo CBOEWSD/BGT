@@ -1,0 +1,36 @@
+<div class="widget-title optionable-title {{#each classes}} {{this}} {{/each}}">
+  <div class="left">
+    <h2 class="title">
+      {{title}}
+    </h2>
+  </div>
+
+  {{#if form}}
+    <form
+      class="form-component {{#each form.classes}} {{this}} {{/each}}"
+      action="{{form.action}}">
+        {{#each form.items}}
+          {{#if this.label}}
+            <label> {{this.label}}:
+          {{/if}}
+          <select
+            name="{{this.name}}">
+            {{#each this.options}}
+              <option value="{{#if this.value}}{{this.value}}{{else}}{{this.text}}{{/if}}">
+                {{this.text}}
+              </option>
+            {{/each}}
+          </select>
+          {{#if this.label}}
+            </label>
+          {{/if}}
+        {{/each}}
+
+        {{#if form.button}}
+          <button type="submit">
+            {{form.button.text}}
+          </button>
+        {{/if}}
+    </form>
+  {{/if}}
+</div>

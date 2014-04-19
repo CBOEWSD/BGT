@@ -32,6 +32,7 @@ $module: '.qnd-title';
   .search-component {
     @include column(4);
     padding-right: 0;
+    margin-top: -10px;
   }
 
   @media all and (max-width: $screenSmallMax) {

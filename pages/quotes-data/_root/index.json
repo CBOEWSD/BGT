@@ -33,6 +33,20 @@
         "_columns/three": "row2.json"
       },
       {
+        "_columns/one": {
+          "column": {
+            "classes": [
+              "showatGT900"
+            ],
+            "modules": [
+              {
+                "ads/span/slim": ""
+              }
+            ]
+          }
+        }
+      },
+      {
         "_columns/two": "row3.json"
       },
       {

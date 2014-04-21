@@ -18,6 +18,7 @@
     ]
   },
   "column2": {
+    "classes": ["hideatLT900"],
     "modules": [
       {
         "ads/square_300/block": ""

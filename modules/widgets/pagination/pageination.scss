@@ -56,14 +56,11 @@ $module: '.pagination';
   }
 
   @media all and (max-width: $screenSmallMax) {
-    ul {
+    &>ul {
       position: relative;
       padding-top: 30px;
 
       li {
-        width: 32%;
-        margin: 2px 0;
-
         &.next, &.prev {
           position: absolute;
           top: 0;
@@ -76,6 +73,20 @@ $module: '.pagination';
 
         &.prev {
           left: 0;
+        }
+
+        &.pages {
+          display:block;
+          max-width: 100%;
+          overflow-x: scroll;
+
+          ul {
+            display: table;
+
+            li {
+              display: table-cell;
+            }
+          }
         }
       }
     }

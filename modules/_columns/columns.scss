@@ -76,10 +76,6 @@ $module: '.wrap-columns-';
     margin-bottom: 30px;
     position: relative;
 
-    /* Fix for tabular data overflowing pre column drop */
-    overflow-x: scroll;
-    overflow-y: hidden;
-
     &:after {
       display: block; content: "";
       border-bottom: 1px solid $colorGrey2;

@@ -36,7 +36,7 @@
         "_columns/one": {
           "column": {
             "classes": [
-              "showatGT900"
+              "hideatGT900"
             ],
             "modules": [
               {

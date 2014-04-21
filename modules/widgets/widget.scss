@@ -5,6 +5,7 @@
 
 @import './ui/base/settings';
 @import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/clearfix';
 
 $module: '.widget';
 
@@ -100,9 +101,7 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
   }
 
   .promo {
-    position: absolute;
-    top: 0;
-    right: 0;
+    float:right;
 
     a {
       color: $colorBlue1;
@@ -124,5 +123,9 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
     .optionshub {
       margin-top: -4px;
     }
+  }
+
+  @media all and (max-width: $screenSmallMax) {
+    @include clearfix();
   }
 }

@@ -28,61 +28,77 @@
           "classes": [
             "slimright"
           ],
-          "column1": [
-            {
-              "widgets/content/content": "intro.md"
-            }
-          ],
-          "column2": [
-            {
-              "ads/square_300/block": ""
-            },
-            {
-              "widgets/quote/quote": "quote.json"
-            }
-          ]
+          "column1": {
+            "modules": [
+              {
+                "widgets/content/content": "intro.md"
+              }
+            ]
+          },
+          "column2": {
+            "modules": [
+              {
+                "ads/square_300/block": ""
+              },
+              {
+                "widgets/quote/quote": "quote.json"
+              }
+            ]
+          }
         }
       },
       {
         "_columns/two": {
-          "column1": [
-            {
-              "widgets/content/content": "boxes/box1.md"
-            }
-          ],
-          "column2": [
-            {
-              "widgets/content/content": "boxes/box2.md"
-            }
-          ]
+          "column1": {
+            "modules": [
+              {
+                "widgets/content/content": "boxes/box1.md"
+              }
+            ]
+          },
+          "column2": {
+            "modules": [
+              {
+                "widgets/content/content": "boxes/box2.md"
+              }
+            ]
+          }
         }
       },
       {
         "_columns/two": {
-          "column1": [
-            {
-              "widgets/content/content": "boxes/box3.md"
-            }
-          ],
-          "column2": [
-            {
-              "widgets/content/content": "boxes/box4.md"
-            }
-          ]
+          "column1": {
+            "modules": [
+              {
+                "widgets/content/content": "boxes/box3.md"
+              }
+            ]
+          },
+          "column2": {
+            "modules": [
+              {
+                "widgets/content/content": "boxes/box4.md"
+              }
+            ]
+          }
         }
       },
       {
         "_columns/two": {
-          "column1": [
-            {
-              "widgets/content/content": "boxes/box5.md"
-            }
-          ],
-          "column2": [
-            {
-              "widgets/content/content": "boxes/box6.md"
-            }
-          ]
+          "column1": {
+            "modules": [
+              {
+                "widgets/content/content": "boxes/box5.md"
+              }
+            ]
+          },
+          "column2": {
+            "modules": [
+              {
+                "widgets/content/content": "boxes/box6.md"
+              }
+            ]
+          }
         }
       }
     ],

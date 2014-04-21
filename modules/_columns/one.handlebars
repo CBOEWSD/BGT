@@ -1,7 +1,7 @@
 <div class="wrap-columns-outer">
   <div class="wrap-columns-inner one {{#each classes}} {{this}} {{/each}}">
-    <div class="column {{#if widgetWrapper}} widget {{/if}}">
-      {{#each column}}
+    <div class="column {{#if widgetWrapper}} widget {{/if}} {{#each column.classes}} {{this}} {{/each}}">
+      {{#each column.modules}}
         <div class="component">
           {{{this}}}
         </div>

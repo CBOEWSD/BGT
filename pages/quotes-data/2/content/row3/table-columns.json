@@ -1,12 +1,16 @@
 {
-  "column1": [
-    {
-      "widgets/table/table": "row3/calls.json"
-    }
-  ],
-  "column2": [
-    {
-      "widgets/table/table": "row3/puts.json"
-    }
-  ]
+  "column1": {
+    "modules": [
+      {
+        "widgets/table/table": "row3/calls.json"
+      }
+    ]
+  },
+  "column2": {
+    "modules": [
+      {
+        "widgets/table/table": "row3/puts.json"
+      }
+    ]
+  }
 }

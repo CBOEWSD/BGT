@@ -3,15 +3,17 @@
   "classes": [
     "slimright"
   ],
-  "column": [
-    {
-      "widgets/optionable-title/title": "row3/title.json"
-    },
-    {
-      "_columns/two": "row3/table-columns.json"
-    },
-    {
-      "widgets/pagination/pagination": "row3/pagination.json"
-    }
-  ]
+  "column": {
+    "modules": [
+      {
+        "widgets/optionable-title/title": "row3/title.json"
+      },
+      {
+        "_columns/two": "row3/table-columns.json"
+      },
+      {
+        "widgets/pagination/pagination": "row3/pagination.json"
+      }
+    ]
+  }
 }

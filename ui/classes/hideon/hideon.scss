@@ -5,20 +5,83 @@
 
 @import './ui/base/settings';
 
+@mixin hide() {
+  position: fixed !important;
+  top: 2000% !important;
+  right: -2000% !important;
+  display: none !important;
+}
+
 .hideonmobile {
-  @media screen and (max-width: $screenSmallMax) {
-    position: fixed;
-    top: 2000%;
-    right: -2000%;
+  @media all and (max-width: $screenSmallMax) {
+    @include hide();
   }
 }
 
 .hideondesktop {
   display: none\9;
 
-  @media screen and (min-width: $screenSmallMax) {
-    position: fixed;
-    top: 2000%;
-    right: -2000%;
+  @media all and (min-width: $screenSmallMax) {
+    @include hide();
+  }
+}
+
+/*
+  Target viewport Less-Than N
+*/
+
+.hideatLT900 {
+  @media all and (max-width: 900px) {
+    @include hide();
+  }
+}
+.hideatLT800 {
+  @media all and (max-width: 800px) {
+    @include hide();
+  }
+}
+.hideatLT700 {
+  @media all and (max-width: 700px) {
+    @include hide();
+  }
+}
+.hideatLT600 {
+  @media all and (max-width: 600px) {
+    @include hide();
+  }
+}
+.hideatLT500 {
+  @media all and (max-width: 500px) {
+    @include hide();
+  }
+}
+
+/*
+  Target viewport Greater-Than N
+*/
+
+.hideatGT900 {
+  @media all and (min-width: 900px) {
+    @include hide();
+  }
+}
+.hideatGT800 {
+  @media all and (min-width: 800px) {
+    @include hide();
+  }
+}
+.hideatGT700 {
+  @media all and (min-width: 700px) {
+    @include hide();
+  }
+}
+.hideatGT600 {
+  @media all and (min-width: 600px) {
+    @include hide();
+  }
+}
+.hideatGT500 {
+  @media all and (min-width: 500px) {
+    @include hide();
   }
 }

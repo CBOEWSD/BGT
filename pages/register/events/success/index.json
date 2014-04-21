@@ -28,16 +28,20 @@
       },
       {
         "_columns/two": {
-          "column1": [
-            {
-              "widgets/content/content": "../../_root/content/image.md"
-            }
-          ],
-          "column2": [
-            {
-              "widgets/event/event": "../../_root/content/event.json"
-            }
-          ]
+          "column1": {
+            "modules": [
+              {
+                "widgets/content/content": "../../_root/content/image.md"
+              }
+            ]
+          },
+          "column2": {
+            "modules": [
+              {
+                "widgets/event/event": "../../_root/content/event.json"
+              }
+            ]
+          }
         }
       },
       {

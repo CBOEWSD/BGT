@@ -3,28 +3,32 @@
   "classes": [
     "slimright"
   ],
-  "column1": [
-    {
-      "widgets/widget-title": {
-        "widget": {
-          "title": "Most Active Options"
+  "column1": {
+    "modules": [
+      {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "Most Active Options"
+          }
         }
+      },
+      {
+        "widgets/table/table": "row3/table.json"
       }
-    },
-    {
-      "widgets/table/table": "row3/table.json"
-    }
-  ],
-  "column2": [
-    {
-      "widgets/widget-title": {
-        "widget": {
-          "title": "Exchange Volume"
+    ]
+  },
+  "column2": {
+    "modules": [
+      {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "Exchange Volume"
+          }
         }
+      },
+      {
+        "widgets/table/table": "row3/volume.json"
       }
-    },
-    {
-      "widgets/table/table": "row3/volume.json"
-    }
-  ]
+    ]
+  }
 }

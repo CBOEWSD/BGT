@@ -3,41 +3,48 @@
   "classes": [
     "slimright"
   ],
-  "column1": [
-    {
-      "widgets/widget-title": {
-        "widget": {
-          "title": "Company Headlines",
-          "promo": {
-            "url": "#",
-            "text": "All BAC News",
-            "classes": [
-              "button",
-              "blue"
-            ]
+  "column1": {
+    "modules": [
+      {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "Company Headlines",
+            "promo": {
+              "url": "#",
+              "text": "All BAC News",
+              "classes": [
+                "button",
+                "blue"
+              ]
+            }
           }
         }
+      },
+      {
+        "widgets/list/simple": "row2/company-headlines.json"
       }
-    },
-    {
-      "widgets/list/simple": "row2/company-headlines.json"
-    }
-  ],
-  "column2": [
-    {
-      "ads/square_300/block": ""
-    }
-  ],
-  "column3": [
-    {
-      "widgets/widget-title": {
-        "widget": {
-          "title": "Add to Portfolio"
+    ]
+  },
+  "column2": {
+    "classes": ["hideatLT900"],
+    "modules": [
+      {
+        "ads/square_300/block": ""
+      }
+    ]
+  },
+  "column3": {
+    "modules": [
+      {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "Add to Portfolio"
+          }
         }
+      },
+      {
+        "widgets/content/content": "row2/portfolio.md"
       }
-    },
-    {
-      "widgets/content/content": "row2/portfolio.md"
-    }
-  ]
+    ]
+  }
 }

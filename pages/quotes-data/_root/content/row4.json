@@ -3,17 +3,21 @@
   "classes": [
     "slimright"
   ],
-  "column1": [
-    {
-      "widgets/optionable-title/title": "row4/title.json"
-    },
-    {
-      "widgets/table/table": "row4/table.json"
-    }
-  ],
-  "column2": [
-    {
-      "ads/square_300/block": ""
-    }
-  ]
+  "column1": {
+    "modules": [
+      {
+        "widgets/optionable-title/title": "row4/title.json"
+      },
+      {
+        "widgets/table/table": "row4/table.json"
+      }
+    ]
+  },
+  "column2": {
+    "modules": [
+      {
+        "ads/square_300/block": ""
+      }
+    ]
+  }
 }

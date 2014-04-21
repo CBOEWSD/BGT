@@ -47,62 +47,66 @@
     "col2": [
       {
         "_columns/two": {
-          "column1": [
-            {
-              "widgets/widget-title": {
-                "widget": {
-                  "title": "CBOE News",
-                  "promo": {
-                    "url": "#",
-                    "text": "View All"
+          "column1": {
+            "modules": [
+              {
+                "widgets/widget-title": {
+                  "widget": {
+                    "title": "CBOE News",
+                    "promo": {
+                      "url": "#",
+                      "text": "View All"
+                    }
                   }
                 }
+              },
+              {
+                "widgets/list/simple": "news/1.json"
+              },
+              {
+                "widgets/list/simple": "news/2.json"
+              },
+              {
+                "widgets/list/simple": "news/3.json"
+              },
+              {
+                "widgets/list/simple": "news/3.json"
+              },
+              {
+                "widgets/list/simple": "news/3.json"
               }
-            },
-            {
-              "widgets/list/simple": "news/1.json"
-            },
-            {
-              "widgets/list/simple": "news/2.json"
-            },
-            {
-              "widgets/list/simple": "news/3.json"
-            },
-            {
-              "widgets/list/simple": "news/3.json"
-            },
-            {
-              "widgets/list/simple": "news/3.json"
-            }
-          ],
-          "column2": [
-            {
-              "widgets/widget-title": {
-                "widget": {
-                  "title": "Market News",
-                  "promo": {
-                    "url": "#",
-                    "text": "View All"
+            ]
+          },
+          "column2": {
+            "modules": [
+              {
+                "widgets/widget-title": {
+                  "widget": {
+                    "title": "Market News",
+                    "promo": {
+                      "url": "#",
+                      "text": "View All"
+                    }
                   }
                 }
+              },
+              {
+                "widgets/list/simple": "news/1.json"
+              },
+              {
+                "widgets/list/simple": "news/2.json"
+              },
+              {
+                "widgets/list/simple": "news/3.json"
+              },
+              {
+                "widgets/list/simple": "news/3.json"
+              },
+              {
+                "widgets/list/simple": "news/3.json"
               }
-            },
-            {
-              "widgets/list/simple": "news/1.json"
-            },
-            {
-              "widgets/list/simple": "news/2.json"
-            },
-            {
-              "widgets/list/simple": "news/3.json"
-            },
-            {
-              "widgets/list/simple": "news/3.json"
-            },
-            {
-              "widgets/list/simple": "news/3.json"
-            }
-          ]
+            ]
+          }
         }
       },
       {

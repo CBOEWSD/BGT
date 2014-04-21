@@ -3,29 +3,35 @@
   "classes": [
     "slimright"
   ],
-  "column1": [
-    {
-      "widgets/widget-title": {
-        "widget": {
-          "title": "Company Headlines"
+  "column1": {
+    "modules": [
+      {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "Company Headlines"
+          }
         }
+      },
+      {
+        "widgets/list/simple": "row2/company-headlines.json"
       }
-    },
-    {
-      "widgets/list/simple": "row2/company-headlines.json"
-    }
-  ],
-  "column2": [
-    {
-      "ads/square_300/block": ""
-    }
-  ],
-  "column3": [
-    {
-      "widgets/optionable-title/title": "row2/market-title.json"
-    },
-    {
-      "widgets/table/table": "row2/table.json"
-    }
-  ]
+    ]
+  },
+  "column2": {
+    "modules": [
+      {
+        "ads/square_300/block": ""
+      }
+    ]
+  },
+  "column3": {
+    "modules": [
+      {
+        "widgets/optionable-title/title": "row2/market-title.json"
+      },
+      {
+        "widgets/table/table": "row2/table.json"
+      }
+    ]
+  }
 }

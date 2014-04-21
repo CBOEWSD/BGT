@@ -28,12 +28,20 @@
       },
       {
         "_columns/two": {
-          "column1": [{
-            "widgets/content/content": "image.md"
-          }],
-          "column2": [{
-            "widgets/event/event": "event.json"
-          }]
+          "column1": {
+            "modules": [
+              {
+                "widgets/content/content": "image.md"
+              }
+            ]
+          },
+          "column2": {
+            "modules": [
+              {
+                "widgets/event/event": "event.json"
+              }
+            ]
+          }
         }
       },
       {

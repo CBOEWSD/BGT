@@ -18,7 +18,7 @@
     ],
     "col2": [
       {
-        "widgets/content/content": "../../_root/content/welcome.md"
+        "widgets/content/content": "../../2/content/welcome.md"
       },
       {
         "widgets/education-snap/wrap": "edsnap/wrap.json"
@@ -26,7 +26,7 @@
       {
         "twocolrow": [
           {
-            "widgets/hero/copybased": "../../_root/content/featured-webcast.json"
+            "widgets/hero/copybased": "../../2/content/featured-webcast.json"
           },
           {
             "ads/square_300/block": ""
@@ -34,7 +34,7 @@
         ]
       },
       {
-        "widgets/tv/row/row": "../../_root/content/tv/tv.json"
+        "widgets/tv/row/row": "../../2/content/tv/tv.json"
       },
       {
         "twocolrow": [
@@ -125,13 +125,13 @@
     ],
     "col3": [
       {
-        "widgets/list/links": "../../_root/content/related.json"
+        "widgets/list/links": "../../2/content/related.json"
       },
       {
-        "widgets/hero/copybased": "../../_root/content/featured-events.json"
+        "widgets/hero/copybased": "../../2/content/featured-events.json"
       },
       {
-        "widgets/hero/copybased": "../../_root/content/featured-products.json"
+        "widgets/hero/copybased": "../../2/content/featured-products.json"
       },
       {
         "ads/tall/tall": ""
@@ -139,7 +139,7 @@
     ],
     "bottomspan": [
       {
-        "widgets/widget": "../../_root/content/bottomspan/widget.json"
+        "widgets/widget": "../../2/content/bottomspan/widget.json"
       }
     ]
   }

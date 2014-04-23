@@ -2,1084 +2,956 @@
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
-  <title>Seminars and Event Registration - CBOE</title>
-  
-    <meta name="keywords" content="some, keywords" >
-    <meta name="description" content="This is a description" >
-  
-
-  <!-- Responsive -->
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-
-  <!-- IE/Chrome Compat -->
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
-  <link href='/ui/base/base.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/base/legacy.css' media='all' rel='stylesheet' type='text/css'><link href='/views/default/default-print.css' media='all' rel='stylesheet' type='text/css'><link href='/views/default/default.css' media='all' rel='stylesheet' type='text/css'><link href='/views/onecol/onecol.css' media='all' rel='stylesheet' type='text/css'><link href='/views/threecol/threecol.css' media='all' rel='stylesheet' type='text/css'><link href='/views/twocol-b/twocol-b.css' media='all' rel='stylesheet' type='text/css'><link href='/views/twocol/twocol.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/buttons/buttons.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/collapse/collapse.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/forms/form.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/hideon/hideon.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/icons/icons.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/list/list.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/numeric-color/numericcolor.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/print/print_base.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/scrolloverflow/scrolloverflow.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/tabs/tabs.css' media='all' rel='stylesheet' type='text/css'><link href='/ui/classes/text/text.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/_columns/columns.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/accordion/accordion.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/ads/advert.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/ads/sponsored-ad/spns.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/breadcrumbs/breadcrumbs.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/footer/footer.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/header/header.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/header/navigation/navigation.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/header/navigation/navigation_mobile.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/header/topbar/topbar.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/search/quicksearch.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/twitter/twitter.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/content/content.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/course-status/course-status.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/education-snap/progress/summary.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/education-snap/wrap.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/event/event.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/forms/body/body.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/forms/weeklys/weeklys.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/forms/wrapped/wrapped.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/hero/hero.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/hero/w-ad/hero-ad.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/list/list.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/loginspan/span.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/optionable-title/title.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/pagination/pageination.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/qnd-title/qnd-title.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/quote-overview/overview.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/quote-overview/summary.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/quote/quote.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/results/results.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/side-navigation/nav.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/sidebar/filter/filter.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/sidebar/sidebar.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/snapshot/snapshot.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/table/table.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/ticker/ticker.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/tv/player/player.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/tv/row/row.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/tv/single/single.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/tv/tv.css' media='all' rel='stylesheet' type='text/css'><link href='/modules/widgets/widget.css' media='all' rel='stylesheet' type='text/css'>
-
-  <!--
+<!--[if gt IE 8]><!-->
+<html class="">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>Seminars and Event Registration - CBOE</title>
+        <meta name="keywords" content="some, keywords">
+        <meta name="description" content="This is a description">
+        <!-- Responsive -->
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <!-- IE/Chrome Compat -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link href='/ui/base/base.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/base/legacy.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/views/default/default-print.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/views/default/default.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/views/onecol/onecol.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/views/threecol/threecol.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/views/twocol-b/twocol-b.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/views/twocol/twocol.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/classes/buttons/buttons.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/ui/classes/collapse/collapse.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/ui/classes/forms/form.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/classes/hideon/hideon.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/ui/classes/icons/icons.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/classes/list/list.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/classes/numeric-color/numericcolor.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/ui/classes/print/print_base.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/ui/classes/scrolloverflow/scrolloverflow.css' media='all'
+        rel='stylesheet' type='text/css'>
+        <link href='/ui/classes/tabs/tabs.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/classes/text/text.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/modules/_columns/columns.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/accordion/accordion.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/ads/advert.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/modules/ads/sponsored-ad/spns.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/breadcrumbs/breadcrumbs.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/footer/footer.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/modules/header/header.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/modules/header/navigation/navigation.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/header/navigation/navigation_mobile.css' media='all'
+        rel='stylesheet' type='text/css'>
+        <link href='/modules/header/topbar/topbar.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/search/quicksearch.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/twitter/twitter.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/content/content.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/course-status/course-status.css' media='all'
+        rel='stylesheet' type='text/css'>
+        <link href='/modules/widgets/education-snap/progress/summary.css' media='all'
+        rel='stylesheet' type='text/css'>
+        <link href='/modules/widgets/education-snap/wrap.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/event/event.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/forms/body/body.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/forms/weeklys/weeklys.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/forms/wrapped/wrapped.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/hero/hero.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/hero/w-ad/hero-ad.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/list/list.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/loginspan/span.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/optionable-title/title.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/pagination/pageination.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/qnd-title/qnd-title.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/quote-overview/overview.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/quote-overview/summary.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/quote/quote.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/results/results.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/side-navigation/nav.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/sidebar/filter/filter.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/sidebar/sidebar.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/snapshot/snapshot.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/table/table.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/ticker/ticker.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/tv/player/player.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/tv/row/row.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/tv/single/single.css' media='all' rel='stylesheet'
+        type='text/css'>
+        <link href='/modules/widgets/tv/tv.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/modules/widgets/widget.css' media='all' rel='stylesheet' type='text/css'>
+        <!--
     Switch debug mode for additional logging -->
-  <script>
-    window.debug = true;
-  </script>
-
-  <!--
+        <script>
+        window.debug = true;
+        </script>
+        <!--
     Pre-DOM SHIMS
     These fix issues in legacy browsers where certain
     features are not supported.
   -->
-  <!--[if lt IE 9]>
+        <!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
-
-</head>
-<body>
-
-  <div class="hideonmobile">
-  <div class="advert dark">
-  <div class="advert slim">
-
-  <!-- Desktop ad placeholder -->
-  <div class="hideonmobile">
-    <a href="#">
-      <img src="/ui/assets/images/placeholders/blank.gif"
-      data-echo="/ui/assets/images/placeholders/advert-2.jpg">
-    </a>
-  </div>
-  <!-- /END Desktop ad placeholder -->
-
-  <!-- Mobile ad placeholder -->
-  <div class="hideondesktop">
-    <a href="#">
-      <img src="/ui/assets/images/placeholders/blank.gif"
-      data-echo="/ui/assets/images/placeholders/advert-4.jpg">
-    </a>
-  </div>
-  <!-- /END Mobile ad placeholder -->
-</div>
-</div>
-</div>
-
-<section class="topbar">
-  <div class="container">
-    <ul class="menu">
-      <li class="hidemobile">
-        <a href="#" class="sprite c2">
-          CBOE C2
-        </a>
-      </li>
-      <li class="hidemobile">
-        <a href="#" class="sprite futures">
-          CBIE Futures Exchange
-        </a>
-      </li>
-      <li class="hidemobile">
-        <a href="#" class="sprite stock">
-          CBOE Stock Exchange
-        </a>
-      </li>
-      <li class="hidemobile">
-        <a href="#" class="sprite permit">
-          CBOE Permit Holders
-        </a>
-      </li>
-      <li class="hidedesktop">
-        <a href="#" class="button white search mobileExpandTopSearch">
-          Search
-        </a>
-      </li>
-      <li>
-        
-          <a href="#" class="button account green">
-            Login / Register
-          </a>
-        
-      </li>
-    </ul>
-    <a href="#" class="navicon hidedesktop"></a>
-  </div>
-</section>
-
-<header class="header">
-	<div class="container">
-    <h2 class="logo">
-      <a href="/">
-        <span class="icon-logo cboe">
-          CBOE
-        </span>
-        <span class="line">
-          Execute Success&trade;
-        </span>
-      </a>
-    </h2>
-
-    <div class="right">
-      <form class="quicksearch">
-  <!--<input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
+    </head>
+    <body>
+        <div class="hideonmobile">
+            <div class="advert dark">
+                <div class="advert slim">
+                    <!-- Desktop ad placeholder -->
+                    <div class="hideonmobile">
+                        <a href="#">
+                            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-2.jpg">
+                        </a>
+                    </div>
+                    <!-- /END Desktop ad placeholder -->
+                    <!-- Mobile ad placeholder -->
+                    <div class="hideondesktop">
+                        <a href="#">
+                            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-4.jpg">
+                        </a>
+                    </div>
+                    <!-- /END Mobile ad placeholder -->
+                </div>
+            </div>
+        </div>
+        <section class="topbar">
+            <div class="container">
+                <ul class="menu">
+                    <li class="hidemobile">
+                        <a href="#" class="sprite c2">
+                            CBOE C2
+                        </a>
+                    </li>
+                    <li class="hidemobile">
+                        <a href="#" class="sprite futures">
+                            CBIE Futures Exchange
+                        </a>
+                    </li>
+                    <li class="hidemobile">
+                        <a href="#" class="sprite stock">
+                            CBOE Stock Exchange
+                        </a>
+                    </li>
+                    <li class="hidemobile">
+                        <a href="#" class="sprite permit">
+                            CBOE Permit Holders
+                        </a>
+                    </li>
+                    <li class="hidedesktop">
+                        <a href="#" class="button white search mobileExpandTopSearch">
+                            Search
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="button account green">
+                            Login / Register
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="navicon hidedesktop"></a>
+            </div>
+        </section>
+        <header class="header">
+            <div class="container">
+                <h2 class="logo">
+                    <a href="/">
+                        <span class="icon-logo cboe">
+                            CBOE
+                        </span>
+                        <span class="line">
+                            Execute Success&trade;
+                        </span>
+                    </a>
+                </h2>
+                <div class="right">
+                    <form class="quicksearch">
+                        <!--<input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
   <button type="submit" class="button">Search</button>-->
-
-  <script>
-    (function() {
-      var cx = '015862480144099304085:rr2pnh70kt4';
-      var gcse = document.createElement('script');
-      gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-          '//www.google.com/cse/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(gcse, s);
-    })();
-  </script>
-  <gcse:search></gcse:search>
-</form>
-    </div>
-  </div>
-</header>
-
-<nav class="navigation">
-  <ul class="container menu">
-    <li>
-      <a href="#">
-        Quotes &amp; Data
-      </a>
-
-      <ul>
-
-        <li class="menu">
-          <ul>
-            <li>
-              <a href="http://www.google.com">
-                Media Hub
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Investor Relations
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Executive Bios
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                History
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Legal &amp; Regulatory
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Careers
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="feed">
-          <ul>
-            <li>
-              <h3 class="title">
-                Latest Press Releases
-              </h3>
-
-              <ul>
+                        <script>
+                        (function()
+                        {
+                            var cx = '015862480144099304085:rr2pnh70kt4';
+                            var gcse = document.createElement('script');
+                            gcse.type = 'text/javascript';
+                            gcse.async = true;
+                            gcse.src = (document.location.protocol ==
+                                'https:' ? 'https:' : 'http:') +
+                                '//www.google.com/cse/cse.js?cx=' + cx;
+                            var s = document.getElementsByTagName(
+                                'script')[0];
+                            s.parentNode.insertBefore(gcse, s);
+                        })();
+                        </script>
+                        <gcse:search></gcse:search>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <nav class="navigation">
+            <ul class="container menu">
                 <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
+                    <a href="#">
+                        Quotes &amp; Data
+                    </a>
+                    <ul>
+                        <li class="menu">
+                            <ul>
+                                <li>
+                                    <a href="http://www.google.com">
+                                        Media Hub
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Investor Relations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Executive Bios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        History
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Legal &amp; Regulatory
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Careers
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="feed">
+                            <ul>
+                                <li>
+                                    <h3 class="title">
+                                        Latest Press Releases
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
+                    <a href="#">
+                        News
+                    </a>
+                    <ul class="hasthird">
+                        <li class="menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Media Hub
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Investor Relations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Executive Bios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        History
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Legal &amp; Regulatory
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Careers
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="feed">
+                            <ul>
+                                <li>
+                                    <h3 class="title">
+                                        Latest Press Releases
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="advert">
+                            <a href="#">
+                                <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-1.jpg"
+                                alt="">
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-      </ul>
-    </li>
-
-    <li>
-      <a href="#">
-        News
-      </a>
-
-      <ul class="hasthird">
-
-        <li class="menu">
-          <ul>
-            <li>
-              <a href="#">
-                Media Hub
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Investor Relations
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Executive Bios
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                History
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Legal &amp; Regulatory
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Careers
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="feed">
-          <ul>
-            <li>
-              <h3 class="title">
-                Latest Press Releases
-              </h3>
-
-              <ul>
-                <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
+                    <a href="#">
+                        Products
+                    </a>
                 </li>
                 <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
+                    <a href="#">
+                        Education
+                    </a>
                 </li>
                 <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li class="advert">
-          <a href="#">
-            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-1.jpg" alt="">
-          </a>
-        </li>
-
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        Products
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        Education
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        Strategies
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        Tools &amp; Resources
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        About CBOE
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        Institutional
-      </a>
-
-      <ul class="hasthird">
-
-        <li class="menu">
-          <ul>
-            <li>
-              <a href="#">
-                Media Hub
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Investor Relations
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Executive Bios
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                History
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Legal &amp; Regulatory
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Careers
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="feed">
-          <ul>
-            <li>
-              <h3 class="title">
-                Latest Press Releases
-              </h3>
-
-              <ul>
-                <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
+                    <a href="#">
+                        Strategies
+                    </a>
                 </li>
                 <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
+                    <a href="#">
+                        Tools &amp; Resources
+                    </a>
                 </li>
                 <li>
-                  <a href="#">
-                    CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
-                    <span class="date">
-                      Dec 5, 2013
-                    </span>
-                  </a>
+                    <a href="#">
+                        About CBOE
+                    </a>
                 </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li class="advert">
-          <a href="#">
-            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-1.jpg" alt="">
-          </a>
-        </li>
-
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        Advisors
-      </a>
-    </li>
-    <li class="social">
-      <a href="#">
-        <span class="icon-social twitter">
-          Twitter
-        </span>
-      </a>
-      <a href="#">
-        <span class="icon-social youtube">
-          Youtube
-        </span>
-      </a>
-      <a href="#">
-        <span class="icon-social facebook">
-          Facebook
-        </span>
-      </a>
-      <a href="#">
-        <span class="icon-social linkedin">
-          LinkedIn
-        </span>
-      </a>
-      <a href="#">
-        <span class="icon-social ios">
-          iOS
-        </span>
-      </a>
-      <a href="#">
-        <span class="icon-social rss">
-          RSS Feed
-        </span>
-      </a>
-    </li>
-  </ul>
-
-  <div class="desktopExpander"></div>
-</nav>
-
-<div class="body view-onecol">
-  <div class="container">
-
-    <section class="topspan">
-      
-        <ul class="breadcrumbs">
-  <li>
-    <a href="/">
-      CBOE
-    </a>
-  </li>
-  
-    <li class="parent">
-      <a href="#" title="Register for myCBOE">
-        Register for myCBOE
-      </a>
-
-      
-      <ul>
-        <li>
-          <a href="#" title="Register for myCBOE landing page">
-            Register for myCBOE landing page
-          </a>
-        </li>
-
-        
-        <li>
-          <a href="#" title="SubPage">
-            SubPage
-          </a>
-        </li>
-        
-        <li>
-          <a href="#" title="SubPage">
-            SubPage
-          </a>
-        </li>
-        
-        <li>
-          <a href="#" title="SubPage">
-            SubPage
-          </a>
-        </li>
-        
-      </ul>
-      
-
-    </li>
-  
-    <li class="parent">
-      <a href="#" title="Events">
-        Events
-      </a>
-
-      
-
-    </li>
-  
-    <li class="parent">
-      <a href="#" title="Success">
-        Success
-      </a>
-
-      
-
-    </li>
-  
-</ul>
-      
-    </section>
-
-    <section class="main">
-
-      <div class="content">
-        
-          
-  <h3 class="widget-title  blueborder ">
-    Seminars and Event Registration
-
-    
-    <div class="promo">
-      <a
-      href="#"
-      class="icon-logo tradestation
+                <li>
+                    <a href="#">
+                        Institutional
+                    </a>
+                    <ul class="hasthird">
+                        <li class="menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Media Hub
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Investor Relations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Executive Bios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        History
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Legal &amp; Regulatory
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Careers
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="feed">
+                            <ul>
+                                <li>
+                                    <h3 class="title">
+                                        Latest Press Releases
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                CBOE Holdings to Present at J.P. Morgan SMid Cap Conference on December 11
+                                                <span class="date">
+                                                    Dec 5, 2013
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="advert">
+                            <a href="#">
+                                <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-1.jpg"
+                                alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        Advisors
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="#">
+                        <span class="icon-social twitter">
+                            Twitter
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span class="icon-social youtube">
+                            Youtube
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span class="icon-social facebook">
+                            Facebook
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span class="icon-social linkedin">
+                            LinkedIn
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span class="icon-social ios">
+                            iOS
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span class="icon-social rss">
+                            RSS Feed
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="desktopExpander"></div>
+        </nav>
+        <div class="body view-onecol">
+            <div class="container">
+                <section class="topspan">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="/">
+                                CBOE
+                            </a>
+                        </li>
+                        <li class="parent">
+                            <a href="#" title="Register for myCBOE">
+                                Register for myCBOE
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Register for myCBOE landing page">
+                                        Register for myCBOE landing page
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="SubPage">
+                                        SubPage
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="SubPage">
+                                        SubPage
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="SubPage">
+                                        SubPage
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#" title="Events">
+                                Events
+                            </a>
+                        </li>
+                        <li class="parent">
+                            <a href="#" title="Success">
+                                Success
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="main">
+                    <div class="content">
+                        <h3 class="widget-title  blueborder ">
+                            Seminars and Event Registration
+                            <div class="promo">
+                                <a href="#" class="icon-logo tradestation
       ">
-      
-    </a>
-    </div>
-    
-  </h3>
-
-        
-          <div class="wrap-columns-outer">
-  <div class="wrap-columns-inner two ">
-    <div class="column  ">
-      
-        <div class="component">
-          <article class="content">
-  <p><img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/register/cboe.jpg" alt="CBOE"></p>
-
-</article>
-        </div>
-      
-    </div>
-    <div class="column  ">
-      
-        <div class="component">
-          <section class="event">
-  
-    <h2>
-      Online Event: CBOE's Options Initiative
-    </h2>
-  
-
-  
-  <ul class="">
-    
-    <li>
-      <strong>Date:</strong>
-      <span>02/13/2014</span>
-    </li>
-    
-    <li>
-      <strong>Place:</strong>
-      <span>Online</span>
-    </li>
-    
-    <li>
-      <strong>Time:</strong>
-      <span>9:00AM - 4:00PM CT</span>
-    </li>
-    
-    <li>
-      <strong>Address:</strong>
-      <span>Online</span>
-    </li>
-    
-    <li>
-      <strong>City:</strong>
-      <span>Online</span>
-    </li>
-    
-    <li>
-      <strong>Phone:</strong>
-      <span>1-877-THE-CBOE</span>
-    </li>
-    
-    <li>
-      <strong>State:</strong>
-      <span>Online</span>
-    </li>
-    
-    <li>
-      <strong>Price:</strong>
-      <span>$895.00</span>
-    </li>
-    
-  </ul>
-  
-
-  
-  <dl>
-    
-    <dt>
-      Refund Policy:
-    </dt>
-    <dd>
-      A $100 administrative fee wil be assessed for cancellations within 7 business days of seminar. A $75 transfer fee will be assessed for transfers. For more information on complaint and refund policies, please contact us at 1-877-843-2263, press 2.
-    </dd>
-    
-  </dl>
-  
-
-</section>
-        </div>
-      
-    </div>
-  </div>
-</div>
-        
-          
-<section class="form-body">
-  
-
-  <div class="form-wrapped  text-center ">
-  
-
-  
-
-  
-
-  
-  <article class="content">
-  <h1 id="registration-submitted">Registration Submitted</h1>
-<p>Your registration hs being processed.</p>
-
-</article>
-  
-
-  
-</div>
-
-  
-</section>
-        
-      </div>
-
-    </section>
-
-    <section class="bottomspan">
-      
-        <div class="widget  noborders ">
-  
-    <div class="widget-list simple  list-columns  two  noborder  collapse   showad ">
-  
-  <h3 class="widget-title ">
-    Sponsored Stories
-
-    
-    <div class="promo">
-      <a
-      href="#"
-      class="icon-logo tradestation
+                                </a>
+                            </div>
+                        </h3>
+                        <div class="wrap-columns-outer">
+                            <div class="wrap-columns-inner two ">
+                                <div class="column  ">
+                                    <div class="component">
+                                        <article class="content">
+                                            <p>
+                                                <img src="/ui/assets/images/placeholders/blank.gif"
+                                                data-echo="/ui/assets/images/register/cboe.jpg"
+                                                alt="CBOE">
+                                            </p>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="column  ">
+                                    <div class="component">
+                                        <section class="event">
+                                            <h2>
+                                                Online Event: CBOE's Options Initiative
+                                            </h2>
+                                            <ul class="">
+                                                <li>
+                                                    <strong>Date:</strong>
+                                                    <span>02/13/2014</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Place:</strong>
+                                                    <span>Online</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Time:</strong>
+                                                    <span>9:00AM - 4:00PM CT</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Address:</strong>
+                                                    <span>Online</span>
+                                                </li>
+                                                <li>
+                                                    <strong>City:</strong>
+                                                    <span>Online</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Phone:</strong>
+                                                    <span>1-877-THE-CBOE</span>
+                                                </li>
+                                                <li>
+                                                    <strong>State:</strong>
+                                                    <span>Online</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Price:</strong>
+                                                    <span>$895.00</span>
+                                                </li>
+                                            </ul>
+                                            <dl>
+                                                <dt>
+                                                    Refund Policy:
+                                                </dt>
+                                                <dd>
+                                                    A $100 administrative fee wil be assessed for cancellations within 7 business days
+                                                    of seminar. A $75 transfer
+                                                    fee will be assessed for transfers.
+                                                    For more information on complaint
+                                                    and refund policies, please
+                                                    contact us at 1-877-843-2263,
+                                                    press 2.
+                                                </dd>
+                                            </dl>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="form-body">
+                            <div class="form-wrapped  text-center ">
+                                <article class="content">
+                                    <h1 id="registration-submitted">Registration Submitted</h1>
+                                    <p>Your registration hs being processed.</p>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section class="bottomspan">
+                    <div class="widget  noborders ">
+                        <div class="widget-list simple  list-columns  two  noborder  collapse   showad ">
+                            <h3 class="widget-title ">
+                                Sponsored Stories
+                                <div class="promo">
+                                    <a href="#" class="icon-logo tradestation
       ">
-      
-    </a>
-    </div>
-    
-  </h3>
-
-
-  <ul>
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            Trade options, stocks, futures + forex on a single platform. thinkorswon by TD Ameritrade.
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            Pay less to invest with $7.95 online trades at fidelity. Advertisement
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            OPTIONS+ is the new mobile options calculator for iPhone users. Download it today.
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            Free stock and option educational webinars at tradeMONSTER - Register today!
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            TradeKin covers transfer fess up to $150. Switch today and pay only $4.95/trade.
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            Futures Trades Made Easy. Learn more at Futures Knowledge Center. Advertisement
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            Get TradeStation FREE until 2014 when you can open an account today.
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            Trade options, stocks, futures + forex on a single platform. thinkorswing by TD ameritrade. Advertisement.
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            Professional trading solutions for active traders.
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-
-      <li class="">
-        
-          <a href="#" title="">
-        
-
-        
-
-        
-
-        
-
-        
-          <p>
-            Professional trading solutions for active traders.
-          </p>
-        
-
-        
-          </a>
-        
-      </li>
-
-    
-  </ul>
-
-  
-    <div class="ad">
-      <div class="advert 300" style="text-align: center">
-  <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-1.jpg" alt="" class="background" style="display: inline-block; margin: 10px 0;" width="300" height="250">
-</div>
-    </div>
-  
-</div>
-  
-</div>
-      
-    </section>
-
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="container">
-    <div class="menu-1">
-      <h3>CBOE Links</h3>
-      <ul>
-        <li>
-          <a href="#">
-            System Status
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Investor Relations
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            International
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Risk Management
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Careers
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Advertise with CBOE
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="menu-2">
-      <h3>Legal</h3>
-      <ul>
-        <li>
-          <a href="#">
-            Legal &amp; Regulatory
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Privacy Statement
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Terms &amp; Conditions
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Copyright &amp; Trademarks
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Characteristics and Risk of Standardized Options
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            OCC and Investor Protections
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Browser &amp; System Requirements
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="disclaimer">
-      <h3>
-        <span class="icon-logo cboe">
-          CBOE
-        </span>
-      </h3>
-      <p>
-        Options involve risk and are not suitable for all investors. Prior to buying or selling an option, a person must receive a copy of Characteristics and Risks of Standardized Options (ODD). Copies of the ODD are available from your broker, by calling <a href="tel:18886784667">1-888-OPTIONS</a>, or from The Options Clearing Corporation, One North Wacker Drive, Suite 500, Chicago, Illinois 60606. The information on this website is provided solely for general education and information purposes and therefore should not be considered complete, precise, or current. Many of the matters discussed are subject to detailed rules, regulations, and statutory provisions which should be referred to for additional detail and are subject to changes that may not be reflected in the website information. No statement within the website should be construed as a recommendation to buy or sell a security or to provide investment advice. The inclusion of non-CBOE advertisements on the website should not be construed as an endorsement or an indication of the value of any product, service, or website. The Terms and Conditions govern use of this website and use of this website will be deemed acceptance of those Terms and Conditions.
-      </p>
-    </div>
-  </div>
-</footer>
-
-  <!-- START - Load Qunit tests when required -->
-  <script>
-  (function () {
-    var url = window.location.href,
-        test = (url.indexOf('#test=on') !== -1) ? true : false;
-
-    if (test) {
-      document.write('<script src="http://code.jquery.com/qunit/qunit-1.12.0.js"\></script\>');
-      document.write('<link href="http://code.jquery.com/qunit/qunit-1.12.0.css" media="all" rel="stylesheet" type="text/css"\>');
-    }
-  }).call(this);
-  </script>
-  <!-- END - Qunit -->
-
-  <script src='/ui/libs/pubsub-js/src/pubsub.js'></script><script src='/ui/libs/requirejs/require.js'></script><script src='/ui/libs/jquery/jquery.js'></script><script src='/ui/libs/handlebars/handlebars.js'></script><script src='/ui/libs/responsejs/response.js'></script><script src='/ui/libs/jquery-touchswipe/jquery.touchSwipe.js'></script><script src='/ui/libs/Vimg/dist/vimg.js'></script>
-  <script src='/ui/base/base.init.js'></script><script src='/ui/base/handlers/console.init.js'></script><script src='/ui/base/handlers/loadCss.init.js'></script><script src='/ui/base/handlers/logHandler.init.js'></script><script src='/ui/base/handlers/publishDomChange.init.js'></script><script src='/ui/base/handlers/publishResize.init.js'></script><script src='/ui/base/handlers/publishScroll.init.js'></script><script src='/ui/base/handlers/query2object.init.js'></script><script src='/ui/base/handlers/rows.init.js'></script><script src='/ui/classes/collapse/collapse.init.js'></script><script src='/ui/classes/lazyload/lazy.init.js'></script><script src='/ui/classes/numeric-color/numericColor.init.js'></script><script src='/ui/classes/scrolloverflow/scrolloverflow.init.js'></script><script src='/ui/classes/stateswitch/stateswitch.init.js'></script><script src='/ui/classes/tabs/tabs.init.js'></script><script src='/modules/accordion/accordion.init.js'></script><script src='/modules/breadcrumbs/breadcrumbs.init.js'></script><script src='/modules/header/header.init.js'></script><script src='/modules/header/navigation/navigation.init.js'></script><script src='/modules/twitter/twitter.init.js'></script><script src='/modules/widgets/content/tables.init.js'></script><script src='/modules/widgets/hero/hero.init.js'></script><script src='/modules/widgets/side-navigation/nav.init.js'></script><script src='/modules/widgets/sidebar/filter/filter.init.js'></script><script src='/modules/widgets/snapshot/snapshot.init.js'></script><script src='/modules/widgets/table/table.init.js'></script><script src='/modules/widgets/ticker/ticker.init.js'></script><script src='/modules/widgets/tv/tv.init.js'></script>
-
-
-  <!--
+                                    </a>
+                                </div>
+                            </h3>
+                            <ul>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            Trade options, stocks, futures + forex on a single platform. thinkorswon by TD
+                                            Ameritrade.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            Pay less to invest with $7.95 online trades at fidelity. Advertisement
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            OPTIONS+ is the new mobile options calculator for iPhone users. Download it today.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            Free stock and option educational webinars at tradeMONSTER - Register today!
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            TradeKin covers transfer fess up to $150. Switch today and pay only $4.95/trade.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            Futures Trades Made Easy. Learn more at Futures Knowledge Center. Advertisement
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            Get TradeStation FREE until 2014 when you can open an account today.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            Trade options, stocks, futures + forex on a single platform. thinkorswing by TD
+                                            ameritrade. Advertisement.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            Professional trading solutions for active traders.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" title="">
+                                        <p>
+                                            Professional trading solutions for active traders.
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="ad">
+                                <div class="advert 300" style="text-align: center">
+                                    <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-1.jpg"
+                                    alt="" class="background" style="display: inline-block; margin: 10px 0;"
+                                    width="300" height="250">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="menu-1">
+                    <h3>CBOE Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                System Status
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Investor Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                International
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Risk Management
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Advertise with CBOE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-2">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Legal &amp; Regulatory
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Privacy Statement
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Terms &amp; Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Copyright &amp; Trademarks
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Characteristics and Risk of Standardized Options
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                OCC and Investor Protections
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Browser &amp; System Requirements
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="disclaimer">
+                    <h3>
+                        <span class="icon-logo cboe">
+                            CBOE
+                        </span>
+                    </h3>
+                    <p>
+                        Options involve risk and are not suitable for all investors. Prior to buying or
+                        selling an option, a person must receive a copy of Characteristics
+                        and Risks of Standardized Options (ODD). Copies of the
+                        ODD are available from your broker, by calling
+                        <a
+                        href="tel:18886784667">1-888-OPTIONS</a>, or from The Options Clearing Corporation,
+                            One North Wacker Drive, Suite 500, Chicago, Illinois
+                            60606. The information on this website is provided
+                            solely for general education and information purposes
+                            and therefore should not be considered complete, precise,
+                            or current. Many of the matters discussed are subject
+                            to detailed rules, regulations, and statutory provisions
+                            which should be referred to for additional detail and
+                            are subject to changes that may not be reflected in
+                            the website information. No statement within the website
+                            should be construed as a recommendation to buy or sell
+                            a security or to provide investment advice. The inclusion
+                            of non-CBOE advertisements on the website should not
+                            be construed as an endorsement or an indication of
+                            the value of any product, service, or website. The
+                            Terms and Conditions govern use of this website and
+                            use of this website will be deemed acceptance of those
+                            Terms and Conditions.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- START - Load Qunit tests when required -->
+        <script>
+        (function()
+        {
+            var url = window.location.href,
+                test = (url.indexOf('#test=on') !== -1) ? true : false;
+            if (test)
+            {
+                document.write(
+                    '<script src="http://code.jquery.com/qunit/qunit-1.12.0.js"\></script\>'
+                );
+                document.write(
+                    '<link href="http://code.jquery.com/qunit/qunit-1.12.0.css" media="all" rel="stylesheet" type="text/css"\>'
+                );
+            }
+        }).call(this);
+        </script>
+        <!-- END - Qunit -->
+        <script src='/ui/libs/pubsub-js/src/pubsub.js'></script>
+        <script src='/ui/libs/requirejs/require.js'></script>
+        <script src='/ui/libs/jquery/jquery.js'></script>
+        <script src='/ui/libs/handlebars/handlebars.js'></script>
+        <script src='/ui/libs/responsejs/response.js'></script>
+        <script src='/ui/libs/jquery-touchswipe/jquery.touchSwipe.js'></script>
+        <script src='/ui/libs/Vimg/dist/vimg.js'></script>
+        <script src='/ui/base/base.init.js'></script>
+        <script src='/ui/base/handlers/console.init.js'></script>
+        <script src='/ui/base/handlers/loadCss.init.js'></script>
+        <script src='/ui/base/handlers/logHandler.init.js'></script>
+        <script src='/ui/base/handlers/publishDomChange.init.js'></script>
+        <script src='/ui/base/handlers/publishResize.init.js'></script>
+        <script src='/ui/base/handlers/publishScroll.init.js'></script>
+        <script src='/ui/base/handlers/query2object.init.js'></script>
+        <script src='/ui/base/handlers/rows.init.js'></script>
+        <script src='/ui/classes/collapse/collapse.init.js'></script>
+        <script src='/ui/classes/lazyload/lazy.init.js'></script>
+        <script src='/ui/classes/numeric-color/numericColor.init.js'></script>
+        <script src='/ui/classes/scrolloverflow/scrolloverflow.init.js'></script>
+        <script src='/ui/classes/stateswitch/stateswitch.init.js'></script>
+        <script src='/ui/classes/tabs/tabs.init.js'></script>
+        <script src='/modules/accordion/accordion.init.js'></script>
+        <script src='/modules/breadcrumbs/breadcrumbs.init.js'></script>
+        <script src='/modules/header/header.init.js'></script>
+        <script src='/modules/header/navigation/navigation.init.js'></script>
+        <script src='/modules/twitter/twitter.init.js'></script>
+        <script src='/modules/widgets/content/tables.init.js'></script>
+        <script src='/modules/widgets/hero/hero.init.js'></script>
+        <script src='/modules/widgets/side-navigation/nav.init.js'></script>
+        <script src='/modules/widgets/sidebar/filter/filter.init.js'></script>
+        <script src='/modules/widgets/snapshot/snapshot.init.js'></script>
+        <script src='/modules/widgets/table/table.init.js'></script>
+        <script src='/modules/widgets/ticker/ticker.init.js'></script>
+        <script src='/modules/widgets/tv/tv.init.js'></script>
+        <!--
     Post-DOM SHIMS
     These fix issues in legacy browsers where certain
     features are not supported.
   -->
-  <!--[if lt IE 10]>
+        <!--[if lt IE 10]>
   <script src="/ui/classes/shims/ie-lt10.js" type="text/javascript"></script>
   <![endif]-->
-  <!--[if lt IE 9]>
+        <!--[if lt IE 9]>
   <script src="/ui/classes/shims/ie-lt9.js" type="text/javascript"></script>
   <![endif]-->
-
-</body>
+    </body>
 </html>

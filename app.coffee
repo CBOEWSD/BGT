@@ -2,7 +2,6 @@
 # Ran using `coffee app.coffee`.
 
 # Module dependencies.
-require('newrelic') if process.env.NODE_ENV == 'production'
 express = require 'express'
 routes = require './_application'
 http = require 'http'
@@ -50,7 +49,6 @@ assetManager.addBundle {
     'ui/libs/handlebars/handlebars.js'
     'ui/libs/responsejs/response.js'
     'ui/libs/jquery-touchswipe/jquery.touchSwipe.js'
-    #'ui/libs/echojs/dist/echo.js'
     'ui/libs/Vimg/dist/vimg.js'
   ]
 }

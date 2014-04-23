@@ -34,5 +34,13 @@
       "classes": ["icon-before", "institute"],
       "text": "Options Institute Plus"
     }
+  ],
+  "extended": [
+    {
+      "title": "Required Curriculum",
+      "component": {
+        "accordion/accordion": "edsnap/curriculum.json"
+      }
+    }
   ]
 }

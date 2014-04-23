@@ -1,6 +1,6 @@
 {
   "view": "threecol",
-  "title": "Education Landing",
+  "title": "Education Landing 2",
   "meta": {
     "keywords": "some, keywords",
     "description": "This is a description"
@@ -18,7 +18,7 @@
     ],
     "col2": [
       {
-        "widgets/content/content": "welcome.md"
+        "widgets/content/content": "../../_root/content/welcome.md"
       },
       {
         "widgets/education-snap/wrap": "edsnap/wrap.json"
@@ -26,7 +26,7 @@
       {
         "twocolrow": [
           {
-            "widgets/hero/copybased": "featured-webcast.json"
+            "widgets/hero/copybased": "../../_root/content/featured-webcast.json"
           },
           {
             "ads/square_300/block": ""
@@ -34,18 +34,104 @@
         ]
       },
       {
-        "widgets/tv/row/row": "tv/tv.json"
+        "widgets/tv/row/row": "../../_root/content/tv/tv.json"
+      },
+      {
+        "twocolrow": [
+          {
+            "widgets/widget": {
+              "classes": [
+                "noborders"
+              ],
+              "content": {
+                "widgets/content/content": "boxes/events.md"
+              }
+            }
+          },
+          {
+            "widgets/widget": {
+              "classes": [
+                "noborders"
+              ],
+              "content": {
+                "widgets/content/content": "boxes/online.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "twocolrow": [
+          {
+            "widgets/widget": {
+              "classes": [
+                "noborders"
+              ],
+              "content": {
+                "widgets/content/content": "boxes/seminars.md"
+              }
+            }
+          },
+          {
+            "widgets/widget": {
+              "classes": [
+                "noborders"
+              ],
+              "content": {
+                "widgets/content/content": "boxes/webcasts.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "twocolrow": [
+          {
+            "widgets/widget": {
+              "classes": [
+                "noborders"
+              ],
+              "content": {
+                "widgets/content/content": "boxes/optionquest.md"
+              }
+            }
+          },
+          {
+            "widgets/widget": {
+              "classes": [
+                "noborders"
+              ],
+              "content": {
+                "widgets/content/content": "boxes/institute.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "twocolrow": [
+          {
+            "widgets/widget": {
+              "classes": [
+                "noborders"
+              ],
+              "content": {
+                "widgets/content/content": "boxes/professionals.md"
+              }
+            }
+          }
+        ]
       }
     ],
     "col3": [
       {
-        "widgets/list/links": "related.json"
+        "widgets/list/links": "../../_root/content/related.json"
       },
       {
-        "widgets/hero/copybased": "featured-events.json"
+        "widgets/hero/copybased": "../../_root/content/featured-events.json"
       },
       {
-        "widgets/hero/copybased": "featured-products.json"
+        "widgets/hero/copybased": "../../_root/content/featured-products.json"
       },
       {
         "ads/tall/tall": ""
@@ -53,7 +139,7 @@
     ],
     "bottomspan": [
       {
-        "widgets/widget": "bottomspan/widget.json"
+        "widgets/widget": "../../_root/content/bottomspan/widget.json"
       }
     ]
   }

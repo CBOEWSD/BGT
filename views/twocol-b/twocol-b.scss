@@ -19,6 +19,7 @@ $view: '.view-twocolB';
 
   .bottomspan {
     @include outerRow();
+    min-width: 0;
     margin: 35px 0;
   }
 

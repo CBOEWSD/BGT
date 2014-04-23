@@ -51,6 +51,16 @@ button, #{$class} {
       }
   }
 
+  &.darkGrey {
+    background: lighten($colorGrey1, 2%);
+    color: #fff;
+
+      &:hover {
+        color: #fff;
+        background: lighten($colorGrey1, 10%);
+      }
+  }
+
   &.white {
     background: #fff;
     color: $colorBlue1;

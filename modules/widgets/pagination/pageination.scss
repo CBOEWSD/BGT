@@ -55,6 +55,20 @@ $module: '.pagination';
     color: darken($colorGrey2, 25%);
   }
 
+  @media all and (max-width: 900px) {
+    &>ul {
+      li {
+        &.next, &.prev {
+          a {
+            background: none;
+            color: $colorGrey1;
+            padding: 3px 0;
+          }
+        }
+      }
+    }
+  }
+
   @media all and (max-width: $screenSmallMax) {
     &>ul {
       position: relative;

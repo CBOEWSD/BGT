@@ -78,6 +78,7 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
   padding: 0 0 10px 0;
   margin: 0 0 15px 0;
   position: relative;
+  @include clearfix();
 
   &.blueborder {
     border-bottom: 3px solid $colorBlue2;

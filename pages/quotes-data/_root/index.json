@@ -50,6 +50,20 @@
         "_columns/two": "row3.json"
       },
       {
+        "_columns/one": {
+          "column": {
+            "classes": [
+              "hideatGT900"
+            ],
+            "modules": [
+              {
+                "ads/span/slim": ""
+              }
+            ]
+          }
+        }
+      },
+      {
         "_columns/two": "row4.json"
       },
       {

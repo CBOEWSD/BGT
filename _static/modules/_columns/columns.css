@@ -2,56 +2,45 @@
   Module: Columns
   Description: Simple wrapper element that can break modules into columns
 */
-.wrap-columns {
-  width: auto;
-  max-width: none;
-  min-width: 0;
-  margin: 0 -15px;
-  *zoom: 1;
-  margin-bottom: 20px; }
-  .wrap-columns:before, .wrap-columns:after {
-    content: " ";
-    display: table; }
-  .wrap-columns:after {
-    clear: both; }
-  .wrap-columns.margin-ten {
+.wrap-columns-outer {
+  margin: 0 -15px; }
+  @media all and (max-width: 767px) {
+    .wrap-columns-outer {
+      margin: 0; } }
+
+.wrap-columns-inner {
+  margin: 0 0 20px;
+  table-layout: fixed;
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px 0; }
+  .wrap-columns-inner * {
+    border-collapse: initial;
+    border-spacing: 0; }
+  .wrap-columns-inner.margin-ten {
     margin-bottom: 10px; }
-  .wrap-columns.margin-none {
+  .wrap-columns-inner.margin-none {
     margin-bottom: 0; }
-  .wrap-columns.two .column {
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding: 0 15px;
+  .wrap-columns-inner .column {
+    display: table-cell;
+    vertical-align: top; }
+  .wrap-columns-inner.two .column {
     width: 50%; }
-    @media only screen and (max-width: 767px) {
-      .wrap-columns.two .column {
-        float: none;
-        width: auto; } }
-  .wrap-columns.two.slimright .column:first-child {
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding: 0 15px;
-    width: 66.66667%; }
-    @media only screen and (max-width: 767px) {
-      .wrap-columns.two.slimright .column:first-child {
-        float: none;
-        width: auto; } }
-  .wrap-columns.two.slimright .column:last-child {
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding: 0 15px;
-    width: 33.33333%; }
-    @media only screen and (max-width: 767px) {
-      .wrap-columns.two.slimright .column:last-child {
-        float: none;
-        width: auto; } }
-  .wrap-columns .component {
-    margin-bottom: 50px;
+    .wrap-columns-inner.two .column:first-child {
+      padding-right: 10px; }
+    .wrap-columns-inner.two .column:last-child {
+      padding-left: 10px; }
+  .wrap-columns-inner.two.slimright .column:first-child {
+    width: 66.66666%; }
+  .wrap-columns-inner.two.slimright .column:last-child {
+    width: 32.6%; }
+  .wrap-columns-inner.three .column {
+    width: 33.3333%; }
+  .wrap-columns-inner .component {
+    margin-bottom: 30px;
     position: relative; }
-    .wrap-columns .component:after {
+    .wrap-columns-inner .component:after {
       display: block;
       content: "";
       border-bottom: 1px solid #dddddd;
@@ -59,26 +48,36 @@
       position: absolute;
       bottom: -15px;
       left: 0; }
-    .wrap-columns .component:last-child {
+    .wrap-columns-inner .component:last-child {
       border-bottom: none;
       padding: 0;
       margin-bottom: 0; }
-      .wrap-columns .component:last-child:after {
+      .wrap-columns-inner .component:last-child:after {
         display: none; }
-    .wrap-columns .component:first-child {
+    .wrap-columns-inner .component:first-child {
       border-bottom: none;
       padding: 0;
       margin-bottom: 0; }
-      .wrap-columns .component:first-child:after {
+      .wrap-columns-inner .component:first-child:after {
         display: none; }
-    .wrap-columns .component > div, .wrap-columns .component > section, .wrap-columns .component > article {
+    .wrap-columns-inner .component > div, .wrap-columns-inner .component > section, .wrap-columns-inner .component > article {
       margin: 0; }
   @media all and (max-width: 767px) {
-    .wrap-columns .column {
-      margin: 30px 0; }
-      .wrap-columns .column:first-child {
-        margin-top: 0; }
-      .wrap-columns .column:last-child {
-        margin-bottom: 0; }
-    .wrap-columns.margin-none .column {
-      margin: 0; } }
+    .wrap-columns-inner {
+      display: block; }
+      .wrap-columns-inner .column {
+        margin: 20px 0;
+        width: 100% !important;
+        display: block; }
+        .wrap-columns-inner .column:first-child {
+          margin-top: 0; }
+        .wrap-columns-inner .column:last-child {
+          margin-bottom: 0; }
+      .wrap-columns-inner.two .column:first-child, .wrap-columns-inner.two .column:last-child {
+        padding-left: 0;
+        padding-right: 0; }
+      .wrap-columns-inner.two .widget.column:first-child, .wrap-columns-inner.two .widget.column:last-child {
+        padding-left: 10px;
+        padding-right: 10px; }
+      .wrap-columns-inner.margin-none .column {
+        margin: 0; } }

@@ -1,0 +1,54 @@
+/*
+  Module: Optionable Title
+  Description: A widget title component which allows for dropdown options.
+*/
+.optionable-title {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0 -15px;
+  *zoom: 1;
+  margin-bottom: 20px !important; }
+  .optionable-title:before, .optionable-title:after {
+    content: " ";
+    display: table; }
+  .optionable-title:after {
+    clear: both; }
+  .optionable-title .left {
+    float: left;
+    padding-left: 0; }
+    .optionable-title .left > .title {
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle; }
+  .optionable-title .form-component {
+    float: right;
+    padding-right: 0;
+    text-align: right; }
+    .optionable-title .form-component label {
+      display: inline-block;
+      margin: 0 10px; }
+      .optionable-title .form-component label:last-child {
+        margin: 0; }
+  @media all and (max-width: 767px) {
+    .optionable-title .left, .optionable-title .form-component {
+      padding: 0;
+      float: none; }
+    .optionable-title .form-component {
+      text-align: left; }
+      .optionable-title .form-component select {
+        display: block;
+        width: 100%;
+        margin: 10px 0; }
+      .optionable-title .form-component label {
+        width: 100%;
+        display: block;
+        margin: 5px 0; }
+        .optionable-title .form-component label select {
+          margin: 0; }
+      .optionable-title .form-component button {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0; }
+      .optionable-title .form-component > *:last-child {
+        margin-bottom: 0; } }

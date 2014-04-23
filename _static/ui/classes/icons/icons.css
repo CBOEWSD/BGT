@@ -67,8 +67,16 @@
   height: 9px; }
   .icon-smallarrows.up {
     background-position: -17px -51px; }
+  .icon-smallarrows.down {
+    background-position: -1px -51px; }
   .icon-smallarrows.right {
-    background-position: -17px -51px; }
+    background-position: -86px -50px;
+    width: 9px;
+    height: 13px; }
+  .icon-smallarrows.left {
+    background-position: -67px -50px;
+    width: 9px;
+    height: 13px; }
 
 .icon-css-arrows > li > a, .icon-css-arrows > a {
   position: relative;

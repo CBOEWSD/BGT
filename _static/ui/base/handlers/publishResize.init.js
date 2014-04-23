@@ -1,5 +1,6 @@
+
 /*
-  # PublishResize
+   * PublishResize
   Allows for modules or classes to subscribe for a window
   resize event to be fired. This does a number of things.
   Primarily, it allows for periodic checking and firing
@@ -7,8 +8,7 @@
   The event that subscriberrs are listening for will only happen
   once a second and prevent a performance issue for
   repeated adustments.
-*/
-
+ */
 
 (function() {
   var PublishResize;
@@ -18,10 +18,10 @@
 
     self = void 0;
 
-    /*
-      ## Constructor
-    */
 
+    /*
+       *# Constructor
+     */
 
     function PublishResize() {
       self = this;
@@ -30,22 +30,22 @@
       self.periodicCheck();
     }
 
-    /*
-      ## `this.shouldFire`
-      Simply flags the fireIt variable `true`
-    */
 
+    /*
+       *# `this.shouldFire`
+      Simply flags the fireIt variable `true`
+     */
 
     PublishResize.prototype.shouldFire = function(e) {
       return self.fireIt = true;
     };
 
+
     /*
-      ## `this.periodicCheck`
+       *# `this.periodicCheck`
       Will check every second to see
       if the event should be published.
-    */
-
+     */
 
     PublishResize.prototype.periodicCheck = function() {
       return setInterval(function() {
@@ -66,4 +66,4 @@
 
 }).call(this);
 
-//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGlzaFJlc2l6ZS5pbml0LmpzIiwic291cmNlcyI6WyJwdWJsaXNoUmVzaXplLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7O0NBQUE7Q0FBQTtDQUFBO0NBQUEsS0FBQSxPQUFBOztDQUFBLENBV007Q0FDSixHQUFBLElBQUE7O0NBQUEsRUFBTyxDQUFQLEVBQUE7O0NBRUE7OztDQUZBOztDQUthLEVBQUEsQ0FBQSxtQkFBQTtDQUVYLEVBQU8sQ0FBUCxFQUFBO0NBQUEsRUFFYyxDQUFWLENBRkosQ0FFQTtDQUZBLENBSzJCLEVBQTNCLEVBQUEsRUFBQSxFQUFBO0NBTEEsR0FRSSxFQUFKLE9BQUE7Q0FmRixJQUthOztDQVliOzs7O0NBakJBOztDQUFBLEVBcUJZLE1BQUMsQ0FBYjtDQUNPLEVBQVMsQ0FBVixFQUFKLE9BQUE7Q0F0QkYsSUFxQlk7O0NBR1o7Ozs7O0NBeEJBOztDQUFBLEVBNkJlLE1BQUEsSUFBZjtDQUNjLEVBQUEsTUFBQSxFQUFaLEVBQUE7Q0FDRSxHQUFHLEVBQUgsRUFBQTtDQUNFLEtBQU0sQ0FBTixDQUFBLEVBQUE7Q0FDSyxFQUFTLENBQVYsRUFBSixXQUFBO1VBSFE7Q0FBWixDQUlFLEVBSkYsR0FBWTtDQTlCZCxJQTZCZTs7Q0E3QmY7O0NBWkY7O0NBQUEsQ0FpREEsQ0FBZ0IsQ0FBaUIsRUFBM0I7O0FBQ1UsQ0FsRGhCLENBa0RBLENBQWdCLEdBQVYsT0FsRE47Q0FBQSJ9
+//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGlzaFJlc2l6ZS5pbml0LmpzIiwic291cmNlcyI6WyJwdWJsaXNoUmVzaXplLmluaXQuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7Ozs7Ozs7OztHQUFBO0FBQUE7QUFBQTtBQUFBLE1BQUEsYUFBQTs7QUFBQSxFQVdNO0FBQ0osUUFBQSxJQUFBOztBQUFBLElBQUEsSUFBQSxHQUFPLE1BQVAsQ0FBQTs7QUFFQTtBQUFBOztPQUZBOztBQUthLElBQUEsdUJBQUEsR0FBQTtBQUVYLE1BQUEsSUFBQSxHQUFPLElBQVAsQ0FBQTtBQUFBLE1BRUEsSUFBSSxDQUFDLE1BQUwsR0FBYyxLQUZkLENBQUE7QUFBQSxNQUtBLENBQUEsQ0FBRyxNQUFILENBQVcsQ0FBQyxJQUFaLENBQWlCLFFBQWpCLEVBQTJCLElBQUksQ0FBQyxVQUFoQyxDQUxBLENBQUE7QUFBQSxNQVFBLElBQUksQ0FBQyxhQUFMLENBQUEsQ0FSQSxDQUZXO0lBQUEsQ0FMYjs7QUFpQkE7QUFBQTs7O09BakJBOztBQUFBLDRCQXFCQSxVQUFBLEdBQVksU0FBQyxDQUFELEdBQUE7YUFDVixJQUFJLENBQUMsTUFBTCxHQUFjLEtBREo7SUFBQSxDQXJCWixDQUFBOztBQXdCQTtBQUFBOzs7O09BeEJBOztBQUFBLDRCQTZCQSxhQUFBLEdBQWUsU0FBQSxHQUFBO2FBQ2IsV0FBQSxDQUFZLFNBQUEsR0FBQTtBQUNWLFFBQUEsSUFBRyxJQUFJLENBQUMsTUFBUjtBQUNFLFVBQUEsTUFBTSxDQUFDLE9BQVAsQ0FBZSxRQUFmLENBQUEsQ0FBQTtpQkFDQSxJQUFJLENBQUMsTUFBTCxHQUFjLE1BRmhCO1NBRFU7TUFBQSxDQUFaLEVBSUUsSUFKRixFQURhO0lBQUEsQ0E3QmYsQ0FBQTs7eUJBQUE7O01BWkYsQ0FBQTs7QUFBQSxFQWlEQSxNQUFNLENBQUMsTUFBUCxHQUFnQixNQUFNLENBQUMsTUFBUCxJQUFpQixFQWpEakMsQ0FBQTs7QUFBQSxFQWtEQSxNQUFNLENBQUMsTUFBUCxHQUFnQixHQUFBLENBQUEsYUFsRGhCLENBQUE7QUFBQSJ9

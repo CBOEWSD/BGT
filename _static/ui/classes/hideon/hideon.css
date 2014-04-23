@@ -2,16 +2,94 @@
   Class: Hideon
   Description: Used to remove certain elements between mobile/desktop views.
 */
-@media screen and (max-width: 767px) {
+@media all and (max-width: 767px) {
   .hideonmobile {
-    position: fixed;
-    top: 2000%;
-    right: -2000%; } }
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
 
 .hideondesktop {
   display: none\9; }
-  @media screen and (min-width: 767px) {
+  @media all and (min-width: 767px) {
     .hideondesktop {
-      position: fixed;
-      top: 2000%;
-      right: -2000%; } }
+      position: fixed !important;
+      top: 2000% !important;
+      right: -2000% !important;
+      display: none !important; } }
+
+/*
+  Target viewport Less-Than N
+*/
+@media all and (max-width: 900px) {
+  .hideatLT900 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+@media all and (max-width: 800px) {
+  .hideatLT800 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+@media all and (max-width: 700px) {
+  .hideatLT700 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+@media all and (max-width: 600px) {
+  .hideatLT600 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+@media all and (max-width: 500px) {
+  .hideatLT500 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+/*
+  Target viewport Greater-Than N
+*/
+@media all and (min-width: 900px) {
+  .hideatGT900 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+@media all and (min-width: 800px) {
+  .hideatGT800 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+@media all and (min-width: 700px) {
+  .hideatGT700 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+@media all and (min-width: 600px) {
+  .hideatGT600 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }
+
+@media all and (min-width: 500px) {
+  .hideatGT500 {
+    position: fixed !important;
+    top: 2000% !important;
+    right: -2000% !important;
+    display: none !important; } }

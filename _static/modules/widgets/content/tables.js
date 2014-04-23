@@ -1,10 +1,10 @@
+
 /*
-  # Content Tables
+   * Content Tables
   This module will be loaded when tables exist within
   content on articles on the page. The interaction will
   render tables in a viewable manner on mobile viewports.
-*/
-
+ */
 
 (function() {
   var ContentTables;
@@ -14,10 +14,10 @@
 
     self = void 0;
 
-    /*
-      ## Constructor
-    */
 
+    /*
+       *# Constructor
+     */
 
     function ContentTables($el) {
       self = this;
@@ -25,12 +25,12 @@
       this.bind();
     }
 
+
     /*
-      ## this.bind
+       *# this.bind
       Will call any library or methods required to render
       tables correctly across viewports.
-    */
-
+     */
 
     ContentTables.prototype.bind = function() {
       return self.$el.ReStable();
@@ -46,4 +46,4 @@
 
 }).call(this);
 
-//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGFibGVzLmpzIiwic291cmNlcyI6WyJ0YWJsZXMuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Q0FBQTtDQUFBO0NBQUE7Q0FBQSxLQUFBLE9BQUE7O0NBQUEsQ0FPTTtDQUNKLEdBQUEsSUFBQTs7Q0FBQSxFQUFPLENBQVAsRUFBQTs7Q0FFQTs7O0NBRkE7O0NBS2EsRUFBQSxDQUFBLG1CQUFDO0NBQ1osRUFBTyxDQUFQLEVBQUE7Q0FBQSxFQUdBLENBQUMsRUFBRDtDQUhBLEdBS0MsRUFBRDtDQVhGLElBS2E7O0NBUWI7Ozs7O0NBYkE7O0NBQUEsRUFrQk0sQ0FBTixLQUFNO0NBQ0MsRUFBRyxDQUFKLElBQUosS0FBQTtDQW5CRixJQWtCTTs7Q0FsQk47O0NBUkY7O0NBQUEsQ0E2QkEsQ0FBTyxHQUFQLEdBQU87Q0FDTCxVQUFPLEVBQVA7Q0FERixFQUFPO0NBN0JQIn0=
+//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGFibGVzLmpzIiwic291cmNlcyI6WyJ0YWJsZXMuY29mZmVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7Ozs7O0dBQUE7QUFBQTtBQUFBO0FBQUEsTUFBQSxhQUFBOztBQUFBLEVBT007QUFDSixRQUFBLElBQUE7O0FBQUEsSUFBQSxJQUFBLEdBQU8sTUFBUCxDQUFBOztBQUVBO0FBQUE7O09BRkE7O0FBS2EsSUFBQSx1QkFBQyxHQUFELEdBQUE7QUFDWCxNQUFBLElBQUEsR0FBTyxJQUFQLENBQUE7QUFBQSxNQUdBLElBQUMsQ0FBQyxHQUFGLEdBQVEsR0FIUixDQUFBO0FBQUEsTUFLQSxJQUFDLENBQUMsSUFBRixDQUFBLENBTEEsQ0FEVztJQUFBLENBTGI7O0FBYUE7QUFBQTs7OztPQWJBOztBQUFBLDRCQWtCQSxJQUFBLEdBQU0sU0FBQSxHQUFBO2FBQ0osSUFBSSxDQUFDLEdBQUcsQ0FBQyxRQUFULENBQUEsRUFESTtJQUFBLENBbEJOLENBQUE7O3lCQUFBOztNQVJGLENBQUE7O0FBQUEsRUE2QkEsTUFBQSxDQUFPLFNBQUEsR0FBQTtBQUNMLFdBQU8sYUFBUCxDQURLO0VBQUEsQ0FBUCxDQTdCQSxDQUFBO0FBQUEifQ==

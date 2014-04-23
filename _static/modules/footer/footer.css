@@ -42,6 +42,9 @@
     .footer .disclaimer p {
       font-size: 0.8em;
       line-height: 1.3em; }
+    .footer .disclaimer a {
+      color: white;
+      text-decoration: none; }
   .footer h3 {
     font-weight: 400;
     font-size: 1.4em;

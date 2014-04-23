@@ -31,15 +31,29 @@
     display: block;
     margin: 10px 0 0 0;
     color: #9d9d9d; }
+  @media all and (max-width: 900px) {
+    .pagination > ul li.next a, .pagination > ul li.prev a {
+      background: none;
+      color: #313538;
+      padding: 3px 0; } }
   @media all and (max-width: 767px) {
-    .pagination ul {
+    .pagination > ul {
       position: relative;
       padding-top: 30px; }
-      .pagination ul li.next, .pagination ul li.prev {
+      .pagination > ul li.next, .pagination > ul li.prev {
         position: absolute;
         top: 0;
         width: 50%; }
-      .pagination ul li.next {
+      .pagination > ul li.next {
         right: 0; }
-      .pagination ul li.prev {
-        left: 0; } }
+      .pagination > ul li.prev {
+        left: 0; }
+      .pagination > ul li.pages {
+        display: block;
+        max-width: 100%;
+        overflow-x: scroll; }
+        .pagination > ul li.pages ul {
+          display: table;
+          width: 100%; }
+          .pagination > ul li.pages ul li {
+            display: table-cell; } }

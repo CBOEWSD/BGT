@@ -34,7 +34,7 @@ form input, form select {
     width: auto;
     vertical-align: middle; }
 
-select {
+select, form select {
   cursor: pointer;
   background: url(/ui/classes/forms/assets/dropdown-arrow.png) no-repeat #135fad;
   background-position: right 5px top -32px;
@@ -52,7 +52,7 @@ select {
   appearance: none;
   text-indent: 0.01px;
   text-overflow: ''; }
-  select::-ms-expand {
+  select::-ms-expand, form select::-ms-expand {
     display: none; }
 
 @-moz-document url-prefix() {

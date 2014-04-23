@@ -25,6 +25,7 @@
     min-width: 768px;
     margin: 0 auto;
     *zoom: 1;
+    min-width: 0;
     margin: 35px 0; }
     .view-onecol .bottomspan:before, .view-onecol .bottomspan:after {
       content: " ";

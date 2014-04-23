@@ -2,7 +2,7 @@
 	Class: Buttons
 	Description: Buttons class to be used globally and extended from.
 */
-.button {
+button, .button {
   background: #135fad;
   display: inline-block;
   -webkit-border-radius: 3px;
@@ -21,29 +21,35 @@
   -ms-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   -o-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1); }
-  .button:hover {
+  button:hover, .button:hover {
     color: white; }
-  .button a {
+  button a, .button a {
     color: white !important;
     font-weight: 700;
     display: inline-block;
     margin: -5px -20px;
     padding: 5px 20px; }
-  .button:hover {
+  button:hover, .button:hover {
     background: #1879db;
     text-decoration: none; }
-  .button.green {
+  button.green, .button.green {
     background: #21a825;
     color: white; }
-    .button.green:hover {
+    button.green:hover, .button.green:hover {
       color: white;
       background: #29d32c; }
-  .button.white {
+  button.darkGrey, .button.darkGrey {
+    background: #363a3d;
+    color: white; }
+    button.darkGrey:hover, .button.darkGrey:hover {
+      color: white;
+      background: #494f53; }
+  button.white, .button.white {
     background: white;
     color: #135fad; }
-    .button.white:hover {
+    button.white:hover, .button.white:hover {
       background: #e6e6e6; }
-  .button.grey {
+  button.grey, .button.grey {
     background: #798289; }
-    .button.grey:hover {
+    button.grey:hover, .button.grey:hover {
       background: #313538; }

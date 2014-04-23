@@ -1,0 +1,59 @@
+/*
+  Module: Index Overview Summary
+  Description: Simply shows highlights items from summary object.
+*/
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.quote-summary {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px; }
+  .quote-summary .col {
+    display: table-cell;
+    vertical-align: top;
+    text-align: center; }
+    .quote-summary .col .key, .quote-summary .col .value {
+      display: block; }
+    .quote-summary .col .key {
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: 700; }
+    .quote-summary .col .value {
+      font-size: 1.5em; }
+      .quote-summary .col .value .prefix, .quote-summary .col .value .postfix {
+        font-size: 0.6em;
+        top: -0.5em;
+        margin: 0 -0.4em 0 -0.3em; }

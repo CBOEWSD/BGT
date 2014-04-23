@@ -1,0 +1,49 @@
+/*
+  Module: Q&D Title
+  Description: Quotes and Data custom widget title element.
+*/
+.qnd-title {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0 -15px;
+  *zoom: 1; }
+  .qnd-title:before, .qnd-title:after {
+    content: " ";
+    display: table; }
+  .qnd-title:after {
+    clear: both; }
+  .qnd-title .left {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 66.66667%;
+    padding-left: 0; }
+    @media only screen and (max-width: 767px) {
+      .qnd-title .left {
+        float: none;
+        width: auto; } }
+    .qnd-title .left > h1, .qnd-title .left > select {
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle; }
+    .qnd-title .left > select {
+      margin-right: 10px; }
+  .qnd-title .search-component {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 33.33333%;
+    padding-right: 0;
+    margin-top: -10px; }
+    @media only screen and (max-width: 767px) {
+      .qnd-title .search-component {
+        float: none;
+        width: auto; } }
+  @media all and (max-width: 767px) {
+    .qnd-title .left, .qnd-title .search-component {
+      padding: 0; }
+    .qnd-title .search-component {
+      margin-top: 10px; } }

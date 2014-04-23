@@ -25,6 +25,7 @@
     min-width: 768px;
     margin: 0 auto;
     *zoom: 1;
+    min-width: 0;
     margin: 35px 0; }
     .view-twocolB .bottomspan:before, .view-twocolB .bottomspan:after {
       content: " ";
@@ -71,17 +72,15 @@
     .view-twocolB .main .two-col-body .col1 {
       width: 210px; } }
   @media screen and (max-width: 767px) {
-    .view-twocolB .main {
-      margin-top: 20px; }
-      .view-twocolB .main > div:first-child {
-        margin-top: 0; }
-      .view-twocolB .main .two-col-body {
+    .view-twocolB .main > div:first-child {
+      margin-top: 0; }
+    .view-twocolB .main .two-col-body {
+      display: block;
+      margin-bottom: 0; }
+      .view-twocolB .main .two-col-body .col1, .view-twocolB .main .two-col-body .col2 {
         display: block;
-        margin-bottom: 0; }
-        .view-twocolB .main .two-col-body .col1, .view-twocolB .main .two-col-body .col2 {
-          display: block;
-          width: 100%; }
-          .view-twocolB .main .two-col-body .col1 > div:last-child, .view-twocolB .main .two-col-body .col2 > div:last-child {
-            margin-bottom: 0; }
-        .view-twocolB .main .two-col-body .col1 {
-          margin-bottom: 30px; } }
+        width: 100%; }
+        .view-twocolB .main .two-col-body .col1 > div:last-child, .view-twocolB .main .two-col-body .col2 > div:last-child {
+          margin-bottom: 0; }
+      .view-twocolB .main .two-col-body .col1 {
+        margin-bottom: 30px; } }

@@ -1,0 +1,49 @@
+/*
+  Module: Index Overview
+  Description: Creates a list of overview items
+*/
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.quote-overview .data .set {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid #dddddd; }
+  .quote-overview .data .set .key, .quote-overview .data .set .value {
+    display: table-cell; }
+  .quote-overview .data .set .value {
+    text-align: right; }

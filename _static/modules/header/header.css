@@ -142,11 +142,12 @@
       .header .right {
         float: none;
         width: auto; } }
-  @media screen and (max-width: 767px) {
+  @media all and (max-width: 767px) {
     .header {
       height: auto;
       border-top: none;
-      padding-top: 45px; }
+      padding-top: 45px;
+      padding-bottom: 30px; }
       .header .container {
         display: table;
         width: 100%; }

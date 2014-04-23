@@ -23,7 +23,7 @@
     border-bottom: 1px solid #dddddd; }
     .side-navigation > ul li ul li a {
       color: #313538; }
-      .side-navigation > ul li ul li a:hover, .side-navigation > ul li ul li a:active {
+      .side-navigation > ul li ul li a:hover, .side-navigation > ul li ul li a:active, .side-navigation > ul li ul li a .active {
         background: #f2f2f2; }
   .side-navigation > ul > li > a {
     position: relative;

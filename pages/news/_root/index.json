@@ -1,6 +1,6 @@
 {
   "view": "twocol-b",
-  "title": "News Landing",
+  "title": "News Landing 2",
   "meta": {
     "keywords": "some, keywords",
     "description": "This is a description"
@@ -46,71 +46,21 @@
     ],
     "col2": [
       {
-        "_columns/two": {
-          "column1": {
-            "modules": [
-              {
-                "widgets/widget-title": {
-                  "widget": {
-                    "title": "CBOE News",
-                    "promo": {
-                      "url": "#",
-                      "text": "View All"
-                    }
-                  }
-                }
-              },
-              {
-                "widgets/list/simple": "news/1.json"
-              },
-              {
-                "widgets/list/simple": "news/2.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              }
-            ]
-          },
-          "column2": {
-            "modules": [
-              {
-                "widgets/widget-title": {
-                  "widget": {
-                    "title": "Market News",
-                    "promo": {
-                      "url": "#",
-                      "text": "View All"
-                    }
-                  }
-                }
-              },
-              {
-                "widgets/list/simple": "news/1.json"
-              },
-              {
-                "widgets/list/simple": "news/2.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              }
-            ]
+        "widgets/widget-title": {
+          "widget": {
+            "title": "Showing all \"CBOE News\"",
+            "promo": {
+              "url": "#",
+              "text": "View All"
+            }
           }
         }
       },
       {
-        "widgets/tv/row/row": "tv.json"
+        "widgets/results/twocol": "results.json"
+      },
+      {
+        "widgets/pagination/pagination": "results.json"
       }
     ],
     "bottomspan": [

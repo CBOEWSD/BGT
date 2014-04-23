@@ -23,6 +23,15 @@ $module: '.snapshot';
     left: -5000em;
     width: 200px;
 
+    .images, .image {
+      overflow: hidden;
+
+      img {
+        float: right;
+        max-width: none!important; // Overwriting the global setting for responsive.
+      }
+    }
+
     .button {
       position: absolute; top: -46px; right: 0;
 

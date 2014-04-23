@@ -41,6 +41,7 @@ class Snapshot
   loaded: ->
     self.$el.addClass 'loaded'
     self.$index.first().trigger 'click'
+    PubSub.publish('LazyLoadPoll')
 
   ###
     ## this.bind

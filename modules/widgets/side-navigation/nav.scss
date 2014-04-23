@@ -44,7 +44,7 @@ $pullSide: 6px;
         a {
           color: $colorGrey1;
 
-          &:hover, &:active {
+          &:hover, &:active, .active {
             background: darken(#fff, 5%);
           }
         }

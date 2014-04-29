@@ -14,6 +14,6 @@
     "socket.io-client": "~0.9.16",
     "ReStable": "~0.1.1",
     "gremlins.js": "~0.1.0",
-    "Vimg": "~1.0.0"
+    "Vimg": "~1.0.2"
   }
 }

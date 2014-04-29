@@ -47,15 +47,21 @@ $module: '.widget-tv.row';
   }
 
   .items {
-    display: table;
-    table-layout: fixed;
+    //display: table;
+    //table-layout: fixed;
     width: 100%;
     margin: 20px 0;
 
     .item {
-      display: table-cell;
-      vertical-align: top;
+      //display: table-cell;
+      //vertical-align: top;
+      @include column(3);
       padding: 10px;
+
+      // Only show 4 items by default
+      &+.item+.item+.item+.item {
+        display: none;
+      }
 
       img {
         max-height: 220px;

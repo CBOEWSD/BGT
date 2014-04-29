@@ -8,65 +8,17 @@
     {
       "title": "Most Recent",
       "total": 12,
-      "items": [
-        {
-          "title": "Sub title",
-          "total": 6,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 4,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 2,
-          "url": "#menu"
-        }
-      ]
+      "publish": "tv-row-recent"
     },
     {
       "title": "Most Popular",
       "total": 12,
-      "items": [
-        {
-          "title": "Sub title",
-          "total": 6,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 4,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 2,
-          "url": "#menu"
-        }
-      ]
+      "publish": "tv-row-popular"
     },
     {
       "title": "Market News",
       "total": 12,
-      "items": [
-        {
-          "title": "Sub title",
-          "total": 6,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 4,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 2,
-          "url": "#menu"
-        }
-      ]
+      "publish": "tv-row-news"
     },
     {
       "title": "Education",
@@ -92,65 +44,17 @@
     {
       "title": "Options Safari",
       "total": 12,
-      "items": [
-        {
-          "title": "Sub title",
-          "total": 6,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 4,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 2,
-          "url": "#menu"
-        }
-      ]
+      "publish": "tv-row-options"
     },
     {
       "title": "CBOE Products &amp; News",
       "total": 12,
-      "items": [
-        {
-          "title": "Sub title",
-          "total": 6,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 4,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 2,
-          "url": "#menu"
-        }
-      ]
+      "publish": "tv-row-products"
     },
     {
       "title": "Partner Content",
       "total": 12,
-      "items": [
-        {
-          "title": "Sub title",
-          "total": 6,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 4,
-          "url": "#menu"
-        },
-        {
-          "title": "Sub title",
-          "total": 2,
-          "url": "#menu"
-        }
-      ]
+      "publish": "tv-row-partner"
     }
   ]
 }

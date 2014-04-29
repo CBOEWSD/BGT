@@ -20,7 +20,7 @@ $bgcolor: darken($colorGrey2, 9%);
     background: #fff;
 
     &>li {
-      &>a, &.parent {
+      &>a, &>.filter, &.parent {
         position: relative;
         display: block;
         padding: 8px 10px 8px 25px;

@@ -1,6 +1,11 @@
 ###
   # RowTV
   This adds functionality to the row subcomponent of the TV widget.
+
+  NOTE:
+    This file contains purely superficial functionality. At this time there
+    is no interaction with a service. This code should be taken as guidance
+    for UX interaction and not as the basis for application code.
 ###
 
 class RowTV
@@ -14,43 +19,97 @@ class RowTV
 
     @.$el = $ el
     @.$items = $ '.items', el
+    @.$showWithAll = $ '.items .showWithAll', el
+    @.subscribe = @.$el.data('subscribe') || undefined;
+    @.$allOtherRows = $('.widget-tv.row').not(el)
 
-    @.removeAnchors()
+    @.bindShowAll()
 
-    @.listen()
-
-    console.log @
-
+    # console.log @
     return @
 
-  removeAnchors: () ->
-    $anchors = $ 'a', @.$items
+  ###
+  ## this.bindShowAll
+  Binds show all type actions with their appropriate methods.
+  ###
+  bindShowAll: () ->
+    @.$viewAll = $ '.viewall', @.$el
+    @.$total = $ '.total', @.$el
 
-    $anchors.each ->
-      $(@).replaceWith('<span data-href="' + $(@).attr('href') + '">' + this.innerHTML + '</span>');
+    @.$viewAll.bind 'click', (e) =>
+      @.actionToggleAll(e)
+    @.$total.bind 'click', (e) =>
+      @.actionToggleAll(e)
 
+    if @.subscribe
+      PubSub.subscribe @.subscribe, =>
+        @.actionToggleAll()
 
+    @.$el.bind 'reset', =>
+      @.$el.slideDown()
+      @.actionHideAll(false)
 
-  listen: () ->
-    console.log @.$el
+  ###
+  ## this.actionToggleAll
+  Called when all should be revealed or hidden for a certain category.
+  ###
+  actionToggleAll: (e) ->
+    if e
+      e.preventDefault()
 
-    @.$items.swipe {
-      swipe: self.swipeEvent
-      fingers: 'all'
-      threshold: 1
-      allowPageScroll: 'horizontal'
-      tap: self.clickTap
-      swipeStatus: self.swipeStatus
-    }
+    if (@.$viewAll.hasClass('shown') && @.$el.is(':visible'))
+      @.actionHideAll(true)
+    else
+      @.actionShowAll()
 
-  swipeEvent: (e) =>
-    console.log e
+  actionShowAll: () ->
+    $('.item:hidden:first', @.$items)
+      .nextAll()
+      .andSelf()
+      .fadeIn()
 
-  swipeStatus: (event, phase, direction, distance, fingers) =>
-    #
+    @.$showWithAll.fadeIn()
 
-  clickTap: (e) =>
-    console.log 'click tap!!!'
+    @.showJustMe()
+
+    @.$viewAll.addClass('shown')
+
+  actionHideAll: (trigger) ->
+    $('.item:nth-child(n+5)', @.$items).fadeOut()
+    @.$showWithAll.fadeOut()
+
+    @.$viewAll.removeClass('shown')
+
+    if trigger
+      @.$allOtherRows.trigger('reset')
+
+  ###
+  ## this.actionNextFour
+  Can show only 4 new items for a given category.
+  ###
+  actionNextFour: (e) ->
+    e.preventDefault()
+
+    $('.item:hidden:first', @.$items)
+      .nextAll(".item:lt(3)")
+      .andSelf()
+      .fadeIn()
+
+  ###
+  ## this.showJustMe
+  This method will hide all other `.widget-tv.row` other than `this.$el`
+  ###
+  showJustMe: () ->
+    @.$allOtherRows.slideUp()
+    @.$el.slideDown()
+
+    @.dontResetMe = true
+
+    PubSub.publish('tv-rows-reset')
+
+  showEveryone: () ->
+    @.$allOtherRows.slideDown()
+
 
 
 ###

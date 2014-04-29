@@ -40,7 +40,8 @@ class CustomPublish
   ###
   bindNodes: ->
     @.$nodes.each (i, el) =>
-      $(el).bind $this.data('event') || 'click', (e) =>
+      $this = $(el)
+      $this.bind $this.data('event') || 'click', (e) =>
         @.publishEvent($(e.currentTarget))
 
   ###

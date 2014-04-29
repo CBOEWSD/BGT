@@ -1,5 +1,5 @@
 
-<div class="widget-tv row">
+<div class="widget-tv row" data-subscribe="{{subscribe}}">
   <div class="title">
     {{#if title}}
     <h2>
@@ -28,7 +28,6 @@
           src="/ui/assets/images/placeholders/blank.gif"
           data-echo="{{this.thumbnail.src}}"
           alt="{{#if thumbnail.alt}}{{thumbnail.alt}}{{else}}{{this.title}}{{/if}}"
-          width="400" height="220"
         >
 
         {{#if this.meta}}
@@ -58,5 +57,9 @@
       </a>
     </div>
     {{/each}}
+
+    <div class="showWithAll">
+      {{> widgets/pagination/pagination}}
+    </div>
   </div>
 </div>

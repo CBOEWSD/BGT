@@ -43,12 +43,22 @@ $module: '.widget-tv.row';
       &:hover, &:active {
         color: $colorGrey1;
       }
+
+      &.shown {
+        color: $colorRed1;
+
+        &:before {
+          content: "\00D7";
+          display: inline;
+        }
+      }
     }
   }
 
   .items {
     //display: table;
     //table-layout: fixed;
+    @include innerRow();
     width: 100%;
     margin: 20px 0;
 
@@ -67,6 +77,10 @@ $module: '.widget-tv.row';
         max-height: 220px;
         background: darken(#fff, 3%);
       }
+    }
+
+    .showWithAll {
+      display: none;
     }
   }
 

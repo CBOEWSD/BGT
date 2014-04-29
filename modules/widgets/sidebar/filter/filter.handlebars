@@ -18,60 +18,79 @@
     {{/if}}
 
     {{#each filters}}
-    <li class="{{#unless this.title}}expanded{{/unless}}">
-      {{#if this.title}}
-        {{#if this.items}}
-          <a class="toplevel" unselectable="on">
-            {{{this.title}}}
+      <li class="{{#unless title}}expanded{{/unless}}">
+        {{#if title}}
+          {{#if items}}
+            <a class="toplevel" unselectable="on">
+              {{{title}}}
 
-            {{#if this.total}}
-            <span class="total">
-              {{{this.total}}}
-            </span>
-            {{/if}}
-          </a>
-        {{else}}
-          {{{this.title}}}
-        {{/if}}
-      {{/if}}
-
-      {{#if this.items}}
-      <ul>
-
-        {{#each this.items}}
-        <li>
-
-          {{#if this.type}}
-
-          <label>
-            <input
-              type="{{this.type}}"
-              name="{{this.name}}"
-              id="filter-{{this.name}}">
-
-              <span>{{{this.title}}}</span>
-          </label>
-
+              {{#if total}}
+              <span class="total">
+                {{{total}}}
+              </span>
+              {{/if}}
+            </a>
           {{else}}
-
-          <a href="{{this.url}}">
-            {{{this.title}}}
-
-            {{#if this.total}}
-            <span class="total">
-              {{{this.total}}}
+            <span class="filter" {{#if publish}}data-publish="{{publish}}"{{/if}}>
+              {{{title}}}
             </span>
-            {{/if}}
-          </a>
-
           {{/if}}
+        {{/if}}
 
-        </li>
-        {{/each}}
+        {{#if items}}
+          <ul>
+            {{#if viewall}}
+              <li class="viewall">
+                <a href="#" data-publish="{{viewall.publish}}">
+                  {{#if viewall.text}}
+                    {{viewall.text}}
+                  {{else}}
+                    View All
+                  {{/if}}
 
-      </ul>
-      {{/if}}
-    </li>
+                  {{#if total}}
+                    <span class="total">
+                      {{{total}}}
+                    </span>
+                  {{/if}}
+                </a>
+              </li>
+            {{/if}}
+
+            {{#each items}}
+              <li>
+
+                {{#if type}}
+
+                  <label>
+                    <input
+                      type="{{type}}"
+                      name="{{name}}"
+                      id="filter-{{name}}">
+
+                      <span>{{{title}}}</span>
+                  </label>
+
+                {{else}}
+
+                  <a href="{{url}}">
+                    {{{title}}}
+
+                    {{#if total}}
+                    <span class="total">
+                      {{{total}}}
+                    </span>
+                    {{/if}}
+                  </a>
+
+                {{/if}}
+
+              </li>
+            {{/each}}
+
+          </ul>
+        {{/if}}
+      </li>
     {{/each}}
 
   </ul>

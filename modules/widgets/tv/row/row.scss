@@ -66,6 +66,7 @@ $module: '.widget-tv.row';
       //display: table-cell;
       //vertical-align: top;
       @include column(3);
+      @include mobileColumn(2);
       padding: 10px;
 
       // Only show 4 items by default
@@ -81,6 +82,7 @@ $module: '.widget-tv.row';
 
     .showWithAll {
       display: none;
+      clear: both;
     }
   }
 
@@ -102,19 +104,17 @@ $module: '.widget-tv.row';
 
   @media screen and (max-width: 500px) {
     .items {
-      overflow-x: scroll;
-      white-space: nowrap;
-      display: block;
+      max-height: 500px;
+      overflow-y: scroll;
 
       .item {
-        padding: 5px;
-        padding: 5px;
-        display: inline-block;
-        white-space: normal;
-        width: 91%;
 
         h3 {
           font-size: 1.1em;
+        }
+
+        p {
+          display: none;
         }
       }
     }

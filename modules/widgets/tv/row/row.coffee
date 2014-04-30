@@ -111,15 +111,15 @@ class RowTV
   This method will hide all other `.widget-tv.row` other than `this.$el`
   ###
   showJustMe: () ->
-    @.$allOtherRows.slideUp()
-    @.$el.slideDown()
+    @.$allOtherRows.slideUp(500, -> PubSub.publish('LazyLoadPoll') )
+    @.$el.slideDown(500, -> PubSub.publish('LazyLoadPoll') )
 
     @.dontResetMe = true
 
     PubSub.publish('tv-rows-reset')
 
   showEveryone: () ->
-    @.$allOtherRows.slideDown()
+    @.$allOtherRows.slideDown(500, -> PubSub.publish('LazyLoadPoll') )
 
 
 

@@ -33,6 +33,12 @@
           {{else}}
             <span class="filter" {{#if publish}}data-publish="{{publish}}"{{/if}}>
               {{{title}}}
+
+              {{#if total}}
+                <span class="total">
+                  {{{total}}}
+                </span>
+              {{/if}}
             </span>
           {{/if}}
         {{/if}}

@@ -16,5 +16,4 @@ window.images = new Vimg {
 }
 
 PubSub.subscribe 'LazyLoadPoll', ->
-  console.log 'Polling yo...'
   images.poll();

@@ -18,26 +18,29 @@
     {
       "title": "Market News",
       "total": 12,
-      "publish": "tv-row-news"
+      "publish": "tv-row-market"
     },
     {
       "title": "Education",
       "total": 12,
       "items": [
         {
-          "title": "Sub title",
+          "title": "Education: Basic",
           "total": 6,
-          "url": "#menu"
+          "url": "#menu",
+          "publish": "tv-row-education-bas"
         },
         {
-          "title": "Sub title",
+          "title": "Education: Intermediate",
           "total": 4,
-          "url": "#menu"
+          "url": "#menu",
+          "publish": "tv-row-education-int"
         },
         {
-          "title": "Sub title",
+          "title": "Education: Advanced",
           "total": 2,
-          "url": "#menu"
+          "url": "#menu",
+          "publish": "tv-row-education-adv"
         }
       ]
     },

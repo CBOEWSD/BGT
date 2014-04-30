@@ -47,10 +47,25 @@
         "widgets/tv/row/row": "tv/popular.json"
       },
       {
-        "widgets/tv/row/row": "tv/education.json"
+        "widgets/tv/row/row": "tv/market.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/edu-basic.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/edu-inter.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/edu-adv.json"
       },
       {
         "widgets/tv/row/row": "tv/options.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/products.json"
+      },
+      {
+        "widgets/tv/row/row": "tv/partner.json"
       }
     ],
     "bottomspan": [

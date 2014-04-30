@@ -22,18 +22,48 @@
       color: #135fad; }
       .widget-tv.row .title .viewall:hover, .widget-tv.row .title .viewall:active {
         color: #313538; }
+      .widget-tv.row .title .viewall.shown {
+        color: #b7120b; }
+        .widget-tv.row .title .viewall.shown:before {
+          content: "\00D7";
+          display: inline; }
   .widget-tv.row .items {
-    display: table;
-    table-layout: fixed;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    margin: 0 -15px;
+    *zoom: 1;
     width: 100%;
     margin: 20px 0; }
+    .widget-tv.row .items:before, .widget-tv.row .items:after {
+      content: " ";
+      display: table; }
+    .widget-tv.row .items:after {
+      clear: both; }
     .widget-tv.row .items .item {
-      display: table-cell;
-      vertical-align: top;
+      float: left;
+      position: relative;
+      min-height: 1px;
+      padding: 0 15px;
+      width: 25%;
       padding: 10px; }
+      @media only screen and (max-width: 767px) {
+        .widget-tv.row .items .item {
+          float: none;
+          width: auto; } }
+      @media only screen and (max-width: 767px) {
+        .widget-tv.row .items .item {
+          float: left;
+          width: 50%;
+          padding: 0 15px; } }
+      .widget-tv.row .items .item + .item + .item + .item + .item {
+        display: none; }
       .widget-tv.row .items .item img {
         max-height: 220px;
         background: #f7f7f7; }
+    .widget-tv.row .items .showWithAll {
+      display: none;
+      clear: both; }
   .widget-tv.row .meta {
     margin: 10px 0; }
   @media screen and (max-width: 900px) {
@@ -43,14 +73,9 @@
         font-size: 1.1em; } }
   @media screen and (max-width: 500px) {
     .widget-tv.row .items {
-      overflow-x: scroll;
-      white-space: nowrap;
-      display: block; }
-      .widget-tv.row .items .item {
-        padding: 5px;
-        padding: 5px;
-        display: inline-block;
-        white-space: normal;
-        width: 91%; }
-        .widget-tv.row .items .item h3 {
-          font-size: 1.1em; } }
+      max-height: 500px;
+      overflow-y: scroll; }
+      .widget-tv.row .items .item h3 {
+        font-size: 1.1em; }
+      .widget-tv.row .items .item p {
+        display: none; } }

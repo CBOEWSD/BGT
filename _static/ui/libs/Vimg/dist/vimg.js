@@ -1,4 +1,5 @@
-/*! Vimg | v1.0.0 | Author: David McKeown | https://github.com/ScottishDave/Vimg | MIT license */ 
+/*! Vimg | v1.0.3 | Author: David McKeown | https://github.com/ScottishDave/Vimg | MIT license */ 
+/* jshint bitwise: false */
 (function (global, document, undefined) {
     'use strict';
 
@@ -171,7 +172,12 @@
             @returns {Array} All nodes (if any) still being tracked.
         */
         Vimg.prototype.pollNodes = function(direct) {
-            var me;
+            var me
+                , count = self.nodes.length;
+
+            count = self.nodes.reduce(function(prev, curr) {
+                return typeof curr !== "undefined" ? prev+1 : prev;
+            }, 0);
 
             if ((internals._shouldPoll || direct) && self.nodes.length > 0) {
                 for (var i = 0; i < self.nodes.length; i++) {
@@ -180,12 +186,14 @@
                     if (me && self.withinView(me)) {
                         me.src = me.getAttribute(self.options.srcAttr);
                         self.emitEvent(me, 'vimg-loaded');
-                        self.arrayRemove(self.nodes, i);
+                        delete self.nodes[i];
                     }
                 }
 
                 internals._shouldPoll = false;
-            } else if (self.nodes.length === 0) {
+            }
+
+            if (count === 0) {
                 self.unsubscribeEvent(win, 'scroll', self.shouldPoll);
                 self.unsubscribeEvent(win, 'resize', self.shouldPoll);
                 self.unsubscribeEvent(win, 'load', self.shouldPoll);
@@ -213,21 +221,77 @@
         };
 
         /*
-            ### arrayRemove
+            ### Array.pototype.reduce
 
-            Array Remove - By John Resig (MIT Licensed)
-            Removes a single or group of items from an array.
-
-            @params {Object} Our array.
-            @params {Int} From, or single item
-            @params {Int} To, optional
-            @returns {Object} Updated array
+            Extends the native `Array` prototype to include `reduce`
+            if it does not exist. Fixes older IE, hopefully this can be
+            removed soon!
          */
-        Vimg.prototype.arrayRemove = function(array, from, to) {
-            var rest = array.slice((to || from) + 1 || array.length);
-            array.length = from < 0 ? array.length + from : from;
-            return array.push.apply(array, rest);
-        };
+        if ( 'function' !== typeof Array.prototype.reduce ) {
+            Array.prototype.reduce = function(callbackfn /*, initialValue */) {
+
+                // step 1
+                if (this === null) {
+                    throw new TypeError("can't convert " + this + " to object");
+                }
+                var O = Object(this);
+
+                // steps 2 & 3
+                var len = O.length >>> 0;
+
+                // step 4
+                if (typeof callbackfn !== "function") {
+                    throw new TypeError(
+                        callbackfn + " is not a function");
+                }
+
+                // step 5
+                if (len === 0 && arguments.length < 2) {
+                    throw new TypeError(
+                        'reduce of empty array with no initial value');
+                }
+
+                // step 6
+                var k = 0;
+
+                // step 7
+                var accumulator;
+                if (arguments.length > 1) {
+                    accumulator = arguments[1];
+                }
+                // step 8
+                else {
+                    var kPresent = false;
+                    while ((!kPresent) && (k < len)) {
+                        kPresent = k in O;
+                        if (kPresent) {
+                            accumulator = O[k];
+                        }
+                        k++;
+                    }
+                    if (!kPresent) {
+                        throw new TypeError(
+                            'reduce of empty array with no initial value');
+                    }
+                }
+
+                // step 9
+                while (k < len) {
+                    if (k in O) {
+                        accumulator = callbackfn.call(
+                            undefined
+                            , accumulator
+                            , O[k]
+                            , k
+                            , O);
+                    }
+                    k++;
+                }
+
+                // step 10
+                return accumulator;
+            };
+        }
 
         return Vimg;
     })();

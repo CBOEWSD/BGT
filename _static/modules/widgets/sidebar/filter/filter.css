@@ -8,10 +8,10 @@
   padding: 0;
   border: 1px solid #c6c6c6;
   background: white; }
-  .filter > ul > li > a, .filter > ul > li.parent {
+  .filter > ul > li > a, .filter > ul > li > .filter, .filter > ul > li.parent {
     position: relative;
     display: block;
-    padding: 8px 10px 8px 25px;
+    padding: 8px 10px 8px 8px;
     background: #dddddd;
     border-bottom: 1px solid #c6c6c6;
     font-weight: 700;
@@ -25,13 +25,20 @@
     /* IE10+ */
     -o-user-select: none;
     user-select: none; }
-    .filter > ul > li > a .total, .filter > ul > li > a:before, .filter > ul > li.parent .total, .filter > ul > li.parent:before {
+    .filter > ul > li > a .total, .filter > ul > li > a:before, .filter > ul > li > .filter .total, .filter > ul > li > .filter:before, .filter > ul > li.parent .total, .filter > ul > li.parent:before {
       position: absolute;
       top: 50%;
       line-height: 14px;
       margin-top: -7px; }
-    .filter > ul > li > a .total, .filter > ul > li.parent .total {
+    .filter > ul > li > a .total, .filter > ul > li > .filter .total, .filter > ul > li.parent .total {
       right: 10px; }
+    .filter > ul > li > a.shown, .filter > ul > li > .filter.shown, .filter > ul > li.parent.shown {
+      background: #313538;
+      color: white; }
+      .filter > ul > li > a.shown:before, .filter > ul > li > .filter.shown:before, .filter > ul > li.parent.shown:before {
+        content: "-"; }
+  .filter > ul > li > a, .filter > ul > li.parent {
+    padding-left: 25px; }
     .filter > ul > li > a:before, .filter > ul > li.parent:before {
       display: block;
       content: "+";

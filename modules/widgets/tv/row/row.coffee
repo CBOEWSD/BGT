@@ -24,8 +24,6 @@ class RowTV
     @.$allOtherRows = $('.widget-tv.row').not(el)
     @.$publishers = $("[data-publish='#{@.subscribe}']")
 
-    console.log(@.$publishers)
-
     @.bindShowAll()
 
     # console.log @

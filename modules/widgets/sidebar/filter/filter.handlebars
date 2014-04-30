@@ -73,7 +73,7 @@
 
                 {{else}}
 
-                  <a href="{{url}}">
+                  <a href="{{url}}" {{#if publish}}data-publish="{{publish}}"{{/if}}>
                     {{{title}}}
 
                     {{#if total}}

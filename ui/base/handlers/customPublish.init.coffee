@@ -49,7 +49,7 @@ class CustomPublish
     Publish the custom event to anyone who cares.
   ###
   publishEvent: (node) ->
-    PubSub.publish node.data('publish')
+    PubSub.publish node.data('publish'), node
 
 
 # Init

@@ -57,6 +57,15 @@ $bgcolor: darken($colorGrey2, 9%);
             weight: normal;
           }
         }
+
+        &.shown {
+          background: $colorGrey1;
+          color: #fff;
+
+          &:before {
+            content: "-";
+          }
+        }
       }
 
       &.parent, &.expanded > a {

@@ -22,6 +22,9 @@ class RowTV
     @.$showWithAll = $ '.items .showWithAll', el
     @.subscribe = @.$el.data('subscribe') || undefined;
     @.$allOtherRows = $('.widget-tv.row').not(el)
+    @.$publishers = $("[data-publish='#{@.subscribe}']")
+
+    console.log(@.$publishers)
 
     @.bindShowAll()
 
@@ -42,11 +45,14 @@ class RowTV
       @.actionToggleAll(e)
 
     if @.subscribe
-      PubSub.subscribe @.subscribe, =>
+      PubSub.subscribe @.subscribe, (event, from) =>
         @.actionToggleAll()
 
     @.$el.bind 'reset', =>
       @.$el.slideDown()
+      @.actionHideAll(false)
+
+    @.$el.bind 'resetfilter', =>
       @.actionHideAll(false)
 
   ###
@@ -73,12 +79,17 @@ class RowTV
     @.showJustMe()
 
     @.$viewAll.addClass('shown')
+    @.$publishers.addClass('shown')
+
+    @.$allOtherRows.trigger('resetfilter')
 
   actionHideAll: (trigger) ->
     $('.item:nth-child(n+5)', @.$items).fadeOut()
     @.$showWithAll.fadeOut()
 
     @.$viewAll.removeClass('shown')
+
+    @.$publishers.removeClass('shown')
 
     if trigger
       @.$allOtherRows.trigger('reset')

@@ -59,11 +59,12 @@ $bgcolor: darken($colorGrey2, 9%);
       }
 
       &>a, &.parent {
-        padding-left: 25px;
+        color: #000;
+
         &:before {
           display: block;
           content: "+";
-          left: 8px;
+          right: 10px;
           font: {
             size: 1.4em;
             weight: normal;
@@ -101,7 +102,7 @@ $bgcolor: darken($colorGrey2, 9%);
             position: relative;
             cursor: pointer;
 
-            &:hover, &:active {
+            &:hover, &:active, &.shown {
               color: $colorBlue1;
             }
 

@@ -24,11 +24,13 @@
             <a class="toplevel" unselectable="on">
               {{{title}}}
 
-              {{#if total}}
-              <span class="total">
-                {{{total}}}
-              </span>
-              {{/if}}
+              {{#unless items}}
+                {{#if total}}
+                <span class="total">
+                  {{{total}}}
+                </span>
+                {{/if}}
+              {{/unless}}
             </a>
           {{else}}
             <span class="filter" {{#if publish}}data-publish="{{publish}}"{{/if}}>

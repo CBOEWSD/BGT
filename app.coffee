@@ -148,18 +148,22 @@ hbs.loadPartials (err,partials) ->
   app.use '/ui', sass.middleware {
     src: __dirname + '/ui'
     debug: !isProd
+    sourceMap: !isProd
   }
   app.use '/_compiled', sass.middleware {
     src: __dirname + '/_compiled'
     debug: !isProd
+    sourceMap: !isProd
   }
   app.use '/modules', sass.middleware {
     src: __dirname + '/modules'
     debug: !isProd
+    sourceMap: !isProd
   }
   app.use '/views', sass.middleware {
     src: __dirname + '/views'
     debug: !isProd
+    sourceMap: !isProd
   }
   app.use '/ui', coffee {
     src: __dirname + '/ui'

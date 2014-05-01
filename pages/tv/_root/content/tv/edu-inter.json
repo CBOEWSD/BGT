@@ -1,5 +1,6 @@
 {
   "title": "Education: Intermediate",
+  "activeStates": true,
   "subscribe": "tv-row-education-int",
   "viewall": {
     "text": "View All",

@@ -1,5 +1,6 @@
 {
   "title": "Most Popular",
+  "activeStates": true,
   "subscribe": "tv-row-popular",
   "viewall": {
     "text": "View All",

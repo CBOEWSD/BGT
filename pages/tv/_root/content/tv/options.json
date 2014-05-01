@@ -1,5 +1,6 @@
 {
   "title": "Options Safari",
+  "activeStates": true,
   "subscribe": "tv-row-options",
   "viewall": {
     "text": "View All",

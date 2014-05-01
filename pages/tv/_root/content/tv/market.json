@@ -1,5 +1,6 @@
 {
   "title": "Market News",
+  "activeStates": true,
   "subscribe": "tv-row-market",
   "viewall": {
     "text": "View All",

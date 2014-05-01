@@ -1,5 +1,6 @@
 {
   "title": "Products",
+  "activeStates": true,
   "subscribe": "tv-row-products",
   "viewall": {
     "text": "View All",

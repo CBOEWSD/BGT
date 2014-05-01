@@ -1,5 +1,6 @@
 {
   "title": "Partners Content",
+  "activeStates": true,
   "subscribe": "tv-row-partner",
   "viewall": {
     "text": "View All",

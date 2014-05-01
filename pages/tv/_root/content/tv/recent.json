@@ -1,5 +1,6 @@
 {
   "title": "Most Recent",
+  "activeStates": true,
   "subscribe": "tv-row-recent",
   "viewall": {
     "text": "View All",

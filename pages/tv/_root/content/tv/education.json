@@ -1,5 +1,6 @@
 {
   "title": "Education",
+  "activeStates": true,
   "subscribe": "tv-row-education",
   "viewall": {
     "text": "View All",

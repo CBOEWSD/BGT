@@ -40,9 +40,7 @@ class RowTV
     @.$total = $ '.total', @.$el
 
     @.$viewAll.bind 'click', (e) =>
-      @.actionToggleAll(e)
-    @.$total.bind 'click', (e) =>
-      @.actionToggleAll(e)
+      @.actionToggleMe(e)
 
     if @.subscribe
       PubSub.subscribe @.subscribe, (event, from) =>
@@ -58,14 +56,15 @@ class RowTV
     @.$el.bind 'resetfilter', =>
       @.actionHideAll(false)
 
-    @.$item.bind 'click', (e) =>
-      e.preventDefault()
-      PubSub.publish 'row-active-item', e.currentTarget
+    if @.$el.data('activestates')
+      @.$item.bind 'click', (e) =>
+        e.preventDefault()
+        PubSub.publish 'row-active-item', e.currentTarget
 
-    PubSub.subscribe 'row-active-item', (e, item) =>
-      @.actionActiveItem(e, item)
-    PubSub.subscribe 'row-active-item-reset', (e, item) =>
-      @.resetActiveItem(e, item)
+      PubSub.subscribe 'row-active-item', (e, item) =>
+        @.actionActiveItem(e, item)
+      PubSub.subscribe 'row-active-item-reset', (e, item) =>
+        @.resetActiveItem(e, item)
 
   ###
   ## this.actionToggleAll
@@ -75,37 +74,59 @@ class RowTV
     if e
       e.preventDefault()
 
-    if (@.$viewAll.hasClass('shown') && @.$el.is(':visible'))
+    if (@.$el.hasClass('shown') && @.$el.is(':visible'))
       @.actionHideAll(true)
     else
       @.actionShowAll()
 
   actionShowAll: () ->
-    $('.item:hidden:first', @.$items)
-      .nextAll()
-      .andSelf()
-      .fadeIn()
-
-    @.$showWithAll.fadeIn()
-
+    @.$viewAll.hide()
+    @.actionShowMe()
     @.showJustMe()
 
-    @.$viewAll.addClass('shown')
+    @.$el.addClass('shown')
+
     @.$publishers.addClass('shown')
     @.$resetPublishers.removeClass('shown')
 
     @.$allOtherRows.trigger('resetfilter')
 
   actionHideAll: (trigger) ->
-    $('.item:nth-child(n+5)', @.$items).fadeOut()
-    @.$showWithAll.fadeOut()
+    @.$viewAll.show()
+    @.actionHideMe()
 
-    @.$viewAll.removeClass('shown')
+    @.$el.removeClass('shown')
 
     @.$publishers.removeClass('shown')
 
     if trigger
       @.$allOtherRows.trigger('reset')
+
+  actionToggleMe: (e) ->
+    if e
+      e.preventDefault()
+
+    if (@.$viewAll.hasClass('shown') && @.$el.is(':visible'))
+      @.actionHideMe()
+    else
+      @.actionShowMe()
+
+  actionShowMe: ->
+    $('.item:hidden:first', @.$items)
+      .nextAll()
+      .andSelf()
+      .fadeIn()
+
+    @.$showWithAll.fadeIn()
+    @.$viewAll.addClass('shown')
+    @.$items.addClass('expanded')
+
+  actionHideMe: ->
+    $('.item:nth-child(n+5)', @.$items).fadeOut()
+    @.$showWithAll.fadeOut()
+    @.$items.removeClass('expanded')
+
+    @.$viewAll.removeClass('shown')
 
   ###
   ## this.actionNextFour

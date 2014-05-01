@@ -1,5 +1,7 @@
 
-<div class="widget-tv row" data-subscribe="{{subscribe}}">
+<div class="widget-tv row"
+  data-subscribe="{{subscribe}}"
+  {{#if activeStates}}data-activestates="true"{{/if}}>
   <div class="title">
     {{#if title}}
     <h2>

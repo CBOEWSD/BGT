@@ -16,7 +16,6 @@ $module: '.widget-tv.row';
 
   .title {
     display: table;
-    table-layout: fixed;
     width: 100%;
     border-bottom: 1px solid $colorGrey2;
     padding-bottom: 10px;
@@ -110,6 +109,11 @@ $module: '.widget-tv.row';
     .items {
       max-height: 500px;
       overflow-y: scroll;
+      display: none;
+
+      &.expanded {
+        display: block;
+      }
 
       .item {
 

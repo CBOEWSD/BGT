@@ -163,8 +163,6 @@ class RowTV
     $(item).addClass('active')
 
   resetActiveItem: (e, item) ->
-    console.log('reset it')
-
     @.$item.not(item).removeClass('active')
 
 

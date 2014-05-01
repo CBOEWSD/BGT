@@ -68,8 +68,51 @@ $module: '.widget-tv.row';
       @include mobileColumn(2);
       padding: 10px;
 
+      .image {
+        position: relative;
+        &:before {
+          background: $colorGrey1;
+          content: '';
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          @include opacity(.9);
+        }
+
+        &:hover:before {
+          display: block;
+        }
+      }
+
       &.active {
-        background: $colorGrey2;
+        .image {
+          &:before {
+            display: block;
+          }
+
+          &:after {
+            display: block;
+            content: 'Now Playing';
+            position: absolute;
+            margin: 0 auto;
+            top: 50%;
+            margin-top: -10px;
+            left: 50%;
+            width: 90%;
+            margin-left: -45%;
+            text-align: center;
+            background: $colorRed1;
+            padding: 5px 0;
+            @include border-radius(10px);
+            color: #fff;
+            font: {
+              weight: 700;
+            }
+          }
+        }
       }
 
       // Only show 4 items by default

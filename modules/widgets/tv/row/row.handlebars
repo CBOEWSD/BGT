@@ -27,11 +27,13 @@
     {{#each items}}
     <div class="item">
       <a href="{{this.url}}">
-        <img
-          src="/ui/assets/images/placeholders/blank.gif"
-          data-echo="{{this.thumbnail.src}}"
-          alt="{{#if thumbnail.alt}}{{thumbnail.alt}}{{else}}{{this.title}}{{/if}}"
-        >
+        <div class="image">
+          <img
+            src="/ui/assets/images/placeholders/blank.gif"
+            data-echo="{{this.thumbnail.src}}"
+            alt="{{#if thumbnail.alt}}{{thumbnail.alt}}{{else}}{{this.title}}{{/if}}"
+          >
+        </div>
 
         {{#if this.meta}}
         <div class="meta">

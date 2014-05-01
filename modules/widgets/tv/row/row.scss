@@ -69,6 +69,10 @@ $module: '.widget-tv.row';
       @include mobileColumn(2);
       padding: 10px;
 
+      &.active {
+        background: $colorGrey2;
+      }
+
       // Only show 4 items by default
       &+.item+.item+.item+.item {
         display: none;

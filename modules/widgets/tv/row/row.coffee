@@ -19,6 +19,7 @@ class RowTV
 
     @.$el = $ el
     @.$items = $ '.items', el
+    @.$item = $ '.item', @.$items
     @.$showWithAll = $ '.items .showWithAll', el
     @.subscribe = @.$el.data('subscribe') || undefined;
     @.$allOtherRows = $('.widget-tv.row').not(el)
@@ -56,6 +57,15 @@ class RowTV
 
     @.$el.bind 'resetfilter', =>
       @.actionHideAll(false)
+
+    @.$item.bind 'click', (e) =>
+      e.preventDefault()
+      PubSub.publish 'row-active-item', e.currentTarget
+
+    PubSub.subscribe 'row-active-item', (e, item) =>
+      @.actionActiveItem(e, item)
+    PubSub.subscribe 'row-active-item-reset', (e, item) =>
+      @.resetActiveItem(e, item)
 
   ###
   ## this.actionToggleAll
@@ -123,6 +133,20 @@ class RowTV
 
   showEveryone: () ->
     @.$allOtherRows.slideDown(500, -> PubSub.publish('LazyLoadPoll') )
+
+  actionActiveItem: (e, item) ->
+    return true if (@.$el.has(item).length < 1)
+
+    PubSub.publish('row-active-item-reset', item)
+
+    $(item).addClass('active')
+
+  resetActiveItem: (e, item) ->
+    console.log('reset it')
+
+    @.$item.not(item).removeClass('active')
+
+
 
 
 

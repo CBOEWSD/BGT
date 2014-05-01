@@ -23,10 +23,11 @@ class RowTV
     @.subscribe = @.$el.data('subscribe') || undefined;
     @.$allOtherRows = $('.widget-tv.row').not(el)
     @.$publishers = $("[data-publish='#{@.subscribe}']")
+    @.$resetPublishers = $("[data-publish='resetRows']")
+    @.$resetPublishers.addClass('shown')
 
     @.bindShowAll()
 
-    # console.log @
     return @
 
   ###
@@ -46,8 +47,11 @@ class RowTV
       PubSub.subscribe @.subscribe, (event, from) =>
         @.actionToggleAll()
 
+    PubSub.subscribe 'resetRows', => @.$el.trigger 'reset'
+
     @.$el.bind 'reset', =>
       @.$el.slideDown()
+      @.$resetPublishers.addClass('shown')
       @.actionHideAll(false)
 
     @.$el.bind 'resetfilter', =>
@@ -78,6 +82,7 @@ class RowTV
 
     @.$viewAll.addClass('shown')
     @.$publishers.addClass('shown')
+    @.$resetPublishers.removeClass('shown')
 
     @.$allOtherRows.trigger('resetfilter')
 

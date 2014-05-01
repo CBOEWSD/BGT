@@ -1,10 +1,11 @@
 {
   "title": "Video Categories",
-  "parent": {
-    "title": "All Videos",
-    "total": 754
-  },
   "filters": [
+    {
+      "title": "All Videos",
+      "total": 754,
+      "publish": "resetRows"
+    },
     {
       "title": "Most Recent",
       "total": 12,

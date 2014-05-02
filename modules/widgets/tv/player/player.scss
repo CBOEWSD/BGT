@@ -98,6 +98,14 @@ $module: '.widget-tv.player';
         margin: 0;
       }
 
+      .category {
+        color: $colorBlue1;
+        margin: 0;
+        font: {
+          size: 1em;
+        }
+      }
+
       p {
         margin: 0;
       }

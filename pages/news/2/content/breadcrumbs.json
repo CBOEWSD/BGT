@@ -25,32 +25,6 @@
           }
         }
       ]
-    },
-    {
-      "link": {
-        "text": "2",
-        "url": "#"
-      },
-      "children": [
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        }
-      ]
     }
   ]
 }

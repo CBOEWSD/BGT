@@ -82,8 +82,27 @@ $module: '.widget-tv.row';
           @include opacity(.9);
         }
 
+        &:after {
+            display: none;
+            position: absolute;
+            margin: 0 auto;
+            top: 50%;
+            left: 50%;
+        }
+
         &:hover:before {
           display: block;
+        }
+
+        &:hover:after {
+          display: block;
+          content: 'abc';
+          background-color: $colorBlue1;
+          height: 60px;
+          width: 60px;
+          margin-top: -30px; margin-left: -30px;
+          @include border-radius(30px);
+          text-indent: -5000em;
         }
       }
 
@@ -96,13 +115,11 @@ $module: '.widget-tv.row';
           &:after {
             display: block;
             content: 'Now Playing';
-            position: absolute;
-            margin: 0 auto;
-            top: 50%;
             margin-top: -10px;
-            left: 50%;
             width: 90%;
             margin-left: -45%;
+            height: auto;
+            text-indent: 0;
             text-align: center;
             background: $colorRed1;
             padding: 5px 0;

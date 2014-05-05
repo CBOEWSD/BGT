@@ -41,7 +41,13 @@ class CustomPublish
   bindNodes: ->
     @.$nodes.each (i, el) =>
       $this = $(el)
+
       $this.bind $this.data('event') || 'click', (e) =>
+        if $this.data('preventDefault')
+          e.preventDefault()
+        if $this.data('stopImmediate')
+          e.stopImmediatePropagation()
+
         @.publishEvent($(e.currentTarget))
 
   ###

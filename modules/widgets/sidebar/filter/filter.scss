@@ -98,7 +98,7 @@ $bgcolor: darken($colorGrey2, 9%);
           }
           a, label {
             display: block;
-            padding: 6px 10px 6px 50px;
+            padding: 6px 10px 6px 20px;
             position: relative;
             cursor: pointer;
 
@@ -110,7 +110,7 @@ $bgcolor: darken($colorGrey2, 9%);
               display: block;
               position: absolute;
               margin-right: 10px;
-              left: 30px;
+              right: 0;
               top: 50%;
               line-height: 16px;
             }

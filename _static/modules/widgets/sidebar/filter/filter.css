@@ -38,11 +38,11 @@
       .filter > ul > li > a.shown:before, .filter > ul > li > .filter.shown:before, .filter > ul > li.parent.shown:before {
         content: "-"; }
   .filter > ul > li > a, .filter > ul > li.parent {
-    padding-left: 25px; }
+    color: black; }
     .filter > ul > li > a:before, .filter > ul > li.parent:before {
       display: block;
       content: "+";
-      left: 8px;
+      right: 10px;
       font-size: 1.4em;
       font-weight: normal; }
   .filter > ul > li.parent, .filter > ul > li.expanded > a {
@@ -67,7 +67,7 @@
         padding: 6px 10px 6px 50px;
         position: relative;
         cursor: pointer; }
-        .filter > ul > li ul li a:hover, .filter > ul > li ul li a:active, .filter > ul > li ul li label:hover, .filter > ul > li ul li label:active {
+        .filter > ul > li ul li a:hover, .filter > ul > li ul li a:active, .filter > ul > li ul li a.shown, .filter > ul > li ul li label:hover, .filter > ul > li ul li label:active, .filter > ul > li ul li label.shown {
           color: #135fad; }
         .filter > ul > li ul li a .total, .filter > ul > li ul li a input, .filter > ul > li ul li label .total, .filter > ul > li ul li label input {
           display: block;

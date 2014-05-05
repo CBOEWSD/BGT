@@ -52,6 +52,10 @@
     .widget-tv.player .prow .meta h2 {
       font-size: 1em;
       margin: 0; }
+    .widget-tv.player .prow .meta .category {
+      color: #135fad;
+      margin: 0;
+      font-size: 1em; }
     .widget-tv.player .prow .meta p {
       margin: 0; }
 @media all and (max-width: 767px) {

@@ -1,6 +1,6 @@
 {
   "name": "cboe",
-  "version": "0.8.0",
+  "version": "0.9.2",
   "private": true,
   "server": {
     "port": 3001,

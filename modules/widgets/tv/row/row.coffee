@@ -12,7 +12,7 @@ class RowTV
   self = undefined
 
   ###
-  ## Constructor
+    ## Constructor
   ###
   constructor: (el) ->
     self = @
@@ -32,8 +32,8 @@ class RowTV
     return @
 
   ###
-  ## this.bindShowAll
-  Binds show all type actions with their appropriate methods.
+    ## this.bindShowAll
+    Binds show all type actions with their appropriate methods.
   ###
   bindShowAll: () ->
     @.$viewAll = $ '.viewall', @.$el
@@ -67,8 +67,8 @@ class RowTV
         @.resetActiveItem(e, item)
 
   ###
-  ## this.actionToggleAll
-  Called when all should be revealed or hidden for a certain category.
+    ## this.actionToggleAll
+    Called when all should be revealed or hidden for a certain category.
   ###
   actionToggleAll: (e) ->
     if e
@@ -79,6 +79,11 @@ class RowTV
     else
       @.actionShowAll()
 
+  ###
+    ## this.actionShowAll
+    Called from `this.actionToggleAll` to show only this row and all
+    sub videos/pagination.
+  ###
   actionShowAll: () ->
     @.$viewAll.hide()
     @.actionShowMe()
@@ -91,6 +96,11 @@ class RowTV
 
     @.$allOtherRows.trigger('resetfilter')
 
+  ###
+    ## this.actionHideAll
+    Called from `this.actionToggleAll` to hide only this row and all
+    sub videos/pagination.
+  ###
   actionHideAll: (trigger) ->
     @.$viewAll.show()
     @.actionHideMe()
@@ -102,6 +112,10 @@ class RowTV
     if trigger
       @.$allOtherRows.trigger('reset')
 
+  ###
+    ## this.actionToggleMe
+    Called to expand/collapse this row, without collapsing others.
+  ###
   actionToggleMe: (e) ->
     if e
       e.preventDefault()
@@ -111,6 +125,11 @@ class RowTV
     else
       @.actionShowMe()
 
+  ###
+    ## this.actionShowMe
+    Called by `this.actionToggleMe` to expand this given row and add
+    appropriate classes.
+  ###
   actionShowMe: ->
     $('.item:hidden:first', @.$items)
       .nextAll()
@@ -121,6 +140,11 @@ class RowTV
     @.$viewAll.addClass('shown')
     @.$items.addClass('expanded')
 
+  ###
+    ## this.actionShowMe
+    Called by `this.actionToggleMe` to collapse this given row and remove
+    appropriate classes.
+  ###
   actionHideMe: ->
     $('.item:nth-child(n+5)', @.$items).fadeOut()
     @.$showWithAll.fadeOut()
@@ -129,20 +153,8 @@ class RowTV
     @.$viewAll.removeClass('shown')
 
   ###
-  ## this.actionNextFour
-  Can show only 4 new items for a given category.
-  ###
-  actionNextFour: (e) ->
-    e.preventDefault()
-
-    $('.item:hidden:first', @.$items)
-      .nextAll(".item:lt(3)")
-      .andSelf()
-      .fadeIn()
-
-  ###
-  ## this.showJustMe
-  This method will hide all other `.widget-tv.row` other than `this.$el`
+    ## this.showJustMe
+    This method will hide all other `.widget-tv.row` other than `this.$el`
   ###
   showJustMe: () ->
     @.$allOtherRows.slideUp(500, -> PubSub.publish('LazyLoadPoll') )
@@ -152,9 +164,18 @@ class RowTV
 
     PubSub.publish('tv-rows-reset')
 
+  ###
+    ## this.showEveryone
+    This method is called to reset `this.$allOtherRows` by at least showing them.
+  ###
   showEveryone: () ->
     @.$allOtherRows.slideDown(500, -> PubSub.publish('LazyLoadPoll') )
 
+  ###
+    ## this.actionActiveItem
+    On player click this will add an active item state to the selected video
+    whilst also publishing a `reset` event to all other items except the selected.
+  ###
   actionActiveItem: (e, item) ->
     return true if (@.$el.has(item).length < 1)
 
@@ -162,12 +183,18 @@ class RowTV
 
     $(item).addClass('active')
 
+  ###
+    ## this.resetActiveItem
+    Will reset any `active` state videos excluding the video now being
+    selected to play. PubSub event: `row-active-item-reset`.
+
+    Call with:
+    ```
+    PubSub.publish('row-active-item-reset', /* optional item */);
+    ```
+  ###
   resetActiveItem: (e, item) ->
     @.$item.not(item).removeClass('active')
-
-
-
-
 
 ###
   ## Module definition

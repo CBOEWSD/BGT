@@ -9,6 +9,7 @@
   "total": 12,
   "items": [
     {
+      "active": true,
       "url": "#",
       "thumbnail": {
         "src": "/ui/assets/images/videos/singlevid.jpg"

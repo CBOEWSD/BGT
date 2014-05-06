@@ -24,6 +24,12 @@ class Header
     # Bind mobile toggle
     @.$topSearchExpander.click @.toggleTopSearch
 
+    # Hide mobile toggle if shown
+    $(document).bind 'click', (e) =>
+      return true if $(e.target).parent(@.$topSearchExpander).length
+      return true if @.$topSearchExpander.is(e.target)
+      @.$topSearch.removeClass('open')
+
   ###
   ## this.log
   Add local instance of logging to this module.

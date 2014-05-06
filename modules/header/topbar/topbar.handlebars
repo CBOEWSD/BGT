@@ -28,9 +28,7 @@
       </li>
       <li>
         {{#if loggedin}}
-          <a href="#" class="button account darkGrey">
-            Logout
-          </a>
+          {{>header/topbar/account/account}}
         {{else}}
           <a href="#" class="button account green">
             Login / Register

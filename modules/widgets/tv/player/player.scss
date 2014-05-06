@@ -12,12 +12,11 @@
 $module: '.widget-tv.player';
 
 #{$module} {
-
   .title {
     border-bottom: 3px solid $colorBlue2;
     padding-bottom: 10px;
-    position: relative;
     margin: 0 0 20px;
+    position: relative;
 
     h2 {
       font: {
@@ -68,9 +67,6 @@ $module: '.widget-tv.player';
         text-align: right;
         position: relative;
         z-index:1;
-
-        a {
-        }
 
         .split {
           display: inline-block;

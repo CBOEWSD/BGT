@@ -1,0 +1,119 @@
+/*
+  Module: Account
+  Description: My Account drop down menu in topbar
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/fadein';
+@import './ui/base/_includes/fadeout';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.account-dropdown';
+
+#{$module} {
+  display: inline-block;
+  margin: 0; padding: 0;
+  list-style: none;
+  position: relative;
+
+  > li {
+    margin:0; padding: 0;
+
+    &> ul {
+      padding: 0; margin: 0;
+      display: none;
+      text-align: left;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #ccc;
+      z-index: 500;
+      list-style: none;
+      @include border-radius(0 0 3px 3px);
+
+      > li > a {
+        display: block;
+        color: $colorBlue1;
+        padding: 5px 3px;
+        border-bottom: 1px solid #bbb;
+        font: {
+          weight: 700;
+        }
+
+        &:hover, &:active {
+          color: $colorGrey1;
+        }
+      }
+    }
+
+    &.open {
+      >ul {
+        display: block;
+      }
+
+      .button {
+        @include border-radius(3px 3px 0 0);
+      }
+    }
+  }
+
+  @media all and (max-width: $screenSmallMax) {
+    > li {
+      padding: 0 !important;
+
+      ul {
+        display: block;
+        background: $colorBlue1;
+        padding: 0 15px;
+        overflow: hidden;
+        max-height: 0;
+        position: fixed;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        z-index: 9000;
+        border: none;
+
+        li {
+          height:0;
+          width: 100%;
+          @include fadeOut( .5s );
+          position: absolute;
+          left: -5000em;
+          padding: 0;
+
+          a {
+            color: #fff;
+            border: none;
+
+            &:active, &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        @include transition(all .5s cubic-bezier(0, 1, 0.5, 1));
+
+        button {
+          display: none;
+        }
+      }
+
+      &.open ul {
+        max-height: 150px;
+        padding: 0 15px 10px;
+
+        li {
+          height: auto;
+          display: block;
+          @include fadeIn( .5s );
+          padding: 5px 10px;
+          position: relative;
+          left: 0;
+        }
+      }
+    }
+  }
+}

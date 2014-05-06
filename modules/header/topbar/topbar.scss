@@ -18,7 +18,7 @@ $module: '.topbar';
 
     text-align: right;
 
-    li {
+    > li {
       @include inline-block();
       padding: 10px 0;
       margin-left: 25px;
@@ -77,7 +77,7 @@ $module: '.topbar';
       padding: 0 10px;
       width: 100%;
 
-      li {
+      > li {
         margin-left: 10px;
         padding: 8px 0;
 

@@ -20,12 +20,14 @@ class RowTV
     @.$el = $ el
     @.$items = $ '.items', el
     @.$item = $ '.item', @.$items
-    @.$showWithAll = $ '.items .showWithAll', el
+    @.$showWithAll = $ '.showWithAll', el
     @.subscribe = @.$el.data('subscribe') || undefined;
     @.$allOtherRows = $('.widget-tv.row').not(el)
     @.$publishers = $("[data-publish='#{@.subscribe}']")
     @.$resetPublishers = $("[data-publish='resetRows']")
     @.$resetPublishers.addClass('shown')
+    @.$pagination = $ '.pagination a', el
+
 
     @.bindShowAll()
 
@@ -55,6 +57,10 @@ class RowTV
 
     @.$el.bind 'resetfilter', =>
       @.actionHideAll(false)
+
+    @.$pagination.bind 'click', (e) =>
+      e.preventDefault()
+      @.actionPagination(e.currentTarget)
 
     if @.$el.data('activestates')
       @.$item.bind 'click', (e) =>
@@ -190,11 +196,80 @@ class RowTV
 
     Call with:
     ```
-    PubSub.publish('row-active-item-reset', /* optional item */);
+    PubSub.publish('row-active-item-reset', {{optional item}});
     ```
   ###
   resetActiveItem: (e, item) ->
     @.$item.not(item).removeClass('active')
+
+  actionPagination: (item) ->
+    $item = $ item
+
+    ###
+      Interface interaction could be here. Recomendation is abstraction
+      via MVC framework to fetch and rerender view based on updated
+      collection data. See backbone or angular JavaScript frameworks.
+    ###
+
+    if $item.hasClass('icon-css-arrows')
+      $current = @.$pagination.filter('.active').parent('li')
+      $currentA = $('a', $current)
+
+      if $item.parent('li').hasClass('next')
+        return false if $current.next().length < 1
+
+        $next = $ 'a', $current.next()
+
+        # if $next.length < 1
+          # $next = this.movePagination($current);
+
+        $currentA.removeClass('active')
+        $next.addClass('active')
+      else if $item.parent('li').hasClass('prev')
+        return false if $current.prev().length < 1
+
+        $prev = $ 'a', $current.prev()
+        $currentA.removeClass('active')
+        $prev.addClass('active')
+    else
+      @.$pagination.removeClass('active')
+      $item.addClass('active')
+
+    @.$items.stop();
+
+    @.$items.fadeOut().fadeIn()
+
+  ###
+    ## this.movePagination
+    This method can be used to demo how pagination may work
+    when reaching the end or `...`.
+  ###
+  movePagination: ($active) ->
+    $last = $active.next().next()
+    last = Number($('a', $last).text())
+    current = Number($active.text())
+    next = Number
+
+    if last and current
+      if current+1 == last
+        console.log 'highlist last', current+1, last
+        return $ 'a', $last
+      else
+        if current+1 == last-1
+          console.log('get rid of ...')
+          $active.next().remove()
+
+        $previous = $('a', $active.prevAll().andSelf())
+        $previous.each ->
+          $(@).text Number($(@).text()) + 1
+        return $ 'a', $active
+    else
+      console.log 'NaN?', last, current
+      return $ 'a', $active
+
+    console.log('reached end')
+
+    return $ 'a', $active.next()
 
 ###
   ## Module definition

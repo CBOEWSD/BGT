@@ -17,15 +17,12 @@
       .widget-tv.row .title h2 .total:hover, .widget-tv.row .title h2 .total:active {
         color: #313538; }
     .widget-tv.row .title .viewall {
-      text-align: right;
-      color: #135fad; }
-      .widget-tv.row .title .viewall:hover, .widget-tv.row .title .viewall:active {
-        color: #313538; }
-      .widget-tv.row .title .viewall.shown {
-        color: #b7120b; }
-        .widget-tv.row .title .viewall.shown:before {
-          content: "\00D7";
-          display: inline; }
+      text-align: center;
+      width: 80px;
+      padding: 4px 0; }
+      .widget-tv.row .title .viewall.shown:before {
+        content: "\00D7";
+        display: inline; }
   .widget-tv.row .items {
     width: auto;
     max-width: none;
@@ -115,9 +112,9 @@
       .widget-tv.row .items .item img {
         max-height: 220px;
         background: #f7f7f7; }
-    .widget-tv.row .items .showWithAll {
-      display: none;
-      clear: both; }
+  .widget-tv.row .showWithAll {
+    display: none;
+    clear: both; }
   .widget-tv.row .meta {
     margin: 10px 0; }
   @media screen and (max-width: 900px) {

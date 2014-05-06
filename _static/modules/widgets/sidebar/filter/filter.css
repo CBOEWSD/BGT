@@ -64,7 +64,7 @@
       font-size: 0.9em; }
       .filter > ul > li ul li a, .filter > ul > li ul li label {
         display: block;
-        padding: 6px 10px 6px 50px;
+        padding: 6px 10px 6px 20px;
         position: relative;
         cursor: pointer; }
         .filter > ul > li ul li a:hover, .filter > ul > li ul li a:active, .filter > ul > li ul li a.shown, .filter > ul > li ul li label:hover, .filter > ul > li ul li label:active, .filter > ul > li ul li label.shown {
@@ -73,7 +73,7 @@
           display: block;
           position: absolute;
           margin-right: 10px;
-          left: 30px;
+          right: 0;
           top: 50%;
           line-height: 16px; }
         .filter > ul > li ul li a input, .filter > ul > li ul li label input {

@@ -57,6 +57,8 @@
         type='text/css'>
         <link href='/modules/header/navigation/navigation_mobile.css' media='all'
         rel='stylesheet' type='text/css'>
+        <link href='/modules/header/topbar/account/account.css' media='all' rel='stylesheet'
+        type='text/css'>
         <link href='/modules/header/topbar/topbar.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/modules/search/quicksearch.css' media='all' rel='stylesheet'
@@ -185,9 +187,30 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="button account darkGrey">
-                            Logout
-                        </a>
+                        <ul class="account-dropdown">
+                            <li>
+                                <a href="#" class="button account">
+                                    My Account
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            MyCBOE
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <a href="#" class="navicon hidedesktop"></a>
@@ -936,6 +959,7 @@
         <script src='/modules/breadcrumbs/breadcrumbs.init.js'></script>
         <script src='/modules/header/header.init.js'></script>
         <script src='/modules/header/navigation/navigation.init.js'></script>
+        <script src='/modules/header/topbar/account/account.init.js'></script>
         <script src='/modules/twitter/twitter.init.js'></script>
         <script src='/modules/widgets/content/tables.init.js'></script>
         <script src='/modules/widgets/hero/hero.init.js'></script>

@@ -53,3 +53,8 @@ button, .button {
     background: #798289; }
     button.grey:hover, .button.grey:hover {
       background: #313538; }
+  button.red, .button.red {
+    background: #b7120b;
+    color: white; }
+    button.red:hover, .button.red:hover {
+      background: #e7150e; }

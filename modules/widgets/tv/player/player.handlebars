@@ -28,8 +28,6 @@
     </div>
 
     <div class="meta">
-
-
       <div class="sharing">
         <a href="#" class="icon-sharing facebook">
           Facebook
@@ -69,7 +67,14 @@
       <p>
         {{{video.description}}}
       </p>
+
+      {{#with next}}
+        <h4 class="next">
+          Up next: <span class="vid-title">{{title}}</span>
+        </h4>
+      {{/with}}
     </div>
+
   </div>
 
   {{> ads/span/slim}}

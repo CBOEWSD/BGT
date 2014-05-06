@@ -77,4 +77,13 @@ button, #{$class} {
       background: $colorGrey1;
     }
   }
+
+  &.red {
+    background: $colorRed1;
+    color: #fff;
+
+    &:hover {
+      background: lighten($colorRed1, 10%);
+    }
+  }
 }

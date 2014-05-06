@@ -143,7 +143,7 @@ class RowTV
       .fadeIn()
 
     @.$showWithAll.fadeIn()
-    @.$viewAll.addClass('shown')
+    @.$viewAll.addClass('shown red')
     @.$items.addClass('expanded')
 
   ###
@@ -156,7 +156,7 @@ class RowTV
     @.$showWithAll.fadeOut()
     @.$items.removeClass('expanded')
 
-    @.$viewAll.removeClass('shown')
+    @.$viewAll.removeClass('shown red')
 
   ###
     ## this.showJustMe
@@ -220,8 +220,8 @@ class RowTV
 
         $next = $ 'a', $current.next()
 
-        # if $next.length < 1
-          # $next = this.movePagination($current);
+        if $next.length < 1
+          $next = this.movePagination($current);
 
         $currentA.removeClass('active')
         $next.addClass('active')
@@ -248,7 +248,6 @@ class RowTV
     $last = $active.next().next()
     last = Number($('a', $last).text())
     current = Number($active.text())
-    next = Number
 
     if last and current
       if current+1 == last

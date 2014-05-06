@@ -36,15 +36,17 @@ $module: '.widget-tv.row';
     }
 
     .viewall {
-      text-align: right;
-      color: $colorBlue1;
+      text-align: center;
+      width: 80px;
+      padding: 4px 0;
+      //color: $colorBlue1;
 
       &:hover, &:active {
-        color: $colorGrey1;
+        //color: $colorGrey1;
       }
 
       &.shown {
-        color: $colorRed1;
+        // color: $colorRed1;
 
         &:before {
           content: "\00D7";

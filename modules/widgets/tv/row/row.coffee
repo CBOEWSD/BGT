@@ -189,6 +189,10 @@ class RowTV
 
     $(item).addClass('active')
 
+    $('html, body').animate {
+      scrollTop: $('.player').offset().top
+    }
+
   ###
     ## this.resetActiveItem
     Will reset any `active` state videos excluding the video now being

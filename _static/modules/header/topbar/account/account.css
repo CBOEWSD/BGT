@@ -1,0 +1,168 @@
+/*
+  Module: Account
+  Description: My Account drop down menu in topbar
+*/
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+.account-dropdown {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative; }
+  .account-dropdown > li {
+    margin: 0;
+    padding: 0; }
+    .account-dropdown > li > ul {
+      padding: 0;
+      margin: 0;
+      display: none;
+      text-align: left;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      background: white;
+      border: 1px solid #cccccc;
+      z-index: 500;
+      list-style: none;
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      -ms-border-radius: 0 0 3px 3px;
+      -o-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px; }
+      .account-dropdown > li > ul > li > a {
+        display: block;
+        color: #135fad;
+        padding: 5px 3px;
+        border-bottom: 1px solid #bbbbbb;
+        font-weight: 700; }
+        .account-dropdown > li > ul > li > a:hover, .account-dropdown > li > ul > li > a:active {
+          color: #313538; }
+    .account-dropdown > li.open > ul {
+      display: block; }
+    .account-dropdown > li.open .button {
+      -webkit-border-radius: 3px 3px 0 0;
+      -moz-border-radius: 3px 3px 0 0;
+      -ms-border-radius: 3px 3px 0 0;
+      -o-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0; }
+  @media all and (max-width: 767px) {
+    .account-dropdown > li {
+      padding: 0 !important; }
+      .account-dropdown > li ul {
+        display: block;
+        background: #135fad;
+        padding: 0 15px;
+        overflow: hidden;
+        max-height: 0;
+        position: fixed;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        z-index: 9000;
+        border: none;
+        -webkit-transition: all, 0.5s;
+        -webkit-transition-delay: cubic-bezier(0, 1, 0.5, 1);
+        -moz-transition: all, 0.5s, cubic-bezier(0, 1, 0.5, 1);
+        -o-transition: all, 0.5s, cubic-bezier(0, 1, 0.5, 1);
+        transition: all 0.5s cubic-bezier(0, 1, 0.5, 1); }
+        .account-dropdown > li ul li {
+          height: 0;
+          width: 100%;
+          -moz-animation: fadeOut 0.5s;
+          -webkit-animation: fadeOut 0.5s;
+          -o-animation: fadeOut 0.5s;
+          -ms-animation: fadeOut 0.5s;
+          animation: fadeOut 0.5s;
+          position: absolute;
+          left: -5000em;
+          padding: 0; }
+          .account-dropdown > li ul li a {
+            color: white;
+            border: none; }
+            .account-dropdown > li ul li a:active, .account-dropdown > li ul li a:hover {
+              color: white; }
+        .account-dropdown > li ul button {
+          display: none; }
+      .account-dropdown > li.open ul {
+        max-height: 150px;
+        padding: 0 15px 10px; }
+        .account-dropdown > li.open ul li {
+          height: auto;
+          display: block;
+          -moz-animation: fadeIn 0.5s;
+          -webkit-animation: fadeIn 0.5s;
+          -o-animation: fadeIn 0.5s;
+          -ms-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
+          padding: 5px 10px;
+          position: relative;
+          left: 0; } }

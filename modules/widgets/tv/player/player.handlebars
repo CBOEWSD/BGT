@@ -1,6 +1,18 @@
 
 <div class="widget-tv player">
   <div class="title">
+    <div class="right">
+      <div class="icons">
+        {{>widgets/sharing/icons}}
+      </div>
+
+      {{#if subscribe}}
+        <a href="{{subscribe.href}}" class="subscribe button green">
+          {{{subscribe.text}}}
+        </a>
+      {{/if}}
+    </div>
+
     {{#if title}}
       <h2>
         {{{title}}}
@@ -9,12 +21,6 @@
           ({{{disclaimer.text}}})
         </a>
       </h2>
-    {{/if}}
-
-    {{#if subscribe}}
-      <a href="{{subscribe.href}}" class="subscribe button green">
-        {{{subscribe.text}}}
-      </a>
     {{/if}}
   </div>
 
@@ -28,29 +34,13 @@
     </div>
 
     <div class="meta">
-      <div class="sharing">
-        <a href="#" class="icon-sharing facebook">
-          Facebook
-        </a>
-
-        <span class="split"></span>
-
-        <a href="#" class="icon-sharing twitter">
-          Twitter
-        </a>
-
-        <span class="split"></span>
-
-        <a href="#" class="icon-sharing mail">
-          Mail
-        </a>
-
-        <span class="split"></span>
-
-        <a href="#" class="icon-sharing share">
-          Share
-        </a>
-      </div>
+      {{#with next}}
+        <h3 class="next">
+          <a href="#" title="{{title}}" class="icon-css-arrows right">
+            Up next
+          </a>
+        </h3>
+      {{/with}}
 
       <h3 class="nowplaying icon-css-arrows left">
         Now Playing
@@ -68,15 +58,10 @@
         {{{video.description}}}
       </p>
 
-      {{#with next}}
-        <h4 class="next">
-          Up next: <span class="vid-title">{{title}}</span>
-        </h4>
-      {{/with}}
+
+      {{> ads/square_300/block}}
     </div>
 
   </div>
-
-  {{> ads/span/slim}}
 
 </div>

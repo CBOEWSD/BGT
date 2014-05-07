@@ -1,0 +1,30 @@
+
+/*
+  Module: TV Widget .player
+  Description: Large player for single video with detaileed title and description.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/grid';
+@import './ui/base/_includes/clearfix';
+@import './ui/base/_includes/responsiveembed';
+
+$module: '.sharing';
+
+#{$module} {
+  .split {
+    display: inline-block;
+    vertical-align: top;
+    width: 1px;
+    height: 20px;
+    background: $colorGrey2;
+    margin: 0 5px;
+  }
+}
+
+
+
+
+
+

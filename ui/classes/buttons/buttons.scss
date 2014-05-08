@@ -139,4 +139,10 @@ button, #{$class} {
     }
     padding: 10px 30px;
   }
+
+  &.notbold {
+    font: {
+      weight: 400;
+    }
+  }
 }

@@ -8,57 +8,73 @@ Modules are called into pages in the `index.json` and can accept a combination o
 
 Modules will make use of AMD patterns when and where it makes sense to do so. This can lower the initial size of the site and also allow us to scale back functionality/size on mobile. Not all modules will use this pattern however, as some will have no need to scale back or may be loaded on every page. Modules, such as the widgets, will likely use this pattern to lower the load across the whole site and only load assets when they are required and not by default.
 
-## Module List
+## Modules
 
-### Header
+Each module is in a self-contained folder. Within that folder you will find a mix of Handlebars template(s), Sass (scss) stylsheets, CoffeeScript (pre-compiled JavaScript) and in some cases additional assets strictly associated with the module.
 
-Contains site logo and quick search functionality.
+### Handlebars
 
-#### Header - TopBar
+We are currently using [Handlebars](http://handlebarsjs.com/) as our View Engine. The Handlebars website has a great resource of documentation, but needless to say; it is much like any other templating language. A quick intro to some features:
 
-Simple grey bar spanning the top of the site globally.
+### Variables and objects
 
-#### Header - Navigation
-
-Global navigation menu.
-
-### Footer
-
-Global footer element.
-
-### Search
-
-Search related modules contained here.
-
-#### Search - Quick Search
-
-Quick search module that can be called into many locations. Currently only tested in the header and may require minor treatments for other locations.
-
-### Widgets
-
-Base widget wrapper uses the `.widget` class. There is also a `.nostyle` class to remove base styling for widgets but maintain module scope as a widget.
-
-Widget titles can be added to modules using:
-
-```
-{{> widgets/widget-title}}
+Given we have an object - "data template" - as such:
+```json
+{
+  "helloWorld": "hello, world.",
+  "people": [
+    {
+      "name": "Joe",
+      "age": 32
+    }
+  ]
+}
 ```
 
-#### Widget - Hero
+```handlebars
+{{helloWorld}} === hello, world.
 
-This widget will contain a single static background image and several callouts.
+{{#each people}}
+  Hi, {{name}} this can also be {{this.name}}
+  You are {{age}} years old.
+{{/each}}
 
-#### Widget - List(s)
+We can also do: {{people[0].name}} to get the first name.
+```
 
-List based widgets will be contained here. (example: blog widget on homepage)
+### Partials
 
-#### Widget - Snapshot
+In Razor this is also a partial called with `@RenderPartial`.
 
-Currently this module is populated with static data and image as placeholders for dynamic data later.
+```
+{{> path/to/other/view}}
+```
 
-#### Widget - TV
+We use partials to abstract as much as possible in our view layer. For example, we may have a form "wrapper" which can contain various different forms. In this case we can have a partial for each individual form set, abstracting away specific styling or application logic from the wrapper and simlifying maintenance. We also tighten the scope of error from the wrapper down to the specific forms.
 
-Currently this module is populated with static data and image as placeholders for dynamic data later.
+You will notice we utilize this quite often throughout the view layer, see `header` or `widgets/forms` for some examples.
 
+We can also use `{{#with}}` or `{{#each}}` to render partials in a more effective manner. This means that the partial view can be called individually or be called within the scope of another module. We also give scope to our partial.
 
-** This document will be updated periodically throughout development **
+So for example, we want to integrate with an API - twitter, for example. In certain areas of our application we wish to show the latest tweet, nothing more, and in another area of our app we want to show that last 5 tweets containing a certain `#hashtag`.
+
+In this case we can have an individual tweet template that we pass a single tweet object to. We can also call that template as a partial from our multitweet template. Example:
+
+```handlebars
+<div class="multitweet">
+  <h3>Showing all tweets with: #hashtag</h3>
+  {{#each tweets}}
+    {{> twitter/tweet}}
+  {{/each}}
+</div>
+```
+
+We do not have to worry about scope here as each tweet is passed in with the scope of `this`.
+
+## Sass
+
+Our Sass stylesheets extend from base -> classes -> modules. So from here we can overwrite base or class styles without using `!important`. The goal is to have modules contain styling that is very specific to the scope of the module only with anything shared moving up in the classes and anything standard moving up to base.
+
+Specifically, Sass allows us to use mixins to abstract the noise of browser specifics and reuse code across our stylesheets without repeat. We use variables (`$variable`), includes (`@include ...`) and mixins (`@mixin name {...}`) to achieve this.
+
+**Note: we use the scss syntax.**

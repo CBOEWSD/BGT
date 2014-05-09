@@ -14,5 +14,18 @@
     {{/if}}
   </h3>
 {{else}}
-  {{! return blank}}
+  <h3 class="widget-title {{#each classes}} {{this}} {{/each}}">
+    {{title}}
+
+    {{#if promo}}
+    <div class="promo">
+      <a
+      href="{{promo.url}}"
+      class="{{#if promo.class}}icon-logo {{promo.class}}{{/if}}
+      {{#each promo.classes}} {{this}} {{/each}}">
+      {{{promo.text}}}
+    </a>
+    </div>
+    {{/if}}
+  </h3>
 {{/if}}

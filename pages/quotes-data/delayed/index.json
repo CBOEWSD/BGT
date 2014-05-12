@@ -19,6 +19,9 @@
       },
       {
         "_columns/two": "row1.json"
+      },
+      {
+        "_columns/one": "row2/row2.json"
       }
     ],
     "bottomspan": [

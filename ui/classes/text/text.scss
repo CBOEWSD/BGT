@@ -29,6 +29,10 @@ $class: '.text-';
 #{$class}red {
   color: $colorRed1;
 }
+#{$class}bold-link {
+  color: $colorBlue2;
+  font-weight: bold;
+}
 
 #{$class}larger-12 {
   font: {

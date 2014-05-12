@@ -1,0 +1,13 @@
+/*
+  Module: Single Text
+  Description: Simple component to add single lines of text on the page with different styles
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/clearfix';
+
+$module: '.single-text';
+
+#{$module} {
+
+}

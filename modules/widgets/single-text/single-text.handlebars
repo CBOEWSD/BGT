@@ -1,0 +1,21 @@
+{{#content}}
+<div class="single-text{{#class}} {{this}}{{/class}}">
+  {{#if link}}
+  <a
+    href="{{this.link.url}}"
+    title="{{#if this.link.title}}{{this.link.title}}{{/if}}"
+    {{#if this.link.class}}class="{{this.link.class}}"{{/if}}
+  >
+  {{else}}
+  <span>
+  {{/if}}
+
+    {{this.content}}
+
+  {{#if this.link}}
+  </a>
+  {{else}}
+  </span>
+  {{/if}}
+</div>
+{{/content}}

@@ -39,7 +39,7 @@
     {{#each rows}}
       <tr>
         {{#each this}}
-          <td>
+          <td{{#higlighted}} data-higlighted="true"{{/higlighted}}>
             {{#if this.link}}
             <a
               href="{{this.link.url}}"

@@ -14,6 +14,31 @@ $module: '.wrap-columns-';
   @media all and (max-width: $screenSmallMax) {
     margin: 0;
   }
+
+  .wrap-meta {
+    table-layout: fixed;
+    display: table;
+    margin-bottom: 16px;
+    width: 100%;
+
+    .wrap-meta-item {
+      display: table-cell;
+
+      &.large-center {
+        width: 50%;
+      }
+
+      .item {
+        margin-right: 12px;
+      }
+
+      &.spaced-item {
+        .item {
+          margin: 0 0 0 50px;
+        }
+      }
+    }
+  }
 }
 
 #{$module}inner {

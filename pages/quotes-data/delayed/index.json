@@ -21,6 +21,9 @@
         "_columns/two": "row1.json"
       },
       {
+        "_columns/two": "row1-alt.json"
+      },
+      {
         "_columns/one": "row2/row2.json"
       },
       {

@@ -12,7 +12,7 @@ $module: 'article.content';
 #{$module} {
   word-wrap: break-word;
 
-  a {
+  a:not('.button') {
     color: $colorBlue1;
 
     &:hover, &:active {

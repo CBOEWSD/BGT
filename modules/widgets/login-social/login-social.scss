@@ -1,0 +1,19 @@
+/*
+  Module: Login Social
+  Description: Social login component
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.login-social';
+
+#{$module} {
+  &.buttons {
+    a {
+      display: inline-block;
+      width: 49%;
+      margin: 10px 0;
+    }
+  }
+}

@@ -353,3 +353,58 @@ $classPrefix: '.icon-';
     margin-left: 5px;
   }
 }
+
+#{$classPrefix}social-signin {
+  position: relative;
+
+  &:before {
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat;
+    background-position: 0 -426px;
+    width: 30px; height: 30px;
+    margin-right: 15px;
+  }
+
+  &.facebook{
+    color: #3a5b9a;
+
+    &:before {
+      background-position: 0 -459px;
+    }
+  }
+  &.google{
+    color: #0067b8;
+    &:before {
+      background-position: -34px -426px;
+    }
+  }
+  &.twitter{
+    color:#5ea9dd;
+
+    &:before {
+      background-position: -68px -459px;
+    }
+  }
+  &.linkedin{
+    color: #017bb7;
+
+    &:before {
+      background-position: -68px -426px;
+    }
+  }
+  &.live{
+    color: #ff4325;
+    &:before {
+      background-position: -34px -459px;
+    }
+  }
+  &.yahoo{
+    color: #640f6c;
+
+    &:before {
+      background-position: 0 -426px;
+    }
+  }
+}

@@ -59,6 +59,10 @@ $module: '.ticker-';
     #{$module}item {
       border-right: 1px solid $colorGrey2;
 
+      &.no-border {
+        border: none;
+      }
+
       &:last-child {
         border-right: none;
       }

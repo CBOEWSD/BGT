@@ -1,0 +1,18 @@
+<div class="ticker-bar">
+  {{#if controls}}
+  <div class="control right">
+    <span class="icon-smallarrows right">Right</span>
+  </div>
+  <div class="control left">
+    <span class="icon-smallarrows left">Left</span>
+  </div>
+  {{/if}}
+
+  <section class="bar">
+    <div class="inner">
+      {{#each tickers}}
+        {{> widgets/ticker/item-simple}}
+      {{/each}}
+    </div>
+  </section>
+</div>

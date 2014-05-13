@@ -22,6 +22,9 @@
       },
       {
         "_columns/one": "row2/row2.json"
+      },
+      {
+        "widgets/ticker/bar-simple": "row2/ticker.json"
       }
     ],
     "bottomspan": [

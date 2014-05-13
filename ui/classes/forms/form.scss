@@ -46,6 +46,10 @@ form {
     @include border-radius(5px);
   }
 
+  .buttons {
+    margin: 10px 0;
+  }
+
 }
 
 select, form select {

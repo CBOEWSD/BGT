@@ -48,7 +48,12 @@ img {
 
 // Apply default mixins for typography
 h1 { @include h1; }
-h2 { @include h2; }
+h2 { @include h2;
+  &.h2toh1 {
+    @include h1;
+    margin-bottom: 15px;
+  }
+}
 h3 { @include h3; }
 h4 { @include h4; }
 h5 { @include h5; }

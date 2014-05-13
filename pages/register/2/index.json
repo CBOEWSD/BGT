@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "description": "This is a description",
+        "keywords": "some, keywords"
+    },
+    "placeholders": {
+        "bottomspan": [
+            {
+                "widgets/widget": "bottomspan/widget.json"
+            }
+        ],
+        "col1": [
+            {
+                "widgets/forms/body/body": "login/component.json"
+            }
+        ],
+        "col2": [
+            {
+                "widgets/content/content": "register/before.md"
+            },
+            {
+                "widgets/login-social/buttons": ""
+            },
+            {
+                "widgets/content/content": "register/create.md"
+            }
+        ],
+        "topspan": [
+            {
+                "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+            },
+            {
+                "widgets/loginspan/span": ""
+            }
+        ]
+    },
+    "title": "Register 2 - Social",
+    "view": "twocol"
+}

@@ -1,4 +1,5 @@
 {
+    "classes": ["min-height-120"],
     "before": {
         "widgets/content/content": "thanks/before.md"
     },

@@ -16,55 +16,11 @@
     "modules": [
       {
         "widgets/widget-title": {
-          "widget": {
-            "title": "VIX Overview",
-            "promo": {
-              "url": "#",
-              "text": "Options Chain",
-              "classes": [
-                "button blue"
-              ]
-            }
-          }
+          "title": "Search by Company"
         }
       },
       {
-        "widgets/quote-overview/overview": {
-          "summary": [
-            {
-              "item1": {
-                "Last": {
-                  "value": 17.04,
-                  "prefix": "$"
-                }
-              },
-              "item2": {
-                "Change": {
-                  "value": 0.32,
-                  "numericcolor": true,
-                  "parens": {
-                    "value": 1.88,
-                    "postfix": "%"
-                  }
-                }
-              }
-            }
-          ],
-          "items": {
-            "Price": {
-              "widgets/table/table": "row1/price.json"
-            },
-            "OHLC": {
-              "widgets/table/table": "row1/price.json"
-            },
-            "Volumes": {
-              "widgets/table/table": "row1/price.json"
-            },
-            "Ratios": {
-              "widgets/table/table": "row1/price.json"
-            }
-          }
-        }
+        "widgets/forms/body/body": "company/component.json"
       }
     ]
   }

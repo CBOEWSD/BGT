@@ -1,0 +1,29 @@
+{
+  "controls": false,
+  "tickers": [
+    {
+      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    },
+    {
+      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    },
+    {
+      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    },
+    {
+      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    },
+    {
+      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    },
+    {
+      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    },
+    {
+      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    },
+    {
+      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }
+  ]
+}

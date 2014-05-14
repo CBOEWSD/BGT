@@ -9,6 +9,23 @@
         {{title.right}}
       </span>
     {{/if}}
+    {{#if title.meta}}
+      <div class="wrap-meta">
+        {{#each title.meta.items}}
+          <div class="wrap-meta-item{{#this.class}} {{this}}{{/this.class}}">
+            {{#each this.content}}
+            <span class="item">
+            {{#if this.label}}<strong>{{this.label}}</strong>{{/if}}
+            {{this.text}}
+            </span>
+
+            {{else}}
+            {{this.content}}
+            {{/each}}
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
   </div>
 {{/if}}
 
@@ -38,7 +55,7 @@
     {{#each rows}}
       <tr>
         {{#each this}}
-          <td{{#higlighted}} data-higlighted="true"{{/higlighted}}>
+          <td{{#higlighted}} data-higlighted="true"{{/higlighted}} {{#classes}}class="{{this}}"{{/classes}}>
             {{#if this.link}}
             <a
               href="{{this.link.url}}"

@@ -17,6 +17,9 @@ class Table
     # Check for columns that should be hidden
     @.notMobile()
 
+    # Check for columns that should be hidden on desktop
+    @.onlyMobile()
+
     # Set the higlighted style
     @.checkHilighted()
 
@@ -36,17 +39,30 @@ class Table
     $nope.each (index, element) =>
       index = @.$cols.index(element)
       @.hideIndex.push(index)
-      @.hideColumn(index)
+      @.hideColumn(index, 'nomobile')
+
+  ###
+    ## onlyMobile
+    Find which columns should be hidden on mobile and pass
+    their index to `hideColumn`.
+  ###
+  onlyMobile: ->
+    $nope = @.$cols.filter('.onlymobile')
+
+    $nope.each (index, element) =>
+      index = @.$cols.index(element)
+      @.hideIndex.push(index)
+      @.hideColumn(index, 'onlymobile')
 
   ###
     ## hideColumn
     Given an index hide each column with that index on
     each given row.
   ###
-  hideColumn: (index) ->
+  hideColumn: (index, className) ->
     @.$tr.each (i, element) =>
       $td = $('td, th', element)
-      $td.eq(index).addClass('nomobile')
+      $td.eq(index).addClass(className)
 
   ###
     ## checkHilighted

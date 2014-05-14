@@ -1,6 +1,6 @@
 {
   "view": "onecol",
-  "title": "Quotes",
+  "title": "Multiple Quotes",
   "meta": {
     "keywords": "some, keywords",
     "description": "This is a description"
@@ -18,7 +18,7 @@
         }
       },
       {
-        "_columns/two": "row1.json"
+        "_columns/one": "row1.json"
       },
       {
         "_columns/one": "row2/row2.json"

@@ -1,0 +1,1 @@
+**To enter multiple symbols, separate with a comma or semicolon.**

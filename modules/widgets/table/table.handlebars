@@ -34,7 +34,7 @@
   {{#if columns}}
     <colgroup>
       {{#each columns}}
-      <col class="{{#unless mobile}} nomobile {{/unless}}" />
+      <col class="{{#if mobileonly}} onlymobile {{/if}} {{#unless mobile}} nomobile {{/unless}}" />
       {{/each}}
     </colgroup>
   {{/if}}

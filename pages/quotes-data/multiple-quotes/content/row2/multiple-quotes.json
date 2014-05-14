@@ -1,9 +1,13 @@
 {
-  "classes": ["oddeven", "padvertical", "padhorizontal", "last-right", "inner-cellborders", "light-header"],
+  "classes": ["oddeven", "padvertical", "padhorizontal", "last-right", "inner-cellborders", "light-header", "symbol-list"],
   "columns": [
     {
       "title": "Symbol",
-      "mobile": true
+      "mobile": true,
+      "mobileonly": true
+    },
+    {
+      "title": "Symbol"
     },
     {
       "title": "Last Sale",
@@ -17,7 +21,8 @@
       "title": "Time of Last Sale"
     },
     {
-      "title": "Size"
+      "title": "Size",
+      "mobile": true
     },
     {
       "title": "Open",
@@ -36,6 +41,11 @@
   "rows": [
     [
       {
+        "content": "GOOG",
+        "link": {
+          "url": "#"
+        }
+      },{
         "content": "GOOG (GOOGLE INC (C))",
         "link": {
           "url": "#"
@@ -68,6 +78,12 @@
     ],
     [
       {
+        "content": "AAPL",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
         "content": "AAPL (APPLE INC)",
         "link": {
           "url": "#"
@@ -99,6 +115,12 @@
       }
     ],
     [
+      {
+        "content": "BAC",
+        "link": {
+          "url": "#"
+        }
+      },
       {
         "content": "BAC (BANK OF AMERICA CORP NEW)",
         "link": {

@@ -1,0 +1,115 @@
+{
+  "title": {
+    "text": "Price Data Table",
+    "meta": {
+      "items": [
+        {
+          "content":"Apr 10, 2014 @ 16:38 ET (DELAYED 15 MINUTES)"
+        }
+      ]
+    }
+  },
+  "classes": ["oddeven", "padvertical", "last-right", "data-table", "nomarbottom"],
+  "rows": [
+    [
+      {
+        "content": "Last Sale"
+      },
+      {
+        "content": 16.12,
+        "classes": "bold"
+      },
+      {
+        "content": "Tick"
+      },
+      {
+        "content": "Down"
+      }
+    ],
+    [
+      {
+        "content": "Time of Last Sale"
+      },
+      {
+        "content": "04/10/2014 16:03"
+      },
+      {
+        "content": "Exchange"
+      },
+      {
+        "content": "NYSE"
+      }
+    ],
+    [
+      {
+        "content": "Net Change"
+      },
+      {
+        "content": "-0.50",
+        "numericcolor": true
+      },
+      {
+        "content": "Open"
+      },
+      {
+        "content": 14.55
+      }
+    ],
+    [
+      {
+        "content": "Bid"
+      },
+      {
+        "content": "14.90"
+      },
+      {
+        "content": "Settlement"
+      },
+      {
+        "content": 13.80
+      }
+    ],
+    [
+      {
+        "content": "Ask"
+      },
+      {
+        "content": 15.15
+      },
+      {
+        "content": "High"
+      },
+      {
+        "content": "15.05"
+      }
+    ],
+    [
+      {
+        "content": "Volume"
+      },
+      {
+        "content": 31
+      },
+      {
+        "content": "Low"
+      },
+      {
+        "content": 14.45
+      }
+    ],
+    [
+      {
+        "content": "Expiration Date"
+      },
+      {
+        "content": "04/30/2014"
+      },
+      {
+        "content": "Open Interest"
+      },
+      {
+        "content": 107
+      }
+    ]
+  ]
+}

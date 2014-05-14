@@ -1,0 +1,36 @@
+{
+  "view": "onecol",
+  "title": "Detailed Quotes",
+  "meta": {
+    "keywords": "some, keywords",
+    "description": "This is a description"
+  },
+  "placeholders": {
+    "topspan": [
+      {
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+      }
+    ],
+    "content": [
+      {
+        "widgets/qnd-title/qnd-title": {
+          "title": "Detailed Quotes"
+        }
+      },
+      {
+        "_columns/two": "row1.json"
+      },
+      {
+        "_columns/one": "row2/row2.json"
+      },
+      {
+        "widgets/ticker/bar-simple": "row2/ticker.json"
+      }
+    ],
+    "bottomspan": [
+      {
+        "widgets/widget": "bottomspan/widget.json"
+      }
+    ]
+  }
+}

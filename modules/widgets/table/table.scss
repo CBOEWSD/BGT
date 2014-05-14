@@ -95,6 +95,10 @@ $module: '.table';
     text-align: left;
   }
 
+  .onlymobile {
+    display:none;
+  }
+
   &.last-right {
     td, th {
       &:last-child {
@@ -227,6 +231,16 @@ $module: '.table';
     border-width:1px 0;
     border-style:solid none;
     border-color:$colorGrey2;
+
+    &.nomarbottom {
+      margin-bottom:0px;
+    }
+  }
+
+  &.symbol-list {
+    th:nth-child(2), td:nth-child(2) {
+      border-left:none;
+    }
   }
 
 
@@ -236,6 +250,16 @@ $module: '.table';
     &.mobile-load {
       @include fadeIn( .6s );
       @include opacity(1);
+    }
+    &.padhorizontal {
+      tbody, thead, tfoot {
+        tr {
+          td, th {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+        }
+      }
     }
 
     &.data-table {
@@ -276,6 +300,10 @@ $module: '.table';
 
     .nomobile {
       display: none;
+    }
+
+    .onlymobile {
+      display: table-cell;
     }
 
     th, td {

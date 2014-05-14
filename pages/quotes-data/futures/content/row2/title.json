@@ -1,0 +1,23 @@
+{
+  "title": "BAC (Bank of America)",
+  "summary": [
+    {
+      "item1": {
+        "Last": {
+          "value": 17.04,
+          "prefix": "$"
+        }
+      },
+      "item2": {
+        "Change": {
+          "value": -0.32,
+          "numericcolor": true,
+          "parens": {
+            "value": 1.88,
+            "postfix": "%"
+          }
+        }
+      }
+    }
+  ]
+}

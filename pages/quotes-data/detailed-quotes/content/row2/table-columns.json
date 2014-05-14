@@ -7,10 +7,6 @@
       {
         "widgets/table/table": "row2/fundamental-data.json"
       }
-      ,
-      {
-        "widgets/table/table": "row2/multiple-quotes.json"
-      }
     ]
   }
 }

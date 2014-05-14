@@ -11,6 +11,7 @@ $module: '.wrap-columns-';
 #{$module}outer {
   margin: 0 -15px;
 
+
   @media all and (max-width: $screenSmallMax) {
     margin: 0;
   }
@@ -52,6 +53,11 @@ $module: '.wrap-columns-';
   width: 100%;
   border-collapse: separate;
   border-spacing: 15px 0;
+
+  &.hidedesktop {
+    left: -9999px;
+    display: none;
+  }
 
   * {
     border-collapse: initial;
@@ -136,6 +142,10 @@ $module: '.wrap-columns-';
 
   @media all and (max-width: $screenSmallMax) {
     display: block;
+
+    &.hidedesktop {
+      display: block
+    }
 
     .column {
       margin: 20px 0;

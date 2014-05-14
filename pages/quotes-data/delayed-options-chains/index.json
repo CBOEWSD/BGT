@@ -18,6 +18,9 @@
         }
       },
       {
+        "_columns/one": "mobile-nav.json"
+      },
+      {
         "_columns/two": "delayed.json"
       },
       {

@@ -1,7 +1,4 @@
 {
-  "before": {
-    "widgets/content/content": "company-alt/before.md"
-  },
   "body": {
     "widgets/forms/symbol/search": ""
   }

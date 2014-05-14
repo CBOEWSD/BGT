@@ -27,6 +27,9 @@
         "_columns/one": "company-alt.json"
       },
       {
+        "_columns/two": "delayed.json"
+      },
+      {
         "_columns/one": "row2/row2.json"
       },
       {

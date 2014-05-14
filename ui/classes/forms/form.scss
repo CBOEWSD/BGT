@@ -41,6 +41,12 @@ form {
         size: .9em;
       }
     }
+
+    &.notbold {
+      font: {
+        weight: 400;
+      }
+    }
   }
 
   input, select {

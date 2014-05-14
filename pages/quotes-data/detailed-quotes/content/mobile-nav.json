@@ -1,0 +1,11 @@
+{
+  "widgetWrapper": false,
+  "classes": ["hidedesktop"],
+  "column": {
+    "modules": [
+      {
+        "widgets/side-navigation/nav-quotes": ""
+      }
+    ]
+  }
+}

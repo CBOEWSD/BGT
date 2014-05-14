@@ -129,6 +129,16 @@ $module: '.table';
       }
     }
   }
+  &.padhorizontal {
+    tbody, thead, tfoot {
+      tr {
+        td, th {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
 
   &.center {
     th, td {
@@ -175,19 +185,48 @@ $module: '.table';
     }
   }
 
-  &.data-table {
-    > tr {
-
+  &.inner-cellborders {
+    tr {
+      border-bottom: 1px solid darken($colorGrey2, 6%);
       &:last-child {
-        border-bottom: 1px solid #dddddd;
+        border-bottom: 1px solid darken($colorGrey2, 6%);
       }
-      td:nth-child(2n) {
+    }
+
+    td, th {
+      border-left: 1px solid darken($colorGrey2, 6%);
+      &:first-child {
+        border-left:none;
+      }
+    }
+  }
+
+  &.light-header {
+    > thead {
+      > tr {
+        &:nth-child(even),
+        &:nth-child(odd) {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  &.data-table {
+    tr {
+      td {
+        width:25%;
+      }
+      td:nth-child(4n-2) {
         text-align:right;
         padding-right:50px;
       }
     }
 
     margin-bottom:30px;
+    border-width:1px 0;
+    border-style:solid none;
+    border-color:$colorGrey2;
   }
 
 
@@ -200,14 +239,19 @@ $module: '.table';
     }
 
     &.data-table {
+      border-bottom:none;
+
       tr {
         width:100%;
         border-bottom:0;
-
         td {
           width:50%;
           display:inline-block;
-          border-bottom: 1px solid #dddddd;
+          border-bottom: 1px solid $colorGrey2;
+
+          &.nomobile {
+            display:none;
+          }
         }
         td:nth-child(2n) {
           text-align:right;
@@ -217,15 +261,11 @@ $module: '.table';
 
       &.oddeven {
         tr:nth-child(even) {
-          // background: lighten($colorGrey2, 5%);
           background:#fff;
-        }
-        tr:nth-child(odd) {
-          // background: #fff;
         }
         tr {
           td:nth-child(2n) {
-            border-bottom: 1px solid #dddddd;
+            border-bottom: 1px solid $colorGrey2;
           }
           td:nth-child(3n), td:nth-child(4n) {
             background: lighten($colorGrey2, 5%);

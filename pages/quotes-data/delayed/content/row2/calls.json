@@ -37,558 +37,550 @@
   "rows": [
     [
       {
-        "content": 1870.00,
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
+      },
+      {
+        "content": 0
+      },
+      {
+        "content": 0
+      },
+      {
+        "content": 70
+      },
+      {
+        "content": 200
+      },
+      {
+        "content": 0
+      },
+      {
+        "content": 14
+      }
+    ],
+    [
+      {
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E",
         "higlighted": true
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00,
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E",
         "higlighted": true
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00,
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E",
         "higlighted": true
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00,
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E",
         "higlighted": true
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E",
+        "higlighted": true
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E",
+        "higlighted": true
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E",
+        "higlighted": true
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0.06,
+        "numericcolor": true
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
+        "content": 14
       }
     ],
     [
       {
-        "content": 1870.00
+        "link" : {
+          "url": "#",
+          "title": "BAC 1409E 10-E"
+        },
+        "content": "BAC 1409E 10-E"
       },
       {
-        "content": 70.00
+        "content": 0
       },
       {
-        "content": 0.00
+        "content": 0
       },
       {
-        "content": 70.00
+        "content": 70
       },
       {
-        "content": 70.00
+        "content": 200
       },
       {
-        "content": 1519
+        "content": 0
       },
       {
-        "content": 1519
-      }
-    ],
-    [
-      {
-        "content": 1870.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 0.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 1519
-      },
-      {
-        "content": 1519
-      }
-    ],
-    [
-      {
-        "content": 1870.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 0.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 1519
-      },
-      {
-        "content": 1519
-      }
-    ],
-    [
-      {
-        "content": 1870.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 0.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 1519
-      },
-      {
-        "content": 1519
-      }
-    ],
-    [
-      {
-        "content": 1870.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 0.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 1519
-      },
-      {
-        "content": 1519
-      }
-    ],
-    [
-      {
-        "content": 1870.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 0.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 70.00
-      },
-      {
-        "content": 1519
-      },
-      {
-        "content": 1519
+        "content": 14
       }
     ]
   ]

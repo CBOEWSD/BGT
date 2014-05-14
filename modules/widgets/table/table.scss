@@ -73,9 +73,8 @@ $module: '.table';
 
       &.higlighted {
         background: {
-          color: $colorGreen1 !important; // Overide any other background color style set on the row
+          color: $colorGreenHighlight !important; // Overide any other background color style set on the row
         }
-        color: $colorWhite;
       }
 
       td {

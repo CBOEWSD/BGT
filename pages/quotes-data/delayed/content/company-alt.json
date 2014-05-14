@@ -1,0 +1,15 @@
+{
+  "widgetWrapper": true,
+  "column": {
+    "modules": [
+      {
+        "widgets/widget-title": {
+          "title": "Search Company Name"
+        }
+      },
+      {
+        "widgets/forms/body/body": "company-alt/component.json"
+      }
+    ]
+  }
+}

@@ -28,6 +28,10 @@ $module: '.wrap-columns-';
         width: 50%;
       }
 
+      &.align-right {
+        text-align: right;
+      }
+
       .item {
         margin-right: 12px;
       }

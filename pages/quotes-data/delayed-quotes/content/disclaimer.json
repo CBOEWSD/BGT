@@ -1,0 +1,10 @@
+{
+  "widgetWrapper": false,
+  "column": {
+    "modules": [
+      {
+        "widgets/content/content": "disclaimer.md"
+      }
+    ]
+  }
+}

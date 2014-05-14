@@ -1,0 +1,8 @@
+{
+  "body": {
+    "widgets/forms/search-quotes/advanced": ""
+  },
+  "after": {
+    "widgets/content/content": "delayed-search/after.md"
+  }
+}

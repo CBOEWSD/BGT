@@ -47,6 +47,23 @@ $module: '.optionable-title';
       //margin-left: 10px;
     }
   }
+  .quote-summary {
+    float:right;
+    width:auto;
+    padding-right:0;
+    margin-bottom:0;
+
+    .col {
+      padding:0 0 0 50px;
+      .key, .value {
+        display:inline-block;
+        vertical-align:middle;
+      }
+      .key {
+        margin-right:10px;
+      }
+    }
+  }
 
   @media all and (max-width: $screenSmallMax) {
     .left, .form-component {
@@ -81,6 +98,14 @@ $module: '.optionable-title';
 
       &>*:last-child {
         margin-bottom: 0;
+      }
+    }
+    .quote-summary {
+      float:none;
+      width:100%;
+
+      .col {
+        padding:0;
       }
     }
   }

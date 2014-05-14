@@ -28,6 +28,25 @@ form {
       size: .9em;
     }
     margin: 5px 0;
+
+
+    &.inline-block {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    &.small {
+      font: {
+        weight: 400;
+        size: .9em;
+      }
+    }
+
+    &.notbold {
+      font: {
+        weight: 400;
+      }
+    }
   }
 
   input, select {

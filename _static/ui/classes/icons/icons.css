@@ -248,3 +248,39 @@
   .icon-quote.end {
     background-position: -3px -324px;
     margin-left: 5px; }
+
+.icon-social-signin {
+  position: relative; }
+  .icon-social-signin:before {
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    background: url(/ui/classes/icons/assets/canvas.png) no-repeat;
+    background-position: 0 -426px;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px; }
+  .icon-social-signin.facebook {
+    color: #3a5b9a; }
+    .icon-social-signin.facebook:before {
+      background-position: 0 -459px; }
+  .icon-social-signin.google {
+    color: #0067b8; }
+    .icon-social-signin.google:before {
+      background-position: -34px -426px; }
+  .icon-social-signin.twitter {
+    color: #5ea9dd; }
+    .icon-social-signin.twitter:before {
+      background-position: -68px -459px; }
+  .icon-social-signin.linkedin {
+    color: #017bb7; }
+    .icon-social-signin.linkedin:before {
+      background-position: -68px -426px; }
+  .icon-social-signin.live {
+    color: #ff4325; }
+    .icon-social-signin.live:before {
+      background-position: -34px -459px; }
+  .icon-social-signin.yahoo {
+    color: #640f6c; }
+    .icon-social-signin.yahoo:before {
+      background-position: 0 -426px; }

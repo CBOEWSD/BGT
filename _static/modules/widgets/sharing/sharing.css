@@ -1,0 +1,11 @@
+/*
+  Module: TV Widget .player
+  Description: Large player for single video with detaileed title and description.
+*/
+.sharing .split {
+  display: inline-block;
+  vertical-align: top;
+  width: 1px;
+  height: 20px;
+  background: #dddddd;
+  margin: 0 5px; }

@@ -354,14 +354,19 @@ img {
       width: 100%; } }
 
 h1 {
-  font-size: 1.6em;
-  font-weight: 700;
+  font-size: 1.8em;
+  font-weight: 400;
   margin: 10px 0 20px 0; }
 
 h2 {
   font-size: 1.4em;
   font-weight: 700;
   margin: 10px 0 10px 0; }
+  h2.h2toh1 {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin: 10px 0 20px 0;
+    margin-bottom: 15px; }
 
 h3 {
   font-size: 1.2em;

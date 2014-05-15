@@ -30,6 +30,18 @@
       margin: 0 10px; }
       .optionable-title .form-component label:last-child {
         margin: 0; }
+  .optionable-title .quote-summary {
+    float: right;
+    width: auto;
+    padding-right: 0;
+    margin-bottom: 0; }
+    .optionable-title .quote-summary .col {
+      padding: 0 0 0 50px; }
+      .optionable-title .quote-summary .col .key, .optionable-title .quote-summary .col .value {
+        display: inline-block;
+        vertical-align: middle; }
+      .optionable-title .quote-summary .col .key {
+        margin-right: 10px; }
   @media all and (max-width: 767px) {
     .optionable-title .left, .optionable-title .form-component {
       padding: 0;
@@ -51,4 +63,9 @@
         text-align: center;
         margin: 5px 0; }
       .optionable-title .form-component > *:last-child {
-        margin-bottom: 0; } }
+        margin-bottom: 0; }
+    .optionable-title .quote-summary {
+      float: none;
+      width: 100%; }
+      .optionable-title .quote-summary .col {
+        padding: 0; } }

@@ -7,11 +7,11 @@ article.content {
   /*
     Overwrites for default restable styles
   */ }
-  article.content a {
+  article.content a:not('.button') {
     color: #135fad; }
-    article.content a:hover, article.content a:active {
+    article.content a:not('.button'):hover, article.content a:not('.button'):active {
       color: #313538; }
-    article.content a img {
+    article.content a:not('.button') img {
       padding-bottom: 1px;
       border-bottom: 4px solid #12b7ed; }
   article.content .float-right {

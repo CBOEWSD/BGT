@@ -1,0 +1,8 @@
+/*
+  Module: Login Social
+  Description: Social login component
+*/
+.login-social.buttons a {
+  display: inline-block;
+  width: 49%;
+  margin: 10px 0; }

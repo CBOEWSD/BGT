@@ -43,6 +43,8 @@
       float: left; }
     .ticker-bar .bar .ticker-item {
       border-right: 1px solid #dddddd; }
+      .ticker-bar .bar .ticker-item.no-border {
+        border: none; }
       .ticker-bar .bar .ticker-item:last-child {
         border-right: none; }
     @media all and (max-width: 767px) { }

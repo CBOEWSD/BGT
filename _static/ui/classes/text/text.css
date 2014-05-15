@@ -21,6 +21,10 @@
 .text-red {
   color: #b7120b; }
 
+.text-bold-link {
+  color: #12b7ed;
+  font-weight: bold; }
+
 .text-larger-12 {
   font-size: 1.2em; }
 

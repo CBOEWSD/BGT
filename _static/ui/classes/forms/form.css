@@ -19,6 +19,14 @@ form label {
   font-weight: 700;
   font-size: 0.9em;
   margin: 5px 0; }
+  form label.inline-block {
+    display: inline-block;
+    margin-right: 10px; }
+  form label.small {
+    font-weight: 400;
+    font-size: 0.9em; }
+  form label.notbold {
+    font-weight: 400; }
 form input, form select {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
@@ -33,6 +41,8 @@ form input, form select {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
+form .buttons {
+  margin: 10px 0; }
 
 select, form select {
   cursor: pointer;

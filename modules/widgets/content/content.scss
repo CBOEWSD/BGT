@@ -31,6 +31,14 @@ $module: 'article.content';
     margin: 0 0 10px 10px;
   }
 
+  a {
+    color: $colorBlue1;
+
+    &:hover, &:active {
+      color: $colorGrey1;
+    }
+  }
+
   table {
     width: 100%;
     margin: 25px 0;

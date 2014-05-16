@@ -272,6 +272,7 @@ $module: '.table';
           width: 49.5%;
           display:inline-block;
           border-bottom: 1px solid $colorGrey2;
+          float: left;
 
           &.nomobile {
             display:none;

@@ -1,6 +1,6 @@
 {
   "view": "onecol",
-  "title": "Delayed",
+  "title": "Error",
   "meta": {
     "keywords": "some, keywords",
     "description": "This is a description"
@@ -22,7 +22,7 @@
         "_columns/two": "search.json"
       },
       {
-        "_columns/one": "row2/row2.json"
+        "_columns/one": "chain.json"
       },
       {
         "widgets/ticker/bar-simple": "ticker.json"

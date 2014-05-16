@@ -1,0 +1,6 @@
+{
+  "classes": ["max-width-400"],
+  "body": {
+    "widgets/forms/search-chain/filter": ""
+  }
+}

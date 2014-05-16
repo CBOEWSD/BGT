@@ -1,0 +1,37 @@
+{
+  "view": "onecol",
+  "title": "Delayed",
+  "meta": {
+    "keywords": "some, keywords",
+    "description": "This is a description"
+  },
+  "placeholders": {
+    "topspan": [
+      {
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+      }
+    ],
+    "content": [
+      {
+        "widgets/qnd-title/qnd-title": {
+          "title": "Delayed Options Chains",
+          "noSearch": true
+        }
+      },
+      {
+        "_columns/two": "search.json"
+      },
+      {
+        "_columns/one": "row2/row2.json"
+      },
+      {
+        "widgets/ticker/bar-simple": "ticker.json"
+      }
+    ],
+    "bottomspan": [
+      {
+        "widgets/widget": "bottomspan/widget.json"
+      }
+    ]
+  }
+}

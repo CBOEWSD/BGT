@@ -26,6 +26,7 @@ GLOBAL.app = express()
 
 # Set Boolean for prod
 GLOBAL.isProd = if ('production' == app.get('env')) then true else false
+GLOBAL.isStatic = if ('static' == app.get('env')) then true else false
 
 # Assets
 # ### JS Bundle
@@ -169,16 +170,19 @@ hbs.loadPartials (err,partials) ->
     src: __dirname + '/ui'
     compress: isProd
     debug: !isProd
+    encodeSrc: !isStatic
   }
   app.use '/_compiled', coffee {
     src: __dirname + '/_compiled'
     compress: isProd
     debug: !isProd
+    encodeSrc: !isStatic
   }
   app.use '/modules', coffee {
     src: __dirname + '/modules'
     compress: isProd
     debug: !isProd
+    encodeSrc: !isStatic
   }
 
 

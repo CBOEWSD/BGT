@@ -1,1 +1,1 @@
-**To obtain delayed CFE Quotes, enter the product ticker symbol below and click "GET Quote".**
+**To obtain delayed CFE Quotes, enter the product ticker symbol below and click "Get Quote".**

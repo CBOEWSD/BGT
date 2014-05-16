@@ -23,7 +23,7 @@
             "text": "34239235"
           }
         ],
-        "class": "text-center large-center"
+        "classes": ["large-center"]
       },
       {
         "content": [
@@ -34,7 +34,7 @@
             "label": "Change"
           }
         ],
-        "class": "text-center spaced-item"
+        "classes": ["spaced-item"]
       }
     ]
   },

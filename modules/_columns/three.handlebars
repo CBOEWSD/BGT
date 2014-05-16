@@ -1,4 +1,7 @@
 <div class="wrap-columns-outer">
+  {{#with meta}}
+    {{> _columns/meta}}
+  {{/with}}
   <div class="wrap-columns-inner three {{#each classes}} {{this}} {{/each}}">
     <div class="column {{#if widgetWrapper}} widget {{/if}} {{#each column1.classes}} {{this}} {{/each}}">
       {{#each column1.modules}}

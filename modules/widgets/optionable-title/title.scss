@@ -58,6 +58,7 @@ $module: '.optionable-title';
       .key, .value {
         display:inline-block;
         vertical-align:middle;
+        white-space: nowrap;
       }
       .key {
         margin-right:10px;

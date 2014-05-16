@@ -43,6 +43,8 @@ form input, form select {
     vertical-align: middle; }
 form .buttons {
   margin: 10px 0; }
+  form .buttons.margin-20 {
+    margin: 20px 0; }
 
 select, form select {
   cursor: pointer;

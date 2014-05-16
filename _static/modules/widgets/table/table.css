@@ -165,9 +165,10 @@
           width: 100%;
           border-bottom: 0; }
           .table.data-table tr td {
-            width: 50%;
+            width: 49.5%;
             display: inline-block;
-            border-bottom: 1px solid #dddddd; }
+            border-bottom: 1px solid #dddddd;
+            float: left; }
             .table.data-table tr td.nomobile {
               display: none; }
           .table.data-table tr td:nth-child(2n) {

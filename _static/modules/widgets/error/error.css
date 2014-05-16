@@ -1,0 +1,17 @@
+/*
+  Module: Error
+  Description: Generic error message display.
+*/
+.error {
+  text-align: center;
+  margin: 15px 0 !important;
+  padding-bottom: 15px !important;
+  border-bottom: 1px solid #c4c4c4; }
+  .error .primary, .error .secondary {
+    margin: 0; }
+  .error .primary {
+    font-size: 2em;
+    font-weight: 400;
+    color: #b7120b; }
+  .error .secondary {
+    margin-top: 5px; }

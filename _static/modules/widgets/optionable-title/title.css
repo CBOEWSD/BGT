@@ -39,7 +39,8 @@
       padding: 0 0 0 50px; }
       .optionable-title .quote-summary .col .key, .optionable-title .quote-summary .col .value {
         display: inline-block;
-        vertical-align: middle; }
+        vertical-align: middle;
+        white-space: nowrap; }
       .optionable-title .quote-summary .col .key {
         margin-right: 10px; }
   @media all and (max-width: 767px) {

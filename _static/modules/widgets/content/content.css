@@ -17,6 +17,10 @@ article.content {
   article.content .float-right {
     float: right;
     margin: 0 0 10px 10px; }
+  article.content a {
+    color: #135fad; }
+    article.content a:hover, article.content a:active {
+      color: #313538; }
   article.content table {
     width: 100%;
     margin: 25px 0;

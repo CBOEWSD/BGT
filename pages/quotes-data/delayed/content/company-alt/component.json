@@ -1,8 +1,0 @@
-{
-  "body": {
-    "widgets/forms/search-company/advanced": ""
-  },
-  "after": {
-    "widgets/content/content": "company-alt/after.md"
-  }
-}

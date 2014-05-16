@@ -1,1 +1,0 @@
-**To determine whether Single-Stock Futures are offered on a given stock and/or to generate a delayed quote, enter the Company Name into the field below, then click "Get Symbol" and click the appropriate Single-Stock Futures symbol.**

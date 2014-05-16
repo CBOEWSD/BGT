@@ -14,7 +14,8 @@
     "content": [
       {
         "widgets/qnd-title/qnd-title": {
-          "title": "Delayed Quotes Classic"
+          "title": "Delayed Quotes Classic",
+          "noSearch": true
         }
       },
       {

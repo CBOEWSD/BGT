@@ -14,7 +14,9 @@
     </h1>
   </div>
 
-  <div class="search-component">
-    {{> search/quicksearch}}
-  </div>
+  {{#unless noSearch}}
+    <div class="search-component">
+      {{> search/quicksearch}}
+    </div>
+  {{/unless}}
 </div>

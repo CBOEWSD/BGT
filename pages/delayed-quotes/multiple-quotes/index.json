@@ -14,7 +14,7 @@
     "content": [
       {
         "widgets/qnd-title/qnd-title": {
-          "title": "Detailed Quotes",
+          "title": "Multiple Quotes",
           "noSearch": true
         }
       },

@@ -14,7 +14,8 @@
     "content": [
       {
         "widgets/qnd-title/qnd-title": {
-          "title": "Futures"
+          "title": "Futures",
+          "noSearch": true
         }
       },
       {

@@ -1,6 +1,6 @@
 {
   "view": "onecol",
-  "title": "Delayed",
+  "title": "Error",
   "meta": {
     "keywords": "some, keywords",
     "description": "This is a description"
@@ -14,18 +14,18 @@
     "content": [
       {
         "widgets/qnd-title/qnd-title": {
-          "title": "Delayed Quotes Classic",
+          "title": "Delayed Options Chains",
           "noSearch": true
         }
       },
       {
-        "_columns/one": "mobile-nav.json"
+        "_columns/two": "search.json"
       },
       {
-        "_columns/two": "delayed.json"
+        "_columns/one": "chain.json"
       },
       {
-        "_columns/one": "disclaimer.json"
+        "widgets/ticker/bar-simple": "ticker.json"
       }
     ],
     "bottomspan": [

@@ -14,7 +14,7 @@
     "content": [
       {
         "widgets/qnd-title/qnd-title": {
-          "title": "Delayed Quotes Classic",
+          "title": "Delayed Options Chains",
           "noSearch": true
         }
       },
@@ -25,7 +25,10 @@
         "_columns/two": "delayed.json"
       },
       {
-        "_columns/one": "disclaimer.json"
+        "_columns/one": "row2/row2.json"
+      },
+      {
+        "widgets/ticker/bar-simple": "row2/ticker.json"
       }
     ],
     "bottomspan": [

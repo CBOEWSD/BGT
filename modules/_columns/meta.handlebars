@@ -1,0 +1,21 @@
+<div class="wrap-meta">
+  {{#each items}}
+    <div class="wrap-meta-item {{#each classes}} {{this}} {{/each}}">
+      {{#each content}}
+        <span class="item">
+          {{#if label}}
+            <strong class="key">
+              {{label}}
+            </strong>
+          {{/if}}
+          <span class="value">
+            {{text}}
+          </span>
+        </span>
+
+      {{else}}
+        {{content}}
+      {{/each}}
+    </div>
+  {{/each}}
+</div>

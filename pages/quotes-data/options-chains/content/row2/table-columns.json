@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "items": [
+      {
+        "content":"Apr 08, 2014 @ 11:59 ET"
+      },
+      {
+        "content": [
+          {
+            "label": "Bid:",
+            "text": "16.40"
+          },
+          {
+            "label": "Ask:",
+            "text": "16.41"
+          },
+          {
+            "label": "Size:",
+            "text": "297x398"
+          },
+          {
+            "label": "Vol:",
+            "text": "34239235"
+          }
+        ],
+        "classes": ["large-center"]
+      },
+      {
+        "content": [
+          {
+            "label": "Last"
+          },
+          {
+            "label": "Change"
+          }
+        ],
+        "classes": ["spaced-item"]
+      }
+    ]
+  },
+  "column1": {
+    "modules": [
+      {
+        "widgets/table/table": "row2/calls.json"
+      }
+    ]
+  },
+  "column2": {
+    "modules": [
+      {
+        "widgets/table/table": "row2/puts.json"
+      }
+    ]
+  }
+}

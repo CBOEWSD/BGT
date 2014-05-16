@@ -1,0 +1,32 @@
+/*
+  Module: Error
+  Description: Generic error message display.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.error';
+
+#{$module} {
+  text-align: center;
+  margin: 15px 0 !important;
+  padding-bottom: 15px !important;
+  border-bottom: 1px solid darken($colorGrey2, 10%);
+
+  .primary, .secondary {
+    margin: 0;
+  }
+
+  .primary {
+    font: {
+      size: 2em;
+      weight: 400;
+    }
+    color: $colorRed1;
+  }
+
+  .secondary {
+    margin-top: 5px;
+  }
+}

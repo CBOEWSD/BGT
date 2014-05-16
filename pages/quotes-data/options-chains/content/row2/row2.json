@@ -15,7 +15,7 @@
         "widgets/pagination/pagination": "row2/pagination.json"
       },
       {
-        "widgets/single-text/single-text": "row2/single-text.json"
+        "widgets/content/content": "row2/download.md"
       }
     ]
   }

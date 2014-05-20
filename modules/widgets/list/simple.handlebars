@@ -15,6 +15,12 @@
             data-echo="{{this.thumbnail.src}}"
             alt="{{this.title}}"
             class="thumbnail {{#each this.thumbnail.classes}} {{this}} {{/each}}">
+            <noscript>
+              <img
+                src="{{this.thumbnail.src}}"
+                alt="{{this.title}}"
+                class="thumbnail {{#each this.thumbnail.classes}} {{this}} {{/each}}">
+            </noscript>
         {{/if}}
 
         {{#if this.title}}

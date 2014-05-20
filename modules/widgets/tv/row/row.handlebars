@@ -33,6 +33,11 @@
             data-echo="{{this.thumbnail.src}}"
             alt="{{#if thumbnail.alt}}{{thumbnail.alt}}{{else}}{{this.title}}{{/if}}"
           >
+          <noscript>
+            <img
+              src="{{this.thumbnail.src}}"
+              alt="{{#if thumbnail.alt}}{{thumbnail.alt}}{{else}}{{this.title}}{{/if}}">
+          </noscript>
         </div>
 
         {{#if this.meta}}

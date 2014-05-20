@@ -1,5 +1,16 @@
 <div class="widget-hero hero {{#each slim}} {{this}} {{/each}}">
-  <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{background}}" alt="" class="background">
+  <img
+    src="/ui/assets/images/placeholders/blank.gif"
+    data-echo="{{background}}"
+    alt=""
+    class="background">
+
+  <noscript>
+    <img
+      src="{{background}}"
+      alt=""
+      class="background">
+  </noscript>
 
   <div class="slides">
     {{#each slides}}

@@ -1,5 +1,8 @@
 <div class="ticker-item no-border">
   {{#if image}}
   <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{this.image}}">
+  <noscript>
+    <img src="{{this.image}}">
+  </noscript>
   {{/if}}
 </div>

@@ -8,7 +8,15 @@
     <div class="video">
       <div class="wrapper">
         {{#if placeholder}}
-        <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{placeholder.src}}" alt="{{placeholder.alt}}">
+        <img
+          src="/ui/assets/images/placeholders/blank.gif"
+          data-echo="{{placeholder.src}}"
+          alt="{{placeholder.alt}}">
+        <noscript>
+          <img
+            src="{{placeholder.src}}"
+            alt="{{placeholder.alt}}">
+        </noscript>
         {{/if}}
       </div>
     </div>

@@ -1,112 +1,51 @@
 .primary-main,
-
 #primary-main {
-
-  padding: 10px;
-
-  background-color: #ffffff;
-
-  }
-
-
-
-
+    padding: 10px;
+    background-color: #ffffff;
+}
 
 #primary .content {
+    float: none;
+    width: 590px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #ffffff;
+}
 
-  float: none;
-
-  width: 590px;
-
-  margin: 0 auto;
-
-  padding: 0;
-
-  background-color: #ffffff;
-
-  }
-
-
-
-
-
-  .fixed #content {
-
+.fixed #content {
     padding-top: 10px;
-
     padding-right: 318px;
-
     padding-left: 125px;
-
     background: #fff 100% 0;
+}
 
-    }
-
-
-
-
-
-  .fluid #content {
-
+.fluid #content {
     padding-top: 10px;
-
     padding-right: 328px;
-
     padding-left: 125px;
-
     background: #fff 100% 0;
-
-    }
-
-
-
-
+}
 
 .fixed #primary .content,
 
 .fluid #primary .content {
-
     width: auto;
+}
 
-    }
-
-
-
-
-
-  .fixed #content .column,
+.fixed #content .column,
 
   .fluid #content .column {
-
     position: relative;
-
     float: left;
+}
 
-    }
-
-
-
-
-
-  .fixed #main{
-
-  width: 100%;
-
-    }
-
-
-
-
-
-  .fluid #main {
-
+.fixed #main {
     width: 100%;
+}
 
-    }
-
-
-
-
+.fluid #main {
+    width: 100%;
+}
 
 a.arrow-up:hover,
 
@@ -114,11 +53,7 @@ a.arrow-up:active,
 
 a.arrow-down:hover,
 
-a.arrow-down:active{
-
-  color: #14aeee;
-
-  text-decoration: none;
-
-  }
-
+a.arrow-down:active {
+    color: #14aeee;
+    text-decoration: none;
+}

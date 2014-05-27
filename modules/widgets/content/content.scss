@@ -30,6 +30,14 @@ $module: 'article.content';
     float: right;
     margin: 0 0 10px 10px;
   }
+  .float-left {
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+
+  hr {
+    clear: both;
+  }
 
   a {
     color: $colorBlue1;
@@ -100,7 +108,11 @@ $module: 'article.content';
     Overwrites for default restable styles
   */
   .tabletolist {
+    li:before {
+      display: none;
+    }
     > li {
+      margin: 0;
       .titles {
         background-color: $colorBlue1;
       }
@@ -111,6 +123,7 @@ $module: 'article.content';
           width: 100%;
           table-layout: fixed;
           padding: 0;
+          margin: 0;
 
           .row_headers, .row_data {
             display: table-cell;

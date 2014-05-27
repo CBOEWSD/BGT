@@ -43,6 +43,14 @@ button, #{$class} {
     text-decoration: none;
   }
 
+  &.blue {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
   &.green {
     background: $colorGreen1;
     color: #fff;
@@ -74,9 +82,11 @@ button, #{$class} {
 
   &.grey {
     background: lighten($colorGrey1, 30%);
+    color: #fff;
 
     &:hover {
       background: $colorGrey1;
+      color: #fff;
     }
   }
 
@@ -85,6 +95,7 @@ button, #{$class} {
     color: #fff;
 
     &:hover {
+      color: #fff;
       background: lighten($colorRed1, 10%);
     }
   }

@@ -106,3 +106,20 @@ code {
   color: $colorGrey1;
   background: lighten($colorGrey2, 10%);
 }
+
+pre {
+  code {
+    display: block;
+    padding: 10px;
+  }
+}
+
+blockquote {
+  border-left: 3px solid $colorGrey2;
+  background: lighten($colorGrey2, 10%);
+  padding: 1px 1px 1px 20px;
+  color: $colorGrey1;
+  font: {
+    style: italic;
+  }
+}

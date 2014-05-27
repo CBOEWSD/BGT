@@ -1,0 +1,52 @@
+{
+    "slides": [
+        {
+            "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
+            "image": {
+                "src": "/ui/assets/images/featured-products/binary-options.jpg"
+            },
+            "link": {
+                "text": "Learn More",
+                "url": "#"
+            },
+            "text": "Binary Options",
+            "title": "hero/copybased"
+        },
+        {
+            "description": "uisque gravida congue consectetur. Nunc eget tincidunt enim. Mauris laoreet nunc arcu, in vehicula eros posuere a. Suspendisse potenti. Nam sapien lacus, bibendum ut odio auctor, elementum commodo dui.",
+            "image": {
+                "src": "/ui/assets/images/featured-products/binary-options.jpg"
+            },
+            "link": {
+                "text": "Learn More",
+                "url": "#"
+            },
+            "text": "Lorem ipsum dolor",
+            "title": "hero/copybased"
+        },
+        {
+            "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
+            "image": {
+                "src": "/ui/assets/images/featured-products/binary-options.jpg"
+            },
+            "link": {
+                "text": "Learn More",
+                "url": "#"
+            },
+            "text": "Binary Options",
+            "title": "hero/copybased"
+        },
+        {
+            "description": "CBOE Binary Options are contracts that have an \"all-or-nothing\" payout depending on the settlement price of the underlying broad-based index relative to the strike price of the binary option.",
+            "image": {
+                "src": "/ui/assets/images/featured-products/binary-options.jpg"
+            },
+            "link": {
+                "text": "Learn More",
+                "url": "#"
+            },
+            "text": "Binary Options",
+            "title": "hero/copybased"
+        }
+    ]
+}

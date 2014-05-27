@@ -1,0 +1,174 @@
+{
+  "title": {
+    "text": "Table 3",
+    "meta": {
+      "items": [
+        {
+          "content":"Additional Meta Data"
+        }
+      ]
+    }
+  },
+  "classes": [
+    "oddeven",
+    "padvertical",
+    "padhorizontal",
+    "last-right",
+    "inner-cellborders",
+    "light-header",
+    "symbol-list"
+  ],
+  "columns": [
+    {
+      "title": "Symbol",
+      "mobile": true,
+      "mobileonly": true
+    },
+    {
+      "title": "Symbol"
+    },
+    {
+      "title": "Last Sale",
+      "mobile": true
+    },
+    {
+      "title": "Net Change",
+      "mobile": true
+    },
+    {
+      "title": "Time of Last Sale"
+    },
+    {
+      "title": "Size",
+      "mobile": true
+    },
+    {
+      "title": "Open",
+      "mobile": true
+    },
+    {
+      "title": "High"
+    },
+    {
+      "title": "Low"
+    },
+    {
+      "title": "Volume"
+    }
+  ],
+  "rows": [
+    [
+      {
+        "content": "GOOG",
+        "link": {
+          "url": "#"
+        }
+      },{
+        "content": "GOOG (GOOGLE INC (C))",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": 534.63
+      },
+      {
+        "content": -6.32
+      },
+      {
+        "content": "04/11/2014 10:33"
+      },
+      {
+        "content": "1x1"
+      },
+      {
+        "content": 532.55
+      },
+      {
+        "content": 536.75
+      },
+      {
+        "content": 536.75
+      },
+      {
+        "content": 1570269
+      }
+    ],
+    [
+      {
+        "content": "AAPL",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "AAPL (APPLE INC)",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": 519.29
+      },
+      {
+        "content": -4.19
+      },
+      {
+        "content": "04/11/2014 10:33"
+      },
+      {
+        "content": "1x1"
+      },
+      {
+        "content": 519.00
+      },
+      {
+        "content": 522.40
+      },
+      {
+        "content": 517.14
+      },
+      {
+        "content": 2877001
+      }
+    ],
+    [
+      {
+        "content": "BAC",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": "BAC (BANK OF AMERICA CORP NEW)",
+        "link": {
+          "url": "#"
+        }
+      },
+      {
+        "content": 15.925
+      },
+      {
+        "content": -0.195
+      },
+      {
+        "content": "04/11/2014 10:33"
+      },
+      {
+        "content": "204x383"
+      },
+      {
+        "content": 15.86
+      },
+      {
+        "content": 15.95
+      },
+      {
+        "content": 15.62
+      },
+      {
+        "content": 48058378
+      }
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "before": {
+    "widgets/content/content": "row5/form2/before.md"
+  },
+  "body": {
+    "widgets/forms/search-symbol/multiple": ""
+  },
+  "after": {
+    "widgets/content/content": "row5/form1/after.md"
+  }
+}

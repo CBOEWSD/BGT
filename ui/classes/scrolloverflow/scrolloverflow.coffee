@@ -56,6 +56,10 @@ class ScrollOverflow
       $this = $(@)
       $inside = $ '.scrolloverflow-inside', $this
 
+      if $inside.length < 1
+        $this.wrapInner $ '<div class="scrolloverflow-inside" />'
+        $inside = $ '.scrolloverflow-inside', $this
+
       $this.wrapInner '<div class="tse-scrollable"/>'
       $inside.addClass 'tse-content'
       $inside.addClass 'vertical'

@@ -1,0 +1,17 @@
+{
+  "classes": ["slimleft"],
+  "column1": {
+    "modules": [
+      {
+        "widgets/side-navigation/nav": ""
+      }
+    ]
+  },
+  "column2": {
+    "modules": [
+      {
+        "widgets/education-snap/wrap": "row9/edwrap.json"
+      }
+    ]
+  }
+}

@@ -136,6 +136,17 @@ $module: '.wrap-columns-';
         }
       }
     }
+    &.slimleft {
+      .column {
+        &:first-child {
+          width: 32.6%;
+        }
+        &:last-child {
+          // Accounting for additional spacing (15px)
+          width: 66.66666%;
+        }
+      }
+    }
   }
 
   &.three {
@@ -167,7 +178,10 @@ $module: '.wrap-columns-';
     &:first-child {
       border-bottom: none;
       padding: 0;
-      margin-bottom: 0;
+
+      > .widget-title {
+        margin-bottom: -15px;
+      }
 
       &:after { display: none; }
     }

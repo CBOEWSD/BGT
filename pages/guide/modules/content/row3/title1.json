@@ -1,0 +1,37 @@
+{
+  "title": "optionable-title/title",
+  "form": {
+    "action": "#",
+    "button": {
+      "text": "Action"
+    },
+    "items": [
+      {
+        "name": "type",
+        "label": "Option",
+        "options": [
+          {
+            "value": "123",
+            "text": "Options"
+          },
+          {
+            "value": "123",
+            "text": "Option"
+          },
+          {
+            "value": "123",
+            "text": "Option"
+          },
+          {
+            "value": "123",
+            "text": "Option"
+          },
+          {
+            "value": "123",
+            "text": "Option"
+          }
+        ]
+      }
+    ]
+  }
+}

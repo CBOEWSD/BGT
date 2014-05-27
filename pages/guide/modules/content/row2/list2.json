@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "classes": [
+        "focus"
+      ],
+      "link": {
+        "url": "#"
+      },
+      "thumbnail": {
+        "classes": [
+          "hideonmobile"
+        ],
+        "src": "/ui/assets/images/blog/thumb-free-cboe-risk-management.jpg"
+      },
+      "title": "FREE CBOE Risk Management Conference Day 2 Recap"
+    },
+    {
+      "link": {
+        "url": "#"
+      },
+      "title": "CBOE And C2 To List Options On Twitter (TWTR) On November 15"
+    }
+  ],
+  "widget": {
+    "promo": {
+      "class": "optionshub",
+      "url": "#"
+    },
+    "title": "list/simple"
+  }
+}

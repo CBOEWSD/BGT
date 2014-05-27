@@ -1,0 +1,4 @@
+- **Table 3 classes:** `oddeven`, `padvertical`, `padhorizontal`, `last-right`, `inner-cellborder`, `light-header`, `symbol-list`
+- **Table 3 NoMobile Columns:** Symbol
+- **Table 3 OnlyMobile Columns:** Symbol
+- **Table 3 Notes:** Here we switch out the symbol column on mobile to a more condensed version to free up valuable viewport real estate.

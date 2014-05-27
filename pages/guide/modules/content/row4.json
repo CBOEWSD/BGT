@@ -1,0 +1,24 @@
+{
+  "column1": {
+    "modules": [
+      {
+        "widgets/forms/body/body": "row4/form1.json"
+      }
+    ]
+  },
+  "column2": {
+    "modules": [
+      {
+        "widgets/forms/body/body": "row4/form2.json"
+      }
+    ]
+  },
+  "column3": {
+    "modules": [
+      {
+        "widgets/forms/body/body": "row4/form3.json"
+      }
+    ]
+  },
+  "widgetWrapper": true
+}

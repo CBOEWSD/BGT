@@ -120,6 +120,7 @@ $bgcolor: darken($colorGrey2, 9%);
 
               & + span {
                 color: lighten($colorGrey1, 40%);
+                margin-right: 10px;
               }
 
               &:checked + span {

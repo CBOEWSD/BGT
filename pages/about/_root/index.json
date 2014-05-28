@@ -26,7 +26,8 @@
       {
         "_columns/two": {
           "classes": [
-            "slimright"
+            "slimright",
+            "ad"
           ],
           "column1": {
             "modules": [

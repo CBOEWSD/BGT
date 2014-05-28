@@ -368,40 +368,40 @@ $classPrefix: '.icon-';
   }
 
   &.facebook{
-    color: #3a5b9a;
+    color: #3a5b9a !important;
 
     &:before {
       background-position: 0 -459px;
     }
   }
   &.google{
-    color: #0067b8;
+    color: #0067b8 !important;
     &:before {
       background-position: -34px -426px;
     }
   }
   &.twitter{
-    color:#5ea9dd;
+    color: #5ea9dd !important;
 
     &:before {
       background-position: -68px -459px;
     }
   }
   &.linkedin{
-    color: #017bb7;
+    color: #017bb7 !important;
 
     &:before {
       background-position: -68px -426px;
     }
   }
   &.live{
-    color: #ff4325;
+    color: #ff4325 !important;
     &:before {
       background-position: -34px -459px;
     }
   }
   &.yahoo{
-    color: #640f6c;
+    color: #640f6c !important;
 
     &:before {
       background-position: 0 -426px;

@@ -7,7 +7,7 @@
 @import './ui/base/_includes/compass/css3';
 @import './ui/base/_includes/grid';
 
-form {
+form, .form {
 
   fieldset {
     border: none;
@@ -60,7 +60,14 @@ form {
       display: inline-block;
       width: auto;
       vertical-align: middle;
+      @include appearance(none);
+
+      width: 10px; height: 10px;
+      border: 1px solid lighten($colorGrey1, 20%);
+      background: #fff;
+      @include border-radius(2px);
     }
+
     padding: 5px;
     @include border-radius(5px);
   }
@@ -71,6 +78,18 @@ form {
     &.margin-20 {
       margin: 20px 0;
     }
+  }
+
+  input.error, label.error > input {
+    border-color: $colorRed1;
+  }
+
+  label.error {
+    color: $colorRed1;
+  }
+
+  select.error, label.error > select {
+    background-color: $colorRed1;
   }
 
 }

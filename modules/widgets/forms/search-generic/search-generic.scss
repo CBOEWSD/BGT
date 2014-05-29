@@ -1,0 +1,31 @@
+/*
+  Module: Search Generic
+  Description: Generic customizable search form with a single field.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$module: '.search-generic';
+
+#{$module} {
+  input[type="text"] {
+    width: 40%;
+    margin: 0 10px;
+  }
+
+  &.focus {
+    input[type="text"],
+    label {
+      font: {
+        size: 1.1em;
+      }
+    }
+
+    button, input[type="text"] {
+      min-height: 30px;
+      line-height: 30px;
+      vertical-align: middle;
+    }
+  }
+}

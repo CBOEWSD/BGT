@@ -1,0 +1,26 @@
+<form class="search-generic {{#each classes}} {{this}} {{/each}}">
+  <label>
+    {{#if label}}
+      {{{label}}}
+    {{else}}
+      Search word or Phrase:
+    {{/if}}
+    <input
+      type="text"
+      {{#if input.placeholder}}
+        placeholder="{{input.placeholder}}"
+      {{else}}
+        placeholder="Enter a new topic"
+      {{/if}}
+      class="{{#each input.classes}} {{this}} {{/each}}"
+    >
+
+    <button class="{{#each button.classes}} {{this}} {{/each}}">
+      {{#if button.text}}
+        {{button.text}}
+      {{else}}
+        Search News
+      {{/if}}
+    </button>
+  </label>
+</form>

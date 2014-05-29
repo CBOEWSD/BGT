@@ -107,6 +107,10 @@ $module: '.form-wrapped';
     }
   }
 
+  &.noradius {
+    @include border-radius(0);
+  }
+
   @media all and (max-width: $screenSmallMax) {
     .columns {
       display: block;

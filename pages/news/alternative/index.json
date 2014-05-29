@@ -26,6 +26,19 @@
       },
       {
         "widgets/hero/w-ad/side-image": "hero.json"
+      },
+      {
+        "widgets/forms/wrapped/wrapped": {
+          "classes": [
+            "noradius",
+            "text-center"
+          ],
+          "form": {
+            "widgets/forms/search-generic/form": {
+              "classes": ["focus"]
+            }
+          }
+        }
       }
     ],
     "col1": [

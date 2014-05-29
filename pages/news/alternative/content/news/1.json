@@ -1,0 +1,24 @@
+{
+  "widget": {
+    "classes": [
+      "subwidget"
+    ],
+    "title": "Options Hub"
+  },
+  "items": [
+    {
+      "link": {
+        "url": "#"
+      },
+      "thumbnail": {
+        "src": "/ui/assets/images/news/futures.jpg",
+        "classes": [
+          "hideonmobile"
+        ]
+      },
+      "title": "CBOE Futures Exchange Announces Launch Data For CBOE Short-Term VIX Futures With Weekly Expirations",
+      "meta": "Chicago, Jan. 30, 2014",
+      "description": "CBOE Futures Exchange, LLC (CFE&regi;) accounded today that it plans to launch trading of futures with weekly expirations on the new CBOE Short-Term Volatility Index SM (ticker symbol: VXSTSM) on February 13, pending regulatory review."
+    }
+  ]
+}

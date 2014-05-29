@@ -146,6 +146,16 @@ $module: '.widget-tv.row';
     }
   }
 
+  &.stack {
+    .items {
+      .item {
+        display: block;
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
   .showWithAll {
     display: none;
     clear: both;

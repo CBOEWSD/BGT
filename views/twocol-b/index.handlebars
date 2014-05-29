@@ -25,32 +25,63 @@
 
       <div class="two-col-body">
 
-        <div class="col1">
-          {{#each col1}}
-            {{{this}}}
-          {{/each}}
-        </div>
+        {{#if flipColumns}}
 
-        <div class="col2">
-          {{#each col2}}
-            {{{this}}}
-          {{/each}}
-        </div>
+          {{#if col2}}
+            <div class="col2">
+              {{#each col2}}
+                {{{this}}}
+              {{/each}}
+            </div>
+          {{/if}}
+
+          {{#if col1}}
+            <div class="col1">
+              {{#each col1}}
+                {{{this}}}
+              {{/each}}
+            </div>
+          {{/if}}
+
+        {{else}}
+
+          {{#if col1}}
+            <div class="col1">
+              {{#each col1}}
+                {{{this}}}
+              {{/each}}
+            </div>
+          {{/if}}
+
+          {{#if col2}}
+            <div class="col2">
+              {{#each col2}}
+                {{{this}}}
+              {{/each}}
+            </div>
+          {{/if}}
+
+        {{/if}}
+
       </div>
 
-      <div class="afterRow">
-        {{#each afterRow}}
+      {{#if afterRow}}
+        <div class="afterRow">
+          {{#each afterRow}}
+            {{{this}}}
+          {{/each}}
+        </div>
+      {{/if}}
+
+    </section>
+
+    {{#if bottomspan}}
+      <section class="bottomspan">
+        {{#each bottomspan}}
           {{{this}}}
         {{/each}}
-      </div>
-
-    </section>
-
-    <section class="bottomspan">
-      {{#each bottomspan}}
-        {{{this}}}
-      {{/each}}
-    </section>
+      </section>
+    {{/if}}
 
   </div>
 </div>

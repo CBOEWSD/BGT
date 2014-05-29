@@ -1,0 +1,30 @@
+{
+  "levels": [
+    {
+      "link": {
+        "text": "News",
+        "url": "#"
+      },
+      "children": [
+        {
+          "link": {
+            "text": "SubPage",
+            "url": "#"
+          }
+        },
+        {
+          "link": {
+            "text": "SubPage",
+            "url": "#"
+          }
+        },
+        {
+          "link": {
+            "text": "SubPage",
+            "url": "#"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,27 +1,28 @@
 
-<div class="widget-tv row"
+<div class="widget-tv row {{#each classes}} {{this}} {{/each}}"
   data-subscribe="{{subscribe}}"
   {{#if activeStates}}data-activestates="true"{{/if}}>
-  <div class="title">
-    {{#if title}}
-    <h2>
-      {{{title}}}
 
-      {{#if total}}
-        <span>
-          ({{{total}}})
-        </span>
+  {{#if title}}
+    <div class="title">
+      <h2>
+        {{{title}}}
+
+        {{#if total}}
+          <span>
+            ({{{total}}})
+          </span>
+        {{/if}}
+      </h2>
+
+      {{#if viewall}}
+      <a href="{{viewall.href}}" class="viewall button">
+        <!--{{{viewall.text}}}-->
+        Expand
+      </a>
       {{/if}}
-    </h2>
-    {{/if}}
-
-    {{#if viewall}}
-    <a href="{{viewall.href}}" class="viewall button">
-      <!--{{{viewall.text}}}-->
-      Expand
-    </a>
-    {{/if}}
-  </div>
+    </div>
+  {{/if}}
 
   <div class="items">
     {{#each items}}

@@ -1,27 +1,33 @@
 {
-    "view": "twocol",
-    "title": "Register",
-    "meta": {
-        "keywords": "some, keywords",
-        "description": "This is a description"
-    },
-    "placeholders": {
-        "topspan": [{
-            "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-        }, {
-            "widgets/loginspan/span": ""
-        }],
-
-        "col1": [{
-            "widgets/forms/body/body": "login/component.json"
-        }],
-
-        "col2": [{
-            "widgets/forms/body/body": "register/component.json"
-        }],
-
-        "bottomspan": [{
-            "widgets/widget": "bottomspan/widget.json"
-        }]
-    }
+  "meta": {
+    "description": "This is a description",
+    "keywords": "some, keywords"
+  },
+  "placeholders": {
+    "bottomspan": [
+      {
+        "widgets/widget": "bottomspan/widget.json"
+      }
+    ],
+    "col1": [
+      {
+        "widgets/forms/body/body": "register/component.json"
+      }
+    ],
+    "col2": [
+      {
+        "widgets/content/content": "signup.md"
+      }
+    ],
+    "topspan": [
+      {
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+      },
+      {
+        "widgets/loginspan/span": ""
+      }
+    ]
+  },
+  "title": "Register",
+  "view": "twocol"
 }

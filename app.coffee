@@ -211,5 +211,5 @@ hbs.loadPartials (err,partials) ->
     console.log 'Server listening on port ' + app.get('port')
 
   # Start Socket listening
-  twitterSocket server
+  # twitterSocket server
 

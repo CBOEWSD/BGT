@@ -20,7 +20,6 @@
     "glob": "~3.2.7",
     "express-minify": "0.0.7",
     "socket.io": "~0.9.16",
-    "twitter": "~0.2.5",
     "connect-assetmanager": "0.0.28",
     "coffee-script": "~1.6.3",
     "uglify-js": "~2.4.11",
@@ -28,7 +27,8 @@
     "mkdirp": "~0.3.5",
     "url": "~0.7.9",
     "colors": "~0.6.2",
-    "newrelic": "~1.3.2"
+    "newrelic": "~1.3.2",
+    "twitter": "^0.2.9"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -50,6 +50,7 @@
     "grunt-prettify": "~0.3.4",
     "grunt-docco-xt": "~0.1.2",
     "grunt-express-server": "~0.4.13",
-    "grunt-gremlins": "0.0.3"
+    "grunt-gremlins": "0.0.3",
+    "phantom": "^0.6.3"
   }
 }

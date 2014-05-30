@@ -1,6 +1,6 @@
 {spawn} = require('child_process')
 Phantom = require('phantom')
-Save = require('./save')(__dirname + '/../../__static/')
+Save = require('./save')(__dirname + '/../../_static/')
 
 # Spawn new process for application server
 #Server = spawn('coffee', ['app.coffee'])

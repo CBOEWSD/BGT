@@ -1,0 +1,63 @@
+{
+  "view": "twocol-b",
+  "title": "Search Landing",
+  "meta": {
+    "keywords": "some, keywords",
+    "description": "This is a description"
+  },
+  "flipColumns": true,
+  "placeholders": {
+    "topspan": [
+      {
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+      }
+    ],
+    "beforeRow": [
+      {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "CBOE News",
+            "promo": {
+              "class": "tradestation",
+              "url": "#"
+            }
+          }
+        }
+      },
+      {
+        "widgets/hero/w-ad/side-image": "hero.json"
+      },
+      {
+        "widgets/forms/wrapped/wrapped": {
+          "classes": [
+            "noradius",
+            "text-center"
+          ],
+          "form": {
+            "widgets/forms/search-generic/form": {
+              "classes": ["focus"]
+            }
+          }
+        }
+      }
+    ],
+    "col1": [
+      {
+        "ads/tall/tall": ""
+      }
+    ],
+    "col2": [
+      {
+        "widgets/results/results": "results.json"
+      },
+      {
+        "widgets/pagination/pagination": "results.json"
+      }
+    ],
+    "bottomspan": [
+      {
+        "widgets/widget": "bottomspan/widget.json"
+      }
+    ]
+  }
+}

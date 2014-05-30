@@ -1,34 +1,30 @@
 {
+  "view": "twocol",
+  "title": "myCBOE Settings",
   "meta": {
-    "description": "This is a description",
-    "keywords": "some, keywords"
+    "keywords": "some, keywords",
+    "description": "This is a description"
   },
-  "loggedin": true,
   "placeholders": {
-    "bottomspan": [
+    "topspan": [
       {
-        "widgets/widget": "bottomspan/widget.json"
+        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
       }
     ],
     "col1": [
       {
-        "widgets/forms/body/body": "login/component.json"
+        "widgets/forms/body/body": "subscriptions/component.json"
       }
     ],
     "col2": [
       {
-        "widgets/forms/body/body": "thanks/component.json"
+        "widgets/content/content": "signup.md"
       }
     ],
-    "topspan": [
+    "bottomspan": [
       {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-      },
-      {
-        "widgets/loginspan/span": ""
+        "widgets/widget": "bottomspan/widget.json"
       }
     ]
-  },
-  "title": "Thank you!",
-  "view": "twocol"
+  }
 }

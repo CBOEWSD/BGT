@@ -2,7 +2,7 @@
 	Class: Buttons
 	Description: Buttons class to be used globally and extended from.
 */
-button, .button {
+button, a.button, .button {
   background: #135fad;
   display: inline-block;
   -webkit-border-radius: 3px;
@@ -21,44 +21,51 @@ button, .button {
   -ms-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   -o-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1); }
-  button:hover, .button:hover {
+  button:hover, a.button:hover, .button:hover {
     color: white; }
-  button a, .button a {
+  button a, a.button a, .button a {
     color: white !important;
     font-weight: 700;
     display: inline-block;
     margin: -5px -20px;
     padding: 5px 20px; }
-  button:hover, .button:hover {
+  button:hover, a.button:hover, .button:hover {
     background: #1879db;
     text-decoration: none; }
-  button.green, .button.green {
+  button.blue, a.button.blue, .button.blue {
+    color: white; }
+    button.blue:hover, a.button.blue:hover, .button.blue:hover {
+      color: white; }
+  button.green, a.button.green, .button.green {
     background: #21a825;
     color: white; }
-    button.green:hover, .button.green:hover {
+    button.green:hover, a.button.green:hover, .button.green:hover {
       color: white;
       background: #29d32c; }
-  button.darkGrey, .button.darkGrey {
+  button.darkGrey, a.button.darkGrey, .button.darkGrey {
     background: #363a3d;
     color: white; }
-    button.darkGrey:hover, .button.darkGrey:hover {
+    button.darkGrey:hover, a.button.darkGrey:hover, .button.darkGrey:hover {
       color: white;
       background: #494f53; }
-  button.white, .button.white {
+  button.white, a.button.white, .button.white {
     background: white;
     color: #135fad; }
-    button.white:hover, .button.white:hover {
+    button.white:hover, a.button.white:hover, .button.white:hover {
       background: #e6e6e6; }
-  button.grey, .button.grey {
-    background: #798289; }
-    button.grey:hover, .button.grey:hover {
-      background: #313538; }
-  button.red, .button.red {
+  button.grey, a.button.grey, .button.grey {
+    background: #798289;
+    color: white; }
+    button.grey:hover, a.button.grey:hover, .button.grey:hover {
+      background: #313538;
+      color: white; }
+  button.red, a.button.red, .button.red {
     background: #b7120b;
     color: white; }
-    button.red:hover, .button.red:hover {
+    button.red:hover, a.button.red:hover, .button.red:hover {
+      color: white;
       background: #e7150e; }
-  button.grey-grad, .button.grey-grad {
+  button.grey-grad, a.button.grey-grad, .button.grey-grad {
     border: #dddddd;
     background: #efefef;
     /* Old browsers */
@@ -79,7 +86,7 @@ button, .button {
     /* IE6-8 */
     color: #313538;
     border: 1px solid #dddddd; }
-    button.grey-grad:hover, .button.grey-grad:hover {
+    button.grey-grad:hover, a.button.grey-grad:hover, .button.grey-grad:hover {
       background: #dbdbdb;
       /* Old browsers */
       /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -98,7 +105,7 @@ button, .button {
       /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 );
       /* IE6-8 */ }
-    button.grey-grad:active, .button.grey-grad:active {
+    button.grey-grad:active, a.button.grey-grad:active, .button.grey-grad:active {
       background: white;
       /* Old browsers */
       /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -117,8 +124,8 @@ button, .button {
       /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#ffffff',GradientType=0 );
       /* IE6-8 */ }
-  button.large, .button.large {
+  button.large, a.button.large, .button.large {
     font-size: 1.2em;
     padding: 10px 30px; }
-  button.notbold, .button.notbold {
+  button.notbold, a.button.notbold, .button.notbold {
     font-weight: 400; }

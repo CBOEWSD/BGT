@@ -17,6 +17,11 @@ article.content {
   article.content .float-right {
     float: right;
     margin: 0 0 10px 10px; }
+  article.content .float-left {
+    float: left;
+    margin: 0 10px 10px 0; }
+  article.content hr {
+    clear: both; }
   article.content a {
     color: #135fad; }
     article.content a:hover, article.content a:active {
@@ -50,23 +55,28 @@ article.content {
           background: #3dd93f; }
       article.content table tbody tr:nth-child(odd) {
         background: #e0e0e0; }
-  article.content .tabletolist > li .titles {
-    background-color: #135fad; }
-  article.content .tabletolist > li ul > li {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    padding: 0; }
-    article.content .tabletolist > li ul > li .row_headers, article.content .tabletolist > li ul > li .row_data {
-      display: table-cell;
-      width: 50%;
-      float: none;
-      padding: 10px; }
-    article.content .tabletolist > li ul > li .row_headers {
-      background-color: #21a825;
-      color: white;
-      font-weight: 700;
-      text-transform: uppercase; }
+  article.content .tabletolist li:before {
+    display: none; }
+  article.content .tabletolist > li {
+    margin: 0; }
+    article.content .tabletolist > li .titles {
+      background-color: #135fad; }
+    article.content .tabletolist > li ul > li {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      padding: 0;
+      margin: 0; }
+      article.content .tabletolist > li ul > li .row_headers, article.content .tabletolist > li ul > li .row_data {
+        display: table-cell;
+        width: 50%;
+        float: none;
+        padding: 10px; }
+      article.content .tabletolist > li ul > li .row_headers {
+        background-color: #21a825;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase; }
   article.content ul {
     list-style: none; }
     article.content ul li {

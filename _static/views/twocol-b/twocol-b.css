@@ -67,10 +67,12 @@
         padding: 0 15px;
         width: 100%; }
       .view-twocolB .main .two-col-body .col1 {
-        width: 250px; }
+        width: 200px; }
+  .view-twocolB.col1-300 .main .two-col-body .col1 {
+    width: 300px; }
   @media screen and (max-width: 950px) {
     .view-twocolB .main .two-col-body .col1 {
-      width: 210px; } }
+      width: 200px; } }
   @media screen and (max-width: 767px) {
     .view-twocolB .main > div:first-child {
       margin-top: 0; }

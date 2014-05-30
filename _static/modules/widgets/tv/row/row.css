@@ -112,6 +112,10 @@
       .widget-tv.row .items .item img {
         max-height: 220px;
         background: #f7f7f7; }
+  .widget-tv.row.stack .items .item {
+    display: block;
+    width: 100%;
+    padding: 0; }
   .widget-tv.row .showWithAll {
     display: none;
     clear: both; }

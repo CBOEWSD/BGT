@@ -145,7 +145,7 @@ small {
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
 sub, sup {
-  font-size: 75%;
+  font-size: 60%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
@@ -419,3 +419,25 @@ a {
     width: 50%;
     vertical-align: top;
     padding: 0 3%; }
+
+code {
+  border: 1px solid #dddddd;
+  padding: 0 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  color: #313538;
+  background: #f7f7f7; }
+
+pre code {
+  display: block;
+  padding: 10px; }
+
+blockquote {
+  border-left: 3px solid #dddddd;
+  background: #f7f7f7;
+  padding: 1px 1px 1px 20px;
+  color: #313538;
+  font-style: italic; }

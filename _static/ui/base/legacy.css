@@ -37,3 +37,145 @@
 a.arrow-up:hover, a.arrow-up:active, a.arrow-down:hover, a.arrow-down:active {
   color: #14aeee;
   text-decoration: none; }
+
+/*
+  Module: mktstat Block
+  Description: A mktstat block holder using an article node.
+*/
+article.mktstat {
+  word-wrap: break-word;
+  /*
+    Overwrites for default restable styles
+  */ }
+
+article.mktstat a {
+  color: #135fad; }
+
+article.mktstat a:hover, article.mktstat a:active {
+  color: #313538; }
+
+article.mktstat a img {
+  padding-bottom: 1px;
+  border-bottom: 4px solid #12b7ed; }
+
+article.mktstat .float-left {
+  float: left;
+  margin: 0 0 0px 10px; }
+
+article.mktstat .float-right {
+  float: right;
+  margin: 0 10px 0px 0px; }
+
+article.mktstat .ratios {
+  float: left;
+  margin: 10px; }
+
+article.mktstat .overview {
+  margin: 10px 0; }
+
+article.mktstat .dark-row {
+  margin: 10px 0; }
+
+article.mktstat .dark-row2 {
+  margin: 10px 0; }
+
+article.mktstat table {
+  width: 100%;
+  margin: 25px 0;
+  font-weight: 700; }
+
+article.mktstat table thead {
+  background: #135fad;
+  color: 0; }
+
+article.mktstat table thead tr th {
+  padding: 8px 0;
+  text-transform: uppercase; }
+
+article.mktstat table thead tr th:first-child {
+  border-right: 1px solid white; }
+
+article.mktstat table tbody tr {
+  border-top: 1px solid white; }
+
+article.mktstat table tbody tr td {
+  padding: 8px 2px;
+  text-align: center;
+  border-left: 1px solid white; }
+
+article.mktstat table tbody tr td:first-child {
+  background: #e0e0e0;
+  color: black;
+  text-transform: uppercase;
+  border-left: none; }
+
+article.mktstat table tbody tr:nth-child(even) {
+  background: #efefef; }
+
+article.mktstat table tbody tr:nth-child(even) td:first-child {
+  background: #efefef; }
+
+article.mktstat table tbody tr:nth-child(odd) {
+  background: #e0e0e0; }
+
+article.mktstat .tabletolist > li .titles {
+  background-color: #135fad; }
+
+article.mktstat .tabletolist > li ul > li {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  padding: 0; }
+
+article.mktstat .tabletolist > li ul > li .row_headers, article.mktstat .tabletolist > li ul > li .row_data {
+  display: table-cell;
+  width: 50%;
+  float: none;
+  padding: 10px; }
+
+article.mktstat .tabletolist > li ul > li .row_headers {
+  background-color: #21a825;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+article.mktstat ul {
+  list-style: none; }
+
+article.mktstat ul li {
+  margin: 5px 0;
+  position: relative; }
+
+article.mktstat ul li:before {
+  mktstat: '\2022 ';
+  color: #21a825;
+  position: absolute;
+  left: -15px;
+  top: 0;
+  font-size: 2em;
+  line-height: 15px; }
+
+article.mktstat h1 a, article.mktstat h2 a, article.mktstat h3 a, article.mktstat h4 a {
+  display: block; }
+
+article.mktstat h1 a:after, article.mktstat h2 a:after, article.mktstat h3 a:after, article.mktstat h4 a:after {
+  display: inline-block;
+  mktstat: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 4px 0 4px 8px;
+  border-color: transparent transparent transparent #313538;
+  vertical-align: middle;
+  margin: -3px 0 0 7px; }
+
+@media screen and (max-width: 950px) {
+  article.mktstat .float-right.advert {
+    width: 50%; }
+  article.mktstat .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0; }
+  article.mktstat .button a {
+    display: block; } }

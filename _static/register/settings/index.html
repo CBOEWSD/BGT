@@ -32,6 +32,8 @@
         <link href='/ui/classes/forms/form.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/ui/classes/hideon/hideon.css' media='all' rel='stylesheet'
         type='text/css'>
+        <link href='/ui/classes/highlight/highlight.css' media='all' rel='stylesheet'
+        type='text/css'>
         <link href='/ui/classes/icons/icons.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/ui/classes/list/list.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/ui/classes/numeric-color/numericcolor.css' media='all' rel='stylesheet'
@@ -79,6 +81,8 @@
         type='text/css'>
         <link href='/modules/widgets/forms/body/body.css' media='all' rel='stylesheet'
         type='text/css'>
+        <link href='/modules/widgets/forms/search-generic/search-generic.css' media='all'
+        rel='stylesheet' type='text/css'>
         <link href='/modules/widgets/forms/weeklys/weeklys.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/modules/widgets/forms/wrapped/wrapped.css' media='all' rel='stylesheet'
@@ -151,6 +155,9 @@
                     <div class="hideonmobile">
                         <a href="#">
                             <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-2.jpg">
+                            <noscript>
+                                <img src="/ui/assets/images/placeholders/advert-2.jpg">
+                            </noscript>
                         </a>
                     </div>
                     <!-- /END Desktop ad placeholder -->
@@ -158,6 +165,9 @@
                     <div class="hideondesktop">
                         <a href="#">
                             <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-4.jpg">
+                            <noscript>
+                                <img src="/ui/assets/images/placeholders/advert-4.jpg">
+                            </noscript>
                         </a>
                     </div>
                     <!-- /END Mobile ad placeholder -->
@@ -637,7 +647,7 @@
                                             <label class="column">
                                                 <span class="text-red">*</span>
                                                 Address 2:
-                                                <input type="text" name="fname">
+                                                <input type="text" name="fname" class="error">
                                             </label>
                                             <label class="column">
                                                 <span class="text-red">*</span>
@@ -672,13 +682,13 @@
                                                 Phone:
                                                 <input type="text" name="fname">
                                             </label>
-                                            <label class="column">
+                                            <label class="column error">
                                                 Phone Ext:
                                                 <input type="text" name="fname">
                                             </label>
                                         </div>
                                         <div class="columns nopadding fourth-width">
-                                            <label class="column">
+                                            <label class="column error">
                                                 Investor Type:
                                                 <select name="invtype">
                                                     <option>Default</option>
@@ -694,11 +704,11 @@
                                             CBOE Special Updates and Offers
                                         </h5>
                                         <label class="checkbox column">
-                                            <input type="checkbox" name="option">Yes, I would like to receive e-mail
+                                            <input type="checkbox" name="option" class="error">Yes, I would like to receive e-mail
                                             updates from CBOE.com with tips, offers
                                             and new product features.
                                         </label>
-                                        <label class="checkbox column">
+                                        <label class="checkbox column error">
                                             <input type="checkbox" name="option">Yes, I'd like to receive news, updates,
                                             and special offers from CBOE, its partners
                                             and affiliates via e-mail.
@@ -805,8 +815,11 @@
                             <div class="ad">
                                 <div class="advert 300" style="text-align: center">
                                     <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-1.jpg"
-                                    alt="" class="background" style="display: inline-block; margin: 10px 0;"
-                                    width="300" height="250">
+                                    alt="" class="background" style="display: inline-block; margin: 10px 0;">
+                                    <noscript>
+                                        <img src="/ui/assets/images/placeholders/advert-1.jpg" alt="" class="background"
+                                        style="display: inline-block; margin: 10px 0;">
+                                    </noscript>
                                 </div>
                             </div>
                         </div>
@@ -966,6 +979,7 @@
         <script src='/ui/base/handlers/query2object.init.js'></script>
         <script src='/ui/base/handlers/rows.init.js'></script>
         <script src='/ui/classes/collapse/collapse.init.js'></script>
+        <script src='/ui/classes/highlight/highlight.init.js'></script>
         <script src='/ui/classes/lazyload/lazy.init.js'></script>
         <script src='/ui/classes/numeric-color/numericColor.init.js'></script>
         <script src='/ui/classes/scrolloverflow/scrolloverflow.init.js'></script>

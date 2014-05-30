@@ -1,0 +1,13 @@
+/*
+  Module: Search Generic
+  Description: Generic customizable search form with a single field.
+*/
+.search-generic input[type="text"] {
+  width: 40%;
+  margin: 0 10px; }
+.search-generic.focus input[type="text"], .search-generic.focus label {
+  font-size: 1.1em; }
+.search-generic.focus button, .search-generic.focus input[type="text"] {
+  min-height: 30px;
+  line-height: 30px;
+  vertical-align: middle; }

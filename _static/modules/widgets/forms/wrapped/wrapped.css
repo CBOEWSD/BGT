@@ -64,6 +64,12 @@
     color: white; }
     .form-wrapped.blue h3 {
       color: white; }
+  .form-wrapped.noradius {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0; }
   @media all and (max-width: 767px) {
     .form-wrapped .columns {
       display: block;

@@ -76,6 +76,14 @@
     width: 66.66666%; }
   .wrap-columns-inner.two.slimright .column:last-child {
     width: 32.6%; }
+  .wrap-columns-inner.two.slimright.ad .column:last-child {
+    width: 310px; }
+  .wrap-columns-inner.two.slimleft .column:first-child {
+    width: 32.6%; }
+  .wrap-columns-inner.two.slimleft .column:last-child {
+    width: 66.66666%; }
+  .wrap-columns-inner.two.slimleft.ad .column:first-child {
+    width: 310px; }
   .wrap-columns-inner.three .column {
     width: 33.3333%; }
   .wrap-columns-inner .component {
@@ -97,8 +105,9 @@
         display: none; }
     .wrap-columns-inner .component:first-child {
       border-bottom: none;
-      padding: 0;
-      margin-bottom: 0; }
+      padding: 0; }
+      .wrap-columns-inner .component:first-child > .widget-title {
+        margin-bottom: -15px; }
       .wrap-columns-inner .component:first-child:after {
         display: none; }
     .wrap-columns-inner .component > div, .wrap-columns-inner .component > section, .wrap-columns-inner .component > article {

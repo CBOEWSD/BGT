@@ -79,7 +79,8 @@
         .filter > ul > li ul li a input, .filter > ul > li ul li label input {
           margin-top: -7px; }
           .filter > ul > li ul li a input + span, .filter > ul > li ul li label input + span {
-            color: #949ca1; }
+            color: #949ca1;
+            margin-right: 10px; }
           .filter > ul > li ul li a input:checked + span, .filter > ul > li ul li label input:checked + span {
             color: #313538; }
         .filter > ul > li ul li a .total, .filter > ul > li ul li label .total {

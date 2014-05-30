@@ -1,0 +1,14 @@
+/*
+  Class: Highlight
+  Description: Word or phrase highlighting.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+
+$class: '.highlight-word';
+
+#{$class} {
+  background: #fff863;
+  padding: 0 2px;
+}

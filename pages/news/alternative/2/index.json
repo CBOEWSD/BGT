@@ -35,7 +35,10 @@
           ],
           "form": {
             "widgets/forms/search-generic/form": {
-              "classes": ["focus"]
+              "classes": ["focus"],
+              "input": {
+                "value": "Events"
+              }
             }
           }
         }

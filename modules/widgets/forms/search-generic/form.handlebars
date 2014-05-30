@@ -13,6 +13,9 @@
         placeholder="Enter a new topic"
       {{/if}}
       class="{{#each input.classes}} {{this}} {{/each}}"
+      {{#if input.value}}
+      value="{{input.value}}"
+      {{/if}}
     >
 
     <button class="{{#each button.classes}} {{this}} {{/each}}">

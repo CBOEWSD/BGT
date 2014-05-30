@@ -1,4 +1,10 @@
-<section class="results">
+<section
+  class="results"
+  {{#if keywords}}
+    data-highlight='[{{#each keywords}}"{{this}}"{{#unless @last}},{{/unless}}{{/each}}]'
+    data-highlight-target=".result"
+  {{/if}}
+>
 
   <div class="title">
     <h2>

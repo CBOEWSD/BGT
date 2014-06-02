@@ -44,6 +44,23 @@
       },
       {
         "widgets/quote-overview/overview": "row1/overview/component.json"
+      },
+      {
+        "widgets/widget-title": {
+          "widget": {
+            "title": "sidebar/filter/filter",
+            "promo": {
+              "url": "#",
+              "text": "Callout",
+              "classes": [
+                "button blue"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "widgets/sidebar/filter/filter": "row1/filter.json"
       }
     ]
   }

@@ -1,0 +1,30 @@
+{
+  "classes": ["hideonmobile"],
+  "filters": [
+    {
+      "title": "Education",
+      "total": 12,
+      "items": [
+        {
+          "title": "Education: Basic",
+          "total": 6,
+          "url": "#"
+        },
+        {
+          "title": "Education: Intermediate",
+          "total": 4,
+          "url": "#"
+        },
+        {
+          "title": "Education: Advanced",
+          "total": 2,
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "title": "Options Safari",
+      "total": 12
+    }
+  ]
+}

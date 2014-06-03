@@ -22,7 +22,7 @@ $module: '.forms.weeklys';
     margin-bottom: 10px;
   }
 
-  form {
+  div {
     display: table;
     width: 100%;
     table-layout: fixed;
@@ -44,7 +44,7 @@ $module: '.forms.weeklys';
   }
 
   @media screen and (max-width: 950px) {
-    form {
+    div {
       display: block;
 
       .col {

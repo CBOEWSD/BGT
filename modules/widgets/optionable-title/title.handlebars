@@ -6,7 +6,7 @@
   </div>
 
   {{#if form}}
-    <form
+    <section
       class="form-component {{#each form.classes}} {{this}} {{/each}}"
       action="{{form.action}}">
         {{#each form.items}}
@@ -31,7 +31,7 @@
             {{form.button.text}}
           </button>
         {{/if}}
-    </form>
+    </section>
   {{/if}}
   {{#each summary}}
     {{> widgets/quote-overview/summary}}

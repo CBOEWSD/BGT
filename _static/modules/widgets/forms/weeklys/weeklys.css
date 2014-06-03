@@ -49,28 +49,28 @@
   .forms.weeklys h3 {
     margin-top: 0;
     margin-bottom: 10px; }
-  .forms.weeklys form {
+  .forms.weeklys div {
     display: table;
     width: 100%;
     table-layout: fixed; }
-    .forms.weeklys form .col {
+    .forms.weeklys div .col {
       display: table-cell;
       width: 80px;
       padding: 0 10px; }
-      .forms.weeklys form .col:first-child {
+      .forms.weeklys div .col:first-child {
         width: auto;
         padding: 0 0; }
-      .forms.weeklys form .col input {
+      .forms.weeklys div .col input {
         width: 100%; }
   @media screen and (max-width: 950px) {
-    .forms.weeklys form {
+    .forms.weeklys div {
       display: block; }
-      .forms.weeklys form .col {
+      .forms.weeklys div .col {
         display: inline-block;
         width: 49%;
         padding: 0; }
-        .forms.weeklys form .col:first-child {
+        .forms.weeklys div .col:first-child {
           width: 100%;
           margin-bottom: 5px; }
-        .forms.weeklys form .col button {
+        .forms.weeklys div .col button {
           width: 100%; } }

@@ -60,7 +60,7 @@
     .education-snapshot .title-bar h2 {
       margin: 0;
       font-weight: 400; }
-    .education-snapshot .title-bar .logout {
+    .education-snapshot .title-bar .account a {
       position: absolute;
       right: 10px;
       top: 10px;

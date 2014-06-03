@@ -224,7 +224,7 @@
                     </a>
                 </h2>
                 <div class="right">
-                    <form class="quicksearch">
+                    <section class="quicksearch">
                         <!--<input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
   <button type="submit" class="button">Search</button>-->
                         <script>
@@ -243,7 +243,7 @@
                         })();
                         </script>
                         <gcse:search></gcse:search>
-                    </form>
+                    </section>
                 </div>
             </div>
         </header>
@@ -260,6 +260,23 @@
                                     <a href="http://www.google.com">
                                         Media Hub
                                     </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -519,6 +536,26 @@
                         Advisors
                     </a>
                 </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE C2
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Futures Exchange
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Stock Exchange
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Permit Holders
+                    </a>
+                </li>
                 <li class="social">
                     <a href="#">
                         <span class="icon-social twitter">
@@ -669,9 +706,11 @@
                                 <h2>
                                     Your Education Snapshot:
                                 </h2>
-                                <a href="#" class="logout icon-before lock">
-                                    Log Out
-                                </a>
+                                <div class="account">
+                                    <a href="#" class="icon-before lock">
+                                        Log In
+                                    </a>
+                                </div>
                             </div>
                             <div class="inRow">
                                 <div class="mainCol">
@@ -679,12 +718,12 @@
                                         <h3>
                                             Current level: Beginner
                                             <span class="percent">
-                                                25%
+                                                0%
                                             </span>
                                         </h3>
                                         <div class="bar-wrap">
                                             <div class="bar">
-                                                <div class="prog" style="width: 25%"></div>
+                                                <div class="prog" style="width: 0%"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -692,13 +731,13 @@
                                         <h4>Next Steps:</h4>
                                         <ul>
                                             <li>
-                                                <a href="#" class=" icon-before  transcript ">
-                                                    View Transcripts
+                                                <a href="#" class=" icon-before  register ">
+                                                    Login / Register
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class=" icon-before  book ">
-                                                    Access Your Courses
+                                                <a href="#" class=" icon-before  assessment ">
+                                                    Take Assessment
                                                 </a>
                                             </li>
                                         </ul>
@@ -830,12 +869,33 @@
                                         (201)
                                     </span>
                                 </h2>
-                                <a href="#" class="viewall button">
-                                    <!--View All-->
-                                    Expand
+                                <a href="#" class="viewall ">
+                                    View All
                                 </a>
                             </div>
                             <div class="items">
+                                <div class="item ">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/videos/singlevid.jpg"
+                                            alt="Blogging Options: CBOE Morning Update 10.2.13">
+                                            <noscript>
+                                                <img src="/ui/assets/images/videos/singlevid.jpg" alt="Blogging Options: CBOE Morning Update 10.2.13">
+                                            </noscript>
+                                        </div>
+                                        <div class="meta">
+                                            <span class="icon-meta views">
+                                                10,572
+                                            </span>
+                                            <span class="icon-meta likes">
+                                                407
+                                            </span>
+                                        </div>
+                                        <h3>
+                                            Blogging Options: CBOE Morning Update 10.2.13
+                                        </h3>
+                                    </a>
+                                </div>
                                 <div class="item ">
                                     <a href="#">
                                         <div class="image">
@@ -1499,24 +1559,6 @@
                 </div>
             </div>
         </footer>
-        <!-- START - Load Qunit tests when required -->
-        <script>
-        (function()
-        {
-            var url = window.location.href,
-                test = (url.indexOf('#test=on') !== -1) ? true : false;
-            if (test)
-            {
-                document.write(
-                    '<script src="http://code.jquery.com/qunit/qunit-1.12.0.js"\></script\>'
-                );
-                document.write(
-                    '<link href="http://code.jquery.com/qunit/qunit-1.12.0.css" media="all" rel="stylesheet" type="text/css"\>'
-                );
-            }
-        }).call(this);
-        </script>
-        <!-- END - Qunit -->
         <script src='/ui/libs/pubsub-js/src/pubsub.js'></script>
         <script src='/ui/libs/requirejs/require.js'></script>
         <script src='/ui/libs/jquery/jquery.js'></script>

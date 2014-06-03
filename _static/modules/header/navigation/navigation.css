@@ -225,6 +225,10 @@
               text-decoration: none;
               display: block;
               padding: 5px 0; }
+            .navigation .menu > li > ul > li.menu li > ul {
+              margin-left: 15px; }
+              .navigation .menu > li > ul > li.menu li > ul > li {
+                border-bottom: none; }
           .navigation .menu > li > ul > li.feed .title {
             color: #135fad;
             font-weight: 600;

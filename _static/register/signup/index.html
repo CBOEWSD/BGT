@@ -224,7 +224,7 @@
                     </a>
                 </h2>
                 <div class="right">
-                    <form class="quicksearch">
+                    <section class="quicksearch">
                         <!--<input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
   <button type="submit" class="button">Search</button>-->
                         <script>
@@ -243,7 +243,7 @@
                         })();
                         </script>
                         <gcse:search></gcse:search>
-                    </form>
+                    </section>
                 </div>
             </div>
         </header>
@@ -260,6 +260,23 @@
                                     <a href="http://www.google.com">
                                         Media Hub
                                     </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -519,6 +536,26 @@
                         Advisors
                     </a>
                 </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE C2
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Futures Exchange
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Stock Exchange
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Permit Holders
+                    </a>
+                </li>
                 <li class="social">
                     <a href="#">
                         <span class="icon-social twitter">
@@ -593,7 +630,7 @@
                                 <p>
                                     Duis tempus eros in lectus tempor, vel mollis mi porta.
                                 </p>
-                                <form class="login-form" id="login">
+                                <section class="form login-form" id="login">
                                     <fieldset>
                                         <div class="wrap-columns-outer">
                                             <div class="wrap-columns-inner two margin-none">
@@ -619,7 +656,7 @@
                                             Forgot Password?
                                         </a>
                                     </div>
-                                </form>
+                                </section>
                             </div>
                             <div class="after">
                                 <article class="content">
@@ -886,24 +923,6 @@
                 </div>
             </div>
         </footer>
-        <!-- START - Load Qunit tests when required -->
-        <script>
-        (function()
-        {
-            var url = window.location.href,
-                test = (url.indexOf('#test=on') !== -1) ? true : false;
-            if (test)
-            {
-                document.write(
-                    '<script src="http://code.jquery.com/qunit/qunit-1.12.0.js"\></script\>'
-                );
-                document.write(
-                    '<link href="http://code.jquery.com/qunit/qunit-1.12.0.css" media="all" rel="stylesheet" type="text/css"\>'
-                );
-            }
-        }).call(this);
-        </script>
-        <!-- END - Qunit -->
         <script src='/ui/libs/pubsub-js/src/pubsub.js'></script>
         <script src='/ui/libs/requirejs/require.js'></script>
         <script src='/ui/libs/jquery/jquery.js'></script>

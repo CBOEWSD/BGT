@@ -117,7 +117,14 @@
           -o-transform: translateX(0);
           transform: translateX(0); }
       .navigation .menu > li.social {
-        display: none; }
+        float: none;
+        margin: 0;
+        display: table;
+        background: #135fad; }
+        .navigation .menu > li.social > a {
+          display: table-cell !important;
+          padding: 10px 0 !important;
+          text-align: center; }
   body {
     left: 0;
     position: relative;

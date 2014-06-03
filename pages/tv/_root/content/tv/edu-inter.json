@@ -3,8 +3,7 @@
   "activeStates": true,
   "subscribe": "tv-row-education-int",
   "viewall": {
-    "text": "View All",
-    "href": "#"
+    "expand": true
   },
   "total": 201,
   "items": [

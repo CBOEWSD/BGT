@@ -38,7 +38,7 @@ class RowTV
     Binds show all type actions with their appropriate methods.
   ###
   bindShowAll: () ->
-    @.$viewAll = $ '.viewall', @.$el
+    @.$viewAll = $ '.expand', @.$el
     @.$total = $ '.total', @.$el
 
     @.$viewAll.bind 'click', (e) =>

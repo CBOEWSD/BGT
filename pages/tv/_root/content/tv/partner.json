@@ -3,8 +3,7 @@
   "activeStates": true,
   "subscribe": "tv-row-partner",
   "viewall": {
-    "text": "View All",
-    "href": "#"
+    "expand": true
   },
   "total": 201,
   "items": [

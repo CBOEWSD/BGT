@@ -150,13 +150,12 @@ class Navigation
       this.create()
 
     # ### this.expanderControls.swipe
-    swipe: (e, phase, direction, distance, duration, fingerCount) ->
-      if phase == 'end'
-        if distance > 50
-          if direction == 'left'
-            self.$controls.$right.trigger 'click'
-          else if direction == 'right'
-            self.$controls.$left.trigger 'click'
+    swipe: (e, direction, distance, duration, fingerCount) ->
+      if distance > 50
+        if direction == 'left'
+          self.$controls.$right.trigger 'click'
+        else if direction == 'right'
+          self.$controls.$left.trigger 'click'
 
     # ### this.expanderControls.create
     create: () ->
@@ -380,7 +379,7 @@ class Navigation
   swipeTopUl: (e, direction, distance, duration, fingerCount) ->
     # If we're in desktop pass to expander controls
     if Response.viewportW() > 767
-      return self.expanderControls.swipe(e, phase, direction, distance, duration, fingerCount)
+      return self.expanderControls.swipe(e, direction, distance, duration, fingerCount)
 
     # Prevent bubble
     e.stopPropagation()

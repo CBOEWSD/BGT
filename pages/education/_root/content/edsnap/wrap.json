@@ -1,0 +1,36 @@
+{
+  "title": {},
+  "progress": {
+    "level": "Beginner",
+    "percent": 0
+  },
+  "nextSteps": [
+    {
+      "url": "#",
+      "classes": ["icon-before", "register"],
+      "text": "Login / Register"
+    },
+    {
+      "url": "#",
+      "classes": ["icon-before", "assessment"],
+      "text": "Take Assessment"
+    }
+  ],
+  "resources": [
+    {
+      "url": "#",
+      "classes": ["icon-before", "chart"],
+      "text": "By Education Level"
+    },
+    {
+      "url": "#",
+      "classes": ["icon-before", "calendar"],
+      "text": "View Calendar"
+    },
+    {
+      "url": "#",
+      "classes": ["icon-before", "institute"],
+      "text": "Options Institute Plus"
+    }
+  ]
+}

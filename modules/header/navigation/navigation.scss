@@ -204,6 +204,14 @@ $3dsize: 4px;
                 display: block;
                 padding: 5px 0;
               }
+
+              > ul {
+                margin-left: 15px;
+
+                > li {
+                  border-bottom: none;
+                }
+              }
             }
           }
 

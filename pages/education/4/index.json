@@ -1,5 +1,6 @@
 {
   "view": "threecol",
+  "loggedin": true,
   "title": "Education Landing",
   "meta": {
     "keywords": "some, keywords",

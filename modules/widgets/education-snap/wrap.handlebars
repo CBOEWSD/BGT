@@ -8,11 +8,17 @@
       {{/if}}
     </h2>
 
-    {{#if title.logout}}
-    <a href="#" class="logout icon-before lock">
-      Log Out
-    </a>
-    {{/if}}
+    <div class="account">
+      {{#if title.logout}}
+        <a href="#" class="icon-before lock">
+          Log Out
+        </a>
+      {{else}}
+        <a href="#" class="icon-before lock">
+          Log In
+        </a>
+      {{/if}}
+    </div>
   </div>
 
   <div class="inRow">

@@ -222,6 +222,22 @@ $classPrefix: '.icon-';
     }
   }
 
+  &.register {
+    &:before {
+      background-position: -45px -366px;
+      width: 22px;
+      height: 20px;
+    }
+  }
+
+  &.assessment {
+    &:before {
+      background-position: -73px -366px;
+      width: 22px;
+      height: 20px;
+    }
+  }
+
   &.lock {
     padding-left: 18px !important;
     &:before {

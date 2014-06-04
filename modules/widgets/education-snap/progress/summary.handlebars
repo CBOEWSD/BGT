@@ -7,7 +7,14 @@
     </span>
   </h3>
 
-  <div class="bar-wrap">
+  <div
+    class="bar-wrap tooltip"
+    data-tooltip="Demo tooltip"
+    data-tooltip-onload="true"
+    data-tooltip-position-my="top middle"
+    data-tooltip-position-at="bottom middle"
+    data-tooltip-show-event="click"
+    data-tooltip-hide-event="click">
     <div class="bar">
       <div class="prog" style="width: {{progress.percent}}%"></div>
     </div>

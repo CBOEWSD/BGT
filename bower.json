@@ -2,20 +2,19 @@
   "name": "node-starter",
   "version": "0.0.0",
   "dependencies": {
-    "jquery": "~1.9.1",
-    "requirejs": "~2.1.8",
-    "pubsub-js": "~1.4.0",
-    "handlebars": "~1.1.2",
-    "responsejs": "~0.7.8",
+    "jquery": "1.9.1",
+    "requirejs": "2.1.8",
+    "pubsub-js": "1.4.0",
+    "handlebars": "1.1.2",
+    "responsejs": "0.7.8",
     "trackpad-scroll-emulator": "https://github.com/jnicol/trackpad-scroll-emulator.git",
-    "jquery-placeholder": "~2.0.7",
-    "respond": "~1.4.2",
-    "jquery-touchswipe": "~1.6.4",
-    "socket.io-client": "~0.9.16",
-    "ReStable": "~0.1.1",
-    "gremlins.js": "~0.1.0",
-    "Vimg": "~1.0.2",
-    "vimg": "~1.0.3",
-    "qtip2": "~2.2.0"
+    "jquery-placeholder": "2.0.7",
+    "respond": "1.4.2",
+    "jquery-touchswipe": "1.6.4",
+    "socket.io-client": "0.9.16",
+    "ReStable": "0.1.1",
+    "gremlins.js": "0.1.0",
+    "vimg": "1.0.3",
+    "qtip2": "2.2.0"
   }
 }

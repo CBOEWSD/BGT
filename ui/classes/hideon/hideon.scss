@@ -19,7 +19,7 @@
 }
 
 .hideondesktop {
-  display: none\9;
+  display: none\9 !important;
 
   @media all and (min-width: $screenSmallMax) {
     @include hide();

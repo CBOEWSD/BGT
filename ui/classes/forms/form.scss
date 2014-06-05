@@ -113,6 +113,8 @@ select, form select {
   &::-ms-expand {
     display: none;
   }
+
+  background-image: none\9;
 }
 
 @-moz-document url-prefix() {

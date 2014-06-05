@@ -68,6 +68,10 @@ form, .form {
       @include border-radius(2px);
     }
 
+    &[type="radio"] {
+      border: none\9 !important;
+    }
+
     padding: 5px;
     @include border-radius(5px);
   }

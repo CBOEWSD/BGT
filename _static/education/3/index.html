@@ -203,9 +203,30 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="button account green">
-                            Login / Register
-                        </a>
+                        <ul class="account-dropdown">
+                            <li>
+                                <a href="#" class="button account">
+                                    My Account
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            MyCBOE
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <a href="#" class="navicon hidedesktop"></a>
@@ -224,7 +245,7 @@
                     </a>
                 </h2>
                 <div class="right">
-                    <form class="quicksearch">
+                    <section class="quicksearch">
                         <!--<input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
   <button type="submit" class="button">Search</button>-->
                         <script>
@@ -243,7 +264,7 @@
                         })();
                         </script>
                         <gcse:search></gcse:search>
-                    </form>
+                    </section>
                 </div>
             </div>
         </header>
@@ -260,6 +281,23 @@
                                     <a href="http://www.google.com">
                                         Media Hub
                                     </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sub Menu Item
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -519,6 +557,26 @@
                         Advisors
                     </a>
                 </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE C2
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Futures Exchange
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Stock Exchange
+                    </a>
+                </li>
+                <li class="hideondesktop">
+                    <a href="#">
+                        CBOE Permit Holders
+                    </a>
+                </li>
                 <li class="social">
                     <a href="#">
                         <span class="icon-social twitter">
@@ -696,9 +754,11 @@
                                 <h2>
                                     Your Education Snapshot:
                                 </h2>
-                                <a href="#" class="logout icon-before lock">
-                                    Log Out
-                                </a>
+                                <div class="account">
+                                    <a href="#" class="icon-before lock">
+                                        Log Out
+                                    </a>
+                                </div>
                             </div>
                             <div class="inRow">
                                 <div class="mainCol">
@@ -1450,24 +1510,6 @@
                 </div>
             </div>
         </footer>
-        <!-- START - Load Qunit tests when required -->
-        <script>
-        (function()
-        {
-            var url = window.location.href,
-                test = (url.indexOf('#test=on') !== -1) ? true : false;
-            if (test)
-            {
-                document.write(
-                    '<script src="http://code.jquery.com/qunit/qunit-1.12.0.js"\></script\>'
-                );
-                document.write(
-                    '<link href="http://code.jquery.com/qunit/qunit-1.12.0.css" media="all" rel="stylesheet" type="text/css"\>'
-                );
-            }
-        }).call(this);
-        </script>
-        <!-- END - Qunit -->
         <script src='/ui/libs/pubsub-js/src/pubsub.js'></script>
         <script src='/ui/libs/requirejs/require.js'></script>
         <script src='/ui/libs/jquery/jquery.js'></script>

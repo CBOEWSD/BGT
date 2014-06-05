@@ -45,7 +45,7 @@
      */
 
     RowTV.prototype.bindShowAll = function() {
-      this.$viewAll = $('.viewall', this.$el);
+      this.$viewAll = $('.expand', this.$el);
       this.$total = $('.total', this.$el);
       this.$viewAll.bind('click', (function(_this) {
         return function(e) {

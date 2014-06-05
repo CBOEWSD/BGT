@@ -28,4 +28,12 @@ $module: '.search-generic';
       vertical-align: middle;
     }
   }
+
+  @media all and (max-width: 600px) {
+    input[type="text"], button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
 }

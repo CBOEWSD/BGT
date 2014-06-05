@@ -1,21 +1,19 @@
 {
-  "title": {
-    "logout": true
-  },
+  "title": {},
   "progress": {
     "level": "Beginner",
-    "percent": 25
+    "percent": 0
   },
   "nextSteps": [
     {
       "url": "#",
-      "classes": ["icon-before", "transcript"],
-      "text": "View Transcripts"
+      "classes": ["icon-before", "register"],
+      "text": "Login / Register"
     },
     {
       "url": "#",
-      "classes": ["icon-before", "book"],
-      "text": "Access Your Courses"
+      "classes": ["icon-before", "assessment"],
+      "text": "Take Assessment"
     }
   ],
   "resources": [

@@ -15,12 +15,15 @@
         {{/if}}
       </h2>
 
-      {{#if viewall}}
-      <a href="{{viewall.href}}" class="viewall button">
-        <!--{{{viewall.text}}}-->
-        Expand
-      </a>
-      {{/if}}
+      {{#with viewall}}
+        <a href="{{#if href}}{{{href}}}{{else}}#{{/if}}" class="viewall {{#if expand}}button expand{{/if}}">
+          {{#if text}}
+            {{{text}}}
+          {{else}}
+            Expand
+          {{/if}}
+        </a>
+      {{/with}}
     </div>
   {{/if}}
 
@@ -42,18 +45,18 @@
         </div>
 
         {{#if this.meta}}
-        <div class="meta">
-          {{#if this.meta.views}}
-            <span class="icon-meta views">
-              {{this.meta.views}}
-            </span>
-          {{/if}}
-          {{#if this.meta.likes}}
-            <span class="icon-meta likes">
-              {{this.meta.likes}}
-            </span>
-          {{/if}}
-        </div>
+          <div class="meta">
+            {{#if this.meta.views}}
+              <span class="icon-meta views">
+                {{this.meta.views}}
+              </span>
+            {{/if}}
+            {{#if this.meta.likes}}
+              <span class="icon-meta likes">
+                {{this.meta.likes}}
+              </span>
+            {{/if}}
+          </div>
         {{/if}}
 
         <h3>

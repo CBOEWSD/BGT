@@ -132,14 +132,12 @@
         this.swipe();
         return this.create();
       },
-      swipe: function(e, phase, direction, distance, duration, fingerCount) {
-        if (phase === 'end') {
-          if (distance > 50) {
-            if (direction === 'left') {
-              return self.$controls.$right.trigger('click');
-            } else if (direction === 'right') {
-              return self.$controls.$left.trigger('click');
-            }
+      swipe: function(e, direction, distance, duration, fingerCount) {
+        if (distance > 50) {
+          if (direction === 'left') {
+            return self.$controls.$right.trigger('click');
+          } else if (direction === 'right') {
+            return self.$controls.$left.trigger('click');
           }
         }
       },
@@ -344,7 +342,7 @@
     Navigation.prototype.swipeTopUl = function(e, direction, distance, duration, fingerCount) {
       var $el;
       if (Response.viewportW() > 767) {
-        return self.expanderControls.swipe(e, phase, direction, distance, duration, fingerCount);
+        return self.expanderControls.swipe(e, direction, distance, duration, fingerCount);
       }
       e.stopPropagation();
       $el = self.$el;

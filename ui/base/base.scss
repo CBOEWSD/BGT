@@ -85,19 +85,6 @@ a {
   transition: none;
 }
 
-.twocol {
-  display: table;
-  table-layout: fixed;
-  width: 106%;
-  margin: 0 -3%;
-
-  .col {
-    display: table-cell;
-    width: 50%;
-    vertical-align: top;
-    padding: 0 3%;
-  }
-}
 
 code {
   border: 1px solid $colorGrey2;

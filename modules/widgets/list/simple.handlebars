@@ -1,5 +1,7 @@
 <div class="widget-list simple {{#each this.classes}} {{this}} {{/each}} {{#if showad}} showad {{/if}}">
-  {{> widgets/widget-title}}
+  {{#if widget.title}}
+    {{> widgets/widget-title}}
+  {{/if}}
 
   <ul>
     {{#each items}}

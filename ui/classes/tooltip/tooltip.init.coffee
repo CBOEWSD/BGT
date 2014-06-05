@@ -9,6 +9,8 @@ $el = $('.tooltip')
 # Check if at least 1 instance of module
 if $el.length > 0
 
+  loadCss '/ui/libs/qtip2/jquery.qtip.css'
+
   # Load module
   require ['/ui/libs/qtip2/jquery.qtip.js'], () ->
 

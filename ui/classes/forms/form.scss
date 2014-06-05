@@ -60,15 +60,12 @@ form, .form {
       display: inline-block;
       width: auto;
       vertical-align: middle;
-      @include appearance(none);
-
-      width: 10px; height: 10px;
       border: 1px solid lighten($colorGrey1, 20%);
       background: #fff;
       @include border-radius(2px);
     }
 
-    &[type="radio"] {
+    &[type="radio"], &[type="checkbox"] {
       border: none\9 !important;
     }
 

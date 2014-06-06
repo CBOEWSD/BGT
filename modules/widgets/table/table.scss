@@ -153,10 +153,7 @@ $module: '.table';
   &.oddeven {
     > thead {
       > tr {
-        &:nth-child(even),
-        &:nth-child(odd) {
-          background: $colorGrey2
-        }
+        background: $colorGrey2
       }
     }
 

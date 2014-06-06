@@ -34,9 +34,11 @@ $borderShad: inset 0 0 0 1px darken($colorGrey2, 10%);
   padding: 14px 10px 10px;
   position: relative;
   @include box-shadow($borderShad);
+  border: 1px solid $colorGrey2\9;
 
   &.noborders {
     @include box-shadow(none);
+    border: none\9;
   }
 
   &:before {

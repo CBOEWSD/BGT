@@ -238,7 +238,7 @@ $module: '.table';
   }
 
   &.symbol-list {
-    th:nth-child(2), td:nth-child(2) {
+    th:first-child + th, td:first-child + td {
       border-left:none;
     }
   }

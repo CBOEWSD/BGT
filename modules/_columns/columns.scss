@@ -129,6 +129,7 @@ $module: '.wrap-columns-';
       .column {
         &:first-child {
           width: 66.66666%;
+          width: 67.6%\9;
         }
         &:last-child {
           // Accounting for additional spacing (15px)
@@ -146,6 +147,7 @@ $module: '.wrap-columns-';
       .column {
         &:first-child {
           width: 32.6%;
+          width: 33.6%\9;
         }
         &:last-child {
           // Accounting for additional spacing (15px)

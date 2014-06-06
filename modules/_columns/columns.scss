@@ -180,7 +180,7 @@ $module: '.wrap-columns-';
       left: 0;
     }
 
-    &:last-child {
+    &:last-child, &.last-child {
       border-bottom: none;
       padding: 0;
       margin-bottom: 0;

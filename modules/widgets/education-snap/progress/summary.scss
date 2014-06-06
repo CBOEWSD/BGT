@@ -27,6 +27,7 @@ $module: '.progress-summary';
     border: 1px solid darken($colorGrey2, 9%);
     padding: 7px;
     @include border-radius(25px);
+    filter: none\9;
 
     .bar {
       background: $colorGrey1;

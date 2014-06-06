@@ -99,7 +99,9 @@ form, .form {
 
 select, form select {
   cursor: pointer;
-  background: url(/ui/classes/forms/assets/dropdown-arrow.png) no-repeat $colorBlue1;
+  background-image: url(/ui/classes/forms/assets/dropdown-arrow.png);
+  background-repeat: no-repeat;
+  background-color: $colorBlue1;
   background-position: right 5px top -32px;
   border-right: 10px solid transparent;
   color: #fff;
@@ -116,7 +118,9 @@ select, form select {
     display: none;
   }
 
-  background-image: none\9;
+  background-image: none!important\9;
+  background-color: red!important\9;
+  padding-right: 5px\9;
 }
 
 @-moz-document url-prefix() {

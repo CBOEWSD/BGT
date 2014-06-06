@@ -67,6 +67,8 @@ form, .form {
 
     &[type="radio"], &[type="checkbox"] {
       border: none\9 !important;
+      background: none\9;
+      padding: 0\9;
     }
 
     padding: 5px;

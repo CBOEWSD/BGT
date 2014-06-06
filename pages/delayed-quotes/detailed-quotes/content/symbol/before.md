@@ -1,1 +1,0 @@
-**Enter a stock or Index Symbol.**

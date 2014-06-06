@@ -1,7 +1,4 @@
 {
-  "before": {
-    "widgets/content/content": "symbol/before.md"
-  },
   "body": {
     "widgets/forms/search-symbol/search": ""
   }

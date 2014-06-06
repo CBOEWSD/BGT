@@ -67,11 +67,13 @@ $module: '.results';
         border-bottom: 1px solid #ccc;
 
         .component {
-          border-bottom: 1px solid #ccc;
+          border-top: 1px solid #ccc;
+          padding-top: 20px;
           margin-bottom: 20px;
 
-          &:last-child {
-            border-bottom: none;
+          &:first-child {
+            padding-top: 0;
+            border-top: none;
           }
         }
       }

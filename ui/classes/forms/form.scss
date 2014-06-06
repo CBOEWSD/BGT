@@ -60,12 +60,15 @@ form, .form {
       display: inline-block;
       width: auto;
       vertical-align: middle;
-      @include appearance(none);
-
-      width: 10px; height: 10px;
       border: 1px solid lighten($colorGrey1, 20%);
       background: #fff;
       @include border-radius(2px);
+    }
+
+    &[type="radio"], &[type="checkbox"] {
+      border: none\9 !important;
+      background: none\9;
+      padding: 0\9;
     }
 
     padding: 5px;
@@ -112,6 +115,8 @@ select, form select {
   &::-ms-expand {
     display: none;
   }
+
+  background-image: none\9;
 }
 
 @-moz-document url-prefix() {

@@ -27,7 +27,7 @@
     </div>
   {{/if}}
 
-  <div class="items">
+  <div class="items {{#if viewall.expand}} mobileExpandable {{/if}}">
     {{#each items}}
     <div class="item {{#if active}} active {{/if}}">
       <a href="{{this.url}}">

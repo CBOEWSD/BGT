@@ -71,7 +71,7 @@ form, .form {
       padding: 0\9;
     }
 
-    padding: 5px;
+    padding: 5px\9;
     @include border-radius(5px);
   }
 
@@ -119,16 +119,9 @@ select, form select {
   }
 
   background-image: none!important\9;
-  background-color: red!important\9;
   padding-right: 5px\9;
 
   html[data-useragent*='MSIE 10.0'] & {
     padding-right: 25px;
-  }
-}
-
-@-moz-document url-prefix() {
-  select {
-    padding-right: 5px !important;
   }
 }

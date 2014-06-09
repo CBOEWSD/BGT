@@ -18,13 +18,8 @@ if $el.length > 0
       $this = $(@)
 
       $this.qtip
-        prerender: true
         content:
           attr: 'data-tooltip'
-        position:
-          target: 'mouse'
-          adjust:
-            mouse: false
         style:
           classes: 'qtip-bootstrap'
         show:
@@ -35,4 +30,9 @@ if $el.length > 0
         position:
           my: if $this.data('tooltip-position-my') then $this.data('tooltip-position-my') else 'top left'
           at: if $this.data('tooltip-position-at') then $this.data('tooltip-position-at') else 'bottom left'
+          target: $this
+          adjust:
+            scroll: false
+            mouse: false
+            resize: false
 

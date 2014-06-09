@@ -16,4 +16,11 @@ $module: '.login-social';
       margin: 10px 0;
     }
   }
+
+  @media all and (max-width: $screenSmallMax) {
+    &.buttons a {
+      display: block;
+      width: 100%;
+    }
+  }
 }

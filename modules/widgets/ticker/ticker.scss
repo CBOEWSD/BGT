@@ -47,6 +47,12 @@ $module: '.ticker-';
     }
   }
 
+  &.simple {
+    .bar {
+      overflow: scroll;
+    }
+  }
+
 
   .bar {
     overflow: hidden;

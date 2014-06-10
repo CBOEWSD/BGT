@@ -83,7 +83,9 @@ class Navigation
   ###
   clickTap: (e, target) ->
     # If we're in desktop ignore this event
-    return true if Response.viewportW() > 767
+    if Response.viewportW() > 766
+      $(target).trigger('click')
+      return true
 
     # Log: Method called
     self.log.add 'notification', 'clickTap method called.', @

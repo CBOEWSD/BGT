@@ -253,6 +253,21 @@ $classPrefix: '.icon-';
     }
   }
 
+  &.unlock {
+    padding-left: 18px !important;
+    &:before {
+      background-position: -78px -207px;
+      width: 11px;
+      height: 16px;
+    }
+
+    &.black {
+      &:before {
+        background-position: -61px 0;
+      }
+    }
+  }
+
   &.status-tick {
     color: $colorGreen1;
     padding-left: 18px !important;

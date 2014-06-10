@@ -26,6 +26,13 @@ $module: '.snapshot';
     .images, .image {
       overflow: hidden;
 
+      &.crop {
+        img {
+          width: auto;
+          float: right;
+        }
+      }
+
       img {
         width:100%;
         max-width: none!important; // Overwriting the global setting for responsive.

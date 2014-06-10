@@ -64,7 +64,7 @@ class Navigation
 
     # Prevent a default anchor link action
     # when clicked if the parent haas a sub menu
-    $('a', @.$topLis).on 'click', (e) ->
+    $('a', @.$topLis).on 'click touchend', (e) ->
       # If we're in desktop ignore this event
       if Response.viewportW() > 767
         self.clickTopLi(e, @)
@@ -84,7 +84,7 @@ class Navigation
   clickTap: (e, target) ->
     # If we're in desktop ignore this event
     if Response.viewportW() > 766
-      $(target).trigger('click')
+      # $(target).trigger('click')
       return true
 
     # Log: Method called

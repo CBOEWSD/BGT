@@ -94,6 +94,12 @@ $module: '.snapshot';
 
         img {
           display: inline-block;
+
+          &.desktop {}
+
+          &.tablet, &.mobile {
+            display: none;
+          }
         }
 
         &.active {
@@ -230,6 +236,42 @@ $module: '.snapshot';
         display: block;
         text-align: right;
         margin-top: 5px;
+      }
+    }
+
+    .graph {
+      .images {
+        .image {
+          overflow: scroll;
+
+          img {
+            float: none;
+
+            &.desktop {
+              display: none;
+            }
+            &.tablet {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    .graph {
+      .images {
+        .image {
+          img {
+            &.desktop, &.tablet {
+              display: none;
+            }
+            &.mobile {
+              display: block;
+            }
+          }
+        }
       }
     }
   }

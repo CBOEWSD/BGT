@@ -1,0 +1,21 @@
+/*
+  Class: Tooltip Class
+  Description: Tooltips can be applied against any component with simple data attributes.
+*/
+
+@import './ui/base/settings';
+@import './ui/base/_includes/compass/css3';
+@import './ui/base/_includes/scrollbars';
+@import './ui/base/_includes/fadein';
+
+$class: '.qtip-';
+
+#{$class}content {
+  a {
+    color: $colorBlue1;
+
+    &:hover, &:active {
+      color: $colorGrey1;
+    }
+  }
+}

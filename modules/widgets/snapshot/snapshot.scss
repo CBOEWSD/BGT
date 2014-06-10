@@ -27,7 +27,7 @@ $module: '.snapshot';
       overflow: hidden;
 
       img {
-        float: right;
+        width:100%;
         max-width: none!important; // Overwriting the global setting for responsive.
       }
     }
@@ -242,8 +242,6 @@ $module: '.snapshot';
     .graph {
       .images {
         .image {
-          overflow: scroll;
-
           img {
             float: none;
 

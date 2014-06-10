@@ -34,5 +34,5 @@ if $el.length > 0
           adjust:
             scroll: false
             mouse: false
-            resize: false
+            resize: true
 

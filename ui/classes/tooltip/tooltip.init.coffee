@@ -60,8 +60,9 @@ if $el.length > 0
           else 'bottom left'
 
           target: $this
+
           adjust:
-            scroll: false
+            scroll: true
             mouse: false
             resize: true
 

@@ -268,12 +268,12 @@ $classPrefix: '.icon-';
   &.gear {
     padding-left: 25px !important;
     display: inline-block;
-    margin-top: -10px;
 
     &:before {
       background-position: -74px -300px;
       width: 19px;
       height: 19px;
+      margin-top: -8px;
     }
   }
 }

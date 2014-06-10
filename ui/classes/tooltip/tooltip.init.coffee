@@ -31,6 +31,12 @@ if $el.length > 0
       $this.qtip
         content:
           attr: 'data-tooltip'
+          title:
+            text: if $this.data('tooltip-title')
+            then $this.data('tooltip-title')
+            else ' '
+
+            button: 'Close'
         style:
           classes: 'qtip-bootstrap'
         show:

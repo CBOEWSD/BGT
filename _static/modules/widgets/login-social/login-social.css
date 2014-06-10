@@ -6,3 +6,7 @@
   display: inline-block;
   width: 49%;
   margin: 10px 0; }
+@media all and (max-width: 767px) {
+  .login-social.buttons a {
+    display: block;
+    width: 100%; } }

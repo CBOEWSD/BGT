@@ -19,7 +19,8 @@
     .widget-tv.row .title .viewall {
       text-align: center;
       width: 80px;
-      padding: 4px 0; }
+      padding: 4px 0;
+      vertical-align: middle; }
       .widget-tv.row .title .viewall.shown:before {
         content: "\00D7";
         display: inline; }
@@ -127,13 +128,13 @@
       .widget-tv.row .items .item h3 {
         font-size: 1.1em; } }
   @media screen and (max-width: 500px) {
-    .widget-tv.row .items {
+    .widget-tv.row .items.mobileExpandable {
       max-height: 500px;
       overflow-y: scroll;
       display: none; }
-      .widget-tv.row .items.expanded {
+      .widget-tv.row .items.mobileExpandable.expanded {
         display: block; }
-      .widget-tv.row .items .item h3 {
+      .widget-tv.row .items.mobileExpandable .item h3 {
         font-size: 1.1em; }
-      .widget-tv.row .items .item p {
+      .widget-tv.row .items.mobileExpandable .item p {
         display: none; } }

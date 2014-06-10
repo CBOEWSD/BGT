@@ -21,9 +21,8 @@
     font-weight: 400;
     cursor: pointer; }
     .form-wrapped label.checkbox input[type="checkbox"] {
-      display: block;
       float: left;
-      margin: 2px 0 0 -20px; }
+      margin: 2px 0 0 -16px; }
   .form-wrapped img {
     margin: 20px 0; }
   .form-wrapped h4, .form-wrapped h5 {

@@ -44,6 +44,8 @@
         rel='stylesheet' type='text/css'>
         <link href='/ui/classes/tabs/tabs.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/ui/classes/text/text.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/classes/tooltip/tooltip.css' media='all' rel='stylesheet'
+        type='text/css'>
         <link href='/modules/_columns/columns.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/modules/accordion/accordion.css' media='all' rel='stylesheet'
@@ -146,6 +148,11 @@
         <!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
+        <!--
+    Add data attribute for UserAgent to Document -->
+        <script type="text/javascript">
+        document.documentElement.setAttribute('data-useragent', navigator.userAgent);
+        </script>
     </head>
     <body>
         <div class="hideonmobile">
@@ -834,8 +841,6 @@
                                         </div>
                                         <div class="component">
                                             <div class="widget-list simple  ">
-                                                <h3 class="widget-title ">
-                                                </h3>
                                                 <ul>
                                                     <li class="">
                                                         <a href="#" title="CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced">
@@ -859,8 +864,6 @@
                                         </div>
                                         <div class="component">
                                             <div class="widget-list simple  ">
-                                                <h3 class="widget-title ">
-                                                </h3>
                                                 <ul>
                                                     <li class="">
                                                         <a href="#" title="CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced">
@@ -877,8 +880,6 @@
                                         </div>
                                         <div class="component">
                                             <div class="widget-list simple  ">
-                                                <h3 class="widget-title ">
-                                                </h3>
                                                 <ul>
                                                     <li class="">
                                                         <a href="#" title="CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced">
@@ -895,8 +896,6 @@
                                         </div>
                                         <div class="component">
                                             <div class="widget-list simple  ">
-                                                <h3 class="widget-title ">
-                                                </h3>
                                                 <ul>
                                                     <li class="">
                                                         <a href="#" title="CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced">
@@ -965,8 +964,6 @@
                                         </div>
                                         <div class="component">
                                             <div class="widget-list simple  ">
-                                                <h3 class="widget-title ">
-                                                </h3>
                                                 <ul>
                                                     <li class="">
                                                         <a href="#" title="CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced">
@@ -990,8 +987,6 @@
                                         </div>
                                         <div class="component">
                                             <div class="widget-list simple  ">
-                                                <h3 class="widget-title ">
-                                                </h3>
                                                 <ul>
                                                     <li class="">
                                                         <a href="#" title="CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced">
@@ -1008,8 +1003,6 @@
                                         </div>
                                         <div class="component">
                                             <div class="widget-list simple  ">
-                                                <h3 class="widget-title ">
-                                                </h3>
                                                 <ul>
                                                     <li class="">
                                                         <a href="#" title="CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced">
@@ -1026,8 +1019,6 @@
                                         </div>
                                         <div class="component">
                                             <div class="widget-list simple  ">
-                                                <h3 class="widget-title ">
-                                                </h3>
                                                 <ul>
                                                     <li class="">
                                                         <a href="#" title="CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced">
@@ -1057,7 +1048,7 @@
                                 </div>
                             </h3>
                             <div class="widget-tv row  stack " data-subscribe="">
-                                <div class="items">
+                                <div class="items ">
                                     <div class="item ">
                                         <a href="#">
                                             <div class="image">
@@ -1479,7 +1470,7 @@
         <script src='/ui/libs/handlebars/handlebars.js'></script>
         <script src='/ui/libs/responsejs/response.js'></script>
         <script src='/ui/libs/jquery-touchswipe/jquery.touchSwipe.js'></script>
-        <script src='/ui/libs/Vimg/dist/vimg.js'></script>
+        <script src='/ui/libs/vimg/dist/vimg.js'></script>
         <script src='/ui/base/base.init.js'></script>
         <script src='/ui/base/handlers/console.init.js'></script>
         <script src='/ui/base/handlers/customPublish.init.js'></script>
@@ -1497,6 +1488,7 @@
         <script src='/ui/classes/scrolloverflow/scrolloverflow.init.js'></script>
         <script src='/ui/classes/stateswitch/stateswitch.init.js'></script>
         <script src='/ui/classes/tabs/tabs.init.js'></script>
+        <script src='/ui/classes/tooltip/tooltip.init.js'></script>
         <script src='/modules/accordion/accordion.init.js'></script>
         <script src='/modules/breadcrumbs/breadcrumbs.init.js'></script>
         <script src='/modules/header/header.init.js'></script>

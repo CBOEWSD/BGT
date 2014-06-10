@@ -31,7 +31,7 @@ form input, form select, .form input, .form select {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   border: 1px solid #c4c4c4;
-  padding: 5px;
+  padding: 5px\9;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -41,13 +41,6 @@ form input, form select, .form input, .form select {
     display: inline-block;
     width: auto;
     vertical-align: middle;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    width: 10px;
-    height: 10px;
     border: 1px solid #61696e;
     background: white;
     -webkit-border-radius: 2px;
@@ -55,6 +48,10 @@ form input, form select, .form input, .form select {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px; }
+  form input[type="radio"], form input[type="checkbox"], form select[type="radio"], form select[type="checkbox"], .form input[type="radio"], .form input[type="checkbox"], .form select[type="radio"], .form select[type="checkbox"] {
+    border: none\9 !important;
+    background: none\9;
+    padding: 0\9; }
 form .buttons, .form .buttons {
   margin: 10px 0; }
   form .buttons.margin-20, .form .buttons.margin-20 {
@@ -68,7 +65,9 @@ form select.error, form label.error > select, .form select.error, .form label.er
 
 select, form select {
   cursor: pointer;
-  background: url(/ui/classes/forms/assets/dropdown-arrow.png) no-repeat #135fad;
+  background-image: url(/ui/classes/forms/assets/dropdown-arrow.png);
+  background-repeat: no-repeat;
+  background-color: #135fad;
   background-position: right 5px top -32px;
   border-right: 10px solid transparent;
   color: white;
@@ -83,10 +82,10 @@ select, form select {
   -moz-appearance: none;
   appearance: none;
   text-indent: 0.01px;
-  text-overflow: ''; }
+  text-overflow: '';
+  background-image: none !important \9;
+  padding-right: 5px\9; }
   select::-ms-expand, form select::-ms-expand {
     display: none; }
-
-@-moz-document url-prefix() {
-  select {
-    padding-right: 5px !important; } }
+  html[data-useragent*='MSIE 10.0'] select, html[data-useragent*='MSIE 10.0'] form select {
+    padding-right: 25px; }

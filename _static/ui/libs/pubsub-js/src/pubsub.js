@@ -35,17 +35,6 @@ https://github.com/mroderick/PubSubJS
 		messages = {},
 		lastUid = -1;
 
-	function hasKeys(obj){
-		var key;
-
-		for (key in obj){
-			if ( obj.hasOwnProperty(key) ){
-				return true;
-			}
-		}
-		return false;
-	}
-
 	/**
 	 *	Returns a function that throws the passed exception, for use as argument for setTimeout
 	 *	@param { Object } ex An Error object
@@ -71,16 +60,17 @@ https://github.com/mroderick/PubSubJS
 	function deliverMessage( originalMessage, matchedMessage, data, immediateExceptions ){
 		var subscribers = messages[matchedMessage],
 			callSubscriber = immediateExceptions ? callSubscriberWithImmediateExceptions : callSubscriberWithDelayedExceptions,
-			s;
+			i, j;
 
 		if ( !messages.hasOwnProperty( matchedMessage ) ) {
 			return;
 		}
 
-		for (s in subscribers){
-			if ( subscribers.hasOwnProperty(s)){
-				callSubscriber( subscribers[s], originalMessage, data );
-			}
+		// do not cache the length of the subscribers array, as it might change if there are unsubscribtions
+		// by subscribers during delivery of a topic
+		// see https://github.com/mroderick/PubSubJS/issues/26
+		for ( i = 0; i < subscribers.length; i++ ){
+			callSubscriber( subscribers[i].func, originalMessage, data );
 		}
 	}
 
@@ -103,16 +93,16 @@ https://github.com/mroderick/PubSubJS
 
 	function messageHasSubscribers( message ){
 		var topic = String( message ),
-			found = Boolean(messages.hasOwnProperty( topic ) && hasKeys(messages[topic])),
+			found = messages.hasOwnProperty( topic ),
 			position = topic.lastIndexOf( '.' );
 
 		while ( !found && position !== -1 ){
 			topic = topic.substr( 0, position );
-			position = topic.lastIndexOf( '.' );
-			found = Boolean(messages.hasOwnProperty( topic ) && hasKeys(messages[topic]));
+			position = topic.lastIndexOf('.');
+			found = messages.hasOwnProperty( topic );
 		}
 
-		return found;
+		return found && messages[topic].length > 0;
 	}
 
 	function publish( message, data, sync, immediateExceptions ){
@@ -165,13 +155,13 @@ https://github.com/mroderick/PubSubJS
 
 		// message is not registered yet
 		if ( !messages.hasOwnProperty( message ) ){
-			messages[message] = {};
+			messages[message] = [];
 		}
 
 		// forcing token as String, to allow for future expansions without breaking usage
 		// and allow for easy use as key names for the 'messages' object
-		var token = 'uid_' + String(++lastUid);
-		messages[message][token] = func;
+		var token = String(++lastUid);
+		messages[message].push( { token : token, func : func } );
 
 		// return token for unsubscribing
 		return token;
@@ -185,23 +175,22 @@ https://github.com/mroderick/PubSubJS
 	**/
 	PubSub.unsubscribe = function( tokenOrFunction ){
 		var isToken = typeof tokenOrFunction === 'string',
+			key = isToken ? 'token' : 'func',
+			succesfulReturnValue = isToken ? tokenOrFunction : true,
+
 			result = false,
-			m, message, t, token;
+			m, i;
 
 		for ( m in messages ){
 			if ( messages.hasOwnProperty( m ) ){
-				message = messages[m];
+				for ( i = messages[m].length-1 ; i >= 0; i-- ){
+					if ( messages[m][i][key] === tokenOrFunction ){
+						messages[m].splice( i, 1 );
+						result = succesfulReturnValue;
 
-				if ( isToken && message[tokenOrFunction] ){
-					delete message[tokenOrFunction];
-					result = tokenOrFunction;
-					// tokens are unique, so we can just stop here
-					break;
-				} else if (!isToken) {
-					for ( t in message ){
-						if (message.hasOwnProperty(t) && message[t] === tokenOrFunction){
-							delete message[t];
-							result = true;
+						// tokens are unique, so we can just return here
+						if ( isToken ){
+							return result;
 						}
 					}
 				}

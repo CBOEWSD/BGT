@@ -167,6 +167,14 @@
       height: 14px; }
     .icon-before.lock.black:before {
       background-position: -61px 0; }
+  .icon-before.unlock {
+    padding-left: 18px !important; }
+    .icon-before.unlock:before {
+      background-position: -78px -207px;
+      width: 11px;
+      height: 16px; }
+    .icon-before.unlock.black:before {
+      background-position: -61px 0; }
   .icon-before.status-tick {
     color: #21a825;
     padding-left: 18px !important;
@@ -175,6 +183,14 @@
       background-position: -60px -22px;
       width: 14px;
       height: 14px; }
+  .icon-before.gear {
+    padding-left: 25px !important;
+    display: inline-block; }
+    .icon-before.gear:before {
+      background-position: -74px -300px;
+      width: 19px;
+      height: 19px;
+      margin-top: -8px; }
 
 .icon-meta {
   position: relative;

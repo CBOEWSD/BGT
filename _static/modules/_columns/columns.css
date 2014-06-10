@@ -73,13 +73,15 @@
     .wrap-columns-inner.two .column:last-child {
       padding-left: 10px; }
   .wrap-columns-inner.two.slimright .column:first-child {
-    width: 66.66666%; }
+    width: 66.66666%;
+    width: 67.6% \9; }
   .wrap-columns-inner.two.slimright .column:last-child {
     width: 32.6%; }
   .wrap-columns-inner.two.slimright.ad .column:last-child {
     width: 310px; }
   .wrap-columns-inner.two.slimleft .column:first-child {
-    width: 32.6%; }
+    width: 32.6%;
+    width: 33.6% \9; }
   .wrap-columns-inner.two.slimleft .column:last-child {
     width: 66.66666%; }
   .wrap-columns-inner.two.slimleft.ad .column:first-child {
@@ -97,11 +99,11 @@
       position: absolute;
       bottom: -15px;
       left: 0; }
-    .wrap-columns-inner .component:last-child {
+    .wrap-columns-inner .component:last-child, .wrap-columns-inner .component.last-child {
       border-bottom: none;
       padding: 0;
       margin-bottom: 0; }
-      .wrap-columns-inner .component:last-child:after {
+      .wrap-columns-inner .component:last-child:after, .wrap-columns-inner .component.last-child:after {
         display: none; }
     .wrap-columns-inner .component:first-child {
       border-bottom: none;

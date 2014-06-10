@@ -36,6 +36,8 @@
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
       opacity: 0.2;
       cursor: default; }
+  .ticker-bar.simple .bar {
+    overflow: scroll; }
   .ticker-bar .bar {
     overflow: hidden;
     white-space: nowrap; }

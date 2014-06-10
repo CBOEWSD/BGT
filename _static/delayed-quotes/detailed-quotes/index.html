@@ -44,6 +44,8 @@
         rel='stylesheet' type='text/css'>
         <link href='/ui/classes/tabs/tabs.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/ui/classes/text/text.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/classes/tooltip/tooltip.css' media='all' rel='stylesheet'
+        type='text/css'>
         <link href='/modules/_columns/columns.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/modules/accordion/accordion.css' media='all' rel='stylesheet'
@@ -146,6 +148,11 @@
         <!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
+        <!--
+    Add data attribute for UserAgent to Document -->
+        <script type="text/javascript">
+        document.documentElement.setAttribute('data-useragent', navigator.userAgent);
+        </script>
     </head>
     <body>
         <div class="hideonmobile">
@@ -719,14 +726,6 @@
                                     </div>
                                     <div class="component">
                                         <section class="form-body ">
-                                            <div class="before">
-                                                <article class="content">
-                                                    <p>
-                                                        <strong>Enter a stock or Index
-                                                            Symbol.</strong>
-                                                    </p>
-                                                </article>
-                                            </div>
                                             <section class="form symbol-form">
                                                 <label for="symbol">
                                                     Enter a Stock or Index Symbol
@@ -752,14 +751,10 @@
                                     </div>
                                     <div class="component">
                                         <section class="form-body ">
-                                            <div class="before">
-                                                <article class="content">
-                                                    <p>
-                                                        <strong>Enter Company Name</strong>
-                                                    </p>
-                                                </article>
-                                            </div>
                                             <section class="form company-form">
+                                                <label for="company">
+                                                    Enter Company Name
+                                                </label>
                                                 <input type="text" name="company">
                                                 <div class="buttons">
                                                     <button type="submit" class="button blue">
@@ -1103,6 +1098,7 @@
                                                                     </td>
                                                                     <td>
                                                                         <span>
+                                                                            N/A
                                                                         </span>
                                                                     </td>
                                                                 </tr>
@@ -1116,7 +1112,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ticker-bar">
+                        <div class="ticker-bar simple">
                             <section class="bar">
                                 <div class="inner">
                                     <div class="ticker-item no-border">
@@ -1300,7 +1296,7 @@
         <script src='/ui/libs/handlebars/handlebars.js'></script>
         <script src='/ui/libs/responsejs/response.js'></script>
         <script src='/ui/libs/jquery-touchswipe/jquery.touchSwipe.js'></script>
-        <script src='/ui/libs/Vimg/dist/vimg.js'></script>
+        <script src='/ui/libs/vimg/dist/vimg.js'></script>
         <script src='/ui/base/base.init.js'></script>
         <script src='/ui/base/handlers/console.init.js'></script>
         <script src='/ui/base/handlers/customPublish.init.js'></script>
@@ -1318,6 +1314,7 @@
         <script src='/ui/classes/scrolloverflow/scrolloverflow.init.js'></script>
         <script src='/ui/classes/stateswitch/stateswitch.init.js'></script>
         <script src='/ui/classes/tabs/tabs.init.js'></script>
+        <script src='/ui/classes/tooltip/tooltip.init.js'></script>
         <script src='/modules/accordion/accordion.init.js'></script>
         <script src='/modules/breadcrumbs/breadcrumbs.init.js'></script>
         <script src='/modules/header/header.init.js'></script>

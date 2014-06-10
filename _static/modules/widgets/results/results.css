@@ -40,10 +40,12 @@
       padding: 0;
       border-bottom: 1px solid #cccccc; }
       .results.twocols .cols .col1 .component, .results.twocols .cols .col2 .component {
-        border-bottom: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        padding-top: 20px;
         margin-bottom: 20px; }
-        .results.twocols .cols .col1 .component:last-child, .results.twocols .cols .col2 .component:last-child {
-          border-bottom: none; }
+        .results.twocols .cols .col1 .component:first-child, .results.twocols .cols .col2 .component:first-child {
+          padding-top: 0;
+          border-top: none; }
     .results.twocols .cols .col1 {
       padding-right: 10px; }
     .results.twocols .cols .col2 {

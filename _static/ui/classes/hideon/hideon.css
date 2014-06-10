@@ -10,7 +10,7 @@
     display: none !important; } }
 
 .hideondesktop {
-  display: none\9; }
+  display: none\9 !important; }
   @media all and (min-width: 767px) {
     .hideondesktop {
       position: fixed !important;

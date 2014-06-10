@@ -117,6 +117,8 @@
   @media all and (max-width: 767px) {
     .account-dropdown > li {
       padding: 0 !important; }
+      .account-dropdown > li > a:before {
+        display: none !important; }
       .account-dropdown > li ul {
         display: block;
         background: #135fad;

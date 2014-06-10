@@ -198,4 +198,6 @@
     .widget-hero.side-image {
       margin-left: 0; }
       .widget-hero.side-image .image {
-        display: none; } }
+        display: none; }
+      .widget-hero.side-image .copy {
+        padding: 0; } }

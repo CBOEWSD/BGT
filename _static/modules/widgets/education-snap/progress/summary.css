@@ -20,7 +20,8 @@
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
-  border-radius: 25px; }
+  border-radius: 25px;
+  filter: none\9; }
   .progress-summary .bar-wrap .bar {
     background: #313538;
     height: 15px;

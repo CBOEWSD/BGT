@@ -26,13 +26,15 @@
   -moz-box-shadow: inset 0 0 0 1px #c4c4c4;
   -ms-box-shadow: inset 0 0 0 1px #c4c4c4;
   -o-box-shadow: inset 0 0 0 1px #c4c4c4;
-  box-shadow: inset 0 0 0 1px #c4c4c4; }
+  box-shadow: inset 0 0 0 1px #c4c4c4;
+  border: 1px solid #dddddd \9; }
   .widget.noborders {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     -o-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    border: none\9; }
   .widget:before {
     display: block;
     content: '';

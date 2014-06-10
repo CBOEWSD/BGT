@@ -58,7 +58,7 @@
     Navigation.prototype.bind = function() {
       this.log.add('notification', 'Bind method called.', this);
       this.$navIcon.click(this.mobileToggle);
-      $('a', this.$topLis).on('click', function(e) {
+      $('a', this.$topLis).on('click touchend', function(e) {
         if (Response.viewportW() > 767) {
           return self.clickTopLi(e, this);
         } else {
@@ -78,7 +78,7 @@
 
     Navigation.prototype.clickTap = function(e, target) {
       var $parentLi, $subUl, $target;
-      if (Response.viewportW() > 767) {
+      if (Response.viewportW() > 766) {
         return true;
       }
       self.log.add('notification', 'clickTap method called.', this);

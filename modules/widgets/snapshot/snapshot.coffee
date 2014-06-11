@@ -43,8 +43,6 @@ class Snapshot
     self.$index.first().trigger 'click'
     PubSub.publish('LazyLoadPoll')
 
-    console.log(self.$el.width())
-
   ###
     ## this.bind
     Bind up events to change index.

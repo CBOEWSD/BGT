@@ -47,11 +47,13 @@
 
     </section>
 
-    <section class="bottomspan">
-      {{#each bottomspan}}
-        {{{this}}}
-      {{/each}}
-    </section>
+    {{#if bottomspan}}
+      <section class="bottomspan">
+        {{#each bottomspan}}
+          {{{this}}}
+        {{/each}}
+      </section>
+    {{/else}}
 
     {{> ads/span/slim}}
 

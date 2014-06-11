@@ -27,11 +27,6 @@
       {
         "widgets/ticker/bar-simple": "ticker.json"
       }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
     ]
   }
 }

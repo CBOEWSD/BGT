@@ -27,11 +27,6 @@
       {
         "_columns/one": "disclaimer.json"
       }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
     ]
   }
 }

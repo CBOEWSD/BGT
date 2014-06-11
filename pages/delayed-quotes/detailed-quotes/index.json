@@ -30,11 +30,6 @@
       {
         "widgets/ticker/bar-simple": "row2/ticker.json"
       }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
     ]
   }
 }

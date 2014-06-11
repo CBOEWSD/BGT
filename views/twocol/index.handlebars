@@ -29,11 +29,13 @@
 
     </section>
 
-    <section class="bottomspan">
-      {{#each bottomspan}}
-        {{{this}}}
-      {{/each}}
-    </section>
+    {{#if bottomspan}}
+      <section class="bottomspan">
+        {{#each bottomspan}}
+          {{{this}}}
+        {{/each}}
+      </section>
+    {{/if}}
 
   </div>
 </div>

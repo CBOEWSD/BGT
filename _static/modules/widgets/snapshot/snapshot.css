@@ -206,3 +206,20 @@
     display: none; }
   .snapshot .graph .images .image img.mobile {
     display: block; } }
+.snapshot.wide .graph .image .smaller {
+  display: none; }
+@media all and (max-width: 950px) {
+  .snapshot.wide .graph .image .smaller {
+    display: block; }
+  .snapshot.wide .graph .image .larger {
+    display: none; } }
+@media all and (max-width: 767px) {
+  .snapshot.wide .graph .image .smaller {
+    display: none; }
+  .snapshot.wide .graph .image .larger {
+    display: block; } }
+@media all and (max-width: 500px) {
+  .snapshot.wide .graph .image .smaller {
+    display: block; }
+  .snapshot.wide .graph .image .larger {
+    display: none; } }

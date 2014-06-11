@@ -174,7 +174,10 @@ $module: '.wrap-columns-';
     position: relative;
 
     &:after {
-      display: block; content: "";
+      display: block;
+      content: " ";
+      width: 0;
+      overflow: hidden;
       border-bottom: 1px solid $colorGrey2;
       width: 100%;
       position: absolute;
@@ -182,12 +185,28 @@ $module: '.wrap-columns-';
       left: 0;
     }
 
-    &:last-child, &.last-child {
+    &.last-child {
       border-bottom: none;
       padding: 0;
       margin-bottom: 0;
 
-      &:after { display: none; }
+      &:after {
+        position: relative;
+        left: -9999px;
+        content: '   a  ';
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding: 0;
+      margin-bottom: 0;
+
+      &:after {
+        position: relative;
+        left: -9999px;
+        content: '   a  ';
+      }
     }
     &:first-child {
       border-bottom: none;

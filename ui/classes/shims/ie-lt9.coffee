@@ -11,4 +11,6 @@ $ ->
   # Adds a last-child support class that can be used
   # to support certain features on IE8 when the pseudo
   # :last-child is not an option.
-  $('*:last-child').addClass('last-child')
+  $('body *:last-child').each ->
+
+    $(this).addClass('last-child')

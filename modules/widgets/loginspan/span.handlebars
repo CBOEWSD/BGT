@@ -1,4 +1,12 @@
 <div class="login-span">
-  <a href="#login">Login</a> or <a href="#register">Register</a>
-  today for a myCBOE account
+  {{#if loginPage}}
+    Login below or <a href="#">Register</a> today for a myCBOE account
+  {{else}}
+    {{#if registerPage}}
+      <a href="#">Login</a> or Register today for a myCBOE account
+    {{else}}
+      <a href="#login">Login</a> or <a href="#register">Register</a>
+    today for a myCBOE account
+    {{/if}}
+  {{/if}}
 </div>

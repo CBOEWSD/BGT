@@ -30,7 +30,9 @@
                 "breadcrumbs/breadcrumbs": "breadcrumbs.json"
             },
             {
-                "widgets/loginspan/span": ""
+                "widgets/loginspan/span": {
+                  "loginPage": true
+                }
             }
         ]
     },

@@ -27,42 +27,44 @@ if $el.length > 0
 
     $el.each ->
       $this = $(@)
+      data = $this.data()
 
       $this.qtip
         content:
           attr: 'data-tooltip'
           title:
-            text: if $this.data('tooltip-title')
-            then $this.data('tooltip-title')
+            text: if data.tooltipTitle
+            then data.tooltipTitle
             else ' '
 
             button: 'Close'
         style:
           classes: 'qtip-bootstrap'
         show:
-          event: if $this.data('tooltip-show-event')
-          then $this.data('tooltip-show-event')
+          event: if data.tooltipShowEvent
+          then data.tooltipShowEvent
           else 'mouseenter'
 
-          ready: if $this.data('tooltip-onload')
+          ready: if data.tooltipOnload
           then true
           else false
 
         hide:
-          event: if $this.data('tooltip-hide-event')
-          then $this.data('tooltip-hide-event')
+          event: if data.tooltipHideEvent
+          then data.tooltipHideEvent
           else 'mouseleave'
-          inactive: if $this.data('tooltip-show-for')
-          then $this.data('tooltip-show-for')
+
+          inactive: if data.tooltipShowFor
+          then data.tooltipShowFor
           else false
 
         position:
-          my: if $this.data('tooltip-position-my')
-          then $this.data('tooltip-position-my')
+          my: if data.tooltipPositionMy
+          then data.tooltipPositionMy
           else 'top left'
 
-          at: if $this.data('tooltip-position-at')
-          then $this.data('tooltip-position-at')
+          at: if data.tooltipPositionAt
+          then data.tooltipPositionAt
           else 'bottom left'
 
           target: $this

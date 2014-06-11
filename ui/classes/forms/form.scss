@@ -71,6 +71,13 @@ form, .form {
       padding: 0\9;
     }
 
+    &[type="text"],
+    &[type="email"],
+    &[type="password"],
+    &[type="number"] {
+      padding: 5px;
+    }
+
     padding: 5px\9;
     @include border-radius(5px);
   }

@@ -25,6 +25,8 @@ $module: '.search-generic';
     button, input[type="text"] {
       min-height: 30px;
       vertical-align: middle;
+
+      min-height: auto\9;
     }
   }
 

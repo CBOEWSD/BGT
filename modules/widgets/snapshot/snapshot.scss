@@ -280,4 +280,42 @@ $module: '.snapshot';
       }
     }
   }
+
+
+  &.wide {
+    .graph {
+      .image {
+        .smaller {
+          display: none;
+        }
+
+        @media all and (max-width: 950px) {
+          .smaller {
+            display: block;
+          }
+          .larger {
+            display: none;
+          }
+        }
+
+        @media all and (max-width: $screenSmallMax) {
+          .smaller {
+            display: none;
+          }
+          .larger {
+            display: block;
+          }
+        }
+
+        @media all and (max-width: 500px) {
+          .smaller {
+            display: block;
+          }
+          .larger {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

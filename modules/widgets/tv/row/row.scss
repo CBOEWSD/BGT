@@ -73,6 +73,13 @@ $module: '.widget-tv.row';
 
       .image {
         position: relative;
+        z-index: 1;
+
+        img {
+          position: relative;
+          z-index: -1;
+        }
+
         &:before {
           background: $colorGrey1;
           content: '';
@@ -91,15 +98,17 @@ $module: '.widget-tv.row';
             margin: 0 auto;
             top: 50%;
             left: 50%;
+            content: '';
         }
 
         &:hover:before {
           display: block;
+          content: '  ';
         }
 
         &:hover:after {
           display: block;
-          content: 'abc';
+          content: '';
           background: $colorBlue1 url(/ui/classes/icons/assets/canvas.png) no-repeat 15px -360px;
           height: 60px;
           width: 60px;
@@ -113,6 +122,7 @@ $module: '.widget-tv.row';
         .image {
           &:before {
             display: block;
+            content: '   ';
           }
 
           &:after {

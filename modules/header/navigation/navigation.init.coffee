@@ -230,7 +230,6 @@ class Navigation
 
     self.flag = typeof self.flag == 'undefined' ? false : self.flag
 
-
     # If click is the already shown nav we hide the expander
     if $parentLi.hasClass 'shown'
       self.adjustExpander 0
@@ -252,11 +251,13 @@ class Navigation
     which reveals the submenu on desktop.
   ###
   adjustExpander: (height) ->
+
     # Ignore the resize event for now
     if height == 'resize'
-      setTimeout ->
+      return false if $('html').hasClass('lt-ie9')
+      setTimeout =>
         self.adjustExpander 'delayedResize'
-      , 500
+      , 2000
       return false
 
     # If the height is not specified
@@ -267,6 +268,9 @@ class Navigation
       # If we have an active item set height to equal it
       if $activeLi.length > 0
         height = $('> ul', $activeLi).outerHeight()
+
+        console.log $activeLi
+        console.log height
       else
         self.log.add 'error', 'adjustExpander: Height not a number', height
         return false

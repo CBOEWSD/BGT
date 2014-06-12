@@ -1,6 +1,7 @@
 {
     "view": "onecol",
     "title": "Settings",
+    "noad": true,
     "meta": {
         "keywords": "some, keywords",
         "description": "This is a description"

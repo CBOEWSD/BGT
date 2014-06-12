@@ -3,6 +3,7 @@
         "description": "This is a description",
         "keywords": "some, keywords"
     },
+  "noad": true,
     "placeholders": {
         "bottomspan": [
             {

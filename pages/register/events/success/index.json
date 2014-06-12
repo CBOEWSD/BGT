@@ -1,6 +1,7 @@
 {
   "view": "onecol",
   "title": "Seminars and Event Registration",
+  "noad": true,
   "meta": {
     "keywords": "some, keywords",
     "description": "This is a description"

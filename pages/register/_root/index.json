@@ -31,5 +31,6 @@
     ]
   },
   "title": "Register",
-  "view": "twocol"
+  "view": "twocol",
+  "noad": true
 }

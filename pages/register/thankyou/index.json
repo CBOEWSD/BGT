@@ -1,6 +1,7 @@
 {
   "view": "twocol",
   "loggedin": true,
+  "noad": true,
   "title": "myCBOE Settings",
   "meta": {
     "keywords": "some, keywords",

@@ -48,11 +48,6 @@
       {
         "widgets/forms/body/body": "component.json"
       }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "../../_root/content/bottomspan/widget.json"
-      }
     ]
   }
 }

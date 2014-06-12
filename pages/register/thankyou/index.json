@@ -22,11 +22,6 @@
       {
         "widgets/content/content": "signup.md"
       }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
     ]
   }
 }

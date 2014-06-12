@@ -26,10 +26,6 @@
             "widgets/content/content": "welcome.md"
         }, {
             "widgets/forms/body/body": "settings/component.json"
-        }],
-
-        "bottomspan": [{
-            "widgets/widget": "bottomspan/widget.json"
         }]
     }
 }

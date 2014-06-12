@@ -4,11 +4,6 @@
     "keywords": "some, keywords"
   },
   "placeholders": {
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
-    ],
     "col1": [
       {
         "widgets/forms/body/body": "register/component.json"

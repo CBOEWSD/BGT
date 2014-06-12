@@ -5,11 +5,6 @@
     },
   "noad": true,
     "placeholders": {
-        "bottomspan": [
-            {
-                "widgets/widget": "bottomspan/widget.json"
-            }
-        ],
         "col1": [
             {
                 "widgets/forms/body/body": "login/component.json"

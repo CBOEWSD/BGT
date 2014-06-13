@@ -15,11 +15,6 @@
       {
         "widgets/content/content": "styleguide.md"
       }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
     ]
   }
 }

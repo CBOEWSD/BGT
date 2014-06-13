@@ -70,11 +70,6 @@
       {
         "widgets/ticker/bar": "ticker.json"
       }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
     ]
   }
 }

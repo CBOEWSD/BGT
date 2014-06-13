@@ -12,7 +12,7 @@ $module: '.navigation';
 $width: 70%;
 
 @mixin moveLeft($prop) {
-  @include transition($prop .5s ease-in-out);
+  @include transition($prop 1s ease-in-out);
 }
 
 
@@ -29,11 +29,11 @@ $width: 70%;
     left: -80%;
     margin-top: 0;
     border: none;
-    @include moveLeft(transform);
     @include transform(translate3d(0,0,0));
+    @include moveLeft(margin-left);
 
     .showMobileMenu & {
-      @include transform(translate3d(100%, 0, 0));
+      margin-left: 80%;
     }
 
     & > .menu {
@@ -207,22 +207,22 @@ $width: 70%;
   }
 
 
-  // .mobileNavOverlay {
-  //   position: absolute;
-  //   top: 0;
-  //   left: -200%;
-  //   height: 100%;
-  //   width: 100%;
-  //   background: none;
-  //   text-indent: -5000em;
-  //   z-index: 9000;
-  //   @include opacity(.5);
-  //   background: #333;
+  .mobileNavOverlay {
+    position: absolute;
+    top: 0;
+    left: -200%;
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-indent: -5000em;
+    z-index: 9000;
+    @include opacity(.5);
+    background: #333;
 
-  //   .showMobileMenu & {
-  //     left: 0;
-  //   }
-  // }
+    .showMobileMenu & {
+      left: 0;
+    }
+  }
 }
 
 

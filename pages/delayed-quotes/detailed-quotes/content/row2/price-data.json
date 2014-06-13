@@ -4,7 +4,14 @@
     "meta": {
       "items": [
         {
-          "content":"Apr 10, 2014 @ 16:38 ET (DELAYED 15 MINUTES)"
+          "content": [
+            {
+              "text": "Apr 10, 2014 @ 16:38 ET"
+            },
+            {
+              "text": "(DELAYED 15 MINUTES)"
+            }
+          ]
         }
       ]
     }

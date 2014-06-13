@@ -64,8 +64,8 @@ $module: '.wrap-columns-';
         &.large-center { width: 100%; }
 
         .item {
-          margin: 0 5px;
-          display: inline-block;
+          margin: 0;
+          display: block;
 
           &:first-child {
             margin-left: 0;

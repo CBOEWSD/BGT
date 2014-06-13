@@ -150,4 +150,14 @@ $module: '.education-snapshot';
       }
     }
   }
+
+  @media all and (max-width: 350px) {
+    .title-bar {
+      h2 {
+        font: {
+          size: 1em;
+        }
+      }
+    }
+  }
 }

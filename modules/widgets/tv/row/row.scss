@@ -209,5 +209,16 @@ $module: '.widget-tv.row';
         }
       }
     }
+
+    .title {
+      position: relative;
+      padding-right: 87px;
+
+      .expand, .viewall {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+      }
+    }
   }
 }

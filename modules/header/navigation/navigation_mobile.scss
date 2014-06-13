@@ -32,7 +32,7 @@ $width: 70%;
     @include moveLeft(transform);
 
     .showMobileMenu & {
-      @include transform(translate(100%, 0));
+      @include transform(translate3d(100%, 0, 0));
     }
 
     & > .menu {

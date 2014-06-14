@@ -46,6 +46,10 @@ $module: '.table';
   }
 }
 
+.table-wrapper {
+  overflow-x:scroll;
+}
+
 #{$module} {
   width: 100%;
 

@@ -33,6 +33,7 @@ class SideNavigation
     self.$topAnchors.bind 'click touchstart', self.toggleMenu
 
     PubSub.subscribe 'DomChange', self.scrollEvent
+    PubSub.subscribe 'resize', self.scrollEvent
     $(document).bind 'contScroll', self.scrollEvent
 
   ###

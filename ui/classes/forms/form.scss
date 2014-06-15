@@ -106,12 +106,12 @@ form, .form {
 
 select, form select {
   cursor: pointer;
-  background-image: url(/ui/classes/forms/assets/dropdown-arrow.png);
+  background-image: url(/ui/classes/forms/assets/dropdown-arrow-down.png);
   background-repeat: no-repeat;
   background-color: $colorBlue1;
   //background-position: right 5px top -32px;
 
-  background-position: right center;
+  background-position: 97% center;
   border-right: 10px solid transparent;
   color: #fff;
   @include border-radius(3px);

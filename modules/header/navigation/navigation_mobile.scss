@@ -20,7 +20,7 @@ $width: 70%;
   #{$module} {
     position: fixed;
     overflow-y: auto;
-    top: 0;
+    top: 45px;
     width: 80%;
     height: 100%;
     background: #fff;
@@ -190,13 +190,15 @@ $width: 70%;
 
   body {
     left: 0;
-    position: relative;
+    // position: relative;
     -webkit-backface-visibility: hidden;
+  }
+  html {
+    position: relative;
   }
 
   html.showMobileMenu, html.showMobileMenu body {
       max-width:100%;
-      max-height:100%;
       overflow:hidden;
   }
 

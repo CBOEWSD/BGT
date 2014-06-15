@@ -203,6 +203,10 @@ $3dsize: 4px;
                 text-decoration: none;
                 display: block;
                 padding: 5px 0;
+
+                &:hover, &:active {
+                  color: $colorBlue1;
+                }
               }
 
               > ul {
@@ -255,6 +259,10 @@ $3dsize: 4px;
               &:last-child {
                 border-bottom: none;
                 padding-bottom: 10px;
+              }
+
+              &:hover, &:active {
+                color: $colorBlue1;
               }
             }
           }

@@ -109,7 +109,9 @@ select, form select {
   background-image: url(/ui/classes/forms/assets/dropdown-arrow.png);
   background-repeat: no-repeat;
   background-color: $colorBlue1;
-  background-position: right 5px top -32px;
+  //background-position: right 5px top -32px;
+
+  background-position: right top;
   border-right: 10px solid transparent;
   color: #fff;
   @include border-radius(3px);
@@ -127,7 +129,6 @@ select, form select {
 
   background-image: none!important\9;
   padding-right: 5px\9;
-
   background-image: none\9;
 
   html[data-useragent*='MSIE 10.0'] & {

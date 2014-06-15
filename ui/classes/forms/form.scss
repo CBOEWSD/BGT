@@ -111,7 +111,7 @@ select, form select {
   background-color: $colorBlue1;
   //background-position: right 5px top -32px;
 
-  background-position: right top -32px;
+  background-position: right center;
   border-right: 10px solid transparent;
   color: #fff;
   @include border-radius(3px);

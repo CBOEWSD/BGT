@@ -39,3 +39,8 @@
   padding: 15px;
   margin: 0;
   display: none; }
+@media print {
+  .accordion dt:after {
+    display: none; }
+  .accordion dd {
+    display: block; } }

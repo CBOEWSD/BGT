@@ -204,4 +204,7 @@
         padding: 0; } }
   @media print {
     .widget-hero.hero .slides .slide {
-      background: #21a825 !important; } }
+      background: #21a825 !important; }
+    .widget-hero.copybased.slim .slides .slide {
+      position: relative;
+      left: 0; } }

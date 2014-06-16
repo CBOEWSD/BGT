@@ -37,7 +37,7 @@
       opacity: 0.2;
       cursor: default; }
   .ticker-bar.simple .bar {
-    overflow: scroll; }
+    overflow: hidden; }
   .ticker-bar .bar {
     overflow: hidden;
     white-space: nowrap; }
@@ -50,6 +50,10 @@
       .ticker-bar .bar .ticker-item:last-child {
         border-right: none; }
     @media all and (max-width: 767px) { }
+  @media print {
+    .ticker-bar .bar {
+      overflow: auto;
+      white-space: normal; } }
 
 .ticker-item {
   display: inline-block;
@@ -71,3 +75,8 @@
     font-size: 0.9em;
     font-weight: 700;
     text-align: right; }
+  @media print {
+    .ticker-item {
+      padding: 0 15px; }
+      .ticker-item:first-child, .ticker-item:last-child {
+        padding: 0 15px; } }

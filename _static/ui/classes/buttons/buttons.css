@@ -16,6 +16,7 @@ button, a.button, .button {
   text-decoration: none;
   color: white;
   border: none;
+  margin-bottom: 2px;
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -129,3 +130,6 @@ button, a.button, .button {
     padding: 10px 30px; }
   button.notbold, a.button.notbold, .button.notbold {
     font-weight: 400; }
+  @media all and (max-width: 900px) {
+    button.large, a.button.large, .button.large {
+      padding: 10px 10px; } }

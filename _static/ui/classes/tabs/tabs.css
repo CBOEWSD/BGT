@@ -66,3 +66,6 @@
     -ms-animation: fadeIn 0.6s;
     animation: fadeIn 0.6s;
     display: block; }
+@media print {
+  .tabs-content .tab {
+    display: block; } }

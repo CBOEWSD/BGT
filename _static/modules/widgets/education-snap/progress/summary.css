@@ -34,3 +34,6 @@
     .progress-summary .bar-wrap .bar .prog {
       background: #29d32c;
       height: 15px; }
+@media print {
+  .progress-summary .bar-wrap .bar .prog {
+    background: #dddddd !important; } }

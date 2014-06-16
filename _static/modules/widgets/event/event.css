@@ -21,7 +21,7 @@
     margin: 0 0 5px 0; }
   .event dl dd {
     margin: 0; }
-@media all and (max-width: 767px) {
+@media all and (max-width: 850px) {
   .event ul {
     margin: 10px 0; }
     .event ul li strong, .event ul li span {

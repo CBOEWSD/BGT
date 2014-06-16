@@ -41,3 +41,7 @@
   color: #135fad; }
   .qtip-content a:hover, .qtip-content a:active {
     color: #313538; }
+
+@media print {
+  .qtip {
+    display: none !important; } }

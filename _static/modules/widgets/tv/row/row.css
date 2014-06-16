@@ -129,6 +129,8 @@
     clear: both; }
   .widget-tv.row .meta {
     margin: 10px 0; }
+    .widget-tv.row .meta span {
+      display: inline-block; }
   @media screen and (max-width: 900px) {
     .widget-tv.row .items .item {
       padding: 5px; }

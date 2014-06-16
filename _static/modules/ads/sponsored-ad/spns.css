@@ -26,3 +26,6 @@
     .sponsered .results, .sponsered .ad {
       display: block;
       width: 100%; } }
+  @media print {
+    .sponsered .ad {
+      display: none; } }

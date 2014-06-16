@@ -102,3 +102,6 @@
       .widget-list.showad .ad {
         float: none;
         width: auto; } }
+  @media print {
+    .widget-list.showad ul {
+      width: 100%; } }

@@ -231,15 +231,22 @@
     Navigation.prototype.adjustExpander = function(height) {
       var $activeLi;
       if (height === 'resize') {
-        setTimeout(function() {
-          return self.adjustExpander('delayedResize');
-        }, 500);
+        if ($('html').hasClass('lt-ie9')) {
+          return false;
+        }
+        setTimeout((function(_this) {
+          return function() {
+            return self.adjustExpander('delayedResize');
+          };
+        })(this), 2000);
         return false;
       }
       if (typeof height !== 'number') {
         $activeLi = self.$topLis.siblings('.shown');
         if ($activeLi.length > 0) {
           height = $('> ul', $activeLi).outerHeight();
+          console.log($activeLi);
+          console.log(height);
         } else {
           self.log.add('error', 'adjustExpander: Height not a number', height);
           return false;

@@ -62,6 +62,9 @@
     .table-title .right {
       margin-bottom: 10px; } }
 
+.table-wrapper {
+  overflow-x: scroll; }
+
 .table {
   width: 100%;
   border-collapse: collapse; }

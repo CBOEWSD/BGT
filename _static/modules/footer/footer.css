@@ -27,6 +27,8 @@
         display: block;
         margin: 10px 0;
         text-decoration: none; }
+        .footer .menu-1 ul a:active, .footer .menu-1 ul a:hover, .footer .menu-2 ul a:active, .footer .menu-2 ul a:hover {
+          text-decoration: underline; }
   .footer .disclaimer {
     float: left;
     position: relative;

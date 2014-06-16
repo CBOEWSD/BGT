@@ -16,6 +16,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
         <link href='/ui/base/base.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/ui/base/legacy.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/ui/base/print.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/views/default/default-print.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/views/default/default.css' media='all' rel='stylesheet' type='text/css'>
@@ -51,6 +52,7 @@
         <link href='/modules/accordion/accordion.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/modules/ads/advert.css' media='all' rel='stylesheet' type='text/css'>
+        <link href='/modules/ads/print.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/modules/ads/sponsored-ad/spns.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/modules/breadcrumbs/breadcrumbs.css' media='all' rel='stylesheet'
@@ -61,6 +63,7 @@
         type='text/css'>
         <link href='/modules/header/navigation/navigation_mobile.css' media='all'
         rel='stylesheet' type='text/css'>
+        <link href='/modules/header/print.css' media='all' rel='stylesheet' type='text/css'>
         <link href='/modules/header/topbar/account/account.css' media='all' rel='stylesheet'
         type='text/css'>
         <link href='/modules/header/topbar/topbar.css' media='all' rel='stylesheet'
@@ -775,29 +778,19 @@
                                     </div>
                                     <div class="component">
                                         <section class="form-body ">
-                                            <section class="form search-quotes-form">
-                                                <label for="symbol">
-                                                    Enter a Stock or Index Symbol
-                                                </label>
+                                            <section class="form symbol-form">
+                                                <div>
+                                                    <label class="inline-block small">
+                                                        <input type="radio" name="type" checked="checked">begins with
+                                                    </label>
+                                                    <label class="inline-block small">
+                                                        <input type="radio" name="type">contains
+                                                    </label>
+                                                </div>
                                                 <input type="text" name="symbol">
-                                                <label class="notbold">
-                                                    <input type="checkbox" name="alloptions">All exchange option quotes
-                                                    (if multiply listed)
-                                                </label>
-                                                <label class="notbold">
-                                                    <input type="radio" name="filter" checked="true">List near term at-the-money
-                                                    options &amp;
-                                                    <strong>weekly</strong>if available.
-                                                </label>
-                                                <label class="notbold">
-                                                    <input type="radio" name="filter">List all
-                                                    <strong>options, LEAPS, Credit Options
-                                                        &amp; Weeklys</strong>if
-                                                    available.
-                                                </label>
                                                 <div class="buttons">
                                                     <button type="submit" class="button blue">
-                                                        Search
+                                                        Search Symbols
                                                     </button>
                                                     <button type="reset">
                                                         Reset
@@ -808,7 +801,18 @@
                                                 <article class="content">
                                                     <p>
                                                         <strong>
-                                                            <a href="#">Download .TXT File.</a>
+                                                            <a href="#">Market Data Express
+                                                                - Historical Options
+                                                                Data</a>
+                                                        </strong>
+                                                    </p>
+                                                    <p>
+                                                        <strong>
+                                                            <a href="#">Get free real-time
+                                                                spread order pricing
+                                                                with COBWebSM -
+                                                                CBOE&#39;s Complex
+                                                                Order Book</a>
                                                         </strong>
                                                     </p>
                                                 </article>
@@ -843,104 +847,6 @@
                                             </p>
                                         </article>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="bottomspan">
-                    <div class="widget  noborders ">
-                        <div class="widget-list simple  list-columns  two  noborder  collapse   showad ">
-                            <h3 class="widget-title ">
-                                Sponsored Stories
-                                <div class="promo">
-                                    <a href="#" class="icon-logo tradestation
-      ">
-                                    </a>
-                                </div>
-                            </h3>
-                            <ul>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            Trade options, stocks, futures + forex on a single platform. thinkorswon by TD
-                                            Ameritrade.
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            Pay less to invest with $7.95 online trades at fidelity. Advertisement
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            OPTIONS+ is the new mobile options calculator for iPhone users. Download it today.
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            Free stock and option educational webinars at tradeMONSTER - Register today!
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            TradeKin covers transfer fess up to $150. Switch today and pay only $4.95/trade.
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            Futures Trades Made Easy. Learn more at Futures Knowledge Center. Advertisement
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            Get TradeStation FREE until 2014 when you can open an account today.
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            Trade options, stocks, futures + forex on a single platform. thinkorswing by TD
-                                            ameritrade. Advertisement.
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            Professional trading solutions for active traders.
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" title="">
-                                        <p>
-                                            Professional trading solutions for active traders.
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="ad">
-                                <div class="advert 300" style="text-align: center">
-                                    <img src="/ui/assets/images/placeholders/blank.gif" data-echo="/ui/assets/images/placeholders/advert-1.jpg"
-                                    alt="" class="background" style="display: inline-block; margin: 10px 0;">
-                                    <noscript>
-                                        <img src="/ui/assets/images/placeholders/advert-1.jpg" alt="" class="background"
-                                        style="display: inline-block; margin: 10px 0;">
-                                    </noscript>
                                 </div>
                             </div>
                         </div>
@@ -1115,5 +1021,8 @@
         <!--[if lt IE 9]>
   <script src="/ui/classes/shims/ie-lt9.js" type="text/javascript"></script>
   <![endif]-->
+        <!-- AddThis Pro BEGIN -->
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-514e06db5cb82db4"></script>
+        <!-- AddThis Pro END -->
     </body>
 </html>

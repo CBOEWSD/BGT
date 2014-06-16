@@ -25,9 +25,11 @@ pages.on 'done', (files) ->
 
   # Create phantom server
   Phantom.create (ph) ->
+
     ph.createPage (page) ->
       i = 0
 
+      page.set('settings.webSecurityEnabled', true)
       page.set('viewportSize', {width:1200,height:18000})
 
       openPages = ->
@@ -42,7 +44,9 @@ pages.on 'done', (files) ->
 
             if i < files.length - 1
               i++
-              openPages()
+              setTimeout ->
+                openPages()
+              , 5000
             else
               console.log('done!')
               ph.exit()

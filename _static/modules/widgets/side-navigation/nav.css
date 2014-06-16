@@ -85,3 +85,6 @@
         .side-navigation > ul > li ul {
           max-height: 0;
           overflow: hidden; } }
+  @media print {
+    .side-navigation {
+      display: none; } }

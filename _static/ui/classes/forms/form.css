@@ -52,6 +52,8 @@ form input, form select, .form input, .form select {
     border: none\9 !important;
     background: none\9;
     padding: 0\9; }
+  form input[type="text"], form input[type="email"], form input[type="password"], form input[type="number"], form select[type="text"], form select[type="email"], form select[type="password"], form select[type="number"], .form input[type="text"], .form input[type="email"], .form input[type="password"], .form input[type="number"], .form select[type="text"], .form select[type="email"], .form select[type="password"], .form select[type="number"] {
+    padding: 5px; }
 form .buttons, .form .buttons {
   margin: 10px 0; }
   form .buttons.margin-20, .form .buttons.margin-20 {
@@ -65,10 +67,10 @@ form select.error, form label.error > select, .form select.error, .form label.er
 
 select, form select {
   cursor: pointer;
-  background-image: url(/ui/classes/forms/assets/dropdown-arrow.png);
+  background-image: url(/ui/classes/forms/assets/dropdown-arrow-down.png);
   background-repeat: no-repeat;
   background-color: #135fad;
-  background-position: right 5px top -32px;
+  background-position: 97% center;
   border-right: 10px solid transparent;
   color: white;
   -webkit-border-radius: 3px;
@@ -84,7 +86,8 @@ select, form select {
   text-indent: 0.01px;
   text-overflow: '';
   background-image: none !important \9;
-  padding-right: 5px\9; }
+  padding-right: 5px\9;
+  background-image: none\9; }
   select::-ms-expand, form select::-ms-expand {
     display: none; }
   html[data-useragent*='MSIE 10.0'] select, html[data-useragent*='MSIE 10.0'] form select {

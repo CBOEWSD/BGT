@@ -24,13 +24,14 @@
     loadCss('/ui/libs/qtip2/jquery.qtip.css');
     require(['/ui/libs/qtip2/jquery.qtip.js'], function() {
       return $el.each(function() {
-        var $this;
+        var $this, data;
         $this = $(this);
+        data = $this.data();
         return $this.qtip({
           content: {
             attr: 'data-tooltip',
             title: {
-              text: $this.data('tooltip-title') ? $this.data('tooltip-title') : ' ',
+              text: data.tooltipTitle ? data.tooltipTitle : ' ',
               button: 'Close'
             }
           },
@@ -38,16 +39,16 @@
             classes: 'qtip-bootstrap'
           },
           show: {
-            event: $this.data('tooltip-show-event') ? $this.data('tooltip-show-event') : 'mouseenter',
-            ready: $this.data('tooltip-onload') ? true : false
+            event: data.tooltipShowEvent ? data.tooltipShowEvent : 'mouseenter',
+            ready: data.tooltipOnload ? true : false
           },
           hide: {
-            event: $this.data('tooltip-hide-event') ? $this.data('tooltip-hide-event') : 'mouseleave',
-            inactive: $this.data('tooltip-show-for') ? $this.data('tooltip-show-for') : false
+            event: data.tooltipHideEvent ? data.tooltipHideEvent : 'mouseleave',
+            inactive: data.tooltipShowFor ? data.tooltipShowFor : false
           },
           position: {
-            my: $this.data('tooltip-position-my') ? $this.data('tooltip-position-my') : 'top left',
-            at: $this.data('tooltip-position-at') ? $this.data('tooltip-position-at') : 'bottom left',
+            my: data.tooltipPositionMy ? data.tooltipPositionMy : 'top left',
+            at: data.tooltipPositionAt ? data.tooltipPositionAt : 'bottom left',
             target: $this,
             adjust: {
               scroll: true,

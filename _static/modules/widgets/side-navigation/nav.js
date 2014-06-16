@@ -38,6 +38,7 @@
       self.$topAnchors = $('>ul>li>a', self.$el);
       self.$topAnchors.bind('click touchstart', self.toggleMenu);
       PubSub.subscribe('DomChange', self.scrollEvent);
+      PubSub.subscribe('resize', self.scrollEvent);
       return $(document).bind('contScroll', self.scrollEvent);
     };
 

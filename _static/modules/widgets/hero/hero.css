@@ -1,6 +1,7 @@
 /*
   Module: Hero
-  Description: Hero module renders a single background image and has functionality to allow for multiple overlay slides.
+  Description: Hero module renders a single background image and has
+  functionality to allow for multiple overlay slides.
 */
 @-moz-keyframes fadeIn {
   0% {
@@ -201,3 +202,6 @@
         display: none; }
       .widget-hero.side-image .copy {
         padding: 0; } }
+  @media print {
+    .widget-hero.hero .slides .slide {
+      background: #21a825 !important; } }

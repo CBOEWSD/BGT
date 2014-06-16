@@ -6,21 +6,27 @@
   .navigation {
     position: fixed;
     overflow-y: auto;
-    top: 45px;
+    top: 0;
+    padding-top: 45px;
     width: 80%;
     height: 100%;
     background: white;
     z-index: 9001;
-    left: -100%;
+    left: -80%;
     margin-top: 0;
     border: none;
-    -webkit-transition: left, 0.5s;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: margin-left, 0.5s;
     -webkit-transition-delay: ease-in-out;
-    -moz-transition: left, 0.5s, ease-in-out;
-    -o-transition: left, 0.5s, ease-in-out;
-    transition: left 0.5s ease-in-out; }
+    -moz-transition: margin-left, 0.5s, ease-in-out;
+    -o-transition: margin-left, 0.5s, ease-in-out;
+    transition: margin-left 0.5s ease-in-out; }
     .showMobileMenu .navigation {
-      left: 0; }
+      margin-left: 80%; }
     .navigation > .menu {
       overflow-y: auto;
       height: 100%; }
@@ -104,7 +110,8 @@
         -ms-transform: translateX(-100%);
         -o-transform: translateX(-100%);
         transform: translateX(-100%);
-        -webkit-backface-visibility: hidden; }
+        -webkit-backface-visibility: hidden;
+        padding-top: 45px; }
         .navigation .menu > li > ul > li, .navigation .menu > li > ul.hasthird > li {
           display: none; }
           .navigation .menu > li > ul > li.menu, .navigation .menu > li > ul.hasthird > li.menu {
@@ -132,7 +139,8 @@
     position: relative; }
   html.showMobileMenu, html.showMobileMenu body {
     max-width: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
   .mobileNavOverlay {
     position: absolute;
     top: 0;
@@ -144,7 +152,12 @@
     z-index: 9000;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
     opacity: 0.5;
-    background: #333333; }
+    background: #333333;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
     .showMobileMenu .mobileNavOverlay {
       left: 0; } }
 

@@ -37,7 +37,7 @@
           .wrap-columns-outer .wrap-meta .wrap-meta-item.large-center {
             width: 100%; }
           .wrap-columns-outer .wrap-meta .wrap-meta-item .item {
-            margin: 0 5px;
+            margin: 0;
             display: inline-block; }
             .wrap-columns-outer .wrap-meta .wrap-meta-item .item:first-child {
               margin-left: 0; }
@@ -93,18 +93,30 @@
     position: relative; }
     .wrap-columns-inner .component:after {
       display: block;
-      content: "";
+      content: " ";
+      width: 0;
+      overflow: hidden;
       border-bottom: 1px solid #dddddd;
       width: 100%;
       position: absolute;
       bottom: -15px;
       left: 0; }
-    .wrap-columns-inner .component:last-child, .wrap-columns-inner .component.last-child {
+    .wrap-columns-inner .component.last-child {
       border-bottom: none;
       padding: 0;
       margin-bottom: 0; }
-      .wrap-columns-inner .component:last-child:after, .wrap-columns-inner .component.last-child:after {
-        display: none; }
+      .wrap-columns-inner .component.last-child:after {
+        position: relative;
+        left: -9999px;
+        content: '   a  '; }
+    .wrap-columns-inner .component:last-child {
+      border-bottom: none;
+      padding: 0;
+      margin-bottom: 0; }
+      .wrap-columns-inner .component:last-child:after {
+        position: relative;
+        left: -9999px;
+        content: '   a  '; }
     .wrap-columns-inner .component:first-child {
       border-bottom: none;
       padding: 0; }
@@ -135,3 +147,7 @@
         padding-right: 10px; }
       .wrap-columns-inner.margin-none .column {
         margin: 0; } }
+  @media print {
+    .wrap-columns-inner.two.slimright .column {
+      display: block;
+      width: 100% !important; } }

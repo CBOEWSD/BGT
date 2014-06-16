@@ -225,6 +225,8 @@
               text-decoration: none;
               display: block;
               padding: 5px 0; }
+              .navigation .menu > li > ul > li.menu li a:hover, .navigation .menu > li > ul > li.menu li a:active {
+                color: #135fad; }
             .navigation .menu > li > ul > li.menu li > ul {
               margin-left: 15px; }
               .navigation .menu > li > ul > li.menu li > ul > li {
@@ -252,6 +254,8 @@
             .navigation .menu > li > ul > li.feed a:last-child {
               border-bottom: none;
               padding-bottom: 10px; }
+            .navigation .menu > li > ul > li.feed a:hover, .navigation .menu > li > ul > li.feed a:active {
+              color: #135fad; }
       .navigation .menu > li.social {
         float: right;
         margin-right: 12px; }

@@ -430,3 +430,7 @@ blockquote {
   padding: 1px 1px 1px 20px;
   color: #313538;
   font-style: italic; }
+
+@media print {
+  .container {
+    width: 700px; } }

@@ -54,7 +54,11 @@
           width: 50%;
           padding: 0 15px; } }
       .widget-tv.row .items .item .image {
-        position: relative; }
+        position: relative;
+        z-index: 1; }
+        .widget-tv.row .items .item .image img {
+          position: relative;
+          z-index: -1; }
         .widget-tv.row .items .item .image:before {
           background: #313538;
           content: '';
@@ -71,12 +75,14 @@
           position: absolute;
           margin: 0 auto;
           top: 50%;
-          left: 50%; }
+          left: 50%;
+          content: ''; }
         .widget-tv.row .items .item .image:hover:before {
-          display: block; }
+          display: block;
+          content: '  '; }
         .widget-tv.row .items .item .image:hover:after {
           display: block;
-          content: 'abc';
+          content: '';
           background: #135fad url(/ui/classes/icons/assets/canvas.png) no-repeat 15px -360px;
           height: 60px;
           width: 60px;
@@ -89,7 +95,8 @@
           border-radius: 30px;
           text-indent: -5000em; }
       .widget-tv.row .items .item.active .image:before {
-        display: block; }
+        display: block;
+        content: '   '; }
       .widget-tv.row .items .item.active .image:after {
         display: block;
         content: 'Now Playing';
@@ -137,4 +144,11 @@
       .widget-tv.row .items.mobileExpandable .item h3 {
         font-size: 1.1em; }
       .widget-tv.row .items.mobileExpandable .item p {
-        display: none; } }
+        display: none; }
+    .widget-tv.row .title {
+      position: relative;
+      padding-right: 87px; }
+      .widget-tv.row .title .expand, .widget-tv.row .title .viewall {
+        display: inline-block;
+        position: absolute;
+        right: 0; } }

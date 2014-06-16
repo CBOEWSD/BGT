@@ -215,6 +215,3 @@
               padding: 5px 10px;
               position: relative;
               left: 0; } }
-  @media print {
-    .header .right {
-      display: none; } }

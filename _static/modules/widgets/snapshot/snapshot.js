@@ -48,8 +48,7 @@
     Snapshot.prototype.loaded = function() {
       self.$el.addClass('loaded');
       self.$index.first().trigger('click');
-      PubSub.publish('LazyLoadPoll');
-      return console.log(self.$el.width());
+      return PubSub.publish('LazyLoadPoll');
     };
 
 

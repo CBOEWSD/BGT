@@ -87,3 +87,6 @@
       .education-snapshot .next ul li {
         display: block;
         width: 100%; } }
+  @media all and (max-width: 350px) {
+    .education-snapshot .title-bar h2 {
+      font-size: 1em; } }

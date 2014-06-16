@@ -61,3 +61,13 @@
       display: table; }
       .view-default .row.secondRow .column1 {
         display: table-footer-group; } }
+@media print {
+  .view-default .row .column1 .row {
+    margin: 0; }
+    .view-default .row .column1 .row .column50, .view-default .row .column1 .row .col {
+      display: block;
+      width: 100%;
+      border: none;
+      margin: 10px 0; }
+      .view-default .row .column1 .row .column50:first-child, .view-default .row .column1 .row .col:first-child {
+        margin-top: 0; } }

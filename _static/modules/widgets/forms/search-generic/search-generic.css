@@ -9,7 +9,8 @@
   font-size: 1.1em; }
 .search-generic.focus button, .search-generic.focus input[type="text"] {
   min-height: 30px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  min-height: auto\9; }
 @media all and (max-width: 600px) {
   .search-generic input[type="text"], .search-generic button {
     display: block;

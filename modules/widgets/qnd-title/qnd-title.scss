@@ -44,4 +44,14 @@ $module: '.qnd-title';
       margin-top: 10px;
     }
   }
+
+  @media print {
+    .search-component {
+      display: none;
+    }
+
+    .left {
+      width: 100%;
+    }
+  }
 }

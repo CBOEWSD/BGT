@@ -19,3 +19,9 @@ $class: '.qtip-';
     }
   }
 }
+
+.qtip {
+  @media print {
+    display: none !important;
+  }
+}

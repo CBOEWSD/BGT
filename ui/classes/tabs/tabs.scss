@@ -46,4 +46,10 @@ $class: '.tabs-';
       display: block;
     }
   }
+
+  @media print {
+    .tab {
+      display: block;
+    }
+  }
 }

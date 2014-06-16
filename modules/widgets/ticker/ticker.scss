@@ -78,6 +78,13 @@ $module: '.ticker-';
       //overflow-x: scroll;
     }
   }
+
+  @media print {
+    .bar {
+      overflow: auto;
+      white-space: normal;
+    }
+  }
 }
 
 #{$module}item {
@@ -121,5 +128,12 @@ $module: '.ticker-';
       weight: 700;
     }
     text-align: right;
+  }
+
+  @media print {
+    &:first-child, &:last-child {
+      padding: 0 15px;
+    }
+    padding: 0 15px;
   }
 }

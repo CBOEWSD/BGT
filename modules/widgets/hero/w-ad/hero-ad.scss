@@ -35,4 +35,12 @@ $module: '.hero-ad';
       }
     }
   }
+
+  @media print {
+    &.adright {
+      .a-placement {
+        display: none;
+      }
+    }
+  }
 }

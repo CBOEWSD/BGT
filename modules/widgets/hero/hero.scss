@@ -269,5 +269,10 @@ $3dsize: 6px;
         }
       }
     }
+
+    &.copybased.slim .slides .slide {
+      position: relative;
+      left: 0;
+    }
   }
 }

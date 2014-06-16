@@ -65,4 +65,17 @@ $module: '.accordion';
     margin: 0;
     display: none;
   }
+
+  @media print {
+
+    dt {
+      &:after {
+        display: none;
+      }
+    }
+
+    dd {
+      display: block;
+    }
+  }
 }

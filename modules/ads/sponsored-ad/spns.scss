@@ -47,4 +47,10 @@ $module: '.sponsered';
       width: 100%;
     }
   }
+
+  @media print {
+    .ad {
+      display: none;
+    }
+  }
 }

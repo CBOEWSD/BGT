@@ -15,10 +15,6 @@
             "widgets/widget-title": {
                 "widget": {
                     "title": "MyCBOE Login",
-                    "promo": {
-                        "class": "tradestation",
-                        "url": "#"
-                    },
                     "classes": ["blueborder"]
                 }
             }

@@ -17,10 +17,6 @@
         "widgets/widget-title": {
           "widget": {
             "title": "Seminars and Event Registration",
-            "promo": {
-              "class": "tradestation",
-              "url": "#"
-            },
             "classes": [
               "blueborder"
             ]

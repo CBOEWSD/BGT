@@ -156,4 +156,10 @@ button, a#{$class}, #{$class} {
       weight: 400;
     }
   }
+
+  @media all and (max-width: 900px) {
+    &.large {
+      padding: 10px 10px;
+    }
+  }
 }

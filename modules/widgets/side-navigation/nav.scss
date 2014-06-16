@@ -136,4 +136,8 @@ $pullSide: 6px;
       }
     }
   }
+
+  @media print {
+    display: none;
+  }
 }

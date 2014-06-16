@@ -1,0 +1,17 @@
+@media print {
+  .right {
+    display: none;
+  }
+
+  .icon-logo.cboe {
+    color: #000 !important;
+    text-indent: 0;
+    font: {
+      size: 1.7em;
+    }
+  }
+
+  .header {
+    height: 53px;
+  }
+}

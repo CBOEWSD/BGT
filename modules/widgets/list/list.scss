@@ -155,4 +155,12 @@ $module: '.widget-list';
     }
   }
 
+  @media print {
+    &.showad {
+      ul {
+        width: 100%;
+      }
+    }
+  }
+
 }

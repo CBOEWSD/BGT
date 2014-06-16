@@ -265,6 +265,16 @@ $module: '.wrap-columns-';
         margin: 0;
       }
     }
+  }
 
+  @media print {
+    &.two {
+      &.slimright {
+        .column {
+          display: block;
+          width: 100% !important;
+        }
+      }
+    }
   }
 }

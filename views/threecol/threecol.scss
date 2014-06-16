@@ -121,4 +121,13 @@ $view: '.view-threecol';
       }
     }
   }
+
+  @media print {
+    .main {
+      .col1, .col2, .col3 {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 }

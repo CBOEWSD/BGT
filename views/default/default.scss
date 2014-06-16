@@ -99,4 +99,24 @@ $view: '.view-default';
       }
     }
   }
+
+  @media print {
+    .row {
+      .column1 {
+        .row {
+          margin: 0;
+          .column50, .col {
+            display: block;
+            width: 100%;
+            border: none;
+            margin: 10px 0;
+
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

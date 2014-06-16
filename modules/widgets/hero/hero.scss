@@ -1,6 +1,7 @@
 /*
   Module: Hero
-  Description: Hero module renders a single background image and has functionality to allow for multiple overlay slides.
+  Description: Hero module renders a single background image and has
+  functionality to allow for multiple overlay slides.
 */
 
 @import './ui/base/settings';
@@ -256,6 +257,16 @@ $3dsize: 6px;
 
       .copy {
         padding: 0;
+      }
+    }
+  }
+
+  @media print {
+    &.hero {
+      .slides {
+        .slide {
+          background: $colorGreen1 !important;
+        }
       }
     }
   }

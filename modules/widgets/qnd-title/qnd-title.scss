@@ -15,7 +15,7 @@ $module: '.qnd-title';
   }
 
   .left {
-    @include column(8);
+    @include column(7);
     padding-left: 0;
 
     &>h1, &>select {
@@ -30,7 +30,7 @@ $module: '.qnd-title';
   }
 
   .search-component {
-    @include column(4);
+    @include column(5);
     padding-right: 0;
     margin-top: -10px;
   }

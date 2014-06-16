@@ -21,6 +21,7 @@ button, a#{$class}, #{$class} {
   text-decoration: none;
   color: #fff;
   border: none;
+  margin-bottom: 2px;
 
   @include box-shadow(1px 1px 0 rgba(0,0,0,.1));
 

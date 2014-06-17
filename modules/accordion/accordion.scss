@@ -43,13 +43,14 @@ $module: '.accordion';
       line-height: 20px;
     }
 
-    &:hover {
+    &:hover, &:active {
       background: lighten($colorBlue2, 5%);
+      color: #fff;
     }
 
     &.expanded {
       background: lighten($colorGrey1, 30%);
-
+      color: #fff;
 
       &:hover {
         background: lighten($colorGrey1, 35%);

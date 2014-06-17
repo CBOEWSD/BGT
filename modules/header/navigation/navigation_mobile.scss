@@ -178,6 +178,8 @@ $width: 70%;
           margin: 0;
           display: table;
           background: $colorBlue1;
+          position: relative;
+          right: 0;
 
           > a {
             display: table-cell !important;

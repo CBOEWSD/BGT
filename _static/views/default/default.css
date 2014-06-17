@@ -63,7 +63,8 @@
         display: table-footer-group; } }
 @media print {
   .view-default .row .column1 .row {
-    margin: 0; }
+    margin: 0;
+    display: block; }
     .view-default .row .column1 .row .column50, .view-default .row .column1 .row .col {
       display: block;
       width: 100%;

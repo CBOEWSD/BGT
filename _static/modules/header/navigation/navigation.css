@@ -257,8 +257,9 @@
             .navigation .menu > li > ul > li.feed a:hover, .navigation .menu > li > ul > li.feed a:active {
               color: #135fad; }
       .navigation .menu > li.social {
-        float: right;
-        margin-right: 12px; }
+        display: inline-block;
+        position: absolute;
+        right: 5px; }
         .navigation .menu > li.social a {
           padding: 7px 3px; }
         .navigation .menu > li.social:hover > a {

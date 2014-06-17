@@ -127,7 +127,9 @@
         float: none;
         margin: 0;
         display: table;
-        background: #135fad; }
+        background: #135fad;
+        position: relative;
+        right: 0; }
         .navigation .menu > li.social > a {
           display: table-cell !important;
           padding: 10px 0 !important;

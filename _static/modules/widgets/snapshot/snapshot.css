@@ -223,3 +223,6 @@
     display: block; }
   .snapshot.wide .graph .image .larger {
     display: none; } }
+@media print {
+  .snapshot .graph .button {
+    display: none; } }

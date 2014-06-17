@@ -27,10 +27,12 @@
     color: #12b7ed;
     text-align: center;
     line-height: 20px; }
-  .accordion dt:hover {
-    background: #2ac1ef; }
+  .accordion dt:hover, .accordion dt:active {
+    background: #2ac1ef;
+    color: white; }
   .accordion dt.expanded {
-    background: #798289; }
+    background: #798289;
+    color: white; }
     .accordion dt.expanded:hover {
       background: #868f95; }
     .accordion dt.expanded:after {

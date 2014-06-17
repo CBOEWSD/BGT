@@ -318,4 +318,12 @@ $module: '.snapshot';
       }
     }
   }
+
+  @media print {
+    .graph {
+      .button {
+        display: none;
+      }
+    }
+  }
 }

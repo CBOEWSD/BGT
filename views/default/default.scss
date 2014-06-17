@@ -103,8 +103,11 @@ $view: '.view-default';
   @media print {
     .row {
       .column1 {
+
         .row {
           margin: 0;
+          display: block;
+
           .column50, .col {
             display: block;
             width: 100%;

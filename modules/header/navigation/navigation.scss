@@ -270,8 +270,9 @@ $3dsize: 4px;
       }
 
       &.social {
-        float: right;
-        margin-right: 12px;
+        //float: right;
+        //margin-right: 12px;
+        display: inline-block;
 
         a {
           padding: 7px 3px;

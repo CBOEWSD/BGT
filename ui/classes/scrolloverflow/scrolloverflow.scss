@@ -31,4 +31,16 @@ $class: '.scrolloverflow';
       height: auto !important;
     }
   }
+
+  @media print {
+    .tse-scrollable {
+      width: auto !important;
+      height: auto !important;
+
+      .tse-scroll-content {
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+  }
 }

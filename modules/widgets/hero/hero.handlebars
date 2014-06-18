@@ -1,31 +1,35 @@
 <div class="widget-hero hero {{#each slim}} {{this}} {{/each}}">
-  <img
-    src="/ui/assets/images/placeholders/blank.gif"
-    data-echo="{{background}}"
-    alt=""
-    class="background">
-
-  <noscript>
-    <img
-      src="{{background}}"
-      alt=""
-      class="background">
-  </noscript>
-
   <div class="slides">
     {{#each slides}}
       <div class="slide {{#if @first}} active {{/if}}" data-slideid="{{@index}}">
-        <h5>
-          {{title}}
-        </h5>
-        <h2>
-          {{text}}
-        </h2>
+        {{#if background}}
+          <img
+            src="/ui/assets/images/placeholders/blank.gif"
+            data-echo="{{background}}"
+            alt="{{title}}"
+            class="background">
 
-        {{#if link}}
-        <a href="{{link.url}}" title="{{link.text}}" class="link">
-          {{link.text}}
-        </a>
+          <noscript>
+            <img
+              src="{{background}}"
+              alt="{{title}}"
+              class="background">
+          </noscript>
+        {{/if}}
+
+        <div class="content">
+          <h5>
+            {{title}}
+          </h5>
+          <h2>
+            {{text}}
+          </h2>
+
+          {{#if link}}
+          <a href="{{link.url}}" title="{{link.text}}" class="link">
+            {{link.text}}
+          </a>
+        </div>
         {{/if}}
       </div>
     {{/each}}

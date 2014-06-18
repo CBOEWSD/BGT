@@ -87,46 +87,55 @@ $3dsize: 6px;
     }
 
     .slides {
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 100%;
 
       .slide {
-        background: $colorGreen1;
-        width: 65%;
-        color: #fff;
-        padding: 15px;
-        border-top: $3dsize solid $colorGreen2;
-        border-right: $3dsize solid $colorGreen3;
+        width: 100%;
+        height: 100%;
 
-        &:before {
-          display: block; content: ""; position: absolute;
+        &.active {
+          position: absolute;
+        }
 
-          top: -$3dsize;
+        .content {
+          background: $colorGreen1;
+          width: 65%;
+          color: #fff;
+          padding: 15px;
+          border-top: $3dsize solid $colorGreen2;
+          border-right: $3dsize solid $colorGreen3;
+          position: absolute;
+          bottom: 0;
           left: 0;
-          border-style: solid;
-          border-width: $3dsize $3dsize 0 0;
-          border-color: $colorGrey2 transparent transparent transparent;
-        }
 
+          &:before {
+            display: block; content: ""; position: absolute;
 
-        h5 {
-          color: $colorGreen2;
-          font: {
-            size: 1em;
-            weight: 600;
+            top: -$3dsize;
+            left: 0;
+            border-style: solid;
+            border-width: $3dsize $3dsize 0 0;
+            border-color: $colorGrey2 transparent transparent transparent;
           }
-          text-transform: uppercase;
-          margin: 0;
-        }
 
-        h2 {
-          font: {
-            size: 1.6em;
-            weight: 400;
+
+          h5 {
+            color: $colorGreen2;
+            font: {
+              size: 1em;
+              weight: 600;
+            }
+            text-transform: uppercase;
+            margin: 0;
           }
-          padding-right: 20px;
-          margin: 10px 0 35px;
+
+          h2 {
+            font: {
+              size: 1.6em;
+              weight: 400;
+            }
+            padding-right: 20px;
+            margin: 10px 0 35px;
+          }
         }
       }
     }

@@ -20,7 +20,7 @@ class TwitterModel
     self = @
 
     # Settings
-    self.host = "http://#{window.location.host}"
+    self.host = "#{location.protocol}//#{window.location.host}"
 
     # Start connection
     self.start()

@@ -259,7 +259,8 @@
       .navigation .menu > li.social {
         display: inline-block;
         position: absolute;
-        right: 5px; }
+        right: 5px;
+        top: 0; }
         .navigation .menu > li.social a {
           padding: 7px 3px; }
         .navigation .menu > li.social:hover > a {

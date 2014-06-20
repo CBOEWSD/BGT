@@ -15,3 +15,10 @@
     .scrolloverflow .scrolloverflow-inside {
       position: relative;
       height: auto !important; } }
+  @media print {
+    .scrolloverflow .tse-scrollable {
+      width: auto !important;
+      height: auto !important; }
+      .scrolloverflow .tse-scrollable .tse-scroll-content {
+        width: auto !important;
+        height: auto !important; } }

@@ -23,7 +23,7 @@
     function TwitterModel($, io, hbs) {
       this.log.add('notification', '[Model] Constructed.', this);
       self = this;
-      self.host = "http://" + window.location.host;
+      self.host = "" + location.protocol + "//" + window.location.host;
       self.start();
     }
 

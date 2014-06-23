@@ -1,0 +1,39 @@
+{{#if text}}
+  data-tooltip="{{{text}}}"
+
+  {{#if onLoad}}
+    data-tooltip-onload="true"
+  {{else}}
+    data-tooltip-onload="false"
+  {{/if}}
+
+  {{#if positionMy}}
+    data-tooltip-position-my="{{positionMy}}"
+  {{else}}
+    data-tooltip-position-my="bottom middle"
+  {{/if}}
+
+  {{#if positionAt}}
+    data-tooltip-position-at="positionAt"
+  {{else}}
+    data-tooltip-position-at="top middle"
+  {{/if}}
+
+  {{#if showEvent}}
+    data-tooltip-show-event="{{showEvent}}"
+  {{else}}
+    data-tooltip-show-event="click"
+  {{/if}}
+
+  {{#if hideEvent}}
+    data-tooltip-hide-event="{{hideEvent}}"
+  {{else}}
+    data-tooltip-hide-event="click"
+  {{/if}}
+
+  {{#if showFor}}
+    data-tooltip-show-for="{{showFor}}"
+  {{else}}
+    data-tooltip-show-for="6000"
+  {{/if}}
+{{/if}}

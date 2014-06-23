@@ -4,6 +4,10 @@
     "level": "Beginner",
     "percent": 0
   },
+  "tooltip": {
+    "text": "<a href='#'>Register</a> or <a href='#'>login</a> for customized resources to track your progress!",
+    "onLoad": true
+  },
   "nextSteps": [
     {
       "url": "#",

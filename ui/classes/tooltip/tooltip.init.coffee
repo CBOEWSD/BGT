@@ -15,7 +15,7 @@
 ###
 
 # Define module
-$el = $('.tooltip')
+$el = $('[data-tooltip]')
 
 # Check if at least 1 instance of module
 if $el.length > 0

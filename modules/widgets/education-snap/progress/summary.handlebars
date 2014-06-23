@@ -8,14 +8,11 @@
   </h3>
 
   <div
-    class="bar-wrap tooltip"
-    data-tooltip="<a href='#'>Register</a> or <a href='#'>login</a> for customized resources to track your progress!"
-    data-tooltip-onload="true"
-    data-tooltip-position-my="bottom middle"
-    data-tooltip-position-at="top middle"
-    data-tooltip-show-event="click"
-    data-tooltip-hide-event="click"
-    data-tooltip-show-for="6000">
+    class="bar-wrap"
+    {{#with tooltip}}
+      asd="hello"
+      {{> widgets/_tooltip/tooltip}}
+    {{/with}}>
     <div class="bar">
       <div class="prog" style="width: {{progress.percent}}%"></div>
     </div>

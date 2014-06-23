@@ -148,6 +148,10 @@ $bordercolor: lighten($colorGrey2, 7%);
             position: relative;
             left: 0;
           }
+
+          button {
+            display: block;
+          }
         }
       }
     }

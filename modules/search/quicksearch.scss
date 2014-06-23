@@ -13,21 +13,33 @@ $module: '.quicksearch';
     size: 0;
   }}
 
+  display: table;
+  width:100%;
   text-align: right;
+
+  .field, .submit {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .field {
+    width: 100%;
+  }
 
   input[type="text"] {
     margin: 0; box-sizing: border-box;
-    width: 80%;
+    width: 100%;
     padding: 7px;
 
     @include border-radius(3px);
-    @include box-shadow(1px 1px 0 rgba(0,0,0,.1));
+    @include box-shadow(1px 1px 0 rgba(0,0,0,.1), inset 0 0 1px rgba(0,0,0,.5));
     border: none;
     background: #fff;
   }
 
   button[type="submit"] {
     padding-top: 7px; padding-bottom: 7px;
+    margin-left: 10px;
   }
 
   form.gsc-search-box {
@@ -64,8 +76,6 @@ $module: '.quicksearch';
 
 
   @media screen and (max-width: 900px) {
-    input[type="text"] {
-      width: 75%;
-    }
+
   }
 }

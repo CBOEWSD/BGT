@@ -67,7 +67,9 @@ $module: '.widget-tv.row';
     .item {
       //display: table-cell;
       //vertical-align: top;
-      @include column(3);
+      display: inline-block;
+      width: 24.2%;
+      vertical-align: top;
       @include mobileColumn(2);
       padding: 10px;
 
@@ -153,6 +155,15 @@ $module: '.widget-tv.row';
       img {
         max-height: 220px;
         background: darken(#fff, 3%);
+      }
+    }
+
+
+    &.expanded {
+      .item {
+        &+.item+.item+.item+.item {
+          display: inline-block!important;
+        }
       }
     }
   }

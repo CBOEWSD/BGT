@@ -20,7 +20,7 @@
         }
       },
       {
-        "widgets/forms/body/body": "company-alt/component.json"
+        "widgets/forms/body/body": "delayed-search2/component.json"
       }
     ]
   }

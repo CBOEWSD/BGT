@@ -1,8 +1,0 @@
-{
-  "before": {
-    "widgets/content/content": "company/before.md"
-  },
-  "body": {
-    "widgets/forms/symbol/search": ""
-  }
-}

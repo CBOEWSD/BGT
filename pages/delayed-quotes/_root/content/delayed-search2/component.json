@@ -1,8 +1,0 @@
-{
-  "body": {
-    "widgets/forms/search-symbol/search": ""
-  },
-  "after": {
-    "widgets/content/content": "delayed-search2/after.md"
-  }
-}

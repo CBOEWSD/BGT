@@ -1,8 +1,0 @@
-{
-  "before": {
-    "widgets/content/content": "symbol-alt/before.md"
-  },
-  "body": {
-    "widgets/forms/symbol/search": ""
-  }
-}

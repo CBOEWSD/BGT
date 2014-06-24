@@ -255,6 +255,13 @@ $3dsize: 6px;
           left: 11px;
         }
       }
+
+      &.mobile-no-border-top {
+        border-top: none;
+      }
+      &.mobile-no-border-bottom {
+        border-bottom: none;
+      }
     }
 
     &.side-image {

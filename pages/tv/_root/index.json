@@ -66,6 +66,11 @@
       },
       {
         "widgets/tv/row/row": "tv/partner.json"
+      },
+      {
+        "ads/span/slim": {
+          "classes": ["hideondesktop"]
+        }
       }
     ],
     "bottomspan": [

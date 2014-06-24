@@ -239,6 +239,15 @@ $3dsize: 6px;
 
         .slide {
           width: 100%;
+
+          &.active {
+            position: relative;
+          }
+
+          .content {
+            width: 100%;
+            position: relative;
+          }
         }
       }
     }

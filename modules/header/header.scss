@@ -106,7 +106,7 @@ $bordercolor: lighten($colorGrey2, 7%);
       overflow: hidden;
 
       .quicksearch {
-        margin-top: -$bordersize;
+        //margin-top: -$bordersize;
         background: $colorBlue1;
         padding: 0 15px;
         overflow: hidden;
@@ -137,8 +137,7 @@ $bordercolor: lighten($colorGrey2, 7%);
         }
 
         &.open {
-          max-height: 90px;
-          padding: 20px 15px;
+          max-height: 120px;
 
           input[type="text"] {
             height: auto;

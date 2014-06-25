@@ -106,7 +106,7 @@ $bordercolor: lighten($colorGrey2, 7%);
       overflow: hidden;
 
       .quicksearch {
-        //margin-top: -$bordersize;
+        margin-top: -2px;
         background: $colorBlue1;
         padding: 0 15px;
         overflow: hidden;
@@ -136,8 +136,16 @@ $bordercolor: lighten($colorGrey2, 7%);
           }
         }
 
+        button, input[type="text"] {
+          padding: 5px 10px;
+        }
+
         &.open {
           max-height: 120px;
+
+          .field, .submit {
+            padding: 10px 0;
+          }
 
           input[type="text"] {
             height: auto;

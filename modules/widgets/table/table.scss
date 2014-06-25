@@ -312,4 +312,10 @@ $module: '.table';
       padding: inherit 4px;
     }
   }
+
+  @media print {
+    @include opacity(1);
+    opacity: 1 !important;
+    @include fadeIn( 0s );
+  }
 }

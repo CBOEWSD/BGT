@@ -203,18 +203,25 @@ $module: '.widget-tv.row';
     }
   }
 
+  @media all and (max-width: $screenSmallMax) {
+    .title {
+      .viewall {
+        &.expand {
+          display: none;
+        }
+      }
+    }
+
+    .items.mobileExpandable {
+      .item {
+        display: inline-block !important;
+      }
+    }
+  }
+
   @media screen and (max-width: 500px) {
     .items.mobileExpandable {
-      max-height: 500px;
-      overflow-y: scroll;
-      display: none;
-
-      &.expanded {
-        display: block;
-      }
-
       .item {
-
         h3 {
           font-size: 1.1em;
         }

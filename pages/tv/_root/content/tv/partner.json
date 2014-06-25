@@ -1,4 +1,5 @@
 {
+  "classes": ["hideonmobile"],
   "title": "Partners Content",
   "activeStates": true,
   "subscribe": "tv-row-partner",

@@ -1,4 +1,5 @@
 {
+  "classes": ["hideonmobile"],
   "title": "Products",
   "activeStates": true,
   "subscribe": "tv-row-products",

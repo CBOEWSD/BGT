@@ -1,4 +1,5 @@
 {
+  "classes": ["hideonmobile"],
   "title": "Options Safari",
   "activeStates": true,
   "subscribe": "tv-row-options",

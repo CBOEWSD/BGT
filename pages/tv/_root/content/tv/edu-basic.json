@@ -1,4 +1,5 @@
 {
+  "classes": ["hideonmobile"],
   "title": "Education: Basic",
   "activeStates": true,
   "subscribe": "tv-row-education-bas",

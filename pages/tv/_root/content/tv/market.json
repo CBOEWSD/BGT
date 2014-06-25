@@ -1,4 +1,5 @@
 {
+  "classes": ["hideonmobile"],
   "title": "Market News",
   "activeStates": true,
   "subscribe": "tv-row-market",

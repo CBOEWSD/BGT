@@ -314,8 +314,11 @@ $module: '.table';
   }
 
   @media print {
-    @include opacity(1);
-    opacity: 1 !important;
-    @include fadeIn( 0s );
+    .nomobile {
+      display: table-cell;
+    }
+    .onlymobile {
+      display: none;
+    }
   }
 }

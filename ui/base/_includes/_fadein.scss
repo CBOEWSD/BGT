@@ -27,5 +27,11 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
   @each $p in $prefix {
     #{$p}animation:$keyframe-name $duration;
   }
+
+  @media print {
+    @each $p in $prefix {
+      #{$p}animation:none;
+    }
+  }
 }
 // e.g. @include fadeIn( 2s );

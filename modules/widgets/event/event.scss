@@ -16,16 +16,16 @@ $module: '.event';
   ul {
     list-style: none;
     padding-left: 0;
-    margin: 30px 0;
+    margin: 15px 0;
 
     li, strong, span {
       display: inline-block;
-      width: 49.1%;
       vertical-align: top;
     }
 
     li {
-      padding: 5px 0;
+      margin: 5px 0;
+      display: block;
     }
   }
 

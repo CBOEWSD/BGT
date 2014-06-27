@@ -28,14 +28,14 @@
           "column1": {
             "modules": [
               {
-                "widgets/content/content": "image.md"
+                "widgets/event/event": "event.json"
               }
             ]
           },
           "column2": {
             "modules": [
               {
-                "widgets/event/event": "event.json"
+                "widgets/content/content": "image.md"
               }
             ]
           }

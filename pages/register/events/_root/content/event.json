@@ -19,7 +19,10 @@
   ],
   "policy": [
     {
-      "description": "A $100 administrative fee wil be assessed for cancellations within 7 business days of seminar. A $75 transfer fee will be assessed for transfers. For more information on complaint and refund policies, please contact us at 1-877-843-2263, press 2.",
+      "description": [
+        "A $100 administrative fee wil be assessed for cancellations within 7 business days of seminar. A $75 transfer fee will be assessed for transfers. For more information on complaint and refund policies, please contact us at 1-877-843-2263, press 2.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, labore quod in architecto cumque enim tempore ipsa omnis."
+      ],
       "title": "Refund Policy"
     }
   ],

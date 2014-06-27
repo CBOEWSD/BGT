@@ -23,7 +23,13 @@
       {{{this.title}}}:
     </dt>
     <dd>
-      {{{this.description}}}
+      {{#each this.description}}
+       <p>
+         {{{this}}}
+       </p>
+      {{else}}
+        {{this.description}}
+      {{/each}}
     </dd>
     {{/each}}
   </dl>

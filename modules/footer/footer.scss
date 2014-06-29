@@ -67,6 +67,18 @@ $module: '.footer';
     min-height: 37px;
   }
 
+  .execute {
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    font: {
+      weight: 700;
+      size: .7em;
+    }
+    line-height: .9em;
+  }
+
   @media screen and (max-width: $screenSmallMax) {
     .menu-1, .menu-2, .disclaimer {
       margin: 30px 0;

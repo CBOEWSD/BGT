@@ -16,6 +16,9 @@ $ ->
     hash = $this.attr('href')
     $target = $(hash)
 
+    if $target.length < 1
+      $target = $("[name='#{hash.replace('#', '')}']")
+
     if $target.length > 0
       e.preventDefault()
       window.location.hash = hash
@@ -29,6 +32,9 @@ $ ->
 
   if hash
     $target = $(hash)
+    if $target.length < 1
+      $target = $("[name='#{hash.replace('#', '')}']")
+
     if $target.length > 0
       setTimeout =>
         scrollAction($target)

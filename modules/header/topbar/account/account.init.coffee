@@ -24,7 +24,7 @@ class AccountDropdown
     @.$button.bind 'click', (e) =>
       @.toggleExpand(e)
 
-    $(document).bind 'click', (e) =>
+    $(document).bind 'click touchend', (e) =>
       return true if @.$el.has(e.target).length > 0
       return true if @.$el.is(e.target)
       @.$top.removeClass('open')

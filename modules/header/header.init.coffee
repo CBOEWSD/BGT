@@ -25,7 +25,7 @@ class Header
     @.$topSearchExpander.click @.toggleTopSearch
 
     # Hide mobile toggle if shown
-    $(document).bind 'click', (e) =>
+    $(document).bind 'click touchend', (e) =>
       return true if @.$topSearch.has(e.target).length > 0
       return true if @.$topSearchExpander.is(e.target)
       @.$topSearch.removeClass('open')

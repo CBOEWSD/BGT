@@ -126,4 +126,15 @@ $module: '.breadcrumbs';
   @media screen and (max-width: $screenSmallMax) {
     display: none;
   }
+
+  html[data-useragent*='OS 7_'] &,
+  html[data-useragent*='OS 8_'] &,
+  html[data-useragent*='OS 9_'] &  {
+    position: sticky !important;
+    position: -webkit-sticky !important;
+    position: -moz-sticky !important;
+    position: -ms-sticky !important;
+    position: -o-sticky !important;
+    top: 0;
+  }
 }

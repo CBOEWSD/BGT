@@ -64,7 +64,14 @@ class Navigation
 
     # Prevent a default anchor link action
     # when clicked if the parent haas a sub menu
+    @.topLiClicked = false
     $('a', @.$topLis).on 'click touchend', (e) ->
+      console.log self.topLiClicked
+      return false if self.topLiClicked
+      self.topLiClicked = true
+      setTimeout ->
+        self.topLiClicked = false
+      , 400
       # If we're in desktop ignore this event
       if Response.viewportW() > 767
         self.clickTopLi(e, @)
@@ -144,6 +151,9 @@ class Navigation
     based navigation. [left/right/close]
   ###
   expanderControls:
+    leftClicked: false
+    rightClicked: false
+    closeClicked: false
     # ### this.expanderControls.setup
     # This method is initially called to add the controls
     # on DOM ready.
@@ -178,6 +188,12 @@ class Navigation
 
     # ### this.expanderControls.left
     left: (e) ->
+      return false if self.expanderControls.leftClicked
+      self.expanderControls.leftClicked = true
+      setTimeout ->
+        self.expanderControls.leftClicked = false
+      , 400
+
       e.stopImmediatePropagation()
       $menus = self.$topLis.siblings('.hasSubMenu')
       $active = $menus.siblings('.shown')
@@ -190,6 +206,12 @@ class Navigation
 
     # ### this.expanderControls.right
     right: (e) ->
+      return false if self.expanderControls.rightClicked
+      self.expanderControls.rightClicked = true
+      setTimeout ->
+        self.expanderControls.rightClicked = false
+      , 400
+
       e.stopImmediatePropagation()
       $menus = self.$topLis.siblings('.hasSubMenu')
       $active = $menus.siblings('.shown')
@@ -202,6 +224,12 @@ class Navigation
 
     # ### this.expanderControls.close
     close: (e) ->
+      return false if self.expanderControls.closeClicked
+      self.expanderControls.closeClicked = true
+      setTimeout ->
+        self.expanderControls.closeClicked = false
+      , 400
+
       e.stopImmediatePropagation()
       if !flag
         flag = true

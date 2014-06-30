@@ -36,12 +36,19 @@ $module: '.qnd-title';
   }
 
   @media all and (max-width: $screenSmallMax) {
+    display: table;
+    width: 100%;
+
     .left, .search-component {
       padding: 0;
     }
 
+    .left {
+      padding-top: 10px;
+    }
+
     .search-component {
-      margin-top: 10px;
+      display: table-header-group;
     }
   }
 

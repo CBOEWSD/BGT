@@ -30,7 +30,7 @@ class SideNavigation
   bind: () ->
     self.$topAnchors = $ '>ul>li>a', self.$el
 
-    self.$topAnchors.bind 'click touchstart', self.toggleMenu
+    self.$topAnchors.bind 'click touchend', self.toggleMenu
 
     PubSub.subscribe 'DomChange', self.scrollEvent
     PubSub.subscribe 'resize', self.scrollEvent
@@ -40,7 +40,13 @@ class SideNavigation
     ## this.toggleMenu
     Toggles a clicked menu open/closed
   ###
+  menuClicked: false
   toggleMenu: (e) ->
+    return false if self.menuClicked
+    self.menuClicked = true
+    setTimeout ->
+      self.menuClicked = false
+    , 400
     return true if Response.viewportW() > 767
     e.preventDefault();
 

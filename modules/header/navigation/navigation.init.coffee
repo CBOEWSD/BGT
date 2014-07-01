@@ -66,7 +66,6 @@ class Navigation
     # when clicked if the parent haas a sub menu
     @.topLiClicked = false
     $('a', @.$topLis).on 'click touchend', (e) ->
-      console.log self.topLiClicked
       return false if self.topLiClicked
       self.topLiClicked = true
       setTimeout ->
@@ -296,9 +295,6 @@ class Navigation
       # If we have an active item set height to equal it
       if $activeLi.length > 0
         height = $('> ul', $activeLi).outerHeight()
-
-        console.log $activeLi
-        console.log height
       else
         self.log.add 'error', 'adjustExpander: Height not a number', height
         return false

@@ -71,11 +71,12 @@ $module: '.breadcrumbs';
     ul {
       position: absolute;
       z-index: 50;
-      left: -5000em;
+      left: -5000px;
       background: $colorBlue1;
       width: 150px;
       padding: 0;
       border-top: 4px solid $colorBlue2;
+      display: none;
 
       li {
         display: block;
@@ -97,6 +98,7 @@ $module: '.breadcrumbs';
     &.show, &:hover {
       ul {
         left: 10px;
+        display: block;
       }
     }
   }

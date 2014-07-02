@@ -32,9 +32,9 @@
           return _this.toggleExpand(e);
         };
       })(this));
-      return $(document).bind('click', (function(_this) {
+      return $(document).bind('click touchend', (function(_this) {
         return function(e) {
-          if (_this.$el.has(e.target)) {
+          if (_this.$el.has(e.target).length > 0) {
             return true;
           }
           if (_this.$el.is(e.target)) {

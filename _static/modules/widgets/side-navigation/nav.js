@@ -36,7 +36,7 @@
 
     SideNavigation.prototype.bind = function() {
       self.$topAnchors = $('>ul>li>a', self.$el);
-      self.$topAnchors.bind('click touchstart', self.toggleMenu);
+      self.$topAnchors.bind('click touchend', self.toggleMenu);
       PubSub.subscribe('DomChange', self.scrollEvent);
       PubSub.subscribe('resize', self.scrollEvent);
       return $(document).bind('contScroll', self.scrollEvent);
@@ -48,7 +48,16 @@
       Toggles a clicked menu open/closed
      */
 
+    SideNavigation.prototype.menuClicked = false;
+
     SideNavigation.prototype.toggleMenu = function(e) {
+      if (self.menuClicked) {
+        return false;
+      }
+      self.menuClicked = true;
+      setTimeout(function() {
+        return self.menuClicked = false;
+      }, 400);
       if (Response.viewportW() > 767) {
         return true;
       }

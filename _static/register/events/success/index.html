@@ -207,24 +207,12 @@
                 </h2>
                 <div class="right">
                     <section class="quicksearch">
-                        <!--<input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
-  <button type="submit" class="button">Search</button>-->
-                        <script>
-                        (function()
-                        {
-                            var cx = '015862480144099304085:rr2pnh70kt4';
-                            var gcse = document.createElement('script');
-                            gcse.type = 'text/javascript';
-                            gcse.async = true;
-                            gcse.src = (document.location.protocol ==
-                                'https:' ? 'https:' : 'http:') +
-                                '//www.google.com/cse/cse.js?cx=' + cx;
-                            var s = document.getElementsByTagName(
-                                'script')[0];
-                            s.parentNode.insertBefore(gcse, s);
-                        })();
-                        </script>
-                        <gcse:search></gcse:search>
+                        <div class="field">
+                            <input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
+                        </div>
+                        <div class="submit">
+                            <button type="submit" class="button">Search</button>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -630,49 +618,23 @@
                             <div class="wrap-columns-inner two ">
                                 <div class="column  ">
                                     <div class="component">
-                                        <article class="content">
-                                            <p>
-                                                <img src="/ui/assets/images/placeholders/blank.gif"
-                                                data-echo="/ui/assets/images/register/cboe.jpg"
-                                                alt="CBOE">
-                                            </p>
-                                        </article>
-                                    </div>
-                                </div>
-                                <div class="column  ">
-                                    <div class="component">
                                         <section class="event">
                                             <h2>
                                                 Online Event: CBOE's Options Initiative
                                             </h2>
                                             <ul class="">
                                                 <li>
-                                                    <strong>Date:</strong>
-                                                    <span>02/13/2014</span>
+                                                    <strong>Date and Time:</strong>
+                                                    <span>02/13/2014 (9:00AM - 4:00PM
+                                                        CT)</span>
                                                 </li>
                                                 <li>
-                                                    <strong>Place:</strong>
-                                                    <span>Online</span>
+                                                    <strong>Location:</strong>
+                                                    <span>Place, City, State</span>
                                                 </li>
                                                 <li>
-                                                    <strong>Time:</strong>
-                                                    <span>9:00AM - 4:00PM CT</span>
-                                                </li>
-                                                <li>
-                                                    <strong>Address:</strong>
-                                                    <span>Online</span>
-                                                </li>
-                                                <li>
-                                                    <strong>City:</strong>
-                                                    <span>Online</span>
-                                                </li>
-                                                <li>
-                                                    <strong>Phone:</strong>
+                                                    <strong>For Information:</strong>
                                                     <span>1-877-THE-CBOE</span>
-                                                </li>
-                                                <li>
-                                                    <strong>State:</strong>
-                                                    <span>Online</span>
                                                 </li>
                                                 <li>
                                                     <strong>Price:</strong>
@@ -684,16 +646,39 @@
                                                     Refund Policy:
                                                 </dt>
                                                 <dd>
-                                                    A $100 administrative fee wil be assessed for cancellations within 7 business days
-                                                    of seminar. A $75 transfer
-                                                    fee will be assessed for transfers.
-                                                    For more information on complaint
-                                                    and refund policies, please
-                                                    contact us at 1-877-843-2263,
-                                                    press 2.
+                                                    <p>
+                                                        A $100 administrative fee wil be assessed for cancellations within 7 business days
+                                                        of seminar. A $75 transfer
+                                                        fee will be assessed for
+                                                        transfers. For more information
+                                                        on complaint and refund
+                                                        policies, please contact
+                                                        us at 1-877-843-2263, press
+                                                        2.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, labore quod in
+                                                        architecto cumque enim
+                                                        tempore ipsa omnis. Tempora,
+                                                        perspiciatis voluptate
+                                                        optio accusantium aliquid
+                                                        recusandae dolorem aliquam
+                                                        error laboriosam iste.
+                                                    </p>
                                                 </dd>
                                             </dl>
                                         </section>
+                                    </div>
+                                </div>
+                                <div class="column  ">
+                                    <div class="component">
+                                        <article class="content">
+                                            <p>
+                                                <img src="/ui/assets/images/placeholders/blank.gif"
+                                                data-echo="/ui/assets/images/register/cboe.jpg"
+                                                alt="CBOE">
+                                            </p>
+                                        </article>
                                     </div>
                                 </div>
                             </div>
@@ -797,6 +782,9 @@
                         <span class="icon-logo cboe">
                             CBOE
                         </span>
+                        <span class="execute">
+                            Execute Success<sup>&trade;</sup>
+                        </span>
                     </h3>
                     <p>
                         Options involve risk and are not suitable for all investors. Prior to buying or
@@ -834,6 +822,7 @@
         <script src='/ui/libs/jquery-touchswipe/jquery.touchSwipe.js'></script>
         <script src='/ui/libs/vimg/dist/vimg.js'></script>
         <script src='/ui/base/base.init.js'></script>
+        <script src='/ui/base/handlers/anchors.init.js'></script>
         <script src='/ui/base/handlers/console.init.js'></script>
         <script src='/ui/base/handlers/customPublish.init.js'></script>
         <script src='/ui/base/handlers/loadCss.init.js'></script>

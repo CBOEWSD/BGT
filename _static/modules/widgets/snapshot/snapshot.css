@@ -111,6 +111,13 @@
         -o-animation: fadeIn 1s;
         -ms-animation: fadeIn 1s;
         animation: fadeIn 1s; }
+        @media print {
+          .snapshot .graph .images .image.active {
+            -moz-animation: none;
+            -webkit-animation: none;
+            -o-animation: none;
+            -ms-animation: none;
+            animation: none; } }
 .snapshot .loading {
   width: 100%;
   vertical-align: middle;
@@ -128,10 +135,17 @@
   -ms-animation: fadeIn 1s;
   animation: fadeIn 1s;
   width: auto; }
+  @media print {
+    .snapshot.loaded .graph {
+      -moz-animation: none;
+      -webkit-animation: none;
+      -o-animation: none;
+      -ms-animation: none;
+      animation: none; } }
 .snapshot.loaded .loading {
   display: none; }
 .snapshot h3 {
-  margin: 4px 0;
+  margin: 4px 0 1px;
   font-size: 1em !important; }
 .snapshot .volume {
   margin: 0;

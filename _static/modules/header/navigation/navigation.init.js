@@ -58,7 +58,15 @@
     Navigation.prototype.bind = function() {
       this.log.add('notification', 'Bind method called.', this);
       this.$navIcon.click(this.mobileToggle);
+      this.topLiClicked = false;
       $('a', this.$topLis).on('click touchend', function(e) {
+        if (self.topLiClicked) {
+          return false;
+        }
+        self.topLiClicked = true;
+        setTimeout(function() {
+          return self.topLiClicked = false;
+        }, 400);
         if (Response.viewportW() > 767) {
           return self.clickTopLi(e, this);
         } else {
@@ -128,6 +136,9 @@
      */
 
     Navigation.prototype.expanderControls = {
+      leftClicked: false,
+      rightClicked: false,
+      closeClicked: false,
       setup: function() {
         this.swipe();
         return this.create();
@@ -155,6 +166,13 @@
       },
       left: function(e) {
         var $active, $menus, count, index, next;
+        if (self.expanderControls.leftClicked) {
+          return false;
+        }
+        self.expanderControls.leftClicked = true;
+        setTimeout(function() {
+          return self.expanderControls.leftClicked = false;
+        }, 400);
         e.stopImmediatePropagation();
         $menus = self.$topLis.siblings('.hasSubMenu');
         $active = $menus.siblings('.shown');
@@ -165,6 +183,13 @@
       },
       right: function(e) {
         var $active, $menus, count, index, next;
+        if (self.expanderControls.rightClicked) {
+          return false;
+        }
+        self.expanderControls.rightClicked = true;
+        setTimeout(function() {
+          return self.expanderControls.rightClicked = false;
+        }, 400);
         e.stopImmediatePropagation();
         $menus = self.$topLis.siblings('.hasSubMenu');
         $active = $menus.siblings('.shown');
@@ -175,6 +200,13 @@
       },
       close: function(e) {
         var $active, flag;
+        if (self.expanderControls.closeClicked) {
+          return false;
+        }
+        self.expanderControls.closeClicked = true;
+        setTimeout(function() {
+          return self.expanderControls.closeClicked = false;
+        }, 400);
         e.stopImmediatePropagation();
         if (!flag) {
           flag = true;
@@ -245,8 +277,6 @@
         $activeLi = self.$topLis.siblings('.shown');
         if ($activeLi.length > 0) {
           height = $('> ul', $activeLi).outerHeight();
-          console.log($activeLi);
-          console.log(height);
         } else {
           self.log.add('error', 'adjustExpander: Height not a number', height);
           return false;

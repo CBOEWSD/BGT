@@ -18,7 +18,7 @@
 (function() {
   var $el;
 
-  $el = $('.tooltip');
+  $el = $('[data-tooltip]');
 
   if ($el.length > 0) {
     loadCss('/ui/libs/qtip2/jquery.qtip.css');

@@ -5,8 +5,7 @@
     title. This title will be bound to click/touch event to expand.
 */
 .collapse {
-  position: relative;
-  cursor: pointer; }
+  position: relative; }
   .collapse .expander {
     display: none; }
   @media screen and (max-width: 767px) {

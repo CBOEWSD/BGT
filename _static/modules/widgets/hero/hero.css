@@ -96,7 +96,7 @@
       .widget-hero .slides .controls li.active {
         background: #187e35; }
   .widget-hero.hero {
-    min-height: 300px; }
+    min-height: 305px; }
     .widget-hero.hero .background {
       position: absolute;
       top: 0;
@@ -192,6 +192,11 @@
         position: relative; }
         .widget-hero.hero .slides .slide {
           width: 100%; }
+          .widget-hero.hero .slides .slide.active {
+            position: relative; }
+          .widget-hero.hero .slides .slide .content {
+            width: 100%;
+            position: relative; }
     .widget-hero.copybased {
       border-top: 1px solid #dddddd;
       border-bottom: 1px solid #dddddd;
@@ -199,6 +204,10 @@
       margin: 10px -15px; }
       .widget-hero.copybased.slim .controls {
         left: 11px; }
+      .widget-hero.copybased.mobile-no-border-top {
+        border-top: none; }
+      .widget-hero.copybased.mobile-no-border-bottom {
+        border-bottom: none; }
     .widget-hero.side-image {
       margin-left: 0; }
       .widget-hero.side-image .image {

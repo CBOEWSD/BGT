@@ -24,9 +24,9 @@ Simple bindings such as the top search binding on mobile.
       self.$topSearchExpander = $('.mobileExpandTopSearch');
       self.$topSearch = $('.header .quicksearch');
       this.$topSearchExpander.click(this.toggleTopSearch);
-      $(document).bind('click', (function(_this) {
+      $(document).bind('click touchend', (function(_this) {
         return function(e) {
-          if (_this.$topSearchExpander.has(e.target)) {
+          if (_this.$topSearch.has(e.target).length > 0) {
             return true;
           }
           if (_this.$topSearchExpander.is(e.target)) {

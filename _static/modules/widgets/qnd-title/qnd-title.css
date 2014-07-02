@@ -43,10 +43,16 @@
         float: none;
         width: auto; } }
   @media all and (max-width: 767px) {
-    .qnd-title .left, .qnd-title .search-component {
-      padding: 0; }
-    .qnd-title .search-component {
-      margin-top: 10px; } }
+    .qnd-title {
+      display: table;
+      width: 100%; }
+      .qnd-title .left, .qnd-title .search-component {
+        padding: 0; }
+      .qnd-title .left {
+        padding-top: 10px;
+        display: table-footer-group; }
+      .qnd-title .search-component {
+        display: table-header-group; } }
   @media print {
     .qnd-title .search-component {
       display: none; }

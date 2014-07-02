@@ -165,7 +165,7 @@
         margin: 0;
         overflow: hidden; }
         .header .right .quicksearch {
-          margin-top: -8px;
+          margin-top: -2px;
           background: #135fad;
           padding: 0 15px;
           overflow: hidden;
@@ -201,9 +201,12 @@
               color: #6d767c; }
             .header .right .quicksearch input[type="text"] :-ms-input-placeholder {
               color: #6d767c; }
+          .header .right .quicksearch button, .header .right .quicksearch input[type="text"] {
+            padding: 5px 10px; }
           .header .right .quicksearch.open {
-            max-height: 90px;
-            padding: 20px 15px; }
+            max-height: 120px; }
+            .header .right .quicksearch.open .field, .header .right .quicksearch.open .submit {
+              padding: 10px 0; }
             .header .right .quicksearch.open input[type="text"] {
               height: auto;
               display: block;
@@ -214,4 +217,13 @@
               animation: fadeIn 0.5s;
               padding: 5px 10px;
               position: relative;
-              left: 0; } }
+              left: 0; }
+              @media print {
+                .header .right .quicksearch.open input[type="text"] {
+                  -moz-animation: none;
+                  -webkit-animation: none;
+                  -o-animation: none;
+                  -ms-animation: none;
+                  animation: none; } }
+            .header .right .quicksearch.open button {
+              display: block; } }

@@ -38,16 +38,10 @@
     .widget-tv.row .items:after {
       clear: both; }
     .widget-tv.row .items .item {
-      float: left;
-      position: relative;
-      min-height: 1px;
-      padding: 0 15px;
-      width: 25%;
+      display: inline-block;
+      width: 24.2%;
+      vertical-align: top;
       padding: 10px; }
-      @media only screen and (max-width: 767px) {
-        .widget-tv.row .items .item {
-          float: none;
-          width: auto; } }
       @media only screen and (max-width: 767px) {
         .widget-tv.row .items .item {
           float: left;
@@ -120,6 +114,8 @@
       .widget-tv.row .items .item img {
         max-height: 220px;
         background: #f7f7f7; }
+    .widget-tv.row .items.expanded .item + .item + .item + .item + .item {
+      display: inline-block !important; }
   .widget-tv.row.stack .items .item {
     display: block;
     width: 100%;
@@ -136,17 +132,16 @@
       padding: 5px; }
       .widget-tv.row .items .item h3 {
         font-size: 1.1em; } }
-  @media screen and (max-width: 500px) {
-    .widget-tv.row .items.mobileExpandable {
-      max-height: 500px;
-      overflow-y: scroll;
+  @media all and (max-width: 767px) {
+    .widget-tv.row .title .viewall.expand {
       display: none; }
-      .widget-tv.row .items.mobileExpandable.expanded {
-        display: block; }
-      .widget-tv.row .items.mobileExpandable .item h3 {
-        font-size: 1.1em; }
-      .widget-tv.row .items.mobileExpandable .item p {
-        display: none; }
+    .widget-tv.row .items.mobileExpandable .item {
+      display: inline-block !important; } }
+  @media screen and (max-width: 500px) {
+    .widget-tv.row .items.mobileExpandable .item h3 {
+      font-size: 1.1em; }
+    .widget-tv.row .items.mobileExpandable .item p {
+      display: none; }
     .widget-tv.row .title {
       position: relative;
       padding-right: 87px; }

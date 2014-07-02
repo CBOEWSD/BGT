@@ -50,11 +50,11 @@
     background: none;
     border: none;
     padding: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
-    box-shadow: none; }
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important; }
     .widget.nostyle:before {
       display: none; }
   @media screen and (max-width: 767px) {

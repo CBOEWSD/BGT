@@ -159,6 +159,13 @@
         animation: fadeIn 0.6s;
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
         opacity: 1; }
+        @media print {
+          .table.mobile-load {
+            -moz-animation: none;
+            -webkit-animation: none;
+            -o-animation: none;
+            -ms-animation: none;
+            animation: none; } }
       .table.padhorizontal tbody tr td, .table.padhorizontal tbody tr th, .table.padhorizontal thead tr td, .table.padhorizontal thead tr th, .table.padhorizontal tfoot tr td, .table.padhorizontal tfoot tr th {
         padding-left: 5px;
         padding-right: 5px; }
@@ -189,3 +196,8 @@
         display: table-cell; }
       .table th, .table td {
         padding: inherit 4px; } }
+  @media print {
+    .table .nomobile {
+      display: table-cell; }
+    .table .onlymobile {
+      display: none; } }

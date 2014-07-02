@@ -167,4 +167,11 @@
           animation: fadeIn 0.5s;
           padding: 5px 10px;
           position: relative;
-          left: 0; } }
+          left: 0; }
+          @media print {
+            .account-dropdown > li.open ul li {
+              -moz-animation: none;
+              -webkit-animation: none;
+              -o-animation: none;
+              -ms-animation: none;
+              animation: none; } } }

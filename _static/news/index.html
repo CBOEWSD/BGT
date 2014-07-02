@@ -158,7 +158,7 @@
     <body>
         <div class="hideonmobile">
             <div class="advert dark">
-                <div class="advert slim">
+                <div class="advert slim ">
                     <!-- Desktop ad placeholder -->
                     <div class="hideonmobile">
                         <a href="#">
@@ -233,24 +233,12 @@
                 </h2>
                 <div class="right">
                     <section class="quicksearch">
-                        <!--<input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
-  <button type="submit" class="button">Search</button>-->
-                        <script>
-                        (function()
-                        {
-                            var cx = '015862480144099304085:rr2pnh70kt4';
-                            var gcse = document.createElement('script');
-                            gcse.type = 'text/javascript';
-                            gcse.async = true;
-                            gcse.src = (document.location.protocol ==
-                                'https:' ? 'https:' : 'http:') +
-                                '//www.google.com/cse/cse.js?cx=' + cx;
-                            var s = document.getElementsByTagName(
-                                'script')[0];
-                            s.parentNode.insertBefore(gcse, s);
-                        })();
-                        </script>
-                        <gcse:search></gcse:search>
+                        <div class="field">
+                            <input type="text" placeholder="Quotes, Keywords, Products, News, etc.">
+                        </div>
+                        <div class="submit">
+                            <button type="submit" class="button">Search</button>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -649,7 +637,7 @@
                         </h3>
                         <div class="hero-ad adright">
                             <div class="h-placement">
-                                <div class="widget-hero copybased side-image ">
+                                <div class="widget-hero copybased side-image  mobile-no-border-top ">
                                     <div class="slides">
                                         <div class="slide  active " data-slideid="0">
                                             <div class="image">
@@ -1448,6 +1436,9 @@
                         <span class="icon-logo cboe">
                             CBOE
                         </span>
+                        <span class="execute">
+                            Execute Success<sup>&trade;</sup>
+                        </span>
                     </h3>
                     <p>
                         Options involve risk and are not suitable for all investors. Prior to buying or
@@ -1485,6 +1476,7 @@
         <script src='/ui/libs/jquery-touchswipe/jquery.touchSwipe.js'></script>
         <script src='/ui/libs/vimg/dist/vimg.js'></script>
         <script src='/ui/base/base.init.js'></script>
+        <script src='/ui/base/handlers/anchors.init.js'></script>
         <script src='/ui/base/handlers/console.init.js'></script>
         <script src='/ui/base/handlers/customPublish.init.js'></script>
         <script src='/ui/base/handlers/loadCss.init.js'></script>

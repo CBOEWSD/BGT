@@ -53,6 +53,14 @@
     border-bottom: 1px solid #3c93ea;
     padding-bottom: 10px;
     min-height: 37px; }
+  .footer .execute {
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    font-weight: 700;
+    font-size: 0.7em;
+    line-height: 0.9em; }
   @media screen and (max-width: 767px) {
     .footer .menu-1, .footer .menu-2, .footer .disclaimer {
       margin: 30px 0; }

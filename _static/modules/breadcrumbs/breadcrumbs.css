@@ -44,11 +44,12 @@
     .breadcrumbs > li ul {
       position: absolute;
       z-index: 50;
-      left: -5000em;
+      left: -5000px;
       background: #135fad;
       width: 150px;
       padding: 0;
-      border-top: 4px solid #12b7ed; }
+      border-top: 4px solid #12b7ed;
+      display: none; }
       .breadcrumbs > li ul li {
         display: block;
         padding: 0; }
@@ -60,7 +61,8 @@
           .breadcrumbs > li ul li a:hover, .breadcrumbs > li ul li a:active {
             background: #1879db; }
     .breadcrumbs > li.show ul, .breadcrumbs > li:hover ul {
-      left: 10px; }
+      left: 10px;
+      display: block; }
   .breadcrumbs.fixed {
     position: fixed;
     padding: 15px;

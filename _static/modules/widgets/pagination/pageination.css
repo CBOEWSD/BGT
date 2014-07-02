@@ -51,7 +51,8 @@
       .pagination > ul li.pages {
         display: block;
         max-width: 100%;
-        overflow-x: scroll; }
+        overflow-x: scroll;
+        padding-bottom: 10px; }
         .pagination > ul li.pages ul {
           display: table;
           width: 100%; }

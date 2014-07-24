@@ -191,6 +191,35 @@ $module: '.widget-tv.row';
     }
   }
 
+  &.five{
+    .items {
+      .item{
+        display: inline-block!important;
+        width: 19.2%;
+        vertical-align: top;
+        @include mobileColumn(2);
+        padding: 10px;
+
+        // Only show 4 items by default
+        &+.item+.item+.item+.item+.item{
+          display: none!important;
+        }
+
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .items{
+      .item{
+        &:nth-child(2n+1) {
+           clear: both;
+        }
+
+      }
+    }
+  }
+
   @media screen and (max-width: 900px) {
     .items {
       .item {

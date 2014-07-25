@@ -22,6 +22,7 @@
       this.$inner = $('.bar .inner', el);
       this.$left = $('.control.left', el);
       this.$right = $('.control.right', el);
+      this.$items = $('.ticker-item', el);
       this.getParams();
       this.bind();
       this.$el.addClass('loaded');
@@ -129,6 +130,8 @@
     Ticker.prototype.scrollEvent = function(e) {
       var scrolled;
       scrolled = this.$bar.scrollLeft() + this.params.width;
+      console.log(this);
+      this.inView(scrolled);
       if (scrolled === this.params.width) {
         this.$left.addClass('disabled');
         return this.$right.removeClass('disabled');
@@ -139,6 +142,24 @@
         this.$left.removeClass('disabled');
         return this.$right.removeClass('disabled');
       }
+    };
+
+
+    /*
+       *# inView
+      Called after scroll to trigger an event that can be used to
+      load ads that are now in view.
+     */
+
+    Ticker.prototype.inView = function(scrolled) {
+      var $triggerItems, itemWidth, outOfView, startFrom, toShow, viewWidth;
+      itemWidth = this.$items.eq(2).outerWidth();
+      viewWidth = this.params.width;
+      toShow = Math.ceil(viewWidth / itemWidth);
+      outOfView = scrolled - viewWidth;
+      startFrom = Math.ceil(outOfView / itemWidth);
+      $triggerItems = this.$items.slice(startFrom, toShow + startFrom).not('.adtriggered');
+      return $triggerItems.trigger('ad-in-view').addClass('adtriggered');
     };
 
     return Ticker;

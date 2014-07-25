@@ -10,7 +10,8 @@
     margin: 0;
     padding: 0; }
     .pagination ul li {
-      display: inline-block; }
+      display: inline-block;
+      margin: 2px 0; }
       .pagination ul li a {
         display: block;
         background: #135fad;
@@ -23,10 +24,21 @@
           background: #166dc4; }
         .pagination ul li a.active {
           background: #21a825; }
-      .pagination ul li.next a, .pagination ul li.prev a {
-        background: none;
-        color: #313538;
-        padding: 3px 20px; }
+      .pagination ul li.next, .pagination ul li.prev {
+        vertical-align: top; }
+        .pagination ul li.next a, .pagination ul li.prev a {
+          background: none;
+          color: #313538;
+          padding: 3px 20px; }
+      .pagination ul li.pages {
+        max-width: 57%;
+        overflow-x: auto;
+        padding-bottom: 10px; }
+        .pagination ul li.pages ul {
+          display: table;
+          width: 100%; }
+          .pagination ul li.pages ul li {
+            display: table-cell; }
   .pagination .total {
     display: block;
     margin: 10px 0 0 0;

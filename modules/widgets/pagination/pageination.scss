@@ -41,12 +41,31 @@ $module: '.pagination';
       }
 
       &.next, &.prev {
+        //height:37px;
+        //padding-bottom:10px;
+        vertical-align: top;
+
         a {
           background: none;
           color: $colorGrey1;
           padding: 3px 20px;
         }
       }
+
+      &.pages {
+          max-width: 57%;
+          overflow-x: auto;
+          padding-bottom: 10px;
+
+          ul {
+            display: table;
+            width: 100%;
+
+            li {
+              display: table-cell;
+            }
+          }
+        }
     }
   }
 

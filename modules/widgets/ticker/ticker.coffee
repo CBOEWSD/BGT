@@ -14,6 +14,7 @@ class Ticker
     @.$inner = $('.bar .inner', el)
     @.$left = $('.control.left', el)
     @.$right = $('.control.right', el)
+    @.$items = $('.ticker-item', el)
 
     @.getParams()
     @.bind()
@@ -95,6 +96,10 @@ class Ticker
   scrollEvent: (e) ->
     scrolled = @.$bar.scrollLeft() + @.params.width
 
+    console.log @
+
+    @.inView(scrolled)
+
     if scrolled == @.params.width
       @.$left.addClass 'disabled'
       @.$right.removeClass 'disabled'
@@ -104,6 +109,21 @@ class Ticker
     else
       @.$left.removeClass 'disabled'
       @.$right.removeClass 'disabled'
+
+  ###
+    ## inView
+    Called after scroll to trigger an event that can be used to
+    load ads that are now in view.
+  ###
+  inView: (scrolled) ->
+    itemWidth = @.$items.eq(2).outerWidth()
+    viewWidth = @.params.width
+    toShow = Math.ceil(viewWidth / itemWidth)
+    outOfView = scrolled - viewWidth
+    startFrom = Math.ceil(outOfView / itemWidth)
+    $triggerItems = @.$items.slice(startFrom, toShow + startFrom).not('.adtriggered')
+    $triggerItems.trigger('ad-in-view').addClass('adtriggered')
+
 
 ###
   ## Define

@@ -1,49 +1,44 @@
 {
-  "classes": ["stack"],
-  "items": [
-    {
-      "meta": {
-        "views": 1023,
-        "likes": 305
-      },
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13"
-    },
-    {
-      "meta": {
-        "views": 1023,
-        "likes": 305
-      },
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13"
-    },
-    {
-      "meta": {
-        "views": 1023,
-        "likes": 305
-      },
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13"
-    },
-    {
-      "meta": {
-        "views": 1023,
-        "likes": 305
-      },
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13"
-    }
-  ]
+    "classes": ["stack"],
+    "items": [{
+        "meta": {
+            "views": 1023,
+            "likes": 305
+        },
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    }, {
+        "meta": {
+            "views": 1023,
+            "likes": 305
+        },
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    }, {
+        "meta": {
+            "views": 1023,
+            "likes": 305
+        },
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    }, {
+        "meta": {
+            "views": 1023,
+            "likes": 305
+        },
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    }]
 }

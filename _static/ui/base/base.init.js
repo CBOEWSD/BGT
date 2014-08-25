@@ -1,16 +1,16 @@
-
 /*
-   * Base.coffee
+  # Base.coffee
   This file is the initial entry point into our application.
   It defines our dependency paths and loads the next step.
- */
+*/
 
 
 /*
-   *# Configure require base settings
+  ## Configure require base settings
   These are predefined library locations, meaning each
   module can simple call `libname` instead of paths.
- */
+*/
+
 
 (function() {
   requirejs.config({

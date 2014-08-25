@@ -1,31 +1,22 @@
 {
-  "widgetWrapper": true,
-  "column": {
-    "modules": [
-      {
-        "widgets/optionable-title/title": "row3/title1.json"
-      },
-      {
-        "widgets/content/content": "row3/table1.md"
-      },
-      {
-        "widgets/table/table": "row3/table1.json"
-      },
-      {
-        "widgets/content/content": "row3/table2.md"
-      },
-      {
-        "widgets/table/table": "row3/table2.json"
-      },
-      {
-        "widgets/content/content": "row3/table3.md"
-      },
-      {
-        "widgets/table/table": "row3/table3.json"
-      },
-      {
-        "widgets/pagination/pagination": "row3/pagination.json"
-      }
-    ]
-  }
+    "widgetWrapper": true,
+    "column": {
+        "modules": [{
+            "widgets/optionable-title/title": "row3/title1.json"
+        }, {
+            "widgets/content/content": "row3/table1.md"
+        }, {
+            "widgets/table/table": "row3/table1.json"
+        }, {
+            "widgets/content/content": "row3/table2.md"
+        }, {
+            "widgets/table/table": "row3/table2.json"
+        }, {
+            "widgets/content/content": "row3/table3.md"
+        }, {
+            "widgets/table/table": "row3/table3.json"
+        }, {
+            "widgets/pagination/pagination": "row3/pagination.json"
+        }]
+    }
 }

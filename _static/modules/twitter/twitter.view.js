@@ -1,10 +1,10 @@
-
 /*
- * Twitter View
+# Twitter View
 This is our view layer tied with the events coming frm
 `twitter.model.coffee` and rendering the response data
 to the page.
- */
+*/
+
 
 (function() {
   var TwitterView;
@@ -14,10 +14,10 @@ to the page.
 
     self = {};
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function TwitterView(el, tpl) {
       this.log.add('notification', '[View] Constructed.', this);
@@ -28,21 +28,21 @@ to the page.
       PubSub.subscribe('tweet/error', this.handleError);
     }
 
-
     /*
-       *# this.log
+      ## this.log
       Add local instance of logging to this module.
       Can be called with:
       ``` @log.add 'notification', 'message...', @ ```
-     */
+    */
+
 
     TwitterView.prototype.log = new LogHandler('Twitter');
 
-
     /*
-       *# this.handleTweet
+      ## this.handleTweet
       Called on the event of a new tweet being published
-     */
+    */
+
 
     TwitterView.prototype.handleTweet = function(e, data) {
       self.log.add('notification', '[View] handleTweet called.', data);
@@ -57,22 +57,22 @@ to the page.
       }
     };
 
-
     /*
-       *# this.handleError
+      ## this.handleError
       Handle error pubsub event from Twitter model
-     */
+    */
+
 
     TwitterView.prototype.handleError = function(e, err) {
       return self.$el.html('There was an error connecting with the server.');
     };
 
-
     /*
-       *# this.renderTweet
+      ## this.renderTweet
       Using our handlebars template we render the new tweet
       to our module.
-     */
+    */
+
 
     TwitterView.prototype.renderTweet = function(tweet) {
       self.$el.html(self.view(tweet));

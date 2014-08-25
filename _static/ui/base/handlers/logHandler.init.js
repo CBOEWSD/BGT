@@ -1,27 +1,27 @@
-
 /*
-   * Application LogHandler
+  # Application LogHandler
   Can be called in each module if a log is required
   simply by adding `log: new LogHandler 'moduleName'`
- */
+*/
+
 
 (function() {
   this.LogHandler = (function() {
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
     function LogHandler(module) {
       window.log = window.log || {};
       this.debug = true;
       this.module = module || 'Application';
     }
 
-
     /*
-       *# Add new log
+      ## Add new log
       Passing in variable data to be pushed into log
-     */
+    */
+
 
     LogHandler.prototype.add = function(type, message, extended) {
       var object;

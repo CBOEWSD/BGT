@@ -1,27 +1,21 @@
 {
-  "widgetWrapper": true,
-  "column1": {
-    "modules": [
-      {
-        "widgets/widget-title": {
-          "title": "Search by Symbol"
-        }
-      },
-      {
-        "widgets/forms/body/body": "symbol/component.json"
-      }
-    ]
-  },
-  "column2": {
-    "modules": [
-      {
-        "widgets/widget-title": {
-          "title": "Search by Company"
-        }
-      },
-      {
-        "widgets/forms/body/body": "company/component.json"
-      }
-    ]
-  }
+    "widgetWrapper": true,
+    "column1": {
+        "modules": [{
+            "widgets/widget-title": {
+                "title": "Search by Symbol"
+            }
+        }, {
+            "widgets/forms/body/body": "symbol/component.json"
+        }]
+    },
+    "column2": {
+        "modules": [{
+            "widgets/widget-title": {
+                "title": "Search by Company"
+            }
+        }, {
+            "widgets/forms/body/body": "company/component.json"
+        }]
+    }
 }

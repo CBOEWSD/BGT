@@ -1,38 +1,30 @@
 {
-  "widgetWrapper": true,
-  "classes": [
-    "slimright"
-  ],
-  "column1": {
-    "modules": [
-      {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "Company Headlines"
-          }
-        }
-      },
-      {
-        "widgets/list/simple": "row2/company-headlines.json"
-      }
-    ]
-  },
-  "column2": {
-    "classes": ["hideatLT900"],
-    "modules": [
-      {
-        "ads/square_300/block": ""
-      }
-    ]
-  },
-  "column3": {
-    "modules": [
-      {
-        "widgets/optionable-title/title": "row2/market-title.json"
-      },
-      {
-        "widgets/table/table": "row2/table.json"
-      }
-    ]
-  }
+    "widgetWrapper": true,
+    "classes": [
+        "slimright"
+    ],
+    "column1": {
+        "modules": [{
+            "widgets/widget-title": {
+                "widget": {
+                    "title": "Company Headlines"
+                }
+            }
+        }, {
+            "widgets/list/simple": "row2/company-headlines.json"
+        }]
+    },
+    "column2": {
+        "classes": ["hideatLT900"],
+        "modules": [{
+            "ads/square_300/block": ""
+        }]
+    },
+    "column3": {
+        "modules": [{
+            "widgets/optionable-title/title": "row2/market-title.json"
+        }, {
+            "widgets/table/table": "row2/table.json"
+        }]
+    }
 }

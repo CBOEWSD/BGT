@@ -1,109 +1,81 @@
 {
-  "view": "twocol-b",
-  "viewClasses": [
-    ""
-  ],
-  "title": "About Us",
-  "meta": {
-    "keywords": "some, keywords",
-    "description": "This is a description"
-  },
-  "placeholders": {
-    "topspan": [
-      {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-      }
+    "view": "twocol-b",
+    "viewClasses": [
+        ""
     ],
-    "col1": [
-      {
-        "widgets/side-navigation/nav": ""
-      }
-    ],
-    "col2": [
-      {
-        "_columns/two": {
-          "classes": [
-            "slimright",
-            "ad"
-          ],
-          "column1": {
-            "modules": [
-              {
-                "widgets/content/content": "intro.md"
-              }
-            ]
-          },
-          "column2": {
-            "modules": [
-              {
-                "ads/square_300/block": ""
-              },
-              {
-                "widgets/quote/quote": "quote.json"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "_columns/two": {
-          "column1": {
-            "modules": [
-              {
-                "widgets/content/content": "boxes/box1.md"
-              }
-            ]
-          },
-          "column2": {
-            "modules": [
-              {
-                "widgets/content/content": "boxes/box2.md"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "_columns/two": {
-          "column1": {
-            "modules": [
-              {
-                "widgets/content/content": "boxes/box3.md"
-              }
-            ]
-          },
-          "column2": {
-            "modules": [
-              {
-                "widgets/content/content": "boxes/box4.md"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "_columns/two": {
-          "column1": {
-            "modules": [
-              {
-                "widgets/content/content": "boxes/box5.md"
-              }
-            ]
-          },
-          "column2": {
-            "modules": [
-              {
-                "widgets/content/content": "boxes/box6.md"
-              }
-            ]
-          }
-        }
-      }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
-    ]
-  }
+    "title": "About Us",
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "placeholders": {
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+        }],
+        "col1": [{
+            "widgets/side-navigation/nav": ""
+        }],
+        "col2": [{
+            "_columns/two": {
+                "classes": [
+                    "slimright",
+                    "ad"
+                ],
+                "column1": {
+                    "modules": [{
+                        "widgets/content/content": "intro.md"
+                    }]
+                },
+                "column2": {
+                    "modules": [{
+                        "ads/square_300/block": ""
+                    }, {
+                        "widgets/quote/quote": "quote.json"
+                    }]
+                }
+            }
+        }, {
+            "_columns/two": {
+                "column1": {
+                    "modules": [{
+                        "widgets/content/content": "boxes/box1.md"
+                    }]
+                },
+                "column2": {
+                    "modules": [{
+                        "widgets/content/content": "boxes/box2.md"
+                    }]
+                }
+            }
+        }, {
+            "_columns/two": {
+                "column1": {
+                    "modules": [{
+                        "widgets/content/content": "boxes/box3.md"
+                    }]
+                },
+                "column2": {
+                    "modules": [{
+                        "widgets/content/content": "boxes/box4.md"
+                    }]
+                }
+            }
+        }, {
+            "_columns/two": {
+                "column1": {
+                    "modules": [{
+                        "widgets/content/content": "boxes/box5.md"
+                    }]
+                },
+                "column2": {
+                    "modules": [{
+                        "widgets/content/content": "boxes/box6.md"
+                    }]
+                }
+            }
+        }],
+        "bottomspan": [{
+            "widgets/widget": "bottomspan/widget.json"
+        }]
+    }
 }

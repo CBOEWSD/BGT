@@ -1,54 +1,40 @@
 {
-  "title": "Market Scanner",
-  "form": {
-    "action": "#",
-    "items": [
-      {
-        "name": "market",
-        "options": [
-          {
-            "value": "123",
-            "text": "NYSE"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          }
-        ]
-      },
-      {
-        "name": "sort",
-        "options": [
-          {
-            "value": "123",
-            "text": "Most Active"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          }
-        ]
-      }
-    ]
-  }
+    "title": "Market Scanner",
+    "form": {
+        "action": "#",
+        "items": [{
+            "name": "market",
+            "options": [{
+                "value": "123",
+                "text": "NYSE"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }]
+        }, {
+            "name": "sort",
+            "options": [{
+                "value": "123",
+                "text": "Most Active"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }]
+        }]
+    }
 }

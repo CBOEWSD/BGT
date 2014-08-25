@@ -1,7 +1,7 @@
-
 /*
-   * Ticker
- */
+  # Ticker
+*/
+
 
 (function() {
   var Ticker;
@@ -11,10 +11,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function Ticker(el) {
       this.$el = $(el);
@@ -29,45 +29,38 @@
       return this;
     }
 
-
     /*
-       *# Bind
+      ## Bind
       Bind up to events such as scroll (touch) and global viewport resize
-     */
+    */
+
 
     Ticker.prototype.bind = function() {
-      this.$left.bind('click', (function(_this) {
-        return function(e) {
-          e.preventDefault();
-          return _this.moveLeft();
-        };
-      })(this));
-      this.$right.bind('click', (function(_this) {
-        return function(e) {
-          e.preventDefault();
-          return _this.moveRight();
-        };
-      })(this));
-      this.$el.bind('touchmove touchend', (function(_this) {
-        return function(e) {
-          return _this.scrollEvent(e);
-        };
-      })(this));
-      PubSub.subscribe('resize', (function(_this) {
-        return function(e) {
-          _this.getParams();
-          return _this.scrollEvent(e);
-        };
-      })(this));
+      var _this = this;
+      this.$left.bind('click', function(e) {
+        e.preventDefault();
+        return _this.moveLeft();
+      });
+      this.$right.bind('click', function(e) {
+        e.preventDefault();
+        return _this.moveRight();
+      });
+      this.$el.bind('touchmove touchend', function(e) {
+        return _this.scrollEvent(e);
+      });
+      PubSub.subscribe('resize', function(e) {
+        _this.getParams();
+        return _this.scrollEvent(e);
+      });
       return this.$el.trigger('touchmove');
     };
 
-
     /*
-       *# moveLeft
+      ## moveLeft
       Action will move the scroll position left by a pixel amount
       equal to the width of the inner element.
-     */
+    */
+
 
     Ticker.prototype.moveLeft = function() {
       var scroll;
@@ -76,12 +69,12 @@
       return this.scrollTo(scroll);
     };
 
-
     /*
-       *# moveRight
+      ## moveRight
       Action will move the scroll position right by a pixel amount
       equal to the width of the inner element.
-     */
+    */
+
 
     Ticker.prototype.moveRight = function() {
       var scroll;
@@ -90,27 +83,26 @@
       return this.scrollTo(scroll);
     };
 
-
     /*
-       *# scrollTo
+      ## scrollTo
       Provided a position will scroll component to given position
-     */
+    */
+
 
     Ticker.prototype.scrollTo = function(position) {
+      var _this = this;
       return this.$bar.animate({
         scrollLeft: position
-      }, 1000, (function(_this) {
-        return function() {
-          return _this.scrollEvent();
-        };
-      })(this));
+      }, 1000, function() {
+        return _this.scrollEvent();
+      });
     };
 
-
     /*
-       *# getParams
+      ## getParams
       Gets necessary params shared across class.
-     */
+    */
+
 
     Ticker.prototype.getParams = function() {
       return this.params = {
@@ -119,13 +111,13 @@
       };
     };
 
-
     /*
-       *# scrollEvent
+      ## scrollEvent
       Called from multiple event types.
       Will check if we have reached the end (left or right) and disable
       controls as appropriate.
-     */
+    */
+
 
     Ticker.prototype.scrollEvent = function(e) {
       var scrolled;
@@ -144,12 +136,12 @@
       }
     };
 
-
     /*
-       *# inView
+      ## inView
       Called after scroll to trigger an event that can be used to
       load ads that are now in view.
-     */
+    */
+
 
     Ticker.prototype.inView = function(scrolled) {
       var $triggerItems, itemWidth, outOfView, startFrom, toShow, viewWidth;
@@ -166,10 +158,10 @@
 
   })();
 
-
   /*
-     *# Define
-   */
+    ## Define
+  */
+
 
   define(function() {
     return Ticker;

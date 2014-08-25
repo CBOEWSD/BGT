@@ -1,85 +1,64 @@
 {
-  "title": "Options Chain",
-  "form": {
-    "action": "#",
-    "button": {
-      "text": "View Chain"
-    },
-    "items": [
-      {
-        "name": "type",
-        "label": "Chain Type",
-        "options": [
-          {
-            "value": "123",
-            "text": "Calls and Puts"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          }
-        ]
-      },
-      {
-        "name": "range",
-        "label": "Options Range",
-        "options": [
-          {
-            "value": "123",
-            "text": "All"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          }
-        ]
-      },
-      {
-        "name": "expiration",
-        "label": "Expiration",
-        "options": [
-          {
-            "value": "123",
-            "text": "March 2014"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          }
-        ]
-      }
-    ]
-  }
+    "title": "Options Chain",
+    "form": {
+        "action": "#",
+        "button": {
+            "text": "View Chain"
+        },
+        "items": [{
+            "name": "type",
+            "label": "Chain Type",
+            "options": [{
+                "value": "123",
+                "text": "Calls and Puts"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }]
+        }, {
+            "name": "range",
+            "label": "Options Range",
+            "options": [{
+                "value": "123",
+                "text": "All"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }]
+        }, {
+            "name": "expiration",
+            "label": "Expiration",
+            "options": [{
+                "value": "123",
+                "text": "March 2014"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }]
+        }]
+    }
 }

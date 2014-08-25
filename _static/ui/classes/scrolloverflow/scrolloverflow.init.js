@@ -1,8 +1,8 @@
-
 /*
-   * ScrollOverflow
+  # ScrollOverflow
   Provides the ability to set scrollbars within certain elements
- */
+*/
+
 
 (function() {
   var $el, load, loaded, minvp;
@@ -13,12 +13,12 @@
 
   loaded = false;
 
-
   /*
     Load class callable method
     We only need this class called for desktop
     or when device hits correct viewport.
-   */
+  */
+
 
   load = function() {
     if (loaded) {

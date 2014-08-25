@@ -1,16 +1,13 @@
 {
-  "widgetWrapper": true,
-  "column": {
-    "modules": [
-      {
-        "widgets/error/message": {
-          "primary": "Error - Data Set Too Large for Browser.",
-          "secondary": "Resubmit your query using the additional filters below."
-        }
-      },
-      {
-        "widgets/forms/body/body": "chain-filter/component.json"
-      }
-    ]
-  }
+    "widgetWrapper": true,
+    "column": {
+        "modules": [{
+            "widgets/error/message": {
+                "primary": "Error - Data Set Too Large for Browser.",
+                "secondary": "Resubmit your query using the additional filters below."
+            }
+        }, {
+            "widgets/forms/body/body": "chain-filter/component.json"
+        }]
+    }
 }

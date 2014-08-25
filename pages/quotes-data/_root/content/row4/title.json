@@ -1,33 +1,25 @@
 {
-  "title": "Futures",
-  "form": {
-    "action": "#",
-    "items": [
-      {
-        "name": "name",
-        "options": [
-          {
-            "value": "123",
-            "text": "Indices"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          },
-          {
-            "value": "123",
-            "text": "Option"
-          }
-        ]
-      }
-    ]
-  }
+    "title": "Futures",
+    "form": {
+        "action": "#",
+        "items": [{
+            "name": "name",
+            "options": [{
+                "value": "123",
+                "text": "Indices"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }, {
+                "value": "123",
+                "text": "Option"
+            }]
+        }]
+    }
 }

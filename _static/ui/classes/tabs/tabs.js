@@ -1,7 +1,7 @@
-
 /*
-   * Tabs Class
- */
+  # Tabs Class
+*/
+
 
 (function() {
   var Tabs;
@@ -11,10 +11,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function Tabs(el) {
       this.$el = $(el);
@@ -24,26 +24,25 @@
       return self = this;
     }
 
-
     /*
-       *# bind
+      ## bind
       Called to bind up events leading to tab change.
-     */
+    */
+
 
     Tabs.prototype.bind = function() {
-      return this.$tabs.bind('click', (function(_this) {
-        return function(e) {
-          return _this.tabClick(e);
-        };
-      })(this));
+      var _this = this;
+      return this.$tabs.bind('click', function(e) {
+        return _this.tabClick(e);
+      });
     };
 
-
     /*
-       *# tabClick
+      ## tabClick
       Called on event of tab being clicked. Will change active
       tab and active content.
-     */
+    */
+
 
     Tabs.prototype.tabClick = function(e) {
       var $this;
@@ -60,11 +59,11 @@
 
   })();
 
-
   /*
-     *# Define
+    ## Define
     Return module for AMD.
-   */
+  */
+
 
   define(function() {
     return Tabs;

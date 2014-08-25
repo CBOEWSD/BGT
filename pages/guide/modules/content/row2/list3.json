@@ -1,24 +1,21 @@
 {
-    "items": [
-        {
-            "link": {
-                "url": "#"
-            },
-            "thumbnail": {
-                "classes": [
-                    "hideonmobile"
-                ],
-                "src": "/ui/assets/images/press/feature-320x110.jpg"
-            },
-            "title": "CBOE Holdings Reports November Volume"
+    "items": [{
+        "link": {
+            "url": "#"
         },
-        {
-            "link": {
-                "url": "#"
-            },
-            "title": "CBOE And C2 To List Options On Twitter (TWTR) On November 15"
-        }
-    ],
+        "thumbnail": {
+            "classes": [
+                "hideonmobile"
+            ],
+            "src": "/ui/assets/images/press/feature-320x110.jpg"
+        },
+        "title": "CBOE Holdings Reports November Volume"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "title": "CBOE And C2 To List Options On Twitter (TWTR) On November 15"
+    }],
     "widget": {
         "classes": [
             "subwidget"

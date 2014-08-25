@@ -1,9 +1,9 @@
-
 /*
-   * Navigation
+  # Navigation
   Controls the display of the navigation
   menu trhough desktop and tablet.
- */
+*/
+
 
 (function() {
   var Navigation, navigation;
@@ -13,10 +13,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function Navigation($el) {
       this.log.add('notification', 'Constructed.', this);
@@ -39,27 +39,27 @@
       this.expanderControls.setup();
     }
 
-
     /*
-       *# this.log
+      ## this.log
       Add local instance of logging to this module.
       Can be called with:
       ``` @log.add 'notification', 'message...', @ ```
-     */
+    */
+
 
     Navigation.prototype.log = new LogHandler('Navigation');
 
-
     /*
-       *# this.bind
+      ## this.bind
       Bind up events with actions.
-     */
+    */
+
 
     Navigation.prototype.bind = function() {
       this.log.add('notification', 'Bind method called.', this);
       this.$navIcon.click(this.mobileToggle);
       this.topLiClicked = false;
-      $('a', this.$topLis).on('click touchend', function(e) {
+      $('>a', this.$topLis).on('click touchend', function(e) {
         if (self.topLiClicked) {
           return false;
         }
@@ -77,12 +77,12 @@
       return this.$el.swipe(this.swipeSettings);
     };
 
-
     /*
-       *# this.clickTap
+      ## this.clickTap
       A catch all method for click and touch/tap events
       directed out of the swipe library.
-     */
+    */
+
 
     Navigation.prototype.clickTap = function(e, target) {
       var $parentLi, $subUl, $target;
@@ -117,23 +117,23 @@
       }
     };
 
-
     /*
-       *# this.hasSub
+      ## this.hasSub
       Adds a class to list items that have
       a sub menu to them.
-     */
+    */
+
 
     Navigation.prototype.hasSub = function($uls) {
       return $uls.parents('li').addClass('hasSubMenu');
     };
 
-
     /*
-       *# this.expanderControls
+      ## this.expanderControls
       Adds the navigation (desktop) controls for the expander
       based navigation. [left/right/close]
-     */
+    */
+
 
     Navigation.prototype.expanderControls = {
       leftClicked: false,
@@ -219,12 +219,12 @@
       }
     };
 
-
     /*
-       *# this.clickTopLi
+      ## this.clickTopLi
       Desktop interaction with top menu item, this will expand
       the navigation pushing the page down.
-     */
+    */
+
 
     Navigation.prototype.clickTopLi = function(e, target) {
       var $parentLi, $subUl, _ref;
@@ -253,24 +253,23 @@
       }
     };
 
-
     /*
-       *# this.adjustExpander
+      ## this.adjustExpander
       This method adjusts the height of the expander element
       which reveals the submenu on desktop.
-     */
+    */
+
 
     Navigation.prototype.adjustExpander = function(height) {
-      var $activeLi;
+      var $activeLi,
+        _this = this;
       if (height === 'resize') {
         if ($('html').hasClass('lt-ie9')) {
           return false;
         }
-        setTimeout((function(_this) {
-          return function() {
-            return self.adjustExpander('delayedResize');
-          };
-        })(this), 2000);
+        setTimeout(function() {
+          return self.adjustExpander('delayedResize');
+        }, 2000);
         return false;
       }
       if (typeof height !== 'number') {
@@ -294,11 +293,11 @@
       }
     };
 
-
     /*
-       *# this.mobileToggle
+      ## this.mobileToggle
       Expands and collapses the mobile navigataion.
-     */
+    */
+
 
     Navigation.prototype.mobileToggle = function(e) {
       var $closeOverlay, $mobileMainTitle, settings;
@@ -327,11 +326,11 @@
       }, 50);
     };
 
-
     /*
-       *# this.mobileShowSubUl
+      ## this.mobileShowSubUl
       Show submenu on mobile.
-     */
+    */
+
 
     Navigation.prototype.mobileShowSubUl = function($subUl) {
       var $landingPage, $mobileCategory, settings;
@@ -358,11 +357,11 @@
       return $subUl.swipe(settings);
     };
 
-
     /*
-       *# this.mobileHideSubUl
+      ## this.mobileHideSubUl
       Hide submenu on mobile.
-     */
+    */
+
 
     Navigation.prototype.mobileHideSubUl = function($subUl) {
       return setTimeout(function() {
@@ -370,11 +369,11 @@
       }, 100);
     };
 
-
     /*
-       *# this.swipeTopUl
+      ## this.swipeTopUl
       On touch start begin moving the selected element
-     */
+    */
+
 
     Navigation.prototype.swipeTopUl = function(e, direction, distance, duration, fingerCount) {
       var $el;
@@ -392,24 +391,24 @@
       }
     };
 
-
     /*
-       *# this.swipeTopUlReset
+      ## this.swipeTopUlReset
       A reset method called at several points within the
       swipe method. Abstraction method.
-     */
+    */
+
 
     Navigation.prototype.swipeTopUlReset = function($el) {
       return $el.removeClass('removetrans').css('transform', '');
     };
 
-
     /*
-       *# this.swipeSubUl
+      ## this.swipeSubUl
       On touch start begin moving the selected element
       Unfortunately we cannot use the same method as the top
       menu as we need to change different properties.
-     */
+    */
+
 
     Navigation.prototype.swipeSubUl = function(e, direction, distance, duration, fingerCount) {
       var $el;
@@ -428,12 +427,12 @@
       }
     };
 
-
     /*
-       *# this.swipeSubUlReset
+      ## this.swipeSubUlReset
       A reset method called at several points within the
       swipe method. Abstraction method.
-     */
+    */
+
 
     Navigation.prototype.swipeSubUlReset = function($el) {
       return $el.removeClass('removetrans').css('margin-left', '');
@@ -443,10 +442,10 @@
 
   })();
 
-
   /*
-   *# Init
-   */
+  ## Init
+  */
+
 
   navigation = new Navigation($('.navigation'));
 

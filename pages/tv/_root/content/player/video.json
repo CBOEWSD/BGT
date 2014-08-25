@@ -1,19 +1,19 @@
 {
-  "title": "CBOETV",
-  "disclaimer": {
-    "href": "#",
-    "text": "Click here to view or download a copy of Characteristics and Risks of Standardized Options"
-  },
-  "subscribe": {
-    "href": "#",
-    "text": "Subscribe to CBOETV"
-  },
-  "video": {
-    "title": "In the Money 01.31.2014",
-    "category": "Education: Advanced",
-    "description": "Big volume in GOOG as it hits record highs &amp; in an interview with Andrew Keene: Airline stocks. Angie Miles reports."
-  },
-  "next": {
-    "title": "Blogging Options: CBOE Morning Update 10.2.13"
-  }
+    "title": "CBOETV",
+    "disclaimer": {
+        "href": "#",
+        "text": "Click here to view or download a copy of Characteristics and Risks of Standardized Options"
+    },
+    "subscribe": {
+        "href": "#",
+        "text": "Subscribe to CBOETV"
+    },
+    "video": {
+        "title": "In the Money 01.31.2014",
+        "category": "Education: Advanced",
+        "description": "Big volume in GOOG as it hits record highs &amp; in an interview with Andrew Keene: Airline stocks. Angie Miles reports."
+    },
+    "next": {
+        "title": "Blogging Options: CBOE Morning Update 10.2.13"
+    }
 }

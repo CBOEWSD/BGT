@@ -1,27 +1,21 @@
 {
-  "widgetWrapper": true,
-  "column1": {
-    "modules": [
-      {
-        "widgets/widget-title": {
-          "title": "Delayed Quotes"
-        }
-      },
-      {
-        "widgets/forms/body/body": "delayed-search/component.json"
-      }
-    ]
-  },
-  "column2": {
-    "modules": [
-      {
-        "widgets/widget-title": {
-          "title": "Delayed Quotes & Detailed Data"
-        }
-      },
-      {
-        "widgets/forms/body/body": "delayed-search2/component.json"
-      }
-    ]
-  }
+    "widgetWrapper": true,
+    "column1": {
+        "modules": [{
+            "widgets/widget-title": {
+                "title": "Delayed Quotes"
+            }
+        }, {
+            "widgets/forms/body/body": "delayed-search/component.json"
+        }]
+    },
+    "column2": {
+        "modules": [{
+            "widgets/widget-title": {
+                "title": "Delayed Quotes & Detailed Data"
+            }
+        }, {
+            "widgets/forms/body/body": "delayed-search2/component.json"
+        }]
+    }
 }

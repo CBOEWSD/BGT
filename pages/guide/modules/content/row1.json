@@ -1,67 +1,59 @@
 {
-  "widgetWrapper": true,
-  "classes": [
-    "slimright"
-  ],
-  "column1": {
-    "modules": [
-      {
-        "widgets/snapshot/graphonly/wide": {
-          "title": {
-            "title": "snapshot/graphonly/wide",
-            "advanced": {
-              "url": "#",
-              "text": "Callout"
+    "widgetWrapper": true,
+    "classes": [
+        "slimright"
+    ],
+    "column1": {
+        "modules": [{
+            "widgets/snapshot/graphonly/wide": {
+                "title": {
+                    "title": "snapshot/graphonly/wide",
+                    "advanced": {
+                        "url": "#",
+                        "text": "Callout"
+                    }
+                },
+                "meta": {
+                    "volume": "15,129,670",
+                    "change": -127.87,
+                    "changepct": -0.84
+                }
             }
-          },
-          "meta": {
-            "volume": "15,129,670",
-            "change": -127.87,
-            "changepct": -0.84
-          }
-        }
-      },
-      {
-        "widgets/snapshot/snapshot": "row1/snapshot/component2.json"
-      }
-    ]
-  },
-  "column2": {
-    "modules": [
-      {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "quote-overview/overview",
-            "promo": {
-              "url": "#",
-              "text": "Callout",
-              "classes": [
-                "button blue"
-              ]
+        }, {
+            "widgets/snapshot/snapshot": "row1/snapshot/component2.json"
+        }]
+    },
+    "column2": {
+        "modules": [{
+            "widgets/widget-title": {
+                "widget": {
+                    "title": "quote-overview/overview",
+                    "promo": {
+                        "url": "#",
+                        "text": "Callout",
+                        "classes": [
+                            "button blue"
+                        ]
+                    }
+                }
             }
-          }
-        }
-      },
-      {
-        "widgets/quote-overview/overview": "row1/overview/component.json"
-      },
-      {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "sidebar/filter/filter",
-            "promo": {
-              "url": "#",
-              "text": "Callout",
-              "classes": [
-                "button blue"
-              ]
+        }, {
+            "widgets/quote-overview/overview": "row1/overview/component.json"
+        }, {
+            "widgets/widget-title": {
+                "widget": {
+                    "title": "sidebar/filter/filter",
+                    "promo": {
+                        "url": "#",
+                        "text": "Callout",
+                        "classes": [
+                            "button blue"
+                        ]
+                    }
+                }
             }
-          }
-        }
-      },
-      {
-        "widgets/sidebar/filter/filter": "row1/filter.json"
-      }
-    ]
-  }
+        }, {
+            "widgets/sidebar/filter/filter": "row1/filter.json"
+        }]
+    }
 }

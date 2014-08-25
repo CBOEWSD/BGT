@@ -1,24 +1,19 @@
 {
-  "widgetWrapper": true,
-  "classes": [
-    "slimright"
-  ],
-  "column1": {
-    "modules": [
-      {
-        "widgets/optionable-title/title": "row4/title.json"
-      },
-      {
-        "widgets/table/table": "row4/table.json"
-      }
-    ]
-  },
-  "column2": {
-    "classes": ["hideatLT900"],
-    "modules": [
-      {
-        "ads/square_300/block": ""
-      }
-    ]
-  }
+    "widgetWrapper": true,
+    "classes": [
+        "slimright"
+    ],
+    "column1": {
+        "modules": [{
+            "widgets/optionable-title/title": "row4/title.json"
+        }, {
+            "widgets/table/table": "row4/table.json"
+        }]
+    },
+    "column2": {
+        "classes": ["hideatLT900"],
+        "modules": [{
+            "ads/square_300/block": ""
+        }]
+    }
 }

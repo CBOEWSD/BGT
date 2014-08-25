@@ -1,31 +1,26 @@
 {
-  "widget": {
-    "title": "Related Links"
-  },
-  "items": [
-    {
-      "link": {
-        "url": "#"
-      },
-      "text": "Virtual Trading Tools"
+    "widget": {
+        "title": "Related Links"
     },
-    {
-      "link": {
-        "url": "#"
-      },
-      "text": "Options Calculator"
-    },
-    {
-      "link": {
-        "url": "#"
-      },
-      "text": "CBOE TV"
-    },
-    {
-      "link": {
-        "url": "#"
-      },
-      "text": "Strategies"
-    }
-  ]
+    "items": [{
+        "link": {
+            "url": "#"
+        },
+        "text": "Virtual Trading Tools"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "text": "Options Calculator"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "text": "CBOE TV"
+    }, {
+        "link": {
+            "url": "#"
+        },
+        "text": "Strategies"
+    }]
 }

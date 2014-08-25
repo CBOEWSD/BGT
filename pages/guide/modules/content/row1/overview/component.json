@@ -1,36 +1,34 @@
 {
-  "summary": [
-    {
-      "item1": {
-        "Last": {
-          "value": 17.04,
-          "prefix": "$"
+    "summary": [{
+        "item1": {
+            "Last": {
+                "value": 17.04,
+                "prefix": "$"
+            }
+        },
+        "item2": {
+            "Change": {
+                "value": 0.32,
+                "numericcolor": true,
+                "parens": {
+                    "value": 1.88,
+                    "postfix": "%"
+                }
+            }
         }
-      },
-      "item2": {
-        "Change": {
-          "value": 0.32,
-          "numericcolor": true,
-          "parens": {
-            "value": 1.88,
-            "postfix": "%"
-          }
+    }],
+    "items": {
+        "Price": {
+            "widgets/table/table": "row1/overview/data.json"
+        },
+        "OHLC": {
+            "widgets/table/table": "row1/overview/data.json"
+        },
+        "Volumes": {
+            "widgets/table/table": "row1/overview/data.json"
+        },
+        "Ratios": {
+            "widgets/table/table": "row1/overview/data.json"
         }
-      }
     }
-  ],
-  "items": {
-    "Price": {
-      "widgets/table/table": "row1/overview/data.json"
-    },
-    "OHLC": {
-      "widgets/table/table": "row1/overview/data.json"
-    },
-    "Volumes": {
-      "widgets/table/table": "row1/overview/data.json"
-    },
-    "Ratios": {
-      "widgets/table/table": "row1/overview/data.json"
-    }
-  }
 }

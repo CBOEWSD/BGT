@@ -1,13 +1,11 @@
 {
-  "content": [
-    {
-      "class": "text-center",
-      "link": {
-        "title":"test",
-        "url": "",
-        "class":"text-bold-link"
-      },
-      "content": "Download .txt File"
-    }
-  ]
+    "content": [{
+        "class": "text-center",
+        "link": {
+            "title": "test",
+            "url": "",
+            "class": "text-bold-link"
+        },
+        "content": "Download .txt File"
+    }]
 }

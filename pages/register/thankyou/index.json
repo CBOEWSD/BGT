@@ -1,27 +1,21 @@
 {
-  "view": "twocol",
-  "loggedin": true,
-  "noad": true,
-  "title": "myCBOE Settings",
-  "meta": {
-    "keywords": "some, keywords",
-    "description": "This is a description"
-  },
-  "placeholders": {
-    "topspan": [
-      {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-      }
-    ],
-    "col1": [
-      {
-        "widgets/forms/body/body": "subscriptions/component.json"
-      }
-    ],
-    "col2": [
-      {
-        "widgets/content/content": "signup.md"
-      }
-    ]
-  }
+    "view": "twocol",
+    "loggedin": true,
+    "noad": true,
+    "title": "myCBOE Settings",
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "placeholders": {
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+        }],
+        "col1": [{
+            "widgets/forms/body/body": "subscriptions/component.json"
+        }],
+        "col2": [{
+            "widgets/content/content": "signup.md"
+        }]
+    }
 }

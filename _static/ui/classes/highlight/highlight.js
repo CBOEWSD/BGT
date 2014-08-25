@@ -22,7 +22,8 @@
     };
 
     Highlight.prototype.highlight = function(keywords) {
-      var $node, node;
+      var $node, node,
+        _this = this;
       if (!keywords) {
         return false;
       }
@@ -33,17 +34,15 @@
       if ($node.length < 1) {
         $node = this.$el;
       }
-      return $node.html((function(_this) {
-        return function(i, markup) {
-          var keyword, regex, _i, _len;
-          for (_i = 0, _len = keywords.length; _i < _len; _i++) {
-            keyword = keywords[_i];
-            regex = new RegExp("(" + keyword + ")", 'gi');
-            markup = markup.replace(regex, '<span class="highlight-word">$1</span>');
-          }
-          return markup;
-        };
-      })(this));
+      return $node.html(function(i, markup) {
+        var keyword, regex, _i, _len;
+        for (_i = 0, _len = keywords.length; _i < _len; _i++) {
+          keyword = keywords[_i];
+          regex = new RegExp("(" + keyword + ")", 'gi');
+          markup = markup.replace(regex, '<span class="highlight-word">$1</span>');
+        }
+        return markup;
+      });
     };
 
     return Highlight;

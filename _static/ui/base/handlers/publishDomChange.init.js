@@ -1,6 +1,5 @@
-
 /*
-   * Publish DomChange
+  # Publish DomChange
   Allows for modules or classes to subscribe for the body
   `DOMSubtreeModified` event to be fired periodically.
   This will fire when any DOM node is change in the body.
@@ -10,7 +9,8 @@
   The event that subscriberrs are listening for will only happen
   once a second and prevent a performance issue for
   repeated adustments.
- */
+*/
+
 
 (function() {
   var DomChange;
@@ -20,10 +20,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function DomChange() {
       self = this;
@@ -32,22 +32,22 @@
       self.periodicCheck();
     }
 
-
     /*
-       *# `this.shouldFire`
+      ## `this.shouldFire`
       Simply flags the fireIt variable `true`
-     */
+    */
+
 
     DomChange.prototype.shouldFire = function(e) {
       return self.fireIt = true;
     };
 
-
     /*
-       *# `this.periodicCheck`
+      ## `this.periodicCheck`
       Will check every second to see
       if the event should be published.
-     */
+    */
+
 
     DomChange.prototype.periodicCheck = function() {
       return setInterval(function() {

@@ -1,6 +1,5 @@
-
 /*
-   * Custom Publish
+  # Custom Publish
   Custom Publish allows you to use a DOM attribute to create
   a custom event for any anonymous subscribers listening out
   there. This can help modules communicate with each other
@@ -15,7 +14,8 @@
   The data-event will default to `click` events and is
   therefore optional. You can now have your other module subscribe
   to this `myevent` and take whatever actions are necessary.
- */
+*/
+
 
 (function() {
   var CustomPublish, customPublish;
@@ -25,10 +25,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function CustomPublish() {
       self = this;
@@ -39,36 +39,35 @@
       return this;
     }
 
-
     /*
-       *# this.bindNodes
+      ## this.bindNodes
       Bind each custom publish node with its event type
       or default to `click` events.
-     */
+    */
+
 
     CustomPublish.prototype.bindNodes = function() {
-      return this.$nodes.each((function(_this) {
-        return function(i, el) {
-          var $this;
-          $this = $(el);
-          return $this.bind($this.data('event') || 'click', function(e) {
-            if ($this.data('preventDefault')) {
-              e.preventDefault();
-            }
-            if ($this.data('stopImmediate')) {
-              e.stopImmediatePropagation();
-            }
-            return _this.publishEvent($(e.currentTarget));
-          });
-        };
-      })(this));
+      var _this = this;
+      return this.$nodes.each(function(i, el) {
+        var $this;
+        $this = $(el);
+        return $this.bind($this.data('event') || 'click', function(e) {
+          if ($this.data('preventDefault')) {
+            e.preventDefault();
+          }
+          if ($this.data('stopImmediate')) {
+            e.stopImmediatePropagation();
+          }
+          return _this.publishEvent($(e.currentTarget));
+        });
+      });
     };
 
-
     /*
-       *# this.publishEvent
+      ## this.publishEvent
       Publish the custom event to anyone who cares.
-     */
+    */
+
 
     CustomPublish.prototype.publishEvent = function(node) {
       return PubSub.publish(node.data('publish'), node);

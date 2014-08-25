@@ -1,6 +1,5 @@
-
 /*
-   * ToolTips Class
+  # ToolTips Class
   Calls in dependencies if tabs class exists on page
 
   Available data attributes:
@@ -13,7 +12,8 @@
     data-tooltip-hide-event="click"
     data-tooltip-show-for="6000"
   ```
- */
+*/
+
 
 (function() {
   var $el;

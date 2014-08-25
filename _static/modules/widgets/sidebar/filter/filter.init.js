@@ -1,7 +1,7 @@
-
 /*
-   * Filter widget init
- */
+  # Filter widget init
+*/
+
 
 (function() {
   var $el;

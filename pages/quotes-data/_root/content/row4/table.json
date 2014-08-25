@@ -1,402 +1,292 @@
 {
-  "columns": [
-    {
-      "title": "Symbol",
-      "mobile": true
-    },
-    {
-      "title": "Contract",
-      "mobile": true
-    },
-    {
-      "title": "Month",
-      "mobile": false
-    },
-    {
-      "title": "Time",
-      "mobile": false
-    },
-    {
-      "title": "Last",
-      "mobile": true
-    },
-    {
-      "title": "Change",
-      "mobile": true
-    },
-    {
-      "title": "Open",
-      "mobile": false
-    },
-    {
-      "title": "High",
-      "mobile": false
-    },
-    {
-      "title": "Low",
-      "mobile": false
-    }
-  ],
-  "rows": [
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
-    ],
-    [
-      {
-        "content": "VX J4-CF",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "S&P 500 VOLATILITY",
-        "link": {
-          "url": "#"
-        }
-      },
-      {
-        "content": "April 2014"
-      },
-      {
-        "content": "14:02:52"
-      },
-      {
-        "content": 15.85
-      },
-      {
-        "content": 0.15,
-        "numericcolor": true
-      },
-      {
-        "content": 15.90
-      },
-      {
-        "content": 15.93
-      },
-      {
-        "content": 15.50
-      }
+    "columns": [{
+        "title": "Symbol",
+        "mobile": true
+    }, {
+        "title": "Contract",
+        "mobile": true
+    }, {
+        "title": "Month",
+        "mobile": false
+    }, {
+        "title": "Time",
+        "mobile": false
+    }, {
+        "title": "Last",
+        "mobile": true
+    }, {
+        "title": "Change",
+        "mobile": true
+    }, {
+        "title": "Open",
+        "mobile": false
+    }, {
+        "title": "High",
+        "mobile": false
+    }, {
+        "title": "Low",
+        "mobile": false
+    }],
+    "rows": [
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }],
+        [{
+            "content": "VX J4-CF",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "S&P 500 VOLATILITY",
+            "link": {
+                "url": "#"
+            }
+        }, {
+            "content": "April 2014"
+        }, {
+            "content": "14:02:52"
+        }, {
+            "content": 15.85
+        }, {
+            "content": 0.15,
+            "numericcolor": true
+        }, {
+            "content": 15.90
+        }, {
+            "content": 15.93
+        }, {
+            "content": 15.50
+        }]
     ]
-  ]
 }

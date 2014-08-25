@@ -1,64 +1,51 @@
 {
-  "classes": ["hideonmobile"],
-  "filters": [
-    {
-      "title": "All Videos",
-      "total": 754,
-      "publish": "resetRows"
-    },
-    {
-      "title": "Most Recent",
-      "total": 12,
-      "publish": "tv-row-recent"
-    },
-    {
-      "title": "Most Popular",
-      "total": 12,
-      "publish": "tv-row-popular"
-    },
-    {
-      "title": "Market News",
-      "total": 12,
-      "publish": "tv-row-market"
-    },
-    {
-      "title": "Education",
-      "total": 12,
-      "items": [
-        {
-          "title": "Education: Basic",
-          "total": 6,
-          "url": "#menu",
-          "publish": "tv-row-education-bas"
-        },
-        {
-          "title": "Education: Intermediate",
-          "total": 4,
-          "url": "#menu",
-          "publish": "tv-row-education-int"
-        },
-        {
-          "title": "Education: Advanced",
-          "total": 2,
-          "url": "#menu",
-          "publish": "tv-row-education-adv"
-        }
-      ]
-    },
-    {
-      "title": "Options Safari",
-      "total": 12,
-      "publish": "tv-row-options"
-    },
-    {
-      "title": "CBOE Products &amp; News",
-      "total": 12,
-      "publish": "tv-row-products"
-    },
-    {
-      "title": "Partner Content",
-      "total": 12,
-      "publish": "tv-row-partner"
-    }
-  ]
+    "classes": ["hideonmobile"],
+    "filters": [{
+        "title": "All Videos",
+        "total": 754,
+        "publish": "resetRows"
+    }, {
+        "title": "Most Recent",
+        "total": 12,
+        "publish": "tv-row-recent"
+    }, {
+        "title": "Most Popular",
+        "total": 12,
+        "publish": "tv-row-popular"
+    }, {
+        "title": "Market News",
+        "total": 12,
+        "publish": "tv-row-market"
+    }, {
+        "title": "Education",
+        "total": 12,
+        "items": [{
+            "title": "Education: Basic",
+            "total": 6,
+            "url": "#menu",
+            "publish": "tv-row-education-bas"
+        }, {
+            "title": "Education: Intermediate",
+            "total": 4,
+            "url": "#menu",
+            "publish": "tv-row-education-int"
+        }, {
+            "title": "Education: Advanced",
+            "total": 2,
+            "url": "#menu",
+            "publish": "tv-row-education-adv"
+        }]
+    }, {
+        "title": "Options Safari",
+        "total": 12,
+        "publish": "tv-row-options"
+    }, {
+        "title": "CBOE Products &amp; News",
+        "total": 12,
+        "publish": "tv-row-products"
+    }, {
+        "title": "Partner Content",
+        "total": 12,
+        "publish": "tv-row-partner"
+    }]
 }

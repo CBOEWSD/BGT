@@ -1,17 +1,15 @@
 {
-  "items": [
-    {
-      "link": {
-        "url": "#"
-      },
-      "thumbnail": {
-        "src": "/ui/assets/images/blog/thumb-free-cboe-risk-management.jpg",
-        "classes": [
-          "hideonmobile"
-        ]
-      },
-      "title": "CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced",
-      "description": "Trading Futures with Weekly expirations on the new CBOE Short-Term Volatility"
-    }
-  ]
+    "items": [{
+        "link": {
+            "url": "#"
+        },
+        "thumbnail": {
+            "src": "/ui/assets/images/blog/thumb-free-cboe-risk-management.jpg",
+            "classes": [
+                "hideonmobile"
+            ]
+        },
+        "title": "CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced",
+        "description": "Trading Futures with Weekly expirations on the new CBOE Short-Term Volatility"
+    }]
 }

@@ -1,12 +1,12 @@
-
 /*
-   * NumericColor Class
+  # NumericColor Class
   Utilizes data-NumericColor attribute which should equal
   a numeric value. For example:
   ```
   <span ... data-numericcolor="{{Price.change}}" ... />
   ```
- */
+*/
+
 
 (function() {
   var $el, NumericColor;
@@ -16,10 +16,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function NumericColor(el) {
       this.$el = $(el);
@@ -35,23 +35,23 @@
       return self = this;
     }
 
-
     /*
-       *# Clean
+      ## Clean
       Will take a value and convert to its numeric counterpart.
       Will return `NaN` if the value is no good.
-     */
+    */
+
 
     NumericColor.prototype.clean = function(value) {
       value = String(value);
       return parseFloat(value.replace(',', ''));
     };
 
-
     /*
-       *# Check
+      ## Check
       Check if the value is positive or negative.
-     */
+    */
+
 
     NumericColor.prototype.check = function() {
       if (this.value >= 0) {
@@ -61,22 +61,22 @@
       }
     };
 
-
     /*
-       *# Positive
+      ## Positive
       Add class and trigger an event from the node.
-     */
+    */
+
 
     NumericColor.prototype.positive = function() {
       this.$el.addClass('numeric-positive');
       return this.$el.trigger('numeric', true);
     };
 
-
     /*
-       *# Positive
+      ## Positive
       Add class and trigger an event from the node.
-     */
+    */
+
 
     NumericColor.prototype.negative = function() {
       this.$el.addClass('numeric-negative');
@@ -87,11 +87,11 @@
 
   })();
 
-
   /*
-     *# Init
+    ## Init
     Call directly
-   */
+  */
+
 
   $el = $('[data-numericcolor]');
 

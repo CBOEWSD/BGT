@@ -1,13 +1,13 @@
-
 /*
-   * RowTV
+  # RowTV
   This adds functionality to the row subcomponent of the TV widget.
 
   NOTE:
     This file contains purely superficial functionality. At this time there
     is no interaction with a service. This code should be taken as guidance
     for UX interaction and not as the basis for application code.
- */
+*/
+
 
 (function() {
   var RowTV;
@@ -17,10 +17,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function RowTV(el) {
       self = this;
@@ -38,75 +38,58 @@
       return this;
     }
 
-
     /*
-       *# this.bindShowAll
+      ## this.bindShowAll
       Binds show all type actions with their appropriate methods.
-     */
+    */
+
 
     RowTV.prototype.bindShowAll = function() {
+      var _this = this;
       this.$viewAll = $('.expand', this.$el);
       this.$total = $('.total', this.$el);
-      this.$viewAll.bind('click', (function(_this) {
-        return function(e) {
-          return _this.actionToggleMe(e);
-        };
-      })(this));
+      this.$viewAll.bind('click', function(e) {
+        return _this.actionToggleMe(e);
+      });
       if (this.subscribe) {
-        PubSub.subscribe(this.subscribe, (function(_this) {
-          return function(event, from) {
-            return _this.actionToggleAll();
-          };
-        })(this));
+        PubSub.subscribe(this.subscribe, function(event, from) {
+          return _this.actionToggleAll();
+        });
       }
-      PubSub.subscribe('resetRows', (function(_this) {
-        return function() {
-          return _this.$el.trigger('reset');
-        };
-      })(this));
-      this.$el.bind('reset', (function(_this) {
-        return function() {
-          _this.$el.slideDown();
-          _this.$resetPublishers.addClass('shown');
-          return _this.actionHideAll(false);
-        };
-      })(this));
-      this.$el.bind('resetfilter', (function(_this) {
-        return function() {
-          return _this.actionHideAll(false);
-        };
-      })(this));
-      this.$pagination.bind('click', (function(_this) {
-        return function(e) {
-          e.preventDefault();
-          return _this.actionPagination(e.currentTarget);
-        };
-      })(this));
+      PubSub.subscribe('resetRows', function() {
+        return _this.$el.trigger('reset');
+      });
+      this.$el.bind('reset', function() {
+        _this.$el.slideDown();
+        _this.$resetPublishers.addClass('shown');
+        return _this.actionHideAll(false);
+      });
+      this.$el.bind('resetfilter', function() {
+        return _this.actionHideAll(false);
+      });
+      this.$pagination.bind('click', function(e) {
+        e.preventDefault();
+        return _this.actionPagination(e.currentTarget);
+      });
       if (this.$el.data('activestates')) {
-        this.$item.bind('click', (function(_this) {
-          return function(e) {
-            e.preventDefault();
-            return PubSub.publish('row-active-item', e.currentTarget);
-          };
-        })(this));
-        PubSub.subscribe('row-active-item', (function(_this) {
-          return function(e, item) {
-            return _this.actionActiveItem(e, item);
-          };
-        })(this));
-        return PubSub.subscribe('row-active-item-reset', (function(_this) {
-          return function(e, item) {
-            return _this.resetActiveItem(e, item);
-          };
-        })(this));
+        this.$item.bind('click', function(e) {
+          e.preventDefault();
+          return PubSub.publish('row-active-item', e.currentTarget);
+        });
+        PubSub.subscribe('row-active-item', function(e, item) {
+          return _this.actionActiveItem(e, item);
+        });
+        return PubSub.subscribe('row-active-item-reset', function(e, item) {
+          return _this.resetActiveItem(e, item);
+        });
       }
     };
 
-
     /*
-       *# this.actionToggleAll
+      ## this.actionToggleAll
       Called when all should be revealed or hidden for a certain category.
-     */
+    */
+
 
     RowTV.prototype.actionToggleAll = function(e) {
       if (e) {
@@ -119,12 +102,12 @@
       }
     };
 
-
     /*
-       *# this.actionShowAll
+      ## this.actionShowAll
       Called from `this.actionToggleAll` to show only this row and all
       sub videos/pagination.
-     */
+    */
+
 
     RowTV.prototype.actionShowAll = function() {
       this.$viewAll.hide();
@@ -136,12 +119,12 @@
       return this.$allOtherRows.trigger('resetfilter');
     };
 
-
     /*
-       *# this.actionHideAll
+      ## this.actionHideAll
       Called from `this.actionToggleAll` to hide only this row and all
       sub videos/pagination.
-     */
+    */
+
 
     RowTV.prototype.actionHideAll = function(trigger) {
       this.$viewAll.show();
@@ -153,11 +136,11 @@
       }
     };
 
-
     /*
-       *# this.actionToggleMe
+      ## this.actionToggleMe
       Called to expand/collapse this row, without collapsing others.
-     */
+    */
+
 
     RowTV.prototype.actionToggleMe = function(e) {
       if (e) {
@@ -170,12 +153,12 @@
       }
     };
 
-
     /*
-       *# this.actionShowMe
+      ## this.actionShowMe
       Called by `this.actionToggleMe` to expand this given row and add
       appropriate classes.
-     */
+    */
+
 
     RowTV.prototype.actionShowMe = function() {
       $('.item:hidden:first', this.$items).nextAll().andSelf().fadeIn();
@@ -184,12 +167,12 @@
       return this.$items.addClass('expanded');
     };
 
-
     /*
-       *# this.actionShowMe
+      ## this.actionShowMe
       Called by `this.actionToggleMe` to collapse this given row and remove
       appropriate classes.
-     */
+    */
+
 
     RowTV.prototype.actionHideMe = function() {
       $('.item:nth-child(n+5)', this.$items).fadeOut();
@@ -198,11 +181,11 @@
       return this.$viewAll.removeClass('shown red');
     };
 
-
     /*
-       *# this.showJustMe
+      ## this.showJustMe
       This method will hide all other `.widget-tv.row` other than `this.$el`
-     */
+    */
+
 
     RowTV.prototype.showJustMe = function() {
       this.$allOtherRows.slideUp(500, function() {
@@ -215,11 +198,11 @@
       return PubSub.publish('tv-rows-reset');
     };
 
-
     /*
-       *# this.showEveryone
+      ## this.showEveryone
       This method is called to reset `this.$allOtherRows` by at least showing them.
-     */
+    */
+
 
     RowTV.prototype.showEveryone = function() {
       return this.$allOtherRows.slideDown(500, function() {
@@ -227,12 +210,12 @@
       });
     };
 
-
     /*
-       *# this.actionActiveItem
+      ## this.actionActiveItem
       On player click this will add an active item state to the selected video
       whilst also publishing a `reset` event to all other items except the selected.
-     */
+    */
+
 
     RowTV.prototype.actionActiveItem = function(e, item) {
       if (this.$el.has(item).length < 1) {
@@ -245,9 +228,8 @@
       });
     };
 
-
     /*
-       *# this.resetActiveItem
+      ## this.resetActiveItem
       Will reset any `active` state videos excluding the video now being
       selected to play. PubSub event: `row-active-item-reset`.
     
@@ -255,7 +237,8 @@
       ```
       PubSub.publish('row-active-item-reset', {{optional item}});
       ```
-     */
+    */
+
 
     RowTV.prototype.resetActiveItem = function(e, item) {
       return this.$item.not(item).removeClass('active');
@@ -264,12 +247,12 @@
     RowTV.prototype.actionPagination = function(item) {
       var $current, $currentA, $item, $next, $prev;
       $item = $(item);
-
       /*
         Interface interaction could be here. Recomendation is abstraction
         via MVC framework to fetch and rerender view based on updated
         collection data. See backbone or angular JavaScript frameworks.
-       */
+      */
+
       if ($item.hasClass('icon-css-arrows')) {
         $current = this.$pagination.filter('.active').parent('li');
         $currentA = $('a', $current);
@@ -299,12 +282,12 @@
       return this.$items.fadeOut().fadeIn();
     };
 
-
     /*
-       *# this.movePagination
+      ## this.movePagination
       This method can be used to demo how pagination may work
       when reaching the end or `...`.
-     */
+    */
+
 
     RowTV.prototype.movePagination = function($active) {
       var $last, $previous, current, last;
@@ -338,11 +321,11 @@
 
   })();
 
-
   /*
-     *# Module definition
+    ## Module definition
     Called by require.
-   */
+  */
+
 
   define(function() {
     return RowTV;

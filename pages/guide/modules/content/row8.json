@@ -1,18 +1,14 @@
 {
-  "classes": ["slimright"],
-  "column1": {
-    "modules": [
-      {
-        "widgets/tv/row/row": "row8/tvrow.json"
-      }
-    ]
-  },
-  "column2": {
-    "modules": [
-      {
-        "widgets/quote/quote": "row8/quote.json"
-      }
-    ]
-  },
-  "widgetWrapper": true
+    "classes": ["slimright"],
+    "column1": {
+        "modules": [{
+            "widgets/tv/row/row": "row8/tvrow.json"
+        }]
+    },
+    "column2": {
+        "modules": [{
+            "widgets/quote/quote": "row8/quote.json"
+        }]
+    },
+    "widgetWrapper": true
 }

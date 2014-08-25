@@ -1,56 +1,45 @@
 {
-  "levels": [
-    {
-      "link": {
-        "text": "Quotes & Data",
-        "url": "#"
-      },
-      "children": [
-        {
-          "link": {
-            "text": "SubPage",
+    "levels": [{
+        "link": {
+            "text": "Quotes & Data",
             "url": "#"
-          }
         },
-        {
-          "link": {
-            "text": "SubPage",
+        "children": [{
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }]
+    }, {
+        "link": {
+            "text": "VIX",
             "url": "#"
-          }
         },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        }
-      ]
-    },
-    {
-      "link": {
-        "text": "VIX",
-        "url": "#"
-      },
-      "children": [
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        }
-      ]
-    }
-  ]
+        "children": [{
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }]
+    }]
 }

@@ -1,9 +1,9 @@
-
 /*
-   * Side Navigation
+  # Side Navigation
   The sidebar navigation module will collapse on mobile down to just a expandable title.
   This class will control expansion / collapse of the module on mobile.
- */
+*/
+
 
 (function() {
   var SideNavigation;
@@ -13,11 +13,11 @@
 
     self = {};
 
-
     /*
-       *# Constructor
+      ## Constructor
       Called on initializing (new)
-     */
+    */
+
 
     function SideNavigation(el) {
       self = this;
@@ -28,11 +28,11 @@
       self.bind();
     }
 
-
     /*
-       *# this.bind
+      ## this.bind
       Binds the top level click/touch event to expand/collapse the menu
-     */
+    */
+
 
     SideNavigation.prototype.bind = function() {
       self.$topAnchors = $('>ul>li>a', self.$el);
@@ -42,11 +42,11 @@
       return $(document).bind('contScroll', self.scrollEvent);
     };
 
-
     /*
-       *# this.toggleMenu
+      ## this.toggleMenu
       Toggles a clicked menu open/closed
-     */
+    */
+
 
     SideNavigation.prototype.menuClicked = false;
 
@@ -65,12 +65,12 @@
       return $(this).parent('li').toggleClass('expanded');
     };
 
-
     /*
-       *# this.scrollEvent
+      ## this.scrollEvent
       Fired on document scroll. We will prevent any further action on
       mobile viewports as this feature is not required.
-     */
+    */
+
 
     SideNavigation.prototype.scrollEvent = function(e) {
       if (Response.viewportW() < 768) {
@@ -80,12 +80,12 @@
       return self.checkSticky(e);
     };
 
-
     /*
-       *# this.getParams
+      ## this.getParams
       This method will fetch all required information needed
       to calculate if and how the element should be set.
-     */
+    */
+
 
     SideNavigation.prototype.getParams = function() {
       var $parent;
@@ -98,11 +98,11 @@
       return self.params.scrollTop = $(document).scrollTop();
     };
 
-
     /*
-       *# this.checkSticky
+      ## this.checkSticky
       Check if element should be set to sticky or not
-     */
+    */
+
 
     SideNavigation.prototype.checkSticky = function(e) {
       var position;
@@ -118,25 +118,25 @@
       }
     };
 
-
     /*
-       *# this.stickyOn
+      ## this.stickyOn
       In the event that `this.checkSticky` passes to stickyOn
       the element will be fixed using params from `this.getParams`.
       If the difference variable is set we will apply that as the top
       attribute; preventing the element moving outside of the column.
-     */
+    */
+
 
     SideNavigation.prototype.stickyOn = function(difference) {
       self.$el.css('position', difference != null ? 'absolute' : 'fixed').css('top', difference != null ? difference : self.offset).css('width', self.params.width);
       return self.$el.next().css('margin-top', self.params.height);
     };
 
-
     /*
-       *# this.stickOff
+      ## this.stickOff
       Removes anything applied by `this.stickyOff`.
-     */
+    */
+
 
     SideNavigation.prototype.stickyOff = function() {
       self.$el.css('position', '').css('top', '').css('width', '');

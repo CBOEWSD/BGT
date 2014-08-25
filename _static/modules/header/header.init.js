@@ -1,9 +1,9 @@
-
 /*
- * Header
+# Header
 Contains basic bindings for header module.
 Simple bindings such as the top search binding on mobile.
- */
+*/
+
 
 (function() {
   var Header, header;
@@ -13,37 +13,36 @@ Simple bindings such as the top search binding on mobile.
 
     self = {};
 
-
     /*
-     *# Constructor
-     */
+    ## Constructor
+    */
+
 
     function Header() {
+      var _this = this;
       this.log.add('notification', 'Constructed.', this);
       self = this;
       self.$topSearchExpander = $('.mobileExpandTopSearch');
       self.$topSearch = $('.header .quicksearch');
       this.$topSearchExpander.click(this.toggleTopSearch);
-      $(document).bind('click touchend', (function(_this) {
-        return function(e) {
-          if (_this.$topSearch.has(e.target).length > 0) {
-            return true;
-          }
-          if (_this.$topSearchExpander.is(e.target)) {
-            return true;
-          }
-          return _this.$topSearch.removeClass('open');
-        };
-      })(this));
+      $(document).bind('click touchend', function(e) {
+        if (_this.$topSearch.has(e.target).length > 0) {
+          return true;
+        }
+        if (_this.$topSearchExpander.is(e.target)) {
+          return true;
+        }
+        return _this.$topSearch.removeClass('open');
+      });
     }
 
-
     /*
-     *# this.log
+    ## this.log
     Add local instance of logging to this module.
     Can be called with:
     ``` @log.add 'notification', 'message...', @ ```
-     */
+    */
+
 
     Header.prototype.log = new LogHandler('Header');
 
@@ -57,10 +56,10 @@ Simple bindings such as the top search binding on mobile.
 
   })();
 
-
   /*
-   *# Init
-   */
+  ## Init
+  */
+
 
   header = new Header;
 

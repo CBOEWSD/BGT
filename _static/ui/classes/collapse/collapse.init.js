@@ -1,10 +1,10 @@
-
 /*
-   * Collapse Class
+  # Collapse Class
   This class allows for an element to be collapsed down
   to only show a `expander` button on mobile.
   This is useful for saving valuable viewport real estate.
- */
+*/
+
 
 (function() {
   $(function() {

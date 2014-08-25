@@ -1,8 +1,8 @@
-
 /*
-   * Tabs class init
+  # Tabs class init
   Calls in dependencies if tabs class exists on page
- */
+*/
+
 
 (function() {
   var $el;

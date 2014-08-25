@@ -1,20 +1,16 @@
 {
-  "column1": {
-    "modules": [
-      {
-        "widgets/error/message": {
-          "primary": "Primary error/warning message (error/message)",
-          "secondary": "Secondary messaging/explantation."
-        }
-      }
-    ]
-  },
-  "column2": {
-    "modules": [
-      {
-        "widgets/event/event": "row6/event.json"
-      }
-    ]
-  },
-  "widgetWrapper": true
+    "column1": {
+        "modules": [{
+            "widgets/error/message": {
+                "primary": "Primary error/warning message (error/message)",
+                "secondary": "Secondary messaging/explantation."
+            }
+        }]
+    },
+    "column2": {
+        "modules": [{
+            "widgets/event/event": "row6/event.json"
+        }]
+    },
+    "widgetWrapper": true
 }

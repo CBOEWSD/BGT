@@ -1,17 +1,15 @@
 {
-  "widget": {
-    "classes": [
-      "subwidget"
-    ],
-    "title": "CBOE News"
-  },
-  "items": [
-    {
-      "link": {
-        "url": "#"
-      },
-      "title": "CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced",
-      "description": "Trading Futures with Weekly expirations on the new CBOE Short-Term Volatility"
-    }
-  ]
+    "widget": {
+        "classes": [
+            "subwidget"
+        ],
+        "title": "CBOE News"
+    },
+    "items": [{
+        "link": {
+            "url": "#"
+        },
+        "title": "CBOE Russell 2000 Volatility Index Futures And Options Launch Dates Announced",
+        "description": "Trading Futures with Weekly expirations on the new CBOE Short-Term Volatility"
+    }]
 }

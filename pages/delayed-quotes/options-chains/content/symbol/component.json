@@ -1,11 +1,11 @@
 {
-  "before": {
-    "widgets/content/content": "symbol/before.md"
-  },
-  "body": {
-    "widgets/forms/symbol/search": ""
-  },
-  "after": {
-    "widgets/content/content": "symbol/after.md"
-  }
+    "before": {
+        "widgets/content/content": "symbol/before.md"
+    },
+    "body": {
+        "widgets/forms/symbol/search": ""
+    },
+    "after": {
+        "widgets/content/content": "symbol/after.md"
+    }
 }

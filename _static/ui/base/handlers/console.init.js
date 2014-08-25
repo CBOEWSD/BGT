@@ -1,9 +1,9 @@
-
 /*
-   * console.log
+  # console.log
   Fix for browsers with lack of support for
   the console object.
- */
+*/
+
 
 (function() {
   (function() {

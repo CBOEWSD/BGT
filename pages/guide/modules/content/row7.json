@@ -1,18 +1,14 @@
 {
-  "classes": ["slimright"],
-  "column1": {
-    "modules": [
-      {
-        "widgets/hero/side-image": "row7/hero1.json"
-      }
-    ]
-  },
-  "column2": {
-    "modules": [
-      {
-        "widgets/hero/copybased": "row7/hero2.json"
-      }
-    ]
-  },
-  "widgetWrapper": true
+    "classes": ["slimright"],
+    "column1": {
+        "modules": [{
+            "widgets/hero/side-image": "row7/hero1.json"
+        }]
+    },
+    "column2": {
+        "modules": [{
+            "widgets/hero/copybased": "row7/hero2.json"
+        }]
+    },
+    "widgetWrapper": true
 }

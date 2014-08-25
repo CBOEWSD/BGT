@@ -1,53 +1,43 @@
 {
-  "classes": [
-    "slimright"
-  ],
-  "column1": {
-    "modules": [
-      {
-        "widgets/list/simple": "row2/list.json"
-      },
-      {
-        "widgets/list/simple": "row2/list2.json"
-      }
-    ]
-  },
-  "column2": {
-    "modules": [
-      {
-        "widgets/list/simple": "row2/list3.json"
-      },
-      {
-        "widgets/widget": {
-          "classes": [
-            "noborders"
-          ],
-          "content": {
-            "widgets/content/content": "row2/widgetcontent.md"
-          }
-        }
-      }
-    ]
-  },
-  "column3": {
     "classes": [
-      "scrolloverflow"
+        "slimright"
     ],
-    "modules": [
-      {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "classes/scrolloverflow"
-          }
-        }
-      },
-      {
-        "widgets/content/content": "row2/content.md"
-      },
-      {
-        "widgets/content/content": "row2/content.md"
-      }
-    ]
-  },
-  "widgetWrapper": true
+    "column1": {
+        "modules": [{
+            "widgets/list/simple": "row2/list.json"
+        }, {
+            "widgets/list/simple": "row2/list2.json"
+        }]
+    },
+    "column2": {
+        "modules": [{
+            "widgets/list/simple": "row2/list3.json"
+        }, {
+            "widgets/widget": {
+                "classes": [
+                    "noborders"
+                ],
+                "content": {
+                    "widgets/content/content": "row2/widgetcontent.md"
+                }
+            }
+        }]
+    },
+    "column3": {
+        "classes": [
+            "scrolloverflow"
+        ],
+        "modules": [{
+            "widgets/widget-title": {
+                "widget": {
+                    "title": "classes/scrolloverflow"
+                }
+            }
+        }, {
+            "widgets/content/content": "row2/content.md"
+        }, {
+            "widgets/content/content": "row2/content.md"
+        }]
+    },
+    "widgetWrapper": true
 }

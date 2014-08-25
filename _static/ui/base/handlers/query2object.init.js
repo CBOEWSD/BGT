@@ -1,11 +1,11 @@
-
 /*
-   * query2object
+  # query2object
   Coverts a query string (such as that in a URL) into
   an object that can be manipulated. The object can be
   converted back by using:
   ``` decodeURIComponent($.param(object)) ```
- */
+*/
+
 
 (function() {
   window.query2object = function(query) {

@@ -1,86 +1,59 @@
 {
-  "title": {
-    "text": "Table 2",
-    "meta": {
-      "items": [
-        {
-          "content":"Additional Meta Data"
+    "title": {
+        "text": "Table 2",
+        "meta": {
+            "items": [{
+                "content": "Additional Meta Data"
+            }]
         }
-      ]
-    }
-  },
-  "classes": ["oddeven", "padvertical", "last-right", "data-table"],
-  "rows": [
-    [
-      {
-        "content": "52 Week High"
-      },
-      {
-        "content": 18.03,
-        "classes": "bold"
-      },
-      {
-        "content": "Dividend Amount"
-      },
-      {
-        "content": "0.040"
-      }
-    ],
-    [
-      {
-        "content": "52 Week Low"
-      },
-      {
-        "content": 11.43
-      },
-      {
-        "content": "Ex-Dividend Date"
-      },
-      {
-        "content": "03/05/2014"
-      }
-    ],
-    [
-      {
-        "content": "EPS"
-      },
-      {
-        "content": 0.76
-      },
-      {
-        "content": "P/E"
-      },
-      {
-        "content": 21.11
-      }
-    ],
-    [
-      {
-        "content": "Yield"
-      },
-      {
-        "content": 0.249
-      },
-      {
-        "content": "Market Cap (bln)"
-      },
-      {
-        "content": 168.954
-      }
-    ],
-    [
-      {
-        "content": "Shares"
-      },
-      {
-        "content": "10.530"
-      },
-      {
-        "content": "Financial Status"
-      },
-      {
-        "content": ""
-      }
+    },
+    "classes": ["oddeven", "padvertical", "last-right", "data-table"],
+    "rows": [
+        [{
+            "content": "52 Week High"
+        }, {
+            "content": 18.03,
+            "classes": "bold"
+        }, {
+            "content": "Dividend Amount"
+        }, {
+            "content": "0.040"
+        }],
+        [{
+            "content": "52 Week Low"
+        }, {
+            "content": 11.43
+        }, {
+            "content": "Ex-Dividend Date"
+        }, {
+            "content": "03/05/2014"
+        }],
+        [{
+            "content": "EPS"
+        }, {
+            "content": 0.76
+        }, {
+            "content": "P/E"
+        }, {
+            "content": 21.11
+        }],
+        [{
+            "content": "Yield"
+        }, {
+            "content": 0.249
+        }, {
+            "content": "Market Cap (bln)"
+        }, {
+            "content": 168.954
+        }],
+        [{
+            "content": "Shares"
+        }, {
+            "content": "10.530"
+        }, {
+            "content": "Financial Status"
+        }, {
+            "content": ""
+        }]
     ]
-  ]
 }

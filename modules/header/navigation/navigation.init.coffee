@@ -65,7 +65,7 @@ class Navigation
     # Prevent a default anchor link action
     # when clicked if the parent haas a sub menu
     @.topLiClicked = false
-    $('a', @.$topLis).on 'click touchend', (e) ->
+    $('>a', @.$topLis).on 'click touchend', (e) ->
       return false if self.topLiClicked
       self.topLiClicked = true
       setTimeout ->

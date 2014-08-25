@@ -1,42 +1,34 @@
 {
-  "levels": [
-    {
-      "link": {
-        "text": "Register for myCBOE",
-        "url": "#"
-      },
-      "children": [
-        {
-          "link": {
-            "text": "SubPage",
+    "levels": [{
+        "link": {
+            "text": "Register for myCBOE",
             "url": "#"
-          }
         },
-        {
-          "link": {
-            "text": "SubPage",
+        "children": [{
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }]
+    }, {
+        "link": {
+            "text": "Events",
             "url": "#"
-          }
-        },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
         }
-      ]
-    },
-    {
-      "link": {
-        "text": "Events",
-        "url": "#"
-      }
-    },
-    {
-      "link": {
-        "text": "Success",
-        "url": "#"
-      }
-    }
-  ]
+    }, {
+        "link": {
+            "text": "Success",
+            "url": "#"
+        }
+    }]
 }

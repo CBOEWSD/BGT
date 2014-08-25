@@ -1,17 +1,17 @@
-
 /*
-   * Account Dropdown
+  # Account Dropdown
   Account dropdown component; child node to topbar component.
- */
+*/
+
 
 (function() {
   var $el, AccountDropdown;
 
   AccountDropdown = (function() {
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
     function AccountDropdown(el) {
       this.$el = $(el);
       this.$top = $('>li', el);
@@ -20,36 +20,33 @@
       return this;
     }
 
-
     /*
-       *# this.bind
+      ## this.bind
       Bind up events needed to open/close menu
-     */
+    */
+
 
     AccountDropdown.prototype.bind = function() {
-      this.$button.bind('click', (function(_this) {
-        return function(e) {
-          return _this.toggleExpand(e);
-        };
-      })(this));
-      return $(document).bind('click touchend', (function(_this) {
-        return function(e) {
-          if (_this.$el.has(e.target).length > 0) {
-            return true;
-          }
-          if (_this.$el.is(e.target)) {
-            return true;
-          }
-          return _this.$top.removeClass('open');
-        };
-      })(this));
+      var _this = this;
+      this.$button.bind('click', function(e) {
+        return _this.toggleExpand(e);
+      });
+      return $(document).bind('click touchend', function(e) {
+        if (_this.$el.has(e.target).length > 0) {
+          return true;
+        }
+        if (_this.$el.is(e.target)) {
+          return true;
+        }
+        return _this.$top.removeClass('open');
+      });
     };
 
-
     /*
-       *# this.toggleExpand
+      ## this.toggleExpand
       Event handler
-     */
+    */
+
 
     AccountDropdown.prototype.toggleExpand = function(event) {
       event.preventDefault();
@@ -60,10 +57,10 @@
 
   })();
 
-
   /*
-     *# Init
-   */
+    ## Init
+  */
+
 
   $el = $('.account-dropdown');
 

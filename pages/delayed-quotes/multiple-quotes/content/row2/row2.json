@@ -1,13 +1,11 @@
 {
-  "widgetWrapper": true,
-  "classes": [
-    "slimright"
-  ],
-  "column": {
-    "modules": [
-      {
-        "_columns/one": "row2/table-columns.json"
-      }
-    ]
-  }
+    "widgetWrapper": true,
+    "classes": [
+        "slimright"
+    ],
+    "column": {
+        "modules": [{
+            "_columns/one": "row2/table-columns.json"
+        }]
+    }
 }

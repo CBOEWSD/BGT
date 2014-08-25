@@ -1,13 +1,13 @@
-
 /*
-   * Echo Class
+  # Echo Class
   Makes use of the [echojs](https://github.com/toddmotto/echo)
   library to only load images when they are in the viewport
-   *# Example:
+  ## Example:
   ```
   <img src="/ui/assets/images/placeholders/blank.gif" data-echo="{{src}}">
   ```
- */
+*/
+
 
 (function() {
   window.images = new Vimg({

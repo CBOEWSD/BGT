@@ -1,13 +1,13 @@
-
 /*
-   * PublishScroll
+  # PublishScroll
   Allows for modules or classes to subscribe for a window
   scroll event to be fired.
 
   **Note:** We are also listening for `touchmove`. This is related to
   iOS and how it handles scroll. In iOS scroll events fire on the release
   of the users finger from the screen and not during physical scroll.
- */
+*/
+
 
 (function() {
   var PublishScroll;
@@ -17,10 +17,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function PublishScroll() {
       self = this;
@@ -32,24 +32,24 @@
       self.periodicCheck();
     }
 
-
     /*
-       *# `this.shouldFire`
+      ## `this.shouldFire`
       Scroll event fired immediately. Scroll is usually heavily
       dependant upon timing so we have no delay in this event.
-     */
+    */
+
 
     PublishScroll.prototype.shouldFire = function(e) {
       $(document).trigger('contScroll');
       return self.fireIt = true;
     };
 
-
     /*
-       *# `this.periodicCheck`
+      ## `this.periodicCheck`
       Will check every second to see
       if the event should be published.
-     */
+    */
+
 
     PublishScroll.prototype.periodicCheck = function() {
       return setInterval(function() {

@@ -1,15 +1,12 @@
 {
-  "widgetWrapper": true,
-  "column": {
-    "modules": [
-      {
-        "widgets/widget-title": {
-          "title": "Search by Symbol"
-        }
-      },
-      {
-        "widgets/forms/body/body": "symbol/component.json"
-      }
-    ]
-  }
+    "widgetWrapper": true,
+    "column": {
+        "modules": [{
+            "widgets/widget-title": {
+                "title": "Search by Symbol"
+            }
+        }, {
+            "widgets/forms/body/body": "symbol/component.json"
+        }]
+    }
 }

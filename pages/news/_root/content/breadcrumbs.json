@@ -1,30 +1,24 @@
 {
-  "levels": [
-    {
-      "link": {
-        "text": "News",
-        "url": "#"
-      },
-      "children": [
-        {
-          "link": {
-            "text": "SubPage",
+    "levels": [{
+        "link": {
+            "text": "News",
             "url": "#"
-          }
         },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        }
-      ]
-    }
-  ]
+        "children": [{
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }]
+    }]
 }

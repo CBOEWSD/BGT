@@ -1,8 +1,8 @@
-
 /*
-   * Side Nav Init
+  # Side Nav Init
   Calls in dependencies if side navigation module exists on page.
- */
+*/
+
 
 (function() {
   var $el;

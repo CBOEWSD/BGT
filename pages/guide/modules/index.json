@@ -1,75 +1,56 @@
 {
-  "view": "onecol",
-  "title": "Guide: Modules",
-  "meta": {
-    "keywords": "some, keywords",
-    "description": "This is a description"
-  },
-  "placeholders": {
-    "topspan": [
-      {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-      }
-    ],
-    "content": [
-      {
-        "widgets/qnd-title/qnd-title": {
-          "title": "Guide: Modules",
-          "select": [
-            {
-              "text": "VIX",
-              "value": "#"
+    "view": "onecol",
+    "title": "Guide: Modules",
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "placeholders": {
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+        }],
+        "content": [{
+            "widgets/qnd-title/qnd-title": {
+                "title": "Guide: Modules",
+                "select": [{
+                    "text": "VIX",
+                    "value": "#"
+                }],
+                "classes": [
+                    "blueborder"
+                ]
             }
-          ],
-          "classes": [
-            "blueborder"
-          ]
-        }
-      },
-      {
-        "_columns/two": "row1.json"
-      },
-      {
-        "_columns/three": "row2.json"
-      },
-      {
-        "_columns/one": {
-          "column": {
-            "classes": [
-              "hideatGT900"
-            ],
-            "modules": [
-              {
-                "ads/span/slim": ""
-              }
-            ]
-          }
-        }
-      },
-      {
-        "_columns/one": "row3.json"
-      },
-      {
-        "_columns/three": "row4.json"
-      },
-      {
-        "_columns/three": "row5.json"
-      },
-      {
-        "_columns/two": "row6.json"
-      },
-      {
-        "_columns/two": "row7.json"
-      },
-      {
-        "_columns/two": "row8.json"
-      },
-      {
-        "_columns/two": "row9.json"
-      },
-      {
-        "widgets/ticker/bar": "ticker.json"
-      }
-    ]
-  }
+        }, {
+            "_columns/two": "row1.json"
+        }, {
+            "_columns/three": "row2.json"
+        }, {
+            "_columns/one": {
+                "column": {
+                    "classes": [
+                        "hideatGT900"
+                    ],
+                    "modules": [{
+                        "ads/span/slim": ""
+                    }]
+                }
+            }
+        }, {
+            "_columns/one": "row3.json"
+        }, {
+            "_columns/three": "row4.json"
+        }, {
+            "_columns/three": "row5.json"
+        }, {
+            "_columns/two": "row6.json"
+        }, {
+            "_columns/two": "row7.json"
+        }, {
+            "_columns/two": "row8.json"
+        }, {
+            "_columns/two": "row9.json"
+        }, {
+            "widgets/ticker/bar": "ticker.json"
+        }]
+    }
 }

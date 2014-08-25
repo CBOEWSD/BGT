@@ -1,49 +1,39 @@
 {
-  "view": "onecol",
-  "title": "Seminars and Event Registration",
-  "noad": true,
-  "meta": {
-    "keywords": "some, keywords",
-    "description": "This is a description"
-  },
-  "placeholders": {
-    "topspan": [
-      {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-      }
-    ],
-    "content": [
-      {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "Seminars and Event Registration",
-            "classes": [
-              "blueborder"
-            ]
-          }
-        }
-      },
-      {
-        "_columns/two": {
-          "column1": {
-            "modules": [
-              {
-                "widgets/event/event": "../../_root/content/event.json"
-              }
-            ]
-          },
-          "column2": {
-            "modules": [
-              {
-                "widgets/content/content": "../../_root/content/image.md"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "widgets/forms/body/body": "component.json"
-      }
-    ]
-  }
+    "view": "onecol",
+    "title": "Seminars and Event Registration",
+    "noad": true,
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "placeholders": {
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+        }],
+        "content": [{
+            "widgets/widget-title": {
+                "widget": {
+                    "title": "Seminars and Event Registration",
+                    "classes": [
+                        "blueborder"
+                    ]
+                }
+            }
+        }, {
+            "_columns/two": {
+                "column1": {
+                    "modules": [{
+                        "widgets/event/event": "../../_root/content/event.json"
+                    }]
+                },
+                "column2": {
+                    "modules": [{
+                        "widgets/content/content": "../../_root/content/image.md"
+                    }]
+                }
+            }
+        }, {
+            "widgets/forms/body/body": "component.json"
+        }]
+    }
 }

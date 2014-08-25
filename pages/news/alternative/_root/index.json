@@ -1,137 +1,108 @@
 {
-  "view": "twocol-b",
-  "title": "News Landing",
-  "meta": {
-    "keywords": "some, keywords",
-    "description": "This is a description"
-  },
-  "flipColumns": true,
-  "placeholders": {
-    "topspan": [
-      {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-      }
-    ],
-    "beforeRow": [
-      {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "CBOE News",
-            "promo": {
-              "class": "tradestation",
-              "url": "#"
-            }
-          }
-        }
-      },
-      {
-        "widgets/hero/w-ad/side-image": "hero.json"
-      },
-      {
-        "widgets/forms/wrapped/wrapped": {
-          "classes": [
-            "noradius",
-            "text-center"
-          ],
-          "form": {
-            "widgets/forms/search-generic/form": {
-              "classes": ["focus"]
-            }
-          }
-        }
-      }
-    ],
-    "col1": [
-    {
-        "widgets/widget-title": {
-          "widget": {
-            "title": "CBOE TV",
-            "promo": {
-              "url": "#",
-              "text": "View All"
-            }
-          }
-        }
-      },
-      {
-        "widgets/tv/row/row": "tv.json"
-      }
-    ],
-    "col2": [
-      {
-        "_columns/two": {
-          "column1": {
-            "modules": [
-              {
-                "widgets/widget-title": {
-                  "widget": {
+    "view": "twocol-b",
+    "title": "News Landing",
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "flipColumns": true,
+    "placeholders": {
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+        }],
+        "beforeRow": [{
+            "widgets/widget-title": {
+                "widget": {
                     "title": "CBOE News",
                     "promo": {
-                      "url": "#",
-                      "text": "View All"
+                        "class": "tradestation",
+                        "url": "#"
                     }
-                  }
                 }
-              },
-              {
-                "widgets/list/simple": "news/1.json"
-              },
-              {
-                "widgets/list/simple": "news/2.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              }
-            ]
-          },
-          "column2": {
-            "modules": [
-              {
-                "widgets/widget-title": {
-                  "widget": {
-                    "title": "Market News",
+            }
+        }, {
+            "widgets/hero/w-ad/side-image": "hero.json"
+        }, {
+            "widgets/forms/wrapped/wrapped": {
+                "classes": [
+                    "noradius",
+                    "text-center"
+                ],
+                "form": {
+                    "widgets/forms/search-generic/form": {
+                        "classes": ["focus"]
+                    }
+                }
+            }
+        }],
+        "col1": [{
+            "widgets/widget-title": {
+                "widget": {
+                    "title": "CBOE TV",
                     "promo": {
-                      "url": "#",
-                      "text": "View All"
+                        "url": "#",
+                        "text": "View All"
                     }
-                  }
                 }
-              },
-              {
-                "widgets/list/simple": "news/1.json"
-              },
-              {
-                "widgets/list/simple": "news/2.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              },
-              {
-                "widgets/list/simple": "news/3.json"
-              }
-            ]
-          }
-        }
-      }
-    ],
-    "afterRow": [
-      {
-        "widgets/pagination/pagination": ""
-      }
-    ],
-    "bottomspan": [
-      {
-        "widgets/widget": "bottomspan/widget.json"
-      }
-    ]
-  }
+            }
+        }, {
+            "widgets/tv/row/row": "tv.json"
+        }],
+        "col2": [{
+            "_columns/two": {
+                "column1": {
+                    "modules": [{
+                        "widgets/widget-title": {
+                            "widget": {
+                                "title": "CBOE News",
+                                "promo": {
+                                    "url": "#",
+                                    "text": "View All"
+                                }
+                            }
+                        }
+                    }, {
+                        "widgets/list/simple": "news/1.json"
+                    }, {
+                        "widgets/list/simple": "news/2.json"
+                    }, {
+                        "widgets/list/simple": "news/3.json"
+                    }, {
+                        "widgets/list/simple": "news/3.json"
+                    }, {
+                        "widgets/list/simple": "news/3.json"
+                    }]
+                },
+                "column2": {
+                    "modules": [{
+                        "widgets/widget-title": {
+                            "widget": {
+                                "title": "Market News",
+                                "promo": {
+                                    "url": "#",
+                                    "text": "View All"
+                                }
+                            }
+                        }
+                    }, {
+                        "widgets/list/simple": "news/1.json"
+                    }, {
+                        "widgets/list/simple": "news/2.json"
+                    }, {
+                        "widgets/list/simple": "news/3.json"
+                    }, {
+                        "widgets/list/simple": "news/3.json"
+                    }, {
+                        "widgets/list/simple": "news/3.json"
+                    }]
+                }
+            }
+        }],
+        "afterRow": [{
+            "widgets/pagination/pagination": ""
+        }],
+        "bottomspan": [{
+            "widgets/widget": "bottomspan/widget.json"
+        }]
+    }
 }

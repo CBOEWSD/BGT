@@ -1,8 +1,8 @@
 {
-  "before": {
-    "widgets/content/content": "company/before.md"
-  },
-  "body": {
-    "widgets/forms/search-company/search": ""
-  }
+    "before": {
+        "widgets/content/content": "company/before.md"
+    },
+    "body": {
+        "widgets/forms/search-company/search": ""
+    }
 }

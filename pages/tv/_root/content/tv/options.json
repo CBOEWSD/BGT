@@ -1,108 +1,95 @@
 {
-  "classes": ["hideonmobile"],
-  "title": "Options Safari",
-  "activeStates": true,
-  "subscribe": "tv-row-options",
-  "viewall": {
-    "expand": true
-  },
-  "total": 12,
-  "items": [
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, pellentesque in."
+    "classes": ["hideonmobile"],
+    "title": "Options Safari",
+    "activeStates": true,
+    "subscribe": "tv-row-options",
+    "viewall": {
+        "expand": true
     },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing in."
-    },
-    {
-      "url": "#",
-      "thumbnail": {
-        "src": "/ui/assets/images/videos/singlevid.jpg"
-      },
-      "title": "Blogging Options: CBOE Morning Update 10.2.13",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
-    }
-  ]
+    "total": 12,
+    "items": [{
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, pellentesque in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing in."
+    }, {
+        "url": "#",
+        "thumbnail": {
+            "src": "/ui/assets/images/videos/singlevid.jpg"
+        },
+        "title": "Blogging Options: CBOE Morning Update 10.2.13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum blandit libero, quis tempus massa pellentesque in."
+    }]
 }

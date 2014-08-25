@@ -1,29 +1,20 @@
 {
-  "controls": true,
-  "tickers": [
-    {
-      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
-    },
-    {
-      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
-    },
-    {
-      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
-    },
-    {
-      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
-    },
-    {
-      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
-    },
-    {
-      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
-    },
-    {
-      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
-    },
-    {
-      "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
-    }
-  ]
+    "controls": true,
+    "tickers": [{
+        "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }, {
+        "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }, {
+        "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }, {
+        "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }, {
+        "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }, {
+        "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }, {
+        "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }, {
+        "image": "/ui/assets/images/quotes/tradestation-logo.jpg"
+    }]
 }

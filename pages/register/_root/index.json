@@ -1,31 +1,24 @@
 {
-  "meta": {
-    "description": "This is a description",
-    "keywords": "some, keywords"
-  },
-  "placeholders": {
-    "col1": [
-      {
-        "widgets/forms/body/body": "register/component.json"
-      }
-    ],
-    "col2": [
-      {
-        "widgets/content/content": "signup.md"
-      }
-    ],
-    "topspan": [
-      {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-      },
-      {
-        "widgets/loginspan/span": {
-          "registerPage": true
-        }
-      }
-    ]
-  },
-  "title": "Register",
-  "view": "twocol",
-  "noad": true
+    "meta": {
+        "description": "This is a description",
+        "keywords": "some, keywords"
+    },
+    "placeholders": {
+        "col1": [{
+            "widgets/forms/body/body": "register/component.json"
+        }],
+        "col2": [{
+            "widgets/content/content": "signup.md"
+        }],
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+        }, {
+            "widgets/loginspan/span": {
+                "registerPage": true
+            }
+        }]
+    },
+    "title": "Register",
+    "view": "twocol",
+    "noad": true
 }

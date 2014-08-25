@@ -6,10 +6,10 @@
 
     self = {};
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function Filter(el) {
       self = this;
@@ -19,21 +19,21 @@
       return self;
     }
 
-
     /*
-       *# this.bind
+      ## this.bind
       Bind up event listeners.
-     */
+    */
+
 
     Filter.prototype.bind = function() {
       return self.$toplevel.bind('click', this.eventHandler);
     };
 
-
     /*
-       *# this.eventHandler
+      ## this.eventHandler
       Handles our show/hide event (ex: `click`)
-     */
+    */
+
 
     Filter.prototype.eventHandler = function(e) {
       var $this;
@@ -47,11 +47,11 @@
       }
     };
 
-
     /*
-       *# this.showMenu
+      ## this.showMenu
       Show sub menu on click event and add `expander` class.
-     */
+    */
+
 
     Filter.prototype.showMenu = function(e, el) {
       var $parentLi, $this;
@@ -60,11 +60,11 @@
       return $parentLi.addClass('expanded');
     };
 
-
     /*
-       *# this.hideMenu
+      ## this.hideMenu
       Show sub menu on click event and add `expander` class.
-     */
+    */
+
 
     Filter.prototype.hideMenu = function(e, el) {
       var $parentLi, $this;

@@ -1,81 +1,73 @@
 {
-  "items": [
-    {
-      "title": "Syllabus",
-      "component": {
-        "widgets/course-status/brief": {
-          "title": "testing title",
-          "content": {
-            "widgets/content/content":"edsnap/example.md"
-          }
+    "items": [{
+        "title": "Syllabus",
+        "component": {
+            "widgets/course-status/brief": {
+                "title": "testing title",
+                "content": {
+                    "widgets/content/content": "edsnap/example.md"
+                }
+            }
         }
-      }
-    },
-    {
-      "title": "Seminars",
-      "component": {
-        "widgets/course-status/brief": {
-          "title": "testing title",
-          "content": {
-            "widgets/content/content":"edsnap/example.md"
-          }
+    }, {
+        "title": "Seminars",
+        "component": {
+            "widgets/course-status/brief": {
+                "title": "testing title",
+                "content": {
+                    "widgets/content/content": "edsnap/example.md"
+                }
+            }
         }
-      }
-    },
-    {
-      "title": "Online Courses",
-      "component": {
-        "widgets/course-status/brief": {
-          "title": "testing title",
-          "content": {
-            "widgets/content/content":"edsnap/example.md"
-          }
+    }, {
+        "title": "Online Courses",
+        "component": {
+            "widgets/course-status/brief": {
+                "title": "testing title",
+                "content": {
+                    "widgets/content/content": "edsnap/example.md"
+                }
+            }
         }
-      }
-    },
-    {
-      "title": "Strategy Discussions",
-      "component": {
-        "widgets/course-status/brief": {
-          "title": "testing title",
-          "content": {
-            "widgets/content/content":"edsnap/example.md"
-          }
+    }, {
+        "title": "Strategy Discussions",
+        "component": {
+            "widgets/course-status/brief": {
+                "title": "testing title",
+                "content": {
+                    "widgets/content/content": "edsnap/example.md"
+                }
+            }
         }
-      }
-    },
-    {
-      "title": "Tasks",
-      "component": {
-        "widgets/course-status/brief": {
-          "title": "testing title",
-          "content": {
-            "widgets/content/content":"edsnap/example.md"
-          }
+    }, {
+        "title": "Tasks",
+        "component": {
+            "widgets/course-status/brief": {
+                "title": "testing title",
+                "content": {
+                    "widgets/content/content": "edsnap/example.md"
+                }
+            }
         }
-      }
-    },
-    {
-      "title": "Trading Tools",
-      "component": {
-        "widgets/course-status/brief": {
-          "title": "testing title",
-          "content": {
-            "widgets/content/content":"edsnap/example.md"
-          }
+    }, {
+        "title": "Trading Tools",
+        "component": {
+            "widgets/course-status/brief": {
+                "title": "testing title",
+                "content": {
+                    "widgets/content/content": "edsnap/example.md"
+                }
+            }
         }
-      }
-    },
-    {
-      "title": "Tasks",
-      "component": {
-        "widgets/course-status/brief": {
-          "title": "testing title",
-          "content": {
-            "widgets/content/content":"edsnap/example.md"
-          }
+    }, {
+        "title": "Tasks",
+        "component": {
+            "widgets/course-status/brief": {
+                "title": "testing title",
+                "content": {
+                    "widgets/content/content": "edsnap/example.md"
+                }
+            }
         }
-      }
-    }
-  ]
+    }]
 }

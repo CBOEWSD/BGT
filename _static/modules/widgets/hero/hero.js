@@ -6,10 +6,10 @@
 
     self = {};
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function WidgetHero($, el, timer) {
       this.$el = $(el);
@@ -23,22 +23,22 @@
       this.log.add('notification', 'Widget constructed.', this);
     }
 
-
     /*
-       *# this.log
+      ## this.log
       Add local instance of logging to this module.
       Can be called with:
       ``` @log.add 'notification', 'message...', @ ```
-     */
+    */
+
 
     WidgetHero.prototype.log = new LogHandler('WidgetHero');
 
-
     /*
-       *# this.createControls
+      ## this.createControls
       Method is called on initialization to create control
       elements - a list based menu - and bind up click events
-     */
+    */
+
 
     WidgetHero.prototype.createControls = function() {
       var x, _i, _ref;
@@ -55,14 +55,14 @@
       }
     };
 
-
     /*
-       *# this.controlClick
+      ## this.controlClick
       Called on click of an individual control item
       from the `this.$controls.$ind` group.
       Method will grab the index of clicked item and
       pass that through to the `this.showSlide` method.
-     */
+    */
+
 
     WidgetHero.prototype.controlClick = function(e) {
       var $parent;
@@ -72,13 +72,13 @@
       return self.showSlide($('li', $('.controls', $parent)).index(this), $parent);
     };
 
-
     /*
-       *# this.showSlide
+      ## this.showSlide
       Given an index this method will disable any currently
       active slide by removing `active` class and enable the
       given index slide.
-     */
+    */
+
 
     WidgetHero.prototype.showSlide = function(index, $parent) {
       var $controls, $next, $nextControl, $slides;
@@ -93,13 +93,13 @@
       return $nextControl.addClass('active');
     };
 
-
     /*
-       *# this.nextSlide
+      ## this.nextSlide
       Finds next slide element to be shown in order of index.
       If currently at last element then returns to start.
       Returns slide index.
-     */
+    */
+
 
     WidgetHero.prototype.nextSlide = function($me) {
       var $slides, index;
@@ -116,11 +116,11 @@
       return index.next;
     };
 
-
     /*
-       *# this.automate
+      ## this.automate
       A timeout triggered event switching to the next slide.
-     */
+    */
+
 
     WidgetHero.prototype.automate = function(time) {
       self.time = typeof time === 'number' ? time : false;
@@ -130,11 +130,11 @@
       return self.$el.mouseout(self.playTimer);
     };
 
-
     /*
-       *# this.startTimer
+      ## this.startTimer
       Called on construction and on mouseout events.
-     */
+    */
+
 
     WidgetHero.prototype.startTimer = function(e, el) {
       var $me;
@@ -146,11 +146,11 @@
       }, self.time);
     };
 
-
     /*
-       *# this.pauseTimer
+      ## this.pauseTimer
       Pauses timer on hover (mouseover) events.
-     */
+    */
+
 
     WidgetHero.prototype.pauseTimer = function(e, el) {
       var $me;
@@ -158,11 +158,11 @@
       return $me.addClass('paused');
     };
 
-
     /*
-       *# this.playTimer
+      ## this.playTimer
       Plays timer on mouseout events.
-     */
+    */
+
 
     WidgetHero.prototype.playTimer = function(e, el) {
       var $me;

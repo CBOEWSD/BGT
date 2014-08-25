@@ -1,9 +1,7 @@
 {
-  "column": {
-    "modules": [
-      {
-        "widgets/table/table": "row2/multiple-quotes.json"
-      }
-    ]
-  }
+    "column": {
+        "modules": [{
+            "widgets/table/table": "row2/multiple-quotes.json"
+        }]
+    }
 }

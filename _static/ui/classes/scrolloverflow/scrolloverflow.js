@@ -1,12 +1,12 @@
-
 /*
-   * ScrollOverflow Class
+  # ScrollOverflow Class
   Alows for content to be placed within another block of a certain height
   and not overflow or push content but instead add a scrollbar.
   This code will poll for DOM changes and adjust the element if so.
   Note: we do not adjust immediately, we are polling each change but
   we will only execute an adjustment every second if needed.
- */
+*/
+
 
 (function() {
   var ScrollOverflow;
@@ -16,10 +16,10 @@
 
     self = {};
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function ScrollOverflow($, $el, minviewport) {
       this.log.add('notification', 'Constructed.', this);
@@ -33,21 +33,21 @@
       this.bindUp();
     }
 
-
     /*
-       *# this.log
+      ## this.log
       Add local instance of logging to this module.
       Can be called with:
       ``` self.log.add 'notification', 'message...', @ ```
-     */
+    */
+
 
     ScrollOverflow.prototype.log = new LogHandler('ScrollOverflow');
 
-
     /*
-       *# `this.addTSE`
+      ## `this.addTSE`
       Add TSE related classes and init
-     */
+    */
+
 
     ScrollOverflow.prototype.addTSE = function() {
       if (self.active) {
@@ -70,11 +70,11 @@
       });
     };
 
-
     /*
-       *# `this.destroy`
+      ## `this.destroy`
       Removes all bindings and setup, this allows for collapse to mobile.
-     */
+    */
+
 
     ScrollOverflow.prototype.destroy = function() {
       if (!self.active) {
@@ -99,13 +99,13 @@
       });
     };
 
-
     /*
-       *# `this.setHeight`
+      ## `this.setHeight`
       For each instance of the class we will detect the
       height without the inner content and adjust the inner
       content element appropriately.
-     */
+    */
+
 
     ScrollOverflow.prototype.setHeight = function() {
       return self.$el.each(function() {
@@ -126,23 +126,23 @@
       });
     };
 
-
     /*
-       *# `this.bindUp`
+      ## `this.bindUp`
       We set a listen for the DOM change event and also start our interval
       checking for if a DOM event has changed something in the last second.
-     */
+    */
+
 
     ScrollOverflow.prototype.bindUp = function() {
       PubSub.subscribe('DomChange', self.changeEvent);
       PubSub.subscribe('GlobalScroll', self.changeEvent);
       self.log.add('notification', 'bindUp method called, listening for DOMSubtreeModified.', 'body');
-
       /*
         This interval prevents us from firing multiple instances of
         `this.setHeight` in quick succession. We will only ever fire
         once in any given second if at all.
-       */
+      */
+
       setInterval(function() {
         if (self.shouldI) {
           self.setHeight();
@@ -158,12 +158,12 @@
       });
     };
 
-
     /*
-       *# `this.changeEvent`
+      ## `this.changeEvent`
       Set `this.shouldI` to `true` for the next interval check
       to adjust the element heights.
-     */
+    */
+
 
     ScrollOverflow.prototype.changeEvent = function(e) {
       return self.shouldI = true;

@@ -1,50 +1,35 @@
 {
-  "classes": [
-    "last-right",
-    "padvertical"
-  ],
-  "rows": [
-    [
-      {
-        "content": "Last"
-      },
-      {
-        "content": "16,130.40"
-      }
+    "classes": [
+        "last-right",
+        "padvertical"
     ],
-    [
-      {
-        "content": "Change"
-      },
-      {
-        "content": -23.99,
-        "numericcolor": true
-      }
-    ],
-    [
-      {
-        "content": "ChangePCT"
-      },
-      {
-        "content": -0.15,
-        "numericcolor": true
-      }
-    ],
-    [
-      {
-        "content": "Bid"
-      },
-      {
-        "content": "n.a"
-      }
-    ],
-    [
-      {
-        "content": "Ask"
-      },
-      {
-        "content": "n.a"
-      }
+    "rows": [
+        [{
+            "content": "Last"
+        }, {
+            "content": "16,130.40"
+        }],
+        [{
+            "content": "Change"
+        }, {
+            "content": -23.99,
+            "numericcolor": true
+        }],
+        [{
+            "content": "ChangePCT"
+        }, {
+            "content": -0.15,
+            "numericcolor": true
+        }],
+        [{
+            "content": "Bid"
+        }, {
+            "content": "n.a"
+        }],
+        [{
+            "content": "Ask"
+        }, {
+            "content": "n.a"
+        }]
     ]
-  ]
 }

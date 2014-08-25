@@ -6,10 +6,10 @@
 
     self = {};
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function Accordion($, el) {
       self = this;
@@ -19,24 +19,24 @@
       return this;
     }
 
-
     /*
-       *# this.listen
+      ## this.listen
       Listen bindings for events, such as `click`, in order to
       show/hide the following `dd` node.
-     */
+    */
+
 
     Accordion.prototype.listen = function() {
       return self.$el.$dt.bind('click', self.toggle);
     };
 
-
     /*
-       *# this.toggle
+      ## this.toggle
       Called on event to show or hide the follow `dd` node. We
       will check if the node has the `expanded` class to determine
       next steps.
-     */
+    */
+
 
     Accordion.prototype.toggle = function(e) {
       if ($(this).hasClass('expanded')) {
@@ -46,22 +46,22 @@
       }
     };
 
-
     /*
-       *# this.show
+      ## this.show
       Will add the `expanded` class before showing the next `dd` node.
-     */
+    */
+
 
     Accordion.prototype.show = function(e, $this) {
       $this.addClass('expanded');
       return $this.next('dd').slideDown();
     };
 
-
     /*
-       *# this.hide
+      ## this.hide
       Will remove the `expanded` class before hiding the next `dd` node.
-     */
+    */
+
 
     Accordion.prototype.hide = function(e, $this) {
       $this.removeClass('expanded');

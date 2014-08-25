@@ -1,9 +1,9 @@
-
 /*
-   * Snapshot Graph
+  # Snapshot Graph
   This module will have `toggle` type functionality to view
   each index's graph on hover/touch events.
- */
+*/
+
 
 (function() {
   var Snapshot;
@@ -13,10 +13,10 @@
 
     self = void 0;
 
-
     /*
-       *# Constructor
-     */
+      ## Constructor
+    */
+
 
     function Snapshot($el) {
       self = this;
@@ -28,22 +28,22 @@
       this.loaded();
     }
 
-
     /*
-       *# this.log
+      ## this.log
       Add local instance of logging to this module.
       Can be called with:
       ``` @log.add 'notification', 'message...', @ ```
-     */
+    */
+
 
     Snapshot.prototype.log = new LogHandler('WidgetHero');
 
-
     /*
-       *# this.loaded
+      ## this.loaded
       Fired as part of the constructor to remove loading
       view and trigger showing of first item.
-     */
+    */
+
 
     Snapshot.prototype.loaded = function() {
       self.$el.addClass('loaded');
@@ -51,21 +51,21 @@
       return PubSub.publish('LazyLoadPoll');
     };
 
-
     /*
-       *# this.bind
+      ## this.bind
       Bind up events to change index.
-     */
+    */
+
 
     Snapshot.prototype.bind = function() {
       return self.$index.bind('click', self.indexChange);
     };
 
-
     /*
-       *# this.indexChange
+      ## this.indexChange
       Fired from `this.bind` method to show selected index image.
-     */
+    */
+
 
     Snapshot.prototype.indexChange = function(e) {
       var $target, $this;
@@ -87,11 +87,11 @@
 
   })();
 
-
   /*
-     *# Define
+    ## Define
     Define our module for AMD.
-   */
+  */
+
 
   define(function() {
     return Snapshot;

@@ -1,9 +1,7 @@
 {
-  "column": {
-    "modules": [
-      {
-        "widgets/table/table": "row2/price-data.json"
-      }
-    ]
-  }
+    "column": {
+        "modules": [{
+            "widgets/table/table": "row2/price-data.json"
+        }]
+    }
 }

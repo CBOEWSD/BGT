@@ -1,20 +1,16 @@
 {
-  "view": "onecol",
-  "title": "Guide: Style",
-  "meta": {
-    "keywords": "some, keywords",
-    "description": "This is a description"
-  },
-  "placeholders": {
-    "topspan": [
-      {
-        "breadcrumbs/breadcrumbs": "breadcrumbs.json"
-      }
-    ],
-    "content": [
-      {
-        "widgets/content/content": "styleguide.md"
-      }
-    ]
-  }
+    "view": "onecol",
+    "title": "Guide: Style",
+    "meta": {
+        "keywords": "some, keywords",
+        "description": "This is a description"
+    },
+    "placeholders": {
+        "topspan": [{
+            "breadcrumbs/breadcrumbs": "breadcrumbs.json"
+        }],
+        "content": [{
+            "widgets/content/content": "styleguide.md"
+        }]
+    }
 }

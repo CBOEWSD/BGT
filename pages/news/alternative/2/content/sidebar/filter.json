@@ -1,78 +1,62 @@
 {
-  "title": "Advanced Search",
-  "parent": {
-    "title": "All of CBOE",
-    "total": 201
-  },
-  "filters": [
-    {
-      "title": "CBOE Products",
-      "items": [
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        },
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        },
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        }
-      ]
+    "title": "Advanced Search",
+    "parent": {
+        "title": "All of CBOE",
+        "total": 201
     },
-    {
-      "title": "Investor Relations",
-      "items": [
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        },
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        },
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        }
-      ]
-    },
-    {
-      "title": "Trading Tools",
-      "items": [
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        },
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        },
-        {
-          "type": "checkbox",
-          "name": "fieldname",
-          "title": "Sub title",
-          "url": "#menu"
-        }
-      ]
-    }
-  ]
+    "filters": [{
+        "title": "CBOE Products",
+        "items": [{
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }, {
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }, {
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }]
+    }, {
+        "title": "Investor Relations",
+        "items": [{
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }, {
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }, {
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }]
+    }, {
+        "title": "Trading Tools",
+        "items": [{
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }, {
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }, {
+            "type": "checkbox",
+            "name": "fieldname",
+            "title": "Sub title",
+            "url": "#menu"
+        }]
+    }]
 }

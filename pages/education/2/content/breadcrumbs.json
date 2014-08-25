@@ -1,56 +1,45 @@
 {
-  "levels": [
-    {
-      "link": {
-        "text": "Education",
-        "url": "#"
-      },
-      "children": [
-        {
-          "link": {
-            "text": "SubPage",
+    "levels": [{
+        "link": {
+            "text": "Education",
             "url": "#"
-          }
         },
-        {
-          "link": {
-            "text": "SubPage",
+        "children": [{
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }]
+    }, {
+        "link": {
+            "text": "2",
             "url": "#"
-          }
         },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        }
-      ]
-    },
-    {
-      "link": {
-        "text": "2",
-        "url": "#"
-      },
-      "children": [
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        },
-        {
-          "link": {
-            "text": "SubPage",
-            "url": "#"
-          }
-        }
-      ]
-    }
-  ]
+        "children": [{
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }, {
+            "link": {
+                "text": "SubPage",
+                "url": "#"
+            }
+        }]
+    }]
 }

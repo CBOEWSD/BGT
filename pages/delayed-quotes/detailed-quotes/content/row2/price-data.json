@@ -1,123 +1,83 @@
 {
-  "title": {
-    "text": "Price Data Table",
-    "meta": {
-      "items": [
-        {
-          "content": [
-            {
-              "text": "Apr 10, 2014 @ 16:38 ET"
-            },
-            {
-              "text": "(DELAYED 15 MINUTES)"
-            }
-          ]
+    "title": {
+        "text": "Price Data Table",
+        "meta": {
+            "items": [{
+                "content": [{
+                    "text": "Apr 10, 2014 @ 16:38 ET"
+                }, {
+                    "text": "(DELAYED 15 MINUTES)"
+                }]
+            }]
         }
-      ]
-    }
-  },
-  "classes": ["oddeven", "padvertical", "last-right", "data-table"],
-  "rows": [
-    [
-      {
-        "content": "Last Sale"
-      },
-      {
-        "content": 16.12,
-        "classes": "bold"
-      },
-      {
-        "content": "Tick"
-      },
-      {
-        "content": "Down"
-      }
-    ],
-    [
-      {
-        "content": "Time of Last Sale"
-      },
-      {
-        "content": "04/10/2014 16:03"
-      },
-      {
-        "content": "Exchange"
-      },
-      {
-        "content": "NYSE"
-      }
-    ],
-    [
-      {
-        "content": "Net Change"
-      },
-      {
-        "content": "-0.50",
-        "numericcolor": true
-      },
-      {
-        "content": "Previous Close"
-      },
-      {
-        "content": 16.62
-      }
-    ],
-    [
-      {
-        "content": "Percent Change"
-      },
-      {
-        "content": -3.01,
-        "numericcolor": true
-      },
-      {
-        "content": "Open"
-      },
-      {
-        "content": 16.62
-      }
-    ],
-    [
-      {
-        "content": "High"
-      },
-      {
-        "content": 16.62
-      },
-      {
-        "content": "Low"
-      },
-      {
-        "content": "16.10"
-      }
-    ],
-    [
-      {
-        "content": "Big"
-      },
-      {
-        "content": 16.12
-      },
-      {
-        "content": "Size Bid/Ask"
-      },
-      {
-        "content": "47x39"
-      }
-    ],
-    [
-      {
-        "content": "Ask"
-      },
-      {
-        "content": 16.13
-      },
-      {
-        "content": "Volume"
-      },
-      {
-        "content": 96014054
-      }
+    },
+    "classes": ["oddeven", "padvertical", "last-right", "data-table"],
+    "rows": [
+        [{
+            "content": "Last Sale"
+        }, {
+            "content": 16.12,
+            "classes": "bold"
+        }, {
+            "content": "Tick"
+        }, {
+            "content": "Down"
+        }],
+        [{
+            "content": "Time of Last Sale"
+        }, {
+            "content": "04/10/2014 16:03"
+        }, {
+            "content": "Exchange"
+        }, {
+            "content": "NYSE"
+        }],
+        [{
+            "content": "Net Change"
+        }, {
+            "content": "-0.50",
+            "numericcolor": true
+        }, {
+            "content": "Previous Close"
+        }, {
+            "content": 16.62
+        }],
+        [{
+            "content": "Percent Change"
+        }, {
+            "content": -3.01,
+            "numericcolor": true
+        }, {
+            "content": "Open"
+        }, {
+            "content": 16.62
+        }],
+        [{
+            "content": "High"
+        }, {
+            "content": 16.62
+        }, {
+            "content": "Low"
+        }, {
+            "content": "16.10"
+        }],
+        [{
+            "content": "Big"
+        }, {
+            "content": 16.12
+        }, {
+            "content": "Size Bid/Ask"
+        }, {
+            "content": "47x39"
+        }],
+        [{
+            "content": "Ask"
+        }, {
+            "content": 16.13
+        }, {
+            "content": "Volume"
+        }, {
+            "content": 96014054
+        }]
     ]
-  ]
 }

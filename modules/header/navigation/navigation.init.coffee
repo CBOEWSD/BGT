@@ -90,7 +90,8 @@ class Navigation
   clickTap: (e, target) ->
     # If we're in desktop ignore this event
     if Response.viewportW() > 766
-      # $(target).trigger('click')
+      console.log('working in right area');
+      self.isLink($target, true)
       return true
 
     # Log: Method called
@@ -129,12 +130,20 @@ class Navigation
         # Show menu
         return self.mobileShowSubUl $subUl
 
-    if $target.is('a') and $target.attr('href')?
-      # Log: Method called
-      self.log.add 'notification', 'Link clicked, directing user to page.', @
+    return self.isLink($target, true)
 
-      # Redirect page to URL
-      window.location = $target.attr('href')
+  ###
+    ## this.isLink
+    If a target is a link it will return true.
+    Can also be flagged to relocate window to said link if need be
+  ###
+  isLink: (target, forward) ->
+    $target = $(target)
+    if $target.is('a') and $target.attr('href')?
+      if forward then window.location = $target.attr('href')
+      return true
+    else
+      return false
 
   ###
     ## this.hasSub

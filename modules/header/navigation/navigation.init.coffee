@@ -90,7 +90,6 @@ class Navigation
   clickTap: (e, target) ->
     # If we're in desktop ignore this event
     if Response.viewportW() > 766
-      console.log('working in right area');
       self.isLink(target, true)
       return true
 

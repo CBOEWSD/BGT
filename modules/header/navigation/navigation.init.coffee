@@ -91,7 +91,7 @@ class Navigation
     # If we're in desktop ignore this event
     if Response.viewportW() > 766
       console.log('working in right area');
-      self.isLink($target, true)
+      self.isLink(target, true)
       return true
 
     # Log: Method called

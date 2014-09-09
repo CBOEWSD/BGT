@@ -114,7 +114,7 @@ class Navigation
       return self.mobileHideSubUl($target.parent('.mobileShow')) if $target.hasClass('mobileback')
 
     # Check for parent LI
-    $parentLi = $target.parent('li')
+    $parentLi = $target.parent('li.hasSubMenu')
 
     if $parentLi.length > 0
       # Get submenu object if it exists

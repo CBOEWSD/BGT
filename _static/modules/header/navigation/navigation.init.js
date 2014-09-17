@@ -87,6 +87,7 @@
     Navigation.prototype.clickTap = function(e, target) {
       var $parentLi, $subUl, $target;
       if (Response.viewportW() > 766) {
+        self.isLink(target, true);
         return true;
       }
       self.log.add('notification', 'clickTap method called.', this);
@@ -102,7 +103,7 @@
           return self.mobileHideSubUl($target.parent('.mobileShow'));
         }
       }
-      $parentLi = $target.parent('li');
+      $parentLi = $target.parent('li.hasSubMenu');
       if ($parentLi.length > 0) {
         $subUl = $('>ul', $parentLi);
         if ($subUl.length > 0) {
@@ -111,9 +112,26 @@
           return self.mobileShowSubUl($subUl);
         }
       }
+      return self.isLink($target, true);
+    };
+
+    /*
+      ## this.isLink
+      If a target is a link it will return true.
+      Can also be flagged to relocate window to said link if need be
+    */
+
+
+    Navigation.prototype.isLink = function(target, forward) {
+      var $target;
+      $target = $(target);
       if ($target.is('a') && ($target.attr('href') != null)) {
-        self.log.add('notification', 'Link clicked, directing user to page.', this);
-        return window.location = $target.attr('href');
+        if (forward) {
+          window.location = $target.attr('href');
+        }
+        return true;
+      } else {
+        return false;
       }
     };
 
